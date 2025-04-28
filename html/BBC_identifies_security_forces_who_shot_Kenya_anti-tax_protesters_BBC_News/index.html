@@ -20,39 +20,16 @@
         a:hover { text-decoration: underline; }
         hr { border: none; border-top: 2px solid #eee; margin: 30px 0; }
         h1 { text-align: center; margin-top: 20px; font-size: 2.2em; }
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            padding: 10px 15px;
-            background: #007acc;
-            color: white;
-            border-radius: 50%;
-            font-size: 20px;
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 1000;
-        }
-        #progressBar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: #007acc;
-            width: 0%;
-            z-index: 999;
-        }
-        .active-toc {
-            font-weight: bold;
-            color: #005999;
-        }
     </style>
 </head>
 <body>
 
-<div id="progressBar"></div>
+
+        <div style="text-align:center; margin:20px 0; font-size:18px;">
+            📄 <a href="https://englishlearningtools.github.io/learning_notes/html/BBC_identifies_security_forces_who_shot_Kenya_anti-tax_protesters_BBC_News/" target="_blank">Click here to view this article online</a>
+        </div>
+        <hr>
+        
 
 <div style="text-align:center; margin:20px 0;"><a href="https://space.bilibili.com/3546601721170225" target="_blank"><img src="bilibili.QR.code.png" alt="更多有意思的英语学习视频，请到B站Global每日双语简报" style="width:100px;"></a><div style="font-size:16px; margin-top:8px;">更多有意思的英语学习视频，请到B站Global每日双语简报！</div></div>
 <h1>BBC identifies security forces who shot Kenya anti-tax protesters | BBC News</h1>
@@ -172,44 +149,6 @@ BBC调查揭露一名肯尼亚士兵在议会反增税示威中射杀抗议者�
 <p><a href="#table-of-contents">Back to Top</a></p>
 <hr />
 <div style="text-align:center; margin:20px 0;"><a href="https://space.bilibili.com/3546601721170225" target="_blank"><img src="bilibili.QR.code.png" alt="更多有意思的英语学习视频，请到B站Global每日双语简报" style="width:100px;"></a><div style="font-size:16px; margin-top:8px;">更多有意思的英语学习视频，请到B站Global每日双语简报！</div></div>
-
-<div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
-
-<script>
-window.onscroll = function() {
-    var topBtn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("progressBar").style.width = scrolled + "%";
-
-    var sections = document.querySelectorAll("a[name^='block-']");
-    var tocLinks = document.querySelectorAll("a[href^='#block-']");
-    var current = "";
-    for (var section of sections) {
-        var sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop <= 120) {
-            current = section.getAttribute("name");
-        }
-    }
-    tocLinks.forEach(a => {
-        a.classList.remove("active-toc");
-        if (a.getAttribute("href") == "#" + current) {
-            a.classList.add("active-toc");
-        }
-    });
-};
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
 
 </body>
 </html>
