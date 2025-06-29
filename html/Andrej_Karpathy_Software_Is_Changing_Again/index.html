@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Andrej Karpathy: Software Is Changing (Again)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Former Tesla AI director Andrej Karpathy discusses the fundamental shifts in software development driven by AI, highlighting three paradigms: traditional code (1.0), neural network weights (2.0), and LLM prompts (3.0). He explores how these changes create opportunities for partial autonomy apps, agent-friendly infrastructure, and a new era where programming happens in natural language.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Andrej Karpathy: Software Is Changing (Again)</h1>
+<p>【前特斯拉AI总监安德烈·卡帕西：软件正在（再次）变革】</p>
+<p>Summary:
+Former Tesla AI director Andrej Karpathy discusses the fundamental shifts in software development driven by AI, highlighting three paradigms: traditional code (1.0), neural network weights (2.0), and LLM prompts (3.0). He explores how these changes create opportunities for partial autonomy apps, agent-friendly infrastructure, and a new era where programming happens in natural language.</p>
+<p>摘要：
+前特斯拉AI总监安德烈·卡帕西探讨了AI驱动的软件开发根本性变革，提出三种范式：传统代码（1.0）、神经网络权重（2.0）和LLM提示词（3.0），并分析这些变化如何催生部分自主应用、面向智能体的基础设施，以及用自然语言编程的新时代。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 70 min</p>
+<hr />
+<p>📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a></p>
+<h2>Table of Contents</h2>
+<p><a name="table-of-contents"></a></p>
+<ul>
+<li><a href="#block-1">00:00:00 Please welcome former director of AI Tesla, Andre Carpathi.</a></li>
+<li><a href="#block-2">00:00:40 I think fundamentally the reason for that is that software i</a></li>
+<li><a href="#block-3">00:01:03 And then it's changed, I think, about twice quite rapidly in</a></li>
+<li><a href="#block-4">00:01:20 This is kind of like all the software that's written, these </a></li>
+<li><a href="#block-5">00:01:38 And I call this software 2.0 at the time.</a></li>
+<li><a href="#block-6">00:02:00 And I think like at the time, neural net's were kind of seen</a></li>
+<li><a href="#block-7">00:02:16 And I think the hugging phase is basically equivalent of Git</a></li>
+<li><a href="#block-8">00:02:40 So basically what we have is software 1.0 is the computer co</a></li>
+<li><a href="#block-9">00:02:59 Image two categories, or something like that.</a></li>
+<li><a href="#block-10">00:03:25 And remarkably, these prompts are written in English.</a></li>
+<li><a href="#block-11">00:03:48 So here this is a few shot prompt, and you can imagine chang</a></li>
+<li><a href="#block-12">00:04:08 So not only is it a new programming paradigm, it's also rema</a></li>
+<li><a href="#block-13">00:04:28 Now when I was at Tesla, we were working on the autopilot, a</a></li>
+<li><a href="#block-14">00:04:57 And I kind of observed that over time as we made the autopil</a></li>
+<li><a href="#block-15">00:05:27 And so the software 2.0 stack would quite literally eight th</a></li>
+<li><a href="#block-16">00:05:44 And I think if you're entering the industry, it's a very goo</a></li>
+<li><a href="#block-17">00:06:05 So what I want to get into now is, first I want to, in the f</a></li>
+<li><a href="#block-18">00:06:31 And I do think that it kind of captures something very inter</a></li>
+<li><a href="#block-19">00:07:04 We demand low latency, high up time, consistent quality, etc</a></li>
+<li><a href="#block-20">00:07:24 So it's okay to have basically like six electricity provider</a></li>
+<li><a href="#block-21">00:07:47 It's kind of like when the voltage is unreliable in the grid</a></li>
+<li><a href="#block-22">00:08:11 It's not just like building some power station or something </a></li>
+<li><a href="#block-23">00:08:37 And software is a bit less defensible because it is so malle</a></li>
+<li><a href="#block-24">00:08:59 But if you're actually also building your own hardware and y</a></li>
+<li><a href="#block-25">00:09:16 In that this is not just electricity or water.</a></li>
+<li><a href="#block-26">00:09:38 And then you have an open source alternative like Linux.</a></li>
+<li><a href="#block-27">00:09:57 But we're starting to see that these are going to get a lot </a></li>
+<li><a href="#block-28">00:10:14 So the LLM is a new kind of a computer.</a></li>
+<li><a href="#block-29">00:10:37 A few more analogies, for example, if you want to download a</a></li>
+<li><a href="#block-30">00:10:58 So it's kind of like similar in that way as well.</a></li>
+<li><a href="#block-31">00:11:20 And none of us have full utilization of these computers and </a></li>
+<li><a href="#block-32">00:11:39 And so the personal computing revolution hasn't happened yet</a></li>
+<li><a href="#block-33">00:11:56 And I think these are some early indications maybe of person</a></li>
+<li><a href="#block-34">00:12:21 It's direct access to the operating system.</a></li>
+<li><a href="#block-35">00:12:42 There are some ways in which LLM's are different from kind o</a></li>
+<li><a href="#block-36">00:13:05 So for example with electricity, cryptography, computing, fl</a></li>
+<li><a href="#block-37">00:13:22 So maybe with early computers it was all about ballistics an</a></li>
+<li><a href="#block-38">00:13:43 Indeed corporations are governments are lagging behind the a</a></li>
+<li><a href="#block-39">00:14:00 But LLM's are complicated operating systems.</a></li>
+<li><a href="#block-40">00:14:30 And it's kind of insane to me that this is the case and now </a></li>
+<li><a href="#block-41">00:14:53 They are stochastic simulations of people and the simulator </a></li>
+<li><a href="#block-42">00:15:21 And you end up with this kind of a simulator.</a></li>
+<li><a href="#block-43">00:15:38 It actually kind of reminds me of this movie, Rainman, which</a></li>
+<li><a href="#block-44">00:15:57 They can remember Shah hashes and lots of different kinds of</a></li>
+<li><a href="#block-45">00:16:18 And this has gotten better but not perfect.</a></li>
+<li><a href="#block-46">00:16:39 So that's kind of I think also kind of unique.</a></li>
+<li><a href="#block-47">00:17:02 LLMs don't natively do this and this is not something that h</a></li>
+<li><a href="#block-48">00:17:19 In popular culture, I recommend people watch these two movie</a></li>
+<li><a href="#block-49">00:17:38 I guess one more thing I would point to is security kind of </a></li>
+<li><a href="#block-50">00:18:04 How do we, and yet they are extremely useful.</a></li>
+<li><a href="#block-51">00:18:25 The first thing I'm kind of excited about is what I would ca</a></li>
+<li><a href="#block-52">00:18:44 Why would you go directly to the operating system?</a></li>
+<li><a href="#block-53">00:19:07 So in particular, you will notice that we have a traditional</a></li>
+<li><a href="#block-54">00:19:29 Number two, they orchestrate multiple calls to LLM's.</a></li>
+<li><a href="#block-55">00:19:52 Because you don't just want to talk to the operating system </a></li>
+<li><a href="#block-56">00:20:12 I shouldn't have to type it in text, right?</a></li>
+<li><a href="#block-57">00:20:31 You can select a chunk of code and command K to change just </a></li>
+<li><a href="#block-58">00:20:48 And depending on the complexity of the task at hand, you can</a></li>
+<li><a href="#block-59">00:21:08 It orchestrates multiple of the alums.</a></li>
+<li><a href="#block-60">00:21:24 So this is all just varying levels of autonomy that you give</a></li>
+<li><a href="#block-61">00:21:41 Can an LLM see everything that a human can see?</a></li>
+<li><a href="#block-62">00:22:03 All of this has to change and become accessible to LLMs.</a></li>
+<li><a href="#block-63">00:22:26 There are two major ways that I think this can be done.</a></li>
+<li><a href="#block-64">00:22:47 So I think GUI's are very useful for auditing systems and vi</a></li>
+<li><a href="#block-65">00:23:14 It's just like and that is doing the correct thing.</a></li>
+<li><a href="#block-66">00:23:36 This is how I feel when I do AI assist coding.</a></li>
+<li><a href="#block-67">00:23:57 And in my own work, I'm always scared to get way too big dip</a></li>
+<li><a href="#block-68">00:24:17 I also saw a number of blog posts that try to develop these </a></li>
+<li><a href="#block-69">00:24:37 And in that case, verification will fail.</a></li>
+<li><a href="#block-70">00:24:55 I think in my own work as well, I'm currently interested in </a></li>
+<li><a href="#block-71">00:25:14 I don't think this works because the AI is like gets lost in</a></li>
+<li><a href="#block-72">00:25:31 And we can make sure it's good.</a></li>
+<li><a href="#block-73">00:25:49 One more kind of analogy I wanted to sort of allude to is, I</a></li>
+<li><a href="#block-74">00:26:06 So it's showing me what the neural network sees and so on.</a></li>
+<li><a href="#block-75">00:26:29 I took this picture using Google Glass at the time.</a></li>
+<li><a href="#block-76">00:26:45 There was zero interventions.</a></li>
+<li><a href="#block-77">00:27:05 We are still working on driving agents.</a></li>
+<li><a href="#block-78">00:27:26 And so I think like this software is really tricky.</a></li>
+<li><a href="#block-79">00:27:48 This is software.</a></li>
+<li><a href="#block-80">00:28:09 And it's also an agent.</a></li>
+<li><a href="#block-81">00:28:33 It's less like building flashy demos of autonomous agents an</a></li>
+<li><a href="#block-82">00:28:52 And there should be an autonomy slider in your product and y</a></li>
+<li><a href="#block-83">00:29:10 Not only is there a new type of programming language that al</a></li>
+<li><a href="#block-84">00:29:28 It used to be the case that you need to spend five to 10 yea</a></li>
+<li><a href="#block-85">00:29:49 I've been on Twitter for like 15 years or something like tha</a></li>
+<li><a href="#block-86">00:30:13 So now there's a Wikipedia page and everything.</a></li>
+<li><a href="#block-87">00:30:47 Like how can you look at this video and feel bad about the f</a></li>
+<li><a href="#block-88">00:31:07 So by coding is so great when you want to build something su</a></li>
+<li><a href="#block-89">00:31:32 I didn't have to like read through Swift or like a five days</a></li>
+<li><a href="#block-90">00:32:07 And therefore this is a major cost center in my life so this</a></li>
+<li><a href="#block-91">00:32:33 And most of it actually was when I tried to make it real so </a></li>
+<li><a href="#block-92">00:33:05 So for example if you try to add Google login to your web pa</a></li>
+<li><a href="#block-93">00:33:32 I had to follow all these instructions this was crazy so I t</a></li>
+<li><a href="#block-94">00:34:39 A huge amount of documentation is currently written for peop</a></li>
+<li><a href="#block-95">00:35:53 So that's what happened more.</a></li>
+<li><a href="#block-96">00:36:39 So for example when I go to a GitHub repo like my nanagypity</a></li>
+<li><a href="#block-97">00:37:08 This is from Devon but also like they have Devon basically d</a></li>
+<li><a href="#block-98">00:37:39 We will be able to go around and I'll be able to click stop </a></li>
+<li><a href="#block-99">00:38:43 And in order to do that properly we need to adjust our infra</a></li>
+</ul>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+</style>
+<script>
+let timeoutHandle = null;
+function playAt(start, end) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) {
+    clearTimeout(timeoutHandle);
+  }
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+}
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=0" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button" onclick="playAt(0.000, 7.500)"><img src="play.png" alt="Play"></button> Please welcome former director of AI Tesla, Andre Carpathi.</p>
+<p>有请特斯拉前AI总监安德烈·卡帕西。</p>
+<p><button class="play-button" onclick="playAt(18.500, 22.611)"><img src="play.png" alt="Play"></button> Wow, a lot of people here.</p>
+<p>哇，现场人真多。</p>
+<p><button class="play-button" onclick="playAt(21.611, 23.500)"><img src="play.png" alt="Play"></button> Hello.</p>
+<p>大家好。</p>
+<p><button class="play-button" onclick="playAt(22.500, 29.500)"><img src="play.png" alt="Play"></button> Okay, yeah, so I'm excited to be here today to talk to you about software in the era of AI.</p>
+<p>好的，今天我很兴奋能在这里和大家聊聊AI时代的软件。</p>
+<p><button class="play-button" onclick="playAt(28.500, 35.500)"><img src="play.png" alt="Play"></button> I'm told that many of you are students like bachelor's, master's, PhD, and so on, and you're about to enter the industry.</p>
+<p>听说在座很多是本科生、硕士、博士生等即将进入行业的学生。</p>
+<p><button class="play-button" onclick="playAt(34.500, 40.500)"><img src="play.png" alt="Play"></button> I think it's actually like an extremely unique and very interesting time to enter the industry right now.</p>
+<p>我认为现在正是进入行业的一个极其独特且有趣的时机。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=40" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:40</span></a></h3>
+<p><button class="play-button" onclick="playAt(39.500, 47.500)"><img src="play.png" alt="Play"></button> I think fundamentally the reason for that is that software is changing again.</p>
+<p>根本原因在于软件正在再次变革。</p>
+<p><button class="play-button" onclick="playAt(46.500, 53.500)"><img src="play.png" alt="Play"></button> I say again because I actually gave this talk already, but the problem is that software keeps changing.</p>
+<p>说"再次"是因为我做过类似演讲，但问题在于软件持续在变。</p>
+<p><button class="play-button" onclick="playAt(52.500, 56.500)"><img src="play.png" alt="Play"></button> So I actually have a lot of material to create new talks.</p>
+<p>所以我总有新素材来做新演讲。</p>
+<p><button class="play-button" onclick="playAt(55.500, 58.500)"><img src="play.png" alt="Play"></button> And I think it's changing quite fundamentally.</p>
+<p>而且这次变革是根本性的。</p>
+<p><button class="play-button" onclick="playAt(57.500, 63.500)"><img src="play.png" alt="Play"></button> I think roughly speaking, software has not changed much on such a fundamental level for 70 years.</p>
+<p>粗略来说，软件在过去70年从未经历过如此根本性的改变。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=63" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:03</span></a></h3>
+<p><button class="play-button" onclick="playAt(62.500, 67.500)"><img src="play.png" alt="Play"></button> And then it's changed, I think, about twice quite rapidly in the last few years.</p>
+<p>而最近几年却快速经历了约两次变革。</p>
+<p><button class="play-button" onclick="playAt(66.500, 72.500)"><img src="play.png" alt="Play"></button> And so there's just a huge amount of work to do, a huge amount of software to write and rewrite.</p>
+<p>因此有海量的工作需要完成，大量软件需要重写。</p>
+<p><button class="play-button" onclick="playAt(71.500, 74.500)"><img src="play.png" alt="Play"></button> So let's take a look at maybe the realm of software.</p>
+<p>让我们看看软件的疆域。</p>
+<p><button class="play-button" onclick="playAt(73.500, 80.500)"><img src="play.png" alt="Play"></button> So if we kind of think of this as like the map of software, this is a really cool tool called map of GitHub.</p>
+<p>如果将其视作软件地图，这个叫"GitHub地图"的工具很酷。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=80" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:20</span></a></h3>
+<p><button class="play-button" onclick="playAt(79.500, 86.500)"><img src="play.png" alt="Play"></button> This is kind of like all the software that's written, these are instructions to the computer for carrying out tasks in the digital space.</p>
+<p>这里汇集了所有已编写的软件，即指挥计算机执行数字任务的指令。</p>
+<p><button class="play-button" onclick="playAt(85.500, 91.500)"><img src="play.png" alt="Play"></button> So if you zoom in here, these are all different kinds of repositories, and this is all the code that has been written.</p>
+<p>放大后能看到各类代码库，所有已编写的代码都在这里。</p>
+<p><button class="play-button" onclick="playAt(90.500, 98.500)"><img src="play.png" alt="Play"></button> And a few years ago, I kind of observed that software was kind of changing, and there was kind of like a new type of software around.</p>
+<p>几年前我注意到软件正在变化，出现了一种新型软件。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=98" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:38</span></a></h3>
+<p><button class="play-button" onclick="playAt(97.500, 101.500)"><img src="play.png" alt="Play"></button> And I call this software 2.0 at the time.</p>
+<p>当时我称之为软件2.0。</p>
+<p><button class="play-button" onclick="playAt(100.500, 105.500)"><img src="play.png" alt="Play"></button> And the idea here was that software 1.0 is the code you write for the computer.</p>
+<p>软件1.0是人类为计算机编写的代码。</p>
+<p><button class="play-button" onclick="playAt(104.500, 110.500)"><img src="play.png" alt="Play"></button> Software 2.0 are basically neural networks, and in particular the weights of a neural network.</p>
+<p>软件2.0本质是神经网络，尤其是其权重参数。</p>
+<p><button class="play-button" onclick="playAt(109.500, 114.500)"><img src="play.png" alt="Play"></button> And you're not writing this code directly.</p>
+<p>这些代码不是直接编写的。</p>
+<p><button class="play-button" onclick="playAt(113.500, 120.500)"><img src="play.png" alt="Play"></button> You are more kind of like tuning the data sets, and then you're running an optimizer to create the parameters of this neural net.</p>
+<p>而是通过调整数据集，用优化器生成神经网络的参数。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=120" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:00</span></a></h3>
+<p><button class="play-button" onclick="playAt(119.500, 126.500)"><img src="play.png" alt="Play"></button> And I think like at the time, neural net's were kind of seen as like just a different kind of classifier, like a decision tree or something like that.</p>
+<p>当时神经网络仅被视为另一种分类器，比如决策树的替代品。</p>
+<p><button class="play-button" onclick="playAt(125.500, 131.500)"><img src="play.png" alt="Play"></button> And so I think it was kind of like, I think this framing was a lot more appropriate.</p>
+<p>而我认为这个框架描述更为准确。</p>
+<p><button class="play-button" onclick="playAt(130.500, 136.500)"><img src="play.png" alt="Play"></button> And now actually what we have is kind of like an equivalent of GitHub in the realm of software 2.0.</p>
+<p>如今在软件2.0领域，我们有了类似GitHub的平台。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=136" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:16</span></a></h3>
+<p><button class="play-button" onclick="playAt(135.500, 141.500)"><img src="play.png" alt="Play"></button> And I think the hugging phase is basically equivalent of GitHub in software 2.0.</p>
+<p>Hugging Face基本就是软件2.0的GitHub。</p>
+<p><button class="play-button" onclick="playAt(140.500, 144.500)"><img src="play.png" alt="Play"></button> And there's also model Atlas, and you can visualize all the code written there.</p>
+<p>还有Model Atlas可以可视化所有代码。</p>
+<p><button class="play-button" onclick="playAt(143.500, 152.500)"><img src="play.png" alt="Play"></button> In case you're curious, by the way, the giant circle, the point in the middle, these are the parameters of flux, the image generator.</p>
+<p>顺带一提，中间那个大圆点是图像生成器Flux的参数。</p>
+<p><button class="play-button" onclick="playAt(151.500, 160.500)"><img src="play.png" alt="Play"></button> And so anytime someone tunes a Laura on top of a flux model, you basically create a git commit in this space, and you create a different kind of image generator.</p>
+<p>每当有人在Flux模型上微调LoRA，就相当于在这个空间创建git提交，生成新型图像生成器。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=160" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:40</span></a></h3>
+<p><button class="play-button" onclick="playAt(159.500, 165.500)"><img src="play.png" alt="Play"></button> So basically what we have is software 1.0 is the computer code that programs a computer.</p>
+<p>简言之：软件1.0是编程计算机的代码。</p>
+<p><button class="play-button" onclick="playAt(164.500, 169.500)"><img src="play.png" alt="Play"></button> Software 2.0 are the weights, which program neural networks.</p>
+<p>软件2.0是编程神经网络的权重。</p>
+<p><button class="play-button" onclick="playAt(168.500, 173.500)"><img src="play.png" alt="Play"></button> And here's an example of AlexNet, image recognizer neural network.</p>
+<p>比如图像识别网络AlexNet。</p>
+<p><button class="play-button" onclick="playAt(172.500, 179.500)"><img src="play.png" alt="Play"></button> Now so far, all of the neural networks that we've been familiar with until recently, were kind of like fixed function computers.</p>
+<p>迄今为止我们熟悉的神经网络都像固定功能的计算机。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=179" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:59</span></a></h3>
+<p><button class="play-button" onclick="playAt(178.500, 182.500)"><img src="play.png" alt="Play"></button> Image two categories, or something like that.</p>
+<p>比如图像二分这类功能。</p>
+<p><button class="play-button" onclick="playAt(181.500, 189.500)"><img src="play.png" alt="Play"></button> And I think what's changed, and I think as a quite fundamental change, is that neural networks became programmable with large language models.</p>
+<p>而根本性变化在于：大语言模型让神经网络变得可编程。</p>
+<p><button class="play-button" onclick="playAt(188.500, 195.500)"><img src="play.png" alt="Play"></button> And so I see this as quite new, unique, it's new kind of a computer.</p>
+<p>我认为这是全新的计算机形态。</p>
+<p><button class="play-button" onclick="playAt(194.500, 200.500)"><img src="play.png" alt="Play"></button> And so in my mind, it's worth giving it a new designation of software 3.0.</p>
+<p>因此值得赋予新名称：软件3.0。</p>
+<p><button class="play-button" onclick="playAt(199.500, 205.500)"><img src="play.png" alt="Play"></button> And basically your prompts are now programs that program the LLM.</p>
+<p>你的提示词现在就是编程LLM的程序。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=205" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:25</span></a></h3>
+<p><button class="play-button" onclick="playAt(204.500, 209.500)"><img src="play.png" alt="Play"></button> And remarkably, these prompts are written in English.</p>
+<p>值得注意的是，这些提示词用英语编写。</p>
+<p><button class="play-button" onclick="playAt(208.500, 213.500)"><img src="play.png" alt="Play"></button> So it's kind of a very interesting programming language.</p>
+<p>这成了非常有趣的编程语言。</p>
+<p><button class="play-button" onclick="playAt(213.500, 228.500)"><img src="play.png" alt="Play"></button> So maybe to summarize the difference, if you're doing sentiment classification, for example, you can imagine writing some amount of Python to basically do sentiment classification, or you can train in neural net, or you can prompt a large language model.</p>
+<p>以情感分类为例：你可以写Python代码，训练神经网络，或提示大语言模型。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=228" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:48</span></a></h3>
+<p><button class="play-button" onclick="playAt(227.500, 234.500)"><img src="play.png" alt="Play"></button> So here this is a few shot prompt, and you can imagine changing it and programming the computer in a slightly different way.</p>
+<p>这是小样本提示，调整它就能以不同方式编程计算机。</p>
+<p><button class="play-button" onclick="playAt(233.500, 242.500)"><img src="play.png" alt="Play"></button> So basically we have software 1.0, software 2.0, and I think we're seeing, maybe you've seen a lot of GitHub code is not just like code anymore.</p>
+<p>现在我们拥有软件1.0、2.0，而GitHub代码已不全是传统代码。</p>
+<p><button class="play-button" onclick="playAt(241.500, 245.237)"><img src="play.png" alt="Play"></button> There's a bunch of like English interspersed with code.</p>
+<p>大量英语描述穿插在代码中。</p>
+<p><button class="play-button" onclick="playAt(244.237, 248.500)"><img src="play.png" alt="Play"></button> And so I think kind of there's a growing category of new kind of code.</p>
+<p>我认为这正在形成新的代码类别。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=248" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:08</span></a></h3>
+<p><button class="play-button" onclick="playAt(247.500, 253.500)"><img src="play.png" alt="Play"></button> So not only is it a new programming paradigm, it's also remarkable to me that it's in our native language of English.</p>
+<p>不仅是新编程范式，更惊人的是它用我们的母语英语编写。</p>
+<p><button class="play-button" onclick="playAt(252.500, 262.500)"><img src="play.png" alt="Play"></button> And so when this blew on mind a few, I guess years ago now, I tweeted this, and I think it captured the attention of a lot of people.</p>
+<p>几年前这个发现震撼了我，我发的推文引起广泛关注。</p>
+<p><button class="play-button" onclick="playAt(261.500, 267.500)"><img src="play.png" alt="Play"></button> And this is my currently pinned tweet, is that remarkably we're now programming computers in English.</p>
+<p>我的置顶推文写道："我们正在用英语编程计算机"。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:28</span></a></h3>
+<p><button class="play-button" onclick="playAt(267.500, 277.500)"><img src="play.png" alt="Play"></button> Now when I was at Tesla, we were working on the autopilot, and we were trying to get the car to drive.</p>
+<p>在特斯拉做自动驾驶时，我们试图让汽车自主行驶。</p>
+<p><button class="play-button" onclick="playAt(276.500, 287.500)"><img src="play.png" alt="Play"></button> And I sort of showed this slide at the time, where you can imagine that the inputs to the car are on the bottom, and they're going through a software stack to produce the steering and acceleration.</p>
+<p>当时我展示的幻灯片中，车辆输入信号经过软件栈处理，输出转向和加速指令。</p>
+<p><button class="play-button" onclick="playAt(286.500, 296.500)"><img src="play.png" alt="Play"></button> And I made the observation at the time that there was a ton of C++ code around in the autopilot, which was the software 1.0 code, and then there was some neural nets and they're doing image recognition.</p>
+<p>我注意到自动驾驶系统有大量C++代码（软件1.0）和做图像识别的神经网络。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=297" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:57</span></a></h3>
+<p><button class="play-button" onclick="playAt(296.500, 304.500)"><img src="play.png" alt="Play"></button> And I kind of observed that over time as we made the autopilot better, basically the neural network grew in capability and size.</p>
+<p>随着自动驾驶改进，神经网络的能力和规模都在增长。</p>
+<p><button class="play-button" onclick="playAt(303.500, 317.500)"><img src="play.png" alt="Play"></button> And in addition to that, all the C++ code was being deleted, and kind of like was, and a lot of the kind of capabilities and functionality that was originally written 1.0 was migrated to 2.0.</p>
+<p>同时C++代码被删除，原1.0的功能逐渐迁移到2.0。</p>
+<p><button class="play-button" onclick="playAt(317.500, 327.500)"><img src="play.png" alt="Play"></button> So as an example, a lot of the stitching up of information across images from the different cameras and across time was done by a neural network, and we were able to delete a lot of code.</p>
+<p>例如多摄像头跨时空信息缝合改由神经网络完成，我们因此删减大量代码。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=327" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:27</span></a></h3>
+<p><button class="play-button" onclick="playAt(326.500, 332.833)"><img src="play.png" alt="Play"></button> And so the software 2.0 stack would quite literally eight through the software stack of the autopilot.</p>
+<p>可以说软件2.0"吞噬"了自动驾驶的软件栈。</p>
+<p><button class="play-button" onclick="playAt(331.833, 335.500)"><img src="play.png" alt="Play"></button> So I thought this was really remarkable at the time.</p>
+<p>当时我觉得这非常了不起。</p>
+<p><button class="play-button" onclick="playAt(334.500, 344.500)"><img src="play.png" alt="Play"></button> And I think we're seeing the same thing again, where basically we have a new kind of software, and it's eating through the stack, we have three completely different programming paradigms.</p>
+<p>如今历史重演：新型软件正在吞噬整个技术栈，形成三种截然不同的编程范式。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=344" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:44</span></a></h3>
+<p><button class="play-button" onclick="playAt(343.500, 356.500)"><img src="play.png" alt="Play"></button> And I think if you're entering the industry, it's a very good idea to be fluent in all of them, because they all have slight pros and cons, and you may want to program some functionality in 1.0 or 2.0 or 3.0, are you going to train neural net, are you going to just prompt an LLM?</p>
+<p>进入行业者最好精通三者，因为它们各有优劣——你可以用1.0/2.0/3.0实现功能，选择训练神经网络或直接提示LLM。</p>
+<p><button class="play-button" onclick="playAt(355.500, 359.227)"><img src="play.png" alt="Play"></button> I should be a piece of code that's explicit, etc.</p>
+<p>某些场景需要显式编码。</p>
+<p><button class="play-button" onclick="playAt(358.227, 365.500)"><img src="play.png" alt="Play"></button> So we'll have to make these decisions and actually potentially fluidly transition between these paradigms.</p>
+<p>我们需要做这些决策，并能在范式间灵活切换。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=365" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:05</span></a></h3>
+<p><button class="play-button" onclick="playAt(364.500, 376.500)"><img src="play.png" alt="Play"></button> So what I want to get into now is, first I want to, in the first part, talk about LLMs and how to kind of think of this new paradigm and the ecosystem and what that looks like.</p>
+<p>接下来我想先探讨LLM：如何理解这个新范式及其生态系统。</p>
+<p><button class="play-button" onclick="playAt(375.500, 378.188)"><img src="play.png" alt="Play"></button> Like what is this new computer?</p>
+<p>这种新型计算机是什么？</p>
+<p><button class="play-button" onclick="playAt(377.188, 381.500)"><img src="play.png" alt="Play"></button> What does it look like, and what does the ecosystem look like?</p>
+<p>它的形态和生态系统如何？</p>
+<p><button class="play-button" onclick="playAt(380.500, 391.500)"><img src="play.png" alt="Play"></button> I was struck by this quote from Enduring actually many years ago now, I think, and I think Endure is going to be speaking right after me, but he said at the time, AI is the new electricity.</p>
+<p>多年前Andrew Ng说过"AI是新电力"，这句话令我印象深刻。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=391" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:31</span></a></h3>
+<p><button class="play-button" onclick="playAt(390.500, 399.500)"><img src="play.png" alt="Play"></button> And I do think that it kind of captures something very interesting, in that LLMs certainly feel like they have properties of utilities right now.</p>
+<p>这个比喻很精妙，因为LLM确实具有公用事业属性。</p>
+<p><button class="play-button" onclick="playAt(398.500, 414.500)"><img src="play.png" alt="Play"></button> So LLM labs, like OpenAI, Gemini, and Tropi, etc. they spend capex to train the LLMs, and this is kind of equivalent to building out a grid, and then there's up-ex to serve that intelligence over APIs to all of us.</p>
+<p>OpenAI等机构投入资本训练LLM（类似建设电网），再通过API向我们提供智能服务。</p>
+<p><button class="play-button" onclick="playAt(414.500, 424.500)"><img src="play.png" alt="Play"></button> And this is done through metered access where we pay per million tokens or something like that, and we have a lot of demands that are very utility-like demands out of this API.</p>
+<p>我们按token付费使用，并对API提出低延迟、高可用等公用事业级需求。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=424" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:04</span></a></h3>
+<p><button class="play-button" onclick="playAt(423.500, 427.845)"><img src="play.png" alt="Play"></button> We demand low latency, high up time, consistent quality, etc.</p>
+<p>要求低延迟、高可用性和质量稳定等。</p>
+<p><button class="play-button" onclick="playAt(426.845, 435.500)"><img src="play.png" alt="Play"></button> In electricity, you would have a transfer switch so you can transfer your electricity source from like grid and solar or battery or generator.</p>
+<p>电力系统中可用转换开关切换电网/太阳能/电池等电源。</p>
+<p><button class="play-button" onclick="playAt(434.500, 440.500)"><img src="play.png" alt="Play"></button> In LLMs, we have maybe OpenRouter and easily switched between the different types of LLMs that exist.</p>
+<p>LLM领域有OpenRouter实现不同模型间切换。</p>
+<p><button class="play-button" onclick="playAt(440.500, 444.706)"><img src="play.png" alt="Play"></button> Because the LLMs are software, they don't compete for physical space.</p>
+<p>由于LLM是软件，它们不占用物理空间。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=444" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:24</span></a></h3>
+<p><button class="play-button" onclick="playAt(443.706, 451.500)"><img src="play.png" alt="Play"></button> So it's okay to have basically like six electricity providers, and you can switch between them right, because they don't compete in such a direct way.</p>
+<p>因此可以存在多个供应商，像电力公司那样自由切换。</p>
+<p><button class="play-button" onclick="playAt(450.500, 461.500)"><img src="play.png" alt="Play"></button> And I think what's also really fascinating, and we saw this in the last few days actually, a lot of the LLMs went down, and people were kind of like stuck and unable to work.</p>
+<p>前几天多个LLM服务中断，导致人们工作停摆，这很有趣。</p>
+<p><button class="play-button" onclick="playAt(460.500, 467.500)"><img src="play.png" alt="Play"></button> And I think it's kind of fascinating to me that when the state of the art LLMs go down, it's actually kind of like an intelligence brown out in the world.</p>
+<p>顶尖LLM宕机时，就像全球发生了智能"电压不足"。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=467" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:47</span></a></h3>
+<p><button class="play-button" onclick="playAt(466.500, 472.810)"><img src="play.png" alt="Play"></button> It's kind of like when the voltage is unreliable in the grid, and the planet just gets dumber.</p>
+<p>就像电网电压不稳时，整个星球都变"笨"了。</p>
+<p><button class="play-button" onclick="playAt(471.810, 479.500)"><img src="play.png" alt="Play"></button> The more reliance we have on these models, which already is like really dramatic, and I think we'll continue to grow.</p>
+<p>我们对这些模型的依赖已很惊人，且会持续增长。</p>
+<p><button class="play-button" onclick="playAt(478.500, 482.071)"><img src="play.png" alt="Play"></button> But LLMs don't only have properties of utilities.</p>
+<p>但LLM不仅是公用事业。</p>
+<p><button class="play-button" onclick="playAt(481.071, 485.500)"><img src="play.png" alt="Play"></button> I think it's also fair to say that they have some properties of fabs.</p>
+<p>它们也有芯片代工厂的特性。</p>
+<p><button class="play-button" onclick="playAt(485.500, 492.161)"><img src="play.png" alt="Play"></button> And the reason for this is that the CAPEX required for building LLMs is actually quite large.</p>
+<p>因为构建LLM需要巨额资本支出。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=491" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:11</span></a></h3>
+<p><button class="play-button" onclick="playAt(491.161, 496.500)"><img src="play.png" alt="Play"></button> It's not just like building some power station or something like that.</p>
+<p>不同于建造发电站。</p>
+<p><button class="play-button" onclick="playAt(495.500, 503.500)"><img src="play.png" alt="Play"></button> You're investing in huge amount of money, and I think the tech tree for the technology is growing quite rapidly.</p>
+<p>需要巨额资金投入，且技术树发展迅猛。</p>
+<p><button class="play-button" onclick="playAt(502.500, 512.500)"><img src="play.png" alt="Play"></button> So we're in a world where we have deep tech trees, research and development secrets that are centralizing inside the LLMs labs.</p>
+<p>当前LLM实验室集中了大量深度技术研发机密。</p>
+<p><button class="play-button" onclick="playAt(511.500, 517.732)"><img src="play.png" alt="Play"></button> But I think the analogy muddies a little bit also because as I mentioned, this is software.</p>
+<p>但这个类比不完全成立，因为LLM本质是软件。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=517" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:37</span></a></h3>
+<p><button class="play-button" onclick="playAt(516.732, 521.500)"><img src="play.png" alt="Play"></button> And software is a bit less defensible because it is so malleable.</p>
+<p>软件的可塑性使其更难防御竞争。</p>
+<p><button class="play-button" onclick="playAt(520.500, 525.500)"><img src="play.png" alt="Play"></button> And so I think it's just an interesting kind of thing to think about potentially.</p>
+<p>这值得思考。</p>
+<p><button class="play-button" onclick="playAt(524.500, 527.853)"><img src="play.png" alt="Play"></button> There's many analogic analogies you can make.</p>
+<p>还可以做其他类比：</p>
+<p><button class="play-button" onclick="playAt(526.853, 532.500)"><img src="play.png" alt="Play"></button> Like a 4 nanometer process node, maybe it's something like a cluster with certain max plots.</p>
+<p>比如4纳米制程对应特定算力的计算集群。</p>
+<p><button class="play-button" onclick="playAt(531.500, 539.500)"><img src="play.png" alt="Play"></button> You can think about when you're using a VRGPUs and you're only doing the software and you're not doing the hardware, that's kind of like the fabless model.</p>
+<p>仅使用GPU做软件如同芯片设计公司的无晶圆模式。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=539" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:59</span></a></h3>
+<p><button class="play-button" onclick="playAt(538.500, 545.500)"><img src="play.png" alt="Play"></button> But if you're actually also building your own hardware and you're training on TPUs, if you're Google, that's kind of like the Intel model where you own your fab.</p>
+<p>而像谷歌自建TPU训练，则类似英特尔拥有晶圆厂。</p>
+<p><button class="play-button" onclick="playAt(544.500, 548.604)"><img src="play.png" alt="Play"></button> So I think there's some analogies here that make sense.</p>
+<p>这些类比都成立。</p>
+<p><button class="play-button" onclick="playAt(547.604, 556.500)"><img src="play.png" alt="Play"></button> But actually, I think the analogy that makes the most sense perhaps is that in my mind, LLMs have very strong analogies to operating systems.</p>
+<p>但最贴切的类比是：LLM非常像操作系统。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=556" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:16</span></a></h3>
+<p><button class="play-button" onclick="playAt(555.500, 559.014)"><img src="play.png" alt="Play"></button> In that this is not just electricity or water.</p>
+<p>它不仅是电力或水这类商品。</p>
+<p><button class="play-button" onclick="playAt(558.014, 562.257)"><img src="play.png" alt="Play"></button> It's not something that comes out of the tap as a commodity.</p>
+<p>不是管道流出的商品。</p>
+<p><button class="play-button" onclick="playAt(561.257, 565.500)"><img src="play.png" alt="Play"></button> These are now increasingly complex software ecosystems.</p>
+<p>而是日益复杂的软件生态系统。</p>
+<p><button class="play-button" onclick="playAt(564.500, 569.244)"><img src="play.png" alt="Play"></button> So they're not just like simple commodities like electricity.</p>
+<p>因此不同于电力等简单商品。</p>
+<p><button class="play-button" onclick="playAt(568.244, 578.500)"><img src="play.png" alt="Play"></button> And it's kind of interesting to me that the ecosystem is shaping in a very similar kind of way where you have a few close source providers like windows or macOS.</p>
+<p>有趣的是其生态格局：少数闭源供应商（如Windows/macOS）</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=578" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:38</span></a></h3>
+<p><button class="play-button" onclick="playAt(577.500, 582.230)"><img src="play.png" alt="Play"></button> And then you have an open source alternative like Linux.</p>
+<p>与开源替代品（如Linux）并存。</p>
+<p><button class="play-button" onclick="playAt(581.230, 588.500)"><img src="play.png" alt="Play"></button> And I think for neural for LLMs as well, we have a kind of a few competing close source providers.</p>
+<p>LLM领域同样存在闭源竞争者。</p>
+<p><button class="play-button" onclick="playAt(587.500, 595.500)"><img src="play.png" alt="Play"></button> And then maybe the Lama ecosystem is currently like maybe a close approximation to something that may grow into something like Linux.</p>
+<p>而Llama生态可能发展成类似Linux的存在。</p>
+<p><button class="play-button" onclick="playAt(594.500, 598.426)"><img src="play.png" alt="Play"></button> Again, I think it's still very early because these are just simple LLMs.</p>
+<p>当然现在还为时过早，当前LLM还很初级。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=597" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:57</span></a></h3>
+<p><button class="play-button" onclick="playAt(597.426, 601.500)"><img src="play.png" alt="Play"></button> But we're starting to see that these are going to get a lot more complicated.</p>
+<p>但它们正变得日益复杂。</p>
+<p><button class="play-button" onclick="playAt(600.500, 603.042)"><img src="play.png" alt="Play"></button> It's not just about the LLM itself.</p>
+<p>不仅是LLM本身。</p>
+<p><button class="play-button" onclick="playAt(602.042, 606.500)"><img src="play.png" alt="Play"></button> It's about all the tool use and the multi-modalities and how all of that works.</p>
+<p>还包括工具使用、多模态等功能的整合。</p>
+<p><button class="play-button" onclick="playAt(605.500, 610.626)"><img src="play.png" alt="Play"></button> And so when I sort of had this realization a while back, I tried to sketch it out.</p>
+<p>意识到这点后，我尝试描绘其架构。</p>
+<p><button class="play-button" onclick="playAt(609.626, 614.500)"><img src="play.png" alt="Play"></button> And it kind of seems to me like LLMs are kind of like a new operating system.</p>
+<p>在我看来LLM就像新操作系统。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=614" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:14</span></a></h3>
+<p><button class="play-button" onclick="playAt(613.500, 616.876)"><img src="play.png" alt="Play"></button> So the LLM is a new kind of a computer.</p>
+<p>LLM是新型计算机。</p>
+<p><button class="play-button" onclick="playAt(615.876, 619.331)"><img src="play.png" alt="Play"></button> It's kind of like the CPU equivalent.</p>
+<p>这有点像CPU的对应物。</p>
+<p><button class="play-button" onclick="playAt(618.331, 622.500)"><img src="play.png" alt="Play"></button> The context windows are kind of like the memory.</p>
+<p>上下文窗口有点像内存。</p>
+<p><button class="play-button" onclick="playAt(621.500, 631.500)"><img src="play.png" alt="Play"></button> And then the LLM is orchestrating memory and compute for problem solving using all of these capabilities here.</p>
+<p>然后LLM利用这些能力协调内存和计算来解决问题。</p>
+<p><button class="play-button" onclick="playAt(630.500, 637.500)"><img src="play.png" alt="Play"></button> And so definitely if you look at it looks very much like operating system from that perspective.</p>
+<p>从这个角度看，它确实非常像操作系统。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=637" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:37</span></a></h3>
+<p><button class="play-button" onclick="playAt(636.500, 649.500)"><img src="play.png" alt="Play"></button> A few more analogies, for example, if you want to download an app, say I go to VS Code and I go to download, you can download VS Code and you can run it on windows, Linux or Mac.</p>
+<p>再举些类比，比如下载应用时，我可以下载VS Code并在Windows、Linux或Mac上运行。</p>
+<p><button class="play-button" onclick="playAt(648.500, 656.957)"><img src="play.png" alt="Play"></button> In a same way as you can take an LLM app like cursor and you can run it on GPT or cloud or Gemini series, right?</p>
+<p>同样地，你可以将Cursor等LLM应用运行在GPT、Claude或Gemini系列上。</p>
+<p><button class="play-button" onclick="playAt(655.957, 658.500)"><img src="play.png" alt="Play"></button> It's just a drop down.</p>
+<p>只需一个下拉菜单。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=658" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:58</span></a></h3>
+<p><button class="play-button" onclick="playAt(657.500, 661.500)"><img src="play.png" alt="Play"></button> So it's kind of like similar in that way as well.</p>
+<p>这方面也很相似。</p>
+<p><button class="play-button" onclick="playAt(660.500, 671.500)"><img src="play.png" alt="Play"></button> More analogies that I think strike me is that we're kind of like in this 1960s-ish era where LLM compute is still very expensive for this new kind of a computer.</p>
+<p>另一个让我印象深刻的类比是，我们正处于类似1960年代的时代，LLM计算对这种新型计算机仍非常昂贵。</p>
+<p><button class="play-button" onclick="playAt(670.500, 680.500)"><img src="play.png" alt="Play"></button> And that forces the LLM to be centralized in the cloud and we're all just sort of thin clients that interact with it over the network.</p>
+<p>这迫使LLM集中在云端运行，我们只是通过网络与其交互的瘦客户端。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=680" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:20</span></a></h3>
+<p><button class="play-button" onclick="playAt(679.500, 690.500)"><img src="play.png" alt="Play"></button> And none of us have full utilization of these computers and therefore it makes sense to use time sharing where we're all just you know a dimension of the batch when they're running the computer in the cloud.</p>
+<p>我们无法完全占用这些计算机，因此采用分时共享很有意义——云端运行时我们都只是批处理的一个维度。</p>
+<p><button class="play-button" onclick="playAt(689.500, 694.292)"><img src="play.png" alt="Play"></button> And this is very much what computers used to look like during this time.</p>
+<p>这非常像那个时代的计算机形态。</p>
+<p><button class="play-button" onclick="playAt(693.292, 699.500)"><img src="play.png" alt="Play"></button> The operating systems were in the cloud, everything was streamed around and there was batching.</p>
+<p>操作系统在云端，所有内容流式传输，采用批处理。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:39</span></a></h3>
+<p><button class="play-button" onclick="playAt(698.500, 704.224)"><img src="play.png" alt="Play"></button> And so the personal computing revolution hasn't happened yet because it's just not economical.</p>
+<p>因此个人计算革命尚未发生，因为目前还不经济。</p>
+<p><button class="play-button" onclick="playAt(703.224, 705.333)"><img src="play.png" alt="Play"></button> It doesn't make sense.</p>
+<p>这不合逻辑。</p>
+<p><button class="play-button" onclick="playAt(704.333, 713.500)"><img src="play.png" alt="Play"></button> But I think some people are trying and it turns out that Mac Minis for example are a very good fit for some of the LLM's because it's all if you're doing batch one inference.</p>
+<p>但有人在尝试，例如Mac Mini非常适合某些LLM——如果你只做单次推理。</p>
+<p><button class="play-button" onclick="playAt(712.500, 716.500)"><img src="play.png" alt="Play"></button> This is all super memory bounce and this actually works.</p>
+<p>这完全依赖内存吞吐，但确实可行。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:56</span></a></h3>
+<p><button class="play-button" onclick="playAt(715.500, 720.478)"><img src="play.png" alt="Play"></button> And I think these are some early indications maybe of personal computing.</p>
+<p>我认为这可能是个人计算的早期迹象。</p>
+<p><button class="play-button" onclick="playAt(719.478, 722.467)"><img src="play.png" alt="Play"></button> But this hasn't really happened yet.</p>
+<p>但这尚未真正实现。</p>
+<p><button class="play-button" onclick="playAt(721.467, 724.393)"><img src="play.png" alt="Play"></button> It's not clear what this looks like.</p>
+<p>具体形态尚不明确。</p>
+<p><button class="play-button" onclick="playAt(723.393, 728.500)"><img src="play.png" alt="Play"></button> Maybe some of you get to invent what this is or how it works or what this should.</p>
+<p>也许在座有人将发明它的形态、机制或应有样貌。</p>
+<p><button class="play-button" onclick="playAt(727.500, 741.500)"><img src="play.png" alt="Play"></button> Maybe one more analogy that I'll mention is whenever I talk to chatchipity or some LLM directly in text, I feel like I'm talking to an operating system through the terminal like it's just it's text.</p>
+<p>另一个类比是：当我通过文本与ChatGPT等LLM对话时，感觉像通过终端与操作系统交流——纯文本界面。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=741" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:21</span></a></h3>
+<p><button class="play-button" onclick="playAt(740.500, 744.092)"><img src="play.png" alt="Play"></button> It's direct access to the operating system.</p>
+<p>这是对操作系统的直接访问。</p>
+<p><button class="play-button" onclick="playAt(743.092, 752.500)"><img src="play.png" alt="Play"></button> And I think a gooey hasn't yet really been invented in like a general way like chatchipity have a gooey like different than just the tech bubbles.</p>
+<p>我认为尚未发明出通用的图形界面——不同于现有技术泡沫的ChatGPT图形界面。</p>
+<p><button class="play-button" onclick="playAt(751.500, 762.500)"><img src="play.png" alt="Play"></button> Certainly some of the apps that we're going to go into in a bit have gooey but there's no like gooey across all the tasks that makes sense.</p>
+<p>当然某些应用具备图形界面，但还没有适用于所有任务的通用图形界面。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:42</span></a></h3>
+<p><button class="play-button" onclick="playAt(761.500, 769.500)"><img src="play.png" alt="Play"></button> There are some ways in which LLM's are different from kind of operating systems in some fairly unique way and from early computing.</p>
+<p>LLM在某些独特方面不同于操作系统和早期计算。</p>
+<p><button class="play-button" onclick="playAt(768.500, 776.870)"><img src="play.png" alt="Play"></button> And I wrote about this one particular property that strikes me as very different this time around.</p>
+<p>我特别写过这次革命中一个截然不同的特性。</p>
+<p><button class="play-button" onclick="playAt(775.870, 785.500)"><img src="play.png" alt="Play"></button> It's that LLM's like flip, they flip the direction of technology diffusion that is usually present in technology.</p>
+<p>即LLM颠覆了技术扩散的传统方向。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=785" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:05</span></a></h3>
+<p><button class="play-button" onclick="playAt(784.500, 793.063)"><img src="play.png" alt="Play"></button> So for example with electricity, cryptography, computing, flight, internet, GPS, lots of new transformative technologies that have nothing around.</p>
+<p>例如电力、加密技术、计算、航空、互联网、GPS等突破性技术最初都无人问津。</p>
+<p><button class="play-button" onclick="playAt(792.063, 798.500)"><img src="play.png" alt="Play"></button> Typically it is the government and corporations that are the first users because it's new and expensive, etc.</p>
+<p>通常政府和公司是首批用户，因为新技术昂贵且不成熟。</p>
+<p><button class="play-button" onclick="playAt(797.500, 800.634)"><img src="play.png" alt="Play"></button> And it only later diffuses to consumer.</p>
+<p>之后才扩散到消费者。</p>
+<p><button class="play-button" onclick="playAt(799.634, 803.480)"><img src="play.png" alt="Play"></button> But I feel like LLM's are kind of like flipped around.</p>
+<p>但LLM的路径似乎相反。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=802" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:22</span></a></h3>
+<p><button class="play-button" onclick="playAt(802.480, 807.554)"><img src="play.png" alt="Play"></button> So maybe with early computers it was all about ballistics and military use.</p>
+<p>早期计算机主要用于弹道计算和军事用途。</p>
+<p><button class="play-button" onclick="playAt(806.554, 811.500)"><img src="play.png" alt="Play"></button> But with LLM's it's all about how do you boil an egg or something like that.</p>
+<p>而LLM最初却用于“如何煮鸡蛋”这类问题。</p>
+<p><button class="play-button" onclick="playAt(810.500, 817.180)"><img src="play.png" alt="Play"></button> And so it's really fascinating to me that we have a new magical computer and it's like helping me boil an egg.</p>
+<p>这很有趣：我们拥有神奇的计算机，它却在帮我解决煮鸡蛋的问题。</p>
+<p><button class="play-button" onclick="playAt(816.180, 823.500)"><img src="play.png" alt="Play"></button> It's not helping the government do something really crazy like some military ballistics or some special technology.</p>
+<p>而非协助政府进行弹道计算或特殊技术研发。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=823" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:43</span></a></h3>
+<p><button class="play-button" onclick="playAt(822.500, 829.097)"><img src="play.png" alt="Play"></button> Indeed corporations are governments are lagging behind the adoption of all of us of all of these technologies.</p>
+<p>事实上企业和政府的采用落后于普通用户。</p>
+<p><button class="play-button" onclick="playAt(828.097, 830.180)"><img src="play.png" alt="Play"></button> So it just backwards.</p>
+<p>这是完全逆向的。</p>
+<p><button class="play-button" onclick="playAt(829.180, 836.500)"><img src="play.png" alt="Play"></button> And I think it informs maybe some of the uses of how we want to use this technology or like what are some of the first apps and so on.</p>
+<p>这可能启示我们如何利用该技术，以及首批应用的方向。</p>
+<p><button class="play-button" onclick="playAt(835.500, 837.774)"><img src="play.png" alt="Play"></button> So in summary so far.</p>
+<p>综上。</p>
+<p><button class="play-button" onclick="playAt(836.774, 841.449)"><img src="play.png" alt="Play"></button> LLM labs, lab, LLM's I think it's accurate language to use.</p>
+<p>用“LLM实验室”这个表述是准确的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=840" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:00</span></a></h3>
+<p><button class="play-button" onclick="playAt(840.449, 844.374)"><img src="play.png" alt="Play"></button> But LLM's are complicated operating systems.</p>
+<p>但LLM是复杂的操作系统。</p>
+<p><button class="play-button" onclick="playAt(843.374, 849.324)"><img src="play.png" alt="Play"></button> There are circa 1960s in computing and we're redoing computing all over again.</p>
+<p>我们正处于类似1960年代的计算阶段，正在重走计算发展之路。</p>
+<p><button class="play-button" onclick="playAt(848.324, 854.500)"><img src="play.png" alt="Play"></button> And they're currently available via time sharing and distributed lucky utility.</p>
+<p>目前通过分时共享和分布式实用程序提供。</p>
+<p><button class="play-button" onclick="playAt(853.500, 859.792)"><img src="play.png" alt="Play"></button> So what is new and unprecedented is that they're not in the hands of a few governments and corporations.</p>
+<p>前所未有的新现象是：它们不掌握在少数政府和企业手中。</p>
+<p><button class="play-button" onclick="playAt(858.792, 870.500)"><img src="play.png" alt="Play"></button> They're in the hands of all of us because we all have a computer and it's all just software and chasher pt was being down to our computers like to billions of people like instantly and overnight and this is insane.</p>
+<p>而是属于所有人——因为我们都有电脑，且ChatGPT等软件一夜之间就普及到数十亿人。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=870" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:30</span></a></h3>
+<p><button class="play-button" onclick="playAt(869.500, 878.310)"><img src="play.png" alt="Play"></button> And it's kind of insane to me that this is the case and now it is our time to enter the industry and program these computers is crazy.</p>
+<p>这令人震撼，现在正是我们进入行业编程这些计算机的时机。</p>
+<p><button class="play-button" onclick="playAt(877.310, 880.500)"><img src="play.png" alt="Play"></button> So I think this is quite remarkable.</p>
+<p>这非常了不起。</p>
+<p><button class="play-button" onclick="playAt(879.500, 888.987)"><img src="play.png" alt="Play"></button> So in summary, I think we have to kind of spend some time to think about what these things are and I especially like to kind of talk about their psychology.</p>
+<p>总之，我们需要花时间思考这些系统的本质，我尤其想探讨它们的“心理”。</p>
+<p><button class="play-button" onclick="playAt(887.987, 893.500)"><img src="play.png" alt="Play"></button> So the way I like to think about LLM's is that they're kind of like people spirits.</p>
+<p>我认为LLM类似“人类灵魂”。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:53</span></a></h3>
+<p><button class="play-button" onclick="playAt(892.500, 901.452)"><img src="play.png" alt="Play"></button> They are stochastic simulations of people and the simulator in this case happens to be an other aggressive transformer.</p>
+<p>它们是人的随机模拟，模拟器恰巧是Transformer神经网络。</p>
+<p><button class="play-button" onclick="playAt(900.452, 903.500)"><img src="play.png" alt="Play"></button> So transformer is a neural net.</p>
+<p>Transformer是一种神经网络。</p>
+<p><button class="play-button" onclick="playAt(902.500, 906.279)"><img src="play.png" alt="Play"></button> And it's kind of like it goes on the level of tokens.</p>
+<p>它在token级别运作。</p>
+<p><button class="play-button" onclick="playAt(905.279, 908.661)"><img src="play.png" alt="Play"></button> It goes chunk, chunk, chunk, chunk, chunk.</p>
+<p>逐块处理。</p>
+<p><button class="play-button" onclick="playAt(907.661, 912.500)"><img src="play.png" alt="Play"></button> And there's an almost equal amount of compute for every single chunk.</p>
+<p>每个块消耗几乎相等的计算量。</p>
+<p><button class="play-button" onclick="playAt(911.500, 921.500)"><img src="play.png" alt="Play"></button> And this simulator, of course, is just is basically there's some weights involved and we fit it to all of text that we have on the internet and so on.</p>
+<p>这个模拟器本质上通过权重参数，拟合互联网上的所有文本数据。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:21</span></a></h3>
+<p><button class="play-button" onclick="playAt(920.500, 923.770)"><img src="play.png" alt="Play"></button> And you end up with this kind of a simulator.</p>
+<p>最终形成这种模拟器。</p>
+<p><button class="play-button" onclick="playAt(922.770, 928.500)"><img src="play.png" alt="Play"></button> And because it is trained on humans, it's got this emergent psychology that is human like.</p>
+<p>由于基于人类数据训练，它涌现出类人心理。</p>
+<p><button class="play-button" onclick="playAt(927.500, 938.500)"><img src="play.png" alt="Play"></button> So the first thing you'll notice is of course, LLM's have recycled beating knowledge and memory and they can remember lots of things a lot more than any single individual human can because they read so many things.</p>
+<p>首先，LLM具备再生知识和记忆能力，记忆量远超任何人类个体。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=938" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:38</span></a></h3>
+<p><button class="play-button" onclick="playAt(937.500, 943.516)"><img src="play.png" alt="Play"></button> It actually kind of reminds me of this movie, Rainman, which I actually really recommend people watch.</p>
+<p>这让我想起电影《雨人》，我强烈推荐观看。</p>
+<p><button class="play-button" onclick="playAt(942.516, 944.625)"><img src="play.png" alt="Play"></button> It's an amazing movie.</p>
+<p>这是部杰作。</p>
+<p><button class="play-button" onclick="playAt(943.625, 945.500)"><img src="play.png" alt="Play"></button> I love this movie.</p>
+<p>我深爱这部电影。</p>
+<p><button class="play-button" onclick="playAt(944.500, 950.104)"><img src="play.png" alt="Play"></button> And Dustin Hoffman here is an autistic savant who has almost perfect memory.</p>
+<p>达斯汀·霍夫曼饰演的自闭症学者拥有近乎完美的记忆力。</p>
+<p><button class="play-button" onclick="playAt(949.104, 955.500)"><img src="play.png" alt="Play"></button> So he can read a he can read like a phone book and remember all of the names and phone numbers.</p>
+<p>他能记住整本电话簿的姓名和号码。</p>
+<p><button class="play-button" onclick="playAt(954.500, 958.299)"><img src="play.png" alt="Play"></button> And I kind of feel like LLM's are kind of like very similar.</p>
+<p>LLM与此非常相似。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=957" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:57</span></a></h3>
+<p><button class="play-button" onclick="playAt(957.299, 962.500)"><img src="play.png" alt="Play"></button> They can remember Shah hashes and lots of different kinds of things very, very easily.</p>
+<p>它们能轻松记忆各类哈希值和信息。</p>
+<p><button class="play-button" onclick="playAt(961.500, 969.500)"><img src="play.png" alt="Play"></button> So they certainly have superpowers in some set in some respects, but they also have a bunch of I would say cognitive deficits.</p>
+<p>因此它们在某些方面具备超能力，但也存在认知缺陷。</p>
+<p><button class="play-button" onclick="playAt(968.500, 978.500)"><img src="play.png" alt="Play"></button> So they hallucinate quite a bit and they kind of make up stuff and don't have a very good sort of internal model of self knowledge, not sufficient at least.</p>
+<p>比如经常产生幻觉，编造内容，缺乏足够的自我认知模型。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=978" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:18</span></a></h3>
+<p><button class="play-button" onclick="playAt(977.500, 980.565)"><img src="play.png" alt="Play"></button> And this has gotten better but not perfect.</p>
+<p>这方面已有改进但仍不完美。</p>
+<p><button class="play-button" onclick="playAt(979.565, 982.286)"><img src="play.png" alt="Play"></button> They display jagged intelligence.</p>
+<p>它们表现出“锯齿状智能”。</p>
+<p><button class="play-button" onclick="playAt(981.286, 985.500)"><img src="play.png" alt="Play"></button> So they're going to be superhuman in some problem solving domains.</p>
+<p>在某些领域表现超人类。</p>
+<p><button class="play-button" onclick="playAt(984.500, 994.500)"><img src="play.png" alt="Play"></button> And then they're going to make mistakes that basically no human will make like you know they will insist that 9.11 is greater than 9.9 or that there are two hours in strawberry.</p>
+<p>但也会犯人类不会犯的错误，比如坚称9.11大于9.9，或草莓有两小时。</p>
+<p><button class="play-button" onclick="playAt(993.500, 999.833)"><img src="play.png" alt="Play"></button> These are some famous examples, but basically there are rough edges that you can trip on.</p>
+<p>这些都是著名案例，说明存在易踩的“粗糙边缘”。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:39</span></a></h3>
+<p><button class="play-button" onclick="playAt(998.833, 1002.500)"><img src="play.png" alt="Play"></button> So that's kind of I think also kind of unique.</p>
+<p>这也很独特。</p>
+<p><button class="play-button" onclick="playAt(1001.500, 1005.141)"><img src="play.png" alt="Play"></button> They also kind of suffer from enter grade amnesia.</p>
+<p>它们还患有“间歇性失忆”。</p>
+<p><button class="play-button" onclick="playAt(1004.141, 1022.500)"><img src="play.png" alt="Play"></button> So and I think I'm alluding to the fact that if you have a coworker who joins your organization, this coworker will over time learn your organization and they will understand and gain like a huge amount of context on the organization and they go home and they sleep and they consolidate knowledge and they develop expertise over time.</p>
+<p>就像新同事会逐渐了解组织，积累上下文，通过睡眠巩固知识，形成专业能力。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1022" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:02</span></a></h3>
+<p><button class="play-button" onclick="playAt(1021.500, 1028.500)"><img src="play.png" alt="Play"></button> LLMs don't natively do this and this is not something that has really been solved in the R&amp;D of LLMs I think.</p>
+<p>LLM天生不具备这种能力，目前研发尚未解决该问题。</p>
+<p><button class="play-button" onclick="playAt(1027.500, 1036.500)"><img src="play.png" alt="Play"></button> And so context windows are really kind of like working memory and you have to sort of program the working memory quite directly because they don't just kind of like get smarter by by default.</p>
+<p>因此上下文窗口类似工作记忆，需要直接编程设定，因为它们不会自动变聪明。</p>
+<p><button class="play-button" onclick="playAt(1035.500, 1040.364)"><img src="play.png" alt="Play"></button> And I think a lot of people get tripped up by the analogies in this way.</p>
+<p>很多人被这类类比误导。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1039" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:19</span></a></h3>
+<p><button class="play-button" onclick="playAt(1039.364, 1045.313)"><img src="play.png" alt="Play"></button> In popular culture, I recommend people watch these two movies, Memento and 51st dates.</p>
+<p>我推荐观看《记忆碎片》和《初恋50次》这两部电影。</p>
+<p><button class="play-button" onclick="playAt(1044.313, 1052.500)"><img src="play.png" alt="Play"></button> In both of these movies, the protagonists, their weights are fixed and their context windows gets wiped every single morning.</p>
+<p>两部电影的主角都像权重固定的模型，每天早晨上下文窗口被清空。</p>
+<p><button class="play-button" onclick="playAt(1051.500, 1058.500)"><img src="play.png" alt="Play"></button> And it's really problematic to go to work or have relationships when this happens and this happens to all of us all the time.</p>
+<p>这种情况严重影响工作和人际关系，而LLM时刻面临此问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1058" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:38</span></a></h3>
+<p><button class="play-button" onclick="playAt(1057.500, 1063.803)"><img src="play.png" alt="Play"></button> I guess one more thing I would point to is security kind of related limitations of the use of LLMs.</p>
+<p>另一点是LLM使用的安全限制。</p>
+<p><button class="play-button" onclick="playAt(1062.803, 1066.058)"><img src="play.png" alt="Play"></button> So for example, LLMs are quite gullible.</p>
+<p>例如LLM容易轻信。</p>
+<p><button class="play-button" onclick="playAt(1065.058, 1068.776)"><img src="play.png" alt="Play"></button> They are susceptible to prompt injection risks.</p>
+<p>易受提示词注入攻击。</p>
+<p><button class="play-button" onclick="playAt(1067.776, 1070.500)"><img src="play.png" alt="Play"></button> They might leak your data, etc.</p>
+<p>可能泄露数据。</p>
+<p><button class="play-button" onclick="playAt(1069.500, 1074.238)"><img src="play.png" alt="Play"></button> And so there's many other considerations security related.</p>
+<p>存在诸多安全隐患。</p>
+<p><button class="play-button" onclick="playAt(1073.238, 1084.500)"><img src="play.png" alt="Play"></button> So basically long story short, you have to load your, you have to simultaneously think through this superhuman thing that has a bunch of cognitive deficits and issues.</p>
+<p>简言之，你必须同时考量这个兼具超能力与认知缺陷的系统。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1084" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:04</span></a></h3>
+<p><button class="play-button" onclick="playAt(1083.500, 1087.508)"><img src="play.png" alt="Play"></button> How do we, and yet they are extremely useful.</p>
+<p>尽管它们极其有用。</p>
+<p><button class="play-button" onclick="playAt(1086.508, 1094.500)"><img src="play.png" alt="Play"></button> And so how do we program them and how do we work around their deficits and enjoy their superhuman powers.</p>
+<p>因此如何编程它们，规避缺陷，发挥其超能力是关键。</p>
+<p><button class="play-button" onclick="playAt(1093.500, 1101.500)"><img src="play.png" alt="Play"></button> So what I want to switch to now is talk about the opportunities of how do we use these models and what are some of the biggest opportunities.</p>
+<p>现在转向探讨如何利用这些模型的机遇。</p>
+<p><button class="play-button" onclick="playAt(1100.500, 1105.500)"><img src="play.png" alt="Play"></button> This is not a comprehensive list, just some of the things that I thought were interesting for this talk.</p>
+<p>以下并非完整清单，只是我认为值得讨论的要点。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1105" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:25</span></a></h3>
+<p><button class="play-button" onclick="playAt(1104.500, 1110.369)"><img src="play.png" alt="Play"></button> The first thing I'm kind of excited about is what I would call partial autonomy apps.</p>
+<p>第一个令我兴奋的是“部分自治应用”。</p>
+<p><button class="play-button" onclick="playAt(1109.369, 1113.500)"><img src="play.png" alt="Play"></button> So for example, let's work with the example of coding.</p>
+<p>以编程为例。</p>
+<p><button class="play-button" onclick="playAt(1112.500, 1123.500)"><img src="play.png" alt="Play"></button> You can certainly go to chat GPT directly and you can start copy-pasting code around and copy-pasting bug reports and stuff around and getting code and copy-pasting everything around.</p>
+<p>你可以直接使用ChatGPT复制粘贴代码和错误报告。</p>
+<p><button class="play-button" onclick="playAt(1122.500, 1124.500)"><img src="play.png" alt="Play"></button> Why would you do that?</p>
+<p>但为何要这样做？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1124" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:44</span></a></h3>
+<p><button class="play-button" onclick="playAt(1123.500, 1126.833)"><img src="play.png" alt="Play"></button> Why would you go directly to the operating system?</p>
+<p>为何直接与操作系统交互？</p>
+<p><button class="play-button" onclick="playAt(1125.833, 1129.500)"><img src="play.png" alt="Play"></button> It makes a lot more sense to have an app dedicated for this.</p>
+<p>专为此设计的应用更合理。</p>
+<p><button class="play-button" onclick="playAt(1128.500, 1132.700)"><img src="play.png" alt="Play"></button> And so I think many of you use cursor, I do as well.</p>
+<p>比如很多人使用的Cursor。</p>
+<p><button class="play-button" onclick="playAt(1131.700, 1136.220)"><img src="play.png" alt="Play"></button> And cursor is kind of like the thing you want instead.</p>
+<p>Cursor正是你需要的工具。</p>
+<p><button class="play-button" onclick="playAt(1135.220, 1139.500)"><img src="play.png" alt="Play"></button> You don't want to just directly go to the chat GPT.</p>
+<p>而非直接使用ChatGPT。</p>
+<p><button class="play-button" onclick="playAt(1138.500, 1147.500)"><img src="play.png" alt="Play"></button> And I think cursor is a very good example of an early LLM app that has a bunch of properties that I think are useful across all the LLM apps.</p>
+<p>Cursor是早期LLM应用的典范，具备多项通用特性。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1147" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:07</span></a></h3>
+<p><button class="play-button" onclick="playAt(1146.500, 1155.500)"><img src="play.png" alt="Play"></button> So in particular, you will notice that we have a traditional interface that allows a human to go in and do all the work manually just as before.</p>
+<p>首先，它保留传统界面允许人工操作。</p>
+<p><button class="play-button" onclick="playAt(1154.500, 1160.500)"><img src="play.png" alt="Play"></button> But in addition to that, we now have this LLM integration that allows us to go in bigger chunks.</p>
+<p>同时集成LLM支持更大规模操作。</p>
+<p><button class="play-button" onclick="playAt(1159.500, 1165.500)"><img src="play.png" alt="Play"></button> And so some of the properties of LLM apps that I think are shared and useful to point out.</p>
+<p>值得指出的共享特性包括：</p>
+<p><button class="play-button" onclick="playAt(1164.500, 1169.820)"><img src="play.png" alt="Play"></button> Number one, the LLM basically do a ton of the context management.</p>
+<p>第一，LLM处理大量上下文管理。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1169" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:29</span></a></h3>
+<p><button class="play-button" onclick="playAt(1168.820, 1173.500)"><img src="play.png" alt="Play"></button> Number two, they orchestrate multiple calls to LLM's.</p>
+<p>第二，协调多次LLM调用。</p>
+<p><button class="play-button" onclick="playAt(1172.500, 1181.500)"><img src="play.png" alt="Play"></button> So in the case of cursor, there's under the hood embedding models for all your files, the actual chat models, models that apply diffs to the code.</p>
+<p>Cursor底层包含文件嵌入模型、聊天模型和代码差异应用模型。</p>
+<p><button class="play-button" onclick="playAt(1180.500, 1184.063)"><img src="play.png" alt="Play"></button> And this is all orchestrated for you.</p>
+<p>这些都被自动协调。</p>
+<p><button class="play-button" onclick="playAt(1183.063, 1192.500)"><img src="play.png" alt="Play"></button> A really big one that I think also maybe not fully appreciated always is application specific GUI and the importance of it.</p>
+<p>另一个常被低估的关键是应用专属图形界面的重要性。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1192" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:52</span></a></h3>
+<p><button class="play-button" onclick="playAt(1191.500, 1196.726)"><img src="play.png" alt="Play"></button> Because you don't just want to talk to the operating system directly in text.</p>
+<p>因为你不只想通过文本与系统交互。</p>
+<p><button class="play-button" onclick="playAt(1195.726, 1199.500)"><img src="play.png" alt="Play"></button> Text is very hard to read, interpret, understand.</p>
+<p>文本难以阅读解析。</p>
+<p><button class="play-button" onclick="playAt(1198.500, 1203.269)"><img src="play.png" alt="Play"></button> And also, like you don't want to take some of these actions natively in text.</p>
+<p>某些操作也不适合纯文本形式。</p>
+<p><button class="play-button" onclick="playAt(1202.269, 1206.500)"><img src="play.png" alt="Play"></button> So it's much better to just see a diff as like red and green change.</p>
+<p>以红绿颜色显示代码变更更直观。</p>
+<p><button class="play-button" onclick="playAt(1205.500, 1208.911)"><img src="play.png" alt="Play"></button> And you can see what's being added is subtracted.</p>
+<p>清晰展示增减内容。</p>
+<p><button class="play-button" onclick="playAt(1207.911, 1212.500)"><img src="play.png" alt="Play"></button> It's much easier to just do command why to accept or command and to reject.</p>
+<p>直接输入命令接受或拒绝会简单得多。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1212" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:12</span></a></h3>
+<p><button class="play-button" onclick="playAt(1211.500, 1214.901)"><img src="play.png" alt="Play"></button> I shouldn't have to type it in text, right?</p>
+<p>我不应该手动输入文本吧？</p>
+<p><button class="play-button" onclick="playAt(1213.901, 1219.500)"><img src="play.png" alt="Play"></button> So GUI allows a human to audit the work of these fallible systems and to go faster.</p>
+<p>因此GUI能让人类审核这些易出错系统的工作并加速流程。</p>
+<p><button class="play-button" onclick="playAt(1218.500, 1222.500)"><img src="play.png" alt="Play"></button> I'm going to come back to this point a little bit later as well.</p>
+<p>稍后我会再回到这一点。</p>
+<p><button class="play-button" onclick="playAt(1221.500, 1227.500)"><img src="play.png" alt="Play"></button> And the last kind of feature I want to point out is that there's what I call the autonomy slider.</p>
+<p>我想指出的最后一个功能是我称之为“自主性滑块”的设计。</p>
+<p><button class="play-button" onclick="playAt(1226.500, 1231.652)"><img src="play.png" alt="Play"></button> So for example in cursor, you can just do tap completion, you're mostly in charge.</p>
+<p>例如在Cursor中，你可以轻点补全，此时你仍掌握主导权。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1231" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:31</span></a></h3>
+<p><button class="play-button" onclick="playAt(1230.652, 1235.500)"><img src="play.png" alt="Play"></button> You can select a chunk of code and command K to change just that chunk of code.</p>
+<p>你可以选中代码块并按Command K仅修改该部分。</p>
+<p><button class="play-button" onclick="playAt(1234.500, 1238.121)"><img src="play.png" alt="Play"></button> You can do command L to change this entire file.</p>
+<p>或按Command L修改整个文件。</p>
+<p><button class="play-button" onclick="playAt(1237.121, 1243.500)"><img src="play.png" alt="Play"></button> Or you can do command I, which just, you know, letter red, do whatever you want in the entire repo.</p>
+<p>或者你可以执行命令I，也就是所谓的“红色字母”，在整個代码库中做任何你想做的事。</p>
+<p><button class="play-button" onclick="playAt(1242.500, 1246.500)"><img src="play.png" alt="Play"></button> And that's the sort of full autonomy agent, the genetic version.</p>
+<p>这就是一种完全自主的代理，即通用版本。</p>
+<p><button class="play-button" onclick="playAt(1245.500, 1249.135)"><img src="play.png" alt="Play"></button> And so you are in charge of the autonomy slider.</p>
+<p>因此，你负责控制自主性滑块。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1248" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:48</span></a></h3>
+<p><button class="play-button" onclick="playAt(1248.135, 1256.500)"><img src="play.png" alt="Play"></button> And depending on the complexity of the task at hand, you can tune the amount of autonomy that you're willing to give up for that task.</p>
+<p>根据当前任务的复杂性，你可以调整愿意为该任务放弃的自主性程度。</p>
+<p><button class="play-button" onclick="playAt(1255.500, 1262.500)"><img src="play.png" alt="Play"></button> Maybe to show one more example of a fairly successful LLM app perplexity.</p>
+<p>或许再举一个比较成功的大语言模型应用Perplexity的例子。</p>
+<p><button class="play-button" onclick="playAt(1261.500, 1266.393)"><img src="play.png" alt="Play"></button> It also has very similar features to what I've just pointed out in cursor.</p>
+<p>它也具有我刚才在Cursor中指出的类似功能。</p>
+<p><button class="play-button" onclick="playAt(1265.393, 1268.500)"><img src="play.png" alt="Play"></button> It packages up a lot of the information.</p>
+<p>它整合了大量信息。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:08</span></a></h3>
+<p><button class="play-button" onclick="playAt(1267.500, 1270.615)"><img src="play.png" alt="Play"></button> It orchestrates multiple of the alums.</p>
+<p>它协调多个大语言模型。</p>
+<p><button class="play-button" onclick="playAt(1269.615, 1273.500)"><img src="play.png" alt="Play"></button> It's got a GUI that allows you to audit some of its work.</p>
+<p>它有一个图形界面，可以让你审核它的部分工作。</p>
+<p><button class="play-button" onclick="playAt(1272.500, 1277.659)"><img src="play.png" alt="Play"></button> So for example, it will cite sources and you can imagine inspecting them.</p>
+<p>例如，它会引用来源，你可以想象检查这些来源。</p>
+<p><button class="play-button" onclick="playAt(1276.659, 1279.500)"><img src="play.png" alt="Play"></button> And it's got an autonomy slider.</p>
+<p>它还有一个自主性滑块。</p>
+<p><button class="play-button" onclick="playAt(1278.500, 1284.500)"><img src="play.png" alt="Play"></button> You can either just do a quick search or you can do research or you can do deep research and come back 10 minutes later.</p>
+<p>你可以选择快速搜索、研究或深度研究，并在10分钟后返回结果。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1284" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:24</span></a></h3>
+<p><button class="play-button" onclick="playAt(1283.500, 1288.500)"><img src="play.png" alt="Play"></button> So this is all just varying levels of autonomy that you give up to the tool.</p>
+<p>因此，这只是你交给工具的不同程度的自主性。</p>
+<p><button class="play-button" onclick="playAt(1287.500, 1293.500)"><img src="play.png" alt="Play"></button> So I guess my question is, I feel like a lot of software will become partially autonomous.</p>
+<p>所以我的问题是，我感觉很多软件将变得部分自主。</p>
+<p><button class="play-button" onclick="playAt(1292.500, 1296.083)"><img src="play.png" alt="Play"></button> And I'm trying to think through like, what does that look like?</p>
+<p>我试图思考，这会是什么样子？</p>
+<p><button class="play-button" onclick="playAt(1295.083, 1301.500)"><img src="play.png" alt="Play"></button> And for many of you who maintain products and services, how are you going to make your products and services partially autonomous?</p>
+<p>对于许多维护产品和服务的你们来说，如何让产品和服务变得部分自主？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1301" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:41</span></a></h3>
+<p><button class="play-button" onclick="playAt(1300.500, 1304.349)"><img src="play.png" alt="Play"></button> Can an LLM see everything that a human can see?</p>
+<p>大语言模型能看到人类能看到的一切吗？</p>
+<p><button class="play-button" onclick="playAt(1303.349, 1307.500)"><img src="play.png" alt="Play"></button> Can an LLM act in all the ways that a human could act?</p>
+<p>大语言模型能以人类的所有方式行动吗？</p>
+<p><button class="play-button" onclick="playAt(1306.500, 1310.388)"><img src="play.png" alt="Play"></button> And can humans supervise and stay in the loop of this activity?</p>
+<p>人类能否监督并保持在这种活动的循环中？</p>
+<p><button class="play-button" onclick="playAt(1309.388, 1313.500)"><img src="play.png" alt="Play"></button> Because again, these are talable systems that aren't yet perfect.</p>
+<p>因为这些系统尚不完美。</p>
+<p><button class="play-button" onclick="playAt(1312.500, 1317.500)"><img src="play.png" alt="Play"></button> And what does a diff look like in Photoshop or something like that?</p>
+<p>Photoshop中的差异对比是什么样子的？</p>
+<p><button class="play-button" onclick="playAt(1316.500, 1323.500)"><img src="play.png" alt="Play"></button> And also a lot of the traditional software right now, it has all these switches and all this kind of stuff that's all designed for human.</p>
+<p>此外，很多传统软件现在有所有这些开关和设计给人类的控件。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1323" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:03</span></a></h3>
+<p><button class="play-button" onclick="playAt(1322.500, 1327.500)"><img src="play.png" alt="Play"></button> All of this has to change and become accessible to LLMs.</p>
+<p>所有这些都必须改变，变得对大语言模型可访问。</p>
+<p><button class="play-button" onclick="playAt(1327.500, 1338.500)"><img src="play.png" alt="Play"></button> So one thing I want to stress with a lot of these LLM apps that I'm not sure it gets as much attention as it should is, we're now kind of like cooperating with AI's.</p>
+<p>因此，我想强调的一点是，我们现在有点像与AI合作。</p>
+<p><button class="play-button" onclick="playAt(1337.500, 1341.500)"><img src="play.png" alt="Play"></button> And usually they are doing the generation and we as humans are doing the verification.</p>
+<p>通常它们负责生成，而我们人类负责验证。</p>
+<p><button class="play-button" onclick="playAt(1340.500, 1346.500)"><img src="play.png" alt="Play"></button> It is in our interest to make this loop go as fast as possible so we're getting a lot of work done.</p>
+<p>让这个循环尽可能快地进行符合我们的利益，这样我们能完成大量工作。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1346" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:26</span></a></h3>
+<p><button class="play-button" onclick="playAt(1345.500, 1350.500)"><img src="play.png" alt="Play"></button> There are two major ways that I think this can be done.</p>
+<p>我认为有两种主要方式可以实现这一点。</p>
+<p><button class="play-button" onclick="playAt(1349.500, 1352.500)"><img src="play.png" alt="Play"></button> Number one, you can speed up verification a lot.</p>
+<p>第一，你可以大幅加快验证速度。</p>
+<p><button class="play-button" onclick="playAt(1352.500, 1360.500)"><img src="play.png" alt="Play"></button> And I think GUI's for example are extremely important to this because GUI utilizes your computer vision GPU in all of our head.</p>
+<p>我认为图形界面对此非常重要，因为它利用了我们头脑中的计算机视觉GPU。</p>
+<p><button class="play-button" onclick="playAt(1359.500, 1364.500)"><img src="play.png" alt="Play"></button> Reading text is effortful and it's not fun, but looking at stuff is fun.</p>
+<p>阅读文本很费力且无趣，但看东西很有趣。</p>
+<p><button class="play-button" onclick="playAt(1363.500, 1367.500)"><img src="play.png" alt="Play"></button> And it's just kind of like a highway to your brain.</p>
+<p>它就像通往大脑的高速公路。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1367" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:47</span></a></h3>
+<p><button class="play-button" onclick="playAt(1366.500, 1373.500)"><img src="play.png" alt="Play"></button> So I think GUI's are very useful for auditing systems and visual representations in general.</p>
+<p>因此，我认为图形界面对于审计系统和视觉表示非常有用。</p>
+<p><button class="play-button" onclick="playAt(1372.500, 1377.500)"><img src="play.png" alt="Play"></button> And number two I would say is we have to keep the AI on the leash.</p>
+<p>第二，我认为我们必须控制AI。</p>
+<p><button class="play-button" onclick="playAt(1377.500, 1387.500)"><img src="play.png" alt="Play"></button> I think a lot of people are getting way over excited with AI agents and it's not useful to me to get a dip of 1000 lines of code to my repo.</p>
+<p>我认为很多人对AI代理过于兴奋，但对我来说，收到1000行代码的提交并不有用。</p>
+<p><button class="play-button" onclick="playAt(1386.500, 1394.500)"><img src="play.png" alt="Play"></button> I have to, I'm still the bottom line, even though 1000 lines come out instantly, I have to make sure that this thing is not introducing bugs.</p>
+<p>我仍然是最终负责人，即使1000行代码瞬间生成，我也必须确保它不会引入错误。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1394" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:14</span></a></h3>
+<p><button class="play-button" onclick="playAt(1393.500, 1397.500)"><img src="play.png" alt="Play"></button> It's just like and that is doing the correct thing.</p>
+<p>它必须做正确的事情。</p>
+<p><button class="play-button" onclick="playAt(1396.500, 1400.500)"><img src="play.png" alt="Play"></button> And that there's no security issues and so on.</p>
+<p>并且没有安全问题等。</p>
+<p><button class="play-button" onclick="playAt(1399.500, 1414.500)"><img src="play.png" alt="Play"></button> I think that, yeah, basically, we have to sort of like, it's in our interest to make the flow of these two go very, very fast and we have to somehow keep the AI on leash because it gets way too over reactive.</p>
+<p>我认为，基本上，我们必须让这两者的流程非常非常快，同时必须控制AI，因为它会变得过于反应过度。</p>
+<p><button class="play-button" onclick="playAt(1413.500, 1416.500)"><img src="play.png" alt="Play"></button> It's kind of like this.</p>
+<p>有点像这样。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1416" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:36</span></a></h3>
+<p><button class="play-button" onclick="playAt(1415.500, 1418.500)"><img src="play.png" alt="Play"></button> This is how I feel when I do AI assist coding.</p>
+<p>这就是我在AI辅助编码时的感受。</p>
+<p><button class="play-button" onclick="playAt(1417.500, 1420.500)"><img src="play.png" alt="Play"></button> If I'm just vibe coding, everything is nice and great.</p>
+<p>如果我只是随意编码，一切都很美好。</p>
+<p><button class="play-button" onclick="playAt(1419.500, 1426.500)"><img src="play.png" alt="Play"></button> But if I'm actually trying to get work done, it's not so great to have an over reactive agents doing all this kind of stuff.</p>
+<p>但如果我真的想完成工作，让一个反应过度的代理做这些事情就不太好了。</p>
+<p><button class="play-button" onclick="playAt(1425.500, 1428.383)"><img src="play.png" alt="Play"></button> So this slide is not very good.</p>
+<p>所以这张幻灯片不太好。</p>
+<p><button class="play-button" onclick="playAt(1427.383, 1437.500)"><img src="play.png" alt="Play"></button> I'm sorry, but I guess I'm trying to develop like many of you some ways of utilizing these agents in my coding workflow and to do AI assisted coding.</p>
+<p>抱歉，但我想我正在像你们许多人一样，尝试在我的编码工作流程中利用这些代理，进行AI辅助编码。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1437" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:57</span></a></h3>
+<p><button class="play-button" onclick="playAt(1436.500, 1440.500)"><img src="play.png" alt="Play"></button> And in my own work, I'm always scared to get way too big dips.</p>
+<p>在我的工作中，我总是害怕收到太大的提交。</p>
+<p><button class="play-button" onclick="playAt(1439.500, 1443.500)"><img src="play.png" alt="Play"></button> I always go in small incremental chunks.</p>
+<p>我总是以小增量的方式进行。</p>
+<p><button class="play-button" onclick="playAt(1442.500, 1445.500)"><img src="play.png" alt="Play"></button> I want to make sure that everything is good.</p>
+<p>我想确保一切都好。</p>
+<p><button class="play-button" onclick="playAt(1444.500, 1451.500)"><img src="play.png" alt="Play"></button> I want to spin this loop very, very fast and I sort of work on small chunks of single concrete thing.</p>
+<p>我想让这个循环非常非常快地运转，并专注于单个具体的小任务。</p>
+<p><button class="play-button" onclick="playAt(1450.500, 1457.500)"><img src="play.png" alt="Play"></button> And so I think many of you probably are developing similar ways of working with with elements.</p>
+<p>因此，我认为你们许多人可能正在开发类似的工作方式。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1457" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:17</span></a></h3>
+<p><button class="play-button" onclick="playAt(1456.500, 1463.500)"><img src="play.png" alt="Play"></button> I also saw a number of blog posts that try to develop these best practices for working with elements.</p>
+<p>我还看到一些博客文章试图开发与这些元素合作的最佳实践。</p>
+<p><button class="play-button" onclick="playAt(1462.500, 1466.500)"><img src="play.png" alt="Play"></button> And here's one that I read recently and I thought was quite good.</p>
+<p>这是我最近读到的一篇，觉得相当不错。</p>
+<p><button class="play-button" onclick="playAt(1465.500, 1470.500)"><img src="play.png" alt="Play"></button> And it kind of discussed some techniques and some of them have to do with how you keep the AI on the leash.</p>
+<p>它讨论了一些技术，其中一些与控制AI有关。</p>
+<p><button class="play-button" onclick="playAt(1469.500, 1477.500)"><img src="play.png" alt="Play"></button> And so as an example, if you are prompting, if you're prompt is big, then the AI might not do exactly what you wanted.</p>
+<p>例如，如果你的提示很大，AI可能不会完全按照你的意愿行事。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1477" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:37</span></a></h3>
+<p><button class="play-button" onclick="playAt(1476.500, 1479.044)"><img src="play.png" alt="Play"></button> And in that case, verification will fail.</p>
+<p>在这种情况下，验证会失败。</p>
+<p><button class="play-button" onclick="playAt(1478.044, 1480.500)"><img src="play.png" alt="Play"></button> You're going to ask for something else.</p>
+<p>你会要求其他东西。</p>
+<p><button class="play-button" onclick="playAt(1479.500, 1483.500)"><img src="play.png" alt="Play"></button> If a verification fails, then you're going to start spinning.</p>
+<p>如果验证失败，你就会开始循环。</p>
+<p><button class="play-button" onclick="playAt(1482.500, 1489.500)"><img src="play.png" alt="Play"></button> So it makes a lot more sense to spend a bit more time to be more concrete in your prompts, which increases the probability of successful verification.</p>
+<p>因此，花更多时间让提示更具体更有意义，这会增加验证成功的概率。</p>
+<p><button class="play-button" onclick="playAt(1488.500, 1491.055)"><img src="play.png" alt="Play"></button> And you can move forward.</p>
+<p>然后你可以继续前进。</p>
+<p><button class="play-button" onclick="playAt(1490.055, 1495.500)"><img src="play.png" alt="Play"></button> And so I think a lot of us are going to end up finding techniques like this.</p>
+<p>因此，我认为我们很多人最终都会找到类似的技术。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1495" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:55</span></a></h3>
+<p><button class="play-button" onclick="playAt(1494.500, 1503.500)"><img src="play.png" alt="Play"></button> I think in my own work as well, I'm currently interested in what education looks like together with kind of like now that we have AI and all the elements.</p>
+<p>在我自己的工作中，我现在也对教育与AI及所有元素的结合感兴趣。</p>
+<p><button class="play-button" onclick="playAt(1502.500, 1505.500)"><img src="play.png" alt="Play"></button> What does education look like?</p>
+<p>教育会是什么样子？</p>
+<p><button class="play-button" onclick="playAt(1504.500, 1510.500)"><img src="play.png" alt="Play"></button> And I think a large amount of thought for me goes into how we keep AI on the leash.</p>
+<p>我认为我大量思考的是如何控制AI。</p>
+<p><button class="play-button" onclick="playAt(1509.500, 1514.500)"><img src="play.png" alt="Play"></button> I don't think it just works to go to chashy ptm be like, hey, teach me physics.</p>
+<p>我不认为直接去ChatGPT说“嘿，教我物理”会有效。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1514" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:14</span></a></h3>
+<p><button class="play-button" onclick="playAt(1513.500, 1517.500)"><img src="play.png" alt="Play"></button> I don't think this works because the AI is like gets lost in the woods.</p>
+<p>我认为这不会有效，因为AI会迷失方向。</p>
+<p><button class="play-button" onclick="playAt(1516.500, 1520.500)"><img src="play.png" alt="Play"></button> And so for me, this is actually two separate apps, for example.</p>
+<p>因此，对我来说，这实际上是两个独立的应用程序。</p>
+<p><button class="play-button" onclick="playAt(1519.500, 1523.500)"><img src="play.png" alt="Play"></button> There's an app for a teacher that creates courses.</p>
+<p>一个是教师创建课程的应用程序。</p>
+<p><button class="play-button" onclick="playAt(1522.500, 1526.500)"><img src="play.png" alt="Play"></button> And then there's an app that takes courses and serves them to students.</p>
+<p>另一个是获取课程并提供给学生的应用程序。</p>
+<p><button class="play-button" onclick="playAt(1525.500, 1531.500)"><img src="play.png" alt="Play"></button> And in both cases, we now have this intermediate artifact of a course that is auditable.</p>
+<p>在这两种情况下，我们现在都有一个可审核的课程中间产物。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1531" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:31</span></a></h3>
+<p><button class="play-button" onclick="playAt(1530.500, 1532.915)"><img src="play.png" alt="Play"></button> And we can make sure it's good.</p>
+<p>我们可以确保它是好的。</p>
+<p><button class="play-button" onclick="playAt(1531.915, 1534.500)"><img src="play.png" alt="Play"></button> We can make sure it's consistent.</p>
+<p>我们可以确保它是一致的。</p>
+<p><button class="play-button" onclick="playAt(1533.500, 1542.500)"><img src="play.png" alt="Play"></button> And the AI is kept on the leash with respect to a certain syllabus, a certain like progression of projects, and so on.</p>
+<p>AI被控制在特定的教学大纲和项目进展范围内。</p>
+<p><button class="play-button" onclick="playAt(1541.500, 1546.500)"><img src="play.png" alt="Play"></button> And so this is one way of keeping the AI on the leash and I think has a much higher likelihood of working.</p>
+<p>这是控制AI的一种方式，我认为成功的可能性更高。</p>
+<p><button class="play-button" onclick="playAt(1545.500, 1549.500)"><img src="play.png" alt="Play"></button> And the AI is not getting lost in the woods.</p>
+<p>AI不会迷失方向。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-73"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1549" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:49</span></a></h3>
+<p><button class="play-button" onclick="playAt(1548.500, 1555.500)"><img src="play.png" alt="Play"></button> One more kind of analogy I wanted to sort of allude to is, I'm not a no stranger to partial autonomy.</p>
+<p>我想提到的另一个类比是，我对部分自主性并不陌生。</p>
+<p><button class="play-button" onclick="playAt(1554.500, 1558.500)"><img src="play.png" alt="Play"></button> And I kind of worked on this, I think, for five years at Tesla.</p>
+<p>我在特斯拉工作了大约五年，研究这方面。</p>
+<p><button class="play-button" onclick="playAt(1557.500, 1562.500)"><img src="play.png" alt="Play"></button> And this is also a partial autonomy product and shares a lot of the features.</p>
+<p>这也是一个部分自主的产品，具有许多相似特征。</p>
+<p><button class="play-button" onclick="playAt(1561.500, 1566.500)"><img src="play.png" alt="Play"></button> Like for example, right there in the instrument panel is the GUI of the autopilot.</p>
+<p>例如，仪表盘上有自动驾驶的图形界面。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-74"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1566" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:06</span></a></h3>
+<p><button class="play-button" onclick="playAt(1565.500, 1569.500)"><img src="play.png" alt="Play"></button> So it's showing me what the neural network sees and so on.</p>
+<p>它向我展示神经网络看到的内容等。</p>
+<p><button class="play-button" onclick="playAt(1568.500, 1576.500)"><img src="play.png" alt="Play"></button> And we have the autonomy slider where over the course of my tenure there, we did more and more autonomous tasks for the user.</p>
+<p>我们有自主性滑块，在我任职期间，我们为用户提供了越来越多的自主任务。</p>
+<p><button class="play-button" onclick="playAt(1575.500, 1584.500)"><img src="play.png" alt="Play"></button> And maybe the story that I wanted to tell very briefly is, actually the first time I drove a self-driving vehicle was in 2013.</p>
+<p>也许我想简短讲述的故事是，我第一次驾驶自动驾驶汽车是在2013年。</p>
+<p><button class="play-button" onclick="playAt(1583.500, 1589.500)"><img src="play.png" alt="Play"></button> And I had a friend who worked at Waymo and he offered to give me a drive around Palo Alto.</p>
+<p>我有一个在Waymo工作的朋友，他提出带我绕帕洛阿尔托驾驶。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-75"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1589" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:29</span></a></h3>
+<p><button class="play-button" onclick="playAt(1588.500, 1592.500)"><img src="play.png" alt="Play"></button> I took this picture using Google Glass at the time.</p>
+<p>我当时用Google Glass拍了这张照片。</p>
+<p><button class="play-button" onclick="playAt(1591.500, 1595.500)"><img src="play.png" alt="Play"></button> And many of you are so young that you might not even know what that is.</p>
+<p>你们很多人很年轻，可能甚至不知道那是什么。</p>
+<p><button class="play-button" onclick="playAt(1594.500, 1598.500)"><img src="play.png" alt="Play"></button> But yeah, this was like all the rage at the time.</p>
+<p>但当时这非常流行。</p>
+<p><button class="play-button" onclick="playAt(1597.500, 1602.500)"><img src="play.png" alt="Play"></button> And we got into this car and we went for about a 30 minute drive around Palo Alto.</p>
+<p>我们上了车，绕帕洛阿尔托驾驶了大约30分钟。</p>
+<p><button class="play-button" onclick="playAt(1601.500, 1604.500)"><img src="play.png" alt="Play"></button> Highways, streets and so on.</p>
+<p>高速公路、街道等。</p>
+<p><button class="play-button" onclick="playAt(1603.500, 1605.908)"><img src="play.png" alt="Play"></button> And this drive was perfect.</p>
+<p>这次驾驶非常完美。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-76"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1605" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:45</span></a></h3>
+<p><button class="play-button" onclick="playAt(1604.908, 1607.500)"><img src="play.png" alt="Play"></button> There was zero interventions.</p>
+<p>没有任何干预。</p>
+<p><button class="play-button" onclick="playAt(1606.500, 1610.500)"><img src="play.png" alt="Play"></button> And this was 2013, which is now 12 years ago.</p>
+<p>这是2013年，距今12年。</p>
+<p><button class="play-button" onclick="playAt(1610.500, 1620.500)"><img src="play.png" alt="Play"></button> And it's kind of struck me because at the time when I had this perfect drive, this perfect demo, I felt like, wow, self-driving is imminent because this just worked.</p>
+<p>这让我印象深刻，因为当时我有这次完美的驾驶体验，感觉自动驾驶即将到来，因为它已经有效。</p>
+<p><button class="play-button" onclick="playAt(1619.500, 1622.500)"><img src="play.png" alt="Play"></button> This is incredible.</p>
+<p>这太不可思议了。</p>
+<p><button class="play-button" onclick="playAt(1621.500, 1625.500)"><img src="play.png" alt="Play"></button> But here we are 12 years later and we are still working on autonomy.</p>
+<p>但12年后的今天，我们仍在研究自主性。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-77"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1625" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:05</span></a></h3>
+<p><button class="play-button" onclick="playAt(1624.500, 1628.500)"><img src="play.png" alt="Play"></button> We are still working on driving agents.</p>
+<p>我们仍在研究驾驶代理。</p>
+<p><button class="play-button" onclick="playAt(1627.500, 1631.500)"><img src="play.png" alt="Play"></button> And even now we haven't actually like fully solved the problem.</p>
+<p>甚至现在我们还没有完全解决这个问题。</p>
+<p><button class="play-button" onclick="playAt(1630.500, 1639.500)"><img src="play.png" alt="Play"></button> Like you may see Waymo is going around and they look driverless, but you know there's still a lot of teleoperation and a lot of human in the loop of a lot of this driving.</p>
+<p>你可能看到Waymo在运行，看起来无人驾驶，但实际上仍有很多远程操作和人类参与。</p>
+<p><button class="play-button" onclick="playAt(1638.500, 1646.500)"><img src="play.png" alt="Play"></button> So we still haven't even like declared success, but I think it's definitely like going to succeed at this point, but it just took a long time.</p>
+<p>所以我们甚至还没有宣布成功，但我认为它最终会成功，只是需要很长时间。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-78"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1646" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:26</span></a></h3>
+<p><button class="play-button" onclick="playAt(1645.500, 1650.500)"><img src="play.png" alt="Play"></button> And so I think like this software is really tricky.</p>
+<p>因此，我认为这种软件非常棘手。</p>
+<p><button class="play-button" onclick="playAt(1649.500, 1653.500)"><img src="play.png" alt="Play"></button> I think in the same way that driving is tricky.</p>
+<p>就像驾驶一样棘手。</p>
+<p><button class="play-button" onclick="playAt(1652.500, 1657.500)"><img src="play.png" alt="Play"></button> And so when I see things like, oh, 22, 25 is the year of agents.</p>
+<p>所以当我看到“2022、2025是代理之年”这样的说法时。</p>
+<p><button class="play-button" onclick="playAt(1656.500, 1662.500)"><img src="play.png" alt="Play"></button> I get very concerned and I kind of feel like, you know, this is the decade of agents.</p>
+<p>我非常担忧，感觉这是代理的十年。</p>
+<p><button class="play-button" onclick="playAt(1661.500, 1665.500)"><img src="play.png" alt="Play"></button> And this is going to be quite some time.</p>
+<p>这将需要相当长的时间。</p>
+<p><button class="play-button" onclick="playAt(1664.500, 1668.500)"><img src="play.png" alt="Play"></button> I think humans in the loop need to do this carefully.</p>
+<p>我认为循环中的人类需要谨慎行事。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-79"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1668" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:48</span></a></h3>
+<p><button class="play-button" onclick="playAt(1667.500, 1670.500)"><img src="play.png" alt="Play"></button> This is software.</p>
+<p>这是软件。</p>
+<p><button class="play-button" onclick="playAt(1669.500, 1672.500)"><img src="play.png" alt="Play"></button> Well, it's be serious here.</p>
+<p>好吧，认真点。</p>
+<p><button class="play-button" onclick="playAt(1671.500, 1676.500)"><img src="play.png" alt="Play"></button> One more kind of analogy that I always think through is the Iron Man suit.</p>
+<p>我经常思考的另一个类比是钢铁侠战衣。</p>
+<p><button class="play-button" onclick="playAt(1675.500, 1679.500)"><img src="play.png" alt="Play"></button> I think this is, I always love Iron Man.</p>
+<p>我一直喜欢钢铁侠。</p>
+<p><button class="play-button" onclick="playAt(1678.500, 1684.500)"><img src="play.png" alt="Play"></button> I think it's like so correct in a bunch of ways with respect to technology and how it will play out.</p>
+<p>我认为它在技术和未来发展方面非常正确。</p>
+<p><button class="play-button" onclick="playAt(1683.500, 1689.500)"><img src="play.png" alt="Play"></button> And what I love about the Iron Man suit is that it's both an augmentation and Tony Stark can drive it.</p>
+<p>我喜欢钢铁侠战衣的地方在于，它既是增强设备，托尼·斯塔克也可以驾驶它。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-80"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1689" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:09</span></a></h3>
+<p><button class="play-button" onclick="playAt(1688.500, 1690.500)"><img src="play.png" alt="Play"></button> And it's also an agent.</p>
+<p>它也是一个代理。</p>
+<p><button class="play-button" onclick="playAt(1689.500, 1695.500)"><img src="play.png" alt="Play"></button> And in some of the movies, the Iron Man suit is quite autonomous and can fly around and find Tony and all this kind of stuff.</p>
+<p>在一些电影中，钢铁侠战衣非常自主，可以飞来飞去找到托尼等。</p>
+<p><button class="play-button" onclick="playAt(1694.500, 1700.500)"><img src="play.png" alt="Play"></button> And so this is the autonomy slider is we can be, we can build augmentations or we can build agents.</p>
+<p>因此，自主性滑块意味着我们可以构建增强设备或代理。</p>
+<p><button class="play-button" onclick="playAt(1699.500, 1702.500)"><img src="play.png" alt="Play"></button> And we kind of want to do a bit of both.</p>
+<p>我们想两者兼顾。</p>
+<p><button class="play-button" onclick="playAt(1701.500, 1713.500)"><img src="play.png" alt="Play"></button> But at this stage, I would say working with fallible, all elements and so on, I would say, you know, it's less Iron Man robots and more Iron Man suits that you want to build.</p>
+<p>但在现阶段，与易错的元素合作，我认为更像是构建钢铁侠战衣，而不是钢铁侠机器人。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-81"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1713" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:33</span></a></h3>
+<p><button class="play-button" onclick="playAt(1712.500, 1718.500)"><img src="play.png" alt="Play"></button> It's less like building flashy demos of autonomous agents and more building partial autonomy products.</p>
+<p>与其构建花哨的自主代理演示，不如构建部分自主的产品。</p>
+<p><button class="play-button" onclick="playAt(1717.500, 1727.500)"><img src="play.png" alt="Play"></button> And these products have custom GUIs and UI UX and we're trying to, and this is done so that the generation verification group of the human is very, very fast.</p>
+<p>这些产品有定制的图形界面和用户体验设计，目的是让人类的生成验证循环非常非常快。</p>
+<p><button class="play-button" onclick="playAt(1726.500, 1732.500)"><img src="play.png" alt="Play"></button> But we are not losing the sight of the fact that it is in principle possible to automate this work.</p>
+<p>但我们没有忽视原则上可以自动化这项工作的事实。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-82"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1732" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:52</span></a></h3>
+<p><button class="play-button" onclick="playAt(1731.500, 1738.500)"><img src="play.png" alt="Play"></button> And there should be an autonomy slider in your product and you should be thinking about how you can slide that autonomy slider and make your product.</p>
+<p>你的产品中应该有一个自主性滑块，你应该思考如何滑动它，使你的产品。</p>
+<p><button class="play-button" onclick="playAt(1737.500, 1741.500)"><img src="play.png" alt="Play"></button> Sort of more autonomous over time.</p>
+<p>随着时间的推移变得更加自主。</p>
+<p><button class="play-button" onclick="playAt(1740.500, 1745.500)"><img src="play.png" alt="Play"></button> But this is kind of how I think there's lots of opportunities in these kinds of products.</p>
+<p>但我认为这类产品有很多机会。</p>
+<p><button class="play-button" onclick="playAt(1744.500, 1750.500)"><img src="play.png" alt="Play"></button> I want to now switch gears a little bit and talk about one other dimension that I think is very unique.</p>
+<p>现在我想稍微转换话题，谈谈另一个我认为非常独特的方面。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-83"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1750" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:10</span></a></h3>
+<p><button class="play-button" onclick="playAt(1749.500, 1758.500)"><img src="play.png" alt="Play"></button> Not only is there a new type of programming language that allows for autonomy and software, but also as I mentioned, it's programmed in English, which is this natural interface.</p>
+<p>不仅有一种新型编程语言允许自主性和软件，而且正如我提到的，它是用英语编程的，这是一种自然界面。</p>
+<p><button class="play-button" onclick="playAt(1757.500, 1763.500)"><img src="play.png" alt="Play"></button> And suddenly everyone is a programmer because everyone speaks natural language like English.</p>
+<p>突然间，每个人都是程序员，因为每个人都说英语这样的自然语言。</p>
+<p><button class="play-button" onclick="playAt(1762.500, 1768.500)"><img src="play.png" alt="Play"></button> So this is extremely bullish and very interesting to me and also completely unprecedented, I would say.</p>
+<p>因此，这非常乐观且有趣，我认为也是前所未有的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-84"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:28</span></a></h3>
+<p><button class="play-button" onclick="playAt(1767.500, 1773.500)"><img src="play.png" alt="Play"></button> It used to be the case that you need to spend five to 10 years studying something to be able to do something in software.</p>
+<p>过去，你需要花五到十年学习才能做软件相关的事情。</p>
+<p><button class="play-button" onclick="playAt(1772.500, 1775.394)"><img src="play.png" alt="Play"></button> This is not the case anymore.</p>
+<p>现在不再是这种情况。</p>
+<p><button class="play-button" onclick="playAt(1774.394, 1776.500)"><img src="play.png" alt="Play"></button> So I didn't mind.</p>
+<p>所以我不介意。</p>
+<p><button class="play-button" onclick="playAt(1775.500, 1781.500)"><img src="play.png" alt="Play"></button> Just anyone has heard of my coding.</p>
+<p>任何人都听说过我的编码。</p>
+<p><button class="play-button" onclick="playAt(1780.500, 1786.500)"><img src="play.png" alt="Play"></button> This is the tweet that kind of like introduced this, but I'm told that this is now like a major meme.</p>
+<p>这是介绍这一点的推文，但我被告知这现在成了一个主要梗。</p>
+<p><button class="play-button" onclick="playAt(1785.500, 1789.500)"><img src="play.png" alt="Play"></button> One story about this is that.</p>
+<p>关于这个的一个故事是。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-85"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1789" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:49</span></a></h3>
+<p><button class="play-button" onclick="playAt(1788.500, 1799.500)"><img src="play.png" alt="Play"></button> I've been on Twitter for like 15 years or something like that at this point and I still have no clue which tweet will become viral and which tweet like like this is and no one cares.</p>
+<p>我在推特上已经活跃了大约15年，但我仍然不知道哪条推文会爆火，哪条推文会像这样无人问津。</p>
+<p><button class="play-button" onclick="playAt(1798.500, 1802.500)"><img src="play.png" alt="Play"></button> And I thought that this week was going to be the latter.</p>
+<p>我以为这周会是后者。</p>
+<p><button class="play-button" onclick="playAt(1801.500, 1813.500)"><img src="play.png" alt="Play"></button> I don't know if it's just like a shower of thoughts, but this became like a total meme and I really just can't tell, but I guess I'll get struck a chord and even name to something that everyone was feeling but couldn't quite say in words.</p>
+<p>我不知道这是否只是一时灵感，但它变成了一个全网梗，我真的说不清，但我想它可能击中了大家的共鸣，甚至说出了大家感受却无法表达的东西。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-86"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:13</span></a></h3>
+<p><button class="play-button" onclick="playAt(1812.500, 1817.500)"><img src="play.png" alt="Play"></button> So now there's a Wikipedia page and everything.</p>
+<p>所以现在甚至有了维基百科页面。</p>
+<p><button class="play-button" onclick="playAt(1816.500, 1826.500)"><img src="play.png" alt="Play"></button> This is like.</p>
+<p>这就像。</p>
+<p><button class="play-button" onclick="playAt(1825.500, 1831.232)"><img src="play.png" alt="Play"></button> Yeah, this is like a major contribution or something like that.</p>
+<p>是的，这就像是一个重大贡献之类的。</p>
+<p><button class="play-button" onclick="playAt(1830.232, 1831.500)"><img src="play.png" alt="Play"></button> So.</p>
+<p>所以。</p>
+<p><button class="play-button" onclick="playAt(1830.500, 1838.500)"><img src="play.png" alt="Play"></button> So Tom Wolf from Hugging Face shared this beautiful video that I really love.</p>
+<p>Hugging Face的汤姆·沃尔夫分享了一段我非常喜欢的精彩视频。</p>
+<p><button class="play-button" onclick="playAt(1837.500, 1843.500)"><img src="play.png" alt="Play"></button> These are kids vibe coding.</p>
+<p>视频里是孩子们在“氛围编程”。</p>
+<p><button class="play-button" onclick="playAt(1842.500, 1847.500)"><img src="play.png" alt="Play"></button> And I find that this is such a wholesome video like I love this video.</p>
+<p>我觉得这段视频非常治愈，我太喜欢了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-87"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1847" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:47</span></a></h3>
+<p><button class="play-button" onclick="playAt(1846.500, 1851.285)"><img src="play.png" alt="Play"></button> Like how can you look at this video and feel bad about the future?</p>
+<p>看了这样的视频，你怎么会对未来感到悲观呢？</p>
+<p><button class="play-button" onclick="playAt(1850.285, 1852.500)"><img src="play.png" alt="Play"></button> The future is great.</p>
+<p>未来是美好的。</p>
+<p><button class="play-button" onclick="playAt(1851.500, 1857.500)"><img src="play.png" alt="Play"></button> I think this will end up being like a gateway drug to software development.</p>
+<p>我认为这会成为人们进入软件开发领域的“入门毒品”。</p>
+<p><button class="play-button" onclick="playAt(1856.500, 1863.500)"><img src="play.png" alt="Play"></button> I'm not a doomer about the future of the generation and I think yeah, I love this video.</p>
+<p>我对这代人的未来并不悲观，是的，我太爱这段视频了。</p>
+<p><button class="play-button" onclick="playAt(1862.500, 1867.500)"><img src="play.png" alt="Play"></button> So I tried vibe coding a little bit as well because it's so fun.</p>
+<p>所以我也尝试了一点“氛围编程”，因为它太有趣了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-88"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:07</span></a></h3>
+<p><button class="play-button" onclick="playAt(1866.500, 1875.500)"><img src="play.png" alt="Play"></button> So by coding is so great when you want to build something super duper custom that doesn't appear to exist and you just want to wing it because it's a Saturday or something like that.</p>
+<p>“氛围编程”最棒的地方在于，当你想构建一个完全定制、似乎还不存在的东西时，你可以在某个周六随心所欲地尝试。</p>
+<p><button class="play-button" onclick="playAt(1874.500, 1885.500)"><img src="play.png" alt="Play"></button> I built this iOS app and I don't I can't actually program in Swift but I was really shocked that I was able to build like a super basic app and I'm not going to explain it.</p>
+<p>我开发了一个iOS应用，虽然我其实不会用Swift编程，但让我震惊的是我居然能做出一个超级基础的app，具体就不多解释了。</p>
+<p><button class="play-button" onclick="playAt(1884.500, 1892.500)"><img src="play.png" alt="Play"></button> It's really dumb but I kind of like this was just like a day of work and this was running on my phone like later that day and I was like wow this is amazing.</p>
+<p>这应用很蠢，但我只花了一天时间，当天晚些时候它就在我手机上运行了，这太神奇了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-89"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:32</span></a></h3>
+<p><button class="play-button" onclick="playAt(1891.500, 1898.500)"><img src="play.png" alt="Play"></button> I didn't have to like read through Swift or like a five days or something like that to like get started.</p>
+<p>我不用先花五天时间学习Swift才能开始。</p>
+<p><button class="play-button" onclick="playAt(1897.500, 1910.500)"><img src="play.png" alt="Play"></button> I also bought coded this app called menu gen and this is a lot you can try it in the menu gen.app and I basically have this problem where I show up at a restaurant I read through the menu and I have no idea what any of the things are and I need pictures.</p>
+<p>我还“氛围编程”了一个叫Menu Gen的应用（可在menu gen.app试用），我的痛点是：在餐厅看菜单时完全不知道菜品是什么，我需要看图。</p>
+<p><button class="play-button" onclick="playAt(1909.500, 1927.500)"><img src="play.png" alt="Play"></button> So this doesn't exist so I was like hey I'm going to buy code it so this is what it looks like you go to the menu gen.app and you take a picture of a menu and then menu gen generates the images and everyone gets five dollars in credits for free when you sign up.</p>
+<p>由于没有这种应用，我就自己开发了——你可以在menu gen.app上传菜单照片，它会生成图片，注册用户还能获得5美元免费额度。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-90"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1927" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:07</span></a></h3>
+<p><button class="play-button" onclick="playAt(1926.500, 1937.500)"><img src="play.png" alt="Play"></button> And therefore this is a major cost center in my life so this is a negative negative revenue app for me right now.</p>
+<p>因此这成了我的主要开支，目前这是个负收入应用。</p>
+<p><button class="play-button" onclick="playAt(1936.500, 1941.500)"><img src="play.png" alt="Play"></button> I've lost a huge amount of money on menu gen.</p>
+<p>我在Menu Gen上亏了很多钱。</p>
+<p><button class="play-button" onclick="playAt(1940.500, 1953.500)"><img src="play.png" alt="Play"></button> Okay but the fascinating thing about menu gen for me is that the code of the vibe the vibe coding part the code was actually the easy part of vibe of vibe coding menu gen.</p>
+<p>但Menu Gen最让我着迷的是，“氛围编程”写代码的部分其实是最简单的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-91"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:33</span></a></h3>
+<p><button class="play-button" onclick="playAt(1952.500, 1960.500)"><img src="play.png" alt="Play"></button> And most of it actually was when I tried to make it real so that you can actually have authentication and payments in the domain name and the versatile deployment.</p>
+<p>真正耗时的是实现认证、支付、域名和灵活部署这些功能。</p>
+<p><button class="play-button" onclick="playAt(1959.500, 1981.500)"><img src="play.png" alt="Play"></button> This was really hard and all of this was not code all of this dev off stuff was in me in the browser clicking stuff and this was extreme slot and took another week so it was really fascinating that I had the menu gen basically demo working on my laptop in a few hours and then it took me a week because I was trying to make it real.</p>
+<p>这些非代码的“开发外工作”需要我在浏览器里不停点击，极其耗时，花了一周——有趣的是，Menu Gen的demo几小时就能跑通，但实现产品化却用了一周。</p>
+<p><button class="play-button" onclick="playAt(1980.500, 1985.500)"><img src="play.png" alt="Play"></button> And the reason for this is this was just really annoying.</p>
+<p>因为这过程实在太烦人了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-92"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=1985" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:05</span></a></h3>
+<p><button class="play-button" onclick="playAt(1984.500, 2006.500)"><img src="play.png" alt="Play"></button> So for example if you try to add Google login to your web page I know this is very small but just a huge amount of instructions of this clerk library telling me how to integrate this and this is crazy like it's telling me go to this URL click on this drop down choose this go to this and click on that and it's like telling me what to do like a computer is telling me the actions I should be taking like you do it.</p>
+<p>比如添加Google登录功能，虽然简单但需要遵循大量操作指南——它让我点这个URL、选那个下拉框，就像计算机在指挥人类操作。</p>
+<p><button class="play-button" onclick="playAt(2005.500, 2009.500)"><img src="play.png" alt="Play"></button> Why am I doing this.</p>
+<p>为什么要我来做这些？</p>
+<p><button class="play-button" onclick="playAt(2008.500, 2012.500)"><img src="play.png" alt="Play"></button> What the hell.</p>
+<p>太离谱了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-93"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2012" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:32</span></a></h3>
+<p><button class="play-button" onclick="playAt(2011.500, 2026.500)"><img src="play.png" alt="Play"></button> I had to follow all these instructions this was crazy so I think the last part of my talk therefore focuses on can we just build for agents I don't want to do this work can 18 students thank you.</p>
+<p>被迫按指南操作太疯狂了，所以我演讲最后聚焦于：能否直接为AI代理构建系统？我不想做这些，18岁的学生们能搞定吗？谢谢。</p>
+<p><button class="play-button" onclick="playAt(2025.500, 2050.500)"><img src="play.png" alt="Play"></button> Okay so roughly speaking I think there's a new category of consumer and manipulator of digital information it used to be just humans through guise or computers through apis and now we have a completely new thing and agents are their computers but they are human like kind of right there people spirits there's people spirits on the internet and they need to interact with their software infrastructure like can we build for them it's a new thing.</p>
+<p>简言之，数字信息的消费者和操纵者新增了一类：过去是人类通过GUI或计算机通过API，而现在AI代理是类人的“网络精灵”，我们需要为它们构建软件基础设施。</p>
+<p><button class="play-button" onclick="playAt(2049.500, 2079.500)"><img src="play.png" alt="Play"></button> So as an example you can have robust at the scene or domain and you can instruct or like advise I suppose web crawlers on how to behave on your website in the same way you can have maybe all on satixt file which is just a simple mark down that's telling lm's what this domain is about and this is very readable to a to an lm if it had to instead get the html of your web page and try to parse it this is very error prone and difficult and we will screw it up and it's not going to work so we can just directly speak to the lm it's worth it.</p>
+<p>例如，可以用robots.txt指导网络爬虫，同理可以创建ai.txt文件（简单Markdown）直接告诉大模型网站内容，这比让它解析HTML更可靠高效。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-94"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2079" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:39</span></a></h3>
+<p><button class="play-button" onclick="playAt(2078.500, 2108.500)"><img src="play.png" alt="Play"></button> A huge amount of documentation is currently written for people so you will see things like lists and bold and pictures and this is not directly accessible by an lm so I see some of the services now are transitioning a lot of their docs to be specifically for lm's so versel and stripe as an example are early movers here but there are a few more that I've seen already and they offer their documentation in markdown markdown is super easy for lm's to understand this is great.</p>
+<p>现有文档多为人类设计（含列表、加粗、图片），但大模型无法直接理解。现在Vercel、Stripe等公司正将文档转为Markdown格式专门服务大模型，这很棒。</p>
+<p><button class="play-button" onclick="playAt(2107.500, 2123.500)"><img src="play.png" alt="Play"></button> Maybe one simple example from my experience as well maybe some of you know three blue on brown he makes beautiful animation videos on the editor.</p>
+<p>举个我的例子：3Blue1Brown用manim库制作精美数学动画视频。</p>
+<p><button class="play-button" onclick="playAt(2122.500, 2152.500)"><img src="play.png" alt="Play"></button> I love this library so that he wrote the man and I wanted to make my own and there's extensive documentation on how to use man and so I didn't want to actually read through it so I copy-pasted the whole thing to an lm and I described what I wanted and it just worked out of the box like lm just by coded me an animation exactly what I wanted and I was like wow this is amazing so if we can make docs legible to lm's it's going to unlock a huge amount of kind of use and I think this is wonderful and should.</p>
+<p>我把整个文档粘贴给大模型并描述需求，它直接生成了我想要的动画——如果文档对大模型友好，将释放巨大潜力。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-95"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2153" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:53</span></a></h3>
+<p><button class="play-button" onclick="playAt(2152.500, 2155.075)"><img src="play.png" alt="Play"></button> So that's what happened more.</p>
+<p>类似案例还有很多。</p>
+<p><button class="play-button" onclick="playAt(2154.075, 2192.055)"><img src="play.png" alt="Play"></button> The other thing I wanted to point out is that you do unfortunately have to it's not just about taking your docs and making them appear in markdown that's the easy part we actually have to change the docs because anytime your docs stay click this is bad an lm will not be able to natively take this action right now so versel for example is replacing every occurrence of click with the equivalent curl command that your lm agent could take on your behalf and so I think this is very interesting and then of course there's a model context protocol from and also another way it's a protocol speaking directly to agents as this new consumer and manipulator of digital information so I'm very bullish on these ideas.</p>
+<p>需要注意的是，仅将文档转为Markdown不够，还需修改内容——比如Vercel把所有“点击”替换为等效curl命令，方便AI代理操作。Model Context Protocol等协议直接与AI代理对话，我对这些创新非常乐观。</p>
+<p><button class="play-button" onclick="playAt(2191.055, 2199.500)"><img src="play.png" alt="Play"></button> The other thing I really like is a number of little tools here and there that are helping ingest data that in like very lm friendly formats.</p>
+<p>我还喜欢各种辅助工具，它们能以AI友好格式处理数据。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-96"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2199" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:39</span></a></h3>
+<p><button class="play-button" onclick="playAt(2198.500, 2208.500)"><img src="play.png" alt="Play"></button> So for example when I go to a GitHub repo like my nanagypity repo I can't feed this to an lm and ask questions about it because it's you know this is a human interface of GitHub.</p>
+<p>比如我的GitHub仓库，由于是人机交互界面，无法直接让大模型分析。</p>
+<p><button class="play-button" onclick="playAt(2207.500, 2221.500)"><img src="play.png" alt="Play"></button> So when you just change the URL from GitHub to GitHub ingest then this will actually concatenate all the files into a single giant text and it will create a directory structure etc and this is ready to be copy-based it into your favorite lm and you can do stuff.</p>
+<p>但把URL中的github改为githubingest，就能把所有文件合并为结构化文本供大模型使用。</p>
+<p><button class="play-button" onclick="playAt(2220.500, 2228.500)"><img src="play.png" alt="Play"></button> Maybe even more dramatic example of this is deep wiki where it's not just the raw content of these files.</p>
+<p>更强大的Deep Wiki不仅提供原始文件，</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-97"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2228" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:08</span></a></h3>
+<p><button class="play-button" onclick="playAt(2227.500, 2242.500)"><img src="play.png" alt="Play"></button> This is from Devon but also like they have Devon basically do analysis of the GitHub repo and Devon basically builds up a whole docs pages just for your repo and you can imagine that this is even more helpful to copy-based into your lm.</p>
+<p>还能用Devin分析仓库并生成专属文档页，这对大模型更有价值。</p>
+<p><button class="play-button" onclick="playAt(2241.500, 2251.500)"><img src="play.png" alt="Play"></button> So I love all the little tools that basically where you just change the URL and it makes something accessible to an lm so this is all well and great and I think there should be a lot more of it.</p>
+<p>这些通过简单URL修改就能让数据对大模型可用的工具非常棒，应该大力推广。</p>
+<p><button class="play-button" onclick="playAt(2250.500, 2259.500)"><img src="play.png" alt="Play"></button> One more note I wanted to make is that it is absolutely possible that in the future lm will be able to not even future this is today.</p>
+<p>需要说明的是，大模型现在（不仅是未来）已经能</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-98"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2259" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:39</span></a></h3>
+<p><button class="play-button" onclick="playAt(2258.500, 2276.500)"><img src="play.png" alt="Play"></button> We will be able to go around and I'll be able to click stop and so on but I still think it's very worth basically meeting lm halfway lm halfway and making it easier for them to access all this information because this is still fairly expensive I would say to use and a lot more difficult.</p>
+<p>模拟点击操作，但主动优化信息获取方式仍很重要，因为当前方式成本高且低效。</p>
+<p><button class="play-button" onclick="playAt(2275.500, 2294.500)"><img src="play.png" alt="Play"></button> And so I do think that lots of software will be a long tail where it won't like adapt because these are not like live players sort of repositories or digital infrastructure and we will need these tools but I think for everyone else I think it's very worth kind of like meeting in some middle point so I'm bullish on both if that makes us.</p>
+<p>虽然部分老旧软件不会适配，但主流数字基础设施应该与大模型“双向奔赴”——我对这两种路径都持乐观态度。</p>
+<p><button class="play-button" onclick="playAt(2293.500, 2323.500)"><img src="play.png" alt="Play"></button> So in summary what an amazing time to get into the industry we need to rewrite a ton of code a ton of code will be written by professionals and by codeers these lm are kind of like utilities kind of like fabs but they're kind of especially like operating systems but it's so early it's like 1960s of operating systems and and I think a lot of the analogies crossover and these elements are kind of like these fallible you know people spirits that we have to learn to work with.</p>
+<p>总之，现在入行太棒了——我们需要重写大量代码，大模型就像公用事业/操作系统（目前处于1960年代OS水平），这些“会犯错的小精灵”需要我们学会协作。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-99"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1iK3FzBEMo/?t=2323" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:38:43</span></a></h3>
+<p><button class="play-button" onclick="playAt(2322.500, 2348.500)"><img src="play.png" alt="Play"></button> And in order to do that properly we need to adjust our infrastructure towards it so when you're building these lm apps I describe some of the ways of working effectively with these lm and some of the tools that make that kind of possible and how you can spin this loop very very quickly and basically create partial telling products and then yeah a lot of code has to also be written for the agents or directly but in any case going back to the Ironman suit analogy I think what we'll see over the next decade roughly is we're going to take the slide and I think that's a little bit more fun and we're dealing with some of these things and we're going to be able to see how these are happening and how these are going to be able to make them work really quickly and how these are going to have the tools that we're going to be able to see and how these are going to be able to work quickly and how these are going to be able to work with and how these are going to be able to work so we're going to see.</p>
+<p>为此需要调整基础设施，我分享了高效协作方法、工具和快速迭代技巧。用钢铁侠战衣类比，未来十年我们将见证滑块从左移到右——这个过程充满乐趣，我们会看到这些技术如何快速落地，工具如何涌现，以及如何实现高效协同。</p>
+<p><button class="play-button" onclick="playAt(2347.500, 2365.618)"><img src="play.png" alt="Play"></button> suit analogy, I think what we'll see over the next decade roughly is we're going to take the slider from left to right and I'm very interesting it's going to be very interesting to see what that looks like and I can't wait to build it with all of you. Thank you.</p>
+<p>这个类比下，未来十年我们将推动滑块从左到右移动，这个过程会非常有趣，我迫不及待想与各位共同构建。谢谢。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
