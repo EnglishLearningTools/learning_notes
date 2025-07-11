@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Andrew Ng: Building Faster with AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Ng shares insights on accelerating startup success through AI, emphasizing execution speed, concrete ideas, and leveraging AI tools like agentic workflows and coding assistance. He highlights the importance of the application layer for opportunities and rapid prototyping to validate ideas quickly.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Andrew Ng: Building Faster with AI</h1>
+<p>【吴恩达：用AI加速创业】</p>
+<p>Summary:
+Andrew Ng shares insights on accelerating startup success through AI, emphasizing execution speed, concrete ideas, and leveraging AI tools like agentic workflows and coding assistance. He highlights the importance of the application layer for opportunities and rapid prototyping to validate ideas quickly.</p>
+<p>摘要：
+吴恩达分享如何利用AI加速创业成功，强调执行速度、具体想法以及借助AI工具（如智能体工作流和编程辅助）。他指出应用层蕴含巨大机遇，并提倡快速原型验证。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 72 min</p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它生词.html" target="_blank">其它生词生词</a></p>
+<h2>Table of Contents</h2>
+<p><a name="table-of-contents"></a></p>
+<ul>
+<li><a href="#block-1">00:00:00 It's really great to see all of you.</a></li>
+<li><a href="#block-2">00:00:29 And what I want to do today is share of you some of the less</a></li>
+<li><a href="#block-3">00:00:50 And I actually have a lot of respect for the entrepreneurs a</a></li>
+<li><a href="#block-4">00:01:11 Before diving to speed, a lot of people ask me, hey Andrew, </a></li>
+<li><a href="#block-5">00:01:52 So for whatever reason, media and social media tends not to </a></li>
+<li><a href="#block-6">00:02:17 And about a year and a half ago, when I started to go around</a></li>
+<li><a href="#block-7">00:02:51 And the way we have an LOM output something is as if you're </a></li>
+<li><a href="#block-8">00:03:18 With a gentigrap, those, we can go to AI system and ask it t</a></li>
+<li><a href="#block-9">00:03:58 We found that these agentic workflows are really a huge diff</a></li>
+<li><a href="#block-10">00:04:43 With a bias or focus on the application layer, let me now di</a></li>
+<li><a href="#block-11">00:05:14 It's too vague.</a></li>
+<li><a href="#block-12">00:05:35 That's actually business already doing this, but it is concr</a></li>
+<li><a href="#block-13">00:05:52 But if someone says, could you build an app, Gmail integrate</a></li>
+<li><a href="#block-14">00:06:10 If you go and tell all your friends, we should use AI to opt</a></li>
+<li><a href="#block-15">00:06:27 We can discover that much more fast, which is what's importa</a></li>
+<li><a href="#block-16">00:06:48 So let's do that quickly.</a></li>
+<li><a href="#block-17">00:07:11 And then after that long process, I think YC sometimes calls</a></li>
+<li><a href="#block-18">00:07:36 It can be surprisingly good mechanism for making decisions.</a></li>
+<li><a href="#block-19">00:07:57 And then one other thing, but many successful starters, at a</a></li>
+<li><a href="#block-20">00:08:18 Just pivot on the dime to pursue a totally different concret</a></li>
+<li><a href="#block-21">00:08:43 Every time you talk to a customer, you totally change your m</a></li>
+<li><a href="#block-22">00:09:05 So when you're building a lot of applications, one of the bi</a></li>
+<li><a href="#block-23">00:09:55 So the speed of engineering is going up rapidly, and the cos</a></li>
+<li><a href="#block-24">00:10:20 The other type of software I do is, write, maintain producti</a></li>
+<li><a href="#block-25">00:10:41 But in terms of building quick and dirty prototypes, we're n</a></li>
+<li><a href="#block-26">00:11:06 And I know I'm not supposed to tell people to write insecure</a></li>
+<li><a href="#block-27">00:11:26 And like a leaking PII, leaking sends data, that is very dam</a></li>
+<li><a href="#block-28">00:11:48 But I think by driving the cost of a proof of concept low en</a></li>
+<li><a href="#block-29">00:12:08 I tend to tell my teams to move fast and be responsible.</a></li>
+<li><a href="#block-30">00:12:33 And then starting on our six, seven months ago, decided to d</a></li>
+<li><a href="#block-31">00:13:01 And the interesting thing is, if you're even half a generati</a></li>
+<li><a href="#block-32">00:13:21 But because the cost of software engineering is going down, </a></li>
+<li><a href="#block-33">00:13:38 Some of you may have heard of Jeff Bezos' terminology of a t</a></li>
+<li><a href="#block-34">00:13:58 Once you build on top of a certain tech stack, you know, set</a></li>
+<li><a href="#block-35">00:14:17 I don't want to over-hype it. We don't do that all the time.</a></li>
+<li><a href="#block-36">00:14:36 Over the last year, a bunch of people advised, have advised </a></li>
+<li><a href="#block-37">00:15:00 When we moved from assemblies, high-level languages like Cob</a></li>
+<li><a href="#block-38">00:15:20 And as coding becomes easier, more people should learn to co</a></li>
+<li><a href="#block-39">00:15:44 And I think I'm pretty little bit ahead of her for most busi</a></li>
+<li><a href="#block-40">00:16:06 And one of my team members knew art history.</a></li>
+<li><a href="#block-41">00:16:33 And I could never have the control that my collaborates are </a></li>
+<li><a href="#block-42">00:16:55 And learning to code, not that you need to write the code yo</a></li>
+<li><a href="#block-43">00:17:19 A lot more of my teams have started to complain that the bot</a></li>
+<li><a href="#block-44">00:17:38 It was this like p.m. product manager at the engineering rat</a></li>
+<li><a href="#block-45">00:17:57 So literally yesterday, one of my teams came to me.</a></li>
+<li><a href="#block-46">00:18:19 I still don't know if this proposed I heard yesterday is a g</a></li>
+<li><a href="#block-47">00:18:41 That helps you get faster as well.</a></li>
+<li><a href="#block-48">00:19:02 And if you're subject matter to expert, this is actually sur</a></li>
+<li><a href="#block-49">00:19:27 When I travel, I often send the hotel lobby.</a></li>
+<li><a href="#block-50">00:19:47 And very respectfully, ask strangers, hey, we're building th</a></li>
+<li><a href="#block-51">00:20:08 Stem prototypes, 100 testers.</a></li>
+<li><a href="#block-52">00:20:30 It depends on how many users you have.</a></li>
+<li><a href="#block-53">00:20:54 I wish we were able to use the first tactic, to make high qu</a></li>
+<li><a href="#block-54">00:21:15 That turns out to be really important.</a></li>
+<li><a href="#block-55">00:21:41 So many people, including non-tech people, have good instinc</a></li>
+<li><a href="#block-56">00:22:00 So there are a lot of people that are really good at marketi</a></li>
+<li><a href="#block-57">00:22:24 Whereas if you need an HR problem, you can find someone that</a></li>
+<li><a href="#block-58">00:22:40 How do you get a voice out to low latency?</a></li>
+<li><a href="#block-59">00:23:00 It feels like if you don't know the right answer, and most o</a></li>
+<li><a href="#block-60">00:23:26 The other reason why I find, staying on top of AI really hop</a></li>
+<li><a href="#block-61">00:24:01 And this creates a lot of new opportunities for startups to </a></li>
+<li><a href="#block-62">00:24:19 But if you get a second building block, like you also know h</a></li>
+<li><a href="#block-63">00:24:39 Get more building breaks, get more building breaks, and very</a></li>
+<li><a href="#block-64">00:25:09 But when I look at the Deep Learning Diode I course catalog,</a></li>
+<li><a href="#block-65">00:25:30 I find that there are many things that matter for startup, n</a></li>
+<li><a href="#block-66">00:25:52 I find that as a, as exactly if I'm judge on the speed and q</a></li>
+<li><a href="#block-67">00:26:10 And if you haven't learned to go to coffee shop and talk to </a></li>
+<li><a href="#block-68">00:26:30 APPLAUSE I have a quick question.</a></li>
+<li><a href="#block-69">00:27:02 And so for a long time, there'll be a lot of things that hum</a></li>
+<li><a href="#block-70">00:27:22 But so people that know how to use AI to get computers to do</a></li>
+<li><a href="#block-71">00:27:42 My question is about the future of compute.</a></li>
+<li><a href="#block-72">00:28:06 So turns out there's one framework you can use for deciding </a></li>
+<li><a href="#block-73">00:28:34 So one of my mental filters is there's certain hype narrativ</a></li>
+<li><a href="#block-74">00:28:59 AI is so powerful soon no one will even have a job anymore.</a></li>
+<li><a href="#block-75">00:29:19 Yes, Jasper, Brandon Trouville, small number of companies go</a></li>
+<li><a href="#block-76">00:29:41 I think we have a lot of room to run still for terrestrial G</a></li>
+<li><a href="#block-77">00:30:02 But what are some of the most dangerous biases or over hyped</a></li>
+<li><a href="#block-78">00:30:36 I find myself not using the term AI safety that much, not be</a></li>
+<li><a href="#block-79">00:30:57 Like using electric electric motor can be used to build a Da</a></li>
+<li><a href="#block-80">00:31:16 It is how you apply it that makes it safer unsafe.</a></li>
+<li><a href="#block-81">00:31:37 I think just one or two days ago, there was a Wall Street Jo</a></li>
+<li><a href="#block-82">00:32:02 And so these high narratives do keep on getting amplified.</a></li>
+<li><a href="#block-83">00:32:26 Whatever great mode product or feature you have can be repli</a></li>
+<li><a href="#block-84">00:32:48 There goes market, channel, competitors, technology, mode.</a></li>
+<li><a href="#block-85">00:33:06 Do you have a channel to get to customers?</a></li>
+<li><a href="#block-86">00:33:28 But enterprise products, sometimes, if you have a, maybe mod</a></li>
+<li><a href="#block-87">00:33:56 But I feel like at this moment in time, the number of opport</a></li>
+<li><a href="#block-88">00:34:25 Although this is important to figure a long way.</a></li>
+<li><a href="#block-89">00:35:03 So which is different from static engineering?</a></li>
+<li><a href="#block-90">00:35:25 Only a small number of startups are lucky enough to have use</a></li>
+<li><a href="#block-91">00:35:45 But it's actually really difficult to get to point where you</a></li>
+<li><a href="#block-92">00:36:10 So for example, if you build a customer service chatbot or o</a></li>
+<li><a href="#block-93">00:36:38 So for example, have a lot of products that build on top of </a></li>
+<li><a href="#block-94">00:36:59 And so the model we use week by week, you know, sometimes ou</a></li>
+<li><a href="#block-95">00:37:19 Switching costs for the orchestration platforms is a little </a></li>
+<li><a href="#block-96">00:37:43 But another score of thought is that there'll be personal tu</a></li>
+<li><a href="#block-97">00:38:00 Like don't think the disruption is here yet.</a></li>
+<li><a href="#block-98">00:38:19 Deep learning data AI slash avatile.</a></li>
+<li><a href="#block-99">00:38:42 But I think what I'm seeing is frankly tons of experimentati</a></li>
+<li><a href="#block-100">00:39:02 The reality is work is complex, right?</a></li>
+<li><a href="#block-101">00:39:28 So I think I think we should all just keep working on it.</a></li>
+<li><a href="#block-102">00:39:53 So I was curious, how do you think, you know, us as AI build</a></li>
+<li><a href="#block-103">00:40:18 I know it sounds simple, but that's actually really hard to </a></li>
+<li><a href="#block-104">00:40:33 So I hope more people will do that.</a></li>
+<li><a href="#block-105">00:40:56 So then everyone learned to code and then they got better.</a></li>
+<li><a href="#block-106">00:41:15 And my question is also about education.</a></li>
+<li><a href="#block-107">00:41:43 I think the knowledge will diffuse.</a></li>
+<li><a href="#block-108">00:42:05 And one of the reasons is there are two gatekeepers and Jord</a></li>
+<li><a href="#block-109">00:42:37 Which thank goodness we shut down where the put in place rea</a></li>
+<li><a href="#block-110">00:43:17 That's always a side for innovation and prevent the diffusio</a></li>
+<li><a href="#block-111">00:43:42 But despite to protect open source, we've been winning, but </a></li>
+</ul>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+let timeoutHandle = null;
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+}
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:00,000', '00:00:02,239')"><img src="play.png" alt="Play"></button> It's really great to see all of you.</p>
+<p>很高兴见到大家。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:02,240', '00:00:11,359')"><img src="play.png" alt="Play"></button> What I want to do today since this is this build that Startup School is share of you some lessons I've learned about building startups at AI Fund.</p>
+<p>今天我想在创业学院分享我在AI基金创办公司时学到的经验。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:11,359', '00:00:16,239')"><img src="play.png" alt="Play"></button> AI Funds Adventure Studio, and we build an average of about one startup per month.</p>
+<p>AI基金冒险工作室平均每月创立一家初创公司。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:16,239', '00:00:29,400')"><img src="play.png" alt="Play"></button> Because we co-founded startups were in their writing code, talking to customers, design on features, that are in pricing, and so we've done a lot of reps of not just washing other build startups, but actually being in the weeds, building startups with entrepreneurs.</p>
+<p>因为我们联合创立的公司涉及写代码、与客户沟通、功能设计和定价，我们不仅观察创业过程，更深入参与其中。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959970" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:29</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:29,638', '00:00:38,200')"><img src="play.png" alt="Play"></button> And what I want to do today is share of you some of the lessons I've learned building startups, especially around this changing AI technology and what it enables.</p>
+<p>今天我想分享在AI技术变革背景下创业的经验。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:38,200', '00:00:41,920')"><img src="play.png" alt="Play"></button> And it'll be focused on the theme of speed.</p>
+<p>主题将围绕"速度"展开。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:41,920', '00:00:50,079')"><img src="play.png" alt="Play"></button> So it turns out that, but those of you that want to build a startup, I think a strong predictor for startups also success is an execution speed.</p>
+<p>对创业者而言，执行速度是成功的关键预测指标。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959949" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:50</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:50,079', '00:00:56,598')"><img src="play.png" alt="Play"></button> And I actually have a lot of respect for the entrepreneurs and executives that can just do things really quickly.</p>
+<p>我十分敬佩行动迅速的创业者和高管。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:56,600', '00:01:01,920')"><img src="play.png" alt="Play"></button> And new AI technology is enabling startups to go much faster.</p>
+<p>新AI技术正让创业速度大幅提升。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:01,920', '00:01:11,759')"><img src="play.png" alt="Play"></button> So what I want to do is share of you some of those best practices, which are frankly changing every two to three months though, to let you get that speed that hopefully lets you have higher odds of success.</p>
+<p>我将分享当前的最佳实践（尽管每2-3个月就会更新），帮助提高成功概率。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:11</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:11,760', '00:01:17,358')"><img src="play.png" alt="Play"></button> Before diving to speed, a lot of people ask me, hey Andrew, where are the opportunities for startups?</p>
+<p>在讨论速度前，很多人问我创业机会在哪里。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:17,358', '00:01:30,280')"><img src="play.png" alt="Play"></button> So this is what I think of as a AI stack, where at the lowest level are the semiconductor companies, then the clouds are high by scalars built on top of that, a lot of the AI foundation, all the companies build on top of that.</p>
+<p>我认为AI技术栈底层是半导体公司，之上是云平台和基础模型。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:30,280', '00:01:52,439')"><img src="play.png" alt="Play"></button> And even though a lot of PR excitement and hype has been on these technology layers, it turns out that almost by definition, the biggest opportunities have to be at the application layer because we actually need the applications to generate even more revenue so that they can afford to pay the foundation, cloud and semiconductor technology layers.</p>
+<p>尽管技术层备受关注，但最大机会必然在应用层，因为应用才能创造足够收入支撑底层技术。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959887" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:52</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:52,438', '00:02:06,399')"><img src="play.png" alt="Play"></button> So for whatever reason, media and social media tends not to talk about the application layer as much, but for those of you thinking of building startups, almost by definition, the biggest opportunities have to be there, although of course, the opportunities are all layers of the set.</p>
+<p>媒体较少讨论应用层，但对创业者而言这里蕴藏最大机会。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:06,400', '00:02:14,799')"><img src="play.png" alt="Play"></button> One of the things that's changed a lot over the last year, and in terms of AI tech trends, if you ask me, what's the most important tech trend in AI?</p>
+<p>过去一年最重要的AI趋势是什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:14,800', '00:02:17,960')"><img src="play.png" alt="Play"></button> I would say is the rise of a gentigai.</p>
+<p>我认为是智能体AI的崛起。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959862" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:17</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:17,960', '00:02:36,879')"><img src="play.png" alt="Play"></button> And about a year and a half ago, when I started to go around and give talks to try to convince people that AI agents might be a thing, I did not realize that around last summer, a bunch of marketers would get a hold of this term and use it as a sticker and slap it on everything in sight, which made it almost lose some of its meaning.</p>
+<p>一年半前我推广AI智能体概念时，没想到去年夏天营销人员会滥用这个术语。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:36,878', '00:02:46,039')"><img src="play.png" alt="Play"></button> But I'll share with you from a technical perspective, why I think a gentigai is exciting and important, and also opens up a lot more startup opportunities.</p>
+<p>但从技术角度看，智能体AI确实激动人心且能创造新机会。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:46,038', '00:02:51,639')"><img src="play.png" alt="Play"></button> So it turns out that the way a lot of us use LOMs is to prompt it to have it during an output.</p>
+<p>目前多数人通过提示词使用大模型。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959828" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:51</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:51,639', '00:03:06,119')"><img src="play.png" alt="Play"></button> And the way we have an LOM output something is as if you're going to a human, or in this case, an AI, and asking it to please type on an essay for you by writing from the first word to the last word, all in one go, whatever, using backspace.</p>
+<p>这就像要求人类或AI一次性完成整篇文章。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:06,118', '00:03:11,000')"><img src="play.png" alt="Play"></button> And humans, we don't do our best writing, being forced to type in this linear order.</p>
+<p>人类被迫线性写作时也难以发挥最佳水平。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:11,000', '00:03:18,078')"><img src="play.png" alt="Play"></button> And in terms of neither does AI, but despite the difficulty of being forced to write in this linear way, our LOMs do surprisingly well.</p>
+<p>AI同样如此，但大模型在线性写作中表现惊人。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959801" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:18</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:18,079', '00:03:33,079')"><img src="play.png" alt="Play"></button> With a gentigrap, those, we can go to AI system and ask it to please first write an essay online, then do some web research if it needs to, and fetch some web pages to put in their own context, then write the first draft, then read the first draft in critique, and revise it, and so on.</p>
+<p>通过智能体，我们可以让AI系统先列提纲、做网络研究、写初稿、自我修订。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:33,080', '00:03:46,199')"><img src="play.png" alt="Play"></button> And so we end up with this iterative workflow, where your model does some thinking, and some research, does some revision, goes back to do more thinking, and by going around this loop many times, it is slower, but the deliver is a much better work product.</p>
+<p>这种迭代工作流虽慢但产出质量更高。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:46,199', '00:03:58,718')"><img src="play.png" alt="Play"></button> So for a lot of projects, AI fund has worked on everything from pulling out complex compliance documents to medical diagnosis, to reasoning about complex legal documents.</p>
+<p>AI基金的项目涉及合规文件、医疗诊断和法律文件分析。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959761" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:58</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:58,718', '00:04:16,279')"><img src="play.png" alt="Play"></button> We found that these agentic workflows are really a huge difference within working, versus not working, but a lot of the work that needs to be done, a lot of available businesses to be built still, will be taking workflows, existing only workflows, and figuring out how to implement them into these types of agentic workflows.</p>
+<p>智能体工作流效果显著，未来需将现有流程转化为智能体工作流。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:16,278', '00:04:32,119')"><img src="play.png" alt="Play"></button> So just to update the picture for the AI stack, what has emerged over the last year is a new agentic orchestration layer that helps application builders orchestrate or coordinate a lot of calls to the technology layers underneath.</p>
+<p>AI技术栈新增了智能体编排层。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:32,119', '00:04:43,358')"><img src="play.png" alt="Play"></button> And the good news is, the orchestration layer has made it even easier to build applications, but I think the basic conclusion that the application layer has to be the most valuable layer to stack still holds true.</p>
+<p>编排层简化了应用开发，但应用层仍最具价值。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:43,360', '00:04:51,800')"><img src="play.png" alt="Play"></button> With a bias or focus on the application layer, let me now dive into some of the best practices of learning, but how startups can move faster.</p>
+<p>聚焦应用层，我将分享加速创业的最佳实践。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:52,920', '00:05:00,160')"><img src="play.png" alt="Play"></button> It turns out that at AI fund, we only focus on working on concrete ideas.</p>
+<p>AI基金只关注具体想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:00,160', '00:05:08,198')"><img src="play.png" alt="Play"></button> So to me, a concrete idea, a concrete product idea, is one that's specified enough detail that an engineer can go and build it.</p>
+<p>具体想法是指工程师能立即执行的明确方案。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:08,199', '00:05:14,959')"><img src="play.png" alt="Play"></button> So for example, if you say, let's use AI's optimized healthcare assets, that's actually not a concrete idea.</p>
+<p>"用AI优化医疗资源"就不是具体想法。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959685" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:14</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:14,959', '00:05:15,759')"><img src="play.png" alt="Play"></button> It's too vague.</p>
+<p>这太模糊。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:15,759', '00:05:21,718')"><img src="play.png" alt="Play"></button> If you tell me it's a very software, do you use AI's optimized healthcare assets? Different engineers would do totally different things.</p>
+<p>不同工程师会做出完全不同产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:21,718', '00:05:25,718')"><img src="play.png" alt="Play"></button> And because it's not concrete, you can't build it quickly and you don't have speed.</p>
+<p>不具体就无法快速执行。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:25,718', '00:05:35,240')"><img src="play.png" alt="Play"></button> In contrast, if you had a concrete idea, like let's write software to let hospitals, let patients with MRI machines laws online to optimize usage, I don't know if this is a good or a bad concrete idea.</p>
+<p>相比之下，"开发MRI机器在线预约系统"就是具体想法。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959664" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:35</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:35,240', '00:05:40,639')"><img src="play.png" alt="Play"></button> That's actually business already doing this, but it is concrete and that means engineers can build it quickly.</p>
+<p>虽然已有类似业务，但工程师能快速实现。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:40,639', '00:05:46,600')"><img src="play.png" alt="Play"></button> If it's a good idea, you find out there's not a good idea, you will find out by having concrete ideas by as you speed.</p>
+<p>通过具体想法能快速验证可行性。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:46,600', '00:05:49,759')"><img src="play.png" alt="Play"></button> Or someone would say, let's use AF email personal productivity.</p>
+<p>"用AI提升邮件效率"也不具体。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:49,759', '00:05:52,879')"><img src="play.png" alt="Play"></button> Too many interpretations of that, that's not concrete.</p>
+<p>解释空间太大。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959647" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:52</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:52,879', '00:05:59,639')"><img src="play.png" alt="Play"></button> But if someone says, could you build an app, Gmail integrate the automation that uses, let's use the right prompt, so it's my filter and tag email, is that it's concrete?</p>
+<p>而"开发Gmail插件用AI自动分类邮件"就很具体。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:59,639', '00:06:01,758')"><img src="play.png" alt="Play"></button> I could go build that this afternoon.</p>
+<p>这样的方案下午就能开工。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:01,759', '00:06:04,439')"><img src="play.png" alt="Play"></button> So concrete is by as you speed.</p>
+<p>具体化才能加速。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:04,439', '00:06:10,160')"><img src="play.png" alt="Play"></button> And the deceptive thing for a lot of entrepreneurs is the vague ideas tend to get a lot of crudals.</p>
+<p>具有欺骗性的是，模糊想法常获得更多认可。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959629" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:10,160', '00:06:14,360')"><img src="play.png" alt="Play"></button> If you go and tell all your friends, we should use AI to optimize the use of healthcare assets.</p>
+<p>如果你告诉朋友"用AI优化医疗资源"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:14,360', '00:06:20,680')"><img src="play.png" alt="Play"></button> Everyone will say that's a great idea, but it's actually not a great idea, at least in a sense of being something you can build.</p>
+<p>大家都会说好，但这并非可执行的好想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:20,680', '00:06:23,439')"><img src="play.png" alt="Play"></button> It turns out when you're vague, you're almost always right.</p>
+<p>模糊时你总是"正确"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:23,439', '00:06:26,560')"><img src="play.png" alt="Play"></button> But when you're concrete, you may be right or wrong.</p>
+<p>具体化后可能对错分明。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:26,560', '00:06:27,399')"><img src="play.png" alt="Play"></button> Either way, it's fine.</p>
+<p>但两者都好。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959612" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:27,399', '00:06:31,160')"><img src="play.png" alt="Play"></button> We can discover that much more fast, which is what's important for us to start up.</p>
+<p>快速验证对创业至关重要。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:31,160', '00:06:47,278')"><img src="play.png" alt="Play"></button> In terms of executing concrete ideas, I find that AI fun, I ask my team to focus on concrete ideas because a concrete idea gives clear direction, and the team can run really fast, to build it and either validate it, prove it out, or falsify it and conclude it doesn't work.</p>
+<p>执行具体想法能为团队提供明确方向，快速验证或否定。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:47,278', '00:06:48,119')"><img src="play.png" alt="Play"></button> Either way, it's fine.</p>
+<p>两种结果都好。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959591" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:48</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:48,119', '00:06:50,319')"><img src="play.png" alt="Play"></button> So let's do that quickly.</p>
+<p>所以要快速行动。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:50,319', '00:06:56,679')"><img src="play.png" alt="Play"></button> And it turns out that finally, good concrete ideas usually requires someone, could be you, could be a subject matter expert.</p>
+<p>好的具体想法通常需要领域专家长期思考。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:56,678', '00:06:59,038')"><img src="play.png" alt="Play"></button> Think about a problem for a long time.</p>
+<p>长期思考某个问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:59,038', '00:07:11,920')"><img src="play.png" alt="Play"></button> So for example, actually before you're starting Coursera, I spent years thinking about online education, top of the users, holding my own intuitions about what would make a good, a tech platform.</p>
+<p>比如创立Coursera前，我花了数年思考在线教育。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959568" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:11</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:11,920', '00:07:16,319')"><img src="play.png" alt="Play"></button> And then after that long process, I think YC sometimes calls it wondering the idea maze.</p>
+<p>YC称之为"想法迷宫探索"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:16,319', '00:07:24,400')"><img src="play.png" alt="Play"></button> But after thinking about it for a long time, you find that the guts of people that thought about this for a long time can be very good about rapidly making decisions.</p>
+<p>长期思考后，直觉决策会更准确。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:24,399', '00:07:36,600')"><img src="play.png" alt="Play"></button> As in, after you've thought about this, thought the customers have done for a long time, if you're also as expert, should I build this feature or that feature, you know, the gut, which is an instantaneous decision, can be actually a surprisingly good proxy.</p>
+<p>对客户需求有深刻理解后，瞬时决策反而更可靠。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959543" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:36</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:36,600', '00:07:40,360')"><img src="play.png" alt="Play"></button> It can be surprisingly good mechanism for making decisions.</p>
+<p>这是很好的决策机制。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:40,360', '00:07:44,759')"><img src="play.png" alt="Play"></button> And I know I work on AI, you might think I'll say, oh, we need data.</p>
+<p>虽然我从事AI，但并非所有决策都需要数据。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:44,759', '00:07:46,399')"><img src="play.png" alt="Play"></button> And of course, I love data.</p>
+<p>我确实重视数据。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:46,399', '00:07:51,720')"><img src="play.png" alt="Play"></button> The turns out getting data for a lot of starters is just slow mechanism for making decisions.</p>
+<p>但对初创公司，收集数据可能太慢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:51,720', '00:07:57,320')"><img src="play.png" alt="Play"></button> And subject matter expert with good guts is often a much better mechanism for making a speedy decision.</p>
+<p>领域专家的直觉反而能加速决策。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959522" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:57</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:57,319', '00:08:07,078')"><img src="play.png" alt="Play"></button> And then one other thing, but many successful starters, at any moment in time, you're pursuing one very clear hypothesis, they're building out and trying to sell the value of all the spot.</p>
+<p>成功初创公司通常专注验证一个明确假设。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:07,079', '00:08:11,839')"><img src="play.png" alt="Play"></button> And a startup doesn't have resources to hedge and try 10 things at the same time.</p>
+<p>初创公司资源有限，无法同时尝试多个方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:11,839', '00:08:13,959')"><img src="play.png" alt="Play"></button> So pick one, go for it.</p>
+<p>所以专注一个方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:13,959', '00:08:18,279')"><img src="play.png" alt="Play"></button> And if data tells you to use faith in that idea, that's totally fine.</p>
+<p>如果数据否定它，完全没问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959501" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:18</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:18,279', '00:08:21,960')"><img src="play.png" alt="Play"></button> Just pivot on the dime to pursue a totally different concrete idea.</p>
+<p>立即转向新具体想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:21,959', '00:08:23,959')"><img src="play.png" alt="Play"></button> So that's what often feels like an AI fund.</p>
+<p>这就是AI基金的工作方式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:23,959', '00:08:34,720')"><img src="play.png" alt="Play"></button> We're pursuing one thing doggily with determination until the world tells us we were wrong, then change and pursue a totally different thing with equal determination and equal dogginess.</p>
+<p>我们专注一个方向直到被证明错误，然后以同样决心转向新方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:34,720', '00:08:43,120')"><img src="play.png" alt="Play"></button> And one of the pads in our scene, if every piece of new data calls you to the pivot, it probably means you're starting off from two week of base of knowledge.</p>
+<p>如果每个新数据都让你改变方向，可能说明知识储备不足。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959476" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:43,120', '00:08:45,720')"><img src="play.png" alt="Play"></button> Every time you talk to a customer, you totally change your mind.</p>
+<p>每次与客户交流都彻底改变想法时。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:45,720', '00:08:55,360')"><img src="play.png" alt="Play"></button> Part of it means you don't know enough about that sector yet to have a really high quality concrete idea and finding someone to start about a subject for longer may get drawn to better power.</p>
+<p>意味着需要更深入了解该领域才能形成高质量具体想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:55,360', '00:09:05,199')"><img src="play.png" alt="Play"></button> In order to go faster, the other thing often think about is the built feedback loop, which is rapidly changing when it comes to how we build with AI coding assistance.</p>
+<p>要加速，还需建立快速反馈循环，AI编程辅助正改变这一过程。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959454" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:05</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:05,200', '00:09:16,240')"><img src="play.png" alt="Play"></button> So when you're building a lot of applications, one of the biggest risks is customer acceptance, a lot of startups struggle, not because we can't build whatever we want to build, but because we build something and it turns out, no, we cares.</p>
+<p>许多创业失败源于产品无人问津，而非技术实现。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:16,240', '00:09:43,079')"><img src="play.png" alt="Play"></button> And so for a lot of the way I build startups, especially applications, less so deep tech, less so technology startups, but definitely application startups is often built software, so this is an engineering toss, and then we will get feedback from users and just a product management toss, and then we'll go back, basically use the feedback, we'll tweak our views on what to build, go back to write more software, and we go around this loop many, many times, iterate toward product market fit.</p>
+<p>我们通过"开发-用户反馈-调整"的循环迭代实现产品市场匹配。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:43,080', '00:09:55,519')"><img src="play.png" alt="Play"></button> And it turns out that with AI coding assistance, which Andre talked about as well, rapid engineering is becoming possible in a way that just was not possible, it's becoming much more feasible.</p>
+<p>AI编程辅助使快速工程成为可能。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959404" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:55</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:55,519', '00:10:02,278')"><img src="play.png" alt="Play"></button> So the speed of engineering is going up rapidly, and the cost of engineering is also going down rapidly.</p>
+<p>工程速度提升，成本下降。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:02,278', '00:10:06,600')"><img src="play.png" alt="Play"></button> This changes the mechanisms by which we drive startups around this loop.</p>
+<p>这改变了创业迭代的方式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:06,600', '00:10:10,240')"><img src="play.png" alt="Play"></button> When I think about the software I did I do, I maybe put into two major buckets.</p>
+<p>我将软件开发分为两类。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:10,240', '00:10:20,639')"><img src="play.png" alt="Play"></button> Sometimes I've built quick and dirty prototypes to test an idea, you say, building new customers service chat box, building AI to process legal documents, whatever, but the quick and dirty prototype to see if we think it works.</p>
+<p>快速原型验证想法可行性。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959379" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:20</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:20,639', '00:10:28,740')"><img src="play.png" alt="Play"></button> The other type of software I do is, write, maintain production software, maintain legacy software, but these massive production ready go bases.</p>
+<p>另一类是生产级软件开发维护。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:28,740', '00:10:33,819')"><img src="play.png" alt="Play"></button> Depending on which analyst report you trust, it's been hard to find very rigorous data on this.</p>
+<p>不同分析报告数据差异较大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:33,820', '00:10:41,499')"><img src="play.png" alt="Play"></button> You know, when writing production quality code, maybe we're 30% to 50% faster with AI assistance, hard to find a rigorous number, maybe, these falls to be.</p>
+<p>AI辅助使生产代码效率提升30-50%。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959358" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:41</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:41,500', '00:10:46,258')"><img src="play.png" alt="Play"></button> But in terms of building quick and dirty prototypes, we're not 50% faster.</p>
+<p>但在原型开发中，效率提升不止50%。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:46,259', '00:10:50,740')"><img src="play.png" alt="Play"></button> I think we're easily 10 times faster, maybe much more than 10 times faster.</p>
+<p>可能达到10倍甚至更高。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:50,740', '00:10:52,500')"><img src="play.png" alt="Play"></button> And there are a few reasons for this.</p>
+<p>原因有几个。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:52,500', '00:11:00,298')"><img src="play.png" alt="Play"></button> When you're building standalone prototypes, this less integration with legacy software infrastructure legacy data needed.</p>
+<p>原型开发较少依赖旧系统集成。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:00,298', '00:11:06,259')"><img src="play.png" alt="Play"></button> Also, the requirements for reliability, even scalability, even security are much lower.</p>
+<p>对可靠性、扩展性和安全性要求较低。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959333" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:06</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:06,259', '00:11:09,620')"><img src="play.png" alt="Play"></button> And I know I'm not supposed to tell people to write insecure code, right?</p>
+<p>虽然不该鼓励写不安全代码。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:09,620', '00:11:11,058')"><img src="play.png" alt="Play"></button> Feels like the wrong thing to say.</p>
+<p>这么说不太合适。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:11,058', '00:11:22,658')"><img src="play.png" alt="Play"></button> But I routinely go to my team and say, good, hey, write insecure code, because if this software is only gonna run on your laptop, and if you don't plan to maliciously hack your own laptop, it's fine to have insecure code, right?</p>
+<p>但我常对团队说：在原型阶段可以写不安全代码，如果只在你自己的笔记本上运行。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:22,658', '00:11:26,818')"><img src="play.png" alt="Play"></button> But of course, after it seems you're working, please do make a secure before you ship it to someone else.</p>
+<p>当然正式发布前必须确保安全。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959313" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:26</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:26,820', '00:11:31,740')"><img src="play.png" alt="Play"></button> And like a leaking PII, leaking sends data, that is very damaging.</p>
+<p>泄露个人数据会造成严重损害。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:31,740', '00:11:35,699')"><img src="play.png" alt="Play"></button> So before you ship it, make a secure and scalable, but they were just assessing it, it's fine.</p>
+<p>所以发布前要做好安全加固。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:35,700', '00:11:43,900')"><img src="play.png" alt="Play"></button> And so I find increasingly, SOTAS will systematically pursue innovations by building 20 prototypes to see what works, right?</p>
+<p>因此我们常通过构建20个原型来系统化探索创新。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:43,899', '00:11:48,819')"><img src="play.png" alt="Play"></button> Because I know that there's some ads in AI, a lot of proof of concepts don't make into production.</p>
+<p>虽然很多概念验证不会进入生产环境。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959291" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:48</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:48,820', '00:11:55,700')"><img src="play.png" alt="Play"></button> But I think by driving the cost of a proof of concept low enough, it's actually fine, it lots of proof of concepts, don't see the light of day.</p>
+<p>但我认为只要将概念验证的成本压得足够低，即使很多POC最终未能落地也是可以接受的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:55,700', '00:12:02,139')"><img src="play.png" alt="Play"></button> And I know that the mantra, move fast and break things, got a bad rep, because it broke things.</p>
+<p>我知道"快速行动、打破常规"这句口号因实际破坏性而声誉不佳。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:02,139', '00:12:08,460')"><img src="play.png" alt="Play"></button> And some teams took away from this that you should not move fast, but I think that's a mistake.</p>
+<p>一些团队因此认为不该追求速度，但我觉得这是误解。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959271" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:08</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:08,460', '00:12:11,219')"><img src="play.png" alt="Play"></button> I tend to tell my teams to move fast and be responsible.</p>
+<p>我通常告诉团队要"快速行动且负责任"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:11,220', '00:12:16,059')"><img src="play.png" alt="Play"></button> And I think they actually found ways to move really quickly while still being responsible.</p>
+<p>事实上他们已找到了既快速推进又保持责任感的方法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:16,059', '00:12:25,938')"><img src="play.png" alt="Play"></button> And in terms of the AI-assisted coding landscape, I think was it three, four years ago, code autocomplete, right? Popularized by GitHub copilot.</p>
+<p>在AI辅助编程领域，三四年前代码自动补全功能（如GitHub Copilot）开始普及。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:25,938', '00:12:33,220')"><img src="play.png" alt="Play"></button> And then there was a cursor, wind-served generation of AI-enabled IDEs, we didn't use wind-served cursor quite a lot.</p>
+<p>随后出现以Cursor为代表的第二代AI集成开发环境，但我们并未频繁使用Cursor。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959246" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:33</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:33,220', '00:12:46,178')"><img src="play.png" alt="Play"></button> And then starting on our six, seven months ago, decided to do this new generation of agent coding assistance, including, like you're using O-Fe a lot for coding, cloud coding is fantastic.</p>
+<p>六七个月前我们开始采用新一代智能编码助手，比如频繁使用的O-Fe，云端编程体验极佳。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:46,178', '00:12:52,740')"><img src="play.png" alt="Play"></button> Since quad-4 release is become, and I was beginning a few months, I may use something different, but the tools evolving really rapidly.</p>
+<p>自Quad-4版本发布后，虽然我几个月前可能用其他工具，但这类工具迭代速度惊人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:52,740', '00:13:01,019')"><img src="play.png" alt="Play"></button> But I think cloud code X, this is a new generation of highly-agent coding assistance that is making developer productivity keep on growing.</p>
+<p>我认为Cloud Code X这类新一代高智能编码助手正在持续提升开发效率。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959218" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:01</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:01,019', '00:13:08,820')"><img src="play.png" alt="Play"></button> And the interesting thing is, if you're even half a generation or one generation behind, is actually makes a big difference compared to if you're on top of the latest tools.</p>
+<p>有趣的是，哪怕落后半代或一代工具，其效率差距会非常明显。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:08,820', '00:13:14,500')"><img src="play.png" alt="Play"></button> And the final idea of thinking really different approaches to software engineering now, compared to even three or six months ago.</p>
+<p>现在的软件工程方法论与三个月或半年前已截然不同。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:14,500', '00:13:21,218')"><img src="play.png" alt="Play"></button> One surprising thing is, we're used to thinking of code as this really valuable artifact, which is so hard to create.</p>
+<p>令人惊讶的是，我们曾将代码视为极难创造的高价值产物。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959198" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:21</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:21,219', '00:13:26,139')"><img src="play.png" alt="Play"></button> But because the cost of software engineering is going down, code is much less of a valuable artifact as it used to.</p>
+<p>但随着开发成本降低，代码的价值属性已大幅减弱。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:26,139', '00:13:30,818')"><img src="play.png" alt="Play"></button> Some on Teams where, with completely rebuilt the code base, three times the last month, right?</p>
+<p>有些团队甚至上个月就彻底重构了三次代码库。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:30,818', '00:13:34,379')"><img src="play.png" alt="Play"></button> Because it's not that hard anymore to just completely rebuild the code base.</p>
+<p>因为现在彻底重写代码库已非难事。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:34,379', '00:13:38,899')"><img src="play.png" alt="Play"></button> Pick a new data schema is fine, because the cost of doing that has plummeted.</p>
+<p>选择新数据架构也很轻松，因其成本已骤降。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959181" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:38</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:38,899', '00:13:43,620')"><img src="play.png" alt="Play"></button> Some of you may have heard of Jeff Bezos' terminology of a two-way door versus a one-way door.</p>
+<p>你们可能听过贝索斯提出的"双向门"与"单向门"决策理论。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:43,620', '00:13:49,259')"><img src="play.png" alt="Play"></button> A two-way door's decision they can make. If you change your mind, come back out, you know, reverse it relatively cheaply.</p>
+<p>"双向门"决策可低成本撤销。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:49,298', '00:13:54,898')"><img src="play.png" alt="Play"></button> Whereas the one-way door is, you make a decision and you change your mind is very costly, very difficult to reverse.</p>
+<p>而"单向门"决策的变更代价极高。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:54,899', '00:13:58,739')"><img src="play.png" alt="Play"></button> So choosing the software architecture of your tech stack, used to be a one-way door.</p>
+<p>过去选择技术栈的软件架构属于"单向门"决策。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959161" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:58</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:58,740', '00:14:03,779')"><img src="play.png" alt="Play"></button> Once you build on top of a certain tech stack, you know, set the data schema really hard to change it.</p>
+<p>一旦基于某技术栈开发，数据架构就难以变更。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:03,778', '00:14:05,620')"><img src="play.png" alt="Play"></button> So that used to be a one-way door.</p>
+<p>因此过去这是"单向门"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:05,620', '00:14:14,259')"><img src="play.png" alt="Play"></button> I don't want to say it's totally a two-way door, but I find that my team were more often built on a certain tech stack a week later, change your mind.</p>
+<p>虽不能说完全变成"双向门"，但我的团队常在一周后就更换技术栈。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:14,259', '00:14:17,658')"><img src="play.png" alt="Play"></button> Let's throw the code base away and redo it from scratch on the new tech stack.</p>
+<p>直接废弃旧代码库，用新栈重写。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959142" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:17</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:17,658', '00:14:20,220')"><img src="play.png" alt="Play"></button> I don't want to over-hype it. We don't do that all the time.</p>
+<p>并非夸大其词，我们并非总是如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:20,220', '00:14:22,460')"><img src="play.png" alt="Play"></button> There are still costs to redoing that.</p>
+<p>重写仍有成本。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:22,460', '00:14:29,740')"><img src="play.png" alt="Play"></button> I find my team is often rethinking what is a one-way door and what's now a two-way door because the cost of software engineering is so much lower now.</p>
+<p>由于开发成本降低，团队常需重新评估决策类型归属。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:29,740', '00:14:36,779')"><img src="play.png" alt="Play"></button> And maybe going a little bit beyond software engineering, I feel like it's actually a good time to impart everyone to build AI.</p>
+<p>超越软件工程范畴，现在正是普及AI构建的大好时机。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959123" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:36</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:36,778', '00:14:43,100')"><img src="play.png" alt="Play"></button> Over the last year, a bunch of people advised, have advised others not to learn to code on the browser AI will automate it.</p>
+<p>过去一年很多人鼓吹"无需学编程，AI将自动化一切"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:43,100', '00:14:48,580')"><img src="play.png" alt="Play"></button> I think we'll look back on this as some of the worst career advice ever given.</p>
+<p>这终将被视为最糟糕的职业建议。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:48,580', '00:14:55,179')"><img src="play.png" alt="Play"></button> Because as better tools make software engineering easier, more people should do it, not fewer.</p>
+<p>因为工具越强大，越该有更多人参与开发。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:55,179', '00:15:00,660')"><img src="play.png" alt="Play"></button> So when many decades ago, the world moved from punch cards to keyboard and terminal that made coding easier.</p>
+<p>就像数十年前从打孔卡转向键盘终端提升了编程便利性。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959099" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:00,659', '00:15:09,419')"><img src="play.png" alt="Play"></button> When we moved from assemblies, high-level languages like Cobalt, there actually people arguing back then that now we have Cobalt, we don't need programmers anymore.</p>
+<p>当从汇编转向COBOL等高级语言时，也有人声称不再需要程序员。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:09,419', '00:15:11,579')"><img src="play.png" alt="Play"></button> That people actually don't pay for this to that effect.</p>
+<p>这种论调显然错误。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:11,580', '00:15:16,700')"><img src="play.png" alt="Play"></button> But of course, there was wrong and program languages made easier to code and more people learn to code.</p>
+<p>实际上编程语言简化后，更多人可以学习编程。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:16,700', '00:15:20,660')"><img src="play.png" alt="Play"></button> Check sentences, IDs, IDs, AI coding assistance.</p>
+<p>检查语句、IDE、AI编程辅助。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959079" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:20</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:20,659', '00:15:24,419')"><img src="play.png" alt="Play"></button> And as coding becomes easier, more people should learn to code.</p>
+<p>编程越简单，越该全民学习。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:24,419', '00:15:30,579')"><img src="play.png" alt="Play"></button> I have a controversial opinion, which is, I think it's actually time for everyone of every job role to learn to code.</p>
+<p>我的争议性观点是：所有岗位都该学编程。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:30,580', '00:15:39,179')"><img src="play.png" alt="Play"></button> And in fact, on my team, my CFO, my head of talent, my recruiters, my friend desk, a person, all of them knew how to code.</p>
+<p>我的团队中CFO、人才主管、招聘专员、前台都懂编程。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:39,179', '00:15:44,139')"><img src="play.png" alt="Play"></button> And I should see all of them performing better at all of their job functions because they can code.</p>
+<p>编程能力确实提升了他们的工作表现。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959055" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:44</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:44,139', '00:15:48,299')"><img src="play.png" alt="Play"></button> And I think I'm pretty little bit ahead of her for most businesses not there yet.</p>
+<p>虽然大多数企业尚未达到这种程度。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:48,299', '00:15:53,138')"><img src="play.png" alt="Play"></button> But in the future, I think when part everyone to code, a lot of people can be more productive.</p>
+<p>但我认为未来全民编程将大幅提升生产力。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:53,139', '00:16:06,779')"><img src="play.png" alt="Play"></button> I want to share with you one lesson I learned as well on why we should have people learn to do this, which is when a teacher in Genese VIF everyone on Coursera, we needed to generate background art like this using my journey.</p>
+<p>以Coursera课程背景图制作为例：当需要MidJourney生成艺术图时，</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959033" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:06</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:06,779', '00:16:11,179')"><img src="play.png" alt="Play"></button> And one of my team members knew art history.</p>
+<p>团队中懂艺术史的成员</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:11,179', '00:16:19,100')"><img src="play.png" alt="Play"></button> And so he could prompt my journey with the genre, the palette, the artistic inspiration, had a very good control over the images he generated.</p>
+<p>能通过流派、色调等提示词精准控制产出。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:19,100', '00:16:22,259')"><img src="play.png" alt="Play"></button> So we end up using all of Tommy's generated images.</p>
+<p>因此我们最终全部采用他的作品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:22,259', '00:16:25,779')"><img src="play.png" alt="Play"></button> Whereas in Contrast, I don't know art history.</p>
+<p>而我不懂艺术史，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:25,778', '00:16:33,419')"><img src="play.png" alt="Play"></button> And so when I prompt your image generation, I could write, please make pretty pictures of robots for me.</p>
+<p>只能笼统提示"生成机器人美图"，</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208959006" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:33</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:33,418', '00:16:37,299')"><img src="play.png" alt="Play"></button> And I could never have the control that my collaborates are good.</p>
+<p>无法达到他的控制精度。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:37,298', '00:16:40,340')"><img src="play.png" alt="Play"></button> And so I could generate as good images as he could.</p>
+<p>自然无法产出同等质量作品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:40,340', '00:16:48,740')"><img src="play.png" alt="Play"></button> And I think with computers, one of the most important skills of the future is the ability to tell a computer exactly what you want so they'll do it for you.</p>
+<p>未来核心技能是精准向计算机表达需求。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:48,740', '00:16:55,138')"><img src="play.png" alt="Play"></button> And there will be people that have that deeper understanding of computers that will be able to command the computer to get the outcome you want.</p>
+<p>对计算机理解更深者将能更好驾驭它们。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:55</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:55,139', '00:17:03,099')"><img src="play.png" alt="Play"></button> And learning to code, not that you need to write the code yourself. C or AI to code for you seems like it will remain the best way to do that for a long time.</p>
+<p>学习编程（未必亲自写码）仍是掌握该技能的最佳途径。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:03,100', '00:17:15,618')"><img src="play.png" alt="Play"></button> With software engineering becoming much faster, the other interesting dynamic I'm seeing is that the product management work, getting user feedback, deciding what features to build, that is increasingly the bottleneck.</p>
+<p>随着开发加速，产品管理和用户反馈反而成为瓶颈。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:15,618', '00:17:19,460')"><img src="play.png" alt="Play"></button> And so I'm seeing very interesting dynamics in multiple teams over the last year.</p>
+<p>过去一年观察到有趣现象：</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958960" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:19,460', '00:17:26,379')"><img src="play.png" alt="Play"></button> A lot more of my teams have started to complain that the bottleneck on product engineering and design because the engineers have gotten so much faster.</p>
+<p>由于工程师效率提升，更多团队开始抱怨产品设计环节拖累。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:26,378', '00:17:28,180')"><img src="play.png" alt="Play"></button> Some machine trends I'm seeing.</p>
+<p>观察到几个趋势：</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:28,180', '00:17:38,500')"><img src="play.png" alt="Play"></button> Three, four, five years ago, Silicon Valley used to have these slightly suspicious rules of thumb, but nonetheless, rules of thumb will have 1 p.m. to four engineers or 1 p.m. to seven engineers.</p>
+<p>三五年前硅谷流行1名产品经理配4-7名工程师的经验法则。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958941" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:38</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:38,500', '00:17:41,700')"><img src="play.png" alt="Play"></button> It was this like p.m. product manager at the engineering ratio, right?</p>
+<p>即产品经理与工程师的比例。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:42,538', '00:17:46,980')"><img src="play.png" alt="Play"></button> I think we're great in the salt, but those typical are the 1 p.m. to six, seven engineers.</p>
+<p>虽然比例各异，但通常是1:6或1:7。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:46,980', '00:17:55,860')"><img src="play.png" alt="Play"></button> And with engineers becoming much faster, I don't see product management work designing what to build, becoming faster at the same speed that engineering is.</p>
+<p>如今工程师效率提升后，产品管理效率并未同步增长。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:55,859', '00:17:57,140')"><img src="play.png" alt="Play"></button> I'm seeing this ratio shift.</p>
+<p>该比例正在变化。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958922" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:57</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:57,140', '00:18:00,140')"><img src="play.png" alt="Play"></button> So literally yesterday, one of my teams came to me.</p>
+<p>比如昨天就有团队提议</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:00,140', '00:18:09,580')"><img src="play.png" alt="Play"></button> And for the first time, when we're planning a hit conference project, this team proposed to me not have 1 p.m. to four engineers, but have 1 p.m. to 0.5 engineers.</p>
+<p>将标准比例改为1名产品经理配0.5名工程师。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:09,579', '00:18:12,338')"><img src="play.png" alt="Play"></button> So the team I should propose to me, I still know that it's a good idea.</p>
+<p>虽然不确定是否合理，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:12,338', '00:18:19,740')"><img src="play.png" alt="Play"></button> For the first time in my life, I saw your managers propose to me, having twice as many p.m. as engineers was a very interesting dynamic.</p>
+<p>但产品经理数量反超工程师的现象值得关注。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958900" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:19,740', '00:18:25,500')"><img src="play.png" alt="Play"></button> I still don't know if this proposed I heard yesterday is a good idea, but I think it's a sign of where the world's going.</p>
+<p>这或许预示着行业方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:25,500', '00:18:30,740')"><img src="play.png" alt="Play"></button> And I find that as a p.m.s, they can code or engineers with some product instincts often end up doing better.</p>
+<p>懂编程的产品经理或具产品思维的工程师表现更优。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:30,740', '00:18:41,258')"><img src="play.png" alt="Play"></button> The other thing that found important for startup leaders is because engineering is going so fast, if you're good tactics, we're getting rapid feedback to shape your perspective on what to build faster.</p>
+<p>初创领导者需善用快速反馈调整产品方向。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958878" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:41</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:41,259', '00:18:43,980')"><img src="play.png" alt="Play"></button> That helps you get faster as well.</p>
+<p>这能加速决策循环。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:43,980', '00:18:51,539')"><img src="play.png" alt="Play"></button> So I'm going to go through a portfolio of tactics for getting product feedback to keep shaping what you will decide to build.</p>
+<p>以下是一套获取产品反馈的方法：</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:51,538', '00:18:57,659')"><img src="play.png" alt="Play"></button> And we're going to go through a list of the faster, maybe less accurate, the slower one-acquired tactics.</p>
+<p>按速度从快到慢排序。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:57,660', '00:19:02,619')"><img src="play.png" alt="Play"></button> So the fastest tactic for getting feedback is, look for the product yourself and just go by your gut.</p>
+<p>最快但欠精准：凭直觉自查产品。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958857" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:02</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:02,619', '00:19:06,940')"><img src="play.png" alt="Play"></button> And if you're subject matter to expert, this is actually surprisingly good.</p>
+<p>领域专家用此法效果不错。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:06,940', '00:19:15,778')"><img src="play.png" alt="Play"></button> If you know what you're doing. Lubit's slower is go ask the friends of teammates to get feedback to play your product and get feedback.</p>
+<p>次快：邀请队友朋友试用反馈。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:15,778', '00:19:19,778')"><img src="play.png" alt="Play"></button> Lubit's slower is ask the attend strangers for feedback.</p>
+<p>更慢：收集陌生人反馈。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:19,778', '00:19:27,180')"><img src="play.png" alt="Play"></button> It turns out when I built products, one of the most important skills I think I learned was how to send to the coffee shop, how to sit in there.</p>
+<p>我常驻咖啡厅或酒店大堂，</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958832" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:27,180', '00:19:29,900')"><img src="play.png" alt="Play"></button> When I travel, I often send the hotel lobby.</p>
+<p>礼貌邀请路人试用产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:29,900', '00:19:38,180')"><img src="play.png" alt="Play"></button> It turns out, learn to spot places in high-foot traffic and very respectfully, grab strangers and ask them for feedback on whatever I'm building.</p>
+<p>高人流区域是理想测试场。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:38,180', '00:19:40,579')"><img src="play.png" alt="Play"></button> This used to be easier, was less known.</p>
+<p>以前这样做更容易。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:40,579', '00:19:43,180')"><img src="play.png" alt="Play"></button> When people recognize you, it's a little bit more awkward.</p>
+<p>现在被认出时会尴尬。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:43,180', '00:19:47,899')"><img src="play.png" alt="Play"></button> I found that I've actually sat with teams at the hotel lobby, very high-foot traffic.</p>
+<p>但酒店大堂测试法仍有效。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:47</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:47,900', '00:19:52,298')"><img src="play.png" alt="Play"></button> And very respectfully, ask strangers, hey, we're building the same, do you mind taking a look?</p>
+<p>礼貌请求："我们在开发这个，能请您看看吗？"</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:52,298', '00:19:58,179')"><img src="play.png" alt="Play"></button> Oh, and I actually learned in the coffee shop that a lot of people working, a lot of people don't want to be working.</p>
+<p>咖啡厅里很多人其实想暂时逃离工作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:58,180', '00:20:01,819')"><img src="play.png" alt="Play"></button> So we give them, excuse me, distracted. They're very happy to do that too.</p>
+<p>因此很乐意协助测试。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:01,819', '00:20:08,420')"><img src="play.png" alt="Play"></button> But I've actually made tons of product decisions in the hotel lobby and the coffee shop collaborators, just like that.</p>
+<p>我在这些场所做出了无数产品决策。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958791" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:08</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:08,420', '00:20:10,820')"><img src="play.png" alt="Play"></button> Stem prototypes, 100 testers.</p>
+<p>进阶方法：百人规模原型测试。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:10,819', '00:20:12,740')"><img src="play.png" alt="Play"></button> If you have access, the logic goes to users.</p>
+<p>若有条件直接接触用户。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:12,740', '00:20:14,420')"><img src="play.png" alt="Play"></button> Stem prototypes are more users.</p>
+<p>更大规模测试。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:14,420', '00:20:17,539')"><img src="play.png" alt="Play"></button> And these get to be slow and slow tactics.</p>
+<p>速度依次递减。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:17,538', '00:20:20,579')"><img src="play.png" alt="Play"></button> And I know Silicon Valley, we like to talk about A, B testing.</p>
+<p>虽然硅谷推崇A/B测试，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:20,579', '00:20:22,619')"><img src="play.png" alt="Play"></button> Of course, I do a ton of A, B testing.</p>
+<p>我也大量使用，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:22,619', '00:20:30,500')"><img src="play.png" alt="Play"></button> But contrary to what many people think, A, B testing is not one of the slowest tactics in my menu, because it's just slow to ship it.</p>
+<p>但它其实很耗时。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958769" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:30</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:30,500', '00:20:32,220')"><img src="play.png" alt="Play"></button> It depends on how many users you have.</p>
+<p>且依赖用户基数。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:32,220', '00:20:40,420')"><img src="play.png" alt="Play"></button> So the other thing is, as you use anything but the first tactic, some teams will look at the data and make a decision.</p>
+<p>使用非直觉方法时，团队常直接依据数据决策。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:40,420', '00:20:48,441')"><img src="play.png" alt="Play"></button> But the missing piece is, when I AB test something, I don't just use the result of AB test to pick product A or product B.</p>
+<p>但A/B测试的价值不止于选择方案。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:48,579', '00:20:54,538')"><img src="play.png" alt="Play"></button> My team will often sit down and look carefully to the data to hone our instincts, to speed up, to improve the rate.</p>
+<p>我们通过分析数据打磨决策直觉。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:54</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:54,538', '00:20:58,298')"><img src="play.png" alt="Play"></button> I wish we were able to use the first tactic, to make high quality decision.</p>
+<p>虽然理想状态是用直觉做高质量决策。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:58,298', '00:21:03,420')"><img src="play.png" alt="Play"></button> You're often sit down and think, gee, I thought, this product name will work better than their product name.</p>
+<p>比如曾认为某个命名更优，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:03,420', '00:21:15,740')"><img src="play.png" alt="Play"></button> Clearly, my mental model that uses wrong, so we sit down and think, to update our mental model, using all of that data, to improve the quality of our guts on how to make product decision faster.</p>
+<p>但数据证明原认知错误，此时需要修正思维模型。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958724" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:15</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:15,740', '00:21:17,499')"><img src="play.png" alt="Play"></button> That turns out to be really important.</p>
+<p>这过程至关重要。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:17,500', '00:21:23,259')"><img src="play.png" alt="Play"></button> All right. So talk about concrete ideas, speed up engineering, speed up product feedback.</p>
+<p>总结：加速工程与反馈循环。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:23,259', '00:21:28,980')"><img src="play.png" alt="Play"></button> This is one last thing we'll touch on, which is a scene that, understanding AI, actually makes you go faster.</p>
+<p>最后强调：理解AI能加速发展。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:28,980', '00:21:29,819')"><img src="play.png" alt="Play"></button> And here's why.</p>
+<p>原因如下：</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:29,819', '00:21:33,538')"><img src="play.png" alt="Play"></button> As an AI person, maybe I'm biased to be pro AI, but I want to share you why.</p>
+<p>作为AI从业者或许带偏见，但事实如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:33,538', '00:21:41,740')"><img src="play.png" alt="Play"></button> So it turns out that when it comes to mature technology, like mobile, many people have had smartphones for a long time, we kind of know what a mobile app can do, right?</p>
+<p>成熟技术（如移动应用）的潜力已被充分认知。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:41</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:41,740', '00:21:45,980')"><img src="play.png" alt="Play"></button> So many people, including non-tech people, have good instincts about what a mobile app can do.</p>
+<p>非技术人员也了解移动应用的边界。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:45,980', '00:21:51,298')"><img src="play.png" alt="Play"></button> If you look at mature job roles, they sales marketing, HR legal, they're all really important, are really difficult.</p>
+<p>成熟岗位如销售、HR等虽重要，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:51,298', '00:22:00,059')"><img src="play.png" alt="Play"></button> But you know, there are enough marketers that have done marketing for long enough, and the marketing tactics haven't changed that much in the last year.</p>
+<p>但你知道，有足够多的营销人员从事营销工作足够长时间，而且营销策略在过去一年里没有太大变化。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958679" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:00,058', '00:22:12,419')"><img src="play.png" alt="Play"></button> So there are a lot of people that are really good at marketing, and it's really important, really hard, but that knowledge is relatively diffused because the knowledge of how to do HR, like it hasn't changed dramatically, you know, in the last six months.</p>
+<p>所以有很多人非常擅长营销，这非常重要，也非常困难，但这些知识相对分散，因为像人力资源这样的知识在过去六个月里并没有发生巨大变化。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:12,419', '00:22:18,898')"><img src="play.png" alt="Play"></button> But AI is the emerging technology, and so the knowledge of how to do AI really well is not widespread.</p>
+<p>但AI是新兴技术，因此如何真正做好AI的知识并不普及。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:18,898', '00:22:24,419')"><img src="play.png" alt="Play"></button> And so teams that actually get it, they understand AI do have an advantage over teams that don't.</p>
+<p>因此，真正理解AI的团队确实比不理解的团队有优势。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958655" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:24</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:24,419', '00:22:29,459')"><img src="play.png" alt="Play"></button> Whereas if you need an HR problem, you can find someone that knows how to do it well, probably.</p>
+<p>而如果你需要解决人力资源问题，你很可能可以找到知道如何做好的人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:29,460', '00:22:33,860')"><img src="play.png" alt="Play"></button> But if an AI problem, knowing how to actually do that, could put your head of other companies.</p>
+<p>但如果是AI问题，知道如何真正解决它，可能会让你领先于其他公司。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:33,859', '00:22:37,420')"><img src="play.png" alt="Play"></button> So things like what accuracy can you get for a customer service chat box?</p>
+<p>比如，你能为客服聊天机器人获得多高的准确率？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:37,420', '00:22:40,259')"><img src="play.png" alt="Play"></button> You know, should you problem a fine team using a journey workflow?</p>
+<p>你知道，你是否应该用一个旅程工作流来优化团队？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958639" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:40</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:40,259', '00:22:41,900')"><img src="play.png" alt="Play"></button> How do you get a voice out to low latency?</p>
+<p>如何实现低延迟的语音输出？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:41,900', '00:22:52,860')"><img src="play.png" alt="Play"></button> There are a lot of these decisions that if you make the right technical decision, you can solve the problem in a couple days, they make the wrong technical decision, you could chase a blind alley for three months, right?</p>
+<p>有很多这样的决策，如果你做出正确的技术决策，你可以在几天内解决问题，如果做出错误的技术决策，你可能会在死胡同里浪费三个月，对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:52,859', '00:23:00,298')"><img src="play.png" alt="Play"></button> And one thing I'm a bit surprised by, it turns out if you have two possible architecture decisions, it's one bit of information.</p>
+<p>让我有点惊讶的是，如果你有两个可能的架构决策，这实际上是一个比特的信息。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:00,298', '00:23:04,220')"><img src="play.png" alt="Play"></button> It feels like if you don't know the right answer, and most of your choices slow, right?</p>
+<p>感觉如果你不知道正确答案，大多数选择都会让你慢下来，对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:04,220', '00:23:09,659')"><img src="play.png" alt="Play"></button> One bit, you know, try both of you, it feels like one bit of information that most buy you a two X speed up.</p>
+<p>一个比特，你知道，尝试两者，感觉像一个比特的信息可以让你提速两倍。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:09,659', '00:23:13,139')"><img src="play.png" alt="Play"></button> And I think in some theoretical sense, that is true.</p>
+<p>我认为在某种理论意义上，这是对的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:13,138', '00:23:26,259')"><img src="play.png" alt="Play"></button> But what I see in practice, if you flip the wrong bit, you're not twice as slow, you spend like 10 times longer, chasing a blind alley, which is why I think going into this right technical adjustment, it really makes sense that I was going so much faster.</p>
+<p>但我在实践中看到的是，如果你选错了比特，你不是慢两倍，而是可能多花十倍时间在死胡同里，这就是为什么我认为正确的技术调整能让我快这么多。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:26</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:26,259', '00:23:41,858')"><img src="play.png" alt="Play"></button> The other reason why I find, staying on top of AI really hopeful for startups is over the last two years, we have just had a ton of wonderful Genei tools or Genei building blocks, right?</p>
+<p>我发现紧跟AI对初创企业非常有希望的另一个原因是，过去两年我们有了大量出色的Genei工具或Genei构建模块，对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:41,858', '00:23:52,900')"><img src="play.png" alt="Play"></button> Partial list, but prompting, AgenteGwerpFills, Eval's, Godrails, RAD, Voice-AT, AcingProWing, loss of ETL, embedding, fine tuning, GraphDB, how to integrate a computer, use MCB Reasing Models.</p>
+<p>部分列表包括提示、AgenteGwerpFills、Eval's、Godrails、RAD、Voice-AT、AcingProWing、ETL损失、嵌入、微调、GraphDB、如何集成计算机、使用MCB Reasing模型。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:52,900', '00:24:01,378')"><img src="play.png" alt="Play"></button> There's a long and wonderful list of building blocks that you can quickly combine to build software that no one on the planet could have built, even a year ago.</p>
+<p>有一长串出色的构建模块，你可以快速组合它们来构建一年前地球上没人能构建的软件。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958558" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:01</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:01,378', '00:24:05,618')"><img src="play.png" alt="Play"></button> And this creates a lot of new opportunities for startups to build new things.</p>
+<p>这为初创企业创造了许多构建新事物的机会。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:05,618', '00:24:09,420')"><img src="play.png" alt="Play"></button> So when I learned about these building blocks, this is actually a picture that I had in mind.</p>
+<p>所以当我了解这些构建模块时，我脑海中实际上浮现出这样的画面。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:09,420', '00:24:19,980')"><img src="play.png" alt="Play"></button> If you own one building block, like you have a basic white building block, you know, you can build some cool stuff, maybe you know how to prompt, see a one building block, you know, you build some amazing stuff.</p>
+<p>如果你有一个构建模块，比如一个基本的白色构建模块，你可以构建一些很酷的东西，也许你知道如何提示，看到一个构建模块，你可以构建一些很棒的东西。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958540" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:19,980', '00:24:29,259')"><img src="play.png" alt="Play"></button> But if you get a second building block, like you also know how to build chat box, see a white Lego break and a black Lego break, you can build something more interesting.</p>
+<p>但如果你有第二个构建模块，比如你也知道如何构建聊天机器人，看到一个白色乐高块和一个黑色乐高块，你可以构建更有趣的东西。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:29,259', '00:24:34,339')"><img src="play.png" alt="Play"></button> If you acquire a blue building break as well, you can build something even more interesting.</p>
+<p>如果你再获得一个蓝色乐高块，你可以构建更有趣的东西。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:34,338', '00:24:39,259')"><img src="play.png" alt="Play"></button> Get few red building breaks, maybe a little yellow one, more interesting.</p>
+<p>再拿几个红色乐高块，也许还有一个小黄色块，更有趣。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958520" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:39</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:39,259', '00:24:49,140')"><img src="play.png" alt="Play"></button> Get more building breaks, get more building breaks, and very rapidly, the number of things you can combine them into, grows, kind of, carbonate, or, or growth exponentially.</p>
+<p>拿更多的乐高块，拿更多的乐高块，很快，你能组合的东西的数量会以某种方式呈指数增长。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:49,140', '00:24:54,859')"><img src="play.png" alt="Play"></button> And so knowing all these wonderful building blocks, let's combine them in much richer combination.</p>
+<p>因此，了解所有这些出色的构建模块，让我们以更丰富的方式组合它们。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:54,859', '00:25:08,980')"><img src="play.png" alt="Play"></button> One thing that Deep Learning Diode does, I actually take a lot of Deep Learning Diode short causes myself, you know, to, to this work of great part, work of, I think, like, finish all the leading AI companies in the world, and so the, and, and, and try to hand out building blocks.</p>
+<p>Deep Learning Diode做的一件事，我自己也参加了许多Deep Learning Diode短期课程，你知道，为了完成这项重要工作，我认为，完成世界上所有领先AI公司的工作，然后尝试分发构建模块。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958490" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:09</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:09,019', '00:25:13,220')"><img src="play.png" alt="Play"></button> But when I look at the Deep Learning Diode I course catalog, this is actually what I see.</p>
+<p>但当我查看Deep Learning Diode课程目录时，这就是我看到的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:13,220', '00:25:26,700')"><img src="play.png" alt="Play"></button> And whenever I take these courses to learn these building blocks, I feel like I'm getting new things that can combine to form, kind of, combine to form the exponentially more software applications that were not possible just one or two years ago.</p>
+<p>每当我参加这些课程学习这些构建模块时，我感觉我正在获得可以组合成指数级更多软件应用的新东西，这些应用在一两年前是不可能的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:26,700', '00:25:30,660')"><img src="play.png" alt="Play"></button> So just to wrap up this my last slide, then you'll take questions if, if you'll have any.</p>
+<p>所以总结一下我的最后一页幻灯片，然后如果有问题的话，你们可以提问。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958469" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:30</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:30,660', '00:25:45,180')"><img src="play.png" alt="Play"></button> I find that there are many things that matter for startup, not just speed, but when I look at the startups that AI fund is building, I find that the management team's ability to execute as speed is highly correlated with its odds of success.</p>
+<p>我发现对初创企业来说重要的东西很多，不仅仅是速度，但当我观察AI基金投资的初创企业时，我发现管理团队以速度执行的能力与其成功几率高度相关。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:45,180', '00:25:51,419')"><img src="play.png" alt="Play"></button> And some things with learning to get your speed is, you know, work on concrete ideas.</p>
+<p>学习如何提速的一些方法是，你知道，专注于具体的想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:51,419', '00:25:52,778')"><img src="play.png" alt="Play"></button> It's going to be good concrete ideas.</p>
+<p>这将是好的具体想法。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958447" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:52</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:52,778', '00:25:59,740')"><img src="play.png" alt="Play"></button> I find that as a, as exactly if I'm judge on the speed and quality of my decisions, both do matter, the speed absolutely matters.</p>
+<p>我发现，如果以决策的速度和质量来评判我，两者都很重要，速度绝对重要。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:59,740', '00:26:07,219')"><img src="play.png" alt="Play"></button> Rapid entering with AI coding assistance makes you go much faster, but that shifts the bottleneck to getting user feedback on the product decisions.</p>
+<p>借助AI编码辅助快速进入可以让你更快，但这会将瓶颈转移到获取用户对产品决策的反馈上。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:07,219', '00:26:10,980')"><img src="play.png" alt="Play"></button> And so having a portfolio of tactics to go get rapid feedback.</p>
+<p>因此，拥有一套快速获取反馈的策略组合。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958429" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:10,980', '00:26:17,740')"><img src="play.png" alt="Play"></button> And if you haven't learned to go to coffee shop and talk to strangers, it's not easy, but then just be respectful, right?</p>
+<p>如果你还没有学会去咖啡店和陌生人交谈，这并不容易，但要保持尊重，对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:17,740', '00:26:18,940')"><img src="play.png" alt="Play"></button> And just be respectful of people.</p>
+<p>尊重他人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:18,940', '00:26:22,258')"><img src="play.png" alt="Play"></button> That's actually a very valuable skill for entrepreneurs to have, I think.</p>
+<p>我认为这对企业家来说是非常宝贵的技能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:22,259', '00:26:27,259')"><img src="play.png" alt="Play"></button> And I think also, say let's help by the AI technology by as you speed.</p>
+<p>我还认为，让我们通过AI技术来帮助你提速。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:27,259', '00:26:30,380')"><img src="play.png" alt="Play"></button> All right, with that, let me thank you very much.</p>
+<p>好的，说到这里，非常感谢大家。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958409" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:30</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:30,380', '00:26:41,459')"><img src="play.png" alt="Play"></button> APPLAUSE I have a quick question.</p>
+<p>（掌声）我有一个快速的问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:41,460', '00:26:50,620')"><img src="play.png" alt="Play"></button> As AI advances, do you think it's more important for humans to develop the tools or learn how to use the tools better?</p>
+<p>随着AI的发展，你认为人类更重要的是开发工具还是学习如何更好地使用工具？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:50,619', '00:26:58,380')"><img src="play.png" alt="Play"></button> Like how can we position ourselves to remain essential in a world where, you know, intelligence is becoming democratized?</p>
+<p>比如，在智力正在民主化的世界中，我们如何定位自己以保持重要性？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:58,380', '00:27:02,460')"><img src="play.png" alt="Play"></button> I feel like AGI has been over-hyped.</p>
+<p>我觉得AGI被过度炒作了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958377" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:02</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:02,460', '00:27:07,259')"><img src="play.png" alt="Play"></button> And so for a long time, there'll be a lot of things that humans can do that AI cannot.</p>
+<p>因此在很长一段时间内，人类能做而AI不能做的事情还有很多。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:07,259', '00:27:15,659')"><img src="play.png" alt="Play"></button> And I think in the future, the people that are most powerful are the people that can make computers do exactly what you want to do.</p>
+<p>我认为未来最强大的人是那些能让计算机完全按照你的意愿行事的人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:15,660', '00:27:22,859')"><img src="play.png" alt="Play"></button> And so I think, staying on top of the tools, some of us will build tools sometimes, but there will be a lot of other tools that others will build that we can just use.</p>
+<p>因此我认为，紧跟工具的发展，我们中有些人会偶尔构建工具，但还有很多其他人构建的工具我们可以直接使用。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958357" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:22</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:22,859', '00:27:28,459')"><img src="play.png" alt="Play"></button> But so people that know how to use AI to get computers to do what you want to do will be much more powerful.</p>
+<p>但知道如何使用AI让计算机做你想做事情的人会强大得多。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:28,460', '00:27:34,420')"><img src="play.png" alt="Play"></button> Not where about people running out of things to do, but people that can use AI will be much more powerful than people that don't.</p>
+<p>不是说人们无事可做，而是能使用AI的人会比不能使用的人强大得多。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:34,420', '00:27:37,060')"><img src="play.png" alt="Play"></button> Hey, so well, first of all, thank you so much.</p>
+<p>嘿，首先非常感谢你。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:37,059', '00:27:42,099')"><img src="play.png" alt="Play"></button> I have a huge respect for you and I think that you are true inspiration for a lot of us.</p>
+<p>我非常尊重你，我认为你是我们很多人的真正灵感来源。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958337" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:42</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:42,099', '00:27:44,779')"><img src="play.png" alt="Play"></button> My question is about the future of compute.</p>
+<p>我的问题是关于计算的未来。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:44,778', '00:27:52,219')"><img src="play.png" alt="Play"></button> So as we move towards more powerful AI, where do you think that compute is setting?</p>
+<p>随着我们迈向更强大的AI，你认为计算的发展方向是什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:52,220', '00:27:58,538')"><img src="play.png" alt="Play"></button> I mean, we see people saying, let's ship GPUs to space, some people talking about nuclear power data centers.</p>
+<p>我的意思是，我们看到有人说要把GPU送到太空，还有人谈论核动力数据中心。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:58,538', '00:27:59,579')"><img src="play.png" alt="Play"></button> What do you think about it?</p>
+<p>你怎么看？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:59,578', '00:28:06,418')"><img src="play.png" alt="Play"></button> There's some kind of debate in what I was going to say in response to the last question about kind of AGI, about maybe I answered this end a little bit of the last question.</p>
+<p>关于AGI的最后一个问题，我本来要说的有一些争论，也许我在回答上一个问题时已经提到了一点。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958313" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:06</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:06,419', '00:28:11,499')"><img src="play.png" alt="Play"></button> So turns out there's one framework you can use for deciding what's hype and what's not hype.</p>
+<p>事实证明，有一个框架可以用来判断什么是炒作，什么不是炒作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:11,500', '00:28:23,778')"><img src="play.png" alt="Play"></button> I think over the last two years, there's been a handful of companies that hyped up certain things, but promotional PR fundraising influence purposes.</p>
+<p>我认为过去两年有几家公司为了宣传、公关和筹款目的炒作了一些事情。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:24,058', '00:28:34,058')"><img src="play.png" alt="Play"></button> And because AI was so new, handful of companies got away with saying almost anything without anyone fact checking them because the technology was not understood.</p>
+<p>因为AI太新了，少数公司几乎可以说什么都行，没有人去核实，因为技术还不被理解。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-73"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958285" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:34</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:34,058', '00:28:41,298')"><img src="play.png" alt="Play"></button> So one of my mental filters is there's certain hype narratives that make these businesses look more powerful, that's been amplified.</p>
+<p>所以我的一种思维过滤器是，某些炒作叙事让这些企业看起来更强大，这种叙事被放大了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:41,298', '00:28:49,898')"><img src="play.png" alt="Play"></button> And so for example, this idea that AI is so powerful, we might accidentally to human extinction.</p>
+<p>比如，这种认为AI如此强大以至于我们可能意外导致人类灭绝的想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:49,898', '00:28:59,338')"><img src="play.png" alt="Play"></button> That's just ridiculous, but it is a hype narrative that makes certain businesses look more powerful and it got round up and actually helps certain businesses fundraising goals.</p>
+<p>这很荒谬，但这是一个让某些企业看起来更强大的炒作叙事，它被传播开来，实际上帮助了某些企业的筹款目标。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-74"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958260" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:59</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:59,338', '00:29:03,099')"><img src="play.png" alt="Play"></button> AI is so powerful soon no one will even have a job anymore.</p>
+<p>AI如此强大，很快就没有人会有工作了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:03,099', '00:29:04,619')"><img src="play.png" alt="Play"></button> Just not true, right?</p>
+<p>根本不是真的，对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:04,619', '00:29:08,460')"><img src="play.png" alt="Play"></button> But again, that made these business look more powerful, got hyped up.</p>
+<p>但同样，这让这些企业看起来更强大，被炒作起来。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:08,460', '00:29:18,339')"><img src="play.png" alt="Play"></button> Or we are so powerful, so when the high narrative, we're so powerful that by training a new model, we will casually wipe out thousands of startups.</p>
+<p>或者我们如此强大，以至于在高叙事下，我们如此强大，通过训练一个新模型，我们可以轻松消灭数千家初创企业。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:18,338', '00:29:19,500')"><img src="play.png" alt="Play"></button> That's just not true.</p>
+<p>这根本不是真的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-75"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958240" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:19,500', '00:29:27,179')"><img src="play.png" alt="Play"></button> Yes, Jasper, Brandon Trouville, small number of companies got wiped out, but it's not that easy to casually wipe out thousands of startups.</p>
+<p>是的，Jasper、Brandon Trouville，少数公司被消灭了，但轻松消灭数千家初创企业并不那么容易。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:27,179', '00:29:31,579')"><img src="play.png" alt="Play"></button> AI needs so much electricity, only nuclear power is good enough for that.</p>
+<p>AI需要如此多的电力，只有核能才能满足。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:31,578', '00:29:34,219')"><img src="play.png" alt="Play"></button> That wind, solar, stuff, this is not true.</p>
+<p>风能、太阳能这些东西，这不是真的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:34,219', '00:29:41,659')"><img src="play.png" alt="Play"></button> So I think a lot of this GPUs in space, I don't know, is like, go for it.</p>
+<p>所以我认为很多关于GPU在太空的说法，我不知道，就像，去做吧。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-76"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958218" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:41</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:41,659', '00:29:45,659')"><img src="play.png" alt="Play"></button> I think we have a lot of room to run still for terrestrial GPUs.</p>
+<p>我认为我们在地面GPU上还有很大的发展空间。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:45,659', '00:29:54,619')"><img src="play.png" alt="Play"></button> Yeah, but I think some of these hype narratives have been amplified that I think are a distortion of what actually will be done.</p>
+<p>是的，但我认为其中一些炒作叙事被放大了，我认为这是对实际会发生的事情的扭曲。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:54,619', '00:30:02,500')"><img src="play.png" alt="Play"></button> There's a lot of hype in AI and how, and nobody's really certain about how we're going to be building the future with it.</p>
+<p>AI有很多炒作，没有人真正确定我们将如何用它来构建未来。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-77"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958197" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:02</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:02,500', '00:30:23,179')"><img src="play.png" alt="Play"></button> But what are some of the most dangerous biases or over hyped narratives that you've seen people talk about or get poisoned by that they end up running with that we should try to avoid or be more aware of and allow us to have a more realistic view as we are building this future.</p>
+<p>但你见过人们谈论或被毒害的最危险的偏见或过度炒作的叙事有哪些，他们最终接受了这些叙事，我们应该尽量避免或更加注意，让我们在构建这个未来时有一个更现实的看法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:23,179', '00:30:26,938')"><img src="play.png" alt="Play"></button> So I think the dangerous AI narrative has been over hyped.</p>
+<p>所以我认为危险的AI叙事被过度炒作了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:26,939', '00:30:36,899')"><img src="play.png" alt="Play"></button> AI is a fantastic tool, but like any other powerful tool, like electricity, lots of ways to use it for beneficial purposes, also some ways to use it in harmful ways.</p>
+<p>AI是一个很棒的工具，但像其他强大工具一样，比如电力，有很多方式可以用于有益目的，也有一些方式可以用于有害目的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-78"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958163" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:36</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:36,898', '00:30:46,938')"><img src="play.png" alt="Play"></button> I find myself not using the term AI safety that much, not because I think we should build dangerous things, but because I think safety is not a function of technology.</p>
+<p>我发现自己不太使用“AI安全”这个词，不是因为我认为我们应该构建危险的东西，而是因为我认为安全不是技术的功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:46,940', '00:30:48,539')"><img src="play.png" alt="Play"></button> It's a function of how we apply it.</p>
+<p>它是我们如何应用它的功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:48,538', '00:30:57,778')"><img src="play.png" alt="Play"></button> So like electric motor, you know, you can't, the maker of electric motor can't guarantee that no one will ever use it from unsafe downstream tasks.</p>
+<p>就像电动机，你知道，电动机制造商不能保证没有人会将其用于不安全的下游任务。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-79"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958142" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:57</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:57,778', '00:31:08,220')"><img src="play.png" alt="Play"></button> Like using electric electric motor can be used to build a Dallas machine, electric vehicle can be used to build a smart bomb, but the electric motor manufacturer can't control how we use downstream.</p>
+<p>比如电动机可以用来建造达拉斯机器，电动汽车可以用来建造智能炸弹，但电动机制造商无法控制我们如何在下游使用它。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:08,220', '00:31:13,259')"><img src="play.png" alt="Play"></button> So safety is not a function of electric motor as a function of how you apply it.</p>
+<p>所以安全不是电动机的功能，而是你如何应用它的功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:13,259', '00:31:16,538')"><img src="play.png" alt="Play"></button> And I think the same thing for AI, AI is neither safe nor unsafe.</p>
+<p>我认为AI也是如此，AI既不是安全的，也不是不安全的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-80"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958123" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:16</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:16,538', '00:31:19,460')"><img src="play.png" alt="Play"></button> It is how you apply it that makes it safer unsafe.</p>
+<p>是你如何应用它决定了它是更安全还是更不安全。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:19,460', '00:31:33,379')"><img src="play.png" alt="Play"></button> So instead of thinking about AI safety, I often think about responsible AI because it is how we use it responsibly, hopefully, or irresponsibly the determines that are not what we build with AI technology as it being harmful or beneficial.</p>
+<p>所以与其思考AI安全，我经常思考负责任的AI，因为是我们如何负责任地使用它，或者不负责任地使用它，决定了我们用AI技术构建的东西是有害还是有益。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:33,378', '00:31:37,740')"><img src="play.png" alt="Play"></button> And I feel like sometimes that the really weird corner cases they get high top of the news.</p>
+<p>有时那些极其罕见的极端案例会登上新闻头条。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-81"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958102" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:37</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:37,740', '00:31:45,179')"><img src="play.png" alt="Play"></button> I think just one or two days ago, there was a Wall Street Journal article about AI losing control of AI or something.</p>
+<p>就在一两天前，《华尔街日报》还刊登了一篇关于AI失控的文章。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:45,180', '00:31:57,339')"><img src="play.png" alt="Play"></button> And I feel like that article took a corner case experiments run in the lab and sensationalized it in a way that I think was really disproportionate relative to the lab experiment those being run.</p>
+<p>我认为那篇文章将实验室里的极端案例实验夸大其词，与实验本身的实际情况严重不符。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:57,339', '00:32:02,740')"><img src="play.png" alt="Play"></button> And unfortunately, technology is hard enough to understand that many people don't know better.</p>
+<p>遗憾的是，技术本身已足够复杂，导致许多人难以辨别真伪。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-82"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958077" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:02</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:02,740', '00:32:06,580')"><img src="play.png" alt="Play"></button> And so these high narratives do keep on getting amplified.</p>
+<p>因此这些夸张的说法不断被放大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:06,579', '00:32:11,500')"><img src="play.png" alt="Play"></button> And I feel like this has been used as a weapon against open source software as well, which is really unfortunate.</p>
+<p>更不幸的是，这还被当作攻击开源软件的武器。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:11,500', '00:32:12,859')"><img src="play.png" alt="Play"></button> Thank you for a work.</p>
+<p>感谢你的工作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:12,858', '00:32:15,818')"><img src="play.png" alt="Play"></button> I think your impact is remarkable.</p>
+<p>我认为你的影响力非凡。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:15,818', '00:32:26,298')"><img src="play.png" alt="Play"></button> My question is, as aspiring founders, how should we be thinking about business in the world where anything can be disrupted in a day?</p>
+<p>我的问题是，作为有抱负的创业者，在这个一切可能瞬间被颠覆的时代，我们该如何思考商业？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-83"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958053" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:26</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:26,298', '00:32:34,459')"><img src="play.png" alt="Play"></button> Whatever great mode product or feature you have can be replicated with vibe code in competitors in basically hours.</p>
+<p>任何优秀的产品或功能都可能被竞争对手在几小时内通过代码复制。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:34,459', '00:32:38,740')"><img src="play.png" alt="Play"></button> It turns out when you start a business, there are a lot of things to worry about.</p>
+<p>事实上创业时需要担忧的事情很多。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:38,740', '00:32:44,579')"><img src="play.png" alt="Play"></button> The number thing I worry about is are you building a product that users love?</p>
+<p>但我最关心的是：你是否在打造用户热爱的产品？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:44,578', '00:32:48,180')"><img src="play.png" alt="Play"></button> It turns out that when you build a business, there are lots of things to think about.</p>
+<p>经营企业时需要考虑诸多因素。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-84"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958031" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:48</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:48,180', '00:32:51,258')"><img src="play.png" alt="Play"></button> There goes market, channel, competitors, technology, mode.</p>
+<p>比如市场、渠道、竞争对手、技术和模式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:51,259', '00:32:52,980')"><img src="play.png" alt="Play"></button> All that is important.</p>
+<p>这些都重要。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:52,980', '00:32:58,819')"><img src="play.png" alt="Play"></button> But if I were to have a singular focus on one thing, it is, are you building a product that users really want?</p>
+<p>但如果只聚焦一点，那就是：你是否在打造用户真正需要的产品？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:58,818', '00:33:03,338')"><img src="play.png" alt="Play"></button> Until you solve that, it's very difficult to build a valuable business.</p>
+<p>若未解决这个问题，就很难建立有价值的业务。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:03,338', '00:33:06,940')"><img src="play.png" alt="Play"></button> After you solve that, the other questions do come to play.</p>
+<p>解决之后，其他问题才会显现。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-85"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208958013" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:06</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:06,940', '00:33:08,818')"><img src="play.png" alt="Play"></button> Do you have a channel to get to customers?</p>
+<p>是否有触达客户的渠道？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:08,818', '00:33:09,900')"><img src="play.png" alt="Play"></button> What is pricing?</p>
+<p>如何定价？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:09,900', '00:33:11,779')"><img src="play.png" alt="Play"></button> Long term, what is your mode?</p>
+<p>长期模式是什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:11,779', '00:33:14,619')"><img src="play.png" alt="Play"></button> I find that modes tend to be over-hyped.</p>
+<p>我发现模式常被过度炒作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:14,619', '00:33:21,140')"><img src="play.png" alt="Play"></button> Actually, I find that more businesses tend to start up with a product and then evolve eventually into a mode.</p>
+<p>实际上更多企业先有产品，再逐步形成模式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:21,140', '00:33:25,859')"><img src="play.png" alt="Play"></button> But consumer products brand is somewhat more defensible.</p>
+<p>但消费品品牌更具防御性。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:25,859', '00:33:28,779')"><img src="play.png" alt="Play"></button> And if you have a lot of momentum, it comes harder to catch you.</p>
+<p>若势头强劲，竞争对手更难追赶。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-86"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957991" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:28</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:28,779', '00:33:37,379')"><img src="play.png" alt="Play"></button> But enterprise products, sometimes, if you have a, maybe mode is more of a consideration of the channels that are hard to get to enterprises.</p>
+<p>而企业级产品中，模式可能更关乎难以触达企业的渠道。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:37,380', '00:33:52,539')"><img src="play.png" alt="Play"></button> So I think, sorry, when AI fund looks at businesses, we actually wind up doing a fairly complex analysis of these factors and writing to the six-page narrative memo to analyze it before we decide whether or not to go see it or not.</p>
+<p>因此AI基金评估项目时，我们会进行复杂分析并撰写六页备忘录，再决定是否投资。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:52,539', '00:33:56,579')"><img src="play.png" alt="Play"></button> And I think all of these things are important.</p>
+<p>这些因素都很关键。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-87"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957963" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:56</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:56,579', '00:34:09,818')"><img src="play.png" alt="Play"></button> But I feel like at this moment in time, the number of opportunities may amount to stuff that is possible that no one's built yet in the world seems much greater than the number of people with the skills to build them.</p>
+<p>但当前未被开发的机遇远多于有能力实现的人才。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:09,818', '00:34:17,858')"><img src="play.png" alt="Play"></button> So definitely at the application layer, that feels like there's a lot of white space for new things you can build that no one else seems to be working on.</p>
+<p>在应用层显然存在大量空白领域。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:17,858', '00:34:25,979')"><img src="play.png" alt="Play"></button> And I would say, you know, focus on building a product that people want that people love and then figure out the rest of it along the way.</p>
+<p>建议先专注打造人们喜爱产品，其余问题逐步解决。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-88"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:25</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:25,980', '00:34:28,500')"><img src="play.png" alt="Play"></button> Although this is important to figure a long way.</p>
+<p>尽管长期规划也很重要。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:28,500', '00:34:29,739')"><img src="play.png" alt="Play"></button> Hi, Professor.</p>
+<p>教授您好。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:29,739', '00:34:31,419')"><img src="play.png" alt="Play"></button> Thank you for your wonderful speech.</p>
+<p>感谢精彩演讲。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:31,420', '00:34:34,539')"><img src="play.png" alt="Play"></button> I'm an underwear researcher from Stanford.</p>
+<p>我是斯坦福大学人机交互研究员。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:34,539', '00:34:38,739')"><img src="play.png" alt="Play"></button> And I think your metaphor in your speech is very interesting.</p>
+<p>您演讲中的比喻很有趣。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:38,739', '00:34:45,980')"><img src="play.png" alt="Play"></button> You said the current AI tools are like bricks and can be built upon accumulation.</p>
+<p>您说当前AI工具像砖块可堆叠累积。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:45,980', '00:35:03,178')"><img src="play.png" alt="Play"></button> However, so far it is difficult to see the accumulative functional expansion of the integration of AI tools because they open a line on the stacking of functions based on intent distribution and are accompanied by dynamic problems of tokens and time overhead.</p>
+<p>但目前难见AI工具整合的功能累积扩展，因其基于意图分布的函数堆叠会引发代币和时间开销的动态问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-89"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:03</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:03,179', '00:35:07,139')"><img src="play.png" alt="Play"></button> So which is different from static engineering?</p>
+<p>这与静态工程不同。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:07,139', '00:35:12,940')"><img src="play.png" alt="Play"></button> So what do you think will be the perspective of a possible agent to accumulation effect in the future?</p>
+<p>您认为未来智能体如何实现累积效应？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:12,940', '00:35:15,258')"><img src="play.png" alt="Play"></button> But hey, just some quick remarks to that, right?</p>
+<p>对此我有几点简要看法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:15,259', '00:35:18,419')"><img src="play.png" alt="Play"></button> You mentioned agent, oh, I'm token cost.</p>
+<p>您提到智能体和代币成本。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:18,418', '00:35:23,018')"><img src="play.png" alt="Play"></button> My most common advice to developers is to first approximation.</p>
+<p>我给开发者的首要建议是：</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:23,018', '00:35:25,259')"><img src="play.png" alt="Play"></button> Just don't worry about how much tokens cost.</p>
+<p>初期不必担心代币成本。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-90"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:25</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:25,259', '00:35:32,940')"><img src="play.png" alt="Play"></button> Only a small number of startups are lucky enough to have users use so much of your product that the cost of tokens becomes a problem.</p>
+<p>极少数幸运的初创企业才会遇到用户激增导致代币成本问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:32,940', '00:35:34,300')"><img src="play.png" alt="Play"></button> It can become a problem.</p>
+<p>这确实可能成为问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:34,300', '00:35:40,459')"><img src="play.png" alt="Play"></button> I've definitely been on a bunch of teams where the cost users like your product and we started to look at all, right?</p>
+<p>我参与过多个团队因产品受欢迎而开始关注代币成本。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:40,460', '00:35:45,500')"><img src="play.png" alt="Play"></button> Genii bills and it was definitely climbing in a way that really became a problem.</p>
+<p>账单金额攀升确实成了问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-91"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957854" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:45</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:45,500', '00:35:50,780')"><img src="play.png" alt="Play"></button> But it's actually really difficult to get to point where your token usage costs other problem.</p>
+<p>但达到这种规模本身就很困难。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:50,780', '00:36:04,500')"><img src="play.png" alt="Play"></button> And for the teams I'm on where we were lucky enough that users made our token cost a problem, we often had entry solutions to then bend the curves and bring it back down through prompting, fine tuning, USDSPite, optimize or whatever.</p>
+<p>遇到这种情况时，我们通常能用提示工程、微调等方法优化成本。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:04,500', '00:36:10,739')"><img src="play.png" alt="Play"></button> And then what I'm seeing is that I'm seeing a lot of agent workflows that actually integrate a lot of different steps.</p>
+<p>我看到许多智能体工作流整合了多步骤。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-92"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957829" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:10,739', '00:36:25,098')"><img src="play.png" alt="Play"></button> So for example, if you build a customer service chatbot or often have to use prompting, maybe optimize some of the results through your DSPite, the emails, the God Rails, maybe the customer service chatbot needs ragged apart the way to get information to feedback to the user.</p>
+<p>例如客服聊天机器人需结合提示工程、邮件处理等环节。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:25,099', '00:36:27,938')"><img src="play.png" alt="Play"></button> So I actually do see these things grow.</p>
+<p>这些确实在发展。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:27,938', '00:36:38,018')"><img src="play.png" alt="Play"></button> But one tip for many of you as well is I will often architect my software to make switching between different building block providers relatively easy.</p>
+<p>建议设计软件时确保能轻松切换基础模块。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-93"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957801" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:38</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:38,018', '00:36:47,019')"><img src="play.png" alt="Play"></button> So for example, have a lot of products that build on top of LOMs, but sometimes they point to specific product and ask me which OM are we using.</p>
+<p>比如我们许多产品基于LOMs，但具体使用哪个模型常需切换。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:47,018', '00:36:56,219')"><img src="play.png" alt="Play"></button> I honestly don't know because we'll build up eVals and where this new model that's released will quickly run eVals to see if the new model is better than the O1.</p>
+<p>我们通过快速评估新模型性能来决定是否切换。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:56,219', '00:36:59,900')"><img src="play.png" alt="Play"></button> And then you'll just switch to the new model of the new model that's better on eVals.</p>
+<p>若评估更优就立即切换。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-94"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957780" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:59</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:59,900', '00:37:08,300')"><img src="play.png" alt="Play"></button> And so the model we use week by week, you know, sometimes our engines will change it without even bothering to tell me because eVals showed the new model works better.</p>
+<p>有时工程团队会根据评估结果直接更换模型。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:08,300', '00:37:15,219')"><img src="play.png" alt="Play"></button> So it turns out that switching costs for foundation models is relatively low and we often architect our software.</p>
+<p>因此基础模型的切换成本较低。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:15,219', '00:37:19,940')"><img src="play.png" alt="Play"></button> Oh, AICS, this open source thing that my friends that I worked on to make switching easier.</p>
+<p>我们开发的AICS开源工具能简化切换流程。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-95"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957760" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:19,940', '00:37:33,699')"><img src="play.png" alt="Play"></button> Switching costs for the orchestration platforms is a little bit harder, but I find that preserving that flexibility in your choice of building blocks often less you go faster, even as you're building one more thing on top of each other.</p>
+<p>编排平台的切换较难，但保持模块选择灵活性可加速开发。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:33,699', '00:37:34,539')"><img src="play.png" alt="Play"></button> So hope that helps.</p>
+<p>希望这些建议有帮助。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:34,539', '00:37:35,539')"><img src="play.png" alt="Play"></button> Thank you so much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:35,539', '00:37:38,460')"><img src="play.png" alt="Play"></button> In the world of education in AI, there are two paradigms mostly.</p>
+<p>AI教育主要有两种范式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:38,460', '00:37:43,539')"><img src="play.png" alt="Play"></button> So one is AI can make teachers more productive or automating grading and automating homeworks.</p>
+<p>一是AI提升教师效率，如自动批改作业。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-96"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957736" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:43,539', '00:37:47,618')"><img src="play.png" alt="Play"></button> But another score of thought is that there'll be personal tutors for every student.</p>
+<p>二是为每个学生提供AI导师。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:47,619', '00:37:53,500')"><img src="play.png" alt="Play"></button> So every student can have one tutor that gets feedback from an AI and gets personal questions from them.</p>
+<p>每位学生都能获得个性化辅导。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:53,500', '00:37:55,259')"><img src="play.png" alt="Play"></button> So how do you see these two paradigms converge?</p>
+<p>您认为这两种范式如何融合？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:55,259', '00:37:57,378')"><img src="play.png" alt="Play"></button> And how would education look like in the next five years?</p>
+<p>未来五年的教育会怎样发展？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:57,380', '00:38:00,300')"><img src="play.png" alt="Play"></button> I think everyone feels like a change is coming in at a tech.</p>
+<p>大家都感受到技术带来的变革。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-97"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:38:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:00,300', '00:38:02,140')"><img src="play.png" alt="Play"></button> Like don't think the disruption is here yet.</p>
+<p>但颠覆尚未完全到来。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:02,139', '00:38:04,420')"><img src="play.png" alt="Play"></button> I think a lot of people are experimenting at different things.</p>
+<p>目前有许多探索性尝试。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:04,420', '00:38:08,460')"><img src="play.png" alt="Play"></button> So Coursera has Coursera coach, which I should wear as really well.</p>
+<p>比如Coursera的AI助教。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:08,460', '00:38:10,820')"><img src="play.png" alt="Play"></button> Deep learning data is more focused on teaching AI.</p>
+<p>深度学习数据侧重AI教学。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:10,820', '00:38:13,260')"><img src="play.png" alt="Play"></button> Also, some built-in chatbos.</p>
+<p>还有内置聊天机器人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:13,260', '00:38:15,339')"><img src="play.png" alt="Play"></button> A lot of teams experience of water grading.</p>
+<p>许多团队尝试自动评分。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:15,340', '00:38:19,900')"><img src="play.png" alt="Play"></button> Oh, there's an avatile of me on the Deep Learning Data website you can talk to if you want.</p>
+<p>深度学习数据网站上有我的虚拟形象可对话。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-98"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957700" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:38:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:19,900', '00:38:21,860')"><img src="play.png" alt="Play"></button> Deep learning data AI slash avatile.</p>
+<p>网址是deeplearning.ai/avatar。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:21,860', '00:38:30,139')"><img src="play.png" alt="Play"></button> And then the thing for some things like language learning with, you know, speak, do a lingo, that has become clearer some of the ways that I would transform it.</p>
+<p>像语言学习应用已显现明确转型路径。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:30,139', '00:38:36,780')"><img src="play.png" alt="Play"></button> But the broader educational landscape, the exact ways that AI would transform it, I see a lot of experimentation.</p>
+<p>但整体教育领域的AI转型仍在实验阶段。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:36,780', '00:38:42,739')"><img src="play.png" alt="Play"></button> I think what key relearning which I've been doing some work with is doing is very promising for K-12 education.</p>
+<p>我认为关键重学习在K12教育中很有前景。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-99"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:38:42</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:42,739', '00:38:46,260')"><img src="play.png" alt="Play"></button> But I think what I'm seeing is frankly tons of experimentation.</p>
+<p>目前看到的是大量实验。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:46,260', '00:38:48,419')"><img src="play.png" alt="Play"></button> But the final end state is still not clear.</p>
+<p>最终形态尚不明确。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:48,420', '00:38:51,980')"><img src="play.png" alt="Play"></button> I do think education will be hyper-personalized.</p>
+<p>教育终将高度个性化。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:51,980', '00:38:53,820')"><img src="play.png" alt="Play"></button> But that workflow is an avatile.</p>
+<p>但实现路径可能是虚拟形象。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:53,820', '00:38:55,179')"><img src="play.png" alt="Play"></button> It's a text chatbot.</p>
+<p>或文本聊天机器人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:55,179', '00:38:56,099')"><img src="play.png" alt="Play"></button> What's the workflow?</p>
+<p>具体形式呢？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:56,099', '00:39:02,779')"><img src="play.png" alt="Play"></button> I think I feel like the hype from a couple of years ago that with AI soon, and we're all so easy, that was hype.</p>
+<p>几年前"AI将让教育变简单"的说法过于乐观。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-100"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957657" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:39:02</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:02,778', '00:39:06,539')"><img src="play.png" alt="Play"></button> The reality is work is complex, right?</p>
+<p>教育工作本质复杂。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:06,539', '00:39:10,738')"><img src="play.png" alt="Play"></button> Teachers, students, people do really complex workflows.</p>
+<p>师生互动流程非常复杂。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:10,739', '00:39:18,739')"><img src="play.png" alt="Play"></button> And for the next decade, we'll be looking at the work that needs to be done and figuring out how to map it to agent workflows.</p>
+<p>未来十年需将其映射到智能体工作流。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:18,739', '00:39:27,939')"><img src="play.png" alt="Play"></button> And education is one of the sectors where this mapping is still underway, but it's not your mature enough to deploying where the end state is clear.</p>
+<p>教育领域的映射仍在进行，尚未成熟。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-101"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957631" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:39:28</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:28,820', '00:39:31,219')"><img src="play.png" alt="Play"></button> So I think I think we should all just keep working on it.</p>
+<p>我们需要持续探索。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:31,219', '00:39:32,860')"><img src="play.png" alt="Play"></button> All right, all right, thank you so much, Andrew.</p>
+<p>好的，非常感谢吴恩达。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:32,860', '00:39:33,940')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:33,940', '00:39:44,420')"><img src="play.png" alt="Play"></button> Hey, my question is, I think AI has a lot of great potential for good, but there's also a lot of potential for bad consequences as well, such as exacerbate an economic inequality and things like that.</p>
+<p>AI虽潜力巨大，但也可能加剧经济不平等等负面影响。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:44,420', '00:39:53,018')"><img src="play.png" alt="Play"></button> And I think a lot of our startups here, while they'll be doing a lot of great things, will also be just five or a true of their product, be contributing to some of those negative consequences.</p>
+<p>在座初创企业的产品可能无意中助长这些负面效应。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-102"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957606" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:39:53</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:53,018', '00:40:04,258')"><img src="play.png" alt="Play"></button> So I was curious, how do you think, you know, us as AI builders should kind of balance our product building with also the potential societal downsides of some AI products?</p>
+<p>AI开发者应如何平衡产品开发与社会责任？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:04,259', '00:40:09,658')"><img src="play.png" alt="Play"></button> And essentially, how can we both move fast and be responsible as you mentioned in your talk?</p>
+<p>如何实现快速且负责任的发展？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:09,659', '00:40:18,058')"><img src="play.png" alt="Play"></button> Looking at your heart and if fundamentally what you're building, if you don't think it'll make people writ large better off, don't do it, right?</p>
+<p>扪心自问：若产品不能造福大众，就不要做。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-103"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957581" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:40:18</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:18,059', '00:40:20,739')"><img src="play.png" alt="Play"></button> I know it sounds simple, but that's actually really hard to do in the moment.</p>
+<p>这看似简单实则困难。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:20,739', '00:40:26,618')"><img src="play.png" alt="Play"></button> But AI fun, we've killed multiple projects, not on financial grounds, but on ethical grounds, where they're multiple projects.</p>
+<p>AI基金曾因伦理问题叫停多个经济可行的项目。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:26,619', '00:40:33,938')"><img src="play.png" alt="Play"></button> We looked at the economic cases, very solid, but we said, you know what, we don't want this to exist in the world and we just killed them on that basis.</p>
+<p>这些项目经济前景良好，但我们选择终止。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-104"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957566" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:40:33</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:33,938', '00:40:36,698')"><img src="play.png" alt="Play"></button> So I hope more people will do that.</p>
+<p>希望更多人能这样做。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:36,699', '00:40:39,938')"><img src="play.png" alt="Play"></button> And then I worry about bringing everyone with us.</p>
+<p>我还担心如何普惠大众。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:39,938', '00:40:48,939')"><img src="play.png" alt="Play"></button> One interesting thing I'm seeing is people and also some draw growth that are not engineering are much more productive if they know AI than if they don't.</p>
+<p>懂AI的非技术人员生产力显著提升。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:48,940', '00:40:52,899')"><img src="play.png" alt="Play"></button> And so for example, on my marketing team, my marketers, they know how to code.</p>
+<p>比如我的营销团队因掌握编程技能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:52,900', '00:40:56,099')"><img src="play.png" alt="Play"></button> Frankly, they were running circles around the ones that don't.</p>
+<p>工作效率远超不懂编程的同行。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-105"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957543" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:40:56</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:56,099', '00:40:59,059')"><img src="play.png" alt="Play"></button> So then everyone learned to code and then they got better.</p>
+<p>后来全员学习编程后整体提升。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:59,059', '00:41:04,340')"><img src="play.png" alt="Play"></button> But I feel like trying to bring everyone with us to make sure everyone is empowered to build with AI.</p>
+<p>应确保所有人都能使用AI工具。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:04,340', '00:41:07,900')"><img src="play.png" alt="Play"></button> That'll be an important part of what all of us do, I think.</p>
+<p>这是我们共同的责任。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:07,900', '00:41:11,179')"><img src="play.png" alt="Play"></button> I'm one of your big fans and thank you for your online courses.</p>
+<p>我是您的忠实粉丝，感谢您的在线课程。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:11,179', '00:41:15,700')"><img src="play.png" alt="Play"></button> Your courses make the deep learning like much more accessible to the world.</p>
+<p>它们让深度学习更易被大众掌握。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-106"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957524" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:41:15</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:15,699', '00:41:18,618')"><img src="play.png" alt="Play"></button> And my question is also about education.</p>
+<p>我的问题也关于教育。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:18,940', '00:41:27,579')"><img src="play.png" alt="Play"></button> As AI becomes more powerful and widespread, there's seem to be a growing gap between what can it actually do and what people perceive it.</p>
+<p>随着AI能力增强，其实际能力与公众认知的差距日益扩大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:27,579', '00:41:43,939')"><img src="play.png" alt="Play"></button> So what do you think about like is it important to educate the general public about deep learning stuff and not only like educate those technical people and make people understand more what really what AI really do and how it works?</p>
+<p>是否应向大众普及深度学习知识，而不仅限于技术人员？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-107"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957496" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:41:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:43,940', '00:41:45,259')"><img src="play.png" alt="Play"></button> I think the knowledge will diffuse.</p>
+<p>知识终将普及。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:45,259', '00:41:47,980')"><img src="play.png" alt="Play"></button> Steve and I AI, we want to empower everyone to build with AI.</p>
+<p>我们致力于让所有人都能使用AI。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:47,980', '00:41:50,380')"><img src="play.png" alt="Play"></button> So we're working on it, many of us are working on it.</p>
+<p>许多人正为此努力。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:50,380', '00:41:52,460')"><img src="play.png" alt="Play"></button> I'll just tell you what I think is the main thing.</p>
+<p>关键点在于：</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:52,460', '00:41:54,500')"><img src="play.png" alt="Play"></button> I think there are maybe two dangers.</p>
+<p>存在两大风险。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:54,500', '00:41:58,179')"><img src="play.png" alt="Play"></button> One is if you don't bring people with us fast enough, I hope we'll solve that.</p>
+<p>一是知识普及速度不足，希望我们能解决。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:58,179', '00:42:05,658')"><img src="play.png" alt="Play"></button> There's one other danger, which is, it turns out that if you look at the mobile ecosystem, mobile phones, it's actually not that interesting.</p>
+<p>二是类似移动生态的垄断风险。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-108"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957474" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:42:05</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:05,659', '00:42:13,820')"><img src="play.png" alt="Play"></button> And one of the reasons is there are two gatekeepers and Jordan and iOS and then let's say let you do certain things, you're not allowed to try certain things on mobile.</p>
+<p>就像iOS和安卓限制创新。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:13,820', '00:42:27,538')"><img src="play.png" alt="Play"></button> And I think this, you know, campus innovators, these dangers of AI have been used by certain businesses that are trying to shut down open source because there are a number of businesses that would love to be a gatekeeper to large scale foundation models.</p>
+<p>某些企业正以AI风险为由打压开源，试图垄断基础模型。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:27,539', '00:42:37,579')"><img src="play.png" alt="Play"></button> So I think, I think, I think, I think, danger is supposed to fall as dangerous of AI in order to get regulators to pass laws like the proposal SP 1047 in California.</p>
+<p>所以我认为，我认为，我认为，我认为，为了促使监管机构通过像加州SP 1047提案这样的法律，AI的危险性被夸大了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-109"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957442" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:42:37</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:37,579', '00:42:48,980')"><img src="play.png" alt="Play"></button> Which thank goodness we shut down where the put in place really burdens some regulatory requirements that don't make anyone safer but would make it really difficult for tears to release open source and open weight software.</p>
+<p>谢天谢地我们阻止了这项提案，因为它会实施一些真正繁重的监管要求，这些要求不会让任何人更安全，但会让开源和开放权重软件的发布变得非常困难。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:48,980', '00:43:00,780')"><img src="play.png" alt="Play"></button> So one of the dangers to inequality as well is if these regulatory, you know, awful regulatory approaches, and I've been in the room where some of these businesses set stuff to regulators that was just not true.</p>
+<p>所以不平等的一个危险也是这些糟糕的监管方式，我曾亲眼目睹一些企业向监管机构陈述不实信息。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:00,780', '00:43:17,099')"><img src="play.png" alt="Play"></button> So I think that some of these arguments, the danger is if these regulatory proposals succeed and end up siphoning regulations, leaving us with a small number of gatekeepers where everyone needs the permission of a small number of companies to fine-tune them all from a certain way.</p>
+<p>所以我认为这些论点中，危险在于如果这些监管提案成功并最终导致监管集中，我们将只剩下少数守门人，所有人都需要少数公司的许可才能以某种方式微调模型。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-110"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957402" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:43:17</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:17,099', '00:43:26,940')"><img src="play.png" alt="Play"></button> That's always a side for innovation and prevent the diffusion of this information to let lots of startups build, whether they want responsibly, whether they free the innovate.</p>
+<p>这总是会阻碍创新，并阻止信息的传播，使许多初创公司无法建设，无论他们是想负责任地发展还是自由创新。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:26,940', '00:43:36,619')"><img src="play.png" alt="Play"></button> So I think so long as we prevent this line of attack on open source open weight models from succeeding and would make good progress with a fitness still there.</p>
+<p>所以我认为只要我们阻止对开源开放权重模型的这类攻击取得成功，并在保持适当性的同时取得良好进展。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:36,619', '00:43:42,218')"><img src="play.png" alt="Play"></button> Then I think eventually we get to the diffusion of knowledge and we can hopefully then bring everyone with us.</p>
+<p>那么我认为最终我们会实现知识的传播，并有望带动所有人一起进步。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-111"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1qCuMztEjB/?t=-2208957377" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:43:42</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:42,219', '00:43:50,658')"><img src="play.png" alt="Play"></button> But despite to protect open source, we've been winning, but the fight is still on and we still have to keep up that work to protect open source.</p>
+<p>但在保护开源方面，我们一直在取得胜利，但斗争仍在继续，我们仍需继续努力保护开源。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:50,659', '00:43:51,858')"><img src="play.png" alt="Play"></button> Thank you all very much.</p>
+<p>非常感谢大家。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:51,858', '00:43:53,378')"><img src="play.png" alt="Play"></button> It's a wonderful stream I will.</p>
+<p>这是一次精彩的直播。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:53,378', '00:43:54,219')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
