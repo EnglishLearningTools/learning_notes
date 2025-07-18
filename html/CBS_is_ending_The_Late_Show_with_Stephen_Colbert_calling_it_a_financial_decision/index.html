@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>CBS is ending ‘The Late Show with Stephen Colbert’, calling it 'a financial decision'</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Breaking news: CBS cancels Stephen Colbert's late show amid financial struggles and speculation linked to a recent $16 million settlement with Trump.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>CBS is ending ‘The Late Show with Stephen Colbert’, calling it 'a financial decision'</h1>
+<p>【CBS宣布结束《斯蒂芬·科尔伯特晚间秀》，称其为“财务决策”】</p>
+<p>Summary:
+Breaking news: CBS cancels Stephen Colbert's late show amid financial struggles and speculation linked to a recent $16 million settlement with Trump.</p>
+<p>摘要：
+突发新闻：CBS因财务困境以及与特朗普1600万美元和解协议的关联猜测，取消了斯蒂芬·科尔伯特的晚间秀。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 5 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Breaking news, CBS is canceling the late show with Stephen Colbert.</p>
+<p>突发新闻，CBS正在取消斯蒂芬·科尔伯特的晚间秀。</p>
+<p><button class="play-button sentence" id="s-00-00-05-719" data-start="00:00:05,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert just making the shocking announcement at his show taping.</p>
+<p>科尔伯特刚刚在节目录制中宣布了这一令人震惊的消息。</p>
+<p><button class="play-button sentence" id="s-00-00-09-640" data-start="00:00:09,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, it's unclear why the show is canceled, but it comes after Colbert spoke out against his parent company Paramounts, $16 million settlement with Trump over the editing of a 60-minute interview.</p>
+<p>目前尚不清楚节目为何被取消，但这是在科尔伯特公开批评母公司派拉蒙与特朗普就一段60分钟访谈的剪辑达成1600万美元和解协议之后发生的。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959977" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-22-960" data-start="00:00:22,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, here's what Colbert said just a few days ago.</p>
+<p>事实上，以下是科尔伯特几天前所说的话。</p>
+<p><button class="play-button sentence" id="s-00-00-28-160" data-start="00:00:28,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, I believe this kind of complicated financial settlement with a sitting government official has a technical name in legal circles.</p>
+<p>我认为，这种与现任政府官员达成的复杂财务和解在法律界有一个技术性名称。</p>
+<p><button class="play-button sentence" id="s-00-00-35-320" data-start="00:00:35,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's Big Fat Brite because it all comes as Paramounts owners are trying to get the Trump administration to approve the sale of our network to a new owner, Skydance.</p>
+<p>这就是“大肥贿赂”，因为这一切发生在派拉蒙所有者试图让特朗普政府批准将我们的网络出售给新所有者Skydance之际。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959954" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-45-200" data-start="00:00:45,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now, hearing that that show is canceled, Brian Stealther's out front.</p>
+<p>而现在，听说节目被取消，布莱恩·斯蒂尔特站在前线。</p>
+<p><button class="play-button sentence" id="s-00-00-54-960" data-start="00:00:54,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, Brian, what more are you learning about what is, frankly, a stunning announcement when we were talking about it just found out about it here at this commercial break?</p>
+<p>我是说，布莱恩，关于这一 frankly 令人震惊的宣布，你还有什么新发现？我们刚刚在广告时段才得知这一消息。</p>
+<p><button class="play-button sentence" id="s-00-01-03-200" data-start="00:01:03,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I said, wait, what? What just happened?</p>
+<p>我说，等等，什么？刚刚发生了什么？</p>
+<p><button class="play-button sentence" id="s-00-01-05-840" data-start="00:01:05,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It really doesn't make any sense from the normal business logic of television goes like this.</p>
+<p>从正常的电视商业逻辑来看，这完全说不通。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-11-718" data-start="00:01:11,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stephen Colbert is the highest rated program in late night television.</p>
+<p>斯蒂芬·科尔伯特的节目是深夜电视节目中收视率最高的。</p>
+<p><button class="play-button sentence" id="s-00-01-15-400" data-start="00:01:15,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He beats his competitors.</p>
+<p>他击败了竞争对手。</p>
+<p><button class="play-button sentence" id="s-00-01-17-159" data-start="00:01:17,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been going at it for 10 years, and, frankly, he's been on a hot street lately.</p>
+<p>他已经坚持了10年，而且 frankly 最近势头正猛。</p>
+<p><button class="play-button sentence" id="s-00-01-21-280" data-start="00:01:21,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So by the business logic of television, normally, he would be in a very safe spot.</p>
+<p>因此，按照电视的商业逻辑，通常他会处于非常安全的位置。</p>
+<p><button class="play-button sentence" id="s-00-01-25-718" data-start="00:01:25,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, CBS says this is a financial decision given the difficulties with the entire late night sector.</p>
+<p>然而，CBS表示，鉴于整个深夜时段的困境，这是一个财务决策。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959906" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-33-560" data-start="00:01:33,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there is some truth to that explanation.</p>
+<p>这一解释有一定道理。</p>
+<p><button class="play-button sentence" id="s-00-01-36-000" data-start="00:01:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I reported a couple years ago about the late, late show ending with James Corden because it wasn't profitable anymore.</p>
+<p>几年前我曾报道过詹姆斯·柯登的《深夜秀》因不再盈利而结束。</p>
+<p><button class="play-button sentence" id="s-00-01-42-438" data-start="00:01:42,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there might be some rationale to this CBS announcement.</p>
+<p>因此，CBS的这一宣布可能有一定依据。</p>
+<p><button class="play-button sentence" id="s-00-01-47-680" data-start="00:01:47,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But almost everybody, upon hearing about this, is connecting it to the paramount settlement from two weeks ago.</p>
+<p>但几乎所有人听到这一消息时，都将其与两周前派拉蒙的和解协议联系起来。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959886" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-53-519" data-start="00:01:53,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because as you said, it was just two weeks ago that President Trump struck a deal with the parent of CBS, that $60 million settlement.</p>
+<p>因为正如你所说，就在两周前，特朗普总统与CBS的母公司达成了6000万美元的和解协议。</p>
+<p><button class="play-button sentence" id="s-00-02-00-280" data-start="00:02:00,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, Trump later said that there were other terms on top of the $16 million.</p>
+<p>当然，特朗普后来表示，除了1600万美元之外还有其他条款。</p>
+<p><button class="play-button sentence" id="s-00-02-04-439" data-start="00:02:04,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He referenced getting public service announcements from CBS, for example.</p>
+<p>例如，他提到从CBS获得公共服务公告。</p>
+<p><button class="play-button sentence" id="s-00-02-08-599" data-start="00:02:08,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And all this comes as one owner of CBS, Sherry Redstone, is about to hand off to a new owner, David Ellison.</p>
+<p>而这一切发生在CBS的所有者之一谢里·雷德斯通即将将控制权移交给新所有者大卫·埃里森之际。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-14-800" data-start="00:02:14,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And his company, Skydance Media.</p>
+<p>以及他的公司Skydance Media。</p>
+<p><button class="play-button sentence" id="s-00-02-18-199" data-start="00:02:18,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been speculation raging online for the last two weeks about whether Skydance was going to try to push Colbert out.</p>
+<p>过去两周，网上一直有猜测Skydance是否会试图排挤科尔伯特。</p>
+<p><button class="play-button sentence" id="s-00-02-23-879" data-start="00:02:23,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, this had been such a hot topic that Colbert came back from vacation on Monday, and he made jokes about it.</p>
+<p>事实上，这一话题如此热门，以至于科尔伯特周一休假回来后还拿它开玩笑。</p>
+<p><button class="play-button sentence" id="s-00-02-29-879" data-start="00:02:29,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he had a new mustache, and so the new owners wouldn't be able to find him.</p>
+<p>他说他留了新胡子，这样新所有者就找不到他了。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959846" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-33-240" data-start="00:02:33,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So on Monday, Colbert was joky about possibly being in danger.</p>
+<p>因此，周一科尔伯特还开玩笑说自己可能处于危险中。</p>
+<p><button class="play-button sentence" id="s-00-02-37-240" data-start="00:02:37,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Wednesday, he found out his show was being canceled, today he didn't announce it.</p>
+<p>周三，他得知节目被取消，而今天他并未宣布这一消息。</p>
+<p><button class="play-button sentence" id="s-00-02-41-080" data-start="00:02:41,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this all takes effect next May, and so he does have one more season.</p>
+<p>这一切将在明年五月生效，因此他确实还有一季节目。</p>
+<p><button class="play-button sentence" id="s-00-02-44-758" data-start="00:02:44,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this means one of the staunchest Trump critics on television will be leaving.</p>
+<p>但这意味着电视上对特朗普最严厉的批评者之一即将离开。</p>
+<p><button class="play-button sentence" id="s-00-02-49-758" data-start="00:02:49,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and incredible to think, and I know we will learn more here in the coming days, how quickly it all seemed to fall apart.</p>
+<p>是的，想想真是难以置信，我知道未来几天我们会了解更多，这一切似乎崩溃得如此之快。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cUg3z1Eim/?t=-2208959820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-59-479" data-start="00:02:59,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And things like this, things like this generally don't fall apart all of the sudden, unless there's a reason.</p>
+<p>而像这样的事情，通常不会突然崩溃，除非有原因。</p>
+<p><button class="play-button sentence" id="s-00-03-05-438" data-start="00:03:05,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Brian, thank you very much.</p>
+<p>布莱恩，非常感谢。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
