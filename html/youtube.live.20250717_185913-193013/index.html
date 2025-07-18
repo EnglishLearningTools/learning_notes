@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Live: 2025-07-17 18:59 - 19:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Today's news covers a guilty plea in Hannah Maguire's murder trial, a plane crash update, Israel-Syria tensions, Trump's Epstein case order, Tasmania's election, and more.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>YouTube Live: 2025-07-17 18:59 - 19:30</h1>
+<p>【澳洲新闻 20250718 马奎尔谋杀案被告认罪｜以色列与叙利亚紧张局势｜特朗普下令公开爱泼斯坦案大陪审团证词｜塔斯马尼亚州选举】</p>
+<p>Summary:
+Today's news covers a guilty plea in Hannah Maguire's murder trial, a plane crash update, Israel-Syria tensions, Trump's Epstein case order, Tasmania's election, and more.</p>
+<p>摘要：
+今日新闻包括汉娜·马奎尔谋杀案被告认罪、飞机失事最新进展、以色列与叙利亚紧张局势、特朗普下令公开爱泼斯坦案大陪审团证词、塔斯马尼亚州选举等。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 37 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959996" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-04-000" data-start="00:00:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, the man accused of murdering Hannah Maguire pleads guilty eight days into his trial in Victoria.</p>
+<p>今日，被指控谋杀汉娜·马奎尔的男子在维多利亚州审判第八天认罪。</p>
+<p><button class="play-button sentence" id="s-00-00-21-000" data-start="00:00:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police to give an update on the status of a pilot soon after finding a crash plane in the snowy mountains.</p>
+<p>警方在雪山地区发现失事飞机后，将很快通报飞行员状况。</p>
+<p><button class="play-button sentence" id="s-00-00-28-000" data-start="00:00:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel warns Syria attacks on the country will continue if troops are deployed south of Damascus.</p>
+<p>以色列警告称，若叙利亚在大马士革南部部署军队，以方将继续发动攻击。</p>
+<p><button class="play-button sentence" id="s-00-00-35-000" data-start="00:00:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump bows to pressure and orders the release of Grand Jury testimony in the Jeffrey Epstein's sex trafficking case.</p>
+<p>唐纳德·特朗普迫于压力，下令公开杰弗里·爱泼斯坦性交易案的大陪审团证词。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959957" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-43-000" data-start="00:00:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And leaders in Tasmania make their final pitch to voters ahead of tomorrow's state election.</p>
+<p>塔斯马尼亚州领导人在明日州选举前向选民做最后拉票。</p>
+<p><button class="play-button sentence" id="s-00-00-49-000" data-start="00:00:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MUSIC Hello and welcome to every news on Ross Chiles.</p>
+<p>大家好，欢迎收听罗斯·柴尔斯的每日新闻。</p>
+<p><button class="play-button sentence" id="s-00-01-00-000" data-start="00:01:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The man accused of murdering cloned woman Hannah Maguire has entered a guilty plea eight days into his trial.</p>
+<p>被指控谋杀克隆女子汉娜·马奎尔的男子在审判第八天认罪。</p>
+<p><button class="play-button sentence" id="s-00-01-06-000" data-start="00:01:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lockland Young had initially pleaded not guilty to murdering his ex partner last year.</p>
+<p>洛克兰·杨最初对去年谋杀前伴侣的指控拒不认罪。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-12-000" data-start="00:01:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go live now to the courthouse in Ballarat and reporter Julie Bergen is there.</p>
+<p>现在连线巴拉瑞特法院现场，记者朱莉·伯根正在那里。</p>
+<p><button class="play-button sentence" id="s-00-01-17-000" data-start="00:01:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good afternoon, Julia. So was this plea a surprise?</p>
+<p>下午好，朱莉。这次认罪是否出人意料？</p>
+<p><button class="play-button sentence" id="s-00-01-21-000" data-start="00:01:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MUSIC Hi, I don't think Julia can actually hear us now.</p>
+<p>嗨，我认为朱莉现在听不到我们。</p>
+<p><button class="play-button sentence" id="s-00-01-29-000" data-start="00:01:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will go back to Julia once we've reestablished that audio connection.</p>
+<p>音频恢复后我们将再次联系朱莉。</p>
+<p><button class="play-button sentence" id="s-00-01-33-000" data-start="00:01:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Search and rescue crews are expected to reach the site of a plane crash in the snowy mountains with the condition of the missing pilot David Stevens still unknown.</p>
+<p>搜救队即将抵达雪山飞机失事现场，失踪飞行员大卫·史蒂文斯的状况仍不明。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959898" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-42-000" data-start="00:01:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The aircraft was reported missing on Tuesday between Wangarata and Maroya.</p>
+<p>该飞机于周二在旺加拉塔和马罗亚之间被报失踪。</p>
+<p><button class="play-button sentence" id="s-00-01-47-000" data-start="00:01:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A major search effort has spent the past few days scaring bushlands near Dougles Trail.</p>
+<p>过去几天大规模搜索集中在道格拉斯小径附近的丛林地带。</p>
+<p><button class="play-button sentence" id="s-00-01-53-000" data-start="00:01:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yesterday afternoon a helicopter spotted the wreckage near the plane's last known GPS location.</p>
+<p>昨天下午，直升机在飞机最后已知GPS位置附近发现残骸。</p>
+<p><button class="play-button sentence" id="s-00-01-59-000" data-start="00:01:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police are expected to give an update later this hour.</p>
+<p>警方预计一小时内发布最新消息。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959876" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-03-038" data-start="00:02:03,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll bring that to you when it happens.</p>
+<p>我们将及时为您跟进。</p>
+<p><button class="play-button sentence" id="s-00-02-06-000" data-start="00:02:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police have charged a woman with attempted murder over a house fire in Melbourne that left two young girls critically injured.</p>
+<p>墨尔本一起房屋火灾致两名女童重伤，警方以谋杀未遂指控一名女子。</p>
+<p><button class="play-button sentence" id="s-00-02-14-196" data-start="00:02:14,196" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stephanie Ferry reports.</p>
+<p>斯蒂芬妮·费里报道。</p>
+<p><button class="play-button sentence" id="s-00-02-16-000" data-start="00:02:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Detectives from the arson and explosive squad have arrested this 37-year-old woman yesterday morning.</p>
+<p>纵火爆炸案调查组侦探昨日早晨逮捕了这名37岁女子。</p>
+<p><button class="play-button sentence" id="s-00-02-24-000" data-start="00:02:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's after she was critically injured in a house fire along with two young girls aged seven and eight.</p>
+<p>此前她与两名7岁和8岁女童在火灾中重伤。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959848" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-32-000" data-start="00:02:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that happened in Chadstone, which is about 14 kilometres southeast of Melbourne's CBD.</p>
+<p>事发于查德斯通，距墨尔本市中心东南约14公里。</p>
+<p><button class="play-button sentence" id="s-00-02-39-000" data-start="00:02:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And at the time firefighters had to force entry into the burning two-story home to rescue the trio.</p>
+<p>当时消防员破门进入燃烧的双层住宅救出三人。</p>
+<p><button class="play-button sentence" id="s-00-02-46-000" data-start="00:02:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A fourth person who lived at the home, a 36-year-old man, was not present at the time.</p>
+<p>同住的第四人——一名36岁男子当时不在场。</p>
+<p><button class="play-button sentence" id="s-00-02-54-000" data-start="00:02:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now we did hear from some of the detectives at the time that they deemed this fire suspicious.</p>
+<p>我们当时从侦探处获悉他们认为火灾可疑。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-00-000" data-start="00:03:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they believed that it had started from an exploding gas cylinder.</p>
+<p>他们认为火灾始于燃气罐爆炸。</p>
+<p><button class="play-button sentence" id="s-00-03-04-000" data-start="00:03:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in fact, we also heard from witnesses in that Chadstone area saying that they saw this massive fireball and then smoke billowing from the home.</p>
+<p>查德斯通地区目击者称看到巨大火球和浓烟从房屋涌出。</p>
+<p><button class="play-button sentence" id="s-00-03-14-000" data-start="00:03:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This 37-year-old woman has been reminded in custody after being charged with two counts of attempted murder.</p>
+<p>这名37岁女子被控两项谋杀未遂后还押候审。</p>
+<p><button class="play-button sentence" id="s-00-03-23-000" data-start="00:03:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stephanie Ferry reporting that.</p>
+<p>斯蒂芬妮·费里报道。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959795" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-25-000" data-start="00:03:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's return to our top story now.</p>
+<p>现在回到头条新闻。</p>
+<p><button class="play-button sentence" id="s-00-03-27-000" data-start="00:03:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The man accused of murder in Cloonswoman Hannah McGuire has entered a guilty plea eight days into his trial.</p>
+<p>被指控谋杀克隆斯女子汉娜·麦圭尔的男子在审判第八天认罪。</p>
+<p><button class="play-button sentence" id="s-00-03-33-000" data-start="00:03:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go to the court house in Ballarat and reporter Julia Bergen.</p>
+<p>连线巴拉瑞特法院现场，记者朱莉娅·伯根。</p>
+<p><button class="play-button sentence" id="s-00-03-37-782" data-start="00:03:37,782" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hi there, Julia. So was this plea a surprise?</p>
+<p>你好朱莉娅，这次认罪令人意外吗？</p>
+<p><button class="play-button sentence" id="s-00-03-43-000" data-start="00:03:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, it was.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-03-43-702" data-start="00:03:43,702" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're in the middle of a five-week trial and today, after court had adjourned yesterday for the day, we heard that Lockheon Young had indeed decided to plead guilty to the murder of his ex partner Hannah McGuire.</p>
+<p>五周审判进行中，昨日休庭后今日得知洛克希恩·杨决定承认谋杀前伴侣汉娜·麦圭尔。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-56-000" data-start="00:03:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Miss Young had previously pled not guilty to murder.</p>
+<p>杨先生此前否认谋杀指控。</p>
+<p><button class="play-button sentence" id="s-00-03-59-168" data-start="00:03:59,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He'd attempted to enter a guilty plea to manslaughter, but this was rejected by the prosecution.</p>
+<p>他曾试图对过失杀人认罪，但被检方拒绝。</p>
+<p><button class="play-button sentence" id="s-00-04-05-000" data-start="00:04:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this whole case is basically up until today been hinging on intent, on murderous intent.</p>
+<p>本案关键始终在于其是否具有谋杀意图。</p>
+<p><button class="play-button sentence" id="s-00-04-11-000" data-start="00:04:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's what he had been denying until today.</p>
+<p>而他直至今日才承认这点。</p>
+<p><button class="play-button sentence" id="s-00-04-14-000" data-start="00:04:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So he had not denied at any point that he did indeed cause Miss McGuire's death, that he killed her in the home that they shared in Sebastian Poll, that he then put her body in the back of her vehicle.</p>
+<p>他从未否认导致麦圭尔死亡——在塞巴斯蒂安波尔同居处杀害她后将尸体放入她车辆后座。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959734" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-26-000" data-start="00:04:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And drove her out to Bushland where he then set it on fire.</p>
+<p>驾车至丛林地带并纵火焚车。</p>
+<p><button class="play-button sentence" id="s-00-04-29-785" data-start="00:04:29,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So all of that has now come to light as the version of events that is exactly what happened as he has pled guilty to her murder.</p>
+<p>随着他承认谋杀，事件全貌得以还原。</p>
+<p><button class="play-button sentence" id="s-00-04-38-000" data-start="00:04:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Julia, can you take us through what the court has heard in the past week or so?</p>
+<p>朱莉娅，能否回顾法庭过去一周的审理内容？</p>
+<p><button class="play-button sentence" id="s-00-04-45-000" data-start="00:04:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've heard from a number of witnesses, particularly this week we heard from Hannah McGuire's parents, who gave a lot of evidence about how Miss Young treated Miss McGuire during their relationship, including a number of panicked phone calls where she would be calling in hysterics, incredibly upset.</p>
+<p>多位证人作证，本周麦圭尔父母详述二人关系中杨的虐待行为，包括多次她歇斯底里的求救电话。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959697" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-03-000" data-start="00:05:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But one instance he was trying to run her off the road.</p>
+<p>有次他试图驾车将她逼下道路。</p>
+<p><button class="play-button sentence" id="s-00-05-05-959" data-start="00:05:05,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also heard about his conduct after he murdered her, including sending text messages from Miss McGuire's phone to young, pretending to be her in what the prosecution has said was an attempt to stage it as a suicide.</p>
+<p>检方称谋杀后他用死者手机发短信伪装自杀现场。</p>
+<p><button class="play-button sentence" id="s-00-05-18-000" data-start="00:05:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also transferred money to their accounts.</p>
+<p>他还转账资金。</p>
+<p><button class="play-button sentence" id="s-00-05-20-659" data-start="00:05:20,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We heard from her work colleagues and probably the most damning evidence came from his young's workmate, Benjamin O'Keefe, who was the man that helped dispose of the car that Miss McGuire was in.</p>
+<p>同事作证，最不利证据来自其工友本杰明·奥基夫——他协助处理了载尸车辆。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959668" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-32-000" data-start="00:05:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The defense tried to say that he knew that her body was in there, that he saw her body dead in the car, sorry, in the house, and that he was his plan of how to dispose of that car.</p>
+<p>辩方称奥基夫知情并参与策划弃车。</p>
+<p><button class="play-button sentence" id="s-00-05-46-000" data-start="00:05:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what we know and what Miss O'Keefe has said is that he had no idea that her body was inside the car.</p>
+<p>但奥基夫表示对车内尸体毫不知情。</p>
+<p><button class="play-button sentence" id="s-00-05-53-000" data-start="00:05:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also heard about a number of conversations that O'Keefe had had with young, including a admission from him that Miss McGuire had suffocated and was dead before her body was found in that vehicle.</p>
+<p>奥基夫与杨的对话显示杨承认麦圭尔在尸体被发现前已窒息身亡。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959635" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-05-000" data-start="00:06:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of that has come to a head today with Miss Young pleading guilty to her murder.</p>
+<p>随着杨认罪，这些证据形成完整链条。</p>
+<p><button class="play-button sentence" id="s-00-06-12-309" data-start="00:06:12,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's been the reaction to the guilty plea, Julia?</p>
+<p>认罪后各方反应如何？</p>
+<p><button class="play-button sentence" id="s-00-06-17-000" data-start="00:06:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the courtroom today, it was completely packed with family and friends.</p>
+<p>今日法庭挤满亲友。</p>
+<p><button class="play-button sentence" id="s-00-06-21-428" data-start="00:06:21,428" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When the jury was brought in, it's worth adding that they were one juror down.</p>
+<p>需说明陪审团缺员一人。</p>
+<p><button class="play-button sentence" id="s-00-06-26-000" data-start="00:06:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yesterday, there was a juror that pulled out, but the trial was to go ahead all the same.</p>
+<p>昨日一名陪审员退出，但审判继续。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959608" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-32-000" data-start="00:06:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When that jury was brought in, and Young was re-arranged.</p>
+<p>陪审团入席后杨被重新传讯。</p>
+<p><button class="play-button sentence" id="s-00-06-36-000" data-start="00:06:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was asked how he pled to the murder of his ex-partner, Miss Hannah McGuire, and he said guilty.</p>
+<p>当被问及对谋杀前伴侣汉娜·麦圭尔的指控，他回答"认罪"。</p>
+<p><button class="play-button sentence" id="s-00-06-44-000" data-start="00:06:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The court basically breathed us over relief.</p>
+<p>法庭如释重负。</p>
+<p><button class="play-button sentence" id="s-00-06-46-945" data-start="00:06:46,945" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You could feel the tension in the air.</p>
+<p>紧张气氛可感。</p>
+<p><button class="play-button sentence" id="s-00-06-49-348" data-start="00:06:49,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was then taken out of the courtroom and the court erupted into cheers.</p>
+<p>他被带离时法庭爆发欢呼。</p>
+<p><button class="play-button sentence" id="s-00-06-54-000" data-start="00:06:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were a lot of tears and hugs.</p>
+<p>众人泪流相拥。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959583" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-56-196" data-start="00:06:56,196" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We haven't heard from the defence or the prosecution or family since they've left court.</p>
+<p>离庭后辩检双方及家属尚未表态。</p>
+<p><button class="play-button sentence" id="s-00-07-02-000" data-start="00:07:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All we know so far is that there's been a mention scheduled for next Friday, where we will find out what happens next.</p>
+<p>目前仅知下周五将举行听证会决定后续程序。</p>
+<p><button class="play-button sentence" id="s-00-07-09-000" data-start="00:07:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Julia, thank you.</p>
+<p>谢谢朱莉娅。</p>
+<p><button class="play-button sentence" id="s-00-07-12-000" data-start="00:07:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If this story has raised any issues for you, you can get help by calling the National Sexual Assault and Family Violence Counseling Helpline on 1800 respects, which is 1800-737-732.</p>
+<p>若此事引发您的困扰，可拨打全国家暴性侵咨询热线1800 737 732寻求帮助。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959552" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-28-000" data-start="00:07:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tasmanian politicians are making their final pictures to voters before the state heads to the polls tomorrow, for the second time in just 16 months.</p>
+<p>塔斯马尼亚州政客在明日选举前做最后拉票，这是16个月内第二次州选举。</p>
+<p><button class="play-button sentence" id="s-00-07-36-000" data-start="00:07:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The reporter, Fiona Blackwood, is live for us.</p>
+<p>记者菲奥娜·布莱克伍德现场报道。</p>
+<p><button class="play-button sentence" id="s-00-07-38-915" data-start="00:07:38,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Hobart, Hi Fiona, what are the main issues affecting the state, the selection?</p>
+<p>霍巴特现场，菲奥娜，影响本次选举的主要议题是什么？</p>
+<p><button class="play-button sentence" id="s-00-07-44-000" data-start="00:07:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Ross, health and housing are always big issues in Tasmania.</p>
+<p>罗斯，医疗和住房始终是该州重点问题。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959531" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-48-074" data-start="00:07:48,074" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The state spends about a third of its budget on health, and yet there are still thousands of people waiting for elective surgery, and tens of thousands of people waiting to see a specialist through the public hospital system.</p>
+<p>州预算三分之一用于医疗，但仍有数千人等待择期手术，数万人排队看公立医院专科。</p>
+<p><button class="play-button sentence" id="s-00-08-02-000" data-start="00:08:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when it comes to housing, like many parts of the country, the cost of buying a home or renting has gone up significantly over the past 10 years, and it's left about 5,000 households waiting for social housing.</p>
+<p>住房方面，与全国多地类似，过去十年购房租房成本激增，约5000户等待社会保障房。</p>
+<p><button class="play-button sentence" id="s-00-08-17-000" data-start="00:08:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, health and housing come up pretty much every election, but this election, we're also hearing a lot about the proposed AFL Stadium at McQuarry Point.</p>
+<p>医疗住房每届选举必提，但本届还热议麦夸里角拟建澳式橄榄球场议题。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959493" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-27-000" data-start="00:08:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ABCs, you also pay, it has been flooded with people wanting to talk about this topic.</p>
+<p>ABC热线接到大量相关讨论。</p>
+<p><button class="play-button sentence" id="s-00-08-32-904" data-start="00:08:32,904" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some people are opposed.</p>
+<p>有人反对。</p>
+<p><button class="play-button sentence" id="s-00-08-34-602" data-start="00:08:34,602" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say that the state can't afford a new stadium.</p>
+<p>认为州财政无力承担新球场。</p>
+<p><button class="play-button sentence" id="s-00-08-38-000" data-start="00:08:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some other people say health and housing are bottomless pits, and we need something to keep young people in the state.</p>
+<p>也有人称医疗住房是无底洞，需建设留住年轻人的设施。</p>
+<p><button class="play-button sentence" id="s-00-08-45-000" data-start="00:08:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But voters will have lots of issues on their minds when they head to the polls tomorrow.</p>
+<p>选民明日投票时将权衡诸多议题。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959470" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-50-000" data-start="00:08:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's a little bit of what some of them have had to say.</p>
+<p>以下是部分选民观点：</p>
+<p><button class="play-button sentence" id="s-00-08-54-000" data-start="00:08:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm a health care worker, so health is certainly an issue, and I would have to say that the state of the budget is also an issue.</p>
+<p>我是医护人员，医疗当然是重点，预算状况也很关键。</p>
+<p><button class="play-button sentence" id="s-00-09-03-000" data-start="00:09:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd like to say a breakdown of their potential roles, or potential deliveries, and how they're going to fund it.</p>
+<p>希望了解各党具体承诺及资金来源。</p>
+<p><button class="play-button sentence" id="s-00-09-11-000" data-start="00:09:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our health, mostly, yeah, it's been, we've been needing a lot of improvements to the health system, I would say.</p>
+<p>医疗体系亟需改进。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959441" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-19-000" data-start="00:09:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's always helpful if you see how they're going to help financially support families, just especially because the younger families are struggling with the price increases, and yeah, that'd be good to see.</p>
+<p>希望看到如何经济支持家庭，特别是应对物价上涨的年轻家庭。</p>
+<p><button class="play-button sentence" id="s-00-09-34-000" data-start="00:09:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the stadium's a big one for me.</p>
+<p>球场问题对我很重要。</p>
+<p><button class="play-button sentence" id="s-00-09-36-936" data-start="00:09:36,936" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that it's just a pretty sort of, it just strikes me as a pretty bad deal.</p>
+<p>我认为这是个糟糕的交易。</p>
+<p><button class="play-button sentence" id="s-00-09-43-000" data-start="00:09:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you want to know what are the polls saying about who's likely to win?</p>
+<p>想知道民调预测谁将胜出？</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959412" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-48-000" data-start="00:09:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Roz, the polls are predicting another minority government for Tasmania.</p>
+<p>罗斯，民调预测将再次产生少数派政府。</p>
+<p><button class="play-button sentence" id="s-00-09-53-000" data-start="00:09:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We went into this election with the Liberals on 14 seats and Labor on 10, so both would need to pick up quite a number of seats in order to win a majority in a 35 seat parliament.</p>
+<p>选举前自由党14席，工党10席，双方均需赢得更多席位以在35席议会中过半。</p>
+<p><button class="play-button sentence" id="s-00-10-05-000" data-start="00:10:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And add to that, the polls are also predicting that the vote for independence is up.</p>
+<p>此外民调显示独立候选人支持率上升。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959390" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-10-000" data-start="00:10:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So potentially, if it is a minority government, who ever is in a position to form government, may need to negotiate with a fairly diverse crossbench.</p>
+<p>若出现少数派政府，组阁方需与多元化的跨党派议员谈判。</p>
+<p><button class="play-button sentence" id="s-00-10-21-000" data-start="00:10:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the issue of the Macquarie Point Stadium could be a bit of a sticking point.</p>
+<p>麦夸里角球场可能成为谈判难点。</p>
+<p><button class="play-button sentence" id="s-00-10-25-000" data-start="00:10:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both major parties support the stadium, whereas the Greens and many of the independent candidates don't.</p>
+<p>两大党支持建球场，但绿党和多数独立候选人反对。</p>
+<p><button class="play-button sentence" id="s-00-10-32-000" data-start="00:10:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So if it is a minority government, after Saturday's election, there could be some complicated negotiations to come, Roz.</p>
+<p>若周六选举后出现少数派政府，将面临复杂谈判。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959359" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-41-000" data-start="00:10:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fiona, thank you.</p>
+<p>谢谢菲奥娜。</p>
+<p><button class="play-button sentence" id="s-00-10-44-000" data-start="00:10:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Disgraced former local Sydney politician, Salimahadja, has been released from prison after nearly five years behind bars.</p>
+<p>悉尼前地方政客萨利马哈贾在服刑近五年后获释，他曾因丑闻入狱。</p>
+<p><button class="play-button sentence" id="s-00-10-52-000" data-start="00:10:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The former Auburn deputy mayor was jailed on a range of charges, including domestic violence and fraud offences.</p>
+<p>这位前奥本市副市长因家暴、诈骗等多项罪名入狱。</p>
+<p><button class="play-button sentence" id="s-00-10-59-000" data-start="00:10:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He first gained public notoriety for his lavish 2015 wedding that saw a street shutdown for the wild celebrations.</p>
+<p>2015年其奢华婚礼曾封街庆祝，令他声名狼藉。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959331" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-09-000" data-start="00:11:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Queensland government has refused to set a maximum limit for how long a child can be held in a watch house, despite committing to doing so while in opposition.</p>
+<p>昆士兰州政府拒绝设定儿童在看守所羁押最长期限，尽管在野时曾承诺此举。</p>
+<p><button class="play-button sentence" id="s-00-11-18-000" data-start="00:11:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> State political reporter Alex Brewster joins us now from Brisbane.</p>
+<p>州政治记者亚历克斯·布鲁斯特从布里斯班连线。</p>
+<p><button class="play-button sentence" id="s-00-11-21-000" data-start="00:11:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hi there, Alex. So why has the state government backtracked on this pledge?</p>
+<p>你好亚历克斯，为何州政府违背承诺？</p>
+<p><button class="play-button sentence" id="s-00-11-27-000" data-start="00:11:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Roz, in September last year, then LNP, opposition leader, and now premier David Christopher Lee said a government he led would introduce a maximum time limit a child could be held in a watch house.</p>
+<p>罗斯，去年9月时任反对党领袖、现州长戴维·克里斯托弗·李表示其政府将设定儿童羁押时限。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959302" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-38-000" data-start="00:11:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that would be a matter of priority.</p>
+<p>并称这是优先事项。</p>
+<p><button class="play-button sentence" id="s-00-11-40-000" data-start="00:11:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, when questioned by the ABC this week if that pledge still stood, the government said it wasn't in the business of setting arbitrary time limits, and its focus was on keeping children out of the facilities completely.</p>
+<p>但本周被ABC问及该承诺时，政府称不设定武断时限，重点是完全避免儿童进入看守所。</p>
+<p><button class="play-button sentence" id="s-00-11-53-000" data-start="00:11:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now this all comes off the back of a review into watch houses by police last week.</p>
+<p>此前警方上周完成看守所审查。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959282" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-58-000" data-start="00:11:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If found many of Queensland's watch houses simply aren't fit for purpose, that they have poor ventilation, no CCTV, and sometimes have rodent infestations.</p>
+<p>发现许多看守所条件不达标——通风差、无监控、时有鼠患。</p>
+<p><button class="play-button sentence" id="s-00-12-07-000" data-start="00:12:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, it heard evidence that girls were being exposed to adult males and boys through showers and toilets not having privacy screens or doors.</p>
+<p>事实上，有证据表明女孩和男孩因淋浴间和厕所缺乏隐私隔板或门而暴露在成年男性视线下。</p>
+<p><button class="play-button sentence" id="s-00-12-17-000" data-start="00:12:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what have advocates made of this, Alex?</p>
+<p>倡导者对此有何反应，亚历克斯？</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959259" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-21-000" data-start="00:12:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the youth advocacy centre has called for this practice to end immediately.</p>
+<p>青年倡导中心已呼吁立即终止这种做法。</p>
+<p><button class="play-button sentence" id="s-00-12-25-000" data-start="00:12:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says that holding a child in a watch house for as little as 24 hours can cause lasting psychological damage, and that can actually lead to them becoming more of a hard and young criminal, which is the complete antithesis of what this government is trying to achieve with its tough on youth crime approach.</p>
+<p>该中心表示，将儿童关押在看守所短短24小时就可能造成持久的心理伤害，并可能导致他们成为更顽固的年轻罪犯，这与政府严厉打击青少年犯罪的初衷完全背道而驰。</p>
+<p><button class="play-button sentence" id="s-00-12-41-000" data-start="00:12:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Queensland Human Rights Commissioner has also weighed in.</p>
+<p>昆士兰州人权专员也发表了意见。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959235" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-44-372" data-start="00:12:44,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said that watch houses are not intended or designed for children.</p>
+<p>他表示看守所并非为儿童设计或建造。</p>
+<p><button class="play-button sentence" id="s-00-12-48-000" data-start="00:12:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He wants a 24 hour limit that a child can be held in the facilities.</p>
+<p>他要求将儿童关押在这些设施的时间限制在24小时内。</p>
+<p><button class="play-button sentence" id="s-00-12-52-576" data-start="00:12:52,576" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rose. Alex, thank you.</p>
+<p>罗斯。亚历克斯，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-12-56-000" data-start="00:12:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> US President Donald Trump has bowed to public and political pressure and ordered the attorney general to unseal grand jury testimony in the Jeffrey Epstein sex trafficking case.</p>
+<p>美国总统唐纳德·特朗普迫于公众和政治压力，已命令司法部长解封杰弗里·爱泼斯坦性交易案的大陪审团证词。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959209" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-11-000" data-start="00:13:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's posted to social media based on the ridiculous amount of publicity given to Jeffrey Epstein.</p>
+<p>他在社交媒体上发文称，鉴于杰弗里·爱泼斯坦案受到的荒谬关注。</p>
+<p><button class="play-button sentence" id="s-00-13-17-000" data-start="00:13:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have asked attorney general Pam Bondi to produce any and all pertinent grand jury testimony subject to court approval.</p>
+<p>我已要求司法部长帕姆·邦迪在法院批准下提交所有相关大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-13-25-000" data-start="00:13:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This scam perpetrated by the Democrats should end right now.</p>
+<p>民主党人实施的这场骗局应立即终止。</p>
+<p><button class="play-button sentence" id="s-00-13-30-000" data-start="00:13:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Epstein was facing charges of sex trafficking minors when he died by suicide in jail in 2019.</p>
+<p>爱泼斯坦2019年在狱中自杀时正面临性交易未成年人的指控。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959182" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-38-000" data-start="00:13:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He pleaded not guilty and the case was dismissed after his death.</p>
+<p>他此前拒不认罪，案件在其死后被驳回。</p>
+<p><button class="play-button sentence" id="s-00-13-42-000" data-start="00:13:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The topic returned to the spotlight last week after the Trump administration reversed its pledge to release documents dubbed the Epstein files.</p>
+<p>上周特朗普政府撤销了公开所谓"爱泼斯坦文件"的承诺后，该话题重回舆论焦点。</p>
+<p><button class="play-button sentence" id="s-00-13-50-000" data-start="00:13:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That decision enraged a lot of Trump supporters.</p>
+<p>这一决定激怒了许多特朗普支持者。</p>
+<p><button class="play-button sentence" id="s-00-13-54-000" data-start="00:13:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only this week Mr. Trump attacked those who had been critical of his administration's handling of the Epstein case.</p>
+<p>就在本周，特朗普还抨击了那些批评其政府处理爱泼斯坦案的人士。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959157" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-03-000" data-start="00:14:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to give you a head of political scientist at Dartmouth College and he joined us now from New Hampshire.</p>
+<p>我将为您连线达特茅斯学院政治学负责人，他现在从新罕布什尔州加入我们。</p>
+<p><button class="play-button sentence" id="s-00-14-07-000" data-start="00:14:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russell, welcome.</p>
+<p>拉塞尔，欢迎。</p>
+<p><button class="play-button sentence" id="s-00-14-09-000" data-start="00:14:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-14-11-000" data-start="00:14:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what do you make of this latest response from Donald Trump?</p>
+<p>您如何看待特朗普的最新回应？</p>
+<p><button class="play-button sentence" id="s-00-14-15-000" data-start="00:14:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's clear that this is one issue that Donald Trump can't bully people into silence about his own supporters.</p>
+<p>显然在这个问题上，特朗普无法迫使自己的支持者保持沉默。</p>
+<p><button class="play-button sentence" id="s-00-14-25-000" data-start="00:14:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, the most ardent of his own supporters are insistent that the full story be released and that all the facts that are held by Donald Trump's own government be made public.</p>
+<p>事实上，他最狂热的支持者坚持要求公布完整真相，并要求特朗普政府公开掌握的所有事实。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959121" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-39-000" data-start="00:14:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why does he keep changing his mind on this Russell?</p>
+<p>拉塞尔，他为何在这个问题上反复改变立场？</p>
+<p><button class="play-button sentence" id="s-00-14-43-000" data-start="00:14:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because before the election he promised to release the files related to the Epstein case and he said he wouldn't.</p>
+<p>因为选举前他承诺公开爱泼斯坦案相关文件，后来又说不会公开。</p>
+<p><button class="play-button sentence" id="s-00-14-48-000" data-start="00:14:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now this how much is it being swayed by the reaction of his supporter base?</p>
+<p>现在又这样，这在多大程度上是受支持者反应的影响？</p>
+<p><button class="play-button sentence" id="s-00-14-54-000" data-start="00:14:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, he has for many years never missed an opportunity to paint civil servants as self-serving ideologues who deserve to be fired and who are mashing to defeat his own constituents and to betray the American people.</p>
+<p>多年来，他从不放过任何机会将公务员描绘成自私的意识形态分子，称他们应该被解雇，并企图挫败他的选民、背叛美国人民。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959089" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-11-000" data-start="00:15:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So back in January just weeks before his inauguration, this is how he cast civil servants working for the Department of Justice and he said they're hiding the facts of the Epstein case and they're hiding the list of Epstein's clients.</p>
+<p>就在今年1月就职前几周，他这样评价司法部公务员，称他们隐瞒爱泼斯坦案真相，隐瞒爱泼斯坦客户名单。</p>
+<p><button class="play-button sentence" id="s-00-15-23-000" data-start="00:15:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's very strange that in office he's now refusing to release those materials.</p>
+<p>奇怪的是，执政后他却拒绝公开这些材料。</p>
+<p><button class="play-button sentence" id="s-00-15-30-000" data-start="00:15:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He did release, for instance, and declassified materials having to do with a JFK assassination.</p>
+<p>比如他确实公开并解密了与肯尼迪遇刺案有关的材料。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959065" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-35-000" data-start="00:15:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So why not take the same tack here?</p>
+<p>为何不采取同样做法？</p>
+<p><button class="play-button sentence" id="s-00-15-37-240" data-start="00:15:37,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why not do exactly the same thing with the Epstein files?</p>
+<p>为何不同样公开爱泼斯坦文件？</p>
+<p><button class="play-button sentence" id="s-00-15-41-000" data-start="00:15:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is actually very strange, very difficult to explain.</p>
+<p>这确实非常奇怪，难以解释。</p>
+<p><button class="play-button sentence" id="s-00-15-45-000" data-start="00:15:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Unless you suppose that perhaps there's something in those files that would make the president look bad.</p>
+<p>除非假设文件中有些内容会让总统难堪。</p>
+<p><button class="play-button sentence" id="s-00-15-53-000" data-start="00:15:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So he's gone back to his original position, Russell, and does changing his mind so often like this.</p>
+<p>那么他回到了最初立场，拉塞尔，如此频繁改变主意。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959039" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-00-569" data-start="00:16:00,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that doing his reputation and his standing any damage?</p>
+<p>这会损害他的声誉和地位吗？</p>
+<p><button class="play-button sentence" id="s-00-16-06-000" data-start="00:16:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The facts are moving fast here, but my understanding is that he hasn't gone back to his original position.</p>
+<p>事态发展很快，但据我理解他并未回到最初立场。</p>
+<p><button class="play-button sentence" id="s-00-16-12-496" data-start="00:16:12,496" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's merely releasing the material that was presented to the grand jury.</p>
+<p>他只是公开提交给大陪审团的材料。</p>
+<p><button class="play-button sentence" id="s-00-16-17-000" data-start="00:16:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is not releasing all the material in the possession of the Department of Justice.</p>
+<p>并未公开司法部掌握的所有材料。</p>
+<p><button class="play-button sentence" id="s-00-16-22-000" data-start="00:16:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is not, there's a whole, in fact, I think he's only going to increase the appetite for a full release with this partial release.</p>
+<p>因此这并不完整，事实上我认为这种部分公开只会加剧对完整公开的期待。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208959008" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-32-000" data-start="00:16:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So if he goes back to his original position, as far as changing his mind, the fact of the matter is, as I said, his own most loyal and most passionate supporters are insisted about this.</p>
+<p>至于改变主意，事实如我所说，他最忠诚热情的支持者坚持要求公开。</p>
+<p><button class="play-button sentence" id="s-00-16-44-000" data-start="00:16:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He thought he could bully them into submission.</p>
+<p>他原以为能胁迫他们屈服。</p>
+<p><button class="play-button sentence" id="s-00-16-46-142" data-start="00:16:46,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He thought he could make it go away.</p>
+<p>以为能让事情不了了之。</p>
+<p><button class="play-button sentence" id="s-00-16-47-696" data-start="00:16:47,696" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He thought he could say there's nothing to see here.</p>
+<p>以为可以说"没什么可看的"。</p>
+<p><button class="play-button sentence" id="s-00-16-50-000" data-start="00:16:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a democratic party, perpetrated hoax, but you know, that's just not the nature of what's of this phenomenon.</p>
+<p>称这是民主党制造的骗局，但这并非现象本质。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958980" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-00-000" data-start="00:17:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's what I think is the nature of what's of this phenomenon that's of this kind of a real, well, then could be released by the attorney general now potentially what's in the grand jury testimony.</p>
+<p>我认为现象本质是...那么司法部长现在可能公开大陪审团证词内容。</p>
+<p><button class="play-button sentence" id="s-00-17-10-000" data-start="00:17:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I don't know, you know, what's in it?</p>
+<p>我不知道其中内容。</p>
+<p><button class="play-button sentence" id="s-00-17-13-479" data-start="00:17:13,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's secret testimony, so I could only speculate, but I think, you know, there are, what I can say is that is that people have basic questions about Jeffrey Epstein.</p>
+<p>这是秘密证词，我只能推测，但人们关于爱泼斯坦有些基本疑问。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-27-000" data-start="00:17:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Come to be so wealthy.</p>
+<p>他如何变得如此富有？</p>
+<p><button class="play-button sentence" id="s-00-17-28-369" data-start="00:17:28,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is somebody who didn't have any credentials and didn't have any skills.</p>
+<p>这个人既无资历也无技能。</p>
+<p><button class="play-button sentence" id="s-00-17-33-239" data-start="00:17:33,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did he come to a mass hundreds of millions of dollars houses and private planes and luxury that's almost unimaginable?</p>
+<p>如何积累数亿美元房产、私人飞机和难以想象的奢侈品？</p>
+<p><button class="play-button sentence" id="s-00-17-41-000" data-start="00:17:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did he do that?</p>
+<p>他是怎么做到的？</p>
+<p><button class="play-button sentence" id="s-00-17-42-184" data-start="00:17:42,184" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How was he able to victimize over a thousand girls over the course of many, many years without being brought to justice?</p>
+<p>为何他能多年侵害上千名女孩却逍遥法外？</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958930" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-50-000" data-start="00:17:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, and so these are the, you know, questions that people will not answer.</p>
+<p>这些是人们不会回答的问题。</p>
+<p><button class="play-button sentence" id="s-00-17-54-284" data-start="00:17:54,284" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think they're going to be answered by the grand jury indictment materials, but, but I think that in fact the curiosity about this case will not diminish until these elemental common sense questions are addressed.</p>
+<p>我不认为大陪审团起诉材料会回答这些，但事实上公众好奇心不会消退，除非这些基本常识问题得到解答。</p>
+<p><button class="play-button sentence" id="s-00-18-07-000" data-start="00:18:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So is it now a Russell up to the attorney general to decide what to release from that grand jury testimony?</p>
+<p>那么拉塞尔，现在是否由司法部长决定公开哪些大陪审团证词？</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958905" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-15-000" data-start="00:18:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think, you know, of course it is that in this, you know, many, in most administrations, there's a little bit of insulation between the attorney general and the president, the idea being that we don't want our chief law enforcement prosecutor to be directed by someone with a reelection motive and someone who's so political.</p>
+<p>当然，在多数政府中，司法部长与总统间有些隔离，因为不希望首席执法官受具有连任动机和政治立场的人指挥。</p>
+<p><button class="play-button sentence" id="s-00-18-37-000" data-start="00:18:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in this administration, it's clear that the attorney general is basically on the end of the leash that's being held by Donald Trump.</p>
+<p>但这届政府中，司法部长显然被特朗普牢牢掌控。</p>
+<p><button class="play-button sentence" id="s-00-18-44-000" data-start="00:18:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So whether it's the attorney general decides to the president, I don't know, but I think that the decision will happen together.</p>
+<p>不清楚是司法部长还是总统决定，但我想他们会共同决定。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958869" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-51-000" data-start="00:18:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just finally, there's a big interest in the so-called client list, Russell, and questions as to whether or not there is one.</p>
+<p>最后，人们对所谓"客户名单"很感兴趣，拉塞尔，不确定是否存在这样一份名单。</p>
+<p><button class="play-button sentence" id="s-00-18-57-591" data-start="00:18:57,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's the latest on that?</p>
+<p>最新情况如何？</p>
+<p><button class="play-button sentence" id="s-00-18-59-000" data-start="00:18:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It seems that even if there isn't a, you know, several sheets of paper with all the names on them that such a list could easily be created based on records obtained from Epstein's households.</p>
+<p>似乎即使没有现成名单，也能根据从爱泼斯坦住所获取的记录轻松整理出来。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958847" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-13-000" data-start="00:19:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And maybe one has been created.</p>
+<p>或许已经整理出来了。</p>
+<p><button class="play-button sentence" id="s-00-19-15-052" data-start="00:19:15,052" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm not sure whether Epstein himself kept the list, but I wouldn't be surprised if the Justice Department has such a thing or could easily create one.</p>
+<p>不确定爱泼斯坦本人是否保留名单，但若司法部已有或能轻易整理出这样一份名单，我不会感到意外。</p>
+<p><button class="play-button sentence" id="s-00-19-25-000" data-start="00:19:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, people are very curious about that also.</p>
+<p>当然人们对此也非常好奇。</p>
+<p><button class="play-button sentence" id="s-00-19-28-631" data-start="00:19:28,631" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, another thing that's very difficult to explain about Jeffrey Epstein is how somebody so vile, so odious, so creepy could have attracted the company of the world's most celebrity and powerful men, such as Bill Gates, Bill Clinton, and Donald Trump himself.</p>
+<p>爱泼斯坦另一个难以解释之处是，如此卑劣恶心之人如何能吸引比尔·盖茨、比尔·克林顿和特朗普本人等世界名流权贵为伴。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958814" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-46-000" data-start="00:19:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russell, your head very good to get your thoughts.</p>
+<p>拉塞尔，非常感谢您的见解。</p>
+<p><button class="play-button sentence" id="s-00-19-49-549" data-start="00:19:49,549" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for being with us.</p>
+<p>非常感谢参与我们节目。</p>
+<p><button class="play-button sentence" id="s-00-19-53-000" data-start="00:19:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're welcome.</p>
+<p>不客气。</p>
+<p><button class="play-button sentence" id="s-00-19-55-000" data-start="00:19:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're taking you now to Waga Waga where the police are giving an update on the wreckage of a plane located in the snowy mountains and the status of the 74-year-old pilot David Stevens.</p>
+<p>现在带您前往瓦加瓦加，警方正通报雪山中发现飞机残骸的最新情况以及74岁飞行员大卫·史蒂文斯的状况。</p>
+<p><button class="play-button sentence" id="s-00-20-07-000" data-start="00:20:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Tuesday afternoon, police and emergency services were informed of a possible plane crash in the Cancoban area.</p>
+<p>周二下午，警方和应急部门接到坎科本地区可能发生空难的通知。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958784" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-16-000" data-start="00:20:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As a result, police and other emergency services attended the location and a search was commenced for that aeroplane.</p>
+<p>随后警方和其他应急部门赶赴现场展开搜救。</p>
+<p><button class="play-button sentence" id="s-00-20-25-000" data-start="00:20:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A number of air assets were deployed, however, due to the prevailing weather conditions, it was hampered to search on that first day.</p>
+<p>虽然出动多架航空器，但由于恶劣天气首日搜救受阻。</p>
+<p><button class="play-button sentence" id="s-00-20-36-000" data-start="00:20:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the following days, the search has continued with a number of air assets as well as people on the ground conducting the search.</p>
+<p>随后几日继续通过航空器和地面人员展开搜索。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-45-000" data-start="00:20:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've had police rescue, our point operators, SES, National Parks and Wildlife Service, snowy hydro, staff, assisting as well.</p>
+<p>警方救援队、定点操作员、州应急服务、国家公园和野生动物服务局、雪山水利公司员工都参与了协助。</p>
+<p><button class="play-button sentence" id="s-00-20-58-000" data-start="00:20:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also had ACT, police, some of our air point operators give us some assistance as well as big pole police, air assets as well as big pole ambulance service and New South Wales ambulance service.</p>
+<p>还得到首都领地警方、定点航空操作员、大杆警察局航空器以及大杆和新南威尔士州救护服务的协助。</p>
+<p><button class="play-button sentence" id="s-00-21-13-000" data-start="00:21:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yesterday afternoon, the crash site for the plane was identified and discovered.</p>
+<p>昨天下午飞机失事地点被确认发现。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-21-000" data-start="00:21:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's clear from the wreckage of that plane that there's been a significant impact into the terrain there in the snowy mountains.</p>
+<p>从残骸可见飞机在雪山地区发生了剧烈撞击。</p>
+<p><button class="play-button sentence" id="s-00-21-33-000" data-start="00:21:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, a recovery operation is underway where we've got investigators as well as crime scene attending that scene to clarify the cause of the accident.</p>
+<p>今天正在进行复原作业，调查人员和犯罪现场专家正在现场查明事故原因。</p>
+<p><button class="play-button sentence" id="s-00-21-50-000" data-start="00:21:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The cause of the collision and also, as we can identify the pilot.</p>
+<p>碰撞原因以及确认飞行员身份。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958684" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-56-000" data-start="00:21:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, as of right now, the identity of the pilot hasn't been confirmed?</p>
+<p>那么目前飞行员身份尚未确认？</p>
+<p><button class="play-button sentence" id="s-00-22-00-000" data-start="00:22:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's correct.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-22-01-132" data-start="00:22:01,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've still got some of our investigators attending that scene and at the moment, we're not in a position to positively identify who the pilot was.</p>
+<p>仍有调查人员在现场，目前无法确认飞行员身份。</p>
+<p><button class="play-button sentence" id="s-00-22-11-000" data-start="00:22:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do we know about his condition?</p>
+<p>关于他的状况我们了解多少？</p>
+<p><button class="play-button sentence" id="s-00-22-14-000" data-start="00:22:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As I said, with the significant impact that has occurred, there's quite a bit of wreckage from that impact.</p>
+<p>如我所言，剧烈撞击导致大量残骸。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958656" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-24-000" data-start="00:22:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's fairly clear that it wouldn't be so viable.</p>
+<p>很明显不可能生还。</p>
+<p><button class="play-button sentence" id="s-00-22-28-000" data-start="00:22:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, crews have located the bodies up correct?</p>
+<p>那么机组人员遗体已找到？</p>
+<p><button class="play-button sentence" id="s-00-22-30-000" data-start="00:22:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, we've located the site and a helicopter has been there that will be winging in our crime scene officers as well as our local investigators.</p>
+<p>不，我们定位了现场，直升机将运送犯罪现场警官和当地调查人员前往。</p>
+<p><button class="play-button sentence" id="s-00-22-40-000" data-start="00:22:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, as you said, it was considerable wreckage.</p>
+<p>如您所说残骸相当多。</p>
+<p><button class="play-button sentence" id="s-00-22-42-294" data-start="00:22:42,294" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you mind describing that wreck?</p>
+<p>能否描述残骸状况？</p>
+<p><button class="play-button sentence" id="s-00-22-44-000" data-start="00:22:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it's... you wouldn't recognize it as an airplane.</p>
+<p>已经...看不出是飞机了。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958632" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-47-810" data-start="00:22:47,810" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just a significant impact.</p>
+<p>撞击非常严重。</p>
+<p><button class="play-button sentence" id="s-00-22-50-000" data-start="00:22:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obviously, a fair bit of speed into the mountain range there, which has completely destroyed that aircraft.</p>
+<p>显然以相当速度撞上山脉，完全摧毁了飞机。</p>
+<p><button class="play-button sentence" id="s-00-22-58-000" data-start="00:22:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as I said, it wouldn't be a survival collision.</p>
+<p>如我所言，这种撞击不可能生还。</p>
+<p><button class="play-button sentence" id="s-00-23-02-000" data-start="00:23:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is the terrain up there like?</p>
+<p>当地地形如何？</p>
+<p><button class="play-button sentence" id="s-00-23-04-000" data-start="00:23:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very steep, a lot of snow.</p>
+<p>非常陡峭，积雪深厚。</p>
+<p><button class="play-button sentence" id="s-00-23-06-739" data-start="00:23:06,739" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's very difficult to get to.</p>
+<p>难以抵达。</p>
+<p><button class="play-button sentence" id="s-00-23-10-000" data-start="00:23:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As I said, we've had a number of air assets that have been up there over the last few days.</p>
+<p>如我所言，过去几天已出动多架航空器。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958604" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-16-000" data-start="00:23:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The weather has been fairly inclement with a lot of cloud and so forth.</p>
+<p>天气相当恶劣，多云等。</p>
+<p><button class="play-button sentence" id="s-00-23-22-000" data-start="00:23:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, it's been difficult for the air assets to locate that scene.</p>
+<p>因此航空器难以定位现场。</p>
+<p><button class="play-button sentence" id="s-00-23-29-000" data-start="00:23:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as I said yesterday afternoon, it was located about 10km east of Ken Covein.</p>
+<p>但如我昨天所说，现场位于肯科文以东约10公里处。</p>
+<p><button class="play-button sentence" id="s-00-23-35-000" data-start="00:23:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How was it found?</p>
+<p>如何发现的？</p>
+<p><button class="play-button sentence" id="s-00-23-37-400" data-start="00:23:37,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was it difficult to find?</p>
+<p>很难发现吗？</p>
+<p><button class="play-button sentence" id="s-00-23-41-000" data-start="00:23:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it was.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-23-42-980" data-start="00:23:42,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of very steep overgrown terrain up there.</p>
+<p>地形非常陡峭且植被茂密。</p>
+<p><button class="play-button sentence" id="s-00-23-50-000" data-start="00:23:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, it was difficult to locate initially and also due to those weather conditions.</p>
+<p>因此最初难以定位，天气条件也是原因。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958564" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-56-000" data-start="00:23:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when that cleared, we were able to get those air assets over the coordinates that we've been provided.</p>
+<p>但当天气转好，我们就能派航空器前往提供的坐标。</p>
+<p><button class="play-button sentence" id="s-00-24-02-000" data-start="00:24:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's when the crash site was identified.</p>
+<p>这才发现失事地点。</p>
+<p><button class="play-button sentence" id="s-00-24-06-000" data-start="00:24:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To do weather on the day, play a pass in this place?</p>
+<p>当天天气对事故有影响吗？</p>
+<p><button class="play-button sentence" id="s-00-24-10-000" data-start="00:24:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That'll make up part of our investigation.</p>
+<p>这将是我们调查的一部分。</p>
+<p><button class="play-button sentence" id="s-00-24-14-000" data-start="00:24:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obviously, that evening, as I said, the weather conditions were fairly unpleasant and not very good for the search.</p>
+<p>显然当晚天气相当恶劣，不利于搜索。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958536" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-24-000" data-start="00:24:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the air assets in the air at the time.</p>
+<p>当时在空中的航空器。</p>
+<p><button class="play-button sentence" id="s-00-24-26-796" data-start="00:24:26,796" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, I'd say they weren't ideal.</p>
+<p>所以我认为不理想。</p>
+<p><button class="play-button sentence" id="s-00-24-29-000" data-start="00:24:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's believed that if it is the man that people think he was experienced, do you think pilot arrow couldn't play a part of this as well?</p>
+<p>据信如果是人们认为的那位经验丰富的飞行员，您认为飞行员失误是否也可能是原因？</p>
+<p><button class="play-button sentence" id="s-00-24-37-000" data-start="00:24:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that'll make up part of the investigation.</p>
+<p>这也将是调查的一部分。</p>
+<p><button class="play-button sentence" id="s-00-24-40-000" data-start="00:24:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As I said, our local investigators will shortly be on scene there, along with our crime scene investigators.</p>
+<p>如我所言，当地调查人员和犯罪现场专家很快会抵达现场。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958514" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-46-000" data-start="00:24:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, they'll be able to do with their examination of the scene and no doubt be able to work out what may have contributed to the scene.</p>
+<p>因此，他们将能够通过现场检查，无疑能够找出可能导致事故的原因。</p>
+<p><button class="play-button sentence" id="s-00-24-53-000" data-start="00:24:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they'll be able to work out what may have contributed to the aircraft crash and then also positively identify the pilot.</p>
+<p>他们将能够查明可能导致飞机坠毁的原因，并确认飞行员的身份。</p>
+<p><button class="play-button sentence" id="s-00-25-00-000" data-start="00:25:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was there any warning in place for pilots flying over the area of our potential, where the conditions and the terrain at the time?</p>
+<p>当时是否有针对飞行员在该区域飞行的警告，考虑到当时的天气和地形条件？</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958493" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-07-000" data-start="00:25:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was it just flying as usual?</p>
+<p>是否只是像往常一样飞行？</p>
+<p><button class="play-button sentence" id="s-00-25-10-000" data-start="00:25:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not aware of that at the moment, but obviously that'll make up part of the investigation.</p>
+<p>我目前对此并不清楚，但这显然将成为调查的一部分。</p>
+<p><button class="play-button sentence" id="s-00-25-14-000" data-start="00:25:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we were talking about weather conditions, was it raining at the time the pilot was flying or was it just fogging?</p>
+<p>当我们讨论天气条件时，飞行员飞行时是在下雨还是只是有雾？</p>
+<p><button class="play-button sentence" id="s-00-25-21-000" data-start="00:25:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can't say at that time, but when the air assets attended on Tuesday afternoon, there was some difficult conditions with visibility.</p>
+<p>我当时无法确定，但周二下午空中支援到达时，能见度条件较差。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958468" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-32-000" data-start="00:25:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When was the pilots post-girp landed and versus when the stress call actually came out to say, hey, he's missing?</p>
+<p>飞行员的最后一次着陆是什么时候，而紧急呼叫称他失踪是什么时候？</p>
+<p><button class="play-button sentence" id="s-00-25-39-000" data-start="00:25:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The aircraft took off from Wengerrater on route to the South Coast and midway across there is when they've obviously been alerted that it appeared that the aircraft crashed.</p>
+<p>飞机从温格拉特起飞前往南海岸，中途显然有人报警称飞机似乎坠毁。</p>
+<p><button class="play-button sentence" id="s-00-25-55-000" data-start="00:25:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's an update from police on the plane crash in the Stowe Mountains.</p>
+<p>这是警方关于斯托山飞机坠毁事件的最新消息。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958440" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-00-000" data-start="00:26:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The aircraft vanished on Tuesday while flying from Victoria to Rueja on the New South Wales South Coast.</p>
+<p>这架飞机周二在从维多利亚飞往新南威尔士州南海岸的鲁埃贾时失踪。</p>
+<p><button class="play-button sentence" id="s-00-26-07-000" data-start="00:26:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reckage of a plane was found yesterday afternoon and today a recovery operation is underway.</p>
+<p>昨天下午发现了飞机残骸，今天正在进行恢复行动。</p>
+<p><button class="play-button sentence" id="s-00-26-14-000" data-start="00:26:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Investigators and crime scene operators are at the scene to determine what caused the plane to crash.</p>
+<p>调查人员和犯罪现场操作人员正在现场确定飞机坠毁的原因。</p>
+<p><button class="play-button sentence" id="s-00-26-19-000" data-start="00:26:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And try and positively identify the pilot who was killed in the incident.</p>
+<p>并试图确认在事故中遇难的飞行员身份。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958415" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-25-000" data-start="00:26:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the latest from New South Wales Police.</p>
+<p>这是新南威尔士州警方的最新消息。</p>
+<p><button class="play-button sentence" id="s-00-26-32-000" data-start="00:26:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is every senews our top stories.</p>
+<p>这是我们的头条新闻。</p>
+<p><button class="play-button sentence" id="s-00-26-34-000" data-start="00:26:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The man accused of murdering Victorian woman Hannah McGuire has entered a guilty plea eight days into his trial.</p>
+<p>被指控谋杀维多利亚州女子汉娜·麦圭尔的男子在审判八天后认罪。</p>
+<p><button class="play-button sentence" id="s-00-26-42-000" data-start="00:26:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lockland Young had initially pleaded not guilty to murdering his ex-partner in April last year and his offer to plead guilty to manslaughter was rejected by the prosecution.</p>
+<p>洛克兰·杨最初对去年四月谋杀前伴侣的指控表示不认罪，而他提出的过失杀人认罪请求被检方拒绝。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958388" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-52-000" data-start="00:26:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He'll return to court at a later date.</p>
+<p>他将在稍后日期重返法庭。</p>
+<p><button class="play-button sentence" id="s-00-26-56-000" data-start="00:26:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli Prime Minister Benjamin Netanyahu is threatening to continue attacks on Syria.</p>
+<p>以色列总理本杰明·内塔尼亚胡威胁要继续对叙利亚发动袭击。</p>
+<p><button class="play-button sentence" id="s-00-27-01-000" data-start="00:27:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If any more troops are deployed to the country's southern reaches, the IDF launched strikes on serious military headquarters in Damascus.</p>
+<p>如果再有部队部署到该国南部地区，以色列国防军将对大马士革的重要军事总部发动打击。</p>
+<p><button class="play-button sentence" id="s-00-27-09-000" data-start="00:27:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After government forces were sent to an area populated by the Druze religious minority.</p>
+<p>此前政府部队被派往德鲁兹宗教少数民族聚居的地区。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jZg3zzEJG/?t=-2208958364" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-16-000" data-start="00:27:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump says he's asked the Attorney General to unseal Grand jury testimony in the Jeffrey Epstein case.</p>
+<p>唐纳德·特朗普表示，他已要求司法部长解封杰弗里·爱泼斯坦案的大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-27-23-000" data-start="00:27:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Epstein was charged with the sex trafficking of minors and other crimes in 2019.</p>
+<p>爱泼斯坦于2019年被指控性贩卖未成年人及其他罪行。</p>
+<p><button class="play-button sentence" id="s-00-27-28-000" data-start="00:27:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He died by suicide in jail later that year.</p>
+<p>同年晚些时候，他在狱中自杀身亡。</p>
+<p><button class="play-button sentence" id="s-00-27-32-000" data-start="00:27:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sparking continued rumours about his death and most recently about a possible clients list.</p>
+<p>这引发了关于他死亡的持续传言，最近还涉及一份可能的客户名单。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
