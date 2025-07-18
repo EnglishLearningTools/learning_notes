@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Global National: July 17, 2025 | First Nations leaders raise concerns to Carney about Bill C-5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime Minister Mark Carney faced skepticism from First Nations leaders over Bill C-5, which aims to fast-track major projects while promising prosperity for all Canadians, including Indigenous communities.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Global National: July 17, 2025 | First Nations leaders raise concerns to Carney about Bill C-5</h1>
+<p>【加拿大新闻 Global News 20250718 原住民领袖向卡尼提出对C-5法案的担忧｜特朗普健康问题｜加沙教堂遭以色列军事袭击，梵蒂冈谴责】</p>
+<p>Summary:
+Prime Minister Mark Carney faced skepticism from First Nations leaders over Bill C-5, which aims to fast-track major projects while promising prosperity for all Canadians, including Indigenous communities.</p>
+<p>摘要：
+总理马克·卡尼向原住民领袖推介C-5法案时遭遇质疑，该法案旨在加速重大项目审批，同时承诺为包括原住民社区在内的所有加拿大人带来繁荣。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 34 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959997" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-03-000" data-start="00:00:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On this Thursday night, the Prime Minister's pitch to First Nations leaders on his new law that fast-tracks approvals of big projects, the skepticism.</p>
+<p>在这个周四晚上，总理向原住民领袖推介其加速大型项目审批的新法律时，遭遇了质疑。</p>
+<p><button class="play-button sentence" id="s-00-00-12-000" data-start="00:00:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to say a few words, and then I'm going to listen.</p>
+<p>我会先说几句话，然后我会倾听。</p>
+<p><button class="play-button sentence" id="s-00-00-16-500" data-start="00:00:16,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This summit is a political theater.</p>
+<p>这次峰会是一场政治表演。</p>
+<p><button class="play-button sentence" id="s-00-00-19-500" data-start="00:00:19,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what happens next?</p>
+<p>接下来会发生什么？</p>
+<p><button class="play-button sentence" id="s-00-00-21-000" data-start="00:00:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump's diagnosis.</p>
+<p>唐纳德·特朗普的诊断结果。</p>
+<p><button class="play-button sentence" id="s-00-00-23-000" data-start="00:00:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many in the media have been speculating about bruising on the President's hands and also swelling in the President's legs.</p>
+<p>许多媒体一直在猜测总统手上的淤青和腿部的肿胀。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959969" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-31-000" data-start="00:00:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One baby created with a DNA of three adults, the science behind the experimental technique and why it's being used.</p>
+<p>一个由三个成年人DNA创造的婴儿，这项实验技术背后的科学原理及其应用原因。</p>
+<p><button class="play-button sentence" id="s-00-00-38-000" data-start="00:00:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, kicking her way to the top.</p>
+<p>此外，她一路踢向巅峰。</p>
+<p><button class="play-button sentence" id="s-00-00-40-500" data-start="00:00:40,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She plays with no fear.</p>
+<p>她打球毫无畏惧。</p>
+<p><button class="play-button sentence" id="s-00-00-42-000" data-start="00:00:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The record-setting deal for this Canadian soccer player.</p>
+<p>这位加拿大足球运动员创纪录的转会协议。</p>
+<p><button class="play-button sentence" id="s-00-00-51-000" data-start="00:00:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Global National with Donna Friesen.</p>
+<p>唐娜·弗里森的《全球国家》。</p>
+<p><button class="play-button sentence" id="s-00-00-53-000" data-start="00:00:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good evening and thanks for joining us.</p>
+<p>晚上好，感谢您的收看。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959945" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-55-000" data-start="00:00:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We begin tonight and got no Quebec.</p>
+<p>我们今晚从魁北克开始。</p>
+<p><button class="play-button sentence" id="s-00-00-57-000" data-start="00:00:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister Mark Carney spent the day with hundreds of First Nations leaders.</p>
+<p>总理马克·卡尼与数百名原住民领袖共度了一天。</p>
+<p><button class="play-button sentence" id="s-00-01-01-000" data-start="00:01:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is promising his signature piece of legislation Bill C5 will create prosperity for everyone in Canada, including them by fast-tracking major resource and infrastructure projects.</p>
+<p>他承诺其标志性立法C5法案将通过加速重大资源和基础设施项目审批，为加拿大所有人（包括他们）创造繁荣。</p>
+<p><button class="play-button sentence" id="s-00-01-13-000" data-start="00:01:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are here to listen and we are starting as we mean to go forward by listening, engaging, working together.</p>
+<p>我们在这里倾听，并将通过倾听、参与和合作来推进工作。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959917" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-23-000" data-start="00:01:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he faced a tough crowd.</p>
+<p>但他面对的是一个难对付的群体。</p>
+<p><button class="play-button sentence" id="s-00-01-24-000" data-start="00:01:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Chiefs from across the country have serious concerns.</p>
+<p>来自全国各地的酋长们有严重的担忧。</p>
+<p><button class="play-button sentence" id="s-00-01-27-000" data-start="00:01:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some are dismissing the summit as political theater and say the new law tramples over their rights.</p>
+<p>一些人将峰会斥为政治表演，并表示新法律践踏了他们的权利。</p>
+<p><button class="play-button sentence" id="s-00-01-33-000" data-start="00:01:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> David Aiken has our top story tonight.</p>
+<p>大卫·艾肯为我们带来今晚的头条新闻。</p>
+<p><button class="play-button sentence" id="s-00-01-36-000" data-start="00:01:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To hear Mark Carney's sell it, First Nations have nothing to fear from C5.</p>
+<p>听马克·卡尼的推销，原住民无需担心C5法案。</p>
+<p><button class="play-button sentence" id="s-00-01-41-000" data-start="00:01:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the first federal legislation to put Indigenous economic growth at its core.</p>
+<p>这是第一部将原住民经济增长置于核心的联邦立法。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-48-000" data-start="00:01:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some chiefs have been skeptical of that claim.</p>
+<p>一些酋长对这一说法持怀疑态度。</p>
+<p><button class="play-button sentence" id="s-00-01-50-000" data-start="00:01:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nine First Nations from Ontario are suing the federal government to kill parts of C5, worried that their treaty rights are being ignored.</p>
+<p>安大略省的九个原住民团体正在起诉联邦政府，要求废除C5法案的部分内容，担心他们的条约权利被忽视。</p>
+<p><button class="play-button sentence" id="s-00-01-58-000" data-start="00:01:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To which Carney says, Respecting the rights of Indigenous peoples is a fundamental purpose of the Building Canada Act.</p>
+<p>对此，卡尼表示，尊重原住民权利是《建设加拿大法案》的根本目的。</p>
+<p><button class="play-button sentence" id="s-00-02-06-000" data-start="00:02:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Carney also describes C5 as a starting point, a bill that creates a process to more quickly approve major development projects.</p>
+<p>但卡尼也将C5描述为一个起点，该法案创建了一个更快批准重大开发项目的流程。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-15-000" data-start="00:02:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Though he conceded he cannot say what projects are being proposed.</p>
+<p>尽管他承认无法说明正在提议哪些项目。</p>
+<p><button class="play-button sentence" id="s-00-02-19-000" data-start="00:02:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is no list of those projects yet.</p>
+<p>目前还没有这些项目的清单。</p>
+<p><button class="play-button sentence" id="s-00-02-21-415" data-start="00:02:21,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's ideas out there.</p>
+<p>有一些想法正在酝酿。</p>
+<p><button class="play-button sentence" id="s-00-02-23-000" data-start="00:02:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some chiefs are receptive to the pitch.</p>
+<p>一些酋长接受了这一提议。</p>
+<p><button class="play-button sentence" id="s-00-02-26-000" data-start="00:02:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the mood is one, you know, this is a really good opportunity for us to be heard and come together.</p>
+<p>所以气氛是，这是一个让我们被倾听并团结起来的好机会。</p>
+<p><button class="play-button sentence" id="s-00-02-31-000" data-start="00:02:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it's a positive thing overall.</p>
+<p>我认为总体上是件好事。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959846" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-34-000" data-start="00:02:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But many were not.</p>
+<p>但许多人并不这么认为。</p>
+<p><button class="play-button sentence" id="s-00-02-35-000" data-start="00:02:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This summit is a political theater.</p>
+<p>这次峰会是一场政治表演。</p>
+<p><button class="play-button sentence" id="s-00-02-40-000" data-start="00:02:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last minute invitations.</p>
+<p>最后一刻的邀请。</p>
+<p><button class="play-button sentence" id="s-00-02-43-000" data-start="00:02:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last minute, last minute agendas.</p>
+<p>最后一刻的议程。</p>
+<p><button class="play-button sentence" id="s-00-02-46-000" data-start="00:02:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are here to make it clear.</p>
+<p>我们在这里明确表态。</p>
+<p><button class="play-button sentence" id="s-00-02-50-000" data-start="00:02:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We oppose the so called first, first nation summit with Prime Minister Carney.</p>
+<p>我们反对与卡尼总理所谓的“第一民族峰会”。</p>
+<p><button class="play-button sentence" id="s-00-02-57-000" data-start="00:02:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm here in good spirits, hopeful, but moderately.</p>
+<p>我精神饱满地来到这里，抱有希望，但态度谨慎。</p>
+<p><button class="play-button sentence" id="s-00-03-04-000" data-start="00:03:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to leave with even further reduced expectations.</p>
+<p>我们将带着更低的期望离开。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959810" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-10-000" data-start="00:03:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Up next, more consultations.</p>
+<p>接下来是更多的磋商。</p>
+<p><button class="play-button sentence" id="s-00-03-13-000" data-start="00:03:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today's summit was with First Nations leaders now to repeat the process with Métis and Inuit leaders.</p>
+<p>今天的峰会是与原住民领袖的会面，接下来将与梅蒂斯和因纽特领袖重复这一过程。</p>
+<p><button class="play-button sentence" id="s-00-03-18-000" data-start="00:03:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And after that, several rounds of regional crown Indigenous consultations.</p>
+<p>之后还将进行几轮地区性的王室与原住民磋商。</p>
+<p><button class="play-button sentence" id="s-00-03-23-000" data-start="00:03:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then after all those meetings, the idea is to put together a list of major projects that have the backing of Ottawa and enough Indigenous and provincial leaders that it might be time to start talking about putting some shovels in the ground.</p>
+<p>在这些会议之后，计划是列出一份得到渥太华及足够多原住民和省级领导人支持的重大项目清单，届时可能就该讨论动工了。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959782" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-38-000" data-start="00:03:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donna.</p>
+<p>唐娜。</p>
+<p><button class="play-button sentence" id="s-00-03-39-000" data-start="00:03:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, David Aikenin, Gatton O. Quebec. Thanks David.</p>
+<p>好的，大卫·艾肯，加顿·魁北克。谢谢大卫。</p>
+<p><button class="play-button sentence" id="s-00-03-42-000" data-start="00:03:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are calls for an investigation into a multi-million dollar federal program meant to help Canadian seriously and permanently injured by vaccines.</p>
+<p>有人呼吁对一项耗资数百万加元的联邦计划进行调查，该计划旨在帮助因疫苗严重或永久受伤的加拿大人。</p>
+<p><button class="play-button sentence" id="s-00-03-49-000" data-start="00:03:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vaccine injury support program was created by the Liberal government during the pandemic to provide financial support to those who are hurt.</p>
+<p>疫苗伤害支持计划由自由党政府在疫情期间创建，旨在为受伤者提供经济支持。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-56-000" data-start="00:03:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But many who have turned to the program say they've been waiting for months, sometimes years, to get a response.</p>
+<p>但许多求助该计划的人表示，他们等待了数月甚至数年才得到回应。</p>
+<p><button class="play-button sentence" id="s-00-04-03-000" data-start="00:04:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, as Carolyn Jarvis reports, MPs are demanding an emergency meeting to get to the bottom of it.</p>
+<p>现在，据卡罗琳·贾维斯报道，国会议员要求召开紧急会议以彻查此事。</p>
+<p><button class="play-button sentence" id="s-00-04-09-000" data-start="00:04:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's absolutely ridiculous.</p>
+<p>这太荒谬了。</p>
+<p><button class="play-button sentence" id="s-00-04-10-492" data-start="00:04:10,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a slap on the face to every Canadian taxpayer.</p>
+<p>这是对每个加拿大纳税人的侮辱。</p>
+<p><button class="play-button sentence" id="s-00-04-13-000" data-start="00:04:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vice chair of the Federal Health Committee, Dan Mazer, is asking for an investigation into the vaccine injury support program.</p>
+<p>联邦卫生委员会副主席丹·梅泽尔要求对疫苗伤害支持计划进行调查。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959739" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-21-000" data-start="00:04:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After Global News exposed allegations, the program is not providing the fair and timely access to financial help.</p>
+<p>在环球新闻曝光指控后，该计划未能提供公平及时的经济援助。</p>
+<p><button class="play-button sentence" id="s-00-04-27-777" data-start="00:04:27,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It promised.</p>
+<p>它曾承诺过。</p>
+<p><button class="play-button sentence" id="s-00-04-29-000" data-start="00:04:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People's lives are depending on this.</p>
+<p>人们的生命依赖于此。</p>
+<p><button class="play-button sentence" id="s-00-04-30-777" data-start="00:04:30,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is an embarrassment.</p>
+<p>这是一种耻辱。</p>
+<p><button class="play-button sentence" id="s-00-04-32-000" data-start="00:04:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mazer and the three other conservative MPs on the committee are requesting an emergency meeting.</p>
+<p>梅泽尔和委员会中其他三名保守党议员要求召开紧急会议。</p>
+<p><button class="play-button sentence" id="s-00-04-37-000" data-start="00:04:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mazer says the chair, Liberal Heady Fry, has not responded.</p>
+<p>梅泽尔表示，主席、自由党人希迪·弗莱尚未回应。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-41-000" data-start="00:04:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fry's staff told Global News, she is away and unavailable.</p>
+<p>弗莱的工作人员告诉环球新闻，她不在且无法联系。</p>
+<p><button class="play-button sentence" id="s-00-04-46-000" data-start="00:04:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The public health agency of Canada hired a private company called Oxaro to operate the vaccine injury support program.</p>
+<p>加拿大公共卫生局聘请了一家名为Oxaro的私营公司运营疫苗伤害支持计划。</p>
+<p><button class="play-button sentence" id="s-00-04-53-000" data-start="00:04:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> New data shows it is paid Oxaro more than $54 million to run the program since it launched in 2021.</p>
+<p>新数据显示，自2021年启动以来，已向Oxaro支付了超过5400万加元用于运营该计划。</p>
+<p><button class="play-button sentence" id="s-00-05-01-000" data-start="00:05:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only a third of that, $18 million has reached the injured.</p>
+<p>其中只有三分之一（1800万加元）到达了受伤者手中。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959695" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-05-000" data-start="00:05:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> $36 million went to administrative costs.</p>
+<p>3600万加元用于行政开支。</p>
+<p><button class="play-button sentence" id="s-00-05-09-000" data-start="00:05:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, 1,738 people are still waiting for their claim to be processed.</p>
+<p>如今，仍有1738人在等待他们的索赔得到处理。</p>
+<p><button class="play-button sentence" id="s-00-05-15-000" data-start="00:05:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have no clue what they're doing.</p>
+<p>他们根本不知道自己在做什么。</p>
+<p><button class="play-button sentence" id="s-00-05-18-000" data-start="00:05:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Laura Hate has been battling Visp for more than three years.</p>
+<p>劳拉·海特与Visp抗争了三年多。</p>
+<p><button class="play-button sentence" id="s-00-05-22-000" data-start="00:05:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was diagnosed with Guillain-Barré syndrome following a flu vaccine, an extremely rare but documented side effect.</p>
+<p>她在接种流感疫苗后被诊断出吉兰-巴雷综合征，这是一种极其罕见但有记录的副作用。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959670" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-30-000" data-start="00:05:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I thought this group would be actually, you know, in my corner and advocating for me.</p>
+<p>我以为这个团体会站在我这边为我发声。</p>
+<p><button class="play-button sentence" id="s-00-05-38-000" data-start="00:05:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instead, I felt like I was an annoyance.</p>
+<p>相反，我觉得自己是个麻烦。</p>
+<p><button class="play-button sentence" id="s-00-05-41-000" data-start="00:05:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her claim was denied.</p>
+<p>她的索赔被拒绝。</p>
+<p><button class="play-button sentence" id="s-00-05-42-213" data-start="00:05:42,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The medical board stating an infection was more likely to have caused the condition.</p>
+<p>医疗委员会称感染更可能是导致该病症的原因。</p>
+<p><button class="play-button sentence" id="s-00-05-47-000" data-start="00:05:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She is appealing with the support of her doctor, who argues otherwise.</p>
+<p>她正在医生的支持下上诉，医生持不同意见。</p>
+<p><button class="play-button sentence" id="s-00-05-51-000" data-start="00:05:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meantime, she's out more than $70,000 with no timeline for when her case may be decided.</p>
+<p>与此同时，她已经损失了7万多加元，且案件何时能解决尚无时间表。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959643" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-57-000" data-start="00:05:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Guillain-Barré syndrome foundation says the program needs to be overhauled.</p>
+<p>吉兰-巴雷综合征基金会表示该计划需要彻底改革。</p>
+<p><button class="play-button sentence" id="s-00-06-03-000" data-start="00:06:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When a GPS patient finds themselves in the ICU, they need support, financial support and other supports within days or weeks, not months or years.</p>
+<p>当GPS患者进入ICU时，他们需要在几天或几周内获得支持、经济支持和其他帮助，而不是几个月或几年。</p>
+<p><button class="play-button sentence" id="s-00-06-18-000" data-start="00:06:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think you've forgotten that there are people at the end of this line who, like, have been damaged.</p>
+<p>我认为你们忘记了在这条线的末端还有像我们这样受到伤害的人。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959614" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-26-000" data-start="00:06:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We, again, asked the federal health minister Marjorie Michelle for an interview, but her team declined, saying they're working on it but wouldn't explain what that means.</p>
+<p>我们再次请求联邦卫生部长玛乔丽·米歇尔接受采访，但她的团队拒绝了，称他们正在处理此事，但不愿解释具体含义。</p>
+<p><button class="play-button sentence" id="s-00-06-34-000" data-start="00:06:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, Oxaro, the company which runs the program says it has adapted to meet higher than expected volumes.</p>
+<p>与此同时，运营该计划的Oxaro公司表示已进行调整以应对高于预期的申请量。</p>
+<p><button class="play-button sentence" id="s-00-06-41-000" data-start="00:06:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as for the money, it says its invoices are all approved by the public health agency of Canada.</p>
+<p>至于资金问题，该公司表示其发票均得到了加拿大公共卫生局的批准。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-47-000" data-start="00:06:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donna?</p>
+<p>唐娜？</p>
+<p><button class="play-button sentence" id="s-00-06-48-000" data-start="00:06:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Carolyn Jarvis, thanks.</p>
+<p>卡罗琳·贾维斯，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-06-50-000" data-start="00:06:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was revealed today that President Donald Trump, who is 79, has undergone medical tests to investigate swelling in his lower legs and bruising on his hands.</p>
+<p>今天有消息透露，79岁的总统唐纳德·特朗普接受了医学检查，以调查其小腿肿胀和手部淤青的情况。</p>
+<p><button class="play-button sentence" id="s-00-06-58-000" data-start="00:06:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The swelling has been noticeable, and the White House now says he's been diagnosed with chronic venous insufficiency.</p>
+<p>肿胀已经很明显，白宫现在表示他被诊断出患有慢性静脉功能不全。</p>
+<p><button class="play-button sentence" id="s-00-07-04-000" data-start="00:07:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A benign condition is not unusual in people his age.</p>
+<p>这种良性病症在他这个年龄段并不罕见。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959573" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-06-866" data-start="00:07:06,866" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It means his veins in his legs have trouble sending blood back to the heart.</p>
+<p>这意味着他腿部的静脉难以将血液输送回心脏。</p>
+<p><button class="play-button sentence" id="s-00-07-12-000" data-start="00:07:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Importantly, there was no evidence of deep vein from Bosis or arterial disease.</p>
+<p>重要的是，没有深静脉血栓或动脉疾病的证据。</p>
+<p><button class="play-button sentence" id="s-00-07-18-000" data-start="00:07:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No signs of heart failure, renal impairment or systemic illness were identified.</p>
+<p>没有发现心力衰竭、肾功能损害或全身性疾病的迹象。</p>
+<p><button class="play-button sentence" id="s-00-07-24-000" data-start="00:07:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House doctor also says the bruising on Trump's hands is common and benign in people his age and is consistent with frequent hands shaking and taking aspirin as a cardiovascular prevention regime.</p>
+<p>白宫医生还表示，特朗普手上的淤青在他这个年龄段很常见且良性，与频繁握手和服用阿司匹林作为心血管预防措施一致。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959543" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-37-000" data-start="00:07:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Wall Street Journal has published a story tonight saying it has seen a leather bound book made for convicted sex offender Jeffrey Epstein by his then partner, Galein Maxwell, and that it contains a note from Donald Trump.</p>
+<p>《华尔街日报》今晚发表了一篇报道，称其看到了一本为已定罪性犯罪者杰弗里·爱泼斯坦制作的皮革装订书，该书由其当时的伴侣吉兰·麦克斯韦制作，并包含唐纳德·特朗普的留言。</p>
+<p><button class="play-button sentence" id="s-00-07-49-000" data-start="00:07:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Wall Street Journal reports the book was a special gift for Epstein's 50th birthday, and that Trump is one of a number of high-profile people who wrote birthday messages to Epstein.</p>
+<p>《华尔街日报》报道称，这本书是送给爱泼斯坦50岁生日的特别礼物，特朗普是众多向爱泼斯坦写生日祝福的知名人士之一。</p>
+<p><button class="play-button sentence" id="s-00-07-58-000" data-start="00:07:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says Trump's was framed by the outline of a naked woman and concludes happy birthday and may every day be another wonderful secret.</p>
+<p>报道称特朗普的留言被裸体女性轮廓框住，并以"生日快乐，愿每一天都是另一个美妙的秘密"结尾。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959513" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-07-000" data-start="00:08:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump claims the note is a fake thing.</p>
+<p>特朗普声称该留言是伪造的。</p>
+<p><button class="play-button sentence" id="s-00-08-09-016" data-start="00:08:09,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is under increasing pressure, though, from his loyal supporters to release any files relating to Epstein.</p>
+<p>然而，他正面临来自忠实支持者越来越大的压力，要求他公布与爱泼斯坦有关的任何文件。</p>
+<p><button class="play-button sentence" id="s-00-08-15-000" data-start="00:08:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And is trying to dismiss the idea Epstein left behind a secret list of clients by calling the whole thing a hoax.</p>
+<p>他试图通过称整件事是骗局来否定爱泼斯坦留下秘密客户名单的说法。</p>
+<p><button class="play-button sentence" id="s-00-08-22-327" data-start="00:08:22,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jackson Prosko reports.</p>
+<p>杰克逊·普罗斯科报道。</p>
+<p><button class="play-button sentence" id="s-00-08-25-000" data-start="00:08:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The questions about Jeffrey Epstein just won't go away.</p>
+<p>关于杰弗里·爱泼斯坦的问题不会消失。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959491" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-28-418" data-start="00:08:28,418" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the time has come for the administration to release all of the files.</p>
+<p>我认为政府是时候公布所有文件了。</p>
+<p><button class="play-button sentence" id="s-00-08-33-000" data-start="00:08:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More of President Donald Trump's supporters are demanding answers, questioning why the Epstein sex trafficking and death investigations were declared closed.</p>
+<p>更多特朗普总统的支持者要求答案，质疑为何爱泼斯坦性交易和死亡调查被宣布结案。</p>
+<p><button class="play-button sentence" id="s-00-08-42-000" data-start="00:08:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now all of a sudden we're just supposed to accept the case closed, no list, end of story?</p>
+<p>现在我们突然就要接受案件结案、没有名单、故事结束？</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959473" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-46-800" data-start="00:08:46,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kind of lends to the theory that there's more to the story.</p>
+<p>这有点支持了故事背后还有更多内情的理论。</p>
+<p><button class="play-button sentence" id="s-00-08-50-000" data-start="00:08:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump himself fueled the conspiracy theories about a secret client list.</p>
+<p>特朗普本人助长了关于秘密客户名单的阴谋论。</p>
+<p><button class="play-button sentence" id="s-00-08-58-666" data-start="00:08:58,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now he claims there's nothing there.</p>
+<p>现在他声称什么都没有。</p>
+<p><button class="play-button sentence" id="s-00-09-03-000" data-start="00:09:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know it's a hoax.</p>
+<p>我知道这是个骗局。</p>
+<p><button class="play-button sentence" id="s-00-09-04-184" data-start="00:09:04,184" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's started by Democrats.</p>
+<p>这是民主党人发起的。</p>
+<p><button class="play-button sentence" id="s-00-09-06-000" data-start="00:09:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Late Wednesday, the Justice Department abruptly removed Maureen Comey, the lead prosecutor on the Epstein case.</p>
+<p>周三晚些时候，司法部突然撤换了爱泼斯坦案的首席检察官莫琳·科米。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959447" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-13-000" data-start="00:09:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a farewell note, Comey, the daughter of former FBI director James Comey, said she was fired without reason.</p>
+<p>在前FBI局长詹姆斯·科米的女儿科米的告别信中，她表示自己被无故解雇。</p>
+<p><button class="play-button sentence" id="s-00-09-20-000" data-start="00:09:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House is in damage control mode.</p>
+<p>白宫正处于损害控制模式。</p>
+<p><button class="play-button sentence" id="s-00-09-23-000" data-start="00:09:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the president has been transparent.</p>
+<p>所以总统一直是透明的。</p>
+<p><button class="play-button sentence" id="s-00-09-25-333" data-start="00:09:25,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has followed through on his promises to the American people on Capitol Hill.</p>
+<p>他兑现了在国会山对美国人民的承诺。</p>
+<p><button class="play-button sentence" id="s-00-09-30-000" data-start="00:09:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Democrats are demanding the release of any and all information.</p>
+<p>民主党人要求公布任何和所有信息。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959426" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-34-000" data-start="00:09:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Join me in demanding the Department of Justice released Epstein files.</p>
+<p>和我一起要求司法部公布爱泼斯坦文件。</p>
+<p><button class="play-button sentence" id="s-00-09-38-000" data-start="00:09:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Republicans have blocked the move at every turn.</p>
+<p>共和党人在每一步都阻止了这一行动。</p>
+<p><button class="play-button sentence" id="s-00-09-41-000" data-start="00:09:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is nothing more than just political theater trying to go after a president that they truly despise.</p>
+<p>这不过是一场政治表演，试图追捕他们真正鄙视的总统。</p>
+<p><button class="play-button sentence" id="s-00-09-48-000" data-start="00:09:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a perilous moment for Trump, whose supporters expect the bombshell revelations they were promised.</p>
+<p>对特朗普来说这是一个危险的时刻，他的支持者期待他们被承诺的爆炸性爆料。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959406" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-54-000" data-start="00:09:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so the voters you were lied on sold up a little goods to and relying on realize you're lying to him the whole time.</p>
+<p>因此，那些被欺骗、被推销小商品并依赖你的选民意识到你一直在对他们撒谎。</p>
+<p><button class="play-button sentence" id="s-00-10-01-000" data-start="00:10:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Though Trump has said he welcomes the release of any credible information, the White House is clear he does not believe a special prosecutor should be assigned to dive deeper.</p>
+<p>尽管特朗普表示欢迎公布任何可信信息，但白宫明确表示他不认为应该指派特别检察官进行更深入调查。</p>
+<p><button class="play-button sentence" id="s-00-10-10-000" data-start="00:10:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the case, Jackson Prasco, Global News, Washington.</p>
+<p>杰克逊·普拉斯科，环球新闻，华盛顿报道。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959384" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-16-000" data-start="00:10:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only Catholic church in Gaza has been hit by Israeli tank fire, killing three people and injuring the parish priest, the same priest, who used to receive daily phone calls from the late Pope Francis.</p>
+<p>加沙唯一的天主教堂遭到以色列坦克炮击，造成三人死亡，本堂神父受伤，这位神父曾每天接到已故教皇方济各的电话。</p>
+<p><button class="play-button sentence" id="s-00-10-27-000" data-start="00:10:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had been offering the churches a place of sanctuary to civilians of all faiths after the church says their homes, possessions and dignity had already been stripped away.</p>
+<p>教堂表示，在平民的家园、财产和尊严已被剥夺后，他一直为各种信仰的平民提供教堂作为避难所。</p>
+<p><button class="play-button sentence" id="s-00-10-37-000" data-start="00:10:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel's army, which has reduced much of Gaza to rubble and killed tens of thousands of Palestinians, issued a rare apology today, blaming stray ammunition.</p>
+<p>已将加沙大部分地区夷为平地并杀害数万巴勒斯坦人的以色列军队今天罕见道歉，归咎于流弹。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959351" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-49-000" data-start="00:10:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The cross on top of Gaza's holy family church still stands despite the clear damage around it.</p>
+<p>加沙圣家教堂顶部的十字架依然矗立，尽管周围有明显损毁。</p>
+<p><button class="play-button sentence" id="s-00-10-56-000" data-start="00:10:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Among the injured father Gabriela Rominelli attempting to comfort the more severely wounded.</p>
+<p>受伤者中，加布里埃拉·罗米内利神父正试图安抚伤势更重的人。</p>
+<p><button class="play-button sentence" id="s-00-11-06-000" data-start="00:11:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dead include a 69-year-old who was sheltering at the church compound.</p>
+<p>死者包括一名在教堂院落避难的69岁老人。</p>
+<p><button class="play-button sentence" id="s-00-11-12-000" data-start="00:11:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And those mourned in the nearby Greek Orthodox Church, the 60-year-old janitor at Holy Family Parish and 84-year-old Fumaya Ayad, who was receiving mental health support from a Catholic charity.</p>
+<p>附近希腊东正教教堂哀悼的死者包括圣家堂60岁的看门人和84岁的芙玛雅·阿亚德，后者曾接受天主教慈善机构的精神健康支持。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959314" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-26-000" data-start="00:11:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a photo of her receiving communion, posted online by Father Rominelli just hours before the incident.</p>
+<p>这是她领圣体的照片，由罗米内利神父在事发前几小时发布在网上。</p>
+<p><button class="play-button sentence" id="s-00-11-33-000" data-start="00:11:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had also recorded this video on Wednesday, saying there had been many bombings near the church through the night and morning.</p>
+<p>他还在周三录制了这段视频，称整夜和清晨教堂附近发生了多次爆炸。</p>
+<p><button class="play-button sentence" id="s-00-11-44-000" data-start="00:11:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a statement from the Vatican Pope Leo said, I am deeply saddened to learn of the loss of life and injury caused by the military attack on the Holy Family Catholic Church.</p>
+<p>梵蒂冈教皇利奥发表声明称："我对圣家天主教堂遭军事袭击导致的生命损失和伤害深感悲痛。"</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959286" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-54-000" data-start="00:11:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I renew my call for an immediate ceasefire.</p>
+<p>我再次呼吁立即停火。</p>
+<p><button class="play-button sentence" id="s-00-11-56-863" data-start="00:11:56,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only dialogue and reconciliation can ensure enduring peace.</p>
+<p>只有对话与和解才能确保持久和平。</p>
+<p><button class="play-button sentence" id="s-00-12-01-000" data-start="00:12:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The late Pope Francis spoke with Father Rominelli, a fellow Argentinian almost every night during the war.</p>
+<p>已故教皇方济各与同是阿根廷人的罗米内利神父在战争期间几乎每晚通话。</p>
+<p><button class="play-button sentence" id="s-00-12-10-000" data-start="00:12:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Office of Israeli Prime Minister Benjamin Netanyahu says Israel is investigating and that it deeply regrets that a stray ammunition hit the church, adding that Israel is committed to protecting civilians and holy sites.</p>
+<p>以色列总理本雅明·内塔尼亚胡办公室表示正在调查，对流弹击中教堂深表遗憾，并称以色列致力于保护平民和圣地。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959256" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-24-000" data-start="00:12:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This eyewitness said the attack came without warning and that Israel's apology is meaningless to the victims.</p>
+<p>目击者称袭击毫无预警，以色列的道歉对受害者毫无意义。</p>
+<p><button class="play-button sentence" id="s-00-12-33-000" data-start="00:12:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Holy Family is the only Catholic church in Gaza used for shelter by both Christians and Muslims.</p>
+<p>圣家堂是加沙唯一被基督徒和穆斯林共同用作避难所的天主教堂。</p>
+<p><button class="play-button sentence" id="s-00-12-43-000" data-start="00:12:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Patriarchate or diocese of Jerusalem condemned the deaths, but stressed the tragedy is no greater than any other in Gaza.</p>
+<p>耶路撒冷宗主教区谴责死亡事件，但强调这场悲剧并不比加沙其他悲剧更严重。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959227" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-53-000" data-start="00:12:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Redmond Shannon Global News, London.</p>
+<p>雷德蒙·香农，全球新闻，伦敦报道。</p>
+<p><button class="play-button sentence" id="s-00-12-56-000" data-start="00:12:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The birth of a groundbreaking procedure coming up while UK scientists have created babies using the DNA of three people.</p>
+<p>英国科学家用三个人的DNA培育婴儿，开创性技术问世。</p>
+<p><button class="play-button sentence" id="s-00-13-08-000" data-start="00:13:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a medical breakthrough in the UK that prevents newborn babies from inheriting incurable genetic disorders.</p>
+<p>英国取得医学突破，可预防新生儿遗传不治之症的基因缺陷。</p>
+<p><button class="play-button sentence" id="s-00-13-14-000" data-start="00:13:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Doctors say eight healthy babies have been born thanks to the new IVF technique involving DNA from three different people.</p>
+<p>医生表示，得益于这项涉及三人DNA的新IVF技术，已有八名健康婴儿诞生。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959198" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-22-000" data-start="00:13:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mothers were all at high risk of passing on life threatening diseases to their babies, like Armstrong explains how it works and the difference it makes.</p>
+<p>这些母亲都有将致命疾病遗传给婴儿的高风险，阿姆斯特朗解释了技术原理及其意义。</p>
+<p><button class="play-button sentence" id="s-00-13-31-000" data-start="00:13:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When Liz Curtis delivered her third daughter, everything was fine at first, but then at seven weeks old, Lily started having seizures.</p>
+<p>莉兹·柯蒂斯生下第三个女儿时一切正常，但莉莉七周大时开始癫痫发作。</p>
+<p><button class="play-button sentence" id="s-00-13-40-000" data-start="00:13:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She would stop breathing and just stare into space and then we had the situation where she had two cardioporists.</p>
+<p>她会停止呼吸，眼神空洞，后来还出现两次心脏骤停。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959171" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-49-000" data-start="00:13:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lily was diagnosed with mitochondrial disease, a rare genetic disorder.</p>
+<p>莉莉被诊断出线粒体疾病，一种罕见遗传病。</p>
+<p><button class="play-button sentence" id="s-00-13-53-568" data-start="00:13:53,568" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She never made it to her first birthday.</p>
+<p>她未能活到第一个生日。</p>
+<p><button class="play-button sentence" id="s-00-13-56-000" data-start="00:13:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the charity created by her parents in her name funded research that could end the disease.</p>
+<p>但她父母以她名义成立的慈善机构资助了可能终结该疾病的研究。</p>
+<p><button class="play-button sentence" id="s-00-14-02-000" data-start="00:14:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Scientists have helped eight families at high risk deliver eight healthy babies.</p>
+<p>科学家已帮助八个高风险家庭生下八名健康婴儿。</p>
+<p><button class="play-button sentence" id="s-00-14-08-000" data-start="00:14:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we've shown is that at each of the stages thus far the babies are developing normally.</p>
+<p>我们证明截至目前各阶段婴儿发育均正常。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959145" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-15-000" data-start="00:14:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The issue is with the part of human cells that produce energy, the mitochondria up on the top left.</p>
+<p>问题出在人体细胞产生能量的部分——左上角的线粒体。</p>
+<p><button class="play-button sentence" id="s-00-14-21-000" data-start="00:14:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In about one in five thousand babies, the DNA in that part of the cell has a mutation and it runs out of energy.</p>
+<p>约五千分之一婴儿的该细胞DNA存在突变，导致能量耗尽。</p>
+<p><button class="play-button sentence" id="s-00-14-29-000" data-start="00:14:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Defects in this DNA can cause terrible disorders that frequently result in death and there's no good way of treating them.</p>
+<p>这种DNA缺陷会导致致命疾病，目前尚无有效治疗方法。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959121" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-39-000" data-start="00:14:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The group's work was published when saying the New England Journal of Medicine.</p>
+<p>该团队的研究发表在《新英格兰医学杂志》上。</p>
+<p><button class="play-button sentence" id="s-00-14-43-000" data-start="00:14:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Under the procedure, the genetic material from an at-risk mother's fertilized egg is removed.</p>
+<p>该技术将高风险母亲受精卵中的遗传物质取出。</p>
+<p><button class="play-button sentence" id="s-00-14-49-000" data-start="00:14:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The genetic material is then removed from a donor's egg, one with healthy mitochondria, and then the original mother's genetic material is put in.</p>
+<p>再从捐赠者含健康线粒体的卵子中取出遗传物质，放入原母亲的遗传物质。</p>
+<p><button class="play-button sentence" id="s-00-14-57-000" data-start="00:14:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mother then carries that egg to turn.</p>
+<p>母亲随后孕育该受精卵。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959100" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-00-000" data-start="00:15:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Critics have said the procedure produces three parent babies, but less than one percent of the baby's genes come from the donor egg.</p>
+<p>批评者称这会制造"三亲婴儿"，但捐赠卵子基因占比不足1%。</p>
+<p><button class="play-button sentence" id="s-00-15-08-000" data-start="00:15:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Basically anything that dictates things like height or hair color comes from the two original parents.</p>
+<p>决定身高、发色等特征的基因基本来自原父母双方。</p>
+<p><button class="play-button sentence" id="s-00-15-15-000" data-start="00:15:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not legal in Canada currently.</p>
+<p>该技术目前在加拿大不合法。</p>
+<p><button class="play-button sentence" id="s-00-15-18-000" data-start="00:15:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now there are restrictions in this country.</p>
+<p>加拿大目前对此有限制。</p>
+<p><button class="play-button sentence" id="s-00-15-20-312" data-start="00:15:20,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The advocacy group mighto-canada hopes to change.</p>
+<p>倡导组织Mito-Canada希望改变现状。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959077" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-23-000" data-start="00:15:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were put in to prevent cloning the group says not to prevent a therapy.</p>
+<p>该组织称限制是为防止克隆，而非阻挠治疗。</p>
+<p><button class="play-button sentence" id="s-00-15-28-000" data-start="00:15:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My carms from global news, Montreal.</p>
+<p>麦卡姆斯，全球新闻，蒙特利尔报道。</p>
+<p><button class="play-button sentence" id="s-00-15-31-000" data-start="00:15:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a landmark change coming to voting rights in the UK.</p>
+<p>英国投票权将迎来里程碑式变革。</p>
+<p><button class="play-button sentence" id="s-00-15-35-000" data-start="00:15:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government plans to allow 16 and 17 year olds to vote in general elections, which will give the UK one of the world's lowest voting ages.</p>
+<p>政府计划允许16-17岁青少年参与大选投票，使英国成为全球投票年龄最低的国家之一。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959058" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-42-000" data-start="00:15:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government says it will boost public trust and democracy.</p>
+<p>政府称这将增强公众信任与民主。</p>
+<p><button class="play-button sentence" id="s-00-15-45-192" data-start="00:15:45,192" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Critics, though, say it's an attempt to tilt the electoral playing field.</p>
+<p>但批评者认为这是试图倾斜选举格局。</p>
+<p><button class="play-button sentence" id="s-00-15-49-000" data-start="00:15:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Teenagers are seen as more likely to support the center left labor party.</p>
+<p>青少年被认为更可能支持中左翼工党。</p>
+<p><button class="play-button sentence" id="s-00-15-53-000" data-start="00:15:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are roughly 1.6 million 16 and 17 year olds in the UK.</p>
+<p>英国约有160万16-17岁青少年。</p>
+<p><button class="play-button sentence" id="s-00-15-58-000" data-start="00:15:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earing grievances ahead the mixed emotions as Alberta's premier faces supporters and critics at provincial town halls.</p>
+<p>阿尔伯塔省长在省民座谈会上面对支持者与批评者的复杂情绪。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959029" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-11-000" data-start="00:16:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's just move forward with a referendum on Independence.</p>
+<p>让我们就独立问题推进公投。</p>
+<p><button class="play-button sentence" id="s-00-16-14-000" data-start="00:16:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Force that Constitution open and see where those talks take us.</p>
+<p>强行打开宪法，看谈判将我们引向何方。</p>
+<p><button class="play-button sentence" id="s-00-16-19-000" data-start="00:16:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was born and raised in Alberta.</p>
+<p>我生长在阿尔伯塔。</p>
+<p><button class="play-button sentence" id="s-00-16-21-000" data-start="00:16:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My parents were born and raised in Alberta.</p>
+<p>我父母也生长于此。</p>
+<p><button class="play-button sentence" id="s-00-16-24-000" data-start="00:16:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My grandparents homesteaded in Alberta.</p>
+<p>祖辈在此拓荒。</p>
+<p><button class="play-button sentence" id="s-00-16-27-000" data-start="00:16:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I hate to see what this province is becoming.</p>
+<p>我痛心于本省的现状。</p>
+<p><button class="play-button sentence" id="s-00-16-31-000" data-start="00:16:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We sound like bratty children.</p>
+<p>我们像被宠坏的孩子。</p>
+<p><button class="play-button sentence" id="s-00-16-34-000" data-start="00:16:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alberta's premier asked for feedback and she is getting it.</p>
+<p>阿尔伯塔省长征求反馈，她得到了回应。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208959003" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-37-000" data-start="00:16:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Danielle Smith held a first of her promised town hall meetings this week.</p>
+<p>丹妮尔·史密斯本周举行了承诺的系列座谈会首场。</p>
+<p><button class="play-button sentence" id="s-00-16-41-000" data-start="00:16:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At chance, she says to give Alberta a direct say in how to assert Alberta sovereignty.</p>
+<p>她称这是让阿尔伯塔直接参与主张自治权的机会。</p>
+<p><button class="play-button sentence" id="s-00-16-46-000" data-start="00:16:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as Heather Eurick's West reports, she is getting an earful.</p>
+<p>据希瑟·尤里克西报道，她听到了激烈意见。</p>
+<p><button class="play-button sentence" id="s-00-16-50-000" data-start="00:16:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alberta's biggest threat to our prosperity and growth has come from our own nation's capital.</p>
+<p>阿尔伯塔繁荣发展的最大威胁来自国家首都。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958985" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-55-000" data-start="00:16:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alberta has an Ottawa problem.</p>
+<p>阿尔伯塔面临渥太华问题。</p>
+<p><button class="play-button sentence" id="s-00-16-57-000" data-start="00:16:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But two stops into a ten city tour.</p>
+<p>但十城巡访刚进行两站。</p>
+<p><button class="play-button sentence" id="s-00-17-00-000" data-start="00:17:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Alberta next panel may be becoming a problem of its own.</p>
+<p>"阿尔伯塔未来"小组本身可能成为问题。</p>
+<p><button class="play-button sentence" id="s-00-17-03-000" data-start="00:17:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With claims the premier is stacking the deck against the federal government before hearing from Albertans.</p>
+<p>有人称省长在听取省民意见前就预设对抗联邦政府的立场。</p>
+<p><button class="play-button sentence" id="s-00-17-09-000" data-start="00:17:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're asked Ottawa sucks, Ottawa's awful, Ottawa's terrible.</p>
+<p>我们被灌输"渥太华很糟"的观念。</p>
+<p><button class="play-button sentence" id="s-00-17-14-000" data-start="00:17:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's be balanced.</p>
+<p>应保持平衡。</p>
+<p><button class="play-button sentence" id="s-00-17-16-000" data-start="00:17:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What this may is the language and the rhetoric being used by the premier and others to blame Albertans.</p>
+<p>这可能是省长等人用言辞归咎于阿尔伯塔人。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958959" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-21-000" data-start="00:17:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of these videos seem like propaganda versus just giving us some facts or ideas that we can discuss.</p>
+<p>这些视频像宣传而非提供可讨论的事实或观点。</p>
+<p><button class="play-button sentence" id="s-00-17-31-000" data-start="00:17:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With several topics up for discussion including equalization reform and immigration, the premier says the process is meant to give those who support Alberta separatism, which polling suggests sits at around 30% province wide and alternative by seeking a better deal with Ottawa.</p>
+<p>关于均衡拨款改革和移民等议题，省长称该进程旨在为支持分离（民调显示约30%省民支持）的人提供通过与渥太华谈判获得更好协议的替代方案。</p>
+<p><button class="play-button sentence" id="s-00-17-47-000" data-start="00:17:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The position of our government is that we support Alberta sovereignty within the United Canada.</p>
+<p>政府立场是支持阿尔伯塔在统一加拿大框架内的自治权。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-52-000" data-start="00:17:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's what we're putting forward solutions for.</p>
+<p>我们正就此提出解决方案。</p>
+<p><button class="play-button sentence" id="s-00-17-54-000" data-start="00:17:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Participants were asked to complete online surveys to capture their points of view, but only after watching short videos produced by the Alberta government.</p>
+<p>参与者被要求观看阿尔伯塔政府制作的短视频后完成在线调查以收集观点。</p>
+<p><button class="play-button sentence" id="s-00-18-02-000" data-start="00:18:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just in Trudeau's Liberals, upended Canada's immigration system for over a decade.</p>
+<p>特鲁多自由党十多年来颠覆了加拿大移民体系。</p>
+<p><button class="play-button sentence" id="s-00-18-07-000" data-start="00:18:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's meant to sort of give them a better ammunition to take to Ottawa and to first minister's conferences and so forth.</p>
+<p>这旨在为他们提供与渥太华交涉及参加总理会议等的更好依据。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958906" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-14-000" data-start="00:18:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it could have been much more effective if they're dimmed by us in the process.</p>
+<p>若过程中听取我们意见会更有效。</p>
+<p><button class="play-button sentence" id="s-00-18-18-000" data-start="00:18:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How many of you support an Alberta pension plan over CPP?</p>
+<p>多少人支持阿尔伯塔养老金计划取代CPP？</p>
+<p><button class="play-button sentence" id="s-00-18-23-000" data-start="00:18:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the end of the tour, scheduled to last through the end of September, the panel will recommend what policies should be put to a referendum next year.</p>
+<p>巡访持续至9月底，小组将建议明年公投哪些政策。</p>
+<p><button class="play-button sentence" id="s-00-18-31-000" data-start="00:18:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When a formal separation question likely be put to a vote as well.</p>
+<p>正式分离问题也可能进行投票。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958884" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-36-000" data-start="00:18:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heather, your express global news, Calgary.</p>
+<p>希瑟·尤里克西，全球新闻，卡尔加里报道。</p>
+<p><button class="play-button sentence" id="s-00-18-39-000" data-start="00:18:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you've got a mortgage, get ready to pay more.</p>
+<p>若有房贷，请准备支付更多。</p>
+<p><button class="play-button sentence" id="s-00-18-42-000" data-start="00:18:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you have to renew it this year or next, the Bank of Canada says about 60% of borrowers will see a spike in their mortgage payments.</p>
+<p>加拿大央行称，今年或明年续贷的约60%借款人月供将激增。</p>
+<p><button class="play-button sentence" id="s-00-18-49-000" data-start="00:18:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Homeowner is renewing this year.</p>
+<p>今年续贷的业主。</p>
+<p><button class="play-button sentence" id="s-00-18-50-898" data-start="00:18:50,898" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll see an average increase of 10%.</p>
+<p>月供平均增10%。</p>
+<p><button class="play-button sentence" id="s-00-18-53-000" data-start="00:18:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It will be about 6% for those renewing next year.</p>
+<p>明年续贷者增约6%。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-56-000" data-start="00:18:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any increase will of course depend on your type of mortgage.</p>
+<p>具体增幅取决于贷款类型。</p>
+<p><button class="play-button sentence" id="s-00-18-59-000" data-start="00:18:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People with fixed rates are likely to see the biggest jump in their mortgage payments between 15 and 20%.</p>
+<p>固定利率贷款者月供可能激增15-20%。</p>
+<p><button class="play-button sentence" id="s-00-19-05-000" data-start="00:19:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Keep defenders on their toes and crowds on their feet.</p>
+<p>让防守者紧张，让观众起立。</p>
+<p><button class="play-button sentence" id="s-00-19-10-000" data-start="00:19:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A record-setting deal for a rising Canadian soccer star, what it signals about the women's game.</p>
+<p>加拿大新星创纪录转会，预示女子足球新趋势。</p>
+<p><button class="play-button sentence" id="s-00-19-16-163" data-start="00:19:16,163" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's next.</p>
+<p>接下来报道。</p>
+<p><button class="play-button sentence" id="s-00-19-22-000" data-start="00:19:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A young Canadian star is breaking records in women's soccer.</p>
+<p>加拿大年轻球星正打破女子足球纪录。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958835" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-25-000" data-start="00:19:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Arsenal, one of the UK's most successful clubs, has paid 1 million pounds or 1.8 million dollars Canadian to secure the rights to Ontario's Olivia Smith.</p>
+<p>英国最成功俱乐部之一阿森纳支付100万英镑（180万加元）获得安大略省奥利维亚·史密斯的签约权。</p>
+<p><button class="play-button sentence" id="s-00-19-35-000" data-start="00:19:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eric Soranson looks at what makes Smith so special and how this agreement is another sign of changing times in women's sports.</p>
+<p>埃里克·索兰森解析史密斯的特别之处及该协议如何体现女子体育的时代变迁。</p>
+<p><button class="play-button sentence" id="s-00-19-43-000" data-start="00:19:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From Whitby, Ontario in just 20 years old, Olivia Smith is not a household name in Canada, but the largest transfer contract ever in women's football made headlines in soccer crazed Britain.</p>
+<p>20岁的奥利维亚·史密斯来自安大略省惠特比，虽在加拿大尚未家喻户晓，但这份女子足球史上最大转会合同在足球狂热的英国成为头条。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958805" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-55-000" data-start="00:19:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first 1 million pound player in the women's game.</p>
+<p>女子足坛首位百万英镑身价球员。</p>
+<p><button class="play-button sentence" id="s-00-20-00-000" data-start="00:20:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Arsenal, already the European champions, wasted no time producing a promo featuring Olivia.</p>
+<p>欧冠冠军阿森纳迅速制作了奥利维亚的宣传片。</p>
+<p><button class="play-button sentence" id="s-00-20-06-000" data-start="00:20:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Keep defenders on their toes and crowds on their feet.</p>
+<p>让防守者紧张，让观众起立。</p>
+<p><button class="play-button sentence" id="s-00-20-10-000" data-start="00:20:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ever since I was young, I just want to find new ways to grow, learn from different coaches, learn from different teammates.</p>
+<p>从小我就寻求成长新途径，向不同教练和队友学习。</p>
+<p><button class="play-button sentence" id="s-00-20-16-000" data-start="00:20:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I just felt like now is the right time and it's always been my dream to play for a club like Arsenal.</p>
+<p>现在正是时候，为阿森纳这样的俱乐部效力一直是我的梦想。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958778" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-22-000" data-start="00:20:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Smith has been a standout since growing up, playing on elite teams in the Toronto area.</p>
+<p>史密斯在多伦多地区精英球队成长时就脱颖而出。</p>
+<p><button class="play-button sentence" id="s-00-20-27-000" data-start="00:20:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She brings power, pace, athleticism, balance, good decision making.</p>
+<p>她具备力量、速度、运动能力、平衡性和决策力。</p>
+<p><button class="play-button sentence" id="s-00-20-34-000" data-start="00:20:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She plays with no fear.</p>
+<p>她无所畏惧。</p>
+<p><button class="play-button sentence" id="s-00-20-35-000" data-start="00:20:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's hard to keep up with Smith's meteoric rise.</p>
+<p>她的飞速崛起令人目不暇接。</p>
+<p><button class="play-button sentence" id="s-00-20-37-898" data-start="00:20:37,898" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canada's national team at just 15.</p>
+<p>15岁入选加拿大国家队。</p>
+<p><button class="play-button sentence" id="s-00-20-40-000" data-start="00:20:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She played at Penn State, jumped to the pros in Portugal and soon signed on with Liverpool.</p>
+<p>效力宾州州立大学后，她跳级葡萄牙职业联赛，很快签约利物浦。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958754" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-46-000" data-start="00:20:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then came Arsenal, the coach declaring, impressed by her mentality and character, excelling in two European leagues at such a young age.</p>
+<p>随后加盟阿森纳，教练称对其心态和性格印象深刻，如此年轻就在两个欧洲联赛表现出色。</p>
+<p><button class="play-button sentence" id="s-00-20-54-000" data-start="00:20:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canadian women's soccer has advanced by leaps and bounds with a new Northern super league now underway and young stars following in the footsteps of the trailblazers before them.</p>
+<p>随着北方超级联赛启动和年轻球星追随先驱脚步，加拿大女足突飞猛进。</p>
+<p><button class="play-button sentence" id="s-00-21-03-000" data-start="00:21:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is what Chrisie Sinclair inspired.</p>
+<p>这正是克里斯蒂·辛克莱激励的成果。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958735" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-05-000" data-start="00:21:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is what she produced.</p>
+<p>这是她造就的。</p>
+<p><button class="play-button sentence" id="s-00-21-07-000" data-start="00:21:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Players like Olivia Smith.</p>
+<p>像奥利维亚·史密斯这样的球员。</p>
+<p><button class="play-button sentence" id="s-00-21-08-000" data-start="00:21:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I think Chrisie Sinclair's legacy is untouched and unmatched.</p>
+<p>我认为克里斯蒂·辛克莱的遗产无可比拟。</p>
+<p><button class="play-button sentence" id="s-00-21-12-000" data-start="00:21:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think Olivia Smith is riding her own legacy.</p>
+<p>但奥利维亚·史密斯正在创造自己的传奇。</p>
+<p><button class="play-button sentence" id="s-00-21-15-000" data-start="00:21:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you, Inners.</p>
+<p>谢谢大家。</p>
+<p><button class="play-button sentence" id="s-00-21-16-000" data-start="00:21:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Excited to officially be an Arsenal player.</p>
+<p>正式成为阿森纳球员让我激动。</p>
+<p><button class="play-button sentence" id="s-00-21-18-000" data-start="00:21:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not a household name yet, but Olivia Smith is a rising star and a growing sport.</p>
+<p>虽未家喻户晓，但奥利维亚·史密斯是这项发展中的运动的崛起之星。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958718" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-22-000" data-start="00:21:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An inspiration for the next generation and still young enough to be the future of the game.</p>
+<p>激励下一代，且年轻足以成为这项运动的未来。</p>
+<p><button class="play-button sentence" id="s-00-21-27-000" data-start="00:21:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Expression saw.</p>
+<p>表情到位。</p>
+<p><button class="play-button sentence" id="s-00-21-28-000" data-start="00:21:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eric Sarranson Global News Toronto.</p>
+<p>埃里克·萨拉森，全球新闻，多伦多报道。</p>
+<p><button class="play-button sentence" id="s-00-21-32-000" data-start="00:21:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow, that is Global National for this Thursday.</p>
+<p>以上就是本周四的《全球国家》。</p>
+<p><button class="play-button sentence" id="s-00-21-35-000" data-start="00:21:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Donna Friesen.</p>
+<p>我是唐娜·弗里森。</p>
+<p><button class="play-button sentence" id="s-00-21-36-000" data-start="00:21:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We leave you tonight with some ideas for your summer bucket list.</p>
+<p>最后为您推荐夏日必做清单。</p>
+<p><button class="play-button sentence" id="s-00-21-39-000" data-start="00:21:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 86 national provincial and territorial museums have been added to places Canadian families can visit for free or for a fraction of the usual cost until September 2nd.</p>
+<p>9月2日前，86家国家、省和地区博物馆加入加拿大家庭可免费或以极低费用参观的名单。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19AgGzNEqR/?t=-2208958691" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-49-000" data-start="00:21:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's part of the federal government's Canada strong pass helping people stay local this summer.</p>
+<p>这是联邦政府"加拿大强通行证"计划的一部分，鼓励今夏本地游览。</p>
+<p><button class="play-button sentence" id="s-00-21-54-000" data-start="00:21:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the list includes the Canadian War Museum, Canada's Aviation and Space Museum, and the dinosaur display at the Royal Ontario Museum.</p>
+<p>名单包括加拿大战争博物馆、加拿大航空航天博物馆以及皇家安大略博物馆的恐龙展览。</p>
+<p><button class="play-button sentence" id="s-00-22-03-000" data-start="00:22:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So get out and enjoy.</p>
+<p>所以出门去享受吧。</p>
+<p><button class="play-button sentence" id="s-00-22-04-000" data-start="00:22:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And thanks for watching.</p>
+<p>感谢观看。</p>
+<p><button class="play-button sentence" id="s-00-22-05-000" data-start="00:22:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye bye.</p>
+<p>再见。</p>
+<p><button class="play-button sentence" id="s-00-22-19-000" data-start="00:22:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Music.</p>
+<p>音乐。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
