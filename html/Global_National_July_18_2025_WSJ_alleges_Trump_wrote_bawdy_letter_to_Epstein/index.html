@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Global National: July 18, 2025 | WSJ alleges Trump wrote "bawdy" letter to Epstein</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="On this Friday night, Donald Trump is plagued by Jeffrey Epstein.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Global National: July 18, 2025 | WSJ alleges Trump wrote "bawdy" letter to Epstein</h1>
+<p>【加拿大新闻 Global News 20250719《华尔街日报》指控特朗普曾给爱泼斯坦写过"下流"信件｜加拿大麻疹病例激增｜欧盟对俄制裁】</p>
+<p>Summary:
+On this Friday night, Donald Trump is plagued by Jeffrey Epstein.</p>
+<p>摘要：
+在这个周五晚上，唐纳德·特朗普被杰弗里·爱泼斯坦困扰。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 31 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959992" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-07-799" data-start="00:00:07,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Wall Street Journal obtains a letter allegedly from the U.S. President to the convicted sex offender.</p>
+<p>《华尔街日报》获得了一封据称是美国总统写给这名已被定罪的性犯罪者的信。</p>
+<p><button class="play-button sentence" id="s-00-00-13-619" data-start="00:00:13,619" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, Trump threatens to sue while promising more files from the case of his one-time friend.</p>
+<p>此外，特朗普威胁要提起诉讼，同时承诺公布更多关于他曾经的朋友案件的档案。</p>
+<p><button class="play-button sentence" id="s-00-00-20-660" data-start="00:00:20,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert canceled.</p>
+<p>科尔伯特被取消。</p>
+<p><button class="play-button sentence" id="s-00-00-22-260" data-start="00:00:22,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The network will be ending the late show in May.</p>
+<p>该电视台将在五月结束这档深夜节目。</p>
+<p><button class="play-button sentence" id="s-00-00-25-399" data-start="00:00:25,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A late-night staple suddenly axed.</p>
+<p>一档深夜经典节目突然被砍。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-28-239" data-start="00:00:28,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was the decision financial or political, as Trump shadowed lose?</p>
+<p>这一决定是出于财务原因还是政治原因，因为特朗普的影子笼罩其中？</p>
+<p><button class="play-button sentence" id="s-00-00-33-079" data-start="00:00:33,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canadian politicians targeted.</p>
+<p>加拿大政客成为目标。</p>
+<p><button class="play-button sentence" id="s-00-00-35-200" data-start="00:00:35,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People thought it was okay to harass me, harass me when I was out with my kids.</p>
+<p>人们认为骚扰我是可以的，甚至在我和孩子外出时骚扰我。</p>
+<p><button class="play-button sentence" id="s-00-00-40-238" data-start="00:00:40,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How threats of violence escalated against the former Prime Minister and his cabinet.</p>
+<p>针对前总理及其内阁的暴力威胁是如何升级的。</p>
+<p><button class="play-button sentence" id="s-00-00-45-719" data-start="00:00:45,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, the grim wildfire situation across Canada and the warming, it's about to get worse.</p>
+<p>此外，加拿大各地严峻的野火形势和气候变暖，情况即将恶化。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959948" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-51-719" data-start="00:00:51,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good evening and thank you for joining us.</p>
+<p>晚上好，感谢您的收看。</p>
+<p><button class="play-button sentence" id="s-00-01-02-039" data-start="00:01:02,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The U.S. President is doing what he can to distance himself and downplay any link to the Epstein files.</p>
+<p>美国总统正尽力与爱泼斯坦档案保持距离，并淡化任何关联。</p>
+<p><button class="play-button sentence" id="s-00-01-08-438" data-start="00:01:08,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, Donald Trump instructed his attorney general to seek the release of more evidence and threaten to lawsuit against the Wall Street Journal.</p>
+<p>今天，唐纳德·特朗普指示司法部长寻求公布更多证据，并威胁对《华尔街日报》提起诉讼。</p>
+<p><button class="play-button sentence" id="s-00-01-16-599" data-start="00:01:16,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For yesterday's bombshell report, claiming Trump penned a loot letter to convicted sex offender Jeffrey Epstein, celebrating Epstein's 50th birthday.</p>
+<p>针对昨天的爆炸性报道，该报道声称特朗普曾给已被定罪的性犯罪者杰弗里·爱泼斯坦写过一封下流信件，庆祝爱泼斯坦的50岁生日。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959913" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-26-519" data-start="00:01:26,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump says the letter is fake, but it follows a week of turmoil that has fractured his own hardline base.</p>
+<p>特朗普称这封信是伪造的，但此前一周的动荡已经分裂了他的强硬派支持者。</p>
+<p><button class="play-button sentence" id="s-00-01-32-959" data-start="00:01:32,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jackson Prasco has a top story tonight.</p>
+<p>杰克逊·普拉斯科今晚带来头条新闻。</p>
+<p><button class="play-button sentence" id="s-00-01-35-159" data-start="00:01:35,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why not go further than just unceiling?</p>
+<p>为什么不更进一步，而只是揭开盖子？</p>
+<p><button class="play-button sentence" id="s-00-01-38-198" data-start="00:01:38,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Suddenly, President Donald Trump is changing his tune, ordering the release of grand jury testimony in the case of convicted sex offender Jeffrey Epstein.</p>
+<p>突然，唐纳德·特朗普总统改变了态度，下令公布关于已被定罪的性犯罪者杰弗里·爱泼斯坦案件的大陪审团证词。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-47-078" data-start="00:01:47,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Grand jury testimony is secret by law for a reason, because victims' names and other identifying information is often contained in the information.</p>
+<p>大陪审团证词依法保密是有原因的，因为其中通常包含受害者的姓名和其他身份信息。</p>
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The attempt to defuse this political grenade came after a week of Trump insisting there was nothing to the rumored Epstein files.</p>
+<p>试图化解这一政治炸弹的尝试发生在一周后，此前特朗普坚称关于爱泼斯坦档案的传闻毫无根据。</p>
+<p><button class="play-button sentence" id="s-00-02-12-479" data-start="00:02:12,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That all changed Thursday after the Wall Street Journal reported Trump had sent a body letter to Epstein for his 50th birthday in 2003.</p>
+<p>这一切在周四《华尔街日报》报道特朗普曾在2003年给爱泼斯坦50岁生日寄出一封下流信件后彻底改变。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959858" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-21-959" data-start="00:02:21,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The journal says the type written letter was framed by the outline of a naked woman hand drawn with a heavy marker and included the message, Happy Birthday, and may every day be another wonderful secret.</p>
+<p>该报称，这封打印的信件边缘用手绘粗线条勾勒了一个裸体女性的轮廓，并附有信息：“生日快乐，愿每一天都是另一个美妙的秘密。”</p>
+<p><button class="play-button sentence" id="s-00-02-34-438" data-start="00:02:34,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a series of angry posts on social media, Trump said the paper printed a fake letter, citing, These are not my words, not the way I talk.</p>
+<p>在一系列愤怒的社交媒体帖子中，特朗普称该报刊登了一封伪造信件，并引用说：“这不是我的话，也不是我说话的方式。”</p>
+<p><button class="play-button sentence" id="s-00-02-43-400" data-start="00:02:43,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also I don't draw pictures.</p>
+<p>而且我不画画。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959834" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-45-560" data-start="00:02:45,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, Trump has a public history of providing doodles to charitable auctions.</p>
+<p>事实上，特朗普曾公开为慈善拍卖提供涂鸦。</p>
+<p><button class="play-button sentence" id="s-00-02-50-758" data-start="00:02:50,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump went on to threaten legal action against the paper and its owner, conservative media mogul Rupert Murdoch.</p>
+<p>特朗普继续威胁对该报及其所有者、保守派媒体大亨鲁珀特·默多克采取法律行动。</p>
+<p><button class="play-button sentence" id="s-00-02-57-120" data-start="00:02:57,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to sue his ass off, Trump wrote.</p>
+<p>“我要告到他破产，”特朗普写道。</p>
+<p><button class="play-button sentence" id="s-00-03-00-038" data-start="00:03:00,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A judge will make the final decision about releasing grand jury testimony that could take months and won't reveal all of the evidence.</p>
+<p>法官将最终决定是否公布大陪审团证词，这一过程可能需要数月，且不会披露所有证据。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-07-718" data-start="00:03:07,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It will only present a small slice of what went on in order to obtain the indictment.</p>
+<p>它只会呈现为获得起诉书而进行的一小部分内容。</p>
+<p><button class="play-button sentence" id="s-00-03-12-800" data-start="00:03:12,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It certainly will not tell the whole story of the investigation.</p>
+<p>它肯定不会讲述调查的全部故事。</p>
+<p><button class="play-button sentence" id="s-00-03-15-560" data-start="00:03:15,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the wait could buy Trump precious time to defuse the explosive story as his presidency faces an unprecedented crisis of credibility.</p>
+<p>但等待可能为特朗普争取宝贵时间，以化解这一爆炸性新闻，因为他的总统任期正面临前所未有的信誉危机。</p>
+<p><button class="play-button sentence" id="s-00-03-24-758" data-start="00:03:24,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Polls show just how dangerous the Epstein story is for Trump.</p>
+<p>民调显示爱泼斯坦事件对特朗普有多危险。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959791" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-28-919" data-start="00:03:28,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One survey found just 17% of Americans are happy with his handling of the issue.</p>
+<p>一项调查发现，只有17%的美国人对他在这一问题上的处理感到满意。</p>
+<p><button class="play-button sentence" id="s-00-03-34-280" data-start="00:03:34,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While his overall approval rating has sunk to a new low of just 42%.</p>
+<p>而他的总体支持率已降至42%的新低。</p>
+<p><button class="play-button sentence" id="s-00-03-39-680" data-start="00:03:39,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tracy?</p>
+<p>特蕾西？</p>
+<p><button class="play-button sentence" id="s-00-03-40-680" data-start="00:03:40,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> OK, Jackson Prasco in Washington.</p>
+<p>好的，华盛顿的杰克逊·普拉斯科。</p>
+<p><button class="play-button sentence" id="s-00-03-42-840" data-start="00:03:42,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks, Jackson.</p>
+<p>谢谢，杰克逊。</p>
+<p><button class="play-button sentence" id="s-00-03-45-718" data-start="00:03:45,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And later in the newscast, why President Trump is happy about the end of a late-night staple and the reason behind a cancellation, many are questioning.</p>
+<p>稍后在本期新闻中，为什么特朗普总统对一档深夜经典节目的结束感到高兴，以及许多人质疑的取消背后的原因。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-55-520" data-start="00:03:55,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here at home, government officials provided an update on the wildfire situation across this country today, saying it's already one of the worst on record.</p>
+<p>在国内，政府官员今天提供了关于全国野火形势的最新情况，称这已经是历史上最严重的野火季节之一。</p>
+<p><button class="play-button sentence" id="s-00-04-04-000" data-start="00:04:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And is expected to deteriorate even further.</p>
+<p>预计情况将进一步恶化。</p>
+<p><button class="play-button sentence" id="s-00-04-07-240" data-start="00:04:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wildfires have already torched twice the area burned this season compared to the average for the past decade.</p>
+<p>与过去十年的平均水平相比，本季野火已烧毁了两倍的土地面积。</p>
+<p><button class="play-button sentence" id="s-00-04-14-080" data-start="00:04:14,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, 561 wildfires are burning.</p>
+<p>今晚，有561处野火正在燃烧。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959742" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-17-959" data-start="00:04:17,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heat warnings persist in the Northwest Territories.</p>
+<p>西北地区持续发布高温预警。</p>
+<p><button class="play-button sentence" id="s-00-04-20-759" data-start="00:04:20,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And air quality poses a major concern for communities across the prairies.</p>
+<p>空气质量对草原地区的社区构成重大担忧。</p>
+<p><button class="play-button sentence" id="s-00-04-25-560" data-start="00:04:25,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nitugarcha reports on the extreme conditions.</p>
+<p>尼图加尔查报道极端情况。</p>
+<p><button class="play-button sentence" id="s-00-04-30-879" data-start="00:04:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Newfoundland and Labrador has a province wide open fire ban in place.</p>
+<p>纽芬兰与拉布拉多省已实施全省范围的明火禁令。</p>
+<p><button class="play-button sentence" id="s-00-04-57-399" data-start="00:04:57,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In some cases, there's always been any day-to-day in the summer.</p>
+<p>在某些情况下，夏季的日常情况一直如此。</p>
+<p><button class="play-button sentence" id="s-00-05-23-639" data-start="00:05:23,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The air quality, Buffalo Narrows and Prince Albert in Saskatchewan have very high risk ratings above 10, meaning the air quality poses a serious health risk.</p>
+<p>萨斯喀彻温省的布法罗纳罗斯和阿尔伯特王子的空气质量风险评级非常高，超过10，意味着空气质量对健康构成严重威胁。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959669" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-30-639" data-start="00:05:30,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Flint, Flan, Manitoba, there are high risk conditions, which are expected to improve this weekend.</p>
+<p>在马尼托巴省的弗林特弗兰，存在高风险状况，预计本周末会有所改善。</p>
+<p><button class="play-button sentence" id="s-00-05-35-639" data-start="00:05:35,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both provinces are under air quality warnings, as wildfire smoke lingers.</p>
+<p>由于野火烟雾持续不散，这两个省都发布了空气质量警告。</p>
+<p><button class="play-button sentence" id="s-00-05-40-639" data-start="00:05:40,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the Northwest territories, a heat warning is an effect for southern regions with temperatures nearing 30 degrees.</p>
+<p>在西北地区，南部地区的高温预警生效，气温接近30度。</p>
+<p><button class="play-button sentence" id="s-00-05-45-639" data-start="00:05:45,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is really an unprecedented fire season.</p>
+<p>这确实是一个前所未有的火灾季节。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959651" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-48-639" data-start="00:05:48,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With this summer's elevated fire risks, the federal government has announced a national wildfire innovation hub Friday, saying it will boost prevention and community resilience.</p>
+<p>鉴于今年夏季火灾风险升高，联邦政府周五宣布成立国家野火创新中心，称这将加强预防和社区抗灾能力。</p>
+<p><button class="play-button sentence" id="s-00-05-57-639" data-start="00:05:57,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> $12 million.</p>
+<p>1200万美元。</p>
+<p><button class="play-button sentence" id="s-00-05-58-639" data-start="00:05:58,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over four years to establish the wildfire resilience consortium of Canada.</p>
+<p>为期四年，用于建立加拿大野火抗灾联盟。</p>
+<p><button class="play-button sentence" id="s-00-06-01-639" data-start="00:06:01,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rising global temperatures are creating longer dry seasons and hotter conditions, which in turn increases the risk of wildfires.</p>
+<p>全球气温上升导致旱季延长和气温升高，进而增加了野火风险。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959633" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-06-639" data-start="00:06:06,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With fire danger expected to remain high through at least the end of July, especially in southern BC, officials across the country are bracing for what could be a new trend in the country.</p>
+<p>预计火灾危险至少在七月底前仍将保持高位，尤其是在不列颠哥伦比亚省南部，全国各地的官员正在为可能成为该国新趋势的情况做准备。</p>
+<p><button class="play-button sentence" id="s-00-06-14-639" data-start="00:06:14,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The weather is getting warmer and the weather is getting warmer and the weather is getting warmer.</p>
+<p>天气变得越来越热，天气变得越来越热，天气变得越来越热。</p>
+<p><button class="play-button sentence" id="s-00-06-20-639" data-start="00:06:20,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Westley state has basically этот within the organization morning.</p>
+<p>韦斯特利州基本上这个在组织早晨。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959612" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-27-139" data-start="00:06:27,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And first a year, in many words, has a typical border of the states and 하게.</p>
+<p>第一年，用许多话来说，具有州的典型边界和하게。</p>
+<p><button class="play-button sentence" id="s-00-06-34-038" data-start="00:06:34,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A candidate running against conservative leader Pierre Pueyect in a Federal Biola 끝�ing plan.</p>
+<p>一名候选人在联邦比奥拉끝�ing计划中与保守党领袖皮埃尔·普耶克特竞争。</p>
+<p><button class="play-button sentence" id="s-00-06-40-718" data-start="00:06:40,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another Head of the Flies eyelid meeting was thrown to the siege of 2020.</p>
+<p>另一场《蝇王》眼睑会议被抛向2020年的围攻。</p>
+<p><button class="play-button sentence" id="s-00-06-44-439" data-start="00:06:44,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This operation begins with the fact that this happened since last two years.</p>
+<p>这次行动始于过去两年发生的这一事实。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959592" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-47-639" data-start="00:06:47,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> politicians.</p>
+<p>政客们。</p>
+<p><button class="play-button sentence" id="s-00-06-48-458" data-start="00:06:48,458" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And tonight there is new data that highlights the rapid increase with a significant surge coming under the last liberal government.</p>
+<p>今晚有新数据突显了快速增长，上一次自由党政府期间出现了显著激增。</p>
+<p><button class="play-button sentence" id="s-00-06-57-186" data-start="00:06:57,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> David Aiken has more.</p>
+<p>大卫·艾肯带来更多内容。</p>
+<p><button class="play-button sentence" id="s-00-06-58-918" data-start="00:06:58,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first big wave was sparked by the carbon tax.</p>
+<p>第一波大浪潮是由碳税引发的。</p>
+<p><button class="play-button sentence" id="s-00-07-02-278" data-start="00:07:02,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we announced carbon pricing, this was in 2018.</p>
+<p>当我们宣布碳定价时，这是在2018年。</p>
+<p><button class="play-button sentence" id="s-00-07-05-648" data-start="00:07:05,648" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was a massive spike in attacks against me online.</p>
+<p>网上对我的攻击激增。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959570" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-09-959" data-start="00:07:09,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Katherine McKenna was the Environment Minister when the Trudeau government's carbon tax and rebate took effect.</p>
+<p>凯瑟琳·麦肯纳是特鲁多政府碳税和退税生效时的环境部长。</p>
+<p><button class="play-button sentence" id="s-00-07-15-117" data-start="00:07:15,117" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She became a lightning rod for opponents of the polarizing policy.</p>
+<p>她成为这一极化政策反对者的避雷针。</p>
+<p><button class="play-button sentence" id="s-00-07-19-480" data-start="00:07:19,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The abuse and threats started online.</p>
+<p>虐待和威胁始于网上。</p>
+<p><button class="play-button sentence" id="s-00-07-22-279" data-start="00:07:22,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The algorithms would amplify it.</p>
+<p>算法会放大它。</p>
+<p><button class="play-button sentence" id="s-00-07-23-848" data-start="00:07:23,848" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You would have botched controls like, you know, pushing it out.</p>
+<p>你会搞砸控制，比如，你知道的，把它推出去。</p>
+<p><button class="play-button sentence" id="s-00-07-27-480" data-start="00:07:27,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the virtual threats soon became very real.</p>
+<p>但虚拟威胁很快变得非常真实。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959549" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-30-480" data-start="00:07:30,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was when it really became problematic where people thought it was okay to harass me, harass me when I was out with my kids.</p>
+<p>那时问题真正出现，人们认为骚扰我是可以的，甚至在我和孩子外出时骚扰我。</p>
+<p><button class="play-button sentence" id="s-00-07-38-600" data-start="00:07:38,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> New data recently released by the Privy Council office shows that threats of violence against Prime Minister Justin Trudeau and his cabinet went from nearly zero in 2019 to 337 in the first six months of 2024 alone.</p>
+<p>枢密院办公室最近发布的新数据显示，针对总理贾斯汀·特鲁多及其内阁的暴力威胁从2019年的几乎零上升到仅2024年前六个月的337起。</p>
+<p><button class="play-button sentence" id="s-00-07-53-194" data-start="00:07:53,194" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More recent data was not made available.</p>
+<p>更近期的数据尚未公布。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959523" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-56-639" data-start="00:07:56,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From 2020 to 2024, nearly 30 different cabinet ministers received death threats.</p>
+<p>从2020年到2024年，近30名不同的内阁部长收到了死亡威胁。</p>
+<p><button class="play-button sentence" id="s-00-08-02-159" data-start="00:08:02,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nearly two thirds of them targeted Trudeau, but McKenna, Christopher Eileen, Stephen Gielbo and others each faced multiple death threats.</p>
+<p>近三分之二的威胁针对特鲁多，但麦肯纳、克里斯托弗·艾琳、斯蒂芬·吉尔博等人各自面临多次死亡威胁。</p>
+<p><button class="play-button sentence" id="s-00-08-12-718" data-start="00:08:12,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A 2023 threat assessment concluded conspiracy theories and grievances over the pandemic, immigration, gun control and LGBTQ2 plus issues fueled the threats.</p>
+<p>2023年的一项威胁评估得出结论，关于疫情、移民、枪支管制和LGBTQ2+问题的阴谋论和不满助长了这些威胁。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959495" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-24-879" data-start="00:08:24,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Separately the RCMP said last year, it will need at least 230 new recruits just for its VIP protection unit alone.</p>
+<p>此外，皇家骑警去年表示，仅其VIP保护单位就需要至少230名新招募人员。</p>
+<p><button class="play-button sentence" id="s-00-08-33-240" data-start="00:08:33,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's something that is really becoming a huge phenomenon that we need to take seriously.</p>
+<p>因此，这确实正在成为一个我们需要认真对待的巨大现象。</p>
+<p><button class="play-button sentence" id="s-00-08-39-038" data-start="00:08:39,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> McKenna and some current MPs, though, say it's time to take that job away from the RCMP and set up a specialized protective services agency, something like the Secret Service in the United States with one mission to protect not just cabinet, but any MP from any party under threat.</p>
+<p>然而，麦肯纳和一些现任议员表示，现在是时候将这项工作从皇家骑警手中拿走，并建立一个专门的保护服务机构，类似于美国的特勤局，其使命不仅是保护内阁，还包括任何受到威胁的任何党派的议员。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959462" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-57-840" data-start="00:08:57,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tracey.</p>
+<p>特蕾西。</p>
+<p><button class="play-button sentence" id="s-00-08-58-840" data-start="00:08:58,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, our David Aiken in Ottawa for us.</p>
+<p>好的，我们在渥太华的大卫·艾肯。</p>
+<p><button class="play-button sentence" id="s-00-09-01-661" data-start="00:09:01,661" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks David.</p>
+<p>谢谢大卫。</p>
+<p><button class="play-button sentence" id="s-00-09-02-720" data-start="00:09:02,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Canadian Army has taken action against a senior officer of a regiment in Ottawa over what it calls inappropriate behavior by some of its members.</p>
+<p>加拿大军队已对渥太华一个团的一名高级军官采取行动，原因是其一些成员的不当行为。</p>
+<p><button class="play-button sentence" id="s-00-09-11-879" data-start="00:09:11,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are accused of being part of a Facebook group that shared racist, misogynistic, homophobic and anti-semitic content.</p>
+<p>他们被指控是一个Facebook群组的成员，该群组分享种族主义、厌女、恐同和反犹太内容。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959440" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-19-279" data-start="00:09:19,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Ottawa Bureau Chief Mercedes Stevenson reports on what we know and what's being done about it.</p>
+<p>我们的渥太华分社社长梅赛德斯·史蒂文森报道我们所知道的情况以及正在采取的措施。</p>
+<p><button class="play-button sentence" id="s-00-09-25-462" data-start="00:09:25,462" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mercedes.</p>
+<p>梅赛德斯。</p>
+<p><button class="play-button sentence" id="s-00-09-26-798" data-start="00:09:26,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tracey, the Canadian Armed Forces have been under increased scrutiny for weeks after a problematic private Facebook group became public knowledge, bringing embarrassment to the military.</p>
+<p>特蕾西，加拿大武装部队几周来受到越来越多的审查，因为一个有问题的私人Facebook群组被公开，给军队带来了尴尬。</p>
+<p><button class="play-button sentence" id="s-00-09-37-438" data-start="00:09:37,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lieutenant General Mike Wright, the commander of the Canadian Army, released an internal update to troops, announcing he has temporarily removed the commanding officer of the Cameron Highlanders, Lieutenant Colonel Ryan Hendy.</p>
+<p>加拿大陆军司令迈克·赖特中将向部队发布了一份内部更新，宣布他已暂时解除卡梅伦高地团指挥官瑞安·亨迪中校的职务。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959410" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-50-000" data-start="00:09:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Highlanders are an Ottawa Infantry Reserve unit now under investigation for running the group known as the Blue Hackel Mafia.</p>
+<p>高地团是渥太华的一个步兵预备役单位，目前因运营名为“蓝色哈克尔黑手党”的群组而受到调查。</p>
+<p><button class="play-button sentence" id="s-00-09-57-960" data-start="00:09:57,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That included photos of soldiers exposing their genitals while in uniform, along with racist, homophobic, misogynistic and anti-semitic posts.</p>
+<p>其中包括士兵穿着制服暴露生殖器的照片，以及种族主义、恐同、厌女和反犹太的帖子。</p>
+<p><button class="play-button sentence" id="s-00-10-06-840" data-start="00:10:06,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In his statement, Commander Wright said, I expect the chain of command across the Canadian Army to deal immediately with any inappropriate behavior.</p>
+<p>赖特司令在声明中表示：“我期望加拿大陆军各级指挥链立即处理任何不当行为。”</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959384" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-15-120" data-start="00:10:15,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Complaints about the group were first received in December by the chain of command and military police.</p>
+<p>关于该群组的投诉最早在12月由指挥链和军事警察收到。</p>
+<p><button class="play-button sentence" id="s-00-10-20-720" data-start="00:10:20,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Military is not disclosed how long the Cameron's top officer knew about the group's existence.</p>
+<p>军方未透露卡梅伦团的高级军官知道该群组存在多久。</p>
+<p><button class="play-button sentence" id="s-00-10-26-480" data-start="00:10:26,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sources say the Army commander was outraged when he learned about the group from a journalist instead of his own chain of command.</p>
+<p>消息人士称，陆军司令从记者而非自己的指挥链得知该群组时感到愤怒。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959366" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-33-159" data-start="00:10:33,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wright wants to send a clear message to troops and their commanders about accountability.</p>
+<p>赖特希望向部队及其指挥官传达关于问责制的明确信息。</p>
+<p><button class="play-button sentence" id="s-00-10-37-960" data-start="00:10:37,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An important public signal, as Professor Megan McKenzie and expert in military culture, says the bad behavior could affect the military's ongoing retention and recruitment efforts.</p>
+<p>这是一个重要的公开信号，军事文化专家梅根·麦肯齐教授表示，这种不良行为可能影响军队持续的留任和招募工作。</p>
+<p><button class="play-button sentence" id="s-00-10-48-038" data-start="00:10:48,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think when these kinds of stories come out, potential recruits look at the Canadian armed forces and realize this isn't the kind of workplace they want.</p>
+<p>“我认为当这类故事曝光时，潜在的新兵会审视加拿大武装部队，并意识到这不是他们想要的工作环境。”</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959339" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-00-360" data-start="00:11:00,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> McKenzie says the fact the group operated since at least 2007 is evidence the military has more work to do on the culture front.</p>
+<p>麦肯齐表示，该群组至少从2007年开始运营的事实证明，军方在文化方面还有更多工作要做。</p>
+<p><button class="play-button sentence" id="s-00-11-08-399" data-start="00:11:08,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While sources tell me that many in the military are eager to focus on war fighting abilities, this is a reminder that both aspects still need work.</p>
+<p>虽然消息人士告诉我，许多军人渴望专注于作战能力，但这提醒我们，这两个方面仍需努力。</p>
+<p><button class="play-button sentence" id="s-00-11-16-678" data-start="00:11:16,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pracey, Mercedes-Devinson in Ottawa.</p>
+<p>普蕾西，渥太华的梅赛德斯-德文森。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959320" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-19-879" data-start="00:11:19,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-11-21-558" data-start="00:11:21,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Alberta mother is making a plea after her medically fragile son was exposed to measles.</p>
+<p>阿尔伯塔省一位母亲在她健康状况脆弱的儿子接触麻疹后发出呼吁。</p>
+<p><button class="play-button sentence" id="s-00-11-27-519" data-start="00:11:27,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cases are climbing quickly across Canada.</p>
+<p>加拿大各地的病例正在迅速上升</p>
+<p><button class="play-button sentence" id="s-00-11-30-479" data-start="00:11:30,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are now more than 4,000 confirmed infections.</p>
+<p>目前已有超过4000例确诊病例。</p>
+<p><button class="play-button sentence" id="s-00-11-34-038" data-start="00:11:34,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most are in Ontario, but Alberta's numbers are growing faster than any other province, which puts those unable to get immunized at serious risk.</p>
+<p>大部分病例在安大略省，但阿尔伯塔省的增速最快，这使得无法接种疫苗的人群面临严重风险。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959297" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-42-918" data-start="00:11:42,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heather, your ex-West explains.</p>
+<p>希瑟，你的前西部分析师解释道。</p>
+<p><button class="play-button sentence" id="s-00-11-46-000" data-start="00:11:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If this was any other summer, 9-year-old George Camp would be constantly on the go.</p>
+<p>如果换作其他夏天，9岁的乔治·坎普会一直忙碌不停。</p>
+<p><button class="play-button sentence" id="s-00-11-50-639" data-start="00:11:50,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to be careful where we go now.</p>
+<p>我们现在必须谨慎选择去的地方。</p>
+<p><button class="play-button sentence" id="s-00-11-54-639" data-start="00:11:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're not going into movie theaters, we're not going indoor spaces.</p>
+<p>我们不去电影院，也不去室内场所。</p>
+<p><button class="play-button sentence" id="s-00-11-58-960" data-start="00:11:58,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's because George has what his family refers to as a special heart.</p>
+<p>这是因为乔治有一颗被家人称为“特殊”的心脏。</p>
+<p><button class="play-button sentence" id="s-00-12-03-240" data-start="00:12:03,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A precious gift that allows him to have a fun, filled, active life, but leaves him vulnerable as well.</p>
+<p>这份珍贵的礼物让他拥有充实活跃的生活，但也使他脆弱。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959269" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-10-320" data-start="00:12:10,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> George has had two heart transplants because his first transplant was so young, he was not able to get the MMR vaccine.</p>
+<p>乔治接受过两次心脏移植，因首次移植时年龄太小，无法接种麻疹疫苗。</p>
+<p><button class="play-button sentence" id="s-00-12-19-120" data-start="00:12:19,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And since it's a live vaccine, transplant recipients are not able to get live vaccinations.</p>
+<p>由于这是活疫苗，移植受者无法接种。</p>
+<p><button class="play-button sentence" id="s-00-12-23-918" data-start="00:12:23,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's why earlier this month, George's mom was horrified to learn her son had been exposed to measles.</p>
+<p>因此，本月早些时候，乔治的母亲惊恐地发现儿子接触过麻疹。</p>
+<p><button class="play-button sentence" id="s-00-12-29-678" data-start="00:12:29,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happened in the hallway at Edmonton's Stollary Children's Hospital.</p>
+<p>事件发生在埃德蒙顿斯托拉里儿童医院的走廊。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959246" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-33-798" data-start="00:12:33,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The problem with measles is that it is so very contagious that it will find this susceptible people and infect them and continue to spread because it's got a 90% attack rate.</p>
+<p>麻疹的传染性极强，攻击率达90%，会找到易感人群并持续传播。</p>
+<p><button class="play-button sentence" id="s-00-12-44-360" data-start="00:12:44,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because of his fragile health, George was given a three-hour IV treatment in a bid to boost his immunity while he navigates the 21-day incubation period.</p>
+<p>由于健康脆弱，乔治接受了三小时静脉治疗以增强免疫力，同时度过21天潜伏期。</p>
+<p><button class="play-button sentence" id="s-00-12-52-799" data-start="00:12:52,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been definitely a bit anxiety-ridden this month, just waiting and hoping that nothing happens.</p>
+<p>这个月充满焦虑，只能等待并祈祷无事发生。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959220" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-59-158" data-start="00:12:59,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For children, especially immune compromised ones, the complications from measles can be severe, risking hospitalization and even death.</p>
+<p>对儿童，尤其免疫力低下者，麻疹并发症可能致命，需住院甚至面临死亡。</p>
+<p><button class="play-button sentence" id="s-00-13-07-559" data-start="00:13:07,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hate to say it, but just, you know, based on the numbers, historically, it's just a matter of time.</p>
+<p>虽不愿承认，但根据历史数据，这只是时间问题。</p>
+<p><button class="play-button sentence" id="s-00-13-13-080" data-start="00:13:13,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We start to see severe outcomes either in self-lightness.</p>
+<p>我们已开始看到严重后果，包括轻症。</p>
+<p><button class="play-button sentence" id="s-00-13-16-399" data-start="00:13:16,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, ICU admissions have already happened.</p>
+<p>重症监护病例已经出现。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959200" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-19-440" data-start="00:13:19,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And deaths are something that would be expected once you get into the thousands of cases.</p>
+<p>一旦病例达数千例，死亡将不可避免。</p>
+<p><button class="play-button sentence" id="s-00-13-24-158" data-start="00:13:24,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Getting vaccinated isn't always just for you as well.</p>
+<p>接种疫苗不仅是为了自己。</p>
+<p><button class="play-button sentence" id="s-00-13-27-200" data-start="00:13:27,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It really affects the people around you who can't get vaccinated.</p>
+<p>它直接影响你周围无法接种的人。</p>
+<p><button class="play-button sentence" id="s-00-13-31-519" data-start="00:13:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we had the choice, we would.</p>
+<p>若有选择，我们一定会接种。</p>
+<p><button class="play-button sentence" id="s-00-13-33-918" data-start="00:13:33,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instead, George can only put his favorite activities on hold as his parents watch, wait, and hope that he doesn't get sick.</p>
+<p>相反，乔治只能暂停最爱的活动，父母则守望等待，希望他不要生病。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959177" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-42-759" data-start="00:13:42,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whether you're ex-West global news, Calgary.</p>
+<p>无论你来自西部环球新闻，卡尔加里。</p>
+<p><button class="play-button sentence" id="s-00-13-46-038" data-start="00:13:46,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A convicted killer is accused of murder again.</p>
+<p>一名已定罪杀手再次被控谋杀。</p>
+<p><button class="play-button sentence" id="s-00-13-50-038" data-start="00:13:50,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Coming up, a gunman in a notorious Toronto shooting 20 years ago has been arrested for a Montreal murder.</p>
+<p>接下来，20年前多伦多枪击案枪手因蒙特利尔谋杀案被捕。</p>
+<p><button class="play-button sentence" id="s-00-13-57-600" data-start="00:13:57,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two murders, 20 years apart, are connecting Canada's two biggest cities.</p>
+<p>两起相隔20年的谋杀案将加拿大两大城市联系起来。</p>
+<p><button class="play-button sentence" id="s-00-14-08-720" data-start="00:14:08,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A man was gunned down in Montreal Tuesday, and the suspect was only recently released on full parole for his part in a high profile shooting in Toronto in 2005.</p>
+<p>周二蒙特利尔一名男子被枪杀，嫌疑人近期刚因2005年多伦多枪击案获完全假释。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959139" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-20-039" data-start="00:14:20,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeff Semple connects the cases and the calls for more accountability for violent criminals.</p>
+<p>杰夫·森普尔关联案件并呼吁严惩暴力罪犯。</p>
+<p><button class="play-button sentence" id="s-00-14-25-278" data-start="00:14:25,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeff.</p>
+<p>杰夫。</p>
+<p><button class="play-button sentence" id="s-00-14-26-278" data-start="00:14:26,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it was 20 years ago at this spot, just up the street from Canada's busiest shopping center on Boxing Day, one of the busiest of the year that a shooting shocked the country.</p>
+<p>20年前的节礼日，在加拿大最繁忙购物中心附近的此处，枪击案震惊全国。</p>
+<p><button class="play-button sentence" id="s-00-14-37-240" data-start="00:14:37,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 15-year-old Jane Crebo was out with her family on Boxing Day 2005, when she was caught in the crossfire.</p>
+<p>2005年节礼日，15岁的简·克雷波与家人外出时遭遇交火。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959114" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-45-440" data-start="00:14:45,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A shootout between rival gangs left the teenager dead and six others hurt.</p>
+<p>敌对帮派枪战导致少女死亡，六人受伤。</p>
+<p><button class="play-button sentence" id="s-00-14-50-240" data-start="00:14:50,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the gunmen convicted of her shooting, now 43-year-old Jeremiah Valentin, was released on full parole back in January.</p>
+<p>其中一名枪手，现年43岁的杰里迈亚·瓦伦丁，于1月获完全假释。</p>
+<p><button class="play-button sentence" id="s-00-14-58-320" data-start="00:14:58,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now he's allegedly struck again.</p>
+<p>如今他再次作案。</p>
+<p><button class="play-button sentence" id="s-00-15-00-798" data-start="00:15:00,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has been out a grand total of six months and 17 days.</p>
+<p>他获释仅6个月17天。</p>
+<p><button class="play-button sentence" id="s-00-15-05-399" data-start="00:15:05,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was arrested this week and charged with first-degree murder.</p>
+<p>本周他因一级谋杀被捕。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959091" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-08-720" data-start="00:15:08,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After he allegedly shot and killed a 33-year-old man at a public park in downtown Montreal.</p>
+<p>据称他在蒙特利尔市中心公园枪杀一名33岁男子。</p>
+<p><button class="play-button sentence" id="s-00-15-14-318" data-start="00:15:14,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before we jump to conclusions, we really need to know what the parole board was looking at when they released him.</p>
+<p>在妄下结论前，需了解假释委员会的考量。</p>
+<p><button class="play-button sentence" id="s-00-15-20-720" data-start="00:15:20,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2009, Valentin pleaded guilty to the second-degree murder of Crebo, which resulted in a reduced life sentence with no chance of parole for 12 years.</p>
+<p>2009年，瓦伦丁承认二级谋杀克雷波，获减刑至无假释可能的12年监禁。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959069" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-30-678" data-start="00:15:30,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In its decision granting parole, the parole board of Canada noted a 2021 psychological assessment had warned Valentin had the highest level of risk, a 76% chance of reoffending for five years after release.</p>
+<p>假释委员会在决定中提及2021年心理评估，警告瓦伦丁再犯风险极高，达76%。</p>
+<p><button class="play-button sentence" id="s-00-15-43-958" data-start="00:15:43,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the parole board also found he'd made observable and measurable changes in values and taken full responsibility for his crimes.</p>
+<p>但委员会认为他在价值观上有明显改变，并完全认罪。</p>
+<p><button class="play-button sentence" id="s-00-15-51-639" data-start="00:15:51,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of the four men convicted in the Jane Crebo shooting, three have been released.</p>
+<p>克雷波枪击案四名罪犯中，三人已获释。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959043" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-56-120" data-start="00:15:56,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All three have since been re-arrested and charged with gun violence or drug trafficking.</p>
+<p>三人均因枪支暴力或贩毒再次被捕。</p>
+<p><button class="play-button sentence" id="s-00-16-01-320" data-start="00:16:01,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Being lenient on these types of offenders is a public safety issue.</p>
+<p>对此类罪犯的宽大是公共安全问题。</p>
+<p><button class="play-button sentence" id="s-00-16-06-600" data-start="00:16:06,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kate Alexander launched a support group for victims of crime last year, after allegedly being beaten nearly to death by her boyfriend in 2021.</p>
+<p>凯特·亚历山大2021年遭男友殴打濒死后，去年创立犯罪受害者支持团体。</p>
+<p><button class="play-button sentence" id="s-00-16-15-038" data-start="00:16:15,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was never prosecuted because the case took too long to go to trial.</p>
+<p>因案件拖延，他未被起诉。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208959020" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-19-038" data-start="00:16:19,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm sorry to say that there are bad apples out there and we do not manage them correctly in Canada.</p>
+<p>遗憾地说，加拿大未能妥善管理害群之马。</p>
+<p><button class="play-button sentence" id="s-00-16-25-759" data-start="00:16:25,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canadian courts are backlogged and prisons are full.</p>
+<p>法院积案严重，监狱人满为患。</p>
+<p><button class="play-button sentence" id="s-00-16-29-120" data-start="00:16:29,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And studies have shown tougher sentences typically do not produce lower rates of reoffending.</p>
+<p>研究表明严刑未必降低再犯率。</p>
+<p><button class="play-button sentence" id="s-00-16-34-519" data-start="00:16:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But violent crime has been rising in Canada and under pressure, the federal government has promised to introduce new legislation this fall with stricter bail conditions and sentencing for some crimes.</p>
+<p>但暴力犯罪上升，联邦政府承诺今秋推出新法案，加强保释和量刑。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958993" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-46-240" data-start="00:16:46,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tracy?</p>
+<p>特蕾西？</p>
+<p><button class="play-button sentence" id="s-00-16-47-399" data-start="00:16:47,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is our Jeff Semple in Toronto for us.</p>
+<p>多伦多的杰夫·森普尔报道。</p>
+<p><button class="play-button sentence" id="s-00-16-49-480" data-start="00:16:49,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks, Jeff.</p>
+<p>谢谢杰夫。</p>
+<p><button class="play-button sentence" id="s-00-16-53-038" data-start="00:16:53,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next, Christian leaders make a rare visit to Gaza after Israel's deadly air strike on the Territories only Catholic Church.</p>
+<p>接下来，基督教领袖在以色列空袭加沙唯一天主教堂后罕见访问。</p>
+<p><button class="play-button sentence" id="s-00-17-08-920" data-start="00:17:08,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has granted rare access to Gaza for two senior Christian leaders following a strike that killed three people at the Territories only Roman Catholic Church.</p>
+<p>以色列罕见允许两名基督教领袖进入加沙，此前空袭致该地区唯一罗马天主教堂三人死亡。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958960" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-19-920" data-start="00:17:19,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just from the Catholic and Greek Orthodox Church visited the Holy Family Church one day after the Israeli shelling which grew global condemnation.</p>
+<p>天主教和东正教领袖在以色列炮击次日访问圣家堂，事件引发全球谴责。</p>
+<p><button class="play-button sentence" id="s-00-17-28-640" data-start="00:17:28,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has blamed stray ammunition for the strike.</p>
+<p>以色列归咎于流弹。</p>
+<p><button class="play-button sentence" id="s-00-17-32-440" data-start="00:17:32,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Necessary to be here, as you said physically, to show that you are not neglected, not forgotten, and we do everything in order to be all as close to here to support all of you.</p>
+<p>必须亲临以示你们未被忽视或遗忘，我们竭尽所能支持你们。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-45-200" data-start="00:17:45,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Church leaders visited some of those injured in the strike and delivered food and medical equipment.</p>
+<p>领袖们探望伤者并运送食物和医疗设备。</p>
+<p><button class="play-button sentence" id="s-00-17-50-759" data-start="00:17:50,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> During a call with Israeli Prime Minister Benjamin Netanyahu today, Pope Leo renewed calls for a ceasefire and raised alarm over Gaza's worsening humanitarian crisis.</p>
+<p>教皇利奥今日与以总理通话，重申停火呼吁并警告加沙人道危机恶化。</p>
+<p><button class="play-button sentence" id="s-00-18-01-638" data-start="00:18:01,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The European Union has imposed another round of punishing economic sanctions against Moscow.</p>
+<p>欧盟对莫斯科实施新一轮经济制裁。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-07-160" data-start="00:18:07,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The sanctions target the Kremlin's energy and military intelligence sectors and includes a new oil price cap.</p>
+<p>制裁针对俄能源和军事情报部门，含新油价上限。</p>
+<p><button class="play-button sentence" id="s-00-18-14-278" data-start="00:18:14,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They come as European nations begin purchasing U.S. weapons bound for Ukraine, following a new deal between the U.S. President and NATO's chief this week.</p>
+<p>此前欧美总统与北约秘书长达成协议，欧洲国家开始购买援乌武器。</p>
+<p><button class="play-button sentence" id="s-00-18-26-000" data-start="00:18:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police in Brazil raided the home and political headquarters of former President Jair Bolsonaro today.</p>
+<p>巴西警方今日突袭前总统博索纳罗住所和总部。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958887" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-32-638" data-start="00:18:32,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The crackdown follows allegations Bolsonaro sought help from U.S. President Donald Trump to interfere in his ongoing coup trial.</p>
+<p>行动基于博索纳罗被控寻求特朗普干预其政变审判。</p>
+<p><button class="play-button sentence" id="s-00-18-40-759" data-start="00:18:40,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The former head of state has now been placed under a curfew and ordered to wear an ankle monitor over fears he may flee while a waiting trial.</p>
+<p>前总统被宵禁并佩戴脚环以防潜逃。</p>
+<p><button class="play-button sentence" id="s-00-18-50-480" data-start="00:18:50,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not being replaced.</p>
+<p>我未被取代。</p>
+<p><button class="play-button sentence" id="s-00-18-53-200" data-start="00:18:53,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is all just going away.</p>
+<p>一切即将结束。</p>
+<p><button class="play-button sentence" id="s-00-18-55-318" data-start="00:18:55,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert cancelled.</p>
+<p>科尔伯特停播。</p>
+<p><button class="play-button sentence" id="s-00-18-56-838" data-start="00:18:56,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next, the reasons and reaction to the end of the planet's most popular late-night comedy show.</p>
+<p>接下来，全球最受欢迎深夜喜剧节目停播的原因与反响。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-10-759" data-start="00:19:10,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I share your feelings.</p>
+<p>是的，我理解你们的感受。</p>
+<p><button class="play-button sentence" id="s-00-19-18-118" data-start="00:19:18,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Late-night host Stephen Colbert sent the audience into a tailspin last night announcing he'll be off the air as of May 16th next year.</p>
+<p>主持人斯蒂芬·科尔伯特昨晚宣布明年5月16日停播，引发观众震动。</p>
+<p><button class="play-button sentence" id="s-00-19-27-160" data-start="00:19:27,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CBS is officially pulling the plug on the late show, which also airs here on Global just days after Colbert ridiculed parent company Paramount for its $16 million settlement with President Trump.</p>
+<p>CBS正式停播《深夜秀》，此前科尔伯特嘲讽母公司派拉蒙与特朗普和解1600万美元。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958819" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-40-038" data-start="00:19:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Mike Armstrong explains, the timing has many casting doubt.</p>
+<p>迈克·阿姆斯特朗解释，时机引发质疑。</p>
+<p><button class="play-button sentence" id="s-00-19-45-720" data-start="00:19:45,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The late show opened Thursday night, not with the usual monologue, but with an announcement.</p>
+<p>节目开场未用独白，而是宣布停播。</p>
+<p><button class="play-button sentence" id="s-00-19-51-240" data-start="00:19:51,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The network will be ending the late show in May.</p>
+<p>电视台将于五月停播《深夜秀》。</p>
+<p><button class="play-button sentence" id="s-00-19-57-798" data-start="00:19:57,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stephen Colbert has been at the helm of the late show since 2015.</p>
+<p>科尔伯特自2015年主持该节目。</p>
+<p><button class="play-button sentence" id="s-00-20-01-278" data-start="00:20:01,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He spent most of the time since on top of the late-night wars.</p>
+<p>他长期领跑深夜档竞争。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-05-798" data-start="00:20:05,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The last U.S. ratings he averaged 2.4 million viewers far ahead of Jimmy Kimmel on ABC and more than double Jimmy Fallon on NBC.</p>
+<p>近期收视率240万，远超ABC吉米·坎摩尔和NBC吉米·法伦。</p>
+<p><button class="play-button sentence" id="s-00-20-15-278" data-start="00:20:15,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's the leader being cut by CBS.</p>
+<p>但领先者被CBS砍掉。</p>
+<p><button class="play-button sentence" id="s-00-20-18-078" data-start="00:20:18,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I make very nice.</p>
+<p>我表现很好。</p>
+<p><button class="play-button sentence" id="s-00-20-20-919" data-start="00:20:20,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The reason according to the network is that advertising for the time slot is drying up.</p>
+<p>电视台称原因是该时段广告枯竭。</p>
+<p><button class="play-button sentence" id="s-00-20-25-680" data-start="00:20:25,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a statement, it says this is purely a financial decision against the challenging backdrop in late night.</p>
+<p>声明称纯属财务决定，基于深夜档挑战。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958767" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-32-519" data-start="00:20:32,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not related in any way to the show's performance, content, or other matters happening at Paramount.</p>
+<p>与节目表现、内容或派拉蒙事务无关。</p>
+<p><button class="play-button sentence" id="s-00-20-39-598" data-start="00:20:39,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, that last part is something many are pointing at.</p>
+<p>最后一句引发关注。</p>
+<p><button class="play-button sentence" id="s-00-20-43-598" data-start="00:20:43,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's bad.</p>
+<p>情况糟糕。</p>
+<p><button class="play-button sentence" id="s-00-20-44-598" data-start="00:20:44,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From Hollywood heavyweights to commentators.</p>
+<p>从好莱坞大佬到评论员。</p>
+<p><button class="play-button sentence" id="s-00-20-48-278" data-start="00:20:48,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not even like they're trying to hide the main purpose of it.</p>
+<p>他们甚至未掩饰主要目的。</p>
+<p><button class="play-button sentence" id="s-00-20-54-480" data-start="00:20:54,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert's cancellation comes as CBS's parent company Paramount Global is merging with another company, Skydance Media.</p>
+<p>停播正值派拉蒙与Skydance媒体合并。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958737" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-02-318" data-start="00:21:02,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That $8 billion deal needs to be approved by regulators.</p>
+<p>80亿美元交易需监管批准。</p>
+<p><button class="play-button sentence" id="s-00-21-07-558" data-start="00:21:07,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And indirectly the Trump White House.</p>
+<p>并间接需特朗普政府同意。</p>
+<p><button class="play-button sentence" id="s-00-21-10-318" data-start="00:21:10,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, CBS recently settled a lawsuit with Donald Trump over a 60 minutes segment from the election.</p>
+<p>CBS近期就选举相关《60分钟》片段与特朗普和解。</p>
+<p><button class="play-button sentence" id="s-00-21-16-298" data-start="00:21:16,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It paid $15 million in a settlement many say was meant to make the merger's approval smoother.</p>
+<p>支付1500万美元被指为促成合并。</p>
+<p><button class="play-button sentence" id="s-00-21-23-358" data-start="00:21:23,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert has been a fiery critic of Trump's free years.</p>
+<p>科尔伯特是特朗普的尖锐批评者。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958713" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-26-759" data-start="00:21:26,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And just this week went after his network.</p>
+<p>本周他抨击自家电视台。</p>
+<p><button class="play-button sentence" id="s-00-21-29-640" data-start="00:21:29,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now I believe this kind of complicated financial settlement with a sitting government official has a technical name in legal circles.</p>
+<p>我认为这种与现任官员的复杂财务和解在法律界有专业名称。</p>
+<p><button class="play-button sentence" id="s-00-21-36-799" data-start="00:21:36,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's big fat bribe.</p>
+<p>就是巨额贿赂。</p>
+<p><button class="play-button sentence" id="s-00-21-38-480" data-start="00:21:38,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because...</p>
+<p>因为...</p>
+<p><button class="play-button sentence" id="s-00-21-39-480" data-start="00:21:39,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president reacted on social media, posting, I absolutely love that Colbert got fired.</p>
+<p>特朗普在社交媒体回应：“科尔伯特被炒，我太开心了。”</p>
+<p><button class="play-button sentence" id="s-00-21-44-680" data-start="00:21:44,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His talent was even less than his ratings.</p>
+<p>他的才华配不上收视率。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958693" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-46-599" data-start="00:21:46,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hear Jimmy Kimmel is next.</p>
+<p>听说下一个是吉米·坎摩尔。</p>
+<p><button class="play-button sentence" id="s-00-21-48-680" data-start="00:21:48,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, what's next for Colbert will be something to watch.</p>
+<p>科尔伯特的下一步值得关注。</p>
+<p><button class="play-button sentence" id="s-00-21-52-200" data-start="00:21:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What?</p>
+<p>什么？</p>
+<p><button class="play-button sentence" id="s-00-21-53-200" data-start="00:21:53,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With his last ten months counting down, one of Trump's most cutting critics might not be holding back.</p>
+<p>最后十个月，这位特朗普的犀利批评者或不再保留。</p>
+<p><button class="play-button sentence" id="s-00-21-59-278" data-start="00:21:59,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Trump's on global news.</p>
+<p>但特朗普登上环球新闻。</p>
+<p><button class="play-button sentence" id="s-00-22-01-278" data-start="00:22:01,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Much for you.</p>
+<p>为你呈现。</p>
+<p><button class="play-button sentence" id="s-00-22-03-278" data-start="00:22:03,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is Global National for this Friday.</p>
+<p>本周五《全球国家》到此结束。</p>
+<p><button class="play-button sentence" id="s-00-22-05-200" data-start="00:22:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Tracy Tongue.</p>
+<p>我是特蕾西·唐。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1k9uXzbEw3/?t=-2208958673" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-06-519" data-start="00:22:06,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight's your Canada, showcases St. Andrews, Manitoba, Richmond, BC, and Loonenburg, Nova Scotia.</p>
+<p>今晚《你的加拿大》展示马尼托巴省圣安德鲁斯、BC省列治文和新斯科舍省卢嫩堡。</p>
+<p><button class="play-button sentence" id="s-00-22-13-440" data-start="00:22:13,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks so much for watching.</p>
+<p>感谢收看。</p>
+<p><button class="play-button sentence" id="s-00-22-14-440" data-start="00:22:14,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a great night.</p>
+<p>晚安。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
