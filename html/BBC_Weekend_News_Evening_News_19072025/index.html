@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>BBC Weekend News, Evening News, 19/07/2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Syrian forces deploy to quell deadly clashes amid fears of regional escalation, with Israel involved and a ceasefire agreed. Over 700 killed in Sueda, where violence persists despite the truce. Meanwhile, Gaza sees deadly Israeli gunfire, UK protests support Palestine, and a LA car attack injures 30. Sports updates include British Lions' rugby win and golf's Open Championship.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>BBC Weekend News, Evening News, 19/07/2025</h1>
+<p>【BBC周末新闻 20250720 叙利亚致命冲突｜英国爆发支持巴勒斯坦抗议｜洛杉矶汽车袭击致30人受伤】</p>
+<p>Summary:
+Syrian forces deploy to quell deadly clashes amid fears of regional escalation, with Israel involved and a ceasefire agreed. Over 700 killed in Sueda, where violence persists despite the truce. Meanwhile, Gaza sees deadly Israeli gunfire, UK protests support Palestine, and a LA car attack injures 30. Sports updates include British Lions' rugby win and golf's Open Championship.</p>
+<p>摘要：
+叙利亚军队部署以平息致命冲突，地区局势恐升级，以色列介入后达成停火。苏埃达省超700人死亡，停火后暴力持续。加沙遭以军枪击致多人死伤，英国爆发支持巴勒斯坦抗议，洛杉矶汽车袭击致30人受伤。体育新闻包括英国雄狮队橄榄球获胜及高尔夫公开赛进展。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 15 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959982" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-18-000" data-start="00:00:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good afternoon.</p>
+<p>下午好。</p>
+<p><button class="play-button sentence" id="s-00-00-19-600" data-start="00:00:19,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Syrian internal security forces are deploying in the south of the country to try to end deadly clashes between different factions.</p>
+<p>叙利亚内政安全部队正在该国南部部署，试图结束不同派系间的致命冲突。</p>
+<p><button class="play-button sentence" id="s-00-00-27-239" data-start="00:00:27,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been fears the sectarian fighting could escalate into another regional crisis after Israel also became involved.</p>
+<p>有人担忧，在以色列介入后，宗派冲突可能升级为另一场地区危机。</p>
+<p><button class="play-button sentence" id="s-00-00-34-798" data-start="00:00:34,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has been striking Damascus and the province of Sueda, saying its forces were seeking to protect the minority Druze community.</p>
+<p>以色列一直空袭大马士革和苏埃达省，称其部队旨在保护少数派德鲁兹社区。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-43-039" data-start="00:00:43,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel and Syria have now agreed a ceasefire.</p>
+<p>以色列和叙利亚现已同意停火。</p>
+<p><button class="play-button sentence" id="s-00-00-46-000" data-start="00:00:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 700 people are reported to have been killed in the province since last Sunday amid local violence.</p>
+<p>据报道，自上周日以来，当地暴力已导致该省超700人死亡。</p>
+<p><button class="play-button sentence" id="s-00-00-52-679" data-start="00:00:52,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From Damascus, his act correspondent John Donnison and a warning that you may find some details in his report distressing.</p>
+<p>BBC记者约翰·多尼森来自大马士革的报道，并提醒其报告中部分细节可能令人不适。</p>
+<p><button class="play-button sentence" id="s-00-01-02-158" data-start="00:01:02,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This morning in and around Sueda, it didn't look much like a ceasefire.</p>
+<p>今晨在苏埃达及周边，停火协议形同虚设。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-07-799" data-start="00:01:07,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bedwin tribesmen in running gun battles with fighters from the minority Druze community.</p>
+<p>贝都因部落武装与少数派德鲁兹战士爆发枪战。</p>
+<p><button class="play-button sentence" id="s-00-01-15-799" data-start="00:01:15,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will go to their houses and kill them in their homes, said this Bedwin, Abu Jazeem.</p>
+<p>这名贝都因人阿布·贾齐姆称："我们将闯入他们家中杀死他们。"</p>
+<p><button class="play-button sentence" id="s-00-01-23-879" data-start="00:01:23,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since Sueda itself, this exclusive video attained by the BBC World Service shows a Druze family of six who appear to have been shot as they slept, who killed them is not known.</p>
+<p>BBC获得的独家视频显示，苏埃达当地一个六口德鲁兹家庭在睡梦中遭枪杀，凶手未知。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959901" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-38-399" data-start="00:01:38,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Syrian army has now set up checkpoints around Sueda to try to restore calm.</p>
+<p>叙利亚军队已在苏埃达周边设立检查站以恢复秩序。</p>
+<p><button class="play-button sentence" id="s-00-01-46-519" data-start="00:01:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It came after President Ahmed Al-Sharah announced the new ceasefire.</p>
+<p>此前总统艾哈迈德·沙拉宣布新一轮停火。</p>
+<p><button class="play-button sentence" id="s-00-01-51-599" data-start="00:01:51,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's previously been accused, though, of siding with the Bedwin tribes.</p>
+<p>但他此前被指控偏袒贝都因部落。</p>
+<p><button class="play-button sentence" id="s-00-01-58-438" data-start="00:01:58,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The last time he did that, Israel struck Damascus, wary of having Syrian forces, some aligned with Al-Qaeda, close to its northern border.</p>
+<p>上次他这样做时，以色列空袭了大马士革，因担忧与基地组织有关联的叙利亚部队逼近其北部边境。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959871" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-08-158" data-start="00:02:08,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Israel had to sign up to this ceasefire too.</p>
+<p>因此以色列也不得不签署此次停火协议。</p>
+<p><button class="play-button sentence" id="s-00-02-12-959" data-start="00:02:12,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here in the capital Damascus life feels relatively stable, but this is a big and fractured country.</p>
+<p>首都大马士革生活相对稳定，但叙利亚仍是一个分裂的大国。</p>
+<p><button class="play-button sentence" id="s-00-02-20-878" data-start="00:02:20,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are many competing factions, as well as external forces, who want to say in the country's future.</p>
+<p>众多敌对派系及外部势力试图左右该国未来。</p>
+<p><button class="play-button sentence" id="s-00-02-27-878" data-start="00:02:27,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After a decade or more of conflict, Syria is not yet at peace.</p>
+<p>历经十余年冲突，叙利亚仍未实现和平。</p>
+<p><button class="play-button sentence" id="s-00-02-35-280" data-start="00:02:35,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I think you've got a sense there of just what a complex country this is.</p>
+<p>相信您已感受到这个国家的复杂性。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959837" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-42-199" data-start="00:02:42,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, it comes out of decades of dictatorship here and a popular uprising.</p>
+<p>这源于数十年的独裁统治及民众起义。</p>
+<p><button class="play-button sentence" id="s-00-02-47-240" data-start="00:02:47,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, if you remember what happened in Libya, a decade ago, after the fall of Mohmah Gideffi, we had years of instability.</p>
+<p>回想十年前卡扎菲倒台后的利比亚，多年动荡历历在目。</p>
+<p><button class="play-button sentence" id="s-00-02-54-718" data-start="00:02:54,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It feels pretty reminiscent of what happened there here.</p>
+<p>叙利亚现状与之惊人相似。</p>
+<p><button class="play-button sentence" id="s-00-02-58-960" data-start="00:02:58,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Syria is much more important than Libya in terms of broader stability across the wider Middle East.</p>
+<p>就中东整体稳定而言，叙利亚比利比亚更为关键。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-06-759" data-start="00:03:06,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> John, thank you.</p>
+<p>感谢约翰。</p>
+<p><button class="play-button sentence" id="s-00-03-07-759" data-start="00:03:07,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> John Doleston reporting there.</p>
+<p>约翰·多斯顿的报道。</p>
+<p><button class="play-button sentence" id="s-00-03-10-520" data-start="00:03:10,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Hamas-run civil defense agency in Gaza says 26 Palestinians have been killed and more than 100 injured by Israeli gunfire near two food distribution centres run by the US and Israeli-backed Gaza humanitarian foundation.</p>
+<p>加沙哈马斯民防机构称，美以支持的加沙人道主义基金会两处食品分发中心附近，以军枪击致26名巴勒斯坦人死亡、超100人受伤。</p>
+<p><button class="play-button sentence" id="s-00-03-25-800" data-start="00:03:25,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The latest deaths happen near Khan, Yunus and Raffa.</p>
+<p>最新死亡事件发生在汗尤尼斯和拉法附近。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959790" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-29-280" data-start="00:03:29,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The GHF said there were no incidents at or near their sites today.</p>
+<p>该基金会表示今日其站点及周边无冲突。</p>
+<p><button class="play-button sentence" id="s-00-03-33-759" data-start="00:03:33,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli military says it's investigating, citing an overnight incident in the Raffa area where troops fired warning shots at suspects.</p>
+<p>以军称正在调查，提及拉法地区夜间向可疑人员鸣枪示警事件。</p>
+<p><button class="play-button sentence" id="s-00-03-43-000" data-start="00:03:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thousands of people have been arrested around the UK at protest in support of Palestine action.</p>
+<p>英国多地支持巴勒斯坦的抗议活动中数千人被捕。</p>
+<p><button class="play-button sentence" id="s-00-03-48-560" data-start="00:03:48,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Demonstrations were held in London, Manchester, Edinburgh, Bristol and Truro.</p>
+<p>伦敦、曼彻斯特、爱丁堡、布里斯托和特鲁罗爆发示威。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-53-080" data-start="00:03:53,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In central London, 55 people have been arrested after large crowds gathered in Parliament Square.</p>
+<p>伦敦市中心议会广场大规模集会致55人被捕。</p>
+<p><button class="play-button sentence" id="s-00-03-59-240" data-start="00:03:59,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Palestine action was prescribed as a terrorist organisation by the UK government earlier this month.</p>
+<p>本月初英国政府将"巴勒斯坦行动"列为恐怖组织。</p>
+<p><button class="play-button sentence" id="s-00-04-06-438" data-start="00:04:06,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Seven people are in a critical condition in hospital after a vehicle drove into a crowd in Los Angeles in the early hours of this morning.</p>
+<p>洛杉矶凌晨车辆冲撞人群事件致7人重伤住院。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-14-639" data-start="00:04:14,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The LA Fire Department said at least 30 people were injured in the incident, which occurred outside the Vermont nightclub in East Hollywood on the city's famous Santa Monica boulevard.</p>
+<p>洛杉矶消防部门称，事件致至少30人受伤，发生于东好莱坞圣莫尼卡大道佛蒙特夜总会外。</p>
+<p><button class="play-button sentence" id="s-00-04-25-439" data-start="00:04:25,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A run-a-day Mukaji reports now from Washington.</p>
+<p>BBC记者穆卡吉从华盛顿发回报道。</p>
+<p><button class="play-button sentence" id="s-00-04-30-040" data-start="00:04:30,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The aftermath of a horrific incident that unfolded around two in the morning on Santa Monica boulevard in Los Angeles.</p>
+<p>这场恐怖事件于凌晨两点左右发生在洛杉矶圣莫尼卡大道。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959722" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-37-480" data-start="00:04:37,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emergency team responded to dozens injured after a car drove into a large crowd of people out for the weekend.</p>
+<p>车辆冲撞周末外出人群致数十人受伤，急救团队已响应。</p>
+<p><button class="play-button sentence" id="s-00-04-44-560" data-start="00:04:44,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he came over here full speed, lost control of the car, they just worked on the sidewalk.</p>
+<p>目击者称："肇事者高速驶来失控，车辆冲上人行道。"</p>
+<p><button class="play-button sentence" id="s-00-04-49-480" data-start="00:04:49,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They got pinned over there.</p>
+<p>多人被压在车下。</p>
+<p><button class="play-button sentence" id="s-00-04-51-560" data-start="00:04:51,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A majority of those wounded said to be women who were waiting to go into a nightclub.</p>
+<p>伤者多为等候进入夜店的女性。</p>
+<p><button class="play-button sentence" id="s-00-04-56-839" data-start="00:04:56,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some are critical and one of them with a bullet injury too.</p>
+<p>部分伤势危重，其中一人还有枪伤。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-00-839" data-start="00:05:00,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We do know that the driver disassained some trauma injuries.</p>
+<p>据悉驾驶员也受外伤。</p>
+<p><button class="play-button sentence" id="s-00-05-04-879" data-start="00:05:04,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultimately there was also a gunshot victim here, unknown which one of the patients had the stuff for the gunshot wound, but our firefighter Paramex did treat a gunshot.</p>
+<p>另有一名枪击伤者，具体身份未明，但消防员帕拉梅克斯实施了救治。</p>
+<p><button class="play-button sentence" id="s-00-05-17-120" data-start="00:05:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, right now the circumstances that we know that a vehicle did drive through the crowd, we don't know the cause of that.</p>
+<p>目前仅知车辆冲入人群，原因尚未查明。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959674" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-25-319" data-start="00:05:25,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I witnessed an official see that was complete chaos when the car struck, with bystanders rushing out to help.</p>
+<p>目击者描述撞击现场混乱，路人纷纷施救。</p>
+<p><button class="play-button sentence" id="s-00-05-32-079" data-start="00:05:32,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I live over here and I heard the gunshot, looked out, saw the guy crashing to the ran-overs in some heat.</p>
+<p>附近居民称："听到枪声后目睹肇事车辆高速冲撞。"</p>
+<p><button class="play-button sentence" id="s-00-05-37-399" data-start="00:05:37,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When I got over there there was one assassin at the gunshot in the lane, not starting about the back of the head that was greeting.</p>
+<p>赶到现场时发现一名头部中弹者倒在车道上。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959655" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-44-800" data-start="00:05:44,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A girl didn't aim at scashing to her arm, like another girl hit my car and the other girl was also hit by the car as well.</p>
+<p>"一名女孩手臂受伤，另一名撞上我的车，还有一名被肇事车撞击。"</p>
+<p><button class="play-button sentence" id="s-00-05-53-199" data-start="00:05:53,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The incident still being investigated and there's little known about what caused the vehicle to drive into the crowd.</p>
+<p>事件仍在调查中，肇事动机未明。</p>
+<p><button class="play-button sentence" id="s-00-05-59-920" data-start="00:05:59,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know, there Mukherjee, BBC News, Washington.</p>
+<p>BBC记者穆克吉华盛顿报道。</p>
+<p><button class="play-button sentence" id="s-00-06-04-439" data-start="00:06:04,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sport now and in Rugby Union, the first test between the British and Irish lines and Australia in Brisbane saw the tourists beat the Wallabies 27 to 19, Patrick Geary reports.</p>
+<p>体育消息：橄榄球首场测试赛中，英国爱尔兰雄狮队在布里斯班27-19击败澳大利亚队。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959623" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-16-720" data-start="00:06:16,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To Australia's cornicopia of animals, exotic and dangerous, you could now add lion.</p>
+<p>澳大利亚奇珍异兽名录现可添上"雄狮"。</p>
+<p><button class="play-button sentence" id="s-00-06-24-920" data-start="00:06:24,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Under cover of darkness, the British and Irish lines began their advance upon startled Wallabies.</p>
+<p>英国爱尔兰联队趁夜色进攻击溃袋鼠队。</p>
+<p><button class="play-button sentence" id="s-00-06-30-680" data-start="00:06:30,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Australia could only watch Scotland's fin rustle pick out his adopted countryman, Cioni Tuapolo Tu, born in Melbourne but a lion in Brisbane.</p>
+<p>澳大利亚队目睹苏格兰裔球员图阿波洛·图（墨尔本出生）为雄狮队得分。</p>
+<p><button class="play-button sentence" id="s-00-06-40-360" data-start="00:06:40,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Aussies needed a spark, it fell from the sky into the hands of an Australian born in Sheffield.</p>
+<p>澳大利亚队急需突破，谢菲尔德出生的马克斯·约根森成为转机。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959594" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-45-879" data-start="00:06:45,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Max Jorgensen, a steel man in a gold shirt, plotted a path back.</p>
+<p>这位"金衫钢人"策划反击。</p>
+<p><button class="play-button sentence" id="s-00-06-51-079" data-start="00:06:51,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the lions pressure resumed, weighing on the Wallaby wall until Tom Curry found a crack.</p>
+<p>但雄狮队持续施压，最终汤姆·库里突破防线。</p>
+<p><button class="play-button sentence" id="s-00-06-57-838" data-start="00:06:57,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was always assumed they would have too much, the lions had arrived as big favourites, just a minute after the break they had the third try.</p>
+<p>赛前雄狮队就被看好，下半场开场一分钟即第三次达阵。</p>
+<p><button class="play-button sentence" id="s-00-07-06-278" data-start="00:07:06,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet that's where they stopped.</p>
+<p>但此后攻势停滞。</p>
+<p><button class="play-button sentence" id="s-00-07-08-119" data-start="00:07:08,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fizz went out of the match, Australia scored twice.</p>
+<p>比赛势头减弱，澳大利亚队两次得分。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959568" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-11-278" data-start="00:07:11,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The second from replacement, Tate McDermott, and yet never seriously threatened to change the result.</p>
+<p>替补球员泰特·麦克德莫特第二次达阵但未能扭转败局。</p>
+<p><button class="play-button sentence" id="s-00-07-17-478" data-start="00:07:17,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 27, 19, the lions start not quite with a roar, but a polite salute, at least.</p>
+<p>27比19，雄狮队虽未咆哮开场，至少礼貌致意。</p>
+<p><button class="play-button sentence" id="s-00-07-23-478" data-start="00:07:23,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Patrick Geary, BBC News.</p>
+<p>帕特里克·格里报道。</p>
+<p><button class="play-button sentence" id="s-00-07-26-160" data-start="00:07:26,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Golf and on day three of the open in Northern Ireland, home favourite and roaring McElroy is fighting to advance up the leaderboard.</p>
+<p>高尔夫公开赛第三日，北爱尔兰本土名将罗里·麦克罗伊奋力提升排名。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959546" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-33-560" data-start="00:07:33,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And England's map fits Patrick is still contesting at the top.</p>
+<p>英格兰选手马特·菲茨帕特里克仍居榜首。</p>
+<p><button class="play-button sentence" id="s-00-07-36-519" data-start="00:07:36,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Wilson reports.</p>
+<p>乔·威尔逊报道。</p>
+<p><button class="play-button sentence" id="s-00-07-38-040" data-start="00:07:38,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 3rd round on the Antrim coast, get moving.</p>
+<p>安特里姆海岸第三轮比赛开杆。</p>
+<p><button class="play-button sentence" id="s-00-07-42-199" data-start="00:07:42,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rory McElroy began seven shots off the lead, first green, first chance for a birdie.</p>
+<p>罗里·麦克罗伊落后领先者7杆，首洞即获小鸟球机会。</p>
+<p><button class="play-button sentence" id="s-00-07-49-800" data-start="00:07:49,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Exactly what Port Rush wanted.</p>
+<p>这正是皇家波特拉什观众期待的。</p>
+<p><button class="play-button sentence" id="s-00-07-51-839" data-start="00:07:51,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 3 Rory birdies on the front nine holes.</p>
+<p>麦克罗伊前九洞抓3鸟。</p>
+<p><button class="play-button sentence" id="s-00-07-54-920" data-start="00:07:54,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Further up the leaderboard, Matt Fitzpatrick produced this on the second.</p>
+<p>领先榜上，马特·菲茨帕特里克第二洞表现惊艳。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959520" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-59-759" data-start="00:07:59,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is an eagle.</p>
+<p>一记老鹰球。</p>
+<p><button class="play-button sentence" id="s-00-08-02-000" data-start="00:08:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, just up there, all the excitement and intrigue of the open is going on.</p>
+<p>赛场上的公开赛精彩纷呈。</p>
+<p><button class="play-button sentence" id="s-00-08-07-600" data-start="00:08:07,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here on the beach, well, you could easily walk by without even knowing.</p>
+<p>而海滩边的观众可能浑然不觉。</p>
+<p><button class="play-button sentence" id="s-00-08-11-639" data-start="00:08:11,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some things are bigger, even than golf.</p>
+<p>有些事物甚至超越高尔夫。</p>
+<p><button class="play-button sentence" id="s-00-08-14-319" data-start="00:08:14,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And actually, that does seem to be Scotty Sheffler's perspective.</p>
+<p>这似乎是斯科蒂·舍夫勒的视角。</p>
+<p><button class="play-button sentence" id="s-00-08-19-079" data-start="00:08:19,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The overnight leader seeks deeper fulfilment, of course he's trying to win, early miss for Sheffler.</p>
+<p>暂列首位的舍夫勒追求更高目标，虽开局失误仍志在夺冠。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959494" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-25-160" data-start="00:08:25,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yorkshireman John Perry on the lucky 13th.</p>
+<p>约克郡选手约翰·佩里第13洞发挥出色。</p>
+<p><button class="play-button sentence" id="s-00-08-27-800" data-start="00:08:27,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He finished the day three under for the open, he finished his hole with one shot.</p>
+<p>当日成绩低于标准杆3杆，最后一洞一击入洞。</p>
+<p><button class="play-button sentence" id="s-00-08-33-320" data-start="00:08:33,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That excitement never seems to grow old.</p>
+<p>这种激情永不褪色。</p>
+<p><button class="play-button sentence" id="s-00-08-37-639" data-start="00:08:37,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Wilson, BBC News, Port Rush.</p>
+<p>乔·威尔逊皇家波特拉什报道。</p>
+<p><button class="play-button sentence" id="s-00-08-41-360" data-start="00:08:41,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thousands of people from around the world are in Aberdeen this weekend for the annual Toulships races.</p>
+<p>全球数千人齐聚阿伯丁参加年度高桅横帆船赛。</p>
+<p><button class="play-button sentence" id="s-00-08-46-759" data-start="00:08:46,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's promising to be one of the biggest tourist events in Scotland this year.</p>
+<p>这有望成为苏格兰今年最大旅游盛事之一。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959469" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-50-440" data-start="00:08:50,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ben Philip reports.</p>
+<p>本·菲利普报道。</p>
+<p><button class="play-button sentence" id="s-00-08-54-480" data-start="00:08:54,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As seen from the golden age of sailing, one by one, a fleet of majestic vessels have made their proud entrance into Aberdeen over the past couple of days.</p>
+<p>仿若航海黄金时代重现，连日来众多雄伟帆船陆续驶入阿伯丁港。</p>
+<p><button class="play-button sentence" id="s-00-09-05-200" data-start="00:09:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around 50 ships from across the globe have dropped anchor here after racing from France, some from as far afield as Peru, Uruguay and Oman.</p>
+<p>约50艘来自法国等地的赛船在此停泊，最远有秘鲁、乌拉圭和阿曼船只。</p>
+<p><button class="play-button sentence" id="s-00-09-17-158" data-start="00:09:17,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The festival officially opened this morning.</p>
+<p>赛事今晨正式开幕。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959440" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-19-278" data-start="00:09:19,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The weather has taken a bit of a turn though.</p>
+<p>但天气突变。</p>
+<p><button class="play-button sentence" id="s-00-09-21-918" data-start="00:09:21,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was a yellow warning for heavy rain in place until tomorrow, but that won't put off the hundreds of thousands of visitors who were expected to descend on this key side over the next few days.</p>
+<p>暴雨黄色预警持续至明日，但预计未来几天仍将吸引数十万游客。</p>
+<p><button class="play-button sentence" id="s-00-09-32-599" data-start="00:09:32,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The crowds are spectacular today, I mean I've never seen so much people that haven't been harming a long time.</p>
+<p>"今日人群壮观，多年未见如此盛况。"</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959422" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-37-519" data-start="00:09:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's spectacular, great, great event for the city.</p>
+<p>"这是城市的伟大盛事。"</p>
+<p><button class="play-button sentence" id="s-00-09-40-278" data-start="00:09:40,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you make of what you see?</p>
+<p>您如何评价所见景象？</p>
+<p><button class="play-button sentence" id="s-00-09-41-519" data-start="00:09:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they're fantastic.</p>
+<p>"太惊艳了。"</p>
+<p><button class="play-button sentence" id="s-00-09-43-719" data-start="00:09:43,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You don't appreciate the size of these vessels until they're up close to them.</p>
+<p>"近观才知这些船只的宏伟。"</p>
+<p><button class="play-button sentence" id="s-00-09-47-519" data-start="00:09:47,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the first to arrive this week was the Polish Friedrich Chopin, competing in the large ship class A category it won the race last year.</p>
+<p>波兰"弗里德里克·肖邦"号率先抵达，这艘去年A类大船组冠军今年再度参赛。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959403" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-57-000" data-start="00:09:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says a special box to protect it.</p>
+<p>船身设有特殊保护箱。</p>
+<p><button class="play-button sentence" id="s-00-10-00-158" data-start="00:10:00,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh wow.</p>
+<p>"令人惊叹。"</p>
+<p><button class="play-button sentence" id="s-00-10-01-158" data-start="00:10:01,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is really quite heavy.</p>
+<p>"非常厚重。"</p>
+<p><button class="play-button sentence" id="s-00-10-07-158" data-start="00:10:07,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and you'll be hoping you'll be able to defend this.</p>
+<p>"你们希望能卫冕成功吧？"</p>
+<p><button class="play-button sentence" id="s-00-10-10-120" data-start="00:10:10,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, we try very hard to defend it.</p>
+<p>"我们会全力卫冕。"</p>
+<p><button class="play-button sentence" id="s-00-10-16-360" data-start="00:10:16,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first to all ships race was held in 1956.</p>
+<p>首届高桅横帆船赛于1956年举办。</p>
+<p><button class="play-button sentence" id="s-00-10-20-158" data-start="00:10:20,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The route from Devon to Lisbon was organized to promote training for young people in the art of sailing.</p>
+<p>从德文郡至里斯本的航线旨在培养青年航海技艺。</p>
+<p><button class="play-button sentence" id="s-00-10-26-918" data-start="00:10:26,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Decades later and those early principles haven't changed.</p>
+<p>数十年后初心未改。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959369" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-31-000" data-start="00:10:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than one half of each ship's crew must be aged 15 to 25.</p>
+<p>每艘船超半数船员须为15至25岁青年。</p>
+<p><button class="play-button sentence" id="s-00-10-35-799" data-start="00:10:35,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was something completely new and out of my comfort zone, so hopefully just like something different that I've never done before and learn lots of new skills and make memories.</p>
+<p>"这全新体验让我突破舒适区，期待学习新技能并创造回忆。"</p>
+<p><button class="play-button sentence" id="s-00-10-45-639" data-start="00:10:45,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ships are in town until Tuesday before they set sail once again for the next stop across the North Sea to Norway before crossing the finishing line in Denmark in August.</p>
+<p>船队将停留至周二，随后启程穿越北海前往挪威，最终八月抵达丹麦终点线。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV19ag4zrEA1/?t=-2208959343" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-56-278" data-start="00:10:56,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ben Philip, BBC News, Aberdeen.</p>
+<p>本·菲利普阿伯丁报道。</p>
+<p><button class="play-button sentence" id="s-00-11-00-480" data-start="00:11:00,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's it now time for the news where you are.</p>
+<p>接下来是本地新闻时间。</p>
+<p><button class="play-button sentence" id="s-00-11-02-480" data-start="00:11:02,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye bye.</p>
+<p>再见。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
