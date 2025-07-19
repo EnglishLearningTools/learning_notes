@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Artist’s statement: why pop star forays into politics are seldom effective</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Economist discusses why celebrities' political statements, though often sincere, can be ineffective, misguided, or even counterproductive, citing examples like Bruce Springsteen, Olivia Rodrigo, and Bob Vylan, while noting the complexities of artistic expression and public influence.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Artist’s statement: why pop star forays into politics are seldom effective</h1>
+<p>【经济学人播客 Editors' Picks 艺术家声明：为何流行明星涉足政治往往收效甚微 20250718】</p>
+<p>Summary:
+The Economist discusses why celebrities' political statements, though often sincere, can be ineffective, misguided, or even counterproductive, citing examples like Bruce Springsteen, Olivia Rodrigo, and Bob Vylan, while noting the complexities of artistic expression and public influence.</p>
+<p>摘要：
+《经济学人》探讨了名人政治表态为何常常无效、误导甚至适得其反，援引了布鲁斯·斯普林斯汀、奥利维亚·罗德里戈和鲍勃·维兰等例子，同时指出艺术表达与公众影响力的复杂性。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Economist Hi there, it's Jason Palmer here, co-host of The Intelligence, our daily news and current affairs podcast.</p>
+<p>《经济学人》你好，我是杰森·帕尔默，《情报》节目的联合主持人，这是我们每日新闻与时事播客。</p>
+<p><button class="play-button sentence" id="s-00-00-17-079" data-start="00:00:17,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is Editors' Picks.</p>
+<p>这里是《编辑精选》。</p>
+<p><button class="play-button sentence" id="s-00-00-18-600" data-start="00:00:18,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're about to hear an article from the latest edition of The Economist, Read All Out.</p>
+<p>你将听到《经济学人》最新一期《全力阅读》中的一篇文章。</p>
+<p><button class="play-button sentence" id="s-00-00-22-920" data-start="00:00:22,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Enjoy.</p>
+<p>请欣赏。</p>
+<p><button class="play-button sentence" id="s-00-00-31-000" data-start="00:00:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The high priests of speaking out are John Stuart Mill, an English philosopher, and Martin Niemöller, a Lutheran pastor.</p>
+<p>直言不讳的先驱是英国哲学家约翰·斯图尔特·密尔和路德宗牧师马丁·尼莫勒。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959958" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-41-640" data-start="00:00:41,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bad men need nothing more to compass their ends, Mill wrote, than that good men should look on and do nothing.</p>
+<p>密尔写道，坏人要实现目的，只需好人们袖手旁观。</p>
+<p><button class="play-button sentence" id="s-00-00-50-225" data-start="00:00:50,225" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Niemöller famously ventriloquized the many Germans who kept silent when the Nazis came for the Socialists, the trade unionists, and the Jews.</p>
+<p>尼莫勒以名言替许多德国人发声——当纳粹逮捕社会党人、工会成员和犹太人时，他们保持沉默。</p>
+<p><button class="play-button sentence" id="s-00-01-00-399" data-start="00:01:00,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then they came for me, and there was no one left to speak for me.</p>
+<p>后来他们来抓我，已无人替我说话。</p>
+<p><button class="play-button sentence" id="s-00-01-06-040" data-start="00:01:06,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like Mill and Niemöller, artists and musicians who call out injustice have hardly seen standing up for the oppressed as a moral obligation.</p>
+<p>与密尔和尼莫勒一样，谴责不公的艺术家和音乐人很少将捍卫受压迫者视为道德义务。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959924" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-15-799" data-start="00:01:15,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Speaking out on world affairs is invoked as it tends to be amid political ruckus, and much of it is doubtless heartfelt and sincere.</p>
+<p>在世界事务中发声常出现在政治喧嚣中，且大多无疑是真诚的。</p>
+<p><button class="play-button sentence" id="s-00-01-24-519" data-start="00:01:24,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it can also have other motives and unintended consequences.</p>
+<p>但它也可能有其他动机和意外后果。</p>
+<p><button class="play-button sentence" id="s-00-01-30-358" data-start="00:01:30,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two developments explain the current clamor.</p>
+<p>两大事件解释了当前的喧嚣。</p>
+<p><button class="play-button sentence" id="s-00-01-32-959" data-start="00:01:32,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, the re-election of Donald Trump, a bogeyman for the showbiz elite, give or take a few country singers and wrestlers.</p>
+<p>首先，唐纳德·特朗普的连任——娱乐圈精英的眼中钉，除少数乡村歌手和摔角手外。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959899" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-41-000" data-start="00:01:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At a recent gig in Britain, Bruce Springsteen labeled him an unfit president in charge of a corrupt, incompetent, and treasonous administration.</p>
+<p>最近在英国演出时，布鲁斯·斯普林斯汀称他是领导腐败、无能且叛国政府的不称职总统。</p>
+<p><button class="play-button sentence" id="s-00-01-51-760" data-start="00:01:51,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Olivia Rodrigo, Katy Perry and others have criticized his migrant roundups and deportations.</p>
+<p>奥利维亚·罗德里戈、凯蒂·佩里等人批评了他的移民围捕和驱逐政策。</p>
+<p><button class="play-button sentence" id="s-00-01-59-480" data-start="00:01:59,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The other new factor is Gaza.</p>
+<p>另一新因素是加沙。</p>
+<p><button class="play-button sentence" id="s-00-02-02-400" data-start="00:02:02,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the recent Glastonbury Music Festival, the frontman of Bob Vylan, a punk duo, followed his "Free Palestine" chant with another that advocated "death to the IDF".</p>
+<p>在最近的格拉斯顿伯里音乐节上，朋克双人组鲍勃·维兰的主唱高喊"解放巴勒斯坦"后，又呼吁"以色列国防军去死"。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959862" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-17-851" data-start="00:02:17,851" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some in the crowd joined in.</p>
+<p>部分观众附和。</p>
+<p><button class="play-button sentence" id="s-00-02-20-120" data-start="00:02:20,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bob Vylan was the warm-up act for Kneecap, a hip-hop trio already in hot water after a show where a band member yelled "Up Hamas, up Hezbollah".</p>
+<p>鲍勃·维兰是嘻哈三人组"膝盖骨"的开场嘉宾，后者因成员高呼"哈马斯万岁，真主党万岁"陷入争议。</p>
+<p><button class="play-button sentence" id="s-00-02-32-400" data-start="00:02:32,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Publicly wishing death on anyone is grotesque and potentially illegal.</p>
+<p>公开咒人死亡既荒诞又可能违法。</p>
+<p><button class="play-button sentence" id="s-00-02-37-758" data-start="00:02:37,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in general it must be said musicians should be free to express their political opinions, whether sensible or idiotic.</p>
+<p>但总体而言，音乐人应有权表达政治观点，无论明智或愚蠢。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959834" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-45-400" data-start="00:02:45,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After all, song lyrics themselves are often political.</p>
+<p>毕竟歌词本身常具政治性。</p>
+<p><button class="play-button sentence" id="s-00-02-49-438" data-start="00:02:49,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Springsteen denounces conflict in his song "War".</p>
+<p>斯普林斯汀在歌曲《战争》中谴责冲突。</p>
+<p><button class="play-button sentence" id="s-00-02-53-800" data-start="00:02:53,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bono and U2 lament the Troubles in Northern Ireland in "Sunday Bloody Sunday".</p>
+<p>波诺与U2在《血腥星期日》中哀叹北爱尔兰问题。</p>
+<p><button class="play-button sentence" id="s-00-03-00-280" data-start="00:03:00,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Expecting them to keep mum about such subjects when the music stops would be odd.</p>
+<p>要求他们在音乐停止后对此沉默会很奇怪。</p>
+<p><button class="play-button sentence" id="s-00-03-07-000" data-start="00:03:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Artists have the same right as everyone else to speak out, but doing so is not always noble, sensible, or effective.</p>
+<p>艺术家与他人享有同等发声权，但这并非总是高尚、明智或有效。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959805" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-14-840" data-start="00:03:14,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One wrinkle is that outbursts which purport to be bold are often predictable, even conformist.</p>
+<p>问题在于，所谓大胆的爆发往往可预测甚至从众。</p>
+<p><button class="play-button sentence" id="s-00-03-21-878" data-start="00:03:21,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Festivals like Glastonbury might as well fly banners proclaiming that the bands on stage support the Palestinians unless otherwise stated.</p>
+<p>像格拉斯顿伯里这样的音乐节不如挂横幅声明：台上乐队支持巴勒斯坦，除非另有说明。</p>
+<p><button class="play-button sentence" id="s-00-03-30-919" data-start="00:03:30,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many young fans do too.</p>
+<p>许多年轻乐迷亦然。</p>
+<p><button class="play-button sentence" id="s-00-03-33-639" data-start="00:03:33,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Speaking out to people who already know your views or largely share them is not what Niemöller envisaged.</p>
+<p>向已知或认同你观点的人发声并非尼莫勒的初衷。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959778" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-41-360" data-start="00:03:41,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, evidence suggests that celebrities change few minds or not in the way they intend.</p>
+<p>同时有证据表明，名人很少改变他人想法，或并非以他们期望的方式。</p>
+<p><button class="play-button sentence" id="s-00-03-49-280" data-start="00:03:49,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take the galaxy of stars who backed Kamala Harris last year, of whom the brightest was Taylor Swift.</p>
+<p>比如去年支持卡玛拉·哈里斯的明星群，最耀眼的是泰勒·斯威夫特。</p>
+<p><button class="play-button sentence" id="s-00-03-56-360" data-start="00:03:56,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pollsters found her support turned more voters off Harris than it attracted, perhaps because it fed fears of an establishment stitch-up.</p>
+<p>民调显示她的支持为哈里斯赶走的选民比吸引的更多，或许因这加剧了对体制操纵的担忧。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959753" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-06-061" data-start="00:04:06,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tirade like Mr. Springsteen's are grist to Mr. Trump's omnivorous metabolism that turns all publicity to his advantage, showcasing his pugilism and hogging attention.</p>
+<p>斯普林斯汀式的抨击反为特朗普的"全消化代谢"添料——将一切关注转为己用，突显其好斗并霸占焦点。</p>
+<p><button class="play-button sentence" id="s-00-04-16-800" data-start="00:04:16,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He dismissed Mr. Springsteen as a dried-out prune of a rocker and claimed Taylor Swift was no longer hot.</p>
+<p>他贬斯普林斯汀为"干瘪的摇滚老朽"，并称泰勒·斯威夫特"过气了"。</p>
+<p><button class="play-button sentence" id="s-00-04-25-718" data-start="00:04:25,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In any case, artists and their admirers are prone to ascribe more power to their craft than it usually wields.</p>
+<p>无论如何，艺术家与崇拜者常高估其艺术的影响力。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959725" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-34-405" data-start="00:04:34,405" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authoritarians and despotic regimes are wary of mass gatherings like rock concerts.</p>
+<p>威权者与专制政权警惕摇滚音乐会等群众集会。</p>
+<p><button class="play-button sentence" id="s-00-04-39-480" data-start="00:04:39,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A crowd can turn into a mob and then into a revolution.</p>
+<p>人群可能变成暴民，进而引发革命。</p>
+<p><button class="play-button sentence" id="s-00-04-45-175" data-start="00:04:45,175" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tyrants often crack down on dissident artists, but they crack down on lots of people.</p>
+<p>暴君常镇压异见艺术家，但他们镇压很多人。</p>
+<p><button class="play-button sentence" id="s-00-04-51-319" data-start="00:04:51,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When musicians have real clout, it mostly comes from amplifying or refracting a cause in shimmering work, not clunky rants.</p>
+<p>音乐人真正的影响力多来自用璀璨作品放大或折射事业，而非笨拙的咆哮。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-360" data-start="00:05:01,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Think of Nina Simone's sculpted fury in "Mississippi Goddam" or Bob Dylan's lapidary imagery in "The Times They Are A-Changin'".</p>
+<p>想想妮娜·西蒙在《密西西比诅咒》中精雕的愤怒，或鲍勃·迪伦在《时代在变》中如碑文般的意象。</p>
+<p><button class="play-button sentence" id="s-00-05-12-360" data-start="00:05:12,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Times have indeed changed.</p>
+<p>时代确实变了。</p>
+<p><button class="play-button sentence" id="s-00-05-14-399" data-start="00:05:14,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than their forebears, today's celebs are expected to share their private lives and convictions.</p>
+<p>当今名人比前辈更被要求分享私生活与信念。</p>
+<p><button class="play-button sentence" id="s-00-05-21-519" data-start="00:05:21,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In this coercive culture, tact is timidity and silence is complicity in violence.</p>
+<p>在这种强制文化中，圆滑是怯懦，沉默是暴力的共谋。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959672" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-27-800" data-start="00:05:27,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To adapt Mill, speaking out means you have done something and are therefore good.</p>
+<p>套用密尔：发声意味着你有所作为，因此是好人。</p>
+<p><button class="play-button sentence" id="s-00-05-33-240" data-start="00:05:33,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some stars seem less to use their fame to publicize a cause than use a cause to publicize themselves.</p>
+<p>有些明星看似用事业宣传自己，而非用名声宣传事业。</p>
+<p><button class="play-button sentence" id="s-00-05-41-040" data-start="00:05:41,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pursuit of moral glamour can set off a spiral of grandstanding, which in Britain led to a singer calling for death at a music festival.</p>
+<p>对道德魅力的追求可能引发作秀螺旋——在英国导致音乐节上有歌手呼吁死亡。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BouDzUErV/?t=-2208959649" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-50-360" data-start="00:05:50,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This kind of speaking out draws attention only to itself.</p>
+<p>这种发声只吸引对自身的关注。</p>
+<p><button class="play-button sentence" id="s-00-05-54-560" data-start="00:05:54,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the more time politicians talk about Bob Dylan, the less time they spend on Gaza, the group protested amid the ensuing fury.</p>
+<p>该团体在随之而来的愤怒中抗议：政客谈论鲍勃·迪伦越多，关注加沙的时间就越少。</p>
+<p><button class="play-button sentence" id="s-00-06-04-120" data-start="00:06:04,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Quite.</p>
+<p>确实。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
