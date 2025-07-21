@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>bbc.live: London Time 2025-07-20 22:59 - 23:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live coverage from BBC News in London, reporting on global events including the Gaza conflict, Syria tensions, UK football racism, water industry failures, and sports highlights.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>bbc.live: London Time 2025-07-20 22:59 - 23:30</h1>
+<p>【BBC News 20250721 以色列军方打死67名等待援助的巴勒斯坦人｜叙利亚紧张局势｜英国足球种族主义｜水务行业问题】</p>
+<p>Summary:
+Live coverage from BBC News in London, reporting on global events including the Gaza conflict, Syria tensions, UK football racism, water industry failures, and sports highlights.</p>
+<p>摘要：
+来自BBC新闻的伦敦直播，报道全球事件，包括加沙冲突、叙利亚紧张局势、英国足球种族主义、水务行业问题及体育新闻。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 36 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959987" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-13-000" data-start="00:00:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Live from London, this is BBC News.</p>
+<p>这里是BBC新闻，伦敦直播。</p>
+<p><button class="play-button sentence" id="s-00-00-15-855" data-start="00:00:15,855" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 67 Palestinians waiting for aid are killed in one incident in northern Gaza by the Israeli military, according to the Hamas Run Health Authority.</p>
+<p>据哈马斯管理的卫生部门称，以色列军方在加沙北部一次事件中打死67名等待援助的巴勒斯坦人。</p>
+<p><button class="play-button sentence" id="s-00-00-29-120" data-start="00:00:29,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Syria, government forces police and uneasy troops between Bedouin fighters and their drues opponents are correspondent.</p>
+<p>在叙利亚，政府军和不安的部队在贝都因战士及其德鲁兹对手之间维持秩序。</p>
+<p><button class="play-button sentence" id="s-00-00-36-119" data-start="00:00:36,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bedouin government have been massing on this road.</p>
+<p>贝都因武装人员在这条路上集结。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959959" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-40-198" data-start="00:00:40,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now they say that they have stuck to the cease-fire deal, but they say they don't get their hostages out, get the sick, they injured out, then they're going to go back in.</p>
+<p>他们表示遵守了停火协议，但称若不释放人质、撤离伤病员，将重新开战。</p>
+<p><button class="play-button sentence" id="s-00-00-51-719" data-start="00:00:51,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> England Fouballa, Jess Carter says online racist abuse string, Euro 2025, has driven her off social media.</p>
+<p>英格兰足球运动员杰斯·卡特称，2025年欧洲杯期间的网络种族辱骂迫使她退出社交媒体。</p>
+<p><button class="play-button sentence" id="s-00-00-58-778" data-start="00:00:58,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the eve of a major report into the water industry in England and Wales, the government says the regulator is failing to do its job.</p>
+<p>在英格兰和威尔士水务行业重大报告发布前夕，政府称监管机构失职。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-07-920" data-start="00:01:07,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Scottie Sheffler lifts the world famous Claret Jagger as the American golfer wins his first open championship at Royal Portrache.</p>
+<p>美国高尔夫球手斯科蒂·舍夫勒赢得皇家波特拉什公开赛冠军，捧起著名的葡萄酒壶奖杯。</p>
+<p><button class="play-button sentence" id="s-00-01-14-920" data-start="00:01:14,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, I'm Nicky Schiller, welcome to the preco.</p>
+<p>大家好，我是尼基·席勒，欢迎收看节目。</p>
+<p><button class="play-button sentence" id="s-00-01-26-239" data-start="00:01:26,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We start this out in Gaza where health authorities run by Hamas, say 88 people have been killed by Israeli gunfire across the territory.</p>
+<p>我们从加沙开始报道，哈马斯管理的卫生部门称以军火力已致该地区88人死亡。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959905" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-34-531" data-start="00:01:34,531" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the worst single incident at United Nations aid convoy in northern Gaza was met by what it called a massive crowd of hungry civilians, who the UN says was shot at.</p>
+<p>最严重事件中，联合国援助车队在加沙北部遭遇饥饿人群，联合国称人群遭射击。</p>
+<p><button class="play-button sentence" id="s-00-01-46-519" data-start="00:01:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli military said soldiers had fired warning shots to remove an immediate threat, and it disputed the claim that 67 Palestinians had been killed.</p>
+<p>以色列军方称士兵鸣枪示警以消除威胁，并质疑67名巴勒斯坦人死亡的指控。</p>
+<p><button class="play-button sentence" id="s-00-01-56-358" data-start="00:01:56,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If correct, that figure would mark this as one of the bloodiest incidents yet in repeated violence.</p>
+<p>若属实，该数字将使其成为持续暴力中最血腥的事件之一。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959871" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-08-520" data-start="00:02:08,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes as Israel issued new evacuation orders for dear al-Balla in central Gaza.</p>
+<p>此前以色列已对加沙中部的代尔巴拉发布新撤离令。</p>
+<p><button class="play-button sentence" id="s-00-02-14-400" data-start="00:02:14,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tens of thousands of people in the centre of the strip have been told to leave.</p>
+<p>加沙地带中部数万人被告知撤离。</p>
+<p><button class="play-button sentence" id="s-00-02-18-598" data-start="00:02:18,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The BBC, like other international news organisations, is prevented from reporting inside Gaza by Israel.</p>
+<p>BBC与其他国际媒体一样被以色列禁止在加沙境内报道。</p>
+<p><button class="play-button sentence" id="s-00-02-25-639" data-start="00:02:25,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amid the least correspondent, Yolanda El-Raportz from Jerusalem, and a warning you may find some of the images in her report distressing.</p>
+<p>耶路撒冷记者约兰达·埃尔-拉波尔茨将带来报道，部分画面可能引发不适。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959845" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-34-680" data-start="00:02:34,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Week and hungry, but in the dangerous wasteland of northern Gaza, these men returned triumphant today, with sacks of flour from the UN to feed their families.</p>
+<p>虚弱饥饿的人们在危险的加沙北部荒原上，今日带着联合国面粉袋凯旋而归以养家。</p>
+<p><button class="play-button sentence" id="s-00-02-48-199" data-start="00:02:48,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While the world, this man says, we got this flour by risking our lives, our blood.</p>
+<p>这名男子表示："我们用生命和鲜血换来了这些面粉。"</p>
+<p><button class="play-button sentence" id="s-00-02-53-718" data-start="00:02:53,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But dozens lost their lives, and even more were rushed in wounded to this Gaza City hospital, short on all medical supplies, doctors called the scene's catastrophic.</p>
+<p>但数十人丧生，更多伤者被送往医疗短缺的加沙城医院，医生称场景灾难性。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-06-318" data-start="00:03:06,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Witnesses described Israeli forces opening fire.</p>
+<p>目击者描述以军开火。</p>
+<p><button class="play-button sentence" id="s-00-03-10-718" data-start="00:03:10,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw the trucks approaching, so we moved towards them.</p>
+<p>"我们看到卡车接近，便向它们走去。"</p>
+<p><button class="play-button sentence" id="s-00-03-13-519" data-start="00:03:13,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They started shooting.</p>
+<p>"他们开始射击。"</p>
+<p><button class="play-button sentence" id="s-00-03-14-519" data-start="00:03:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We raised our hands like this, says Mojez-Ituna.</p>
+<p>莫杰兹-伊图纳说："我们这样举起双手。"</p>
+<p><button class="play-button sentence" id="s-00-03-18-080" data-start="00:03:18,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were running and signaling that we had nothing, that we were peaceful, then they started shooting at us.</p>
+<p>"我们边跑边示意手无寸铁且无害，但他们仍向我们开枪。"</p>
+<p><button class="play-button sentence" id="s-00-03-23-960" data-start="00:03:23,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The latest bloodshed, added to UN figures, brings the number of Palestinians reportedly killed waiting for aid over the past two months to around 1,000.</p>
+<p>最新流血事件使联合国统计的过去两月等待援助时死亡的巴勒斯坦人达约1000人。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959784" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-35-319" data-start="00:03:35,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel's military says that in the latest incident, its soldiers felt threatened by a large crowd and fired warning shots.</p>
+<p>以军称在最近事件中，士兵因感到受人群威胁而鸣枪示警。</p>
+<p><button class="play-button sentence" id="s-00-03-44-199" data-start="00:03:44,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Under south, new evacuation orders from the army panicked tens of thousands of Palestinians around the city of Dierde-Balach.</p>
+<p>南部地区，军队的新撤离令引发代尔巴拉赫市周边数万巴勒斯坦人恐慌。</p>
+<p><button class="play-button sentence" id="s-00-03-52-158" data-start="00:03:52,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Soon, people here began to flee, fearing that Israeli ground troops could now be preparing to enter this area for the first time in the war.</p>
+<p>人们很快开始逃离，担心以军地面部队将首次进入该地区。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959756" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-03-079" data-start="00:04:03,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They threw leaflets at us, and we don't know where we're going, it's as a D-I-W-Kinesse.</p>
+<p>"他们向我们抛撒传单，我们不知该往哪去。"</p>
+<p><button class="play-button sentence" id="s-00-04-07-758" data-start="00:04:07,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't have shelter or anything.</p>
+<p>"我们无处栖身。"</p>
+<p><button class="play-button sentence" id="s-00-04-11-280" data-start="00:04:11,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Holding up empty pots and dishes, Garsens want their desperation heard.</p>
+<p>加沙居民举起空锅碗瓢盆，希望外界听到他们的绝望。</p>
+<p><button class="play-button sentence" id="s-00-04-17-120" data-start="00:04:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most are displaced and surviving on one meal a day, if that, malnutrition is rising.</p>
+<p>多数人流离失所，每日仅一餐，营养不良加剧。</p>
+<p><button class="play-button sentence" id="s-00-04-25-120" data-start="00:04:25,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We want the war to end and the crossing is to open.</p>
+<p>"我们希望战争结束、过境点开放。"</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959731" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-28-120" data-start="00:04:28,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We want the Palestinian people to live a normal life.</p>
+<p>"希望巴勒斯坦人民过上正常生活。"</p>
+<p><button class="play-button sentence" id="s-00-04-30-879" data-start="00:04:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We want food and water to be brought in.</p>
+<p>"需要食物和水。"</p>
+<p><button class="play-button sentence" id="s-00-04-34-160" data-start="00:04:34,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for now, the handouts remain puttifully small, and there's still no breakthrough in indirect talks between Israel and Hamas on the truce and hostage release deal, which so many are hoping for.</p>
+<p>但目前援助仍杯水车薪，以哈停火及人质释放的间接谈判仍无突破。</p>
+<p><button class="play-button sentence" id="s-00-04-46-040" data-start="00:04:46,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'll and now BBC News, Jerusalem.</p>
+<p>这里是BBC新闻，耶路撒冷报道。</p>
+<p><button class="play-button sentence" id="s-00-04-49-040" data-start="00:04:49,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak now to Aaron David Miller, a former US State Department official and senior fellow at the American Statecraft Program at the Carnegie Endowment for International Peace.</p>
+<p>现在连线美国前国务院官员、卡内基国际和平基金会高级研究员亚伦·戴维·米勒。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-00-680" data-start="00:05:00,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for joining us on BBC News.</p>
+<p>感谢接受BBC新闻采访。</p>
+<p><button class="play-button sentence" id="s-00-05-02-680" data-start="00:05:02,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> United Nations has repeated its warnings that civilians in Gaza are starving and in urgent need of aid.</p>
+<p>联合国多次警告加沙平民面临饥荒急需援助。</p>
+<p><button class="play-button sentence" id="s-00-05-10-399" data-start="00:05:10,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you make of the current situation that we saw there in Yehland's report?</p>
+<p>您如何看待报道中呈现的现状？</p>
+<p><button class="play-button sentence" id="s-00-05-14-759" data-start="00:05:14,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, the headline is just the past is prologue here.</p>
+<p>关键在于历史正在重演。</p>
+<p><button class="play-button sentence" id="s-00-05-18-439" data-start="00:05:18,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The delivery of humanitarian assistance since the beginning from October 7, has been a catastrophe.</p>
+<p>自10月7日以来的人道主义援助交付一直是场灾难。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959675" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-24-680" data-start="00:05:24,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For any number of reasons, the Israelis are not committed to it in large part because Hamas holds hostages.</p>
+<p>以色列方面因哈马斯扣押人质等多重原因未全力配合。</p>
+<p><button class="play-button sentence" id="s-00-05-31-199" data-start="00:05:31,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israelis are using food and humanitarian assistance as pressure points in the Israelis are operating kinetically in an effort to push Palestinians out of northern Gaza into the South.</p>
+<p>以色列将食物和人道援助作为施压手段，试图将巴勒斯坦人从加沙北部驱赶至南部。</p>
+<p><button class="play-button sentence" id="s-00-05-44-480" data-start="00:05:44,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's clearly a huge factor in all of this.</p>
+<p>这显然是关键因素。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959651" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-48-160" data-start="00:05:48,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Second, you've got a new construct, the Gaza Humanitarian Foundation, which has delivered assistance at four points in southern Gaza, which is also proven me catastrophic.</p>
+<p>其次，加沙人道主义基金会在南部四个点的援助同样收效甚微。</p>
+<p><button class="play-button sentence" id="s-00-06-00-720" data-start="00:06:00,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have criminal gangs looting.</p>
+<p>犯罪团伙抢劫物资。</p>
+<p><button class="play-button sentence" id="s-00-06-02-959" data-start="00:06:02,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have tribal militias backed by the Israelis, one in particular, the popular forces led by a known criminal Abu Shabab, may have been responsible for shooting, at least in the South, Palestinians, desperate Palestinians looking for assistance.</p>
+<p>以色列支持的部落民兵中，恶名昭彰的阿布·沙巴布领导的武装可能对南部寻求援助的巴勒斯坦人开枪。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-20-759" data-start="00:06:20,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only way to end this is to create a predictable and reliable delivery of humanitarian assistance is to end the war.</p>
+<p>唯一解决途径是结束战争以实现可预测的援助交付。</p>
+<p><button class="play-button sentence" id="s-00-06-30-879" data-start="00:06:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And tragically, we are a long way away.</p>
+<p>可悲的是，我们离此目标甚远。</p>
+<p><button class="play-button sentence" id="s-00-06-35-079" data-start="00:06:35,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We make it another interim deal.</p>
+<p>即便达成临时停火协议。</p>
+<p><button class="play-button sentence" id="s-00-06-37-399" data-start="00:06:37,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Six months, 60 days cease fire.</p>
+<p>六个月或六十天停火。</p>
+<p><button class="play-button sentence" id="s-00-06-40-079" data-start="00:06:40,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're a very long way.</p>
+<p>仍前路漫漫。</p>
+<p><button class="play-button sentence" id="s-00-06-41-718" data-start="00:06:41,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From ending the war and relieving the misery, not just of hostages and their families, but of the two million plus Palestinians, malnutrition, ill-equipped to deal with any of these challenges, and as the UN reports on the verge of malnutrition or worse.</p>
+<p>距离结束战争、解救逾200万濒临饥荒的巴勒斯坦人及其家庭仍很遥远。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959579" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-00-199" data-start="00:07:00,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had Benjamin Netanyahu at the White House a few weeks ago, President Trump then sounding optimistic of a cease fire.</p>
+<p>几周前内塔尼亚胡访美时，特朗普总统对停火表示乐观。</p>
+<p><button class="play-button sentence" id="s-00-07-08-360" data-start="00:07:08,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why hasn't it happened, do you think?</p>
+<p>您认为为何未能实现？</p>
+<p><button class="play-button sentence" id="s-00-07-10-439" data-start="00:07:10,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, I think the closer you get to the fundamentally opposed end games of both games to truly a word.</p>
+<p>双方根本诉求的对立使谈判举步维艰。</p>
+<p><button class="play-button sentence" id="s-00-07-18-439" data-start="00:07:18,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I apologize.</p>
+<p>容我解释。</p>
+<p><button class="play-button sentence" id="s-00-07-21-038" data-start="00:07:21,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two mutually implacable end states envisioned by Hamas and Israel.</p>
+<p>哈马斯与以色列的终极目标不可调和。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959554" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-25-379" data-start="00:07:25,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hamas wants an end to the war.</p>
+<p>哈马斯要求结束战争。</p>
+<p><button class="play-button sentence" id="s-00-07-27-319" data-start="00:07:27,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Everyone with all of Israeli forces from Gaza or at least to a buffer zone, and they want American assurances, as well as from the cutteries of the Egyptians and anyone else who will picture that they will hold the Israelis to that.</p>
+<p>要求以军完全撤离加沙或至少建立缓冲区，并寻求美国等国的担保。</p>
+<p><button class="play-button sentence" id="s-00-07-40-040" data-start="00:07:40,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Netanyahu presiding over the most right wing government in Israel's history with two right wing ministers threatening to bolt from the government cannot afford to end the war.</p>
+<p>内塔尼亚胡领导以色列史上最右翼政府，两名部长威胁退出，使其无法结束战争。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959529" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-50-038" data-start="00:07:50,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that, in essence, the closer you get to each side confronting the reality that there may be no more hostages and that the Israelis have to consider the possibility of redeployment or withdrawal.</p>
+<p>双方越接近"人质可能无存"的现实，以色列越需考虑重新部署或撤军。</p>
+<p><button class="play-button sentence" id="s-00-08-03-240" data-start="00:08:03,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tougher the negotiating positions are going to be.</p>
+<p>谈判立场将更趋强硬。</p>
+<p><button class="play-button sentence" id="s-00-08-06-240" data-start="00:08:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Mr. Trump, let's be very clear, Donald Trump is no humanitarian here.</p>
+<p>需明确，特朗普并非人道主义者。</p>
+<p><button class="play-button sentence" id="s-00-08-11-399" data-start="00:08:11,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the reality is if you could persuade him that any war in Gaza was a key to something other than empty room in his mind, he might take more of an interest and be able to press both sides, but particularly the Israelis to facilitate the delivery of assistance.</p>
+<p>但若能说服他加沙战争关乎其利益，或能促其向以方施压以改善援助。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959491" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-28-759" data-start="00:08:28,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the reality is he's a situationalist and a transnationalist, and it seems to me he's not willing.</p>
+<p>但作为现实主义者，他似乎不愿介入。</p>
+<p><button class="play-button sentence" id="s-00-08-35-000" data-start="00:08:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's given the Netanyahu government an enormous margin to prosecute this war in Gaza.</p>
+<p>他给予内塔尼亚胡政府在加沙作战的极大自由度。</p>
+<p><button class="play-button sentence" id="s-00-08-40-038" data-start="00:08:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There may come a point where he is angered and annoyed with the Netanyahu government.</p>
+<p>或终有一日他对以政府感到愤怒。</p>
+<p><button class="play-button sentence" id="s-00-08-45-798" data-start="00:08:45,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We haven't reached that point.</p>
+<p>但尚未至此。</p>
+<p><button class="play-button sentence" id="s-00-08-47-399" data-start="00:08:47,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aaron David Miller, thank you very much as always for your insight.</p>
+<p>亚伦·戴维·米勒，感谢您的见解。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959468" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-51-198" data-start="00:08:51,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks for having me.</p>
+<p>谢谢邀请。</p>
+<p><button class="play-button sentence" id="s-00-08-52-919" data-start="00:08:52,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> DeSiria now, where seven days of violence, sectarian clashes in the south of the country have been halted, according to forces there, resulting in what's being called a cautious calm.</p>
+<p>转向叙利亚，当地武装称南部七日教派冲突已暂停，进入"谨慎平静期"。</p>
+<p><button class="play-button sentence" id="s-00-09-04-200" data-start="00:09:04,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than a thousand people have been killed in a weaker violence between the Bedouin and Drew's communities in Sueda.</p>
+<p>苏韦达省贝都因与德鲁兹社群冲突已致逾千人死亡。</p>
+<p><button class="play-button sentence" id="s-00-09-11-080" data-start="00:09:11,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our correspondent John Donerson traveled to the area, which is around 100 kilometres south of the capital Damascus, where the fighting has been taking place and centres this report.</p>
+<p>记者约翰·多纳森前往距大马士革以南约100公里的冲突中心发回报道。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959436" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-23-200" data-start="00:09:23,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Sueda province, a show of force and defiance, hundreds of Bedouin government firing wildly by the roadside, holding them back Syrian government troops sent south to enforce a ceasefire.</p>
+<p>苏韦达省，数百名贝都因武装人员在路边开火示威，与南下执行停火的政府军对峙。</p>
+<p><button class="play-button sentence" id="s-00-09-43-320" data-start="00:09:43,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This here is the last government checkpoint before Sueda, but all afternoon Bedouin government have been massing on this road.</p>
+<p>这是进入苏韦达前最后政府检查站，但整下午贝都因武装在此集结。</p>
+<p><button class="play-button sentence" id="s-00-09-51-759" data-start="00:09:51,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now they say that they have stuck to the ceasefire deal, but they say if they don't get their hostages out, get the sick, they injured out, then they're going to go back in.</p>
+<p>他们称遵守停火，但若人质和伤病员未获释将重启战事。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959397" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-02-399" data-start="00:10:02,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this Bedouin leader told me it wasn't over.</p>
+<p>贝都因首领表示冲突未结束。</p>
+<p><button class="play-button sentence" id="s-00-10-10-759" data-start="00:10:10,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If the Drew's don't commit to the deal, we will re-enter Sueda again, he said, even if it becomes our cemetery.</p>
+<p>"若德鲁兹人不履约，我们将再攻苏韦达，即便那里成为我们墓地。"</p>
+<p><button class="play-button sentence" id="s-00-10-20-000" data-start="00:10:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eventually, we did see some ambulances being allowed to enter the city, where hundreds of people have been killed and wounded.</p>
+<p>最终部分救护车获准进入这座数百人死伤的城市。</p>
+<p><button class="play-button sentence" id="s-00-10-32-120" data-start="00:10:32,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And earlier this morning, the first aid convoy was allowed to head towards Sueda city, now under full Drew's control.</p>
+<p>今晨首个援助车队获准前往德鲁兹人控制的苏韦达市。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959359" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-40-558" data-start="00:10:40,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's no electricity or running water, and food is in short supply.</p>
+<p>但当地断水断电，食物短缺。</p>
+<p><button class="play-button sentence" id="s-00-10-48-080" data-start="00:10:48,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And those who've got out of Sueda, the UN says 130,000 have been displaced are also in need.</p>
+<p>联合国称13万逃离苏韦达的流离失所者同样需要援助。</p>
+<p><button class="play-button sentence" id="s-00-10-56-200" data-start="00:10:56,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this school yard turned to makeshift shelter, Bedouin families are waiting for aid.</p>
+<p>在这所改为临时避难所的学校，贝都因家庭等待援助。</p>
+<p><button class="play-button sentence" id="s-00-11-04-799" data-start="00:11:04,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I asked Tanea Ramesh Afan, whether Drew's in Bedouin could ever live side by side again.</p>
+<p>询问塔尼娅·拉梅什·阿凡两族能否再度共处。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959327" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-12-558" data-start="00:11:12,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, absolutely not, she said, as the crowd backed her up.</p>
+<p>"绝不"，她在人群支持下回答。</p>
+<p><button class="play-button sentence" id="s-00-11-19-360" data-start="00:11:19,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can't trust the Drew's, they're traitors.</p>
+<p>"德鲁兹人是叛徒，不可信。"</p>
+<p><button class="play-button sentence" id="s-00-11-26-320" data-start="00:11:26,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With such a level of distrust, then, this is a fragile truce.</p>
+<p>如此互信缺失下，停火十分脆弱。</p>
+<p><button class="play-button sentence" id="s-00-11-31-759" data-start="00:11:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The gunman may be pulling back for now, but Syria is far from united.</p>
+<p>武装人员或暂撤退，但叙利亚远未统一。</p>
+<p><button class="play-button sentence" id="s-00-11-37-759" data-start="00:11:37,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> John Donnison BBC News in Sueda province.</p>
+<p>BBC新闻约翰·多尼森，苏韦达省报道。</p>
+<p><button class="play-button sentence" id="s-00-11-41-438" data-start="00:11:41,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, our security correspondent, Frank Gardner, has this assessment of what's going on in Syria.</p>
+<p>安全事务记者弗兰克·加德纳评估叙利亚局势。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959293" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-46-879" data-start="00:11:46,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's symptomatic of the huge challenges facing Syria's very new presidency up at a shara.</p>
+<p>这体现沙拉总统面临的重重挑战。</p>
+<p><button class="play-button sentence" id="s-00-11-54-080" data-start="00:11:54,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you remember, he and his supporters overthrew the brutal autocratic rule of President Bashar al-Assad only in December.</p>
+<p>他与其支持者去年十二月才推翻阿萨德统治。</p>
+<p><button class="play-button sentence" id="s-00-12-03-840" data-start="00:12:03,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they've only been in par for seven months.</p>
+<p>执政仅七个月。</p>
+<p><button class="play-button sentence" id="s-00-12-06-399" data-start="00:12:06,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Syria is a, it's got a lot of different sort of sectarian fissures, as it were.</p>
+<p>叙利亚存在诸多教派裂痕。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959267" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-12-600" data-start="00:12:12,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there have been a number of challenges already.</p>
+<p>已面临多重挑战。</p>
+<p><button class="play-button sentence" id="s-00-12-14-720" data-start="00:12:14,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you've had the massacres earlier this year of the alawaii community up in the northwest of Syria, which has been blamed on foreign jihadis.</p>
+<p>西北部阿拉维派社区屠杀被归咎于外国圣战者。</p>
+<p><button class="play-button sentence" id="s-00-12-24-279" data-start="00:12:24,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've had the bombing last month of the Christian church in Damascus that killed 25 people.</p>
+<p>上月大马士革基督教教堂爆炸致25人死亡。</p>
+<p><button class="play-button sentence" id="s-00-12-29-960" data-start="00:12:29,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've got ISIS lurking in the wings.</p>
+<p>ISIS虎视眈眈。</p>
+<p><button class="play-button sentence" id="s-00-12-32-039" data-start="00:12:32,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've got thousands of ISIS supporters holed up in Kurdish run prison camps in the northeast of the country.</p>
+<p>东北部库尔德管理的监狱关押数千ISIS支持者。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959239" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-40-240" data-start="00:12:40,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's, you know, he's trying to hold it all together in front with all of this.</p>
+<p>总统正竭力维持国家统一。</p>
+<p><button class="play-button sentence" id="s-00-12-44-360" data-start="00:12:44,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On top of that, you've got Israel carrying out airstrikes on the defence ministry and other targets inside Syria.</p>
+<p>此外以色列空袭叙利亚国防部等目标。</p>
+<p><button class="play-button sentence" id="s-00-12-52-480" data-start="00:12:52,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the plus side, and it's only a small plus, to be honest, you've got the Gulf Arab states queuing up to help Syria.</p>
+<p>从积极的一面来看，老实说，虽然只是很小的积极因素，但海湾阿拉伯国家正排队援助叙利亚。</p>
+<p><button class="play-button sentence" id="s-00-12-59-639" data-start="00:12:59,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They really want to see a stable, prosperous and healthy Syria on their northern borders.</p>
+<p>他们真心希望在北部边境看到一个稳定、繁荣和健康的叙利亚。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959214" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-05-360" data-start="00:13:05,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've got the US intervening saying, come on, we've got to have a ceasefire.</p>
+<p>美国也介入其中，呼吁必须实现停火。</p>
+<p><button class="play-button sentence" id="s-00-13-09-320" data-start="00:13:09,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, many people I think would have feared that the US would just wash its hands at the whole region, but they don't appear to have done that.</p>
+<p>许多人曾担心美国会彻底撇清与该地区的关系，但他们似乎并未这样做。</p>
+<p><button class="play-button sentence" id="s-00-13-15-279" data-start="00:13:15,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But really, there are a lot of challenges here.</p>
+<p>但事实上，这里仍存在许多挑战。</p>
+<p><button class="play-button sentence" id="s-00-13-17-159" data-start="00:13:17,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, how difficult is it for President Al Sharab?</p>
+<p>是的，对阿尔沙拉布总统来说有多困难？</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959199" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-20-120" data-start="00:13:20,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because it was quite a number of different elements that brought him to power behind him.</p>
+<p>因为他的上台背后有许多不同势力的支持。</p>
+<p><button class="play-button sentence" id="s-00-13-26-678" data-start="00:13:26,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there isn't that one unified security force.</p>
+<p>而且并没有一支统一的安保力量。</p>
+<p><button class="play-button sentence" id="s-00-13-30-198" data-start="00:13:30,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There isn't.</p>
+<p>确实没有。</p>
+<p><button class="play-button sentence" id="s-00-13-31-198" data-start="00:13:31,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think there's still a lot of, there is a legacy of distrust.</p>
+<p>我认为仍然存在许多遗留的不信任。</p>
+<p><button class="play-button sentence" id="s-00-13-34-038" data-start="00:13:34,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've got to remember, look, the al-Assad were in power in Syria from the 1960s.</p>
+<p>必须记住，阿萨德家族自1960年代起就统治叙利亚。</p>
+<p><button class="play-button sentence" id="s-00-13-40-038" data-start="00:13:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I remember going to the funeral of half-Isla Assad in May 2000 in Damascus.</p>
+<p>我记得2000年5月曾在大马士革参加哈菲兹·阿萨德的葬礼。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959173" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-46-479" data-start="00:13:46,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And people were saying to us, this new guy, Bashar al-Assad, he's not going to last more than a few weeks.</p>
+<p>当时人们告诉我们，这个新人巴沙尔·阿萨德撑不过几周。</p>
+<p><button class="play-button sentence" id="s-00-13-51-198" data-start="00:13:51,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was Syrian saying this.</p>
+<p>这是叙利亚人自己说的。</p>
+<p><button class="play-button sentence" id="s-00-13-52-479" data-start="00:13:52,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's weak.</p>
+<p>他很弱。</p>
+<p><button class="play-button sentence" id="s-00-13-53-479" data-start="00:13:53,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's got no power.</p>
+<p>没有实权。</p>
+<p><button class="play-button sentence" id="s-00-13-54-480" data-start="00:13:54,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's not a military man, unlike his brother who was killed in a car crash, basil.</p>
+<p>他不是军人，不像他死于车祸的哥哥巴西勒。</p>
+<p><button class="play-button sentence" id="s-00-13-59-158" data-start="00:13:59,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet he stayed in power for what, 24 years and is largely blamed for the vast majority of the deaths in Syria's horrific civil war.</p>
+<p>然而他执政了24年，并因叙利亚可怕内战中的大量死亡而备受指责。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959149" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-10-679" data-start="00:14:10,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Frank Gardner.</p>
+<p>弗兰克·加德纳。</p>
+<p><button class="play-button sentence" id="s-00-14-11-679" data-start="00:14:11,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Japan's Prime Minister says he intends to stay in power despite the expectation that his ruling coalition will lose its majority in elections to the upper house of parliament.</p>
+<p>日本首相表示他打算继续执政，尽管预计执政联盟将在参议院选举中失去多数席位。</p>
+<p><button class="play-button sentence" id="s-00-14-20-798" data-start="00:14:20,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jigeru Ishiba, liberal democrats, have held power in Japan for most of the last seven decades.</p>
+<p>自民党的石破茂在过去七十年大部分时间里掌控日本政权。</p>
+<p><button class="play-button sentence" id="s-00-14-27-000" data-start="00:14:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have already lost their overall majority in the lower house in an election last year.</p>
+<p>他们已在去年众议院选举中失去绝对多数。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959127" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-32-519" data-start="00:14:32,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Counting continues with a result expected later on Monday.</p>
+<p>计票仍在继续，结果预计周一晚些时候公布。</p>
+<p><button class="play-button sentence" id="s-00-14-36-000" data-start="00:14:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's talk now to Shio Kogoto, who's director of the Indo-Pacific program at the Wilson Centre.</p>
+<p>现在请威尔逊中心印太项目主任盐古户与我们对话。</p>
+<p><button class="play-button sentence" id="s-00-14-42-399" data-start="00:14:42,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for your time here on BBC News.</p>
+<p>感谢您抽空接受BBC新闻采访。</p>
+<p><button class="play-button sentence" id="s-00-14-45-158" data-start="00:14:45,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's gotten wrong for the Prime Minister?</p>
+<p>首相的问题出在哪里？</p>
+<p><button class="play-button sentence" id="s-00-14-47-678" data-start="00:14:47,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the result has been a devastating defeat for the ruling liberal democratic party.</p>
+<p>这次选举对执政的自民党是毁灭性打击。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959106" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-53-678" data-start="00:14:53,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And another number that I want to throw out is that the turnout for this particular election has been quite high, close to 60%.</p>
+<p>另一个值得注意的是本次选举投票率相当高，接近60%。</p>
+<p><button class="play-button sentence" id="s-00-15-02-600" data-start="00:15:02,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And voters were very motivated to express their concern and their frustration with the state as core in Japan, primarily driven by economic factors, things like higher food prices, more political concerns about inflation, and more broadly, a great sense of pessimism about the economic outlook.</p>
+<p>选民强烈表达对日本现状的担忧和不满，主要源于经济因素，如食品价格上涨、对通胀的政治忧虑，以及更广泛的经济前景悲观情绪。</p>
+<p><button class="play-button sentence" id="s-00-15-22-080" data-start="00:15:22,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you said, we don't know how the LDP is going to move forward on this.</p>
+<p>如您所说，我们不清楚自民党将如何应对。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959072" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-27-919" data-start="00:15:27,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They can continue with a coalition government, but they will need to have more than another party to move to have this coalition.</p>
+<p>他们可以继续组建联合政府，但需要争取更多党派支持。</p>
+<p><button class="play-button sentence" id="s-00-15-37-000" data-start="00:15:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's great instability in the Japanese political arena at a time when we need greater stability from Japan.</p>
+<p>在我们需要日本更稳定的时刻，其政坛却充满不确定性。</p>
+<p><button class="play-button sentence" id="s-00-15-46-278" data-start="00:15:46,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister is saying he wants to stay on partly because of the issue of the US tariffs, and there's a deadline of August 1st.</p>
+<p>首相称留任部分因美国关税问题，8月1日是最后期限。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959044" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-55-360" data-start="00:15:55,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think that is a strong argument for him to remain?</p>
+<p>您认为这是有力的留任理由吗？</p>
+<p><button class="play-button sentence" id="s-00-15-59-440" data-start="00:15:59,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is very weak.</p>
+<p>非常牵强。</p>
+<p><button class="play-button sentence" id="s-00-16-01-080" data-start="00:16:01,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The people have spoken.</p>
+<p>民众已表态。</p>
+<p><button class="play-button sentence" id="s-00-16-02-278" data-start="00:16:02,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a lack of confidence in the Ishi-Bug government.</p>
+<p>对石破内阁缺乏信心。</p>
+<p><button class="play-button sentence" id="s-00-16-06-320" data-start="00:16:06,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His argument that it is difficult for Japan to move forward with the terror negotiations with the United States certainly does stand true, but from a US perspective, does it really want to negotiate with what it sees as a lean duck administration?</p>
+<p>他关于日美反恐谈判难以推进的说法成立，但从美国角度看，会愿与被视为跛脚鸭的政府谈判吗？</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208959018" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-21-519" data-start="00:16:21,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so, so long as the Ishi-Bug administration stays in power, it's difficult to have greater control within Japan, and its bargaining chip with the United States and other countries will be weak as well.</p>
+<p>只要石破政府继续执政，日本国内更难掌控，与美及其他国家的谈判筹码也会削弱。</p>
+<p><button class="play-button sentence" id="s-00-16-34-440" data-start="00:16:34,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also interesting to read that one of the far right parties has gained seats.</p>
+<p>值得注意的是极右翼政党赢得席位。</p>
+<p><button class="play-button sentence" id="s-00-16-40-519" data-start="00:16:40,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They would campaigning on immigration.</p>
+<p>他们以移民问题为竞选纲领。</p>
+<p><button class="play-button sentence" id="s-00-16-43-240" data-start="00:16:43,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-16-44-240" data-start="00:16:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the Sanctito has focused on what they call a Japan for the Japanese First Vision, and it has been seen as very anti-immigration, anti-foreign and quite xenophobic.</p>
+<p>参政党推行"日本优先"愿景，被视为强烈反移民、排外且仇外。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958979" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-00-360" data-start="00:17:00,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the other element of this is to call for a strong Japan.</p>
+<p>另一要素是呼吁建设强大日本。</p>
+<p><button class="play-button sentence" id="s-00-17-04-440" data-start="00:17:04,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Its leader has said that it has taken a leave out of President Trump's playbook and to focus more on domestic resilience and focusing more on having Japan being less dependent on other countries, including the United States.</p>
+<p>其领导人称借鉴特朗普策略，更注重国内韧性，减少对美等国依赖。</p>
+<p><button class="play-button sentence" id="s-00-17-19-439" data-start="00:17:19,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shio-Ko-Ko too.</p>
+<p>盐古户。</p>
+<p><button class="play-button sentence" id="s-00-17-20-598" data-start="00:17:20,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for your insight.</p>
+<p>非常感谢您的见解。</p>
+<p><button class="play-button sentence" id="s-00-17-22-159" data-start="00:17:22,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Appreciate it.</p>
+<p>感激不尽。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-23-159" data-start="00:17:23,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-17-24-159" data-start="00:17:24,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, we will bring you the result of the election in Japan later on Monday here on BBC News.</p>
+<p>我们将在周一晚些时候为您带来日本选举结果。</p>
+<p><button class="play-button sentence" id="s-00-17-30-358" data-start="00:17:30,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next, at least 17 people have died in floods and landslides caused by days.</p>
+<p>接下来，韩国连日暴雨引发洪水和山体滑坡，至少17人死亡。</p>
+<p><button class="play-button sentence" id="s-00-17-35-358" data-start="00:17:35,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A torrential rain in South Korea, their affairs, the death toll, could rise as emergency rescue efforts continue, with many people still unaccounted for thousands of roads and buildings were damaged in what the country's weather agency described as a once-in-a-century event.</p>
+<p>韩国气象厅称这是百年一遇事件，紧急救援持续，死亡人数可能上升，数千道路建筑受损，多人失踪。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958927" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-52-199" data-start="00:17:52,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From the capital soul, here's Jake Kwon.</p>
+<p>BBC记者杰克·权在首尔报道。</p>
+<p><button class="play-button sentence" id="s-00-17-56-598" data-start="00:17:56,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trapped in a flash flood, a man is moved to safety from a campsite where he was enjoying a summer break.</p>
+<p>一名男子在露营地度假时遭遇山洪，被转移至安全地带。</p>
+<p><button class="play-button sentence" id="s-00-18-04-318" data-start="00:18:04,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These torrential heavy rains are said to be a once-in-two hundred-years event.</p>
+<p>这场暴雨被称为两百年一遇。</p>
+<p><button class="play-button sentence" id="s-00-18-09-558" data-start="00:18:09,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the county of San-Chung, where most of the deaths occurred, the danger is literally meters away as people rush to get out of the town.</p>
+<p>在死亡最集中的三陟郡，危险近在咫尺，人们匆忙撤离。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958901" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-18-838" data-start="00:18:18,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After nearly a week of heavy rain, at least 17 people have died across the country and 11 people are still missing.</p>
+<p>持续近一周的暴雨导致全国至少17人死亡，11人失踪。</p>
+<p><button class="play-button sentence" id="s-00-18-26-679" data-start="00:18:26,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This village just 60 miles from the capital was completely submerged.</p>
+<p>距首都仅60英里的村庄完全被淹。</p>
+<p><button class="play-button sentence" id="s-00-18-31-598" data-start="00:18:31,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many in rural communities are struggling to protect their livestock.</p>
+<p>许多农村居民竭力保护牲畜。</p>
+<p><button class="play-button sentence" id="s-00-18-38-078" data-start="00:18:38,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I stayed up all night in the car.</p>
+<p>我在车里熬了一整夜。</p>
+<p><button class="play-button sentence" id="s-00-18-40-038" data-start="00:18:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The situation was unbelievable.</p>
+<p>情况难以置信。</p>
+<p><button class="play-button sentence" id="s-00-18-42-398" data-start="00:18:42,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When the water gushed towards the house, the cows were trying to step anywhere they could to get a foothold in the flood water, stretching their necks up to keep breathing and splashing through water.</p>
+<p>洪水冲来时，牛群拼命找立足点，伸长脖子呼吸，在水中挣扎。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-52-240" data-start="00:18:52,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was utter chaos.</p>
+<p>完全是一片混乱。</p>
+<p><button class="play-button sentence" id="s-00-18-55-318" data-start="00:18:55,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Sunday, after the rain subsided, rescue workers were still clearing the debris with the hope of finding those missing.</p>
+<p>周日雨势减弱后，救援人员仍在清理废墟寻找失踪者。</p>
+<p><button class="play-button sentence" id="s-00-19-02-400" data-start="00:19:02,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Koreans call these monsoon rains summer guests.</p>
+<p>韩国人称这类季风雨为"夏季客人"。</p>
+<p><button class="play-button sentence" id="s-00-19-05-400" data-start="00:19:05,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They come and break the oppressive heat.</p>
+<p>它们驱散闷热。</p>
+<p><button class="play-button sentence" id="s-00-19-07-680" data-start="00:19:07,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as global temperatures rise, they are becoming increasingly unpredictable and violent.</p>
+<p>但随着全球变暖，降雨愈发难以预测且猛烈。</p>
+<p><button class="play-button sentence" id="s-00-19-12-640" data-start="00:19:12,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> J.K.Wan, BBC News, Seoul.</p>
+<p>BBC新闻，杰克·权首尔报道。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958844" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-15-798" data-start="00:19:15,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> England footballer Jess Carter has said she has been the target of a lot of racial abuse since the start of year 2025.</p>
+<p>英格兰足球运动员杰斯·卡特称自2025年初遭受大量种族歧视。</p>
+<p><button class="play-button sentence" id="s-00-19-22-838" data-start="00:19:22,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 27-year-old who has played in every England match during the tournament in Switzerland is stepping away from social media.</p>
+<p>这位27岁球员在瑞士赛事中每场必上，现决定退出社交媒体。</p>
+<p><button class="play-button sentence" id="s-00-19-29-880" data-start="00:19:29,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister, Sir Keir Stammer, posted his support on social media, saying there is no place for racism in football or anywhere in society.</p>
+<p>首相基尔·斯塔默爵士发文支持，称足球界和社会都容不得种族主义。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958821" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-38-160" data-start="00:19:38,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From Zurich, here's Katie Gornal.</p>
+<p>BBC记者凯蒂·戈纳尔在苏黎世报道。</p>
+<p><button class="play-button sentence" id="s-00-19-41-240" data-start="00:19:41,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's an issue that goes far beyond football.</p>
+<p>这远不止是足球问题。</p>
+<p><button class="play-button sentence" id="s-00-19-43-680" data-start="00:19:43,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And for Jess Carter, it's become an ugly reality.</p>
+<p>对杰斯·卡特而言已成残酷现实。</p>
+<p><button class="play-button sentence" id="s-00-19-47-038" data-start="00:19:47,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The England defender has been targeted with racist abuse online and revealed she was coming off social media to protect herself.</p>
+<p>这位英格兰后卫遭网络种族攻击，透露为自我保护退出社交媒体。</p>
+<p><button class="play-button sentence" id="s-00-19-54-680" data-start="00:19:54,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Carter said in a statement, whilst I feel every fan is entitled to their opinion on performance, I don't agree or think it's okay to target someone's appearance or race.</p>
+<p>卡特声明称："虽然球迷有权评价表现，但针对外貌或种族的攻击绝不可接受。"</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958795" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-04-160" data-start="00:20:04,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hopefully speaking out, we'll make the people writing this abuse think twice, so that others won't have to deal with it.</p>
+<p>希望发声能让施虐者三思，避免他人再受伤害。</p>
+<p><button class="play-button sentence" id="s-00-20-10-359" data-start="00:20:10,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both sets of players take the lead by England.</p>
+<p>英格兰队率先行动。</p>
+<p><button class="play-button sentence" id="s-00-20-13-480" data-start="00:20:13,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In solidarity, England's players will now stop taking the knee before games, saying football needs to find another way to tackle racism.</p>
+<p>为表团结，英格兰球员将不再赛前跪地，称足球界需新方式对抗种族主义。</p>
+<p><button class="play-button sentence" id="s-00-20-21-400" data-start="00:20:21,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is the message really hitting hard?</p>
+<p>这种表态真的有效吗？</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-25-559" data-start="00:20:25,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because towards it feels like it's not if these things are still happening to our players in the biggest tournaments of their lives.</p>
+<p>因为顶级赛事中我们的球员仍遭此对待。</p>
+<p><button class="play-button sentence" id="s-00-20-33-519" data-start="00:20:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jess herself, I think she wouldn't admit it to the wider world, but it's obviously difficult for her to go through.</p>
+<p>杰斯虽不愿公开承认，但显然深受困扰。</p>
+<p><button class="play-button sentence" id="s-00-20-39-359" data-start="00:20:39,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But all the players are here to support her, all the staff are.</p>
+<p>全体队员和工作人员都支持她。</p>
+<p><button class="play-button sentence" id="s-00-20-42-359" data-start="00:20:42,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we heard some very moving words earlier from Lucy Bronze right here who seen the women's game grow beyond all recognition in her career and sadly with it, the problem of online abuse.</p>
+<p>露西·青铜曾见证女足运动巨变，也痛心看到网络暴力随之增长。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958747" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-52-878" data-start="00:20:52,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the FA say that they are working with the UK police and the social media platform to bring those responsible for this racist hate crime to justice.</p>
+<p>英足总称正与警方和社交平台合作，追究种族仇恨犯罪者责任。</p>
+<p><button class="play-button sentence" id="s-00-21-01-960" data-start="00:21:01,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's far from an isolated incident.</p>
+<p>这绝非孤立事件。</p>
+<p><button class="play-button sentence" id="s-00-21-04-398" data-start="00:21:04,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Carter's England teammate Lauren James was targeted with racist abuse during the last World Cup in Australia.</p>
+<p>卡特队友劳伦·詹姆斯在上届澳大利亚世界杯期间也遭种族攻击。</p>
+<p><button class="play-button sentence" id="s-00-21-10-598" data-start="00:21:10,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, England's players are sad and angry, all they want is for everyone to focus on their football.</p>
+<p>如今英格兰球员既悲伤又愤怒，只希望大众关注足球本身。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958723" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-16-358" data-start="00:21:16,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she's gone or beeps in use, Zurich.</p>
+<p>凯蒂·戈纳尔，BBC新闻苏黎世报道。</p>
+<p><button class="play-button sentence" id="s-00-21-18-759" data-start="00:21:18,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A man has been arrested at a protest outside a hotel in Essex used to house asylum seekers more than 100 people gathered at the site in Epping, bottles and smoke flares were thrown towards police fans blocking the entrance to the hotel.</p>
+<p>埃塞克斯郡安置寻求庇护者的酒店外，一名抗议者被捕。埃平现场聚集超百人，有人向警察投掷瓶子和烟雾弹，封锁酒店入口。</p>
+<p><button class="play-button sentence" id="s-00-21-33-038" data-start="00:21:33,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The disorder followed the charging of an asylum seeker with an alleged sexual assault in the town, which he denies.</p>
+<p>骚乱源于一名寻求庇护者被控性侵，本人否认指控。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-40-398" data-start="00:21:40,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Environment Secretary Steve Reed has said the way the water industry is run must change.</p>
+<p>环境大臣史蒂夫·里德称水务行业运营方式必须改革。</p>
+<p><button class="play-button sentence" id="s-00-21-45-078" data-start="00:21:45,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said huge rises in bills and a failure to cut sewage pollution showed that the sector was clearly failing.</p>
+<p>他指出账单暴涨和污水污染未减表明该行业明显失职。</p>
+<p><button class="play-button sentence" id="s-00-21-51-598" data-start="00:21:51,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Reed stopped short of saying whether the regulator off what would be abolished in a landmark review of the industry being published on Monday.</p>
+<p>里德未明确监管机构Ofwat是否会在周一发布的行业重大审查中被废除。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958680" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-59-318" data-start="00:21:59,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Joe Pike.</p>
+<p>BBC记者乔·派克报道。</p>
+<p><button class="play-button sentence" id="s-00-22-02-278" data-start="00:22:02,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the Thames at Tendington, Summer usually means people swimming, but not today.</p>
+<p>泰丁顿段的泰晤士河往常夏季有人游泳，但今天没有。</p>
+<p><button class="play-button sentence" id="s-00-22-07-759" data-start="00:22:07,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last Sunday, we had 150 swimmers in a four-hour period and today there's nobody swimming and that's purely down to the sewage in the water.</p>
+<p>上周日四小时内有150人游泳，今天却无人下水，只因水中污水。</p>
+<p><button class="play-button sentence" id="s-00-22-17-480" data-start="00:22:17,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Marlene's wild swimming group regularly test the water.</p>
+<p>玛琳的野泳团体定期检测水质。</p>
+<p><button class="play-button sentence" id="s-00-22-20-960" data-start="00:22:20,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today it's too dangerous for a dip because of sewage being dumped upstream.</p>
+<p>今天因上游排污，游泳太危险。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958654" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-25-318" data-start="00:22:25,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did that make you feel?</p>
+<p>您作何感受？</p>
+<p><button class="play-button sentence" id="s-00-22-26-880" data-start="00:22:26,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I feel really angry.</p>
+<p>我非常愤怒。</p>
+<p><button class="play-button sentence" id="s-00-22-28-240" data-start="00:22:28,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm furious actually the first chance of rain and then this water company's just dump sewage into the water and this happened here and it's happening up and down the country and we're all really angry.</p>
+<p>一下雨水务公司就排污，这里如此，全国皆然，我们无比愤慨。</p>
+<p><button class="play-button sentence" id="s-00-22-41-078" data-start="00:22:41,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last year pollution incidents in England were at their highest on record.</p>
+<p>去年英格兰污染事件创历史新高。</p>
+<p><button class="play-button sentence" id="s-00-22-45-159" data-start="00:22:45,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government wants to have sewage discharges within five years and it's not just the water company's practices that have provoked concern but bosses bonuses too.</p>
+<p>政府拟五年内解决污水排放问题，引发担忧的不仅是水务公司行为，还有高管奖金。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958625" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-54-278" data-start="00:22:54,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Southern Water CEO Lawrence Gossden was paid £687,000 this year including benefits and pension and awarded a bonus that would double that figure.</p>
+<p>南方水务CEO劳伦斯·高斯登今年获68.7万英镑薪酬（含福利养老金），奖金另计。</p>
+<p><button class="play-button sentence" id="s-00-23-04-720" data-start="00:23:04,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I really think the companies need to look at what they're doing and the signal it sends to their customers who are already rightly furious with them.</p>
+<p>我认为公司需审视自身行为向已合理愤怒的客户传递的信号。</p>
+<p><button class="play-button sentence" id="s-00-23-11-919" data-start="00:23:11,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you would clearly believe that Southern Water's boss should not take his pay rise even though as you pointed out it's not actually yours.</p>
+<p>所以您明确认为南方水务老板不应加薪，尽管如您所说这非您决定。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958601" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-18-439" data-start="00:23:18,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think Southern Water has performed well enough for that kind of a pay increase to be merited.</p>
+<p>我认为南方水务表现配不上如此加薪。</p>
+<p><button class="play-button sentence" id="s-00-23-22-838" data-start="00:23:22,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Southern Water says the salary is within the regulators rules and the law and includes a relocation allowance and a long term incentive plan paid by shareholders.</p>
+<p>南方水务称薪酬符合监管规定和法律，含搬迁津贴及股东支付的长期激励计划。</p>
+<p><button class="play-button sentence" id="s-00-23-31-638" data-start="00:23:31,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The conservatives argue it could have been stopped.</p>
+<p>保守党称本可阻止。</p>
+<p><button class="play-button sentence" id="s-00-23-34-000" data-start="00:23:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before we gave powers to off-warts to stop bonuses being paid out whether it's failure.</p>
+<p>在我们授予Ofwat阻止奖金发放权力前就已存在问题。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958581" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-38-798" data-start="00:23:38,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a salary to different things to pay for.</p>
+<p>这是包含多项内容的薪酬。</p>
+<p><button class="play-button sentence" id="s-00-23-41-200" data-start="00:23:41,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, it's a long term incentive plan.</p>
+<p>不，这是长期激励计划。</p>
+<p><button class="play-button sentence" id="s-00-23-44-558" data-start="00:23:44,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the basic salary is £700,000 which is still an awful lot of money but it's doubling of that through an incentive plan.</p>
+<p>基本工资70万英镑已很高，激励计划又使其翻倍。</p>
+<p><button class="play-button sentence" id="s-00-23-50-960" data-start="00:23:50,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That can be stopped through off-warts.</p>
+<p>Ofwat本可阻止。</p>
+<p><button class="play-button sentence" id="s-00-23-52-598" data-start="00:23:52,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tomorrow a major review of the water industry in England and Wales will be published which could see the regulator scrapped.</p>
+<p>明天将发布英格兰和威尔士水务行业重大审查，监管机构或被废除。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958558" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-01-278" data-start="00:24:01,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Liberal Democrats wanted to be replaced and for public benefit corporations to take the place of private water companies.</p>
+<p>自由民主党希望被取代，并让公益公司取代私营水务公司。</p>
+<p><button class="play-button sentence" id="s-00-24-07-358" data-start="00:24:07,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a wooden cost of taxpayer huge amounts of money.</p>
+<p>纳税人将为此付出巨额资金代价。</p>
+<p><button class="play-button sentence" id="s-00-24-10-838" data-start="00:24:10,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The shareholders and the bondholders of the current water companies would take a haircut.</p>
+<p>现有水务公司的股东和债券持有人将遭受损失。</p>
+<p><button class="play-button sentence" id="s-00-24-15-358" data-start="00:24:15,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They lose their money and we could start a fresh.</p>
+<p>他们失去资金，而我们可以重新开始。</p>
+<p><button class="play-button sentence" id="s-00-24-18-798" data-start="00:24:18,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reform UK want half of the water industry to be nationalised.</p>
+<p>英国改革党希望将一半水务行业国有化。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958537" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-22-440" data-start="00:24:22,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do we want government running these things now but does the state need to get some degree of control over vital national assets?</p>
+<p>我们现在是否希望政府管理这些事务，但国家是否需要在一定程度上控制关键国有资产？</p>
+<p><button class="play-button sentence" id="s-00-24-31-519" data-start="00:24:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In recent years this policy area has become a national debate and a big challenge for politicians.</p>
+<p>近年来，这一政策领域已成为全国性辩论，对政治家构成重大挑战。</p>
+<p><button class="play-button sentence" id="s-00-24-37-160" data-start="00:24:37,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know voters care about waterways but government sources have told me tackling this particular issue is important for trying to maintain Labour's fragile electoral coalition.</p>
+<p>我们知道选民关心水道问题，但政府消息人士告诉我，解决这一特定问题对维持工党脆弱的选举联盟至关重要。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958512" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-47-039" data-start="00:24:47,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Research suggests that for some voters water policy is important for environmental reasons but for others it's more about patriotism and national pride.</p>
+<p>研究表明，对部分选民而言，水务政策因环境原因很重要，但对其他人来说，这更关乎爱国主义和民族自豪感。</p>
+<p><button class="play-button sentence" id="s-00-24-56-640" data-start="00:24:56,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The danger of radical reform is if it doesn't work the government has no one else to blame.</p>
+<p>激进改革的危险在于，如果失败，政府将无人可指责。</p>
+<p><button class="play-button sentence" id="s-00-25-01-200" data-start="00:25:01,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Pike BBC News Teddington Several people have been injured after a car vehicle for road in Germany plowed through a garden and ended up lodged in a barn roof.</p>
+<p>BBC新闻泰丁顿记者乔·派克报道，德国一辆汽车冲入花园，最终卡在谷仓屋顶，导致多人受伤。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958488" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-11-480" data-start="00:25:11,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police believed the vehicle first hit a parked car before breaking through a hedge and hitting a seven year old boy on a trampoline causing serious injuries.</p>
+<p>警方认为，该车先撞上一辆停放车辆，随后冲破树篱，撞上一名在蹦床上的七岁男孩，造成重伤。</p>
+<p><button class="play-button sentence" id="s-00-25-19-519" data-start="00:25:19,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities believed the car was then catapulted into the air and into the roof of the neighbouring barn where it got stuck 42 year old man was behind the wheel.</p>
+<p>当局认为，该车随后被弹射到空中，落入邻近谷仓屋顶并卡住，驾驶者为一名42岁男子。</p>
+<p><button class="play-button sentence" id="s-00-25-28-119" data-start="00:25:28,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The car was also carrying his wife who suffered significant injuries as well as their two sons and another child.</p>
+<p>车上还有他的妻子（伤势严重）以及他们的两个儿子和另一名儿童。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958465" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-34-880" data-start="00:25:34,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The car had to be removed from the barn with a crane.</p>
+<p>最终用起重机将车辆从谷仓移出。</p>
+<p><button class="play-button sentence" id="s-00-25-38-599" data-start="00:25:38,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally this half hour let's turn to golf and the men's world number one, Scotty Sheffler, has won the open.</p>
+<p>最后半小时转向高尔夫，男子世界排名第一的斯科蒂·舍夫勒赢得公开赛。</p>
+<p><button class="play-button sentence" id="s-00-25-44-200" data-start="00:25:44,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He went into the final round at Royal Port Rush in Northern Ireland, four shots clear of the field.</p>
+<p>他在北爱尔兰皇家波特拉什进入最后一轮时，领先对手四杆。</p>
+<p><button class="play-button sentence" id="s-00-25-49-920" data-start="00:25:49,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At one stage he extended that lead to seven shots and he was never in danger of being caught.</p>
+<p>一度将领先优势扩大到七杆，全程未被追赶威胁。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JogizjEiH/?t=-2208958443" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-56-319" data-start="00:25:56,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the American's fourth major title and his second this year.</p>
+<p>这是这位美国选手的第四个大满贯冠军，也是今年第二个。</p>
+<p><button class="play-button sentence" id="s-00-25-59-960" data-start="00:25:59,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was joined by his son Bennett as he collected the world famous Claret Judge on the 18th Greenwater Lovely Photo.</p>
+<p>他在第18洞果岭领取著名的葡萄酒壶奖杯时，与儿子本内特合影，画面温馨。</p>
+<p><button class="play-button sentence" id="s-00-26-08-079" data-start="00:26:08,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do stay with us here on BBC News.</p>
+<p>请继续关注BBC新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
