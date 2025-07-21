@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>U-turn: Donald Trump changes his position on Ukraine once again</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The article discusses Donald Trump's shifting stance on Ukraine, from praising Putin to threatening Russia with economic sanctions and resuming weapons deliveries to Ukraine, highlighting his unpredictability and the potential impact on Ukraine and Europe.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>U-turn: Donald Trump changes his position on Ukraine once again</h1>
+<p>【经济学人播客 Editors' Picks 20250722 转向：唐纳德·特朗普再次改变对乌克兰立场】</p>
+<p>Summary:
+The article discusses Donald Trump's shifting stance on Ukraine, from praising Putin to threatening Russia with economic sanctions and resuming weapons deliveries to Ukraine, highlighting his unpredictability and the potential impact on Ukraine and Europe.</p>
+<p>摘要：
+文章探讨了唐纳德·特朗普对乌克兰立场的反复变化，从赞扬普京到威胁对俄罗斯实施经济制裁并恢复对乌武器供应，强调了他的不可预测性以及对乌克兰和欧洲的潜在影响。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 6 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, this is Rosie Blore, co-host of The Intelligence, our daily news and current affairs podcast.</p>
+<p>大家好，我是《情报》节目的联合主持人罗茜·布洛尔，这是我们每日新闻与时事播客。</p>
+<p><button class="play-button sentence" id="s-00-00-15-936" data-start="00:00:15,936" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome to Editors' Picks.</p>
+<p>欢迎来到“编辑精选”。</p>
+<p><button class="play-button sentence" id="s-00-00-17-594" data-start="00:00:17,594" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've chosen an article from the latest edition of The Economist that we thought you might enjoy.</p>
+<p>我们从最新一期《经济学人》中挑选了一篇文章，认为您可能会喜欢。</p>
+<p><button class="play-button sentence" id="s-00-00-23-060" data-start="00:00:23,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please do have a listen.</p>
+<p>请务必收听。</p>
+<p><button class="play-button sentence" id="s-00-00-30-480" data-start="00:00:30,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the past six months, President Donald Trump has been all over the place on Ukraine.</p>
+<p>过去六个月，唐纳德·特朗普总统在乌克兰问题上的立场反复无常。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959963" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-36-640" data-start="00:00:36,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he could end the war in 24 hours.</p>
+<p>他曾表示可以在24小时内结束战争。</p>
+<p><button class="play-button sentence" id="s-00-00-39-165" data-start="00:00:39,165" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then while negotiating with Russia, he threatened to cut off the supplier of weapons to Ukraine.</p>
+<p>随后在与俄罗斯谈判时，他威胁要切断对乌克兰的武器供应。</p>
+<p><button class="play-button sentence" id="s-00-00-45-295" data-start="00:00:45,295" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the past week, he has signalled a new enthusiasm for supporting Ukraine.</p>
+<p>过去一周，他又表现出支持乌克兰的新热情。</p>
+<p><button class="play-button sentence" id="s-00-00-50-108" data-start="00:00:50,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His spectacular pivot involves ambiguity, theatre and cynicism.</p>
+<p>他惊人的转变充满模糊性、戏剧性和讽刺意味。</p>
+<p><button class="play-button sentence" id="s-00-00-55-520" data-start="00:00:55,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet it creates a pathway for Ukraine and its supporters to stabilize a weakening position.</p>
+<p>但这为乌克兰及其支持者稳定日益削弱的局势提供了途径。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959938" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-01-200" data-start="00:01:01,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They must take it.</p>
+<p>他们必须抓住机会。</p>
+<p><button class="play-button sentence" id="s-00-01-02-503" data-start="00:01:02,503" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Trump originally called Vladimir Putin a genius, while blaming Ukraine for the war and humiliating its president in front of the world's press.</p>
+<p>特朗普最初称弗拉基米尔·普京为天才，同时指责乌克兰挑起战争，并在全球媒体面前羞辱其总统。</p>
+<p><button class="play-button sentence" id="s-00-01-12-736" data-start="00:01:12,736" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His new position, outlined after a meeting with NATO on July 14th, is rather different.</p>
+<p>他在7月14日与北约会晤后概述的新立场却大不相同。</p>
+<p><button class="play-button sentence" id="s-00-01-19-029" data-start="00:01:19,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, Mr Trump says he is disappointed with Russia's leader, who has ignored his and treaties for peace, sent more troops into the meat grinder and reigned missiles on Ukraine's cities.</p>
+<p>首先，特朗普表示对俄罗斯领导人感到失望，称其无视他的和平提议，将更多士兵送入绞肉机般的战场，并向乌克兰城市发射导弹。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959909" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-30-375" data-start="00:01:30,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Second, Mr Trump says he will give Russia 50 days to end the fighting or face economic punishment, with America imposing secondary tariffs on any country that buys Russian exports, mostly its oil.</p>
+<p>其次，特朗普表示将给俄罗斯50天时间结束战斗，否则将面临经济惩罚，美国将对购买俄罗斯出口产品（主要是石油）的任何国家实施次级关税。</p>
+<p><button class="play-button sentence" id="s-00-01-42-574" data-start="00:01:42,574" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally, America will resume weapons deliveries to Ukraine.</p>
+<p>最后，美国将恢复对乌克兰的武器供应。</p>
+<p><button class="play-button sentence" id="s-00-01-46-975" data-start="00:01:46,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What to make of the U-turn?</p>
+<p>如何看待这一转变？</p>
+<p><button class="play-button sentence" id="s-00-01-48-840" data-start="00:01:48,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Trump's fickleness looms large.</p>
+<p>特朗普的善变十分明显。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959888" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-51-382" data-start="00:01:51,382" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He walked back some of his comments after only a day.</p>
+<p>仅一天后他就收回部分言论。</p>
+<p><button class="play-button sentence" id="s-00-01-54-911" data-start="00:01:54,911" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm on nobody's side, he said on July 15th.</p>
+<p>“我不站在任何一方，”他于7月15日表示。</p>
+<p><button class="play-button sentence" id="s-00-01-57-746" data-start="00:01:57,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Having appeared to endorse attacks by Ukraine deep inside Russia, he has told Volodymyr Zelensky not to strike Moscow and says he is not inclined to give Ukraine long-range missiles.</p>
+<p>在看似支持乌克兰深入俄罗斯境内的攻击后，他又告诉弗拉基米尔·泽连斯基不要袭击莫斯科，并表示不愿向乌克兰提供远程导弹。</p>
+<p><button class="play-button sentence" id="s-00-02-10-319" data-start="00:02:10,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Neither are his threats of severe secondary tariffs credible.</p>
+<p>他关于严厉次级关税的威胁也不可信。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-14-337" data-start="00:02:14,337" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In theory, he could impose sanctions that reduced Russia's export earnings without greatly affecting the oil price.</p>
+<p>理论上，他可以实施既能减少俄罗斯出口收入又不大幅影响油价的制裁。</p>
+<p><button class="play-button sentence" id="s-00-02-21-009" data-start="00:02:21,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But if they were strict enough to choke off the Kremlin's energy exports, the oil price would soar, causing an inflation shock that Mr Trump might find intolerable.</p>
+<p>但如果制裁严格到扼杀克里姆林宫的能源出口，油价将飙升，引发特朗普可能难以承受的通胀冲击。</p>
+<p><button class="play-button sentence" id="s-00-02-30-786" data-start="00:02:30,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The big buyers of Russia's oil exports are China, 47% and India, 38%.</p>
+<p>俄罗斯石油出口的主要买家是中国（47%）和印度（38%）。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959844" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-35-943" data-start="00:02:35,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Trump has backed away from an all-out trade war with China and is in negotiations with India.</p>
+<p>特朗普已避免与中国展开全面贸易战，并正与印度谈判。</p>
+<p><button class="play-button sentence" id="s-00-02-42-673" data-start="00:02:42,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tellingly, investors do not believe in Mr Trump's brinkmanship.</p>
+<p>值得注意的是，投资者并不相信特朗普的边缘政策。</p>
+<p><button class="play-button sentence" id="s-00-02-46-649" data-start="00:02:46,649" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After he threatened to cut off Russia, the oil price fell.</p>
+<p>在他威胁切断俄罗斯后，油价反而下跌。</p>
+<p><button class="play-button sentence" id="s-00-02-50-372" data-start="00:02:50,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet one element of America's new stance is valuable.</p>
+<p>但美国新立场中有一点很有价值。</p>
+<p><button class="play-button sentence" id="s-00-02-53-980" data-start="00:02:53,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The flow of weapons.</p>
+<p>武器供应。</p>
+<p><button class="play-button sentence" id="s-00-02-55-383" data-start="00:02:55,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instead of giving American arms to Ukraine as Joe Biden did, Mr Trump wants European governments to buy and donate them.</p>
+<p>与乔·拜登直接向乌克兰提供美国武器不同，特朗普希望欧洲政府购买并捐赠武器。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959816" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-03-852" data-start="00:03:03,852" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The logic is grubby.</p>
+<p>其逻辑并不光彩。</p>
+<p><button class="play-button sentence" id="s-00-03-05-355" data-start="00:03:05,355" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It will be, he says, good business.</p>
+<p>他说这将是“好生意”。</p>
+<p><button class="play-button sentence" id="s-00-03-07-919" data-start="00:03:07,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still, by paying for such weapons, Europe could fill military gaps.</p>
+<p>尽管如此，通过资助这些武器，欧洲可以填补军事缺口。</p>
+<p><button class="play-button sentence" id="s-00-03-12-011" data-start="00:03:12,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not all European leaders are keen, but they could defray the cost by using frozen Russian state assets.</p>
+<p>并非所有欧洲领导人都热衷于此，但他们可以通过使用被冻结的俄罗斯国有资产来分摊成本。</p>
+<p><button class="play-button sentence" id="s-00-03-18-521" data-start="00:03:18,521" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Already Germany has indicated it will buy Patriot missile batteries, which can provide air defense for Ukraine.</p>
+<p>德国已表示将购买“爱国者”导弹系统，为乌克兰提供防空支持。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-25-758" data-start="00:03:25,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since it relies on Mr Trump's word, this new arrangement is unreliable.</p>
+<p>由于依赖特朗普的承诺，这一新安排并不可靠。</p>
+<p><button class="play-button sentence" id="s-00-03-30-180" data-start="00:03:30,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Production bottlenecks mean that even if America is willing and Europe is prepared to write checks, some weapons may run short.</p>
+<p>生产瓶颈意味着即使美国愿意且欧洲准备出资，某些武器仍可能短缺。</p>
+<p><button class="play-button sentence" id="s-00-03-37-530" data-start="00:03:37,530" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it can, by time, allow Europe to raise production of everything from shells to satellites and Ukraine to develop new ways to prevent Russia pummeling civilians, perhaps through defensive drones that neutralize aerial attacks.</p>
+<p>但随着时间的推移，这将使欧洲提高从炮弹到卫星等各种武器的产量，并让乌克兰开发新方法（例如用防御性无人机抵消空袭）阻止俄罗斯袭击平民。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-51-159" data-start="00:03:51,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If Ukraine can find a way to protect its cities from the air, Mr Putin will be trapped in an exhausting war of attrition.</p>
+<p>如果乌克兰能找到保护城市免受空袭的方法，普京将陷入一场消耗战。</p>
+<p><button class="play-button sentence" id="s-00-03-58-639" data-start="00:03:58,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the past two years, his ground forces have made only meager advances at a huge cost.</p>
+<p>过去两年，其地面部队仅以巨大代价取得微弱进展。</p>
+<p><button class="play-button sentence" id="s-00-04-04-799" data-start="00:04:04,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultimately Europe is rich and capable of containing Russia.</p>
+<p>欧洲终究财力雄厚，有能力遏制俄罗斯。</p>
+<p><button class="play-button sentence" id="s-00-04-08-543" data-start="00:04:08,543" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Trump's dream of a quick peace deal has been exposed as a fantasy.</p>
+<p>特朗普快速达成和平协议的梦想已被证明是幻想。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1s3g7zNE4o/?t=-2208959747" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-12-778" data-start="00:04:12,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although his word counts for little, Ukraine and Europe must seize on it to create a mechanism that does not require daily presidential decisions to function.</p>
+<p>尽管他的承诺无足轻重，乌克兰和欧洲必须借此建立一个无需每日总统决策即可运作的机制。</p>
+<p><button class="play-button sentence" id="s-00-04-25-680" data-start="00:04:25,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for listening to Editors' picks and for being an economist subscriber.</p>
+<p>感谢收听“编辑精选”并订阅《经济学人》。</p>
+<p><button class="play-button sentence" id="s-00-04-29-480" data-start="00:04:29,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll see you back here tomorrow.</p>
+<p>明天再见。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
