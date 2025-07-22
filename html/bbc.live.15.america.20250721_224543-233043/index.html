@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>bbc.live.15.america: London Time 2025-07-21 22:45 - 23:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live coverage from BBC News on Israel's Gaza assault, US-Harvard legal battle, Epstein victim demands, and a Bangladesh jet crash.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>bbc.live.15.america: London Time 2025-07-21 22:45 - 23:30</h1>
+<p>【BBC News America 20250722 以色列对加沙中部发动地面进攻｜哈佛大学就数十亿冻结拨款与美政府对簿公堂｜孟加拉国军机坠毁事件】</p>
+<p>Summary:
+Live coverage from BBC News on Israel's Gaza assault, US-Harvard legal battle, Epstein victim demands, and a Bangladesh jet crash.</p>
+<p>摘要：
+BBC新闻直播报道以色列对加沙的地面进攻、美国与哈佛大学的法律纠纷、爱泼斯坦案件受害者的诉求，以及孟加拉国军机坠毁事件。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 33 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-000" data-start="00:00:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Live from New York, this is BBC News.</p>
+<p>BBC新闻，纽约现场直播。</p>
+<p><button class="play-button sentence" id="s-00-00-04-540" data-start="00:00:04,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel launches a ground assault in central Gaza as 28 countries call for an end to the conflict.</p>
+<p>以色列对加沙中部发动地面进攻，28国呼吁结束冲突。</p>
+<p><button class="play-button sentence" id="s-00-00-11-080" data-start="00:00:11,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of Jeffery Epstein's victims tells the BBC the Trump administration needs to release more information on the sex offenders' abuses.</p>
+<p>爱泼斯坦的一名受害者向BBC表示，特朗普政府需公布更多关于该性犯罪者恶行的信息。</p>
+<p><button class="play-button sentence" id="s-00-00-21-359" data-start="00:00:21,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Harvard heads to court as lawyers for the Ivy League University battled the US government over billions in frozen grants.</p>
+<p>哈佛大学就数十亿冻结拨款与美政府对簿公堂，常春藤盟校律师展开交锋。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959960" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-39-520" data-start="00:00:39,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Suomi Somoskandats, good to have you with us tonight.</p>
+<p>我是苏奥米·索莫斯卡达茨，欢迎收看今晚节目。</p>
+<p><button class="play-button sentence" id="s-00-00-42-200" data-start="00:00:42,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We start in the Middle East.</p>
+<p>首先关注中东局势。</p>
+<p><button class="play-button sentence" id="s-00-00-43-600" data-start="00:00:43,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're following several developments there today.</p>
+<p>我们追踪当地今日多项进展。</p>
+<p><button class="play-button sentence" id="s-00-00-46-159" data-start="00:00:46,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The head of the World Health Organization said its staff was attacked and detained at their warehouse in central Gaza on Monday.</p>
+<p>世界卫生组织总干事称，其工作人员周一在加沙中部仓库遭袭击扣押。</p>
+<p><button class="play-button sentence" id="s-00-00-53-158" data-start="00:00:53,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel expands its military operations there.</p>
+<p>以色列正在扩大该地区军事行动。</p>
+<p><button class="play-button sentence" id="s-00-00-56-518" data-start="00:00:56,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That comes, as the U.S. and Israeli-backed Gaza Humanitarian Foundation appealed to the United Nations to join its aid distribution operations after facing criticism for civilian deaths at their food sites.</p>
+<p>此前，美以支持的加沙人道主义基金会因援助点平民死亡遭批评，现呼吁联合国加入其救援分发行动。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959931" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-09-000" data-start="00:01:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier, Israel rejected a joint statement from 28 countries calling for an immediate end to the war in Gaza.</p>
+<p>早前，以色列拒绝了28国要求立即结束加沙战争的联合声明。</p>
+<p><button class="play-button sentence" id="s-00-01-15-920" data-start="00:01:15,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a joint statement, they said the aid delivery model was dangerous, fuels instability, and deprives Gaza's of human dignity.</p>
+<p>联合声明指出，当前援助模式危险、加剧动荡、剥夺加沙人的尊严。</p>
+<p><button class="play-button sentence" id="s-00-01-24-718" data-start="00:01:24,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the plea was being made, Israel launched a new assault on the territory.</p>
+<p>呼吁发出之际，以色列对该地区发动新一轮攻击。</p>
+<p><button class="play-button sentence" id="s-00-01-29-039" data-start="00:01:29,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents in central Gaza say Israeli tank fire has destroyed houses and mosques and killed several people in its latest ground offensive.</p>
+<p>加沙中部居民称，以军坦克在最新地面攻势中摧毁房屋清真寺，致多人死亡。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959903" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-36-560" data-start="00:01:36,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now Israel does not allow international media to report from inside Gaza, so our correspondent Amir Nadir sent this report from Jerusalem and a warning you may find some of the images upsetting.</p>
+<p>以色列目前禁止国际媒体在加沙境内报道，记者阿米尔·纳迪尔从耶路撒冷发回报道（部分画面可能引发不适）。</p>
+<p><button class="play-button sentence" id="s-00-01-52-560" data-start="00:01:52,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fleeing by bus or by cart as the bombs grow louder.</p>
+<p>爆炸声渐近，民众乘巴士或推车逃离。</p>
+<p><button class="play-button sentence" id="s-00-01-57-920" data-start="00:01:57,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Deer Al-Balla, a city of over 50,000, has escaped the worst of the ground fighting in Gaza.</p>
+<p>五万人口的迪尔巴拉城原躲过加沙最激烈地面战。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959877" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But now Palestinians report tanks ruling into its streets, where gunfire rings out.</p>
+<p>但现巴勒斯坦人称坦克驶入街道，枪声四起。</p>
+<p><button class="play-button sentence" id="s-00-02-10-360" data-start="00:02:10,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In this footage, verified by the BBC, the main emergency services agency says that it's receiving calls of families trapped under the rubble after shelling.</p>
+<p>BBC核实的画面显示，主要急救机构称正接到炮击后家庭被困废墟的求救。</p>
+<p><button class="play-button sentence" id="s-00-02-19-879" data-start="00:02:19,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Israeli ground forces push into unprecedented new parts of Gaza, fleeing families report how closely the violence has come to their homes.</p>
+<p>以军地面部队进入加沙新区域，逃亡家庭描述暴力如何逼近家门。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959852" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-27-639" data-start="00:02:27,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw the tanks in front of us and there were so many snipers are shutting everywhere and the shots entered the home while in front of me while I was standing in front of the home, the shot in front of me entered the home.</p>
+<p>我们面前就是坦克，狙击手四处开枪，子弹射进我家——当时我站在家门前，子弹就从眼前飞入屋内。</p>
+<p><button class="play-button sentence" id="s-00-02-44-959" data-start="00:02:44,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I survived.</p>
+<p>我幸存下来。</p>
+<p><button class="play-button sentence" id="s-00-02-46-838" data-start="00:02:46,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a miracle to stay alive.</p>
+<p>活着真是奇迹。</p>
+<p><button class="play-button sentence" id="s-00-02-49-438" data-start="00:02:49,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The operation has taken many by surprise.</p>
+<p>这次行动令许多人措手不及。</p>
+<p><button class="play-button sentence" id="s-00-02-52-479" data-start="00:02:52,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm 70 years old and have never seen anything like this before.</p>
+<p>我70岁了，从未见过这般景象。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959821" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-58-038" data-start="00:02:58,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why do this to people?</p>
+<p>为何如此对待民众？</p>
+<p><button class="play-button sentence" id="s-00-03-00-038" data-start="00:03:00,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why don't we human beings like the rest of people?</p>
+<p>我们难道不配拥有与他人同等的人性吗？</p>
+<p><button class="play-button sentence" id="s-00-03-03-840" data-start="00:03:03,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli sources suggest the city had been spared previously because it's thought there are hostages held there.</p>
+<p>以方消息称该城此前未被攻击是因怀疑人质关押于此。</p>
+<p><button class="play-button sentence" id="s-00-03-10-079" data-start="00:03:10,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now some Israelis say the military wants to maximize pressure as ceasefire negotiations continue.</p>
+<p>现部分以色列人表示军方欲在停火谈判期间施加最大压力。</p>
+<p><button class="play-button sentence" id="s-00-03-15-639" data-start="00:03:15,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The idea of repairing for military operation in the center of Gaza, in the central camps in Gaza like Dilebel, in other is to hint the Hamas that there is no safe haven for them anywhere in Gaza.</p>
+<p>在加沙中部如迪莱勒等地开展军事行动，是为向哈马斯表明加沙已无安全区。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959784" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-36-000" data-start="00:03:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The new operation is already causing alarm, dealing another devastating blow to the humanitarian situation says the UN.</p>
+<p>联合国称新行动加剧警报，人道主义局势再遭重创。</p>
+<p><button class="play-button sentence" id="s-00-03-43-520" data-start="00:03:43,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the specter of starvation is growing rapidly.</p>
+<p>饥荒阴影正快速蔓延。</p>
+<p><button class="play-button sentence" id="s-00-03-49-759" data-start="00:03:49,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Baby Sealer is one of many children being brought to medics in Gaza bearing signs of severe malnutrition.</p>
+<p>婴儿西拉是众多被送医的严重营养不良加沙儿童之一。</p>
+<p><button class="play-button sentence" id="s-00-03-56-960" data-start="00:03:56,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have fled from place to place in fear and I did not know where to take her.</p>
+<p>我们在恐惧中不断转移，不知该带她去何处。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959758" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-01-680" data-start="00:04:01,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every morning at 6 a.m., I wake her up and I'm scared she won't wake.</p>
+<p>每天清晨6点叫醒她时，都害怕她不再醒来。</p>
+<p><button class="play-button sentence" id="s-00-04-05-879" data-start="00:04:05,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've met many women in the hospital who have lost their children.</p>
+<p>我在医院见过太多失去孩子的母亲。</p>
+<p><button class="play-button sentence" id="s-00-04-11-039" data-start="00:04:11,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We gave her nutritional supplement but it's not enough for the condition she's in.</p>
+<p>营养补充剂对她当前状况远远不够。</p>
+<p><button class="play-button sentence" id="s-00-04-15-400" data-start="00:04:15,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's 11 months old but her development is only that of a three month baby.</p>
+<p>她11个月大，发育仅相当于3月婴儿。</p>
+<p><button class="play-button sentence" id="s-00-04-21-079" data-start="00:04:21,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Humanitarian agencies continue to call on Israel to let more aid in.</p>
+<p>人道机构持续呼吁以色列允许更多援助进入。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959734" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-25-319" data-start="00:04:25,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as its military operation grinds forward, in Gaza civilians are finding only more daily horror.</p>
+<p>但随着军事行动推进，加沙民众只遭遇更多日常恐怖。</p>
+<p><button class="play-button sentence" id="s-00-04-31-879" data-start="00:04:31,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emeon Adder, BBC News, Jerusalem.</p>
+<p>BBC新闻，埃蒙·阿德尔耶路撒冷报道。</p>
+<p><button class="play-button sentence" id="s-00-04-36-038" data-start="00:04:36,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A spokesman for the Gaza Humanitarian Foundation appealed to UN aid agencies to partner in its Gaza food operation and claimed that UN supplies, including medicine, were rotting at border crossings because agencies refused to transport them.</p>
+<p>加沙人道基金会发言人呼吁联合国救援机构合作开展食品行动，称包括药品在内的联合国物资因机构拒绝运输在边境腐烂。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959709" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-50-639" data-start="00:04:50,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But GHF was never meant to meet the needs of the population alone.</p>
+<p>但基金会从未打算独自满足民众需求。</p>
+<p><button class="play-button sentence" id="s-00-04-55-800" data-start="00:04:55,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not enough.</p>
+<p>这远远不够。</p>
+<p><button class="play-button sentence" id="s-00-04-57-759" data-start="00:04:57,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is why we have routinely and from the beginning pushed for the UN and others to operate alongside us in Gaza.</p>
+<p>因此我们始终推动联合国等机构与我们在加沙协同行动。</p>
+<p><button class="play-button sentence" id="s-00-05-06-278" data-start="00:05:06,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been many, many false reports that the UN is not allowed to operate in Gaza.</p>
+<p>大量不实报道称联合国被禁止在加沙运作。</p>
+<p><button class="play-button sentence" id="s-00-05-11-800" data-start="00:05:11,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That GHF has replaced them.</p>
+<p>称我们取代了他们。</p>
+<p><button class="play-button sentence" id="s-00-05-14-038" data-start="00:05:14,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That four GHF sites have replaced 400 UN access points.</p>
+<p>说我们4个站点取代了联合国400个接入点。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-18-838" data-start="00:05:18,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is just not true.</p>
+<p>这绝非事实。</p>
+<p><button class="play-button sentence" id="s-00-05-22-399" data-start="00:05:22,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier my colleague Katrina Perry spoke to Steph Andoujarach, spokesperson for the UN Secretary General and asked him to respond to those claims.</p>
+<p>早前同事卡特里娜·佩里采访联合国秘书长发言人斯特凡·杜加里克，请他回应这些说法。</p>
+<p><button class="play-button sentence" id="s-00-05-31-238" data-start="00:05:31,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've heard them say this before.</p>
+<p>我们听过类似言论。</p>
+<p><button class="play-button sentence" id="s-00-05-33-678" data-start="00:05:33,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is clear is that there is enough work, there's enough humanitarian work in Gaza for everyone.</p>
+<p>显然加沙的人道工作足够所有人参与。</p>
+<p><button class="play-button sentence" id="s-00-05-40-678" data-start="00:05:40,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We cannot do it alone.</p>
+<p>我们无法独力完成。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959657" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-42-639" data-start="00:05:42,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, we will work, we will not work with organizations that run food distribution operations like militarized camp where people get shot, they get trampled, they die or they get wounded, just trying to get food.</p>
+<p>但我们不会与运作军事化食品分发营的组织合作——民众在那里为获取食物遭枪击、踩踏、死伤。</p>
+<p><button class="play-button sentence" id="s-00-05-59-158" data-start="00:05:59,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a better way to do it.</p>
+<p>存在更好的运作方式。</p>
+<p><button class="play-button sentence" id="s-00-06-00-879" data-start="00:06:00,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it was working well during the ceasefire.</p>
+<p>停火期间原有方式运转良好。</p>
+<p><button class="play-button sentence" id="s-00-06-04-800" data-start="00:06:04,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is the way the United Nations and other international organizations work to reach almost every Palestinian who needs food.</p>
+<p>联合国等国际组织通过该方式覆盖几乎所有需援助巴勒斯坦人。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959625" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-14-399" data-start="00:06:14,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have been ourselves decrying the fact that cargo is spoiling at these crossing points because we have not been given the permission to get them.</p>
+<p>我们一直谴责物资在过境点腐烂却未获准运输的事实。</p>
+<p><button class="play-button sentence" id="s-00-06-24-720" data-start="00:06:24,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have not been given the permission to bring in enough trucks that we need every day.</p>
+<p>我们每日所需卡车数量未获批准。</p>
+<p><button class="play-button sentence" id="s-00-06-30-120" data-start="00:06:30,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People need to understand that the Kareem Shalom crossing is not like McDonald's drive through where you can go and pick up and you get what you need.</p>
+<p>需明确凯雷姆沙洛姆过境点非麦当劳得来速——无法随取随得。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959602" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-37-680" data-start="00:06:37,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to go through enormous amount of security clearance and bureaucracy and red tape with the Israelis before we can even pick up half a truck.</p>
+<p>我们须经历以方大量安检、官僚程序和繁文缛节才能运走半车物资。</p>
+<p><button class="play-button sentence" id="s-00-06-49-360" data-start="00:06:49,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Stefan, describe to me the situation in Gaza at the moment.</p>
+<p>斯特凡，请描述加沙现状。</p>
+<p><button class="play-button sentence" id="s-00-06-53-160" data-start="00:06:53,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have seen these extra evacuation orders now for Darrell Bala.</p>
+<p>当前迪尔巴拉新增疏散令。</p>
+<p><button class="play-button sentence" id="s-00-06-57-040" data-start="00:06:57,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So most of the territory in Gaza is now a no-go militarily zone.</p>
+<p>加沙大部分地区现为军事禁区。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959576" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-03-360" data-start="00:07:03,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's correct.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-07-04-360" data-start="00:07:04,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Almost 87% of the territory is either evacuated where Palestinians cannot be and where we have great difficulty doing any sort of humanitarian operation.</p>
+<p>近87%区域已疏散，巴勒斯坦人不得进入，我们开展人道行动极度困难。</p>
+<p><button class="play-button sentence" id="s-00-07-19-079" data-start="00:07:19,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we have seen the last 24 hours or Israeli military operations in Darrell Bala, which is the town in the center of Gaza where we have our humanitarian hub.</p>
+<p>过去24小时以军在迪尔巴拉开展军事行动——该镇是我们在加沙中部的人道主义中心。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959550" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-29-360" data-start="00:07:29,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a lot of humanitarian personnel, both international and Palestinians who are there and will remain there in order to try to continue to work in what are undescribable conditions.</p>
+<p>众多国际及巴勒斯坦人道工作者仍驻守当地，在难以言喻的困境中坚持工作。</p>
+<p><button class="play-button sentence" id="s-00-07-44-319" data-start="00:07:44,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in Darrell Bala, UN premises have been hit despite Israel knowing the locations of where your colleagues were.</p>
+<p>尽管以方知晓位置，联合国在迪尔巴拉的设施仍遭袭击。</p>
+<p><button class="play-button sentence" id="s-00-07-52-920" data-start="00:07:52,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What explanation have you been given from Israel for why they are targeting your operation like that?</p>
+<p>以方对此作何解释？</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959521" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-58-800" data-start="00:07:58,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, our premises have been hit.</p>
+<p>我们的设施确实受袭。</p>
+<p><button class="play-button sentence" id="s-00-08-03-800" data-start="00:08:03,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you mentioned, both the Israelis and Hamas and others all know where our premises are.</p>
+<p>如你所说，以方、哈马斯等各方均知晓我们设施位置。</p>
+<p><button class="play-button sentence" id="s-00-08-10-000" data-start="00:08:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Frankly, we haven't received any explanation except what you all hear as well, which is that the military operations are expanding to areas that now include Darrell Bala.</p>
+<p>坦率说，除"军事行动正扩展至迪尔巴拉"这类公开说法外，我们未获任何解释。</p>
+<p><button class="play-button sentence" id="s-00-08-21-439" data-start="00:08:21,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But these – all of the warring parties have a duty under international order to respect and protect our premises.</p>
+<p>但根据国际法，所有交战方均有义务尊重保护联合国设施。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959489" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-30-399" data-start="00:08:30,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak about the latest now with Middle East analysts and former U.S. State Department official Laura Blumenfeld is joining us tonight.</p>
+<p>现邀请中东问题分析师、美国前国务院官员劳拉·布卢门菲尔德分析最新局势。</p>
+<p><button class="play-button sentence" id="s-00-08-37-120" data-start="00:08:37,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Laura, good to have you back on the program.</p>
+<p>劳拉，欢迎回到节目。</p>
+<p><button class="play-button sentence" id="s-00-08-39-120" data-start="00:08:39,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At what point does the U.S. join the number of other countries in taking a much tougher line with Israel, particularly on the distribution of aid via the Gaza Humanitarian Foundation?</p>
+<p>美国何时会同其他国家一样对以色列更强硬——特别是在加沙人道基金会援助分发问题上？</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959469" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-50-278" data-start="00:08:50,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That question is key, because we see today Hamas is losing Gaza, but Israel is losing the world.</p>
+<p>此问题关键——如今哈马斯正失去加沙，而以色列正失去世界。</p>
+<p><button class="play-button sentence" id="s-00-08-57-759" data-start="00:08:57,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All that said, there's only one country that counts, and that is President Trump, the United States.</p>
+<p>但归根结底，只有美国总统特朗普的态度具有决定性。</p>
+<p><button class="play-button sentence" id="s-00-09-02-559" data-start="00:09:02,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the President has a decision to make.</p>
+<p>总统需作出抉择。</p>
+<p><button class="play-button sentence" id="s-00-09-04-879" data-start="00:09:04,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's a developer.</p>
+<p>他是开发商出身。</p>
+<p><button class="play-button sentence" id="s-00-09-06-200" data-start="00:09:06,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is his vision for the Middle East?</p>
+<p>其中东愿景是什么？</p>
+<p><button class="play-button sentence" id="s-00-09-08-360" data-start="00:09:08,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it Gaza, Rivera, in which case this would make some sense that he's using Netanyahu as kind of a wrecking ball for a territory that he hopes to, as he put it, have or just get, which raised a lot of eyebrows and dropped a lot of jaws several months ago when he first proposed it?</p>
+<p>是"加沙里维拉"计划吗？若是，则他利用内塔尼亚胡作为"拆毁球"来清理这片他数月前直言想"占有"的土地——该言论曾引发哗然。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959432" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-27-438" data-start="00:09:27,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or is his other vision, the one that he actually wants to fulfill and execute, which is expanding the Abraham Accords, which would require stability, the opposite of the cast that we're seeing today?</p>
+<p>抑或是他真正想实现的另一愿景——扩展需以稳定为前提的《亚伯拉罕协议》？这与当前局势背道而驰。</p>
+<p><button class="play-button sentence" id="s-00-09-38-360" data-start="00:09:38,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, I would call it the Benjamin Accords, because I think it's all based on the dollars and expanding business and economy, and as we all know, war is bad for business.</p>
+<p>我称之为"本杰明协议"——因其核心是金钱与商业经济扩张，而众所周知战争不利商业。</p>
+<p><button class="play-button sentence" id="s-00-09-50-158" data-start="00:09:50,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In those scenarios that you just laid out there and what President Trump might want, where does all of that leave goss and civilians who, at this point, are struggling even to get the least amount of food they need to survive?</p>
+<p>在您描述的这些情景及特朗普可能的需求下，加沙民众处境如何？他们此刻连生存所需最低限度的食物都难以获取。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959397" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-02-399" data-start="00:10:02,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this, again, as I understand it, the Gaza Riviera plan leaves them boxed in a horrible corner, which is where they are today, desperate.</p>
+<p>据我理解，"加沙里维拉"计划将他们逼入今日这般绝望绝境。</p>
+<p><button class="play-button sentence" id="s-00-10-13-198" data-start="00:10:13,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can't forget, though, as Secretary Blinken, Biden Secretary of State, said recently that if we spent 10% of our time focusing on Hamas also, and that the agents are going to see that they have, that if they lay down their arms and release the hostages, that takes away every pretext from the IDF to be in Gaza, to be occupying and terrorizing the civilian population.</p>
+<p>但别忘了，拜登政府的布林肯国务卿近日指出：若我们花10%精力关注哈马斯，且其若放下武器释放人质，以军就再无占据加沙、恐吓平民的借口。</p>
+<p><button class="play-button sentence" id="s-00-10-36-000" data-start="00:10:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So so much about this war has not been about being strong, but about being smart.</p>
+<p>因此这场战争更多关乎智慧而非蛮力。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959359" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-41-000" data-start="00:10:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I would just say a bit of strategic advice to Hamas, which is the smartest thing that they could do is release the hostages, and it would be a moral victory and a strategic victory.</p>
+<p>我给哈马斯的战略建议是：释放人质将带来道德与战略双重胜利——这是他们最明智之举。</p>
+<p><button class="play-button sentence" id="s-00-10-51-759" data-start="00:10:51,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There would be no more argument, then, to continue, as you said, grinding down the population, and they're all suffering for it.</p>
+<p>如你所说，届时以方再无法以"碾压民众"为由延续行动，所有人都在为此受苦。</p>
+<p><button class="play-button sentence" id="s-00-10-59-000" data-start="00:10:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, whose fault it is, we could trade blame all day, but I think that there is a solution here.</p>
+<p>追责问题可争论终日，但我认为解决方案确实存在。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959335" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-04-480" data-start="00:11:04,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And again, I know that we've spoken times before, and I've said we're close, but I do believe we are close.</p>
+<p>虽然我们多次讨论时我都说"接近解决"，但我仍坚信曙光在即。</p>
+<p><button class="play-button sentence" id="s-00-11-11-480" data-start="00:11:11,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What makes you think we are close, Laura, because we've seen this back and forth, and as you said, we've discussed many times on this program, and President Trump had seemed optimistic, but then it seems the White House had walked back, perhaps, that sense of optimism, that there could be some sort of ceasefire agreement.</p>
+<p>劳拉，您为何认为曙光在即？我们目睹反复拉锯，如您所说节目中也多次讨论——特朗普曾显乐观，但白宫后又淡化这种可能达成停火的乐观情绪。</p>
+<p><button class="play-button sentence" id="s-00-11-26-479" data-start="00:11:26,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is responsive to optics, and all day long, whether you're on social media or looking at the front page of the New York Times, I'm not sure he's quite there, but it's also in the MAGA media, in the MAGA world, where people are really saying it's time to end this war.</p>
+<p>特朗普对舆论敏感——无论社交媒体或《纽约时报》头版，虽不确定他是否已决断，但MAGA媒体界确实涌现"该结束战争"的呼声。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959296" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-43-038" data-start="00:11:43,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I do believe that Trump has a wide open ear to the media.</p>
+<p>我确信特朗普会倾听这些声音。</p>
+<p><button class="play-button sentence" id="s-00-11-48-440" data-start="00:11:48,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What I have, the problem, actually, for Israel, is that their media is reflecting more of an internal introspective point of view.</p>
+<p>以色列媒体的问题在于更多反映内省视角。</p>
+<p><button class="play-button sentence" id="s-00-11-55-399" data-start="00:11:55,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their biggest headline today, as it relates to Gaza, was that hostage families fear, as Israeli forces drive into Daryl Bala, which is the one area in Gaza, that the soldiers have not entered before, because there was this concern that the hostages were being held there.</p>
+<p>今日关于加沙的头条新闻是，随着以色列军队进入加沙的达尔巴拉地区——士兵们此前从未涉足该地——人质家属感到担忧，因有迹象表明人质可能被关押于此。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959267" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-12-440" data-start="00:12:12,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So again, everybody's kind of digesting their own information diet, but I think Trump's is all important.</p>
+<p>各方仍在消化信息，但特朗普的动向尤为关键。</p>
+<p><button class="play-button sentence" id="s-00-12-20-639" data-start="00:12:20,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Laura Blumentfeld, great to have your analysis.</p>
+<p>劳拉·布鲁门菲尔德，感谢你的分析。</p>
+<p><button class="play-button sentence" id="s-00-12-22-559" data-start="00:12:22,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As always, thank you so much.</p>
+<p>一如既往地感谢你。</p>
+<p><button class="play-button sentence" id="s-00-12-24-679" data-start="00:12:24,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-12-27-600" data-start="00:12:27,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world, and across the UK, this is BBC News.</p>
+<p>这里是BBC新闻，覆盖全球与英国。</p>
+<p><button class="play-button sentence" id="s-00-13-17-320" data-start="00:13:17,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here with BBC News, one of Jeffrey Epstein's victims and a key witness in his associate Gilein Maxwell's sex trafficking trial, is calling on President Trump to release information and the government's possession related to the sex offender and to, quote, prove everyone wrong if he has nothing to hide.</p>
+<p>BBC新闻获悉，爱泼斯坦案关键证人安妮·法默呼吁特朗普总统公布政府持有的相关档案，并“若无隐瞒，就应自证清白”。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959161" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-58-120" data-start="00:13:58,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any farmer and her sister Maria made the earliest known reports of abuse by Epstein to the NYPD and the FBI in 1996.</p>
+<p>安妮·法默与妹妹玛丽亚早在1996年便向纽约警方和FBI举报爱泼斯坦的性侵行为。</p>
+<p><button class="play-button sentence" id="s-00-14-05-200" data-start="00:14:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump has faced a rare backlash to his leadership from some of his most loyal supporters and faces calls for more information to be released on Jeffrey Epstein.</p>
+<p>特朗普罕见地遭遇核心支持者的质疑，被要求公开更多爱泼斯坦案信息。</p>
+<p><button class="play-button sentence" id="s-00-14-13-440" data-start="00:14:13,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our New York correspondent, Netta Taufik, asked Ms. Farmer what she thought of the debates surrounding the release of the so-called Epstein client list.</p>
+<p>本台驻纽约记者内塔·陶菲克询问法默对“爱泼斯坦客户名单”公布争议的看法。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959137" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-22-159" data-start="00:14:22,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's exhausting to have this, you know, cycle happen over and over where the case gets so much attention and then it feels like often that's not really followed by much action.</p>
+<p>这种“案件受关注却无实质进展”的循环令人疲惫。</p>
+<p><button class="play-button sentence" id="s-00-14-34-720" data-start="00:14:34,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was not surprised that Trump's team made this announcement.</p>
+<p>我对特朗普团队的声明并不意外。</p>
+<p><button class="play-button sentence" id="s-00-14-40-678" data-start="00:14:40,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have never felt that Trump was someone that would be very supportive of justice for Epstein's victims, just given that he's his actual predator and that he had this close association with Epstein.</p>
+<p>鉴于特朗普本人与爱泼斯坦关系密切，我从不认为他会真正支持为受害者伸张正义。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959104" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-55-438" data-start="00:14:55,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But of course, when there are all these people saying that there will be more attention given and there will be more accountability, you still hope that that might be true.</p>
+<p>但当众人承诺加强关注与追责时，你仍会抱有一丝希望。</p>
+<p><button class="play-button sentence" id="s-00-15-06-480" data-start="00:15:06,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think really the case has been politicized so much and it's hard not to feel used in that process.</p>
+<p>此案已被过度政治化，受害者难免感到被利用。</p>
+<p><button class="play-button sentence" id="s-00-15-14-120" data-start="00:15:14,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is your kind of key message right now to Donald Trump?</p>
+<p>你对特朗普的核心诉求是什么？</p>
+<p><button class="play-button sentence" id="s-00-15-16-960" data-start="00:15:16,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prove everyone wrong.</p>
+<p>证明众人错了。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959081" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-18-120" data-start="00:15:18,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you have if you have nothing to hide, then please release this information that people are asking for.</p>
+<p>若问心无愧，就请公布民众要求的信息。</p>
+<p><button class="play-button sentence" id="s-00-15-26-080" data-start="00:15:26,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please make sure that Gilan Maxwell stays behind bars where she deserves to be.</p>
+<p>确保吉斯莱恩·麦克斯韦尔继续服刑。</p>
+<p><button class="play-button sentence" id="s-00-15-31-360" data-start="00:15:31,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you were truly not implicated, then this should not be a problem to release more information about this case.</p>
+<p>若你确实未涉案，公布更多信息应非难事。</p>
+<p><button class="play-button sentence" id="s-00-15-37-600" data-start="00:15:37,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you lost hope that you'll ever get answers?</p>
+<p>你是否已对获得答案失去希望？</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959059" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-40-600" data-start="00:15:40,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are some of the kind of key things you want to see?</p>
+<p>你希望看到哪些关键进展？</p>
+<p><button class="play-button sentence" id="s-00-15-43-200" data-start="00:15:43,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think most people involved realize that it's much more complex than than a client list, right?</p>
+<p>多数相关者明白，此案远比一份客户名单复杂。</p>
+<p><button class="play-button sentence" id="s-00-15-50-519" data-start="00:15:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's not the kind of information that we are hoping for.</p>
+<p>我们期待的不止于此。</p>
+<p><button class="play-button sentence" id="s-00-15-54-200" data-start="00:15:54,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there are some very central questions that have still not been answered and those are things such as following the money.</p>
+<p>资金流向等核心问题仍未解答。</p>
+<p><button class="play-button sentence" id="s-00-16-05-158" data-start="00:16:05,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been investigations that have looked at the financial aspect of this and there's so many questions there that leave me to believe there have been financial crimes that have not been investigated, that may be implicating people in power, that it's important for us to understand.</p>
+<p>现有财务调查存在大量疑点，让我相信仍有金融犯罪未被追查，可能牵涉权贵，必须查明。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208959017" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-22-278" data-start="00:16:22,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That interview conducted by Netta Telfik and she joins us live for more now.</p>
+<p>内塔·特尔菲克完成采访后，将连线进一步解读。</p>
+<p><button class="play-button sentence" id="s-00-16-27-759" data-start="00:16:27,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What other concerns did Miss Farmer say she had about the administration's handling of all of this?</p>
+<p>法默对政府处理方式还有何担忧？</p>
+<p><button class="play-button sentence" id="s-00-16-33-840" data-start="00:16:33,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, Suomi.</p>
+<p>是的，苏米。</p>
+<p><button class="play-button sentence" id="s-00-16-36-798" data-start="00:16:36,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any mentioned a number of what she called missteps by the administration?</p>
+<p>安妮列举了政府的多项“失误”：</p>
+<p><button class="play-button sentence" id="s-00-16-40-678" data-start="00:16:40,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First and foremost, by promising so much about transparency and accountability with the Epstein files and then making what she sees as a U-turn saying there's nothing to see here.</p>
+<p>先是承诺公开爱泼斯坦档案以追责，后又改称“无可公开”。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958987" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-52-840" data-start="00:16:52,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She also said the release of that 11 hours of prison surveillance footage from the moments before Epstein apparently died by suicide.</p>
+<p>她质疑监狱公布爱泼斯坦“自杀”前11小时监控录像的完整性。</p>
+<p><button class="play-button sentence" id="s-00-17-04-640" data-start="00:17:04,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That also raised some questions for her.</p>
+<p>此举引发她的疑虑。</p>
+<p><button class="play-button sentence" id="s-00-17-07-839" data-start="00:17:07,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She says the Department of Justice hasn't responded to whether the footage was edited or was definitely raw as they have suggested.</p>
+<p>司法部未回应录像是否经剪辑。</p>
+<p><button class="play-button sentence" id="s-00-17-16-640" data-start="00:17:16,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She had questions about that and said it raised more questions in the end.</p>
+<p>这最终衍生出更多疑问。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958959" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-21-000" data-start="00:17:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sheathley, Marine Comey, Suomi is a prosecutor who went after Epstein and also secured the conviction for Galein Maxwell.</p>
+<p>检察官玛丽·科米曾起诉爱泼斯坦并促成麦克斯韦尔定罪。</p>
+<p><button class="play-button sentence" id="s-00-17-30-598" data-start="00:17:30,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She worked hand in hand with Annie Farmer who was a key witness in that case.</p>
+<p>她与关键证人安妮·法默密切合作。</p>
+<p><button class="play-button sentence" id="s-00-17-34-519" data-start="00:17:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the Trump administration fired Marine Comey without an explanation and Annie says specifically at this time with so much focus around the Epstein case and the victims that she found that incredibly distressing.</p>
+<p>特朗普政府无端解雇科米，安妮认为在爱泼斯坦案聚焦期此举令人极度不安。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-47-118" data-start="00:17:47,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She spoke with other victims.</p>
+<p>她与其他受害者沟通后表示：</p>
+<p><button class="play-button sentence" id="s-00-17-48-838" data-start="00:17:48,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They want answers into why she was fired.</p>
+<p>众人要求政府解释解雇原因。</p>
+<p><button class="play-button sentence" id="s-00-17-53-598" data-start="00:17:53,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that what is the White House saying about all of this at this point?</p>
+<p>白宫目前作何回应？</p>
+<p><button class="play-button sentence" id="s-00-17-58-239" data-start="00:17:58,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, the White House has responded to our questions about Donald Trump's position on this interview and some of her comments are saying that this is old, recycled, fake news.</p>
+<p>白宫称此为“陈年假新闻”，并强调特朗普早因爱泼斯坦“品行不端”将其逐出私人俱乐部，试图淡化二人关联。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958908" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-11-598" data-start="00:18:11,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say that Donald Trump essentially kicked out Jeffrey Epstein from his club when he realized he was a creep.</p>
+<p>他们表示特朗普在发现爱泼斯坦品行不端后将其逐出俱乐部。</p>
+<p><button class="play-button sentence" id="s-00-18-19-878" data-start="00:18:19,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So very much trying to underplay that there was any kind of close association between Donald Trump and Jeffrey Epstein and the White House again for training this as all a hoax that is being drummed up by Democrats and other opponents of the president.</p>
+<p>白宫再次将此定性为民主党等总统对手炮制的骗局。</p>
+<p><button class="play-button sentence" id="s-00-18-36-878" data-start="00:18:36,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is just before we let you go.</p>
+<p>最后请问：</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958881" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-38-640" data-start="00:18:38,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why does the story seem to resonate with so many people?</p>
+<p>为何此案引发广泛共鸣？</p>
+<p><button class="play-button sentence" id="s-00-18-41-519" data-start="00:18:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does any farmer think about that?</p>
+<p>安妮·法默如何看待？</p>
+<p><button class="play-button sentence" id="s-00-18-44-720" data-start="00:18:44,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, you know, any farmer spoke a lot about how people have really tried to sensationalize this case for their own benefit, but that at the heart of this are really horrific crimes that were committed by real people who bear the weight.</p>
+<p>安妮指出，尽管有人为私利炒作此案，但其核心是权贵犯下的骇人罪行。</p>
+<p><button class="play-button sentence" id="s-00-19-00-680" data-start="00:19:00,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she said the reason it resonates with so many is because people see this as people in power getting away with horrific crimes.</p>
+<p>民众共鸣源于对权贵逍遥法外的愤怒。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-10-318" data-start="00:19:10,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also talks to the issue of the protection of children in society.</p>
+<p>此案亦关乎儿童保护议题。</p>
+<p><button class="play-button sentence" id="s-00-19-14-440" data-start="00:19:14,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so for her, she says there are people who really do want accountability and want answers on this.</p>
+<p>她强调，许多人真心追求真相与追责。</p>
+<p><button class="play-button sentence" id="s-00-19-22-240" data-start="00:19:22,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is separate from those who she believes are using this for political gain.</p>
+<p>这与借机政治投机者截然不同。</p>
+<p><button class="play-button sentence" id="s-00-19-26-759" data-start="00:19:26,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> OK, NETA, thank you so much for that reporting tonight.</p>
+<p>感谢内塔的报道。</p>
+<p><button class="play-button sentence" id="s-00-19-30-200" data-start="00:19:30,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NETA, Tophic for us.</p>
+<p>内塔·托菲克为您播报。</p>
+<p><button class="play-button sentence" id="s-00-19-33-640" data-start="00:19:33,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, at least 20 people have died.</p>
+<p>孟加拉国一架军机坠毁校园，至少20人死亡。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-35-920" data-start="00:19:35,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of them children after a fighter jet on a training exercise crashed into a school in Bangladesh.</p>
+<p>遇难者多为儿童。</p>
+<p><button class="play-button sentence" id="s-00-19-41-640" data-start="00:19:41,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The jet came down while children were preparing to leave at the end of the day at the Milestone School in the capital Daca.</p>
+<p>事发于达卡里程碑学校放学时段。</p>
+<p><button class="play-button sentence" id="s-00-19-47-880" data-start="00:19:47,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yogi Thalamai sent this report.</p>
+<p>尤吉·塔拉迈发回报道。</p>
+<p><button class="play-button sentence" id="s-00-19-52-359" data-start="00:19:52,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a densely packed talk on neighborhood, a tragedy beyond belief.</p>
+<p>人口稠密的社区遭遇难以置信的悲剧。</p>
+<p><button class="play-button sentence" id="s-00-19-57-240" data-start="00:19:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A Bangladesh Air Force training jet crashed into a school killing the pilot.</p>
+<p>孟空军训练机坠毁致飞行员身亡。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958796" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-03-640" data-start="00:20:03,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And hitting a building that housed classrooms for young students.</p>
+<p>并撞击低年级教学楼。</p>
+<p><button class="play-button sentence" id="s-00-20-08-119" data-start="00:20:08,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lessons were just ending for the day.</p>
+<p>当时正值放学。</p>
+<p><button class="play-button sentence" id="s-00-20-12-519" data-start="00:20:12,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fire fighters rushed in battling to control the blames.</p>
+<p>消防员奋力控制火势。</p>
+<p><button class="play-button sentence" id="s-00-20-19-798" data-start="00:20:19,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For Han Hussain, told the BBC's Bengali service what he saw.</p>
+<p>目击者汉·侯赛因向BBC孟加拉语频道描述：</p>
+<p><button class="play-button sentence" id="s-00-20-25-759" data-start="00:20:25,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was standing outside the building and my best friend.</p>
+<p>我当时在楼外，目睹挚友遇难。</p>
+<p><button class="play-button sentence" id="s-00-20-28-920" data-start="00:20:28,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The one I was in the exam hall with, who died right in front of my eyes.</p>
+<p>考试时坐我旁边的人，死在我眼前。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-33-118" data-start="00:20:33,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The plane fell on him.</p>
+<p>飞机砸中了他。</p>
+<p><button class="play-button sentence" id="s-00-20-34-878" data-start="00:20:34,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And many parents were inside too, because the younger children were coming out.</p>
+<p>许多接孩子的家长也在现场。</p>
+<p><button class="play-button sentence" id="s-00-20-39-680" data-start="00:20:39,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Parents who'd come for their daily school pick-up were faced with an unimaginable scene.</p>
+<p>家长们遭遇了难以想象的场景。</p>
+<p><button class="play-button sentence" id="s-00-20-46-878" data-start="00:20:46,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This woman was searching for her child.</p>
+<p>这位妇女在寻找孩子。</p>
+<p><button class="play-button sentence" id="s-00-20-51-720" data-start="00:20:51,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As was Charmin Sultana.</p>
+<p>查敏·苏尔塔娜同样在寻找。</p>
+<p><button class="play-button sentence" id="s-00-20-54-759" data-start="00:20:54,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm waiting for my son.</p>
+<p>我在等儿子。</p>
+<p><button class="play-button sentence" id="s-00-20-56-440" data-start="00:20:56,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He studies in this college.</p>
+<p>他在这所学校读书。</p>
+<p><button class="play-button sentence" id="s-00-20-58-278" data-start="00:20:58,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He called once after the incident, but I haven't been able to reach him since, she said.</p>
+<p>事故后他打过一次电话，但之后失联。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958735" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-04-920" data-start="00:21:04,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All afternoon, students were pulled out from the wreckage.</p>
+<p>整个下午都有学生被从废墟救出。</p>
+<p><button class="play-button sentence" id="s-00-21-08-759" data-start="00:21:08,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many have suffered burns.</p>
+<p>多人严重烧伤。</p>
+<p><button class="play-button sentence" id="s-00-21-10-920" data-start="00:21:10,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those seriously injured were airlifted in military helicopters.</p>
+<p>重伤者由军用直升机转运。</p>
+<p><button class="play-button sentence" id="s-00-21-17-038" data-start="00:21:17,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Outside hospitals, people crowded for information.</p>
+<p>医院外挤满打听消息的民众。</p>
+<p><button class="play-button sentence" id="s-00-21-20-759" data-start="00:21:20,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some held up placards with appeals for blood.</p>
+<p>有人举牌呼吁献血。</p>
+<p><button class="play-button sentence" id="s-00-21-24-920" data-start="00:21:24,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The military says the crash was caused by a mechanical failure and has promised a detailed investigation.</p>
+<p>军方称事故系机械故障，承诺彻查。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958706" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-33-078" data-start="00:21:33,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yoghitali Mai, BBC News.</p>
+<p>尤吉塔利·迈，BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-21-38-078" data-start="00:21:38,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the battle between the Trump administration and one of America's most prestigious higher education institutions resumes today, this time in court.</p>
+<p>特朗普政府与哈佛大学的争端今日进入法庭阶段。</p>
+<p><button class="play-button sentence" id="s-00-21-45-519" data-start="00:21:45,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Harvard University filed a suit against the Trump administration over its decision to freeze more than $2 billion in grants.</p>
+<p>哈佛就冻结20亿美元资助起诉政府。</p>
+<p><button class="play-button sentence" id="s-00-21-52-200" data-start="00:21:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House wants Harvard to make changes to hiring, admissions and teaching to combat perceived campus anti-semitism in the aftermath of the October 7th attacks.</p>
+<p>白宫要求哈佛改革招聘、招生及教学政策，以应对10月7日事件后校园反犹主义。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958678" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-01-240" data-start="00:22:01,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also wants an end to DEI, diversity, equity and inclusion programs on campus.</p>
+<p>并要求终止校园DEI（多元平等包容）项目。</p>
+<p><button class="play-button sentence" id="s-00-22-07-720" data-start="00:22:07,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak about all of this now with Peter McDonough, Vice President and General Counsel at the American Council on Education.</p>
+<p>连线美国教育委员会副主席彼得·麦克多诺。</p>
+<p><button class="play-button sentence" id="s-00-22-14-200" data-start="00:22:14,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Peter, very good to have you with us on the program tonight.</p>
+<p>欢迎参与今晚节目。</p>
+<p><button class="play-button sentence" id="s-00-22-17-000" data-start="00:22:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to start with Harvard's argument here.</p>
+<p>首先请解读哈佛的诉讼主张。</p>
+<p><button class="play-button sentence" id="s-00-22-19-000" data-start="00:22:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Harvard's legal argument is that the Trump administration is violating the university's first amendment rights by tying federal funding to their teaching programs.</p>
+<p>哈佛认为政府将资助与教学政策挂钩，侵犯其宪法第一修正案权利。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958651" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-29-000" data-start="00:22:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Does that legal argument stand?</p>
+<p>这一主张是否成立？</p>
+<p><button class="play-button sentence" id="s-00-22-32-119" data-start="00:22:32,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Does it pass the test?</p>
+<p>能否经得起检验？</p>
+<p><button class="play-button sentence" id="s-00-22-34-200" data-start="00:22:34,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let me start by perhaps stating the obvious.</p>
+<p>容我直言：</p>
+<p><button class="play-button sentence" id="s-00-22-37-319" data-start="00:22:37,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The lawsuit in Boston between the executive branch of our federal government and Harvard is not normal.</p>
+<p>联邦政府与哈佛对簿公堂极不寻常。</p>
+<p><button class="play-button sentence" id="s-00-22-43-720" data-start="00:22:43,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was triggered by an unprecedented attack against Harvard in an effort by the executive branch, the Trump administration to control Harvard.</p>
+<p>这源于特朗普政府试图控制哈佛的无端打压。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958628" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-51-798" data-start="00:22:51,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So bottom line, no, it doesn't hold water.</p>
+<p>简言之，该主张站不住脚。</p>
+<p><button class="play-button sentence" id="s-00-22-56-278" data-start="00:22:56,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But here's an important point.</p>
+<p>但关键点在于：</p>
+<p><button class="play-button sentence" id="s-00-22-58-440" data-start="00:22:58,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think we can all agree that colleges and universities and frankly everybody should be receptive to thoughtful criticism, not just in the United States, everywhere.</p>
+<p>高校乃至全社会都应接纳理性批评。</p>
+<p><button class="play-button sentence" id="s-00-23-09-960" data-start="00:23:09,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They should recognize when and how they can do better and they should do something about it.</p>
+<p>并据此改进。</p>
+<p><button class="play-button sentence" id="s-00-23-13-960" data-start="00:23:13,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's not what this lawsuit in Boston is primarily about.</p>
+<p>但本案核心不在此。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958602" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-17-318" data-start="00:23:17,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not really about anti-Semitism.</p>
+<p>也非真正关乎反犹主义。</p>
+<p><button class="play-button sentence" id="s-00-23-20-680" data-start="00:23:20,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're even truly about trying to strip Harvard of its capacity to do research that saves lives, that improves human condition, that enhances national and international security.</p>
+<p>实质是剥夺哈佛开展救生研究、改善人类处境、维护国家安全的能力。</p>
+<p><button class="play-button sentence" id="s-00-23-32-200" data-start="00:23:32,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back in 2021, the vice president appearing at a national conservatism conference said, quote, we have to honestly and aggressively attack the universities in this country.</p>
+<p>2021年副总统曾在保守派会议上宣称“必须全力打击高校”。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958575" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-44-838" data-start="00:23:44,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said it in a speech titled, The Universities Are the Enemy.</p>
+<p>演讲标题即为《大学是敌人》。</p>
+<p><button class="play-button sentence" id="s-00-23-49-400" data-start="00:23:49,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sadly, that's what this case is about.</p>
+<p>本案正是这一理念的体现。</p>
+<p><button class="play-button sentence" id="s-00-23-53-160" data-start="00:23:53,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Peter, can I ask you, many people will say, Harvard is a wealthy university.</p>
+<p>哈佛资金雄厚，为何需要联邦资助？</p>
+<p><button class="play-button sentence" id="s-00-23-57-720" data-start="00:23:57,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why doesn't need this federal funding?</p>
+<p>这对其他高校有何影响？</p>
+<p><button class="play-button sentence" id="s-00-23-59-960" data-start="00:23:59,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What impact does this actually have?</p>
+<p>影响深远。</p>
+<p><button class="play-button sentence" id="s-00-24-02-838" data-start="00:24:02,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've had a compact in the United States for decades, many, many decades, that involves colleges and universities at the core of research.</p>
+<p>美国数十年来形成的制度将高校置于科研核心。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958545" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-14-759" data-start="00:24:14,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't have a federal research enterprise.</p>
+<p>联邦政府不直接主导研究。</p>
+<p><button class="play-button sentence" id="s-00-24-17-720" data-start="00:24:17,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't have federal colleges and universities.</p>
+<p>也不直接管理高校。</p>
+<p><button class="play-button sentence" id="s-00-24-20-440" data-start="00:24:20,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a mosaic of colleges and universities, public and private, small and large, religious based and not.</p>
+<p>各类高校共同构成研究网络。</p>
+<p><button class="play-button sentence" id="s-00-24-27-400" data-start="00:24:27,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's been a compact that has involved the colleges and universities undertaking with federal dollars research that benefits the country, benefits the world, benefits people around the globe and of course in the United States, particularly.</p>
+<p>联邦资助高校研究的模式惠及全球，尤其美国。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958514" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-45-880" data-start="00:24:45,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You think there will be an impact on other universities as well with this lawsuit?</p>
+<p>本案将冲击其他高校？</p>
+<p><button class="play-button sentence" id="s-00-24-50-839" data-start="00:24:50,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, indeed.</p>
+<p>毫无疑问。</p>
+<p><button class="play-button sentence" id="s-00-24-51-960" data-start="00:24:51,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This case is about so much more than Harvard.</p>
+<p>本案远超哈佛本身。</p>
+<p><button class="play-button sentence" id="s-00-24-54-598" data-start="00:24:54,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In that courtroom today, what's at stake is nothing less than our nations and during values are constitutional protections.</p>
+<p>关乎国家根本价值观与宪法保护。</p>
+<p><button class="play-button sentence" id="s-00-25-03-318" data-start="00:25:03,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And certainly the concerns that other colleges and universities have and should have.</p>
+<p>所有高校都应警惕。</p>
+<p><button class="play-button sentence" id="s-00-25-09-400" data-start="00:25:09,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as I said, it's broader than that.</p>
+<p>影响更广泛。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958488" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-11-078" data-start="00:25:11,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's about all Americans.</p>
+<p>关乎全体国民。</p>
+<p><button class="play-button sentence" id="s-00-25-13-480" data-start="00:25:13,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The outcome of this case will resound through every college university for sure, but it will impact sections of our society.</p>
+<p>判决将波及全社会各领域。</p>
+<p><button class="play-button sentence" id="s-00-25-20-519" data-start="00:25:20,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tens of millions of people because what was at stake today and what today's hearing was about was about free speech of bedrock constitutional right in this country.</p>
+<p>因今日听证会涉及言论自由这一宪法基石权利。</p>
+<p><button class="play-button sentence" id="s-00-25-30-200" data-start="00:25:30,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it was about due process.</p>
+<p>也关乎正当程序原则。</p>
+<p><button class="play-button sentence" id="s-00-25-32-278" data-start="00:25:32,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't have a verdict before trials.</p>
+<p>审判前不应预设结论。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958461" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-38-200" data-start="00:25:38,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, we'll have to leave it there for today.</p>
+<p>今日讨论到此为止。</p>
+<p><button class="play-button sentence" id="s-00-25-39-798" data-start="00:25:39,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Peter McDonough, you vice president and general counsel of the American Council on education.</p>
+<p>感谢美国教育委员会副主席彼得·麦克多诺。</p>
+<p><button class="play-button sentence" id="s-00-25-44-440" data-start="00:25:44,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very good to have you on our program tonight.</p>
+<p>感谢参与今晚节目。</p>
+<p><button class="play-button sentence" id="s-00-25-46-200" data-start="00:25:46,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for joining us.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-25-48-599" data-start="00:25:48,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-25-51-400" data-start="00:25:51,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're watching World News America.</p>
+<p>您正在收看《世界新闻美洲版》。</p>
+<p><button class="play-button sentence" id="s-00-25-52-920" data-start="00:25:52,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll be back after a short break.</p>
+<p>稍后回来。</p>
+<p><button class="play-button sentence" id="s-00-25-54-359" data-start="00:25:54,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll be speaking with our politics panel about the latest on the Epstein controversy and redistricting in Texas.</p>
+<p>政治评论员将探讨爱泼斯坦案与得州选区重划。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Adg7zNEsi/?t=-2208958439" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-00-519" data-start="00:26:00,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us right here on PPC News.</p>
+<p>请继续关注PPC新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
