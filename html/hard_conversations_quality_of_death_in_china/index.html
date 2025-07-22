@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Hard conversations: quality of death in China</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Economist discusses China's improving quality of life but grim quality of death, exploring cultural and systemic challenges in end-of-life care through hospice visits and expert interviews.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Hard conversations: quality of death in China</h1>
+<p>【经济学人播客 Drum Tower 20250723 中国临终关怀现状】</p>
+<p>Summary:
+The Economist discusses China's improving quality of life but grim quality of death, exploring cultural and systemic challenges in end-of-life care through hospice visits and expert interviews.</p>
+<p>摘要：
+《经济学人》探讨了中国生活质量提升但死亡质量仍严峻的现状，通过探访临终关怀机构和专家访谈，揭示了文化传统和医疗体系在临终关怀领域面临的挑战。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 48 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959997" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-03-000" data-start="00:00:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Economist The quality of life in China has soared in recent decades, but the quality of death remains grim.</p>
+<p>《经济学人》表示中国近几十年来生活质量大幅提升，但死亡质量依然堪忧。</p>
+<p><button class="play-button sentence" id="s-00-00-24-079" data-start="00:00:24,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It isn't just policymakers and doctors grappling with providing care around death.</p>
+<p>不仅是政策制定者和医生在努力解决临终护理问题。</p>
+<p><button class="play-button sentence" id="s-00-00-29-719" data-start="00:00:29,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cultural norms also make it difficult for families and patients to decide how to die.</p>
+<p>文化传统也使患者家庭难以抉择临终方式。</p>
+<p><button class="play-button sentence" id="s-00-00-35-798" data-start="00:00:35,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Sarah Wu, the Economist China correspondent, and I'm joined by James Miles, our China writer at Large.</p>
+<p>我是《经济学人》中国记者Sarah Wu，今天与我们的中国特派记者James Miles对话。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-43-478" data-start="00:00:43,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This week we're taking you inside hospices in Beijing, and we're asking, how is a rapidly aging China dealing with end of life?</p>
+<p>本周我们将带您探访北京临终关怀机构，探讨快速老龄化的中国如何应对生命终结问题。</p>
+<p><button class="play-button sentence" id="s-00-00-53-280" data-start="00:00:53,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is Drum Tower from the Economist.</p>
+<p>这里是《经济学人》的"鼓楼"栏目。</p>
+<p><button class="play-button sentence" id="s-00-00-59-719" data-start="00:00:59,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hi James, I heard that you had been planting something lately.</p>
+<p>你好James，听说你最近在搞园艺种植？</p>
+<p><button class="play-button sentence" id="s-00-01-09-078" data-start="00:01:09,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hi Sarah, yes I have been planting and there's a little bit of a backstory here.</p>
+<p>是的Sarah，这背后有些故事。</p>
+<p><button class="play-button sentence" id="s-00-01-13-718" data-start="00:01:13,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I came back from China to live in Britain about ten years ago, having spent many many years in China.</p>
+<p>我在中国生活多年后，约十年前回到英国定居。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959919" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-20-078" data-start="00:01:20,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One thing apart from continuing to think about China from London that's taken up quite a lot of my time has been looking after a garden.</p>
+<p>除了在伦敦持续关注中国，打理花园占据了我大量时间。</p>
+<p><button class="play-button sentence" id="s-00-01-27-519" data-start="00:01:27,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One thing I've done to add a bit of color in the spring is plant some cherry trees, three of them last year, one more this year, but this very hot weather we've been having in London, making sure they survive, it's becoming a bit of concern, watering them, making sure they're properly staked in and all of that, you know, fingers crossed for next spring.</p>
+<p>为增添春色我种植了樱花树，去年三棵今年一棵，但伦敦酷热天气让养护成为难题，只能期盼来年开花。</p>
+<p><button class="play-button sentence" id="s-00-01-49-840" data-start="00:01:49,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'll have to send us photos when they blossom.</p>
+<p>开花时记得分享照片。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959887" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-52-078" data-start="00:01:52,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will.</p>
+<p>一定。</p>
+<p><button class="play-button sentence" id="s-00-01-53-078" data-start="00:01:53,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How are things in Beijing?</p>
+<p>北京情况如何？</p>
+<p><button class="play-button sentence" id="s-00-01-54-078" data-start="00:01:54,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Things in Beijing are good.</p>
+<p>北京一切顺利。</p>
+<p><button class="play-button sentence" id="s-00-01-56-159" data-start="00:01:56,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also been quite hot here, too hot to run far, so I've been exploring the neighborhood pools to stay cool.</p>
+<p>天气炎热难以长跑，我正探索社区泳池消暑。</p>
+<p><button class="play-button sentence" id="s-00-02-03-959" data-start="00:02:03,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The best one so far has been at a high school near me.</p>
+<p>目前发现最好的是附近中学的泳池。</p>
+<p><button class="play-button sentence" id="s-00-02-06-718" data-start="00:02:06,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Glad to hear you're staying cool.</p>
+<p>很高兴你能避暑。</p>
+<p><button class="play-button sentence" id="s-00-02-08-199" data-start="00:02:08,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I remember that Beijing heat and I can't say I miss it.</p>
+<p>记得北京的酷热，实在不敢怀念。</p>
+<p><button class="play-button sentence" id="s-00-02-11-598" data-start="00:02:11,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So today James, we'll be talking about something you've been covering which is end of life care in China.</p>
+<p>今天我们将讨论你报道的中国临终关怀议题。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959861" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-18-840" data-start="00:02:18,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know you just got back from a visit here.</p>
+<p>知道你刚结束中国走访。</p>
+<p><button class="play-button sentence" id="s-00-02-21-280" data-start="00:02:21,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What got you interested in this story?</p>
+<p>什么吸引你关注这个题材？</p>
+<p><button class="play-button sentence" id="s-00-02-23-038" data-start="00:02:23,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we've reported on end of life care before in the China context, but not for a few years.</p>
+<p>我们数年前报道过中国临终关怀，之后暂停了一段时间。</p>
+<p><button class="play-button sentence" id="s-00-02-29-878" data-start="00:02:29,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, the whole question of aging and how the government is dealing with this has become a more and more pressing social problem.</p>
+<p>老龄化及政府应对已成为日益紧迫的社会问题。</p>
+<p><button class="play-button sentence" id="s-00-02-39-718" data-start="00:02:39,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's something many people are discussing as obviously the number of elderly people is growing.</p>
+<p>随着老年人口增长，这成为热议话题。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959834" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-45-718" data-start="00:02:45,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pressures on the healthcare system is growing.</p>
+<p>医疗系统压力与日俱增。</p>
+<p><button class="play-button sentence" id="s-00-02-50-080" data-start="00:02:50,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And families are finding themselves under enormous stress as they deal with questions around how they're going to look after people at the end of life, usually their parents as they get old.</p>
+<p>家庭在照顾年迈父母临终问题时承受巨大压力。</p>
+<p><button class="play-button sentence" id="s-00-03-04-000" data-start="00:03:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>明白。</p>
+<p><button class="play-button sentence" id="s-00-03-05-000" data-start="00:03:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So just to clarify, when you say end of life care, do you mean, for instance, the treatments that terminally ill patients are receiving?</p>
+<p>具体而言，临终关怀是指绝症患者的治疗吗？</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959807" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-12-840" data-start="00:03:12,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Actually, it's really what comes after that.</p>
+<p>其实更侧重治疗无效后的阶段。</p>
+<p><button class="play-button sentence" id="s-00-03-15-080" data-start="00:03:15,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's about that last period when a decision has been taken that treatment is no longer going to be effective, then the focus turns to ensuring that the patient is as pain-free, mentally and physically as possible.</p>
+<p>当治疗被判定无效后，重点转为最大限度减轻患者身心痛苦。</p>
+<p><button class="play-button sentence" id="s-00-03-28-959" data-start="00:03:28,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's about making the end as dignified as possible?</p>
+<p>即让生命终点尽可能有尊严？</p>
+<p><button class="play-button sentence" id="s-00-03-32-560" data-start="00:03:32,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely.</p>
+<p>正是。</p>
+<p><button class="play-button sentence" id="s-00-03-33-560" data-start="00:03:33,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dignified is a crucial word here.</p>
+<p>"尊严"是关键词。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959784" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-35-318" data-start="00:03:35,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the goal is to ensure that a person dies with dignity in a calm reassuring environment where they can often spend time with people close to them and that the end is as stress-free as possible.</p>
+<p>目标是让患者在安宁环境中与亲友相伴，无压力地保有尊严离世。</p>
+<p><button class="play-button sentence" id="s-00-03-47-960" data-start="00:03:47,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And is that the case for many people in China?</p>
+<p>中国多数患者能如此吗？</p>
+<p><button class="play-button sentence" id="s-00-03-50-680" data-start="00:03:50,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the problem in China is that very often, really, it's not this way at all.</p>
+<p>实际情况往往截然不同。</p>
+<p><button class="play-button sentence" id="s-00-03-56-360" data-start="00:03:56,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And people will commonly die in hospital still receiving aggressive treatment.</p>
+<p>许多人离世时仍在医院接受激进治疗。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959757" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-02-759" data-start="00:04:02,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's all the stress, of course, all the kind of noises and disturbances that go with being in a hospital bed.</p>
+<p>医院环境的噪音干扰带来额外压力。</p>
+<p><button class="play-button sentence" id="s-00-04-10-400" data-start="00:04:10,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in 2015, the Economist Intelligence Unit, the EIU, which is a sister organization of the Economist, ranked support provided to people who were dying in 80 countries, and China came in 71st in that ranking.</p>
+<p>2015年《经济学人》智库对80国临终关怀排名中，中国位列第71位。</p>
+<p><button class="play-button sentence" id="s-00-04-27-319" data-start="00:04:27,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The survey found that specialized end of life care, and that meant in hospices or in people's homes, involved less than 1% of the population and only in China's biggest cities such as Beijing and Shanghai.</p>
+<p>调查显示专业临终关怀（机构或居家）仅覆盖不到1%人口，且限于北上等大城市。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-43-600" data-start="00:04:43,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that was 10 years ago, and I was wondering since then, how much has actually improved?</p>
+<p>十年过去，现状改善如何？</p>
+<p><button class="play-button sentence" id="s-00-04-49-319" data-start="00:04:49,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, so before we get to whether it has improved, I'm curious if China ranks so low because Western countries have this longer history of providing end of life care.</p>
+<p>在讨论进展前，我想知道中国排名低是否因西方国家临终关怀历史更悠久？</p>
+<p><button class="play-button sentence" id="s-00-04-59-759" data-start="00:04:59,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This type of service isn't something that I hear a lot about here.</p>
+<p>这类服务在国内较少听闻。</p>
+<p><button class="play-button sentence" id="s-00-05-02-879" data-start="00:05:02,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there is a longer history in Western countries, but it's not that long.</p>
+<p>西方历史确实更长但也有限。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959692" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-07-399" data-start="00:05:07,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was only in the late 20th century, really, that hospices began to take off.</p>
+<p>现代临终关怀直到20世纪晚期才兴起。</p>
+<p><button class="play-button sentence" id="s-00-05-14-598" data-start="00:05:14,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You could say now that China is roughly at the stage where rich countries were about half a century or so ago.</p>
+<p>中国目前发展水平相当于发达国家约五十年前。</p>
+<p><button class="play-button sentence" id="s-00-05-23-478" data-start="00:05:23,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Britain, in fact, was a leader in developing hospice care as we now know it.</p>
+<p>英国是现代临终关怀发展的先驱。</p>
+<p><button class="play-button sentence" id="s-00-05-27-959" data-start="00:05:27,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was back in the around the 1960s.</p>
+<p>始于1960年代。</p>
+<p><button class="play-button sentence" id="s-00-05-31-079" data-start="00:05:31,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It began with St. Christopher's hospices.</p>
+<p>以圣克里斯托弗临终关怀院为开端。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959665" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-34-478" data-start="00:05:34,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were a charitable effort.</p>
+<p>当时属于慈善事业。</p>
+<p><button class="play-button sentence" id="s-00-05-37-278" data-start="00:05:37,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that model, in fact, is often noted by experts on end of life care in China.</p>
+<p>该模式常被中国临终关怀专家引用。</p>
+<p><button class="play-button sentence" id="s-00-05-43-199" data-start="00:05:43,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is, however, a problem replicating that or at least replicating it in the same kind of way.</p>
+<p>但完全复制该模式存在困难。</p>
+<p><button class="play-button sentence" id="s-00-05-48-718" data-start="00:05:48,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one reason is because the Chinese Communist Party really doesn't encourage the development of large charities.</p>
+<p>部分原因是中共不鼓励大型慈善组织发展。</p>
+<p><button class="play-button sentence" id="s-00-05-56-399" data-start="00:05:56,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It doesn't like the idea of a flourishing civil society that champions causes, puts pressure on the government to change things.</p>
+<p>不乐见蓬勃发展的公民社会推动变革。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959635" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-04-838" data-start="00:06:04,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what we're seeing is a more government-led process in China.</p>
+<p>因此中国采取更政府主导的发展模式。</p>
+<p><button class="play-button sentence" id="s-00-06-09-319" data-start="00:06:09,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are charities involved.</p>
+<p>虽有慈善组织参与。</p>
+<p><button class="play-button sentence" id="s-00-06-10-838" data-start="00:06:10,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are private hospices, but this is on a very small scale.</p>
+<p>也有私立临终机构但规模很小。</p>
+<p><button class="play-button sentence" id="s-00-06-14-798" data-start="00:06:14,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government is taking on the main burden.</p>
+<p>政府承担主要责任。</p>
+<p><button class="play-button sentence" id="s-00-06-17-879" data-start="00:06:17,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And a problem that I found is it's going about it slowly and very cautiously.</p>
+<p>但进展缓慢且谨慎。</p>
+<p><button class="play-button sentence" id="s-00-06-22-478" data-start="00:06:22,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, that's kind of surprising to me.</p>
+<p>这令我惊讶。</p>
+<p><button class="play-button sentence" id="s-00-06-24-798" data-start="00:06:24,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'd think it would be a real priority given how quickly China is aging.</p>
+<p>考虑到中国老龄化速度，本应优先发展。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959610" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-29-278" data-start="00:06:29,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2023, there are already 300 million people over the age of 60.</p>
+<p>2023年中国60岁以上人口已达3亿。</p>
+<p><button class="play-button sentence" id="s-00-06-35-278" data-start="00:06:35,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And 10 years from now, that number will rise to more than 400 million.</p>
+<p>十年后将超4亿。</p>
+<p><button class="play-button sentence" id="s-00-06-39-678" data-start="00:06:39,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's nearly one-third of the population.</p>
+<p>约占人口三分之一。</p>
+<p><button class="play-button sentence" id="s-00-06-42-838" data-start="00:06:42,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, the consequences of that are massive.</p>
+<p>影响深远。</p>
+<p><button class="play-button sentence" id="s-00-06-45-478" data-start="00:06:45,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As people live longer, they're more likely to die from diseases like cancer, heart disease, dementia that may require intensive treatment towards the end of life.</p>
+<p>寿命延长意味着更多人死于癌症、心脏病、痴呆等需临终强化治疗的疾病。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959582" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-57-560" data-start="00:06:57,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it sounds like a very urgent task at hand.</p>
+<p>看来这是当务之急。</p>
+<p><button class="play-button sentence" id="s-00-07-01-040" data-start="00:07:01,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as you said in the absence of civil society, the government is leading the charge.</p>
+<p>如你所说，在公民社会缺位下政府主导推进。</p>
+<p><button class="play-button sentence" id="s-00-07-06-319" data-start="00:07:06,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What have they done so far?</p>
+<p>目前有何进展？</p>
+<p><button class="play-button sentence" id="s-00-07-08-120" data-start="00:07:08,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, healthcare has been a big focus of domestic policy generally, ensuring that it is more affordable and this relates to hospice care has been a big part of that effort.</p>
+<p>医疗一直是国内政策重点，包括提高可及性，临终关怀是其中重要部分。</p>
+<p><button class="play-button sentence" id="s-00-07-21-720" data-start="00:07:21,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've seen the rolling out of state-sponsored health insurance schemes in the past couple of decades.</p>
+<p>过去二十年推行国家医保计划。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959551" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-28-040" data-start="00:07:28,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the reason people are so anxious at the moment about the end of life stage and indeed the treatment that leads up to it is because these insurance schemes are so patchy, people still have to spend a huge amount of money out of their own pockets for hospital treatment.</p>
+<p>但医保覆盖不全，人们仍需自付大额医疗费，导致对临终阶段的焦虑。</p>
+<p><button class="play-button sentence" id="s-00-07-47-120" data-start="00:07:47,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know the basics of how health insurance works here that your insurance coverage varies a lot depending on whether you're a public sector worker, in which case you get a better package, an ordinary urban resident, in which case the package may not be quite as good.</p>
+<p>据我所知，中国医保因身份而异：公务员待遇最优，普通城镇居民次之。</p>
+<p><button class="play-button sentence" id="s-00-08-02-240" data-start="00:08:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if you're a rural resident, it's pretty meager.</p>
+<p>农村居民保障最薄弱。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959514" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-05-120" data-start="00:08:05,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I also know that healthcare isn't portable.</p>
+<p>且医保不可跨区使用。</p>
+<p><button class="play-button sentence" id="s-00-08-08-519" data-start="00:08:08,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for many migrant workers in the cities, they either have to pay out of pocket or go back to the areas where they come from.</p>
+<p>城市农民工需自费或返乡治疗。</p>
+<p><button class="play-button sentence" id="s-00-08-18-000" data-start="00:08:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I don't know how medical insurance functions when it comes to end of life care.</p>
+<p>但我不清楚医保如何覆盖临终关怀。</p>
+<p><button class="play-button sentence" id="s-00-08-22-560" data-start="00:08:22,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you're not the only one.</p>
+<p>不只你不清楚。</p>
+<p><button class="play-button sentence" id="s-00-08-23-838" data-start="00:08:23,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I talked to a lot of people about this when I was back in China recently.</p>
+<p>我近期在华采访发现普遍困惑。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959491" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-28-519" data-start="00:08:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And clearly there is massive confusion around the question of who pays for all of this.</p>
+<p>关于费用承担存在广泛困惑。</p>
+<p><button class="play-button sentence" id="s-00-08-34-240" data-start="00:08:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because even with health insurance generally which people do understand, there are quite a lot of things that are not fully covered by insurance.</p>
+<p>即便常规医保也有许多项目不全额报销。</p>
+<p><button class="play-button sentence" id="s-00-08-43-360" data-start="00:08:43,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then you add on the question of hospice care, which is much more kind of service oriented, making people comfortable, making people feel that they are loved and being well-careful in this crucial stage of life.</p>
+<p>临终关怀更侧重服务性质，包括舒适护理和心理慰藉。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959460" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-59-198" data-start="00:08:59,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's something that people don't quite know how to quantify when it comes to insurance.</p>
+<p>这类服务难以量化纳入保险。</p>
+<p><button class="play-button sentence" id="s-00-09-04-000" data-start="00:09:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so experiments that have been conducted by the government in various places are working in different ways, different places.</p>
+<p>因此各地政府试点方式各异。</p>
+<p><button class="play-button sentence" id="s-00-09-10-918" data-start="00:09:10,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But certainly the general picture is that your hospice care is not going to be fully covered by your health insurance package.</p>
+<p>总体而言临终关怀尚未被医保完全覆盖。</p>
+<p><button class="play-button sentence" id="s-00-09-18-480" data-start="00:09:18,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's clearly still a lot of work that needs to be done in the area of hospice care.</p>
+<p>显然临终关怀领域仍有大量工作待完成。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959436" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-23-639" data-start="00:09:23,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the government moves forward on this, what is it focusing on?</p>
+<p>政府推进的重点是什么？</p>
+<p><button class="play-button sentence" id="s-00-09-27-278" data-start="00:09:27,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the main focus is just to make this more available and then work out other questions around how exactly it's paid for along the way.</p>
+<p>当前重点是扩大可及性，再逐步解决支付机制问题。</p>
+<p><button class="play-button sentence" id="s-00-09-37-759" data-start="00:09:37,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So about 10 years ago, we saw the first mention in a national health-related policy document of the need to build a hospice care.</p>
+<p>约十年前国家卫生政策文件首次提及发展临终关怀。</p>
+<p><button class="play-button sentence" id="s-00-09-46-320" data-start="00:09:46,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw beginning in 2017, China beginning to roll out pilot programs.</p>
+<p>2017年起开展试点。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959407" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-52-519" data-start="00:09:52,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They designated cities where hospice care should be offered.</p>
+<p>指定试点城市。</p>
+<p><button class="play-button sentence" id="s-00-09-56-440" data-start="00:09:56,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you know, unsurprisingly, the richest, biggest ones, Beijing, Shanghai, were in that list.</p>
+<p>不出所料北上等发达城市入选。</p>
+<p><button class="play-button sentence" id="s-00-10-02-600" data-start="00:10:02,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the next few years, the number of cities expanded to more than 180.</p>
+<p>随后试点城市扩至180多个。</p>
+<p><button class="play-button sentence" id="s-00-10-07-120" data-start="00:10:07,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in Shanghai by 2020, you saw that city offering inpatient or home-based hospice and palliative care in all of its local community health centres.</p>
+<p>至2020年上海所有社区卫生中心均提供住院或居家临终关怀服务。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959380" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-19-479" data-start="00:10:19,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's more than 200 centres in the city.</p>
+<p>全市超200个中心。</p>
+<p><button class="play-button sentence" id="s-00-10-22-918" data-start="00:10:22,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And by the end of last year, Beijing had achieved roughly the same.</p>
+<p>去年底北京也实现类似覆盖。</p>
+<p><button class="play-button sentence" id="s-00-10-26-278" data-start="00:10:26,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Across China, we've also seen an expansion of hospice units within hospitals, general hospitals.</p>
+<p>全国综合医院普遍增设临终关怀病区。</p>
+<p><button class="play-button sentence" id="s-00-10-34-000" data-start="00:10:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that means wards with beds designated for end-of-life palliative care.</p>
+<p>即专设临终舒缓医疗床位。</p>
+<p><button class="play-button sentence" id="s-00-10-40-678" data-start="00:10:40,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And between 2018 and 2022, the number of those increased more than 15 times.</p>
+<p>2018至2022年间此类病区增长超15倍。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959352" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-47-798" data-start="00:10:47,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there are more than 4,200 of them.</p>
+<p>总数超4200个。</p>
+<p><button class="play-button sentence" id="s-00-10-50-519" data-start="00:10:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That seems like some serious progress.</p>
+<p>进展显著。</p>
+<p><button class="play-button sentence" id="s-00-10-52-759" data-start="00:10:52,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as you say, it's rolling out in big cities primarily.</p>
+<p>但如你所说主要集中大城市。</p>
+<p><button class="play-button sentence" id="s-00-10-56-879" data-start="00:10:56,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as so often happens in China, rural places get left behind.</p>
+<p>农村地区如常被忽视。</p>
+<p><button class="play-button sentence" id="s-00-11-01-318" data-start="00:11:01,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But getting back to the investments being made in a country of 1.4 billion, which is rapidly aging, I'm guessing that's still not nearly enough.</p>
+<p>考虑到14亿人口快速老龄化，这些投入恐怕仍不足。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959330" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-09-960" data-start="00:11:09,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that's absolutely right.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-11-11-559" data-start="00:11:11,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it definitely isn't enough.</p>
+<p>远未足够。</p>
+<p><button class="play-button sentence" id="s-00-11-13-639" data-start="00:11:13,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as you say, in the country, so high it's pretty much nonexistent.</p>
+<p>农村地区几乎空白。</p>
+<p><button class="play-button sentence" id="s-00-11-17-720" data-start="00:11:17,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, even the state media are pointing out this problem.</p>
+<p>连官媒都指出这个问题。</p>
+<p><button class="play-button sentence" id="s-00-11-21-639" data-start="00:11:21,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One prominent news outlet last year called all of this just a drop in the bucket.</p>
+<p>某知名媒体去年称这些努力只是杯水车薪。</p>
+<p><button class="play-button sentence" id="s-00-11-26-440" data-start="00:11:26,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, progress has been agonizing the slow.</p>
+<p>进展缓慢得令人痛苦。</p>
+<p><button class="play-button sentence" id="s-00-11-30-159" data-start="00:11:30,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still well over 90% of those who need palliative care can't get it.</p>
+<p>超90%需舒缓医疗者无法获得。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959304" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-35-678" data-start="00:11:35,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And most hospitals actually don't let patients occupy beds simply to receive palliative care.</p>
+<p>多数医院不允许仅因需舒缓医疗而占用床位。</p>
+<p><button class="play-button sentence" id="s-00-11-42-000" data-start="00:11:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow.</p>
+<p>令人震惊。</p>
+<p><button class="play-button sentence" id="s-00-11-43-000" data-start="00:11:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it sounds like there's still not this recognition of palliative care as an urgent need, as something that can justify a bed for a terminally ill patient.</p>
+<p>看来舒缓医疗尚未被视为绝症患者的必要需求。</p>
+<p><button class="play-button sentence" id="s-00-11-54-599" data-start="00:11:54,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that's right.</p>
+<p>正是。</p>
+<p><button class="play-button sentence" id="s-00-11-55-599" data-start="00:11:55,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the reason, I think, is fundamentally an economic one.</p>
+<p>根本原因在经济层面。</p>
+<p><button class="play-button sentence" id="s-00-11-59-839" data-start="00:11:59,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hospitals in China are government-run.</p>
+<p>中国医院虽属公立。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959276" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-03-038" data-start="00:12:03,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But they're not entirely financed by government.</p>
+<p>但不完全依赖政府拨款。</p>
+<p><button class="play-button sentence" id="s-00-12-06-078" data-start="00:12:06,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They also rely on revenues generated by selling their services, medicines that are not covered by the state's health insurance schemes.</p>
+<p>还通过提供医保外服务和药品创收。</p>
+<p><button class="play-button sentence" id="s-00-12-16-360" data-start="00:12:16,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they've got a big incentive to encourage expensive treatments, patients who need just pain killers and who need psychological care and all that kind of sensitive nursing that people at the end of life require.</p>
+<p>因此医院有动力推广高价治疗，而非临终患者所需的止痛药、心理护理等舒缓服务。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959245" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-34-080" data-start="00:12:34,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These kind of patients are not money spinners, basically, unless they're prepared to pay a premium for high quality service, which state hospitals aren't going to provide, then hospitals aren't going to make money out of this.</p>
+<p>这类患者不创收，除非自费高价服务（公立医院通常不提供）。</p>
+<p><button class="play-button sentence" id="s-00-12-47-200" data-start="00:12:47,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is the basic problem.</p>
+<p>这是根本问题。</p>
+<p><button class="play-button sentence" id="s-00-12-48-720" data-start="00:12:48,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's not a great picture for the terminally ill in China.</p>
+<p>中国绝症患者处境不佳。</p>
+<p><button class="play-button sentence" id="s-00-12-52-440" data-start="00:12:52,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It sounds like you have two options.</p>
+<p>似乎只有两种选择。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959224" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-55-159" data-start="00:12:55,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Expensive and ineffective treatment in hospital, or going home to die without easy access to powerful pain killers and nursing.</p>
+<p>医院接受昂贵无效治疗，或回家缺乏强效止痛药和专业护理。</p>
+<p><button class="play-button sentence" id="s-00-13-04-038" data-start="00:13:04,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I imagine there's also a cultural dimension that makes this harder.</p>
+<p>文化因素使情况更复杂。</p>
+<p><button class="play-button sentence" id="s-00-13-07-678" data-start="00:13:07,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Xiao Sun, filial piety, is so commonly discussed here.</p>
+<p>孝道文化影响深远。</p>
+<p><button class="play-button sentence" id="s-00-13-13-360" data-start="00:13:13,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's historically been a given that you take care of your elderly parents.</p>
+<p>传统要求子女赡养父母。</p>
+<p><button class="play-button sentence" id="s-00-13-18-318" data-start="00:13:18,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I can imagine it's hard for many Chinese people to give the responsibility of care over to a hospice facility.</p>
+<p>因此许多人难以将父母托付给临终机构。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959193" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-26-559" data-start="00:13:26,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, indeed, children usually feel under huge moral pressure to ensure that their parents get treated for diseases long after treatment becomes ineffective.</p>
+<p>子女承受巨大道德压力，即使在治疗无效后仍坚持治疗。</p>
+<p><button class="play-button sentence" id="s-00-13-36-320" data-start="00:13:36,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's seen as unfilial to be seen as giving up on them.</p>
+<p>放弃治疗被视为不孝。</p>
+<p><button class="play-button sentence" id="s-00-13-40-559" data-start="00:13:40,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The families have a huge voice in this, the doctors as well, but the patients hardly any at all.</p>
+<p>家属和医生话语权大，患者本人反而少有发言权。</p>
+<p><button class="play-button sentence" id="s-00-13-46-559" data-start="00:13:46,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, just a couple of years ago, the first city in China, Shenzhen, gave legal recognition to the idea of patients having a right to make a living will.</p>
+<p>事实上直到几年前，深圳才首个立法确认患者预嘱权。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959163" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-56-798" data-start="00:13:56,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In other words, choose how they're treated in the final stage of life before they reach that stage.</p>
+<p>即在临终前自主选择治疗方案。</p>
+<p><button class="play-button sentence" id="s-00-14-02-798" data-start="00:14:02,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am surprised that it was as recent as 2023.</p>
+<p>2023年才实现令人惊讶。</p>
+<p><button class="play-button sentence" id="s-00-14-06-759" data-start="00:14:06,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you could also be surprised, I suppose, that give all the sensitivities around questions relating to death and who has the right to make choices relating to death.</p>
+<p>考虑到死亡议题的敏感性，这个进展已属不易。</p>
+<p><button class="play-button sentence" id="s-00-14-15-438" data-start="00:14:15,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, the experiments are being introduced in this area.</p>
+<p>相关改革正在试点。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959141" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-18-200" data-start="00:14:18,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shenzhen has a reputation as a place where reforms are often first introduced.</p>
+<p>深圳素有改革先锋之称。</p>
+<p><button class="play-button sentence" id="s-00-14-24-120" data-start="00:14:24,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what we're seeing is other cities are not rushing to follow Shenzhen's example.</p>
+<p>但其他城市并未迅速效仿。</p>
+<p><button class="play-button sentence" id="s-00-14-30-320" data-start="00:14:30,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as for debate about assisted dying, which we see, of course, a lot of now in the rich world, well, the government in China is far from keen to encourage that kind of discussion.</p>
+<p>至于安乐死的辩论，如今在富裕国家很常见，但中国政府远未鼓励此类讨论。</p>
+<p><button class="play-button sentence" id="s-00-14-41-399" data-start="00:14:41,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So James, the picture you're painting is one of Chinese people not having that much say in how they die.</p>
+<p>詹姆斯，你所描绘的画面是中国人在如何离世的问题上缺乏话语权。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959111" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-49-000" data-start="00:14:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that really came home to me when I watched a documentary about hospice care in China called Being Mortal.</p>
+<p>这一点在我观看中国临终关怀纪录片《临终笔记》时深有感触。</p>
+<p><button class="play-button sentence" id="s-00-14-55-820" data-start="00:14:55,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you seen it?</p>
+<p>你看过吗？</p>
+<p><button class="play-button sentence" id="s-00-14-56-820" data-start="00:14:56,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I haven't actually.</p>
+<p>我还没看过。</p>
+<p><button class="play-button sentence" id="s-00-14-57-820" data-start="00:14:57,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What did you think of it, Sarah?</p>
+<p>你觉得怎么样，莎拉？</p>
+<p><button class="play-button sentence" id="s-00-14-58-820" data-start="00:14:58,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd recommend watching it.</p>
+<p>我推荐你看看。</p>
+<p><button class="play-button sentence" id="s-00-15-00-379" data-start="00:15:00,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It offers this rare window into that really hard period at the end of people's lives, not only for them to face death, but also for their families.</p>
+<p>它罕见地展现了人们生命末期的艰难阶段，不仅是面对死亡，还有家人的挣扎。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959087" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-12-240" data-start="00:15:12,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this documentary is told through the perspective of volunteers who become companions for those who are dying, whether that's over the span of days or months or years.</p>
+<p>这部纪录片通过志愿者的视角讲述，他们陪伴临终者度过最后的日子、数月或数年。</p>
+<p><button class="play-button sentence" id="s-00-15-25-019" data-start="00:15:25,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the crazy thing was when watching this, I recognized one of the volunteers.</p>
+<p>令人惊讶的是，我在片中认出了一名志愿者。</p>
+<p><button class="play-button sentence" id="s-00-15-29-538" data-start="00:15:29,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was a divinity school student who had taken a course with me in university.</p>
+<p>她曾是神学院学生，和我在大学上过同一门课。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959065" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-34-700" data-start="00:15:34,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it seems like there are lots of young people interested in hospice care and what it means.</p>
+<p>看来很多年轻人对临终关怀及其意义感兴趣。</p>
+<p><button class="play-button sentence" id="s-00-15-40-500" data-start="00:15:40,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It certainly sounds worth watching.</p>
+<p>这确实值得一看。</p>
+<p><button class="play-button sentence" id="s-00-15-42-038" data-start="00:15:42,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I've picked a clip for you to watch from a scene that's pretty harrowing.</p>
+<p>我选了一段相当揪心的片段给你看。</p>
+<p><button class="play-button sentence" id="s-00-15-46-438" data-start="00:15:46,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Grandpa Chen, who's terminally ill, yet full of humor, is talking to a volunteer at the hospice a few days after he attempted suicide.</p>
+<p>罹患绝症却幽默的陈爷爷在自杀未遂几天后，与临终关怀志愿者交谈。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208959044" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-55-879" data-start="00:15:55,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to go home.</p>
+<p>我要回家了。</p>
+<p><button class="play-button sentence" id="s-00-15-57-879" data-start="00:15:57,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to go home.</p>
+<p>我要回家了。</p>
+<p><button class="play-button sentence" id="s-00-15-59-379" data-start="00:15:59,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm really scared of the person who is going to be a friend.</p>
+<p>我真的很害怕那个即将成为朋友的人。</p>
+<p><button class="play-button sentence" id="s-00-16-02-379" data-start="00:16:02,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to tell you that.</p>
+<p>我要告诉你这件事。</p>
+<p><button class="play-button sentence" id="s-00-16-03-879" data-start="00:16:03,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that's very interesting.</p>
+<p>这很有意思。</p>
+<p><button class="play-button sentence" id="s-00-16-16-438" data-start="00:16:16,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We see the old man lying in his bed talking to a volunteer and talking remarkably frankly about the psychological pressures he's been under.</p>
+<p>我们看到老人躺在床上与志愿者交谈，异常坦率地诉说承受的心理压力。</p>
+<p><button class="play-button sentence" id="s-00-16-26-000" data-start="00:16:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been in treatment for three years.</p>
+<p>他已治疗三年。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958992" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-47-840" data-start="00:16:47,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He spent two or three hundred thousand yuan now on this.</p>
+<p>目前已花费二三十万元。</p>
+<p><button class="play-button sentence" id="s-00-16-53-000" data-start="00:16:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he's talking about the burden this has imposed on his children, worrying about pushing them into poverty.</p>
+<p>他谈到这给子女带来的负担，担心会让他们陷入贫困。</p>
+<p><button class="play-button sentence" id="s-00-17-00-399" data-start="00:17:00,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this really is what so many families in China have to grapple with, wanting to ensure that their loved ones have the best possible treatment at the end of life, but also really worrying about the cost of it.</p>
+<p>这正是中国许多家庭的困境：既想确保亲人获得最好的临终治疗，又担忧高昂费用。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958965" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-14-200" data-start="00:17:14,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I think this scene captures some of the hard questions around dying, especially when it's a slow, drawn out death over three years.</p>
+<p>是的，这个场景捕捉了关于死亡的难题，尤其是持续三年的缓慢死亡过程。</p>
+<p><button class="play-button sentence" id="s-00-17-25-440" data-start="00:17:25,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this scene struck me because Grandpa Chen in the documentary is otherwise portrayed as very optimistic and he's funny, but these questions weigh on even the sunniest people.</p>
+<p>这一幕令我震撼，因为纪录片中的陈爷爷原本非常乐观幽默，但这些问题即使对最阳光的人也是沉重负担。</p>
+<p><button class="play-button sentence" id="s-00-17-38-839" data-start="00:17:38,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's a question here of cultural taboos.</p>
+<p>这里还存在文化禁忌问题。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958936" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-43-400" data-start="00:17:43,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hospice care is called an in-li-au-hu.</p>
+<p>临终关怀在中文里叫"安宁疗护"。</p>
+<p><button class="play-button sentence" id="s-00-17-45-720" data-start="00:17:45,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It really means tranquility care.</p>
+<p>实际意为"安宁照护"。</p>
+<p><button class="play-button sentence" id="s-00-17-48-400" data-start="00:17:48,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But bear in mind the word hospice in English is also a euphemism.</p>
+<p>但注意英文"hospice"同样是委婉语。</p>
+<p><button class="play-button sentence" id="s-00-17-51-880" data-start="00:17:51,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's borrowed from a term that was used in medieval times simply to mean a shelter for travelers, so originally it had nothing specifically to do with death at all.</p>
+<p>它源自中世纪术语，原指旅人庇护所，最初与死亡毫无关联。</p>
+<p><button class="play-button sentence" id="s-00-18-01-200" data-start="00:18:01,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow, I didn't actually know the history behind that term and I think it's beautiful.</p>
+<p>哇，我不知道这个词的渊源，觉得很美好。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-07-160" data-start="00:18:07,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> James, you've visited a few of these ending liao houl zongxin.</p>
+<p>詹姆斯，你参观过几家安宁疗护中心。</p>
+<p><button class="play-button sentence" id="s-00-18-11-200" data-start="00:18:11,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell me, where did you go?</p>
+<p>去了哪些地方？</p>
+<p><button class="play-button sentence" id="s-00-18-12-519" data-start="00:18:12,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I visited hospice facilities in Beijing.</p>
+<p>我探访了北京的临终关怀机构。</p>
+<p><button class="play-button sentence" id="s-00-18-15-680" data-start="00:18:15,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And my first op-na was reporting this story with Songtang hospice, which is the oldest hospice facility in China.</p>
+<p>首先报道的是中国最古老的临终关怀机构——松堂医院。</p>
+<p><button class="play-button sentence" id="s-00-18-34-000" data-start="00:18:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've arrived at the Songtang hospice.</p>
+<p>我们来到松堂医院。</p>
+<p><button class="play-button sentence" id="s-00-18-36-960" data-start="00:18:36,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a grey concrete building with some traditional Chinese features attached to it.</p>
+<p>这是栋灰色混凝土建筑，带有中国传统元素。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-45-640" data-start="00:18:45,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ancient imperial style, eaves, but otherwise a most unprocessing building.</p>
+<p>仿古屋檐，但整体极为朴素。</p>
+<p><button class="play-button sentence" id="s-00-18-53-319" data-start="00:18:53,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When it was built about 20 years ago, this would have been a much less accessible part of the city and maybe one reason why it was built out here.</p>
+<p>约20年前建造时，这里还是城郊偏僻处，选址于此或许正因如此。</p>
+<p><button class="play-button sentence" id="s-00-19-06-880" data-start="00:19:06,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because they tried so many times to get it established several times setting this place up and having to move on because of protests from local residents and on one occasion, people actually throwing stones and smashing windows of the hospice, forcing it to move.</p>
+<p>因多次遭居民抗议被迫搬迁，有次甚至被投石砸窗，最终迁至现址。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958835" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-24-200" data-start="00:19:24,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So here it is now.</p>
+<p>如今坐落于此。</p>
+<p><button class="play-button sentence" id="s-00-19-27-118" data-start="00:19:27,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One still has only just a few hospices in this city of 20 odd million people.</p>
+<p>这座两千万人口的城市仅有少数几家临终关怀机构。</p>
+<p><button class="play-button sentence" id="s-00-19-35-078" data-start="00:19:35,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow, that kind of resistance to this hospice being built is somewhat surprising to me.</p>
+<p>这种抵制令我有些意外。</p>
+<p><button class="play-button sentence" id="s-00-19-41-798" data-start="00:19:41,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it reminds me of how people really don't like living in the same areas, funeral parlors, how anything associated with death can decrease home values.</p>
+<p>这让我想起人们不愿与殡仪馆为邻，任何死亡相关事物都会拉低房价。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958808" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-51-960" data-start="00:19:51,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, in this case, in fact, the problems they had really began before house prices started surging in Beijing in the late 1990s.</p>
+<p>实际上这些问题始于90年代末北京房价飙升前。</p>
+<p><button class="play-button sentence" id="s-00-20-02-160" data-start="00:20:02,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Already there was a huge problem just setting up a hospice and you had a situation once where dozens of patients found themselves sort of stranded out on the street because they couldn't get into the facility that the hospice director had tried to set up in.</p>
+<p>当时建立临终关怀机构就困难重重，曾有数十名患者因无法入住拟建机构而流落街头。</p>
+<p><button class="play-button sentence" id="s-00-20-16-400" data-start="00:20:16,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So an incredibly difficult period.</p>
+<p>那是一段极其艰难的时期。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958781" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-18-799" data-start="00:20:18,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That sounds awful to have to deal with those types of stressors as you're navigating those final days, months, years.</p>
+<p>在生命最后时光还要应对这些压力，太可怕了。</p>
+<p><button class="play-button sentence" id="s-00-20-26-160" data-start="00:20:26,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You mentioned that this hospice was built in the 80s.</p>
+<p>你提到这家机构建于80年代。</p>
+<p><button class="play-button sentence" id="s-00-20-29-519" data-start="00:20:29,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That feels quite early just as the country is opening up economically.</p>
+<p>正值经济开放初期，相当早。</p>
+<p><button class="play-button sentence" id="s-00-20-35-440" data-start="00:20:35,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did the idea for this hospice come about?</p>
+<p>创办理念从何而来？</p>
+<p><button class="play-button sentence" id="s-00-20-38-078" data-start="00:20:38,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it was the founder Lee Wei who got this going.</p>
+<p>创始人李伟推动了这一切。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958758" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-41-439" data-start="00:20:41,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's also known as Lee Songtaung, Songtaung being the name of the hospice.</p>
+<p>他又名李松堂，机构因此得名。</p>
+<p><button class="play-button sentence" id="s-00-20-46-078" data-start="00:20:46,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And his story is really interesting.</p>
+<p>他的故事很动人。</p>
+<p><button class="play-button sentence" id="s-00-20-48-798" data-start="00:20:48,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was sent down to the countryside.</p>
+<p>他曾被下放农村。</p>
+<p><button class="play-button sentence" id="s-00-20-51-759" data-start="00:20:51,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a term that applied to many people at the time.</p>
+<p>这是当时许多人的共同经历。</p>
+<p><button class="play-button sentence" id="s-00-20-55-679" data-start="00:20:55,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What it meant was they were sent from the cities into the countryside to work with farmers for several years usually.</p>
+<p>即从城市到农村与农民同劳动数年。</p>
+<p><button class="play-button sentence" id="s-00-21-02-960" data-start="00:21:02,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in his case, he met a teacher who he really respected and many of the people in the village admired.</p>
+<p>在那里，他遇见一位备受村民敬重的老师。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958729" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-10-160" data-start="00:21:10,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this teacher became ill and was diagnosed with cancer.</p>
+<p>后来老师患癌确诊。</p>
+<p><button class="play-button sentence" id="s-00-21-15-599" data-start="00:21:15,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was no treatment available in the village.</p>
+<p>村里没有治疗条件。</p>
+<p><button class="play-button sentence" id="s-00-21-18-000" data-start="00:21:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, this really, really deeply affected Lee Wei.</p>
+<p>这深深触动了李伟。</p>
+<p><button class="play-button sentence" id="s-00-21-21-440" data-start="00:21:21,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he wanted somehow to make this last stage of life for this teacher as good as possible.</p>
+<p>他希望能让老师最后时光过得更好。</p>
+<p><button class="play-button sentence" id="s-00-21-28-640" data-start="00:21:28,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when I met Lee at the hospice, he spent quite a lot of time telling me about his encounter with the teacher and how it affected him.</p>
+<p>在机构见到李伟时，他花很长时间向我讲述这段经历对他的影响。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958687" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-52-159" data-start="00:21:52,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow, it sounds like this teacher had an incredibly tough life.</p>
+<p>这位老师的人生真艰难。</p>
+<p><button class="play-button sentence" id="s-00-21-55-759" data-start="00:21:55,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This clip is Lee telling him that you're a good person and this teacher immediately starts crying.</p>
+<p>片段里李伟说"你是好人"，老师顿时泪流满面。</p>
+<p><button class="play-button sentence" id="s-00-22-02-558" data-start="00:22:02,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says that good people go to heaven and bad people go to hell.</p>
+<p>他说好人上天堂，坏人下地狱。</p>
+<p><button class="play-button sentence" id="s-00-22-07-038" data-start="00:22:07,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I'm not even qualified to be a person at all.</p>
+<p>但我连做人的资格都没有。</p>
+<p><button class="play-button sentence" id="s-00-22-10-318" data-start="00:22:10,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instead, they call me ox demons and snake spirits.</p>
+<p>他们叫我牛鬼蛇神。</p>
+<p><button class="play-button sentence" id="s-00-22-13-759" data-start="00:22:13,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back then, that's what the enemies were called.</p>
+<p>那是当时对"敌人"的称呼。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958663" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-16-719" data-start="00:22:16,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one question on his mind is where does someone like me end up and he's kind of thinking about death?</p>
+<p>他思考着：像我这样的人最终会去哪里？这其实是在思考死亡。</p>
+<p><button class="play-button sentence" id="s-00-22-24-720" data-start="00:22:24,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what Lee does is promise the teacher that he will go and talk to local officials about how to get his label as a class enemy removed.</p>
+<p>李伟承诺会找当地官员帮老师摘掉"阶级敌人"帽子。</p>
+<p><button class="play-button sentence" id="s-00-22-37-519" data-start="00:22:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Offie goes with a friend to the government offices some distance away from the village.</p>
+<p>于是他和朋友前往离村较远的政府办公室。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958636" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-43-440" data-start="00:22:43,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And at some point, the friend says, is this really a good idea?</p>
+<p>途中朋友问：这真是好主意吗？</p>
+<p><button class="play-button sentence" id="s-00-22-47-119" data-start="00:22:47,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, we're going to arrive at the government offices and try and plead on behalf of somebody who has been labeled a class enemy.</p>
+<p>我们是要去政府为"阶级敌人"求情啊。</p>
+<p><button class="play-button sentence" id="s-00-22-55-599" data-start="00:22:55,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Won't that, in effect, mean that we're class enemies as well?</p>
+<p>这不等于我们也是阶级敌人吗？</p>
+<p><button class="play-button sentence" id="s-00-22-59-599" data-start="00:22:59,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so the two boys decide that actually it would be better to give up on this project and go back.</p>
+<p>于是两人决定放弃计划返回。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958615" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-04-960" data-start="00:23:04,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Lee is then confronted with the problem.</p>
+<p>李伟面临难题：</p>
+<p><button class="play-button sentence" id="s-00-23-07-599" data-start="00:23:07,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How is he going to tell the teacher?</p>
+<p>如何告诉老师？</p>
+<p><button class="play-button sentence" id="s-00-23-09-359" data-start="00:23:09,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, he goes into the room where the teacher is lying and sees the teacher's face light up with expectation because here's the boy who's come back from the government offices.</p>
+<p>他走进老师房间，看到老师因他从政府回来而面露期待。</p>
+<p><button class="play-button sentence" id="s-00-23-20-959" data-start="00:23:20,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Surely he's got good news.</p>
+<p>肯定有好消息吧。</p>
+<p><button class="play-button sentence" id="s-00-23-22-798" data-start="00:23:22,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And at that point, Lee way decides to lie and tells the teacher that they had succeeded.</p>
+<p>这时李伟决定撒谎，说他们成功了。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958589" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-30-480" data-start="00:23:30,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The label's been removed.</p>
+<p>帽子摘掉了。</p>
+<p><button class="play-button sentence" id="s-00-23-31-759" data-start="00:23:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, he's a person again and he describes how the teacher's smile was truly beautiful on being told this news.</p>
+<p>老师重获"人"的身份，听到消息时的笑容无比美好。</p>
+<p><button class="play-button sentence" id="s-00-23-39-838" data-start="00:23:39,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then he died peacefully.</p>
+<p>随后老师安详离世。</p>
+<p><button class="play-button sentence" id="s-00-23-44-558" data-start="00:23:44,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the point of this story, as he put it to me, was that psychological care is the most important thing at the end of life.</p>
+<p>他说这个故事说明：心理关怀是临终最重要的。</p>
+<p><button class="play-button sentence" id="s-00-23-54-480" data-start="00:23:54,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it was that experience he said that inspired him to set up a hospice.</p>
+<p>正是这段经历激励他创办临终关怀机构。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958560" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-59-838" data-start="00:23:59,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow.</p>
+<p>哇。</p>
+<p><button class="play-button sentence" id="s-00-24-00-362" data-start="00:24:00,362" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that anecdote is so moving.</p>
+<p>这个故事太感人了。</p>
+<p><button class="play-button sentence" id="s-00-24-04-160" data-start="00:24:04,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just one simple lie that allowed him to pass peacefully and it reminds me of the volunteers in that documentary about hospice in China, figuring out different ways to make these people feel more comfortable and more at peace in their final days.</p>
+<p>一个善意谎言让他安详离去，这让我想起纪录片中志愿者想方设法让临终者舒适平静。</p>
+<p><button class="play-button sentence" id="s-00-24-24-798" data-start="00:24:24,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Lee sounds very inspiring and I'm curious about what the hospice was like.</p>
+<p>李伟的事迹很励志，我好奇这家机构现状。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958530" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-29-759" data-start="00:24:29,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How many people are there and how are they treated?</p>
+<p>收治多少人？待遇如何？</p>
+<p><button class="play-button sentence" id="s-00-24-32-558" data-start="00:24:32,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there are about a hundred people there, they said.</p>
+<p>据说约有百名患者。</p>
+<p><button class="play-button sentence" id="s-00-24-35-598" data-start="00:24:35,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, it's like a combination of a hospice and also a hospital.</p>
+<p>实际是临终关怀与医院的结合体。</p>
+<p><button class="play-button sentence" id="s-00-24-40-240" data-start="00:24:40,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They treat people as well and a care home for the elderly.</p>
+<p>兼具老年护理院功能。</p>
+<p><button class="play-button sentence" id="s-00-24-43-680" data-start="00:24:43,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, some people actually spend very long periods there just receiving ordinary care for geriatric needs.</p>
+<p>有些人长期在此接受普通老年护理。</p>
+<p><button class="play-button sentence" id="s-00-24-50-880" data-start="00:24:50,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Quite a few of them are people with advanced dementia.</p>
+<p>不少是晚期痴呆患者。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958505" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-54-318" data-start="00:24:54,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I met a few of the patients in a ward and others sitting in a lounge.</p>
+<p>我在病房和休息室见到一些患者。</p>
+<p><button class="play-button sentence" id="s-00-24-58-960" data-start="00:24:58,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the atmosphere seemed relaxed.</p>
+<p>氛围看似轻松。</p>
+<p><button class="play-button sentence" id="s-00-25-01-759" data-start="00:25:01,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, on a brief tour it was very hard to tell what treatment was actually like.</p>
+<p>短暂参观很难了解实际治疗情况。</p>
+<p><button class="play-button sentence" id="s-00-25-06-638" data-start="00:25:06,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Did you get a sense of what running the hospice is like and whether that's changed over the years?</p>
+<p>你感受到运营状况及这些年的变化吗？</p>
+<p><button class="play-button sentence" id="s-00-25-11-838" data-start="00:25:11,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, talking to Lee Wei at Songtang Hospice as well as other end-of-life care specialists in Beijing, as well as in Shanghai, the impression I got is that there has been quite a change over the past few years that public acceptance has improved the kind of problems that the Songtang hospice faced in its early years with stiff resistance from local people to setting up the hospice in their neighborhoods.</p>
+<p>通过与李伟及京沪临终护理专家的交流，我感受到近几年变化很大：早期松堂遭遇的居民抵制已减少，公众接受度提高。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958463" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-36-725" data-start="00:25:36,725" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That sort of thing isn't happening.</p>
+<p>这类情况不再发生。</p>
+<p><button class="play-button sentence" id="s-00-25-38-452" data-start="00:25:38,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And clearly the government is now paying more attention.</p>
+<p>显然政府也更重视了。</p>
+<p><button class="play-button sentence" id="s-00-25-41-320" data-start="00:25:41,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's still a concern that there isn't enough support.</p>
+<p>但支持力度仍不足。</p>
+<p><button class="play-button sentence" id="s-00-25-44-790" data-start="00:25:44,790" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And here's what Lee Wei told me.</p>
+<p>李伟是这样说的：</p>
+<p><button class="play-button sentence" id="s-00-25-47-519" data-start="00:25:47,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Lee here is explaining to us just how awkward his position or the hospice's position is.</p>
+<p>李伟解释了他们面临的尴尬处境。</p>
+<p><button class="play-button sentence" id="s-00-26-09-679" data-start="00:26:09,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no policy that they really fall under with these various health departments, which makes it hard for people to get reimbursed through the public health insurance.</p>
+<p>缺乏明确的政策归属部门，导致患者难获医保报销。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958420" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-19-358" data-start="00:26:19,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, so I can see how hospices are stuck in this predicament if the supporting policy hasn't quite caught up.</p>
+<p>是的，政策滞后让临终关怀机构陷入困境。</p>
+<p><button class="play-button sentence" id="s-00-26-26-298" data-start="00:26:26,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and it's confusing for people like Lee Wei who's running a private institution.</p>
+<p>这对李伟这样的私立机构运营者也很困惑。</p>
+<p><button class="play-button sentence" id="s-00-26-30-842" data-start="00:26:30,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There isn't much money to be made from it in the first place for the reasons we've talked about.</p>
+<p>如前所述，这行本身利润微薄。</p>
+<p><button class="play-button sentence" id="s-00-26-35-957" data-start="00:26:35,957" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In addition to that barrier, you've got one of regulatory confusion.</p>
+<p>除经济障碍外，还有监管混乱。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958398" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-41-119" data-start="00:26:41,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So if the government wants to be able to expand this and give access to more people, would the funding come from the central or local governments?</p>
+<p>若政府想扩大覆盖范围，资金应来自中央还是地方？</p>
+<p><button class="play-button sentence" id="s-00-26-52-435" data-start="00:26:52,435" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As we've spoken about a lot on this podcast, local governments are cash draft right now.</p>
+<p>如节目常提的，地方政府目前财政紧张。</p>
+<p><button class="play-button sentence" id="s-00-26-57-343" data-start="00:26:57,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and local governments would have to shoulder most of the cost of getting this going.</p>
+<p>是的，地方需承担主要启动成本。</p>
+<p><button class="play-button sentence" id="s-00-27-02-202" data-start="00:27:02,202" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's often the case with these kind of central directives in the end, it's local governments that have to pick up the tab.</p>
+<p>这类中央指令最终往往由地方买单。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958370" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-09-715" data-start="00:27:09,715" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is going to be input from charity as well.</p>
+<p>慈善力量也会参与。</p>
+<p><button class="play-button sentence" id="s-00-27-12-664" data-start="00:27:12,664" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the thing is, unlike hospitals, which can partially sustain themselves by making money from services they provide, there's not much to be made from basic hospice care, and many local governments laden with debt and sometimes struggling to pay teachers and bus drivers.</p>
+<p>但医院可通过服务创收，基础临终关怀则利润微薄，而许多地方政府债台高筑，有时连教师工资都难支付。</p>
+<p><button class="play-button sentence" id="s-00-27-30-798" data-start="00:27:30,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there just isn't much money around to start public services like this.</p>
+<p>因此难有资金启动此类公共服务。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958345" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-34-960" data-start="00:27:34,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it sounds like right now it might be a hard time to really push reform on this front.</p>
+<p>看来当前推进改革时机不佳。</p>
+<p><button class="play-button sentence" id="s-00-27-40-558" data-start="00:27:40,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You mentioned that Song Tang is private.</p>
+<p>你提到松堂是私立的。</p>
+<p><button class="play-button sentence" id="s-00-27-43-241" data-start="00:27:43,241" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Did you visit any hospices that are state-run?</p>
+<p>探访过公立机构吗？</p>
+<p><button class="play-button sentence" id="s-00-27-46-318" data-start="00:27:46,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, after Song Tang, I went to Beijing Geriatric Hospital right out on the northwestern edge of the city.</p>
+<p>之后我去了位于城西北的北京老年医院。</p>
+<p><button class="play-button sentence" id="s-00-27-53-848" data-start="00:27:53,848" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's one of a very few that's been set up by the government specifically for the elderly and to cope with this rapidly aging population.</p>
+<p>这是政府为应对老龄化专门设立的少数机构之一。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958317" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-02-663" data-start="00:28:02,663" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What was it like?</p>
+<p>那里怎么样？</p>
+<p><button class="play-button sentence" id="s-00-28-03-633" data-start="00:28:03,633" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was it very different from Song Tang?</p>
+<p>与松堂差异大吗？</p>
+<p><button class="play-button sentence" id="s-00-28-06-905" data-start="00:28:06,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it is very different.</p>
+<p>差别很大。</p>
+<p><button class="play-button sentence" id="s-00-28-08-648" data-start="00:28:08,648" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a top hospital and that's really its main purpose to provide general hospital care for the elderly rather than to provide hospice services.</p>
+<p>这是顶级医院，主要提供普通老年医疗服务而非临终关怀。</p>
+<p><button class="play-button sentence" id="s-00-28-17-440" data-start="00:28:17,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it does have 39 hospice beds out of more than 500 in the facility.</p>
+<p>但500多张床位中有39张用于临终关怀。</p>
+<p><button class="play-button sentence" id="s-00-28-23-532" data-start="00:28:23,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And these beds are used as a model for other care centres.</p>
+<p>这些床位是其他护理中心的样板。</p>
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958292" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-27-758" data-start="00:28:27,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the idea is to spread best practice at this Geriatric hospital to the local hospice facilities that are being set up in the community, the local neighborhood level around the city.</p>
+<p>因此，计划是将这家老年医院的最佳实践推广到正在社区、城市周边街道层面设立的本地临终关怀机构。</p>
+<p><button class="play-button sentence" id="s-00-28-38-673" data-start="00:28:38,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And its hospice centre looks very smart.</p>
+<p>其临终关怀中心看起来非常现代化。</p>
+<p><button class="play-button sentence" id="s-00-28-41-087" data-start="00:28:41,087" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While I was there, I met the hospital's director, Wu Jun.</p>
+<p>在那里时，我见到了医院的院长吴军。</p>
+<p><button class="play-button sentence" id="s-00-28-44-298" data-start="00:28:44,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What did you didn't think are the main challenges facing the development of hospice care in China?</p>
+<p>您认为中国临终关怀发展的主要挑战是什么？</p>
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958270" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-49-976" data-start="00:28:49,976" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, a big thing he highlights is the shortage of staff.</p>
+<p>他强调的一大问题是人员短缺。</p>
+<p><button class="play-button sentence" id="s-00-28-54-273" data-start="00:28:54,273" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hospice care is such a new field in China.</p>
+<p>临终关怀在中国是一个新兴领域。</p>
+<p><button class="play-button sentence" id="s-00-28-57-703" data-start="00:28:57,703" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Medical training usually skates over the topic and it's very hard to find people who are really specialised in this kind of treatment.</p>
+<p>医学培训通常对这一话题一带而过，很难找到真正专精此类治疗的人才。</p>
+<p><button class="play-button sentence" id="s-00-29-07-741" data-start="00:29:07,741" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's what the director, Wu Jun, told me.</p>
+<p>以下是院长吴军告诉我的内容。</p>
+<p><button class="play-button sentence" id="s-00-29-10-751" data-start="00:29:10,751" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, our medical centre is not much, but we may need a more detailed change.</p>
+<p>目前，我们的医疗中心规模不大，但可能需要更细致的改革。</p>
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958241" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-18-837" data-start="00:29:18,837" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, we are still not good at taking care of people.</p>
+<p>目前，我们仍不擅长照顾患者。</p>
+<p><button class="play-button sentence" id="s-00-29-22-836" data-start="00:29:22,836" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are in the first school of the old year, and we are in China now, and we are in the first school.</p>
+<p>我们处于老年医学的起步阶段，在中国目前仍是首个尝试者。</p>
+<p><button class="play-button sentence" id="s-00-29-29-786" data-start="00:29:29,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The director is explaining how they are not lacking in medical resources in general, but that he thinks there needs to be a structural shift.</p>
+<p>院长解释称，他们总体上并不缺乏医疗资源，但认为需要进行结构性调整。</p>
+<p><button class="play-button sentence" id="s-00-29-39-919" data-start="00:29:39,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says that the biggest obstacle they face is the lack of talent.</p>
+<p>他表示，面临的最大障碍是人才匮乏。</p>
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958215" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-44-072" data-start="00:29:44,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not just a shortage, but a very severe shortage of talent.</p>
+<p>不仅是短缺，而是极其严重的人才缺口。</p>
+<p><button class="play-button sentence" id="s-00-29-48-431" data-start="00:29:48,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he's yet to see a single institution specialising in geriatric medicine.</p>
+<p>他尚未见到任何专门从事老年医学的机构。</p>
+<p><button class="play-button sentence" id="s-00-29-53-604" data-start="00:29:53,604" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think his comments are really interesting given that as China ages, the talent pool is shrinking too.</p>
+<p>考虑到中国老龄化加剧，人才储备也在萎缩，我认为他的观点非常耐人寻味。</p>
+<p><button class="play-button sentence" id="s-00-30-00-160" data-start="00:30:00,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so while the director wants more courses on geriatric medicine, it almost seems like the government and the industry is pushing more towards robots providing elderly care in the future and filling the demographic gap.</p>
+<p>尽管院长希望增加老年医学课程，但政府和行业似乎更倾向于推动未来用机器人提供老年护理，填补人口缺口。</p>
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958186" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-13-749" data-start="00:30:13,749" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And robots, of course, can only do so much.</p>
+<p>当然，机器人的能力有限。</p>
+<p><button class="play-button sentence" id="s-00-30-16-318" data-start="00:30:16,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're not human enough, I think, for the really kind of sensitive care that is involved here.</p>
+<p>我认为它们不够人性化，难以胜任这里所需的真正细腻的护理工作。</p>
+<p><button class="play-button sentence" id="s-00-30-22-878" data-start="00:30:22,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one wonders, even if training becomes more widely available, whether many people will be attracted by this kind of profession, there's just not much money to be made for those who want to devote their careers to this kind of care, this kind of nursing.</p>
+<p>人们不禁怀疑，即使培训更普及，是否会有许多人被这类职业吸引——投身这种护理工作的人赚不到多少钱。</p>
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958162" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-37-208" data-start="00:30:37,208" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that reminds me of a NSA recently read by a young Chinese woman who works not in hospice care, but in a care home, describing how hard that type of work can be and how it doesn't have much face in Chinese society.</p>
+<p>这让我想起一位中国年轻女性在养老院（非临终关怀机构）工作的自述，描述这类工作多么艰辛且在中国社会地位低下。</p>
+<p><button class="play-button sentence" id="s-00-30-52-880" data-start="00:30:52,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're kind of looked down upon for spending your days helping old people shower and caring for them in different ways.</p>
+<p>整天帮老人洗澡、以各种方式照料他们，会让人看不起你。</p>
+<p><button class="play-button sentence" id="s-00-30-59-858" data-start="00:30:59,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And going back to some of the cultural challenges we were discussing earlier, I imagine some doctors providing this kind of care probably have to walk a fine line between competing interests, what the patient wants and what their family might want and what the hospital and healthcare system incentivizes.</p>
+<p>回到之前讨论的文化挑战，我想提供这类护理的医生可能需要在患者意愿、家属期望及医院和医疗体系的利益激励之间小心权衡。</p>
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958122" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-31-17-822" data-start="00:31:17,822" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, what the hospital needs is a big question.</p>
+<p>没错，医院的需求是个大问题。</p>
+<p><button class="play-button sentence" id="s-00-31-20-825" data-start="00:31:20,825" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And unless hospitals receive more direct funding from government, doctors are paid better, so they don't need these additional incentives in order to supplement their incomes.</p>
+<p>除非医院获得更多政府直接拨款，医生收入提高，才不需要这些额外激励来补贴收入。</p>
+<p><button class="play-button sentence" id="s-00-31-31-932" data-start="00:31:31,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, there's always going to be a problem with hospitals veering towards providing services that generate more money.</p>
+<p>医院总会倾向于提供更赚钱的服务，这是个永恒难题。</p>
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958100" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-31-39-598" data-start="00:31:39,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's also still a lot of work to be done in terms of educating the public about what hospice care is and why providing it is not about giving up on helping people to live.</p>
+<p>在公众教育方面也任重道远——需要解释临终关怀的本质，以及提供这种服务并非放弃帮助患者生存。</p>
+<p><button class="play-button sentence" id="s-00-31-52-035" data-start="00:31:52,035" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's about helping them to live better while death draws near.</p>
+<p>而是帮助他们在死亡临近时活得更有质量。</p>
+<p><button class="play-button sentence" id="s-00-31-57-158" data-start="00:31:57,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While I was walking around the hospice facility at the geriatric hospital, I met a friend of young doctor called Christine Chang and this is what she told me.</p>
+<p>在老年医院临终关怀部门参观时，我遇到一位名叫Christine Chang的年轻医生朋友，她这样告诉我：</p>
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958071" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-32-08-059" data-start="00:32:08,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Actually, the hospice care they want to tell the choose to patients for them to prepare deaths.</p>
+<p>实际上，临终关怀本应告知患者实情，让他们为死亡做准备。</p>
+<p><button class="play-button sentence" id="s-00-32-19-497" data-start="00:32:19,497" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in reality, we have how to deliver to for this and we need to find a balance.</p>
+<p>但现实中我们需谨慎传达，找到平衡点。</p>
+<p><button class="play-button sentence" id="s-00-32-28-240" data-start="00:32:28,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the patients might be staying in the hospice ward but not know that they soon will die.</p>
+<p>因此患者可能住在临终病房却不知自己将不久于人世。</p>
+<p><button class="play-button sentence" id="s-00-32-40-480" data-start="00:32:40,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have this situation, but we have to respect the family because maybe we can get in trouble if we tell the patients.</p>
+<p>这种情况存在，但我们必须尊重家属——告知患者实情可能会惹上麻烦。</p>
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208958026" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-32-53-315" data-start="00:32:53,315" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow, I can't imagine having to withhold that type of information from someone to not let them know that they're dying.</p>
+<p>难以想象必须对某人隐瞒他们将离世的信息。</p>
+<p><button class="play-button sentence" id="s-00-33-03-324" data-start="00:33:03,324" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that seems like a really hard thing for doctors to navigate.</p>
+<p>这对医生来说确实很难处理。</p>
+<p><button class="play-button sentence" id="s-00-33-07-402" data-start="00:33:07,402" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a very common problem and at Saun Tung, I met the CEO there who's the director's son and he said that they took his grandmother who had late stage cancer to a private hospital where they were told she still had a chance and could be treated and she was effectively forced to undergo surgery, but no she couldn't be saved as he put it to me rooffully.</p>
+<p>这很普遍——在Saun Tung，我见到院长的儿子兼CEO，他说带晚期癌症的祖母去私立医院时，院方声称仍有治疗希望，结果祖母被迫手术却无法获救，他对我苦笑道。</p>
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957987" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-33-32-711" data-start="00:33:32,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The hospital was just trying to make money.</p>
+<p>医院只是想赚钱。</p>
+<p><button class="play-button sentence" id="s-00-33-35-747" data-start="00:33:35,747" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As he said, people don't have the right to decide how they're born, they should have the right to decide how they die.</p>
+<p>正如他所言：人无法决定如何出生，但应有权决定如何死亡。</p>
+<p><button class="play-button sentence" id="s-00-33-42-695" data-start="00:33:42,695" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's clearly not happening in many cases.</p>
+<p>显然很多情况下并非如此。</p>
+<p><button class="play-button sentence" id="s-00-33-45-200" data-start="00:33:45,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess the same is true in many parts of the world giving the dying more rights is certainly very hard in China when you've got hospitals, doctors, family members having so much power over the people who are facing the end of their lives.</p>
+<p>我想全球许多地方也如此——在中国，当医院、医生和家属对临终者拥有极大话语权时，赋予垂死者更多权利确实困难。</p>
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-34-03-754" data-start="00:34:03,754" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, so James back to the question we asked at the top.</p>
+<p>那么James，回到最初的问题。</p>
+<p><button class="play-button sentence" id="s-00-34-11-026" data-start="00:34:11,026" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've talked about how China is moving towards getting better at dealing with end of life care.</p>
+<p>我们讨论了中国如何改进临终关怀。</p>
+<p><button class="play-button sentence" id="s-00-34-17-258" data-start="00:34:17,258" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's still a long way to go, but if we look ahead.</p>
+<p>仍有很长的路要走，但展望未来——</p>
+<p><button class="play-button sentence" id="s-00-34-21-262" data-start="00:34:21,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I wonder, I think the cultural aspect of this may be overblown that fundamentally it's a question about a need for root and branch reform of the healthcare system and the way it incentivizes hospitals and doctors when it comes to treating patients.</p>
+<p>我认为文化因素可能被夸大——本质上这是需要对医疗体系及其对医院医生治疗激励方式进行根本改革的问题。</p>
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957917" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-34-42-599" data-start="00:34:42,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's a question of funding, not just simply pushing this problem down to the local level, hoping that they can deal with it.</p>
+<p>也是资金问题，不能简单将问题下放地方指望他们解决。</p>
+<p><button class="play-button sentence" id="s-00-34-51-733" data-start="00:34:51,733" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also fundamentally, and this is a political problem, letting charity play a role.</p>
+<p>根本上还是政治问题——让慈善机构发挥作用。</p>
+<p><button class="play-button sentence" id="s-00-34-57-917" data-start="00:34:57,917" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Grassroots civil society can play, does play in many rich countries a huge role in this, even though a lot of the funding comes from government.</p>
+<p>基层民间组织在富裕国家对此贡献巨大（尽管资金多来自政府）。</p>
+<p><a name="block-73"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-35-07-920" data-start="00:35:07,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the grassroots level, that's where the understanding is, the expertise is, when it comes to appreciating what people's concerns are, what communities need, how these vary from place to place.</p>
+<p>基层最了解民众关切、社区需求及地域差异。</p>
+<p><button class="play-button sentence" id="s-00-35-21-039" data-start="00:35:21,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You need large charities that are focused on this problem.</p>
+<p>需要专注该问题的大型慈善组织。</p>
+<p><button class="play-button sentence" id="s-00-35-25-351" data-start="00:35:25,351" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is very difficult to develop in China for political reasons, because the Communist Party is afraid of civil society.</p>
+<p>而这在中国因政治原因难以发展——共产党对民间组织心存戒备。</p>
+<p><a name="block-74"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-35-34-140" data-start="00:35:34,140" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of those changes from the funding structures to greater room for civil society to play a role in supporting people at this stage of life, sound all the more pressing given how quickly this society is aging.</p>
+<p>鉴于社会快速老龄化，从资金结构到扩大民间组织支持临终人群的空间，所有这些变革都显得愈发紧迫。</p>
+<p><button class="play-button sentence" id="s-00-35-50-639" data-start="00:35:50,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But none of those changes sound easy to make.</p>
+<p>但这些变革无一容易实现。</p>
+<p><button class="play-button sentence" id="s-00-35-53-093" data-start="00:35:53,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There'll be very, very hard to tackle.</p>
+<p>将极其难以攻克。</p>
+<p><button class="play-button sentence" id="s-00-35-55-216" data-start="00:35:55,216" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think this will be a long, long drawn out process.</p>
+<p>我认为这将是个漫长的过程。</p>
+<p><a name="block-75"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957841" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-35-58-978" data-start="00:35:58,978" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has taken long to develop in rich countries, and it's still far from ideal in terms of the universal availability of palliative care at the end of life.</p>
+<p>富裕国家也历经漫长发展，临终舒缓护理的普及仍不理想。</p>
+<p><button class="play-button sentence" id="s-00-36-10-400" data-start="00:36:10,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's still a difficult problem for some people in the rich world.</p>
+<p>对部分发达国家人群仍是难题。</p>
+<p><button class="play-button sentence" id="s-00-36-13-793" data-start="00:36:13,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think these systemic issues in China will make the development of hospice care that much slower, and it's going to be a long time before we see China catching up with rich country standards of care at this stage of life.</p>
+<p>但中国的体制问题会使临终关怀发展更缓慢，要达到发达国家标准仍需很长时间。</p>
+<p><a name="block-76"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-36-26-639" data-start="00:36:26,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that makes me all the more glad that there are people like Dr. Lee who are still pushing regardless of how slow and drawn out this process has been.</p>
+<p>这让我更感激像李医生这样的人仍在坚持推动，无论进程多么缓慢。</p>
+<p><button class="play-button sentence" id="s-00-36-36-951" data-start="00:36:36,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> James, thank you so much for giving us insight into this world when that I knew very little about before speaking with you.</p>
+<p>James，非常感谢您让我深入了解这个此前知之甚少的领域。</p>
+<p><button class="play-button sentence" id="s-00-36-45-494" data-start="00:36:45,494" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And thank you so much for coming on to Drum Tower today.</p>
+<p>也感谢您今天做客《鼓楼》。</p>
+<p><a name="block-77"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957790" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-36-49-084" data-start="00:36:49,084" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My pleasure Sarah.</p>
+<p>我的荣幸，Sarah。</p>
+<p><button class="play-button sentence" id="s-00-36-50-349" data-start="00:36:50,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for listening to Drum Tower.</p>
+<p>感谢收听《鼓楼》。</p>
+<p><button class="play-button sentence" id="s-00-36-52-878" data-start="00:36:52,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And special thanks to William who enjoyed our reporting from Ho Hot.</p>
+<p>特别感谢喜欢我们呼和浩特报道的William。</p>
+<p><button class="play-button sentence" id="s-00-36-57-055" data-start="00:36:57,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'd love reading your emails.</p>
+<p>我们期待您的邮件。</p>
+<p><button class="play-button sentence" id="s-00-36-58-960" data-start="00:36:58,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please keep sending us more at drum at economist.com.</p>
+<p>请继续发送至drum@economist.com。</p>
+<p><button class="play-button sentence" id="s-00-37-02-390" data-start="00:37:02,390" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're listening to this, that means you're a subscriber.</p>
+<p>收听即表示您是我们的订阅用户。</p>
+<p><button class="play-button sentence" id="s-00-37-06-297" data-start="00:37:06,297" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you get access to all our shows and the easiest place to find them is on our app, which has just been given a facelift.</p>
+<p>您可收听所有节目，全新改版的应用是最便捷的收听渠道。</p>
+<p><a name="block-78"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-37-13-640" data-start="00:37:13,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now if you want to read James's full report on hospice care, you'll find links to it in the show notes.</p>
+<p>若想阅读James关于临终关怀的完整报告，请查看节目备注中的链接。</p>
+<p><button class="play-button sentence" id="s-00-37-19-441" data-start="00:37:19,441" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Other cool new features include being able to create your own personalized playlist.</p>
+<p>其他酷炫新功能包括创建个性化播放列表。</p>
+<p><button class="play-button sentence" id="s-00-37-24-913" data-start="00:37:24,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Xie Hauchen and Lucy Rohr produce this episode.</p>
+<p>本期节目由解皓宸和Lucy Rohr制作。</p>
+<p><button class="play-button sentence" id="s-00-37-28-570" data-start="00:37:28,570" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The executive producer is Hannah Marinho.</p>
+<p>执行制片人Hannah Marinho。</p>
+<p><button class="play-button sentence" id="s-00-37-31-967" data-start="00:37:31,967" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sound design is by Amelia Sy.</p>
+<p>音效设计Amelia Sy。</p>
+<p><a name="block-79"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1kJbZzdEsL/?t=-2208957745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-37-34-319" data-start="00:37:34,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Drum Tower's music was composed by Jocelyn Tan.</p>
+<p>《鼓楼》配乐由Jocelyn Tan创作。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
