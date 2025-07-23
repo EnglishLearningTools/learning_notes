@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>youtube video #QHREZaehmHQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Canadian leaders strategize against U.S. tariffs amid trade tensions, while global crises and cultural controversies unfold.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>youtube video #QHREZaehmHQ</h1>
+<p>【加拿大新闻 Global News 20250723 加拿大应对美国关税威胁，贸易紧张局势持续】</p>
+<p>Summary:
+Canadian leaders strategize against U.S. tariffs amid trade tensions, while global crises and cultural controversies unfold.</p>
+<p>摘要：
+加拿大领导人针对美国关税制定策略，贸易紧张局势持续，同时全球危机和文化争议不断涌现。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 33 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959998" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-02-000" data-start="00:00:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On this Tuesday night, tackling U.S. tariffs.</p>
+<p>在这个周二晚上，应对美国关税问题。</p>
+<p><button class="play-button sentence" id="s-00-00-06-878" data-start="00:00:06,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canada's first ministers unite to come up with a strategy.</p>
+<p>加拿大各省省长联合制定策略。</p>
+<p><button class="play-button sentence" id="s-00-00-10-480" data-start="00:00:10,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're only going to accept the best deal for Canada.</p>
+<p>但我们只接受对加拿大最有利的协议。</p>
+<p><button class="play-button sentence" id="s-00-00-13-279" data-start="00:00:13,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who thinks the Prime Minister is being too soft?</p>
+<p>谁认为总理表现得太软弱？</p>
+<p><button class="play-button sentence" id="s-00-00-16-280" data-start="00:00:16,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At Gazes, grave crisis.</p>
+<p>在加沙，危机深重。</p>
+<p><button class="play-button sentence" id="s-00-00-18-678" data-start="00:00:18,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We spend our days, our time, just drinking water.</p>
+<p>我们整天只能喝水度日。</p>
+<p><button class="play-button sentence" id="s-00-00-23-480" data-start="00:00:23,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is nothing.</p>
+<p>一无所有。</p>
+<p><button class="play-button sentence" id="s-00-00-24-879" data-start="00:00:24,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The growing number of Palestinians starving to death, refusing to be silenced.</p>
+<p>越来越多的巴勒斯坦人因饥饿而死，但他们拒绝沉默。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959969" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-30-480" data-start="00:00:30,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for the next 10 months, the gloves are off.</p>
+<p>但在接下来的10个月里，我们将全力以赴。</p>
+<p><button class="play-button sentence" id="s-00-00-32-679" data-start="00:00:32,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fears, critics of U.S. President Trump are being censored.</p>
+<p>对美国特朗普总统的批评者正遭到审查。</p>
+<p><button class="play-button sentence" id="s-00-00-38-719" data-start="00:00:38,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, Ozzy Osborne was no ordinary man.</p>
+<p>此外，奥兹·奥斯本并非普通人。</p>
+<p><button class="play-button sentence" id="s-00-00-42-079" data-start="00:00:42,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was a member of music royalty.</p>
+<p>他是音乐界的传奇人物。</p>
+<p><button class="play-button sentence" id="s-00-00-44-560" data-start="00:00:44,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't want to do it.</p>
+<p>我不想这么做。</p>
+<p><button class="play-button sentence" id="s-00-00-45-320" data-start="00:00:45,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's made people smile.</p>
+<p>他曾让人们欢笑。</p>
+<p><button class="play-button sentence" id="s-00-00-46-560" data-start="00:00:46,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's so many people that they haven't think that I'm going to be that damnable, you know.</p>
+<p>但很多人没想到我会如此糟糕。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959950" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-49-479" data-start="00:00:49,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tributes to the Prince of Darkness.</p>
+<p>对“黑暗王子”的致敬。</p>
+<p><button class="play-button sentence" id="s-00-00-55-719" data-start="00:00:55,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Global national with Donna Friesen, reporting tonight, Carolyn Jarvis.</p>
+<p>《环球国家》节目，今晚由唐娜·弗里森报道，卡罗琳·贾维斯主持。</p>
+<p><button class="play-button sentence" id="s-00-01-00-600" data-start="00:01:00,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good evening, and thanks for joining us.</p>
+<p>晚上好，感谢收看。</p>
+<p><button class="play-button sentence" id="s-00-01-02-280" data-start="00:01:02,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trade and tariffs, dominated meetings between Canada's premieres and the Prime Minister today.</p>
+<p>贸易和关税问题是今天加拿大各省省长与总理会议的主要议题。</p>
+<p><button class="play-button sentence" id="s-00-01-07-799" data-start="00:01:07,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are just 10 days left for the federal government to reach a deal with U.S. President Donald Trump or potentially face punishing penalties.</p>
+<p>联邦政府仅剩10天时间与美国总统特朗普达成协议，否则可能面临严厉惩罚。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959923" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-16-078" data-start="00:01:16,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as Mackenzie Gray reports, not everyone can agree on the best way forward.</p>
+<p>但据麦肯齐·格雷报道，并非所有人都同意最佳前进方向。</p>
+<p><button class="play-button sentence" id="s-00-01-24-319" data-start="00:01:24,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even political rivals coming together to plan the path forward against U.S. tariffs.</p>
+<p>甚至政治对手也联合起来规划应对美国关税的策略。</p>
+<p><button class="play-button sentence" id="s-00-01-29-358" data-start="00:01:29,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll be reinforcing those discussions over the next few days in Washington with the United States.</p>
+<p>未来几天我们将在华盛顿与美国加强讨论。</p>
+<p><button class="play-button sentence" id="s-00-01-34-799" data-start="00:01:34,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are looking for the best deal for Canada.</p>
+<p>我们寻求对加拿大最有利的协议。</p>
+<p><button class="play-button sentence" id="s-00-01-38-560" data-start="00:01:38,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister's update on what the best deal might look like seemed to be a bleak one.</p>
+<p>总理关于最佳协议可能形式的更新显得不太乐观。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-43-319" data-start="00:01:43,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump is very, very hard to deal with just because it's so fluid.</p>
+<p>唐纳德·特朗普非常难以应对，因为情况变化无常。</p>
+<p><button class="play-button sentence" id="s-00-01-49-120" data-start="00:01:49,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's constantly moving with him.</p>
+<p>他总是在变化。</p>
+<p><button class="play-button sentence" id="s-00-01-50-799" data-start="00:01:50,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Doug Ford's recipe for success against the Americans hit back with dollar for dollar retaliatory tariffs.</p>
+<p>道格·福特对抗美国的成功秘诀是以牙还牙的报复性关税。</p>
+<p><button class="play-button sentence" id="s-00-01-56-438" data-start="00:01:56,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only thing I believe with President Trump and Secretary Lotnick that I've seen, you have to be tough.</p>
+<p>根据我对特朗普总统和洛特尼克部长的观察，唯一重要的是必须强硬。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959875" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-04-799" data-start="00:02:04,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're weak, they will run us over.</p>
+<p>如果你软弱，他们就会碾压我们。</p>
+<p><button class="play-button sentence" id="s-00-02-07-159" data-start="00:02:07,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Other premieres more cautious.</p>
+<p>其他省长更为谨慎。</p>
+<p><button class="play-button sentence" id="s-00-02-09-199" data-start="00:02:09,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to be cautious of the impact on retaliation on our own economy, because there is one as well.</p>
+<p>我们必须警惕报复对我们自身经济的影响，因为确实存在这种影响。</p>
+<p><button class="play-button sentence" id="s-00-02-15-639" data-start="00:02:15,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Individual retaliations from Canadians catching the eye of Donald Trump and his Canadian ambassador who's taken note of boycotts on travel to the U.S.</p>
+<p>加拿大人的个别报复行为引起了特朗普及其加拿大大使的注意，后者注意到抵制赴美旅行的行动。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959855" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-24-038" data-start="00:02:24,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It doesn't necessarily send real positive signals in terms of their treating as well.</p>
+<p>这并不一定传递出真正积极的信号。</p>
+<p><button class="play-button sentence" id="s-00-02-28-799" data-start="00:02:28,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are reasons why the President and some of his team referred to Canada as being mean and nasty to deal with.</p>
+<p>总统及其团队称加拿大“卑鄙难缠”是有原因的。</p>
+<p><button class="play-button sentence" id="s-00-02-36-079" data-start="00:02:36,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That recording, given to global news by the BC Premier's office.</p>
+<p>这段录音由不列颠哥伦比亚省省长办公室提供给环球新闻。</p>
+<p><button class="play-button sentence" id="s-00-02-39-840" data-start="00:02:39,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're a mean and nasty Canadian for standing up for sovereignty in our economy and our jobs, I think most Canadians would be proud to be considered mean and nasty.</p>
+<p>如果捍卫我国经济和就业主权让你成为“卑鄙难缠”的加拿大人，我想大多数加拿大人会为此自豪。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959830" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-49-479" data-start="00:02:49,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Large parts of the Canadian economy hanging in the balance with Trump's August 1st tariff deadline to slap a 35% duty on all non-free trade goods.</p>
+<p>随着特朗普8月1日对非自由贸易商品征收35%关税的最后期限临近，加拿大经济的大部分悬而未决。</p>
+<p><button class="play-button sentence" id="s-00-02-58-319" data-start="00:02:58,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What happens if there's no deal on August 1st?</p>
+<p>如果8月1日没有达成协议会怎样？</p>
+<p><button class="play-button sentence" id="s-00-03-00-158" data-start="00:03:00,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I mean, we'll see.</p>
+<p>嗯，我们拭目以待。</p>
+<p><button class="play-button sentence" id="s-00-03-01-680" data-start="00:03:01,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're working to get the best deal for Canadians, and that's the focus now.</p>
+<p>我们正努力为加拿大人争取最佳协议，这是当前的重点。</p>
+<p><button class="play-button sentence" id="s-00-03-05-280" data-start="00:03:05,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A deal that premieres don't want rushed.</p>
+<p>各省省长不希望仓促达成协议。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-07-800" data-start="00:03:07,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a sense now that we're not going to get a deal at all costs for August 1st, and we've encouraged the Prime Minister to not make a deal at all costs.</p>
+<p>现在有一种感觉，我们不会不惜一切代价在8月1日前达成协议，我们已鼓励总理不要不惜代价达成协议。</p>
+<p><button class="play-button sentence" id="s-00-03-16-360" data-start="00:03:16,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's to get the right deal.</p>
+<p>目标是达成正确的协议。</p>
+<p><button class="play-button sentence" id="s-00-03-18-039" data-start="00:03:18,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Karni also confirmed that is a part of negotiations.</p>
+<p>卡尼也确认这是谈判的一部分。</p>
+<p><button class="play-button sentence" id="s-00-03-20-598" data-start="00:03:20,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's hoping to strike a deal on softwood lumber, Carolyn, a long-term irritant for both Democrats and Republicans.</p>
+<p>他希望就软木木材达成协议，卡罗琳，这是民主党和共和党长期以来的痛点。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959791" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-28-038" data-start="00:03:28,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bacansi Gray and Huntsville on Terrio, thank you.</p>
+<p>巴坎西·格雷和亨茨维尔的特里奥报道，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-03-32-318" data-start="00:03:32,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And a little later on Global National, we'll take a look at how Canada's dairy sector is in the crossfire of trade talks with the U.S.</p>
+<p>稍后在《环球国家》节目中，我们将探讨加拿大乳业如何成为与美国贸易谈判的焦点。</p>
+<p><button class="play-button sentence" id="s-00-03-40-079" data-start="00:03:40,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> General Mohr says U.S. tariffs cost the auto-giant 1.1 billion U.S. dollars last quarter, cutting profits by more than a third.</p>
+<p>莫尔将军表示，美国关税使这家汽车巨头上季度损失11亿美元，利润减少超过三分之一。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959770" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-49-120" data-start="00:03:49,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> GM warns the impact will grow in Q3 as steel and aluminum tariffs layer on.</p>
+<p>通用汽车警告称，随着钢铁和铝关税叠加，第三季度影响将加剧。</p>
+<p><button class="play-button sentence" id="s-00-03-54-840" data-start="00:03:54,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's cutting shifts in Ontario and pausing production in Mexico as it looks to boost U.S. output.</p>
+<p>该公司正在安大略省削减班次，并暂停墨西哥生产，以提高美国产量。</p>
+<p><button class="play-button sentence" id="s-00-04-00-800" data-start="00:04:00,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The news comes a day after Stellantis announced it expected a 2.7 billion U.S. dollar loss in the first six months of the year because of Trump's tariffs.</p>
+<p>此前一天，Stellantis宣布由于特朗普的关税，预计今年上半年损失27亿美元。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959748" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-11-039" data-start="00:04:11,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump is trying to keep the focus on trade deals, but the Epstein files controversy just won't go away.</p>
+<p>特朗普总统试图将焦点保持在贸易协议上，但爱泼斯坦文件的争议挥之不去。</p>
+<p><button class="play-button sentence" id="s-00-04-17-040" data-start="00:04:17,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Department of Justice now says it's seeking testimony from Epstein's former associate, Galein Maxwell, who's serving a 20-year prison sentence for sex trafficking crimes.</p>
+<p>司法部表示正寻求爱泼斯坦前助手吉兰·麦克斯韦的证词，她因性交易罪正在服20年刑期。</p>
+<p><button class="play-button sentence" id="s-00-04-26-399" data-start="00:04:26,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Calls are growing louder from Trump's mega-base to get all of the information released.</p>
+<p>特朗普核心支持者要求公布所有信息的呼声越来越高。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959728" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-31-600" data-start="00:04:31,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as Jackson Proskko explains, those efforts are running into a congressional roadblock.</p>
+<p>但据杰克逊·普罗斯科解释，这些努力正遭遇国会阻碍。</p>
+<p><button class="play-button sentence" id="s-00-04-36-519" data-start="00:04:36,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much, everybody.</p>
+<p>非常感谢大家。</p>
+<p><button class="play-button sentence" id="s-00-04-37-720" data-start="00:04:37,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Donald Trump just can't escape the questions about sex offender Jeffrey Epstein, his one-time friend.</p>
+<p>特朗普总统无法回避关于性犯罪者杰弗里·爱泼斯坦的问题，他曾是特朗普的朋友。</p>
+<p><button class="play-button sentence" id="s-00-04-44-279" data-start="00:04:44,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After the Justice Department said it would meet with Galein Maxwell, who was convicted of working with Epstein to traffic underage girls.</p>
+<p>司法部表示将与吉兰·麦克斯韦会面，她因与爱泼斯坦合作贩卖未成年女孩被判有罪。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959708" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-51-959" data-start="00:04:51,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't really follow that too much.</p>
+<p>我不太关注这件事。</p>
+<p><button class="play-button sentence" id="s-00-04-53-639" data-start="00:04:53,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's sort of a witch hunt, just a continuation of the witch hunt.</p>
+<p>这有点像政治迫害，是政治迫害的延续。</p>
+<p><button class="play-button sentence" id="s-00-04-58-639" data-start="00:04:58,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maxwell is currently serving a 20-year prison sentence.</p>
+<p>麦克斯韦目前正在服20年刑期。</p>
+<p><button class="play-button sentence" id="s-00-05-02-399" data-start="00:05:02,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her lawyer confirmed the talks, saying, we are grateful to President Trump for his commitment to uncovering the truth in this case.</p>
+<p>她的律师确认了会谈，并表示感谢特朗普总统致力于揭露此案真相。</p>
+<p><button class="play-button sentence" id="s-00-05-10-160" data-start="00:05:10,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But at the White House, Trump tried to change the subject.</p>
+<p>但在白宫，特朗普试图转移话题。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959686" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-13-279" data-start="00:05:13,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The witch hunt that you should be talking about is they could President Obama absolutely cold.</p>
+<p>你们应该谈论的政治迫害是他们彻底冷落了奥巴马总统。</p>
+<p><button class="play-button sentence" id="s-00-05-18-600" data-start="00:05:18,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Asked about Epstein, the president instead lobbed new conspiracy theories about the 2016 investigation into Russian election interference.</p>
+<p>当被问及爱泼斯坦时，总统反而抛出关于2016年俄罗斯选举干预调查的新阴谋论。</p>
+<p><button class="play-button sentence" id="s-00-05-27-600" data-start="00:05:27,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's time to go after people.</p>
+<p>是时候追究某些人的责任了。</p>
+<p><button class="play-button sentence" id="s-00-05-29-480" data-start="00:05:29,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obama's been caught directly.</p>
+<p>奥巴马被直接抓住了把柄。</p>
+<p><button class="play-button sentence" id="s-00-05-32-120" data-start="00:05:32,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Capitol Hill, Republicans are looking to change the channel, too.</p>
+<p>在国会山，共和党人也试图转移话题。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959664" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-35-959" data-start="00:05:35,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have nothing else to talk about.</p>
+<p>他们无话可说。</p>
+<p><button class="play-button sentence" id="s-00-05-37-399" data-start="00:05:37,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Speaker Mike Johnson, a Trump loyalist, abruptly shut down the House of Representatives until September to block votes on release of the Epstein files.</p>
+<p>特朗普的忠实支持者、众议院议长迈克·约翰逊突然宣布众议院休会至9月，以阻止关于公布爱泼斯坦文件的投票。</p>
+<p><button class="play-button sentence" id="s-00-05-47-038" data-start="00:05:47,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We protect the innocent.</p>
+<p>我们保护无辜者。</p>
+<p><button class="play-button sentence" id="s-00-05-48-000" data-start="00:05:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we cannot be careless in an open release like that you have to be very careful.</p>
+<p>因此我们不能轻率地公开此类文件，必须非常谨慎。</p>
+<p><button class="play-button sentence" id="s-00-05-53-959" data-start="00:05:53,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even members of Trump's own party are pushing back.</p>
+<p>甚至特朗普所在政党的成员也在反对。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959642" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-57-158" data-start="00:05:57,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Republicans on the House Oversight Committee voted to subpoena Maxwell.</p>
+<p>众议院监督委员会的共和党人投票决定传唤麦克斯韦。</p>
+<p><button class="play-button sentence" id="s-00-06-01-519" data-start="00:06:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Others demanded the release of the much-hyped Epstein files, which the administration now claims don't exist.</p>
+<p>其他人要求公布备受炒作的爱泼斯坦文件，而政府现在声称这些文件不存在。</p>
+<p><button class="play-button sentence" id="s-00-06-08-519" data-start="00:06:08,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president's staff administration, his own children, his vice president have promised that these files would come out.</p>
+<p>总统的幕僚、他的子女和副总统都承诺过这些文件会公布。</p>
+<p><button class="play-button sentence" id="s-00-06-16-079" data-start="00:06:16,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now we're being told it's a hoax.</p>
+<p>而现在我们被告知这是个骗局。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959622" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-17-639" data-start="00:06:17,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It just doesn't wash.</p>
+<p>这根本说不通。</p>
+<p><button class="play-button sentence" id="s-00-06-19-278" data-start="00:06:19,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maxwell has good reason to cooperate with Trump's justice department.</p>
+<p>麦克斯韦有充分理由与特朗普的司法部合作。</p>
+<p><button class="play-button sentence" id="s-00-06-23-399" data-start="00:06:23,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She has already appealed to the US Supreme Court, seeking to scrap her conviction.</p>
+<p>她已经向美国最高法院上诉，试图推翻定罪。</p>
+<p><button class="play-button sentence" id="s-00-06-28-000" data-start="00:06:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now she could potentially seek a presidential pardon or a reduced sentence in exchange for her testimony.</p>
+<p>现在她可能寻求总统特赦或减刑以换取证词。</p>
+<p><button class="play-button sentence" id="s-00-06-35-079" data-start="00:06:35,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Carolyn?</p>
+<p>卡罗琳？</p>
+<p><button class="play-button sentence" id="s-00-06-36-399" data-start="00:06:36,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jackson Prasco in Washington, thanks.</p>
+<p>华盛顿的杰克逊·普拉斯科报道，谢谢。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959600" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-39-040" data-start="00:06:39,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents in a Halifax neighborhood say their shock that a rising star in the mega movement is set to perform at a nearby park's Canada site.</p>
+<p>哈利法克斯社区居民对“MAGA运动”新星将在附近加拿大公园表演表示震惊。</p>
+<p><button class="play-button sentence" id="s-00-06-46-680" data-start="00:06:46,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Christian Rocker-Shan Foyt is kicking off as Canadian tour tomorrow and as Mitchell Bailey reports, some people are pushing for it to be unplugged before it even starts.</p>
+<p>基督教摇滚歌手尚·福伊特明天将开启加拿大巡演，但据米切尔·贝利报道，一些人正试图在演出开始前取消它。</p>
+<p><button class="play-button sentence" id="s-00-06-56-639" data-start="00:06:56,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the glory of the Lord arises on you.</p>
+<p>主的荣耀降临于你。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959579" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-00-120" data-start="00:07:00,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canada.</p>
+<p>加拿大。</p>
+<p><button class="play-button sentence" id="s-00-07-01-240" data-start="00:07:01,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Christian Rocker and Missionary Sean Foyt is scheduled to begin his Canadian tour here at the York Redoubt, a national historic site on Wednesday night.</p>
+<p>基督教摇滚歌手兼传教士尚·福伊特计划周三晚上在约克堡国家历史遗址开始加拿大巡演。</p>
+<p><button class="play-button sentence" id="s-00-07-10-240" data-start="00:07:10,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Todd Smith and his family live across the street, saying they left the US to get away from the mega movement after President Donald Trump was reelected.</p>
+<p>托德·史密斯和家人住在街对面，他们表示在特朗普总统连任后离开美国以避开“MAGA运动”。</p>
+<p><button class="play-button sentence" id="s-00-07-19-120" data-start="00:07:19,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But now it's followed Smith right to his doorstep.</p>
+<p>但现在它跟随史密斯来到了他家门口。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959557" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-22-158" data-start="00:07:22,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can't explain the level of frustration and I guess anger that I have that we've moved all the way up here to get rid of it.</p>
+<p>我无法解释我的沮丧和愤怒程度，我们大老远搬到这里就为摆脱它。</p>
+<p><button class="play-button sentence" id="s-00-07-29-360" data-start="00:07:29,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's really literally slapping us in the face across the street.</p>
+<p>而现在它真的就在街对面打我们的脸。</p>
+<p><button class="play-button sentence" id="s-00-07-32-278" data-start="00:07:32,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With recent sovereignty taunts from the US president, many are taking issue with an advocate for Trump performing at a historic Canadian site.</p>
+<p>随着最近美国总统对主权的嘲讽，许多人反对特朗普支持者在加拿大历史遗址表演。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959539" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-40-358" data-start="00:07:40,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What could revival look like in our day?</p>
+<p>我们这个时代的复兴会是什么样子？</p>
+<p><button class="play-button sentence" id="s-00-07-43-000" data-start="00:07:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Foyt is a rising star in the mega movement, known for speaking out against abortion rights and LGBTQ2 plus causes.</p>
+<p>福伊特是“MAGA运动”的新星，以公开反对堕胎权和LGBTQ2+事业闻名。</p>
+<p><button class="play-button sentence" id="s-00-07-50-838" data-start="00:07:50,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I kind of see Canada as a place that is opening to everybody.</p>
+<p>我认为加拿大是一个向所有人开放的地方。</p>
+<p><button class="play-button sentence" id="s-00-07-55-358" data-start="00:07:55,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what's happening across the street is not opening to everybody.</p>
+<p>而街对面发生的事情并非对所有人开放。</p>
+<p><button class="play-button sentence" id="s-00-07-59-800" data-start="00:07:59,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents in the surrounding neighborhood want the show canceled, saying a protest will be held outside the concert if it goes ahead.</p>
+<p>周边社区居民希望取消演出，表示如果演出继续将在场外抗议。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959513" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-06-680" data-start="00:08:06,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I protested when I was in my early 20s.</p>
+<p>我二十出头时抗议过。</p>
+<p><button class="play-button sentence" id="s-00-08-10-519" data-start="00:08:10,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can protest again.</p>
+<p>我可以再次抗议。</p>
+<p><button class="play-button sentence" id="s-00-08-12-319" data-start="00:08:12,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 230 year old site is operated by Parks Canada and isn't known for musical events.</p>
+<p>这座230年历史的遗址由加拿大公园管理局管理，不以音乐活动闻名。</p>
+<p><button class="play-button sentence" id="s-00-08-18-360" data-start="00:08:18,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Global news reached out to Parks Canada to ask why the concert is being held there, but didn't hear back by deadline.</p>
+<p>环球新闻联系加拿大公园管理局询问为何在此举办音乐会，但截至发稿未获回复。</p>
+<p><button class="play-button sentence" id="s-00-08-24-600" data-start="00:08:24,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When I first heard about it, I was pretty ticked off.</p>
+<p>我第一次听说时非常生气。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959491" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-28-040" data-start="00:08:28,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a national historic site.</p>
+<p>这是国家历史遗址。</p>
+<p><button class="play-button sentence" id="s-00-08-31-680" data-start="00:08:31,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's funded by the taxpayer.</p>
+<p>由纳税人资助。</p>
+<p><button class="play-button sentence" id="s-00-08-34-360" data-start="00:08:34,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People living in the area say they can't remember a concert ever taking place at York Redo.</p>
+<p>当地居民表示不记得约克堡曾举办过音乐会。</p>
+<p><button class="play-button sentence" id="s-00-08-39-360" data-start="00:08:39,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did it happen?</p>
+<p>这是怎么发生的？</p>
+<p><button class="play-button sentence" id="s-00-08-40-278" data-start="00:08:40,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who approved it?</p>
+<p>谁批准的？</p>
+<p><button class="play-button sentence" id="s-00-08-41-120" data-start="00:08:41,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Did they even check it out?</p>
+<p>他们调查过吗？</p>
+<p><button class="play-button sentence" id="s-00-08-42-799" data-start="00:08:42,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's kind of unbelievable how they can let someone just not even question it.</p>
+<p>他们竟然不加质疑就允许，这有点难以置信。</p>
+<p><button class="play-button sentence" id="s-00-08-49-840" data-start="00:08:49,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Halifax show is the start of an 11 concert tour across Canada, with performances in Charlottetown, Monkden and Quebec City scheduled for later this week.</p>
+<p>哈利法克斯演出是11场加拿大巡演的开始，本周晚些时候将在夏洛特敦、蒙克顿和魁北克城演出。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959460" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-59-399" data-start="00:08:59,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mitchell Bailey Global News, Halifax.</p>
+<p>米切尔·贝利，环球新闻，哈利法克斯报道。</p>
+<p><button class="play-button sentence" id="s-00-09-02-438" data-start="00:09:02,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United States has its pulling out of the UN's educational, scientific, and cultural agency again just two years after rejoining under President Biden.</p>
+<p>美国在拜登总统领导下重新加入联合国教科文组织仅两年后再次退出。</p>
+<p><button class="play-button sentence" id="s-00-09-11-798" data-start="00:09:11,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Trump administration says UNESCO no longer serves US interests, accusing it of promoting anti-Israel rhetoric and divisive social agendas.</p>
+<p>特朗普政府表示教科文组织不再符合美国利益，指责其宣扬反以色列言论和分裂性社会议程。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959439" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-20-759" data-start="00:09:20,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A State Department spokesperson cited Palestine's 2011 admission into UNESCO as a key issue, echoing the same reasons used in past US withdrawals in 1984 and 2017.</p>
+<p>国务院发言人将巴勒斯坦2011年加入教科文组织列为主要问题，这与1984年和2017年美国退出的理由相同。</p>
+<p><button class="play-button sentence" id="s-00-09-32-799" data-start="00:09:32,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> UNESCO's chief called the move regrettable, but expected the US will exit in December 2026.</p>
+<p>教科文组织总干事称此举令人遗憾，但预计美国将于2026年12月退出。</p>
+<p><button class="play-button sentence" id="s-00-09-40-799" data-start="00:09:40,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> UN Secretary General Antonio Gutera says starvation in Gaza is now knocking on every door and contributing to what he called a horror show.</p>
+<p>联合国秘书长古特雷斯表示加沙的饥饿正在敲响每户门，造成他所谓的“恐怖景象”。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959409" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-50-639" data-start="00:09:50,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the past 48 hours alone, the Hamas Front Health Ministry says at least 33 people have died from malnutrition.</p>
+<p>仅过去48小时，哈马斯卫生部称至少33人死于营养不良。</p>
+<p><button class="play-button sentence" id="s-00-09-56-798" data-start="00:09:56,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel claims there is no starvation and has rejected criticism of the aid distribution methods being used.</p>
+<p>以色列声称不存在饥饿，并驳斥对其援助分发方式的批评。</p>
+<p><button class="play-button sentence" id="s-00-10-03-240" data-start="00:10:03,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as Vincent McEvaney reports, the disturbing images coming from inside Gaza tell a different story.</p>
+<p>但据文森特·麦克埃文尼报道，来自加沙的令人不安的画面讲述着不同的故事。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959389" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-10-639" data-start="00:10:10,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While much of Gaza has been turned to rubble over 21 months, Darrell Bala was left relatively intact.</p>
+<p>虽然加沙大部分地区在21个月中沦为废墟，但达雷尔巴拉相对完好。</p>
+<p><button class="play-button sentence" id="s-00-10-17-918" data-start="00:10:17,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Host to many NGOs, headquarters, and warehouses, it's been spared a ground incursion from the IDF until now.</p>
+<p>这里设有许多非政府组织总部和仓库，至今未遭以色列国防军地面入侵。</p>
+<p><button class="play-button sentence" id="s-00-10-26-120" data-start="00:10:26,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pact with already displaced Palestinians ordered to evacuate once again.</p>
+<p>已流离失所的巴勒斯坦人再次被命令撤离。</p>
+<p><button class="play-button sentence" id="s-00-10-30-759" data-start="00:10:30,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's nowhere to go and few have the energy to travel far.</p>
+<p>无处可去，且几乎无人有力气长途跋涉。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959364" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-35-039" data-start="00:10:35,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't get any morsels of food, it's nonexistent.</p>
+<p>我们得不到任何食物，它根本不存在。</p>
+<p><button class="play-button sentence" id="s-00-10-39-200" data-start="00:10:39,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We spend our days, our time just drinking water, there is nothing.</p>
+<p>我们整日靠喝水度日，一无所有。</p>
+<p><button class="play-button sentence" id="s-00-10-44-639" data-start="00:10:44,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People started losing the ability to walk, losing the ability to move.</p>
+<p>人们开始丧失行走和移动的能力。</p>
+<p><button class="play-button sentence" id="s-00-10-48-600" data-start="00:10:48,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their movement is abnormal because of malnutrition and there is no essential items for food.</p>
+<p>由于营养不良和缺乏基本食物，他们的行动变得异常。</p>
+<p><button class="play-button sentence" id="s-00-10-54-240" data-start="00:10:54,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Starvation is now stalking Gaza.</p>
+<p>饥饿正在加沙蔓延。</p>
+<p><button class="play-button sentence" id="s-00-10-56-879" data-start="00:10:56,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's remaining hospitals increasingly treating patients like 14-year-old Masab.</p>
+<p>仅存的医院越来越多地收治像14岁的马萨布这样的病人。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959337" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-02-120" data-start="00:11:02,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Severely emaciated, his weight has dropped from 40 kilograms to less than 10, which is about 22 pounds.</p>
+<p>他严重消瘦，体重从40公斤降至不到10公斤（约22磅）。</p>
+<p><button class="play-button sentence" id="s-00-11-10-080" data-start="00:11:10,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They try to feed him as he drifts in and out of consciousness.</p>
+<p>他们试图在他意识模糊时喂食。</p>
+<p><button class="play-button sentence" id="s-00-11-14-919" data-start="00:11:14,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yesterday we gave him a bowl of soup, the only thing available.</p>
+<p>昨天我们给了他一碗汤，这是唯一能找到的食物。</p>
+<p><button class="play-button sentence" id="s-00-11-18-720" data-start="00:11:18,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today we can't even get any soup.</p>
+<p>今天我们连汤都找不到了。</p>
+<p><button class="play-button sentence" id="s-00-11-20-759" data-start="00:11:20,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nothing is available in the market.</p>
+<p>市场上什么都没有。</p>
+<p><button class="play-button sentence" id="s-00-11-23-240" data-start="00:11:23,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now aid agencies warn that those trying to help are themselves falling victim to the scarcity.</p>
+<p>援助机构警告，试图提供帮助的人自己也成为物资匮乏的受害者。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959309" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-30-519" data-start="00:11:30,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most patients admitted to the hospital recently are not suffering from war injuries, but from severe malnutrition.</p>
+<p>最近入院的大多数患者并非因战争受伤，而是严重营养不良。</p>
+<p><button class="play-button sentence" id="s-00-11-36-840" data-start="00:11:36,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even some of our medical workers have fainted from lack of food.</p>
+<p>甚至一些医护人员因食物短缺而昏倒。</p>
+<p><button class="play-button sentence" id="s-00-11-40-399" data-start="00:11:40,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The situation is grave, but it's not new.</p>
+<p>情况严峻，但并非新问题。</p>
+<p><button class="play-button sentence" id="s-00-11-43-120" data-start="00:11:43,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just the quantity is rising rapidly lately.</p>
+<p>只是最近数量在迅速增加。</p>
+<p><button class="play-button sentence" id="s-00-11-46-318" data-start="00:11:46,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN World Health Organization is reporting some male staff in their Darrell Balla compound were separated from their families, stripped and interrogated at gunpoint by the IDF.</p>
+<p>联合国世界卫生组织报告称，其达雷尔巴拉营地的男性工作人员被以军持枪与家人分离、脱衣审问。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959282" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-57-278" data-start="00:11:57,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their wives and children forced to leave them to join the thousands once again seeking safety on increasingly weary feet in Gaza.</p>
+<p>他们的妻儿被迫离开，再次加入加沙成千上万疲惫不堪的避难人群。</p>
+<p><button class="play-button sentence" id="s-00-12-06-000" data-start="00:12:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fintamack of any global news, London.</p>
+<p>全球新闻，伦敦报道。</p>
+<p><button class="play-button sentence" id="s-00-12-09-519" data-start="00:12:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities in the U.S. have released preliminary autopsy results for a nine-year-old Montreal girl killed in New York State over the weekend.</p>
+<p>美国当局公布了上周末在纽约州遇害的9岁蒙特利尔女孩的初步尸检结果。</p>
+<p><button class="play-button sentence" id="s-00-12-17-159" data-start="00:12:17,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The report says Malina Fratelin died from asphyxia due to drowning and that she was murdered.</p>
+<p>报告称玛琳娜·弗雷特林因溺水窒息死亡，系他杀。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959257" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-22-840" data-start="00:12:22,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her 45-year-old father, Luciano Fratelin, has been arrested and charged with second-degree murder and concealment of a corpse.</p>
+<p>她45岁的父亲卢西亚诺·弗雷特林被捕，被控二级谋杀和藏尸罪。</p>
+<p><button class="play-button sentence" id="s-00-12-29-639" data-start="00:12:29,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has pleaded not guilty.</p>
+<p>他拒不认罪。</p>
+<p><button class="play-button sentence" id="s-00-12-31-679" data-start="00:12:31,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pair had been vacationing in the U.S. since July 11th.</p>
+<p>父女俩自7月11日起在美国度假。</p>
+<p><button class="play-button sentence" id="s-00-12-34-879" data-start="00:12:34,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police are seeking eyewitness accounts of the vehicle the pair traveled in, releasing several photos of the 2024 gray Toyota Prius.</p>
+<p>警方公布2024款灰色丰田普锐斯照片，寻找目击者。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959236" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-43-399" data-start="00:12:43,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His show has been canceled, but he's not leaving quietly.</p>
+<p>他的节目被取消，但他不会默默离开。</p>
+<p><button class="play-button sentence" id="s-00-12-46-639" data-start="00:12:46,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Coming up, Stephen Colbert's message to Trump.</p>
+<p>接下来是斯蒂芬·科尔伯特对特朗普的回应。</p>
+<p><button class="play-button sentence" id="s-00-12-54-879" data-start="00:12:54,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stephen Colbert returned to the airwaves last night for the first time since CBS announced it was cancelling the late show.</p>
+<p>自CBS宣布取消《深夜秀》后，斯蒂芬·科尔伯特昨晚首次重返荧屏。</p>
+<p><button class="play-button sentence" id="s-00-13-02-399" data-start="00:13:02,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The shocking move was made only three days after Colbert slammed CBS's parent company, Paramount Pictures, for agreeing to pay President Trump $60 million in a lawsuit settlement.</p>
+<p>这一惊人决定发生在科尔伯特抨击CBS母公司派拉蒙影业同意向特朗普支付6000万美元诉讼和解金仅三天后。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959206" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-13-678" data-start="00:13:13,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Eric Sorenson reports, while the U.S. made champion freedom of speech, Colbert's cancellation is part of a troubling trend of Trump's critics being silenced.</p>
+<p>埃里克·索伦森报道，尽管美国标榜言论自由，但科尔伯特停播是特朗普批评者遭噤声这一趋势的一部分。</p>
+<p><button class="play-button sentence" id="s-00-13-25-200" data-start="00:13:25,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With his show canceled next spring, Stephen Colbert says the gloves are coming off towards President Trump.</p>
+<p>节目将于明年春季停播，科尔伯特表示将对特朗普"摘下手套"。</p>
+<p><button class="play-button sentence" id="s-00-13-31-360" data-start="00:13:31,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't care for him.</p>
+<p>我不喜欢他。</p>
+<p><button class="play-button sentence" id="s-00-13-33-879" data-start="00:13:33,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Laughter for that, but then stronger language.</p>
+<p>观众大笑后，他用了更激烈的言辞。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959183" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-36-678" data-start="00:13:36,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Go f**k yourself.</p>
+<p>去你妈的。</p>
+<p><button class="play-button sentence" id="s-00-13-38-678" data-start="00:13:38,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That got a roar from his audience.</p>
+<p>引发观众欢呼。</p>
+<p><button class="play-button sentence" id="s-00-13-42-198" data-start="00:13:42,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Among those who dropped by in solidarity, Tock Show rivals Jimmy Fallon and Seth Meyers, plus John Oliver and John Stewart.</p>
+<p>前来声援的包括竞争对手吉米·法伦、塞斯·迈耶斯，以及约翰·奥利弗和约翰·斯图尔特。</p>
+<p><button class="play-button sentence" id="s-00-13-49-879" data-start="00:13:49,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On his own show, Stewart questioned whether the cancellation was for purely financial reasons.</p>
+<p>斯图尔特在自己的节目中质疑停播是否仅因财务原因。</p>
+<p><button class="play-button sentence" id="s-00-13-54-678" data-start="00:13:54,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was this purely financial?</p>
+<p>这纯粹是财务问题吗？</p>
+<p><button class="play-button sentence" id="s-00-13-57-639" data-start="00:13:57,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stewart says liberal institutions are under assault in some cases caving in.</p>
+<p>斯图尔特称自由派机构正遭攻击，有些已屈服。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959157" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-02-198" data-start="00:14:02,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He noted Columbia University changed policies under pressure from Trump.</p>
+<p>他指出哥伦比亚大学在特朗普压力下修改政策。</p>
+<p><button class="play-button sentence" id="s-00-14-06-678" data-start="00:14:06,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Public broadcasting saw funding slashed by Congress also to please Trump.</p>
+<p>公共广播资金被国会削减以讨好特朗普。</p>
+<p><button class="play-button sentence" id="s-00-14-11-360" data-start="00:14:11,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Disney, the parent company of ABC and Paramount, the parent of CBS, have settled lawsuits filed by Trump.</p>
+<p>ABC母公司迪士尼和CBS母公司派拉蒙已和解特朗普提起的诉讼。</p>
+<p><button class="play-button sentence" id="s-00-14-17-639" data-start="00:14:17,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump believes he has immunity, as long as he remains a petty tyrant, demanding only liberal institutions surrender to his whims.</p>
+<p>特朗普认为只要继续当小暴君，要求自由派机构屈服于他的意志，他就拥有豁免权。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959132" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-27-158" data-start="00:14:27,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump, who is under intense scrutiny for his relationship with sex offender Jeffrey Epstein after a story in the Wall Street Journal, has kicked the journal off an upcoming press pool.</p>
+<p>因《华尔街日报》报道其与性犯罪者爱泼斯坦的关系而受审查的特朗普，将该报踢出即将举行的记者团。</p>
+<p><button class="play-button sentence" id="s-00-14-36-678" data-start="00:14:36,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He posted today the Wall Street Journal and all other mainstream media liars are on notice.</p>
+<p>他今天发文警告《华尔街日报》及其他主流媒体骗子。</p>
+<p><button class="play-button sentence" id="s-00-14-42-438" data-start="00:14:42,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canadian American political commentator David Frum wrote recently, the information landscape is being reshaped and Trump is abusing the powers of the state to hasten the reshaping in ways favorable to him.</p>
+<p>美加政治评论员戴维·弗拉姆近日写道，信息格局正在重塑，特朗普滥用国家权力加速对其有利的重塑。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959106" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-53-960" data-start="00:14:53,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back on Colbert, Canadian actress Sandra O. Wade in.</p>
+<p>回到科尔伯特节目，加拿大演员桑德拉·O亮相。</p>
+<p><button class="play-button sentence" id="s-00-14-57-200" data-start="00:14:57,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am so sorry and saddened and properly outraged for the cancellation, for what it means, of what it is where we are in our culture and what that means for free speech.</p>
+<p>我对停播及其文化意义和言论自由影响感到悲痛愤怒。</p>
+<p><button class="play-button sentence" id="s-00-15-09-320" data-start="00:15:09,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump, let's go! Colbert, stay!</p>
+<p>特朗普下台！科尔伯特留下！</p>
+<p><button class="play-button sentence" id="s-00-15-12-440" data-start="00:15:12,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is resistance among protesters outside Colbert's theater.</p>
+<p>科尔伯特剧院外的抗议者表示反抗。</p>
+<p><button class="play-button sentence" id="s-00-15-16-159" data-start="00:15:16,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To stand up and refuse to accept the censorship of voices of dissent.</p>
+<p>站起来拒绝接受异议声音的审查。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959078" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-21-480" data-start="00:15:21,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's got a year and hopefully he'll burn Trump to the ground by then.</p>
+<p>他还有一年时间，希望届时能彻底击败特朗普。</p>
+<p><button class="play-button sentence" id="s-00-15-26-320" data-start="00:15:26,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert hints he's not done yet.</p>
+<p>科尔伯特暗示自己尚未罢休。</p>
+<p><button class="play-button sentence" id="s-00-15-28-600" data-start="00:15:28,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They made one mistake.</p>
+<p>他们犯了一个错误。</p>
+<p><button class="play-button sentence" id="s-00-15-30-879" data-start="00:15:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They left me alive.</p>
+<p>他们让我活着。</p>
+<p><button class="play-button sentence" id="s-00-15-33-158" data-start="00:15:33,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ericsorians in global news, Toronto.</p>
+<p>全球新闻多伦多站，埃里克索伦森报道。</p>
+<p><button class="play-button sentence" id="s-00-15-38-200" data-start="00:15:38,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The issue federal politicians don't want to touch.</p>
+<p>联邦政客不愿触及的问题。</p>
+<p><button class="play-button sentence" id="s-00-15-43-438" data-start="00:15:43,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ahead, why Canada's dairy supply management system is such a sticking point in trade talks.</p>
+<p>接下来：为何加拿大乳制品供应管理体系成为贸易谈判的症结。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959045" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-54-360" data-start="00:15:54,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canada's dairy supply management system is a major sticking point for the U.S. in trade talks between our countries.</p>
+<p>加拿大乳制品供应管理体系是美加贸易谈判的主要分歧点。</p>
+<p><button class="play-button sentence" id="s-00-16-00-839" data-start="00:16:00,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a bone of contention for decades, but the Trump administration has taken special notice.</p>
+<p>这已争论数十年，但特朗普政府特别关注。</p>
+<p><button class="play-button sentence" id="s-00-16-06-639" data-start="00:16:06,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prime Minister Mark Carnie says any proposed changes are off the table, but critics, including one premier, want a second look at the system.</p>
+<p>总理马克·卡尼称不考虑任何修改提议，但包括一位省长在内的批评者要求重新审视该体系。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208959025" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-14-120" data-start="00:16:14,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tariya Isri reports.</p>
+<p>塔里亚·伊斯里报道。</p>
+<p><button class="play-button sentence" id="s-00-16-15-839" data-start="00:16:15,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dairy industry has a firm grip on federal politics.</p>
+<p>乳业牢牢掌控联邦政治。</p>
+<p><button class="play-button sentence" id="s-00-16-22-839" data-start="00:16:22,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their political influence is so great that no politician wants to fight them.</p>
+<p>其政治影响力巨大，无政客愿与之对抗。</p>
+<p><button class="play-button sentence" id="s-00-16-28-839" data-start="00:16:28,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But U.S. President Donald Trump has picked a fight.</p>
+<p>但美国总统特朗普已发起挑战。</p>
+<p><button class="play-button sentence" id="s-00-16-32-479" data-start="00:16:32,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canada has been ripping us off for years on tariffs for lumber and for dairy products.</p>
+<p>加拿大多年来在木材和乳制品关税上剥削我们。</p>
+<p><button class="play-button sentence" id="s-00-16-38-479" data-start="00:16:38,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So here's an example of being right twice a day as a broken clock.</p>
+<p>就像坏掉的钟每天也能准两次。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958996" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-43-359" data-start="00:16:43,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump has repeatedly singled out Canada's dairy supply management system, a system that controls how much milk, cheese, and poultry products are produced, sets prices for consumers and places high tariffs on imports.</p>
+<p>特朗普多次点名加拿大乳制品供应管理体系——该系统控制牛奶、奶酪和禽类产量，设定消费价格并对进口征收高关税。</p>
+<p><button class="play-button sentence" id="s-00-16-58-158" data-start="00:16:58,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The supporters say it stops the U.S. from dumping dairy into Canada.</p>
+<p>支持者称其阻止美国向加倾销乳制品。</p>
+<p><button class="play-button sentence" id="s-00-17-02-600" data-start="00:17:02,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Americans, they overproduce milk.</p>
+<p>美国牛奶生产过剩。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-05-000" data-start="00:17:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's in part because the U.S. federal government offers subsidies to their milk producers.</p>
+<p>部分原因是美国联邦政府补贴奶农。</p>
+<p><button class="play-button sentence" id="s-00-17-10-680" data-start="00:17:10,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To opponents, it comes at a cost.</p>
+<p>反对者认为这有代价。</p>
+<p><button class="play-button sentence" id="s-00-17-13-480" data-start="00:17:13,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The conservative leaning Frazier Institute says Canadian families are paying an extra $450 dollars a year for dairy.</p>
+<p>保守派弗雷泽研究所称加家庭每年多花450加元购买乳制品。</p>
+<p><button class="play-button sentence" id="s-00-17-21-240" data-start="00:17:21,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You only have about 10,000 farmers really benefiting from these policies, but you know, you have millions upon millions of Canadians paying higher prices as a result.</p>
+<p>仅约1万农民受益于此政策，但数百万加拿大人因此支付更高价格。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958950" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-29-880" data-start="00:17:29,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Australia had a similar policy, but ditched it almost three decades ago.</p>
+<p>澳大利亚曾有类似政策，但近三十年前已废除。</p>
+<p><button class="play-button sentence" id="s-00-17-34-920" data-start="00:17:34,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Albertus premier signaled last week.</p>
+<p>阿尔伯塔省长上周表态。</p>
+<p><button class="play-button sentence" id="s-00-17-38-038" data-start="00:17:38,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's open to doing the same.</p>
+<p>她持开放态度。</p>
+<p><button class="play-button sentence" id="s-00-17-40-038" data-start="00:17:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe as a pathway to a market system, or maybe just because it would stick our finger in the eye of Quebec.</p>
+<p>或许作为市场体系的过渡，或只为挑衅魁北克。</p>
+<p><button class="play-button sentence" id="s-00-17-45-880" data-start="00:17:45,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For us in Quebec, there's no question about negotiating the supply management.</p>
+<p>魁北克方面表示供应管理不容谈判。</p>
+<p><button class="play-button sentence" id="s-00-17-54-079" data-start="00:17:54,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dairy farmers of Canada declined global news request for an interview.</p>
+<p>加拿大奶农协会拒绝全球新闻采访请求。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-58-720" data-start="00:17:58,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we move to Italy, we do Parmigiano or Dijana.</p>
+<p>若搬去意大利，我们会做帕尔马干酪或迪亚娜奶酪。</p>
+<p><button class="play-button sentence" id="s-00-18-01-159" data-start="00:18:01,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Delpharo distributes cheese to retailers across Canada.</p>
+<p>乔·德尔法罗向加全国零售商分销奶酪。</p>
+<p><button class="play-button sentence" id="s-00-18-05-598" data-start="00:18:05,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He supports supply management, but wants it tweaked.</p>
+<p>他支持供应管理但希望调整。</p>
+<p><button class="play-button sentence" id="s-00-18-09-118" data-start="00:18:09,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It'll give Canadians a greater variety of products at a much more competitive price.</p>
+<p>以更具竞争力的价格提供更多样产品。</p>
+<p><button class="play-button sentence" id="s-00-18-13-480" data-start="00:18:13,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A renewed debate with trade talks approaching their expiration date.</p>
+<p>贸易谈判到期前再掀争论。</p>
+<p><button class="play-button sentence" id="s-00-18-18-439" data-start="00:18:18,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Terria is Reglobal News, Montreal.</p>
+<p>全球新闻蒙特利尔站，泰瑞亚报道。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958897" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-22-759" data-start="00:18:22,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Canadian Food Inspection Agency is expanding a cheese recall because of possible hysteria contamination.</p>
+<p>加拿大食品检验局因可能受李斯特菌污染扩大奶酪召回范围。</p>
+<p><button class="play-button sentence" id="s-00-18-29-598" data-start="00:18:29,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mount Beacher Buffalo Medium Cheese from Natural Pastros Cheese Company is affected.</p>
+<p>Natural Pastros公司的Mount Beacher水牛中脂奶酪受影响。</p>
+<p><button class="play-button sentence" id="s-00-18-35-558" data-start="00:18:35,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People are being warned not to eat various sizes, sold in BC, with a batch number 854179.</p>
+<p>警告民众勿食用BC省销售、批号854179的各规格产品。</p>
+<p><button class="play-button sentence" id="s-00-18-42-278" data-start="00:18:42,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A recall issued in late June included that same cheese, sold in Ontario, with a batch number 854263.</p>
+<p>6月底召回的同款奶酪在安大略省销售，批号854263。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958870" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-49-078" data-start="00:18:49,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So far, no illnesses have been reported.</p>
+<p>目前无病例报告。</p>
+<p><button class="play-button sentence" id="s-00-18-56-680" data-start="00:18:56,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was a trailblazer of heavy metal music.</p>
+<p>他是重金属音乐先驱。</p>
+<p><button class="play-button sentence" id="s-00-19-02-640" data-start="00:19:02,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next, we look back at Aussie Osborne's legendary career.</p>
+<p>接下来回顾奥兹·奥斯本的传奇生涯。</p>
+<p><button class="play-button sentence" id="s-00-19-14-480" data-start="00:19:14,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the most iconic rock stars of all time, Aussie Osborne has died.</p>
+<p>史上最具标志性的摇滚明星之一奥兹·奥斯本去世。</p>
+<p><button class="play-button sentence" id="s-00-19-19-200" data-start="00:19:19,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The lead singer of heavy metal band Black Sabbath passed away this morning at the age of 76, only three weeks after performing a farewell concert.</p>
+<p>这位黑色安息日主唱今晨离世，享年76岁，距告别演唱会仅三周。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958832" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-27-480" data-start="00:19:27,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Redmond Shannon reports, Osborne revolutionized a British rock music and had a loyal following, which endured for decades.</p>
+<p>雷德蒙·香农报道，奥斯本革新英国摇滚乐，拥有持续数十年的忠实粉丝。</p>
+<p><button class="play-button sentence" id="s-00-19-35-519" data-start="00:19:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is where my world met.</p>
+<p>这是我世界的起点。</p>
+<p><button class="play-button sentence" id="s-00-19-38-880" data-start="00:19:38,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The boy who would become the Prince of Darkness was born John Michael Osborne in 1948.</p>
+<p>1948年，后来成为"黑暗王子"的男孩约翰·迈克尔·奥斯本出生。</p>
+<p><button class="play-button sentence" id="s-00-19-45-839" data-start="00:19:45,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were four guys from local guys from Astorning, Birmingham.</p>
+<p>我们只是伯明翰阿斯顿的四个本地小伙。</p>
+<p><button class="play-button sentence" id="s-00-19-49-558" data-start="00:19:49,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had a girl and we got successful.</p>
+<p>我们有个女孩（指音乐风格），然后成功了。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958808" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-51-200" data-start="00:19:51,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's something you can't buy.</p>
+<p>这是金钱买不到的。</p>
+<p><button class="play-button sentence" id="s-00-19-54-000" data-start="00:19:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aussie, who had been a petty criminal and the three other members of Black Sabbath essentially invented a genre of music, heavy metal.</p>
+<p>曾是小混混的奥兹与黑色安息日其他三位成员共同开创了重金属音乐。</p>
+<p><button class="play-button sentence" id="s-00-20-02-640" data-start="00:20:02,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, Lord, you know, they all had a singular vision.</p>
+<p>上帝啊，他们有着独特视野。</p>
+<p><button class="play-button sentence" id="s-00-20-06-640" data-start="00:20:06,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's bring horror.</p>
+<p>让我们带来恐怖。</p>
+<p><button class="play-button sentence" id="s-00-20-08-960" data-start="00:20:08,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's bring darkness to music.</p>
+<p>将黑暗融入音乐。</p>
+<p><button class="play-button sentence" id="s-00-20-11-118" data-start="00:20:11,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think you could have grown up in the 1970s without being a Black Sabbath or Aussie Osborne fan.</p>
+<p>1970年代成长的人不可能不是黑色安息日或奥兹粉丝。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958784" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-15-759" data-start="00:20:15,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aussie became the original example of a reckless rock star.</p>
+<p>奥兹成为放纵摇滚明星的原始范本。</p>
+<p><button class="play-button sentence" id="s-00-20-19-920" data-start="00:20:19,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His bandmates eventually throwing him out of Black Sabbath due to his drug and alcohol addictions.</p>
+<p>队友最终因他的毒瘾和酒瘾将他踢出乐队。</p>
+<p><button class="play-button sentence" id="s-00-20-27-920" data-start="00:20:27,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But his solo career soon took off and included an notorious moment when he bit the head off a live bat on stage.</p>
+<p>但他的单飞生涯很快起飞，包括舞台上咬掉活蝙蝠头的恶名时刻。</p>
+<p><button class="play-button sentence" id="s-00-20-36-319" data-start="00:20:36,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He claimed he thought it was a toy.</p>
+<p>他声称以为那是玩具。</p>
+<p><button class="play-button sentence" id="s-00-20-38-798" data-start="00:20:38,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe.</p>
+<p>也许吧。</p>
+<p><button class="play-button sentence" id="s-00-20-40-640" data-start="00:20:40,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Osborne's reality TV show was a window into his chaotic sense of humor.</p>
+<p>奥斯本的真人秀展现了他混乱的幽默感。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958753" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-46-160" data-start="00:20:46,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His wife became the catchphrase.</p>
+<p>他妻子成了流行语。</p>
+<p><button class="play-button sentence" id="s-00-20-48-720" data-start="00:20:48,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sharon! Sharon!</p>
+<p>莎伦！莎伦！</p>
+<p><button class="play-button sentence" id="s-00-20-50-523" data-start="00:20:50,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Osborne, the woman who managed his life after her father had managed his career.</p>
+<p>莎伦·奥斯本——在她父亲经营其事业后接管了他生活的女人。</p>
+<p><button class="play-button sentence" id="s-00-20-57-119" data-start="00:20:57,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Black Sabbath and Aussie inspired generations of bands that followed.</p>
+<p>黑色安息日和奥兹激励了后世数代乐队。</p>
+<p><button class="play-button sentence" id="s-00-21-04-000" data-start="00:21:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Adoration on display just 17 days before he died, a who's who of metal and rock, gathering for an ailing Aussie's farewell charity gig as he struggled with the effects of Parkinson's.</p>
+<p>离世前17天，金属与摇滚界名流齐聚病痛缠身的奥兹告别慈善演出，当时他正与帕金森症抗争。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-20-960" data-start="00:21:20,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His final performance of Mama on Coming Home as a real and almost macabre prophecy befitting a prince of darkness.</p>
+<p>他最后演唱的《妈妈，我回家了》成为契合黑暗王子身份的诡异预言。</p>
+<p><button class="play-button sentence" id="s-00-21-35-279" data-start="00:21:35,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Redmond Channel Global News London.</p>
+<p>全球新闻伦敦站，雷德蒙·香农报道。</p>
+<p><button class="play-button sentence" id="s-00-21-38-079" data-start="00:21:38,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is Global National for this Tuesday.</p>
+<p>以上就是本周二的《全球新闻》。</p>
+<p><button class="play-button sentence" id="s-00-21-40-319" data-start="00:21:40,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Carolyn Jarvis.</p>
+<p>我是卡罗琳·贾维斯。</p>
+<p><button class="play-button sentence" id="s-00-21-41-759" data-start="00:21:41,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll leave you tonight with a little more Aussie Osborne as we showcase tonight your Canada.</p>
+<p>今晚节目最后，我们通过奥兹·奥斯本的音乐展示加拿大的风采。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JKbfzsEY3/?t=-2208958693" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-46-720" data-start="00:21:46,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Door Valkebeck, Quadra Island BC, and a view of the St. Elias Mountains from Haines Junction, UConn.</p>
+<p>BC省夸德拉岛的Door Valkebeck，以及育空海恩斯 Junction的圣伊莱亚斯山景。</p>
+<p><button class="play-button sentence" id="s-00-21-53-680" data-start="00:21:53,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks for watching.</p>
+<p>感谢收看。</p>
+<p><button class="play-button sentence" id="s-00-21-54-720" data-start="00:21:54,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hope you'll join us again tomorrow.</p>
+<p>期待明天再见。</p>
+<p><button class="play-button sentence" id="s-00-21-56-798" data-start="00:21:56,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a great night.</p>
+<p>晚安。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
