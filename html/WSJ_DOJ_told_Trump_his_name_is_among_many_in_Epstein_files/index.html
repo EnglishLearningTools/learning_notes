@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>WSJ: DOJ told Trump his name is among many in Epstein files</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Wall Street Journal reports that the DOJ informed Trump in May his name appeared in Epstein files, which the White House dismisses as "fake news." CNN's legal and congressional correspondents analyze the implications amid ongoing court decisions and GOP pressure to release more documents.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>WSJ: DOJ told Trump his name is among many in Epstein files</h1>
+<p>【CNN News 20250724 司法部告知特朗普其名字出现在爱泼斯坦文件中，CNN援引《华尔街日报》】</p>
+<p>Summary:
+The Wall Street Journal reports that the DOJ informed Trump in May his name appeared in Epstein files, which the White House dismisses as "fake news." CNN's legal and congressional correspondents analyze the implications amid ongoing court decisions and GOP pressure to release more documents.</p>
+<p>摘要：
+《华尔街日报》报道称，司法部于五月告知特朗普其名字出现在爱泼斯坦文件中，白宫斥之为“假新闻”。CNN法律与国会记者结合法院裁决及共和党要求公开文件的压力，分析事件影响。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 14 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-033" data-start="00:00:00,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Wall Street Journal is now reporting that Justice Department officials told President Trump in May that his name was among many names mentioned in the Epstein files.</p>
+<p>《华尔街日报》最新报道称，司法部官员于五月告知前总统特朗普，其名字出现在爱泼斯坦文件提及的众多姓名中。</p>
+<p><button class="play-button sentence" id="s-00-00-14-147" data-start="00:00:14,147" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is something the White House is now labeling as, quote, fake news, end quote.</p>
+<p>白宫目前将此称为“假新闻”。</p>
+<p><button class="play-button sentence" id="s-00-00-19-167" data-start="00:00:19,167" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our panel will be here to weigh in, but we do want to start with CNN chief legal affairs correspondent Paula Reid.</p>
+<p>专家小组将参与讨论，但我们首先连线CNN首席法律事务记者保拉·里德。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959974" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-25-672" data-start="00:00:25,672" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also have our chief congressional correspondent Manu Raju on Capitol Hill.</p>
+<p>国会山方面由CNN首席国会记者马努·拉朱跟进。</p>
+<p><button class="play-button sentence" id="s-00-00-29-995" data-start="00:00:29,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Paula, I want to go first to you and especially this Wall Street Journal headline, which is that the Justice Department told Trump in May that his name is among many in the Epstein files that he was told at this meeting.</p>
+<p>保拉，首先请你解读《华尔街日报》头条——司法部在五月会议中告知特朗普其名字出现在爱泼斯坦文件中。</p>
+<p><button class="play-button sentence" id="s-00-00-45-078" data-start="00:00:45,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The files contained what officials felt was unverified hearsay about many people, including Trump, who had socialized with Epstein in the past, some of the officials said.</p>
+<p>部分官员表示，文件包含官员认为未经证实的传闻，涉及曾与爱泼斯坦交往的特朗普等多人。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959944" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-55-554" data-start="00:00:55,554" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the officials familiar with the documents said that they contain hundreds of other names.</p>
+<p>熟悉文件的一名官员称其中还涉及数百个其他姓名。</p>
+<p><button class="play-button sentence" id="s-00-01-02-328" data-start="00:01:02,328" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are in the course of of reporting this out, obviously, but what else do we know?</p>
+<p>我们仍在跟进报道，目前还有哪些信息？</p>
+<p><button class="play-button sentence" id="s-00-01-07-367" data-start="00:01:07,367" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it also comes in the context of these court decisions today.</p>
+<p>此事背景是今日法院的裁决。</p>
+<p><button class="play-button sentence" id="s-00-01-10-496" data-start="00:01:10,496" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's start with the Wall Street Journal reporting.</p>
+<p>首先从《华尔街日报》的报道说起。</p>
+<p><button class="play-button sentence" id="s-00-01-12-467" data-start="00:01:12,467" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have not independently confirmed.</p>
+<p>我们尚未独立核实该报道。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959925" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-14-025" data-start="00:01:14,025" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have received some statements from the Justice Department saying, quote, the DOJ and the FBI reviewed the Epstein files and reached the conclusion set out in the July 6th memo.</p>
+<p>司法部声明称：“司法部与FBI审查爱泼斯坦文件后得出7月6日备忘录中的结论。</p>
+<p><button class="play-button sentence" id="s-00-01-23-683" data-start="00:01:23,683" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nothing in the files warranted further investigation or prosecution.</p>
+<p>文件内容无需进一步调查或起诉。</p>
+<p><button class="play-button sentence" id="s-00-01-26-869" data-start="00:01:26,869" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have filed a motion in court to unseal the underlying grand jury transcripts.</p>
+<p>我们已向法院申请解封大陪审团笔录。”</p>
+<p><button class="play-button sentence" id="s-00-01-30-590" data-start="00:01:30,590" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll get to that in a second.</p>
+<p>稍后将讨论此事。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959908" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-31-825" data-start="00:01:31,825" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As part of our routine briefing, we made the president aware of the findings.</p>
+<p>作为例行简报的一部分，我们向总统通报了调查结果。</p>
+<p><button class="play-button sentence" id="s-00-01-35-762" data-start="00:01:35,762" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in that statement from the attorney general and deputy attorney general, they are not directly addressing the most significant part of this, which is the reporting that Trump was told.</p>
+<p>司法部正副部长的声明未直接回应最关键部分——即特朗普被告知的报道。</p>
+<p><button class="play-button sentence" id="s-00-01-45-405" data-start="00:01:45,405" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was mentioned multiple times in these files.</p>
+<p>他的名字在文件中被多次提及。</p>
+<p><button class="play-button sentence" id="s-00-01-48-274" data-start="00:01:48,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, there's also a statement from the FBI director, Kash Patel.</p>
+<p>FBI局长卡什·帕特尔另发声明称：</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959888" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-51-077" data-start="00:01:51,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says the memo, released on July 6th, is consistent with a thorough review conducted by the FBI and DOJ.</p>
+<p>“7月6日备忘录与FBI及司法部的全面审查结论一致。</p>
+<p><button class="play-button sentence" id="s-00-01-57-516" data-start="00:01:57,516" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The criminal leakers and fake news media tries tirelessly to undermine President Trump with smears, lies.</p>
+<p>犯罪泄密者与假新闻媒体不断以诽谤谎言破坏特朗普总统声誉。</p>
+<p><button class="play-button sentence" id="s-00-02-03-055" data-start="00:02:03,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this story is no different.</p>
+<p>此事亦不例外。”</p>
+<p><button class="play-button sentence" id="s-00-02-04-224" data-start="00:02:04,224" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm reading that because it suggests to me that the FBI director there is calling this story a lie, but that's not actually specifically what he's saying.</p>
+<p>该声明似在指责报道不实，但未明确指认。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959866" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-13-466" data-start="00:02:13,466" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think all this is really important, Kasie, because if we go back to the first Bondi related Epstein controversy, you may remember she held an event to great fanfare at the White House where she handed out binders of what was promised to be new information related to the Epstein investigations on a lot of MAGA aligned influencers were very disappointed, because most of what she handed out was already in the public record.</p>
+<p>此事重要性在于回顾邦迪与爱泼斯坦的首场争议——她在白宫高调分发所谓爱泼斯坦调查新资料，但MAGA阵营发现多为公开记录。</p>
+<p><button class="play-button sentence" id="s-00-02-36-288" data-start="00:02:36,288" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But sources at that time told me a lot of the frustration from the White House with Bondi, and not of that was the fact that they didn't redact Trump's name, even though these were records that were already, well known, they were flight logs.</p>
+<p>消息人士称白宫对邦迪未隐去特朗普姓名（尽管是公开飞行日志）深感不满。</p>
+<p><button class="play-button sentence" id="s-00-02-47-699" data-start="00:02:47,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was a lot of frustration around Bondi’s handling of that incident.</p>
+<p>邦迪对此事的处理引发诸多不满。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959828" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-51-503" data-start="00:02:51,503" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it tracks with what the Wall Street Journal is reporting here, that they would be very sensitive about any mention of Trump's name in subsequent files.</p>
+<p>这与《华尔街日报》报道吻合——他们对后续文件中提及特朗普极其敏感。</p>
+<p><button class="play-button sentence" id="s-00-03-02-414" data-start="00:03:02,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, you also asked about the potential release of grand jury information because we know.</p>
+<p>关于大陪审团信息可能公开的提问——</p>
+<p><button class="play-button sentence" id="s-00-03-07-687" data-start="00:03:07,687" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let me let me pause you just one second there, because I do want to make sure that we get this White House statement on the record as we continue to, to talk about this.</p>
+<p>请稍停，我们需要记录白宫声明。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959804" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-15-562" data-start="00:03:15,562" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So here was White House Communications Director Steven Cheung responding to this.</p>
+<p>白宫通讯主任史蒂文·张回应称：</p>
+<p><button class="play-button sentence" id="s-00-03-20-599" data-start="00:03:20,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says, quote, Of course we're gonna get to that later on in the show, because that's what they were trying to talk about from from the podium today.</p>
+<p>“我们稍后将在节目中讨论此事，因今日发布会正涉及该话题。”</p>
+<p><button class="play-button sentence" id="s-00-03-40-286" data-start="00:03:40,286" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, Paula, it's also worth noting, of course, the Trump Justice Department did ask for these, grand jury, testimony, the grand jury materials to be released continue.</p>
+<p>值得注意的是，特朗普执政时的司法部曾要求公开大陪审团材料。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-51-631" data-start="00:03:51,631" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You were talking about what's going on there.</p>
+<p>你刚才提到相关进展。</p>
+<p><button class="play-button sentence" id="s-00-03-53-733" data-start="00:03:53,733" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think my sort of big picture question for you is, do they actually want those released, or did they know that this is did they go in expecting this to happen?</p>
+<p>关键问题在于：他们是否真希望公开，或早预料到此结果？</p>
+<p><button class="play-button sentence" id="s-00-04-03-199" data-start="00:04:03,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, they want all of this to die down, but that's unlikely to happen any time soon.</p>
+<p>他们希望平息事态，但短期内难以实现。</p>
+<p><button class="play-button sentence" id="s-00-04-07-112" data-start="00:04:07,112" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But after the the Fury at following that memo where the Justice Department said they weren't going to release anything else, they had to at least make it appear that they were trying to do something else.</p>
+<p>司法部备忘录称不再公开更多文件引发众怒后，他们至少需表现出努力姿态。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959744" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-15-822" data-start="00:04:15,822" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the idea that you're going to unseal grand jury material, that's a long shot, and you really hit one of the first roadblocks today because they're seeking the the unsealing of evidence in multiple grand juries connected to Epstein investigations, both in New York and Florida.</p>
+<p>解封大陪审团材料本就不易，今日首遇阻碍——他们申请解封纽约与佛罗里达多场爱泼斯坦相关大陪审团证据。</p>
+<p><button class="play-button sentence" id="s-00-04-30-202" data-start="00:04:30,202" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And a short time ago, a judge in Florida, that she would not release information related to grand juries that were convened in West Palm Beach in 2005 and 2007.</p>
+<p>佛罗里达法官刚拒绝公开2005与2007年西棕榈滩大陪审团信息。</p>
+<p><button class="play-button sentence" id="s-00-04-40-213" data-start="00:04:40,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is the earlier Epstein investigation.</p>
+<p>这涉及早期爱泼斯坦调查。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-43-205" data-start="00:04:43,205" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were also, of course, grand jury records in New York related to the more recent charges against Jeffrey Epstein before he died and Ghislaine Maxwell.</p>
+<p>纽约还有爱泼斯坦生前及吉斯莱恩·麦克斯韦尔近期指控相关的大陪审团记录。</p>
+<p><button class="play-button sentence" id="s-00-04-52-725" data-start="00:04:52,725" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But here in Florida, the judge said she would deny this request because the Justice this stuff should be released because of extensive public interest and, quote, transparency to the American public.</p>
+<p>但佛罗里达法官认为“公众高度关注”和“对美透明度”不构成解封理由。</p>
+<p><button class="play-button sentence" id="s-00-05-03-235" data-start="00:05:03,235" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the judge said, look, those don't qualify as exceptions to what is usually the standard.</p>
+<p>法官表示这些不符合常规例外标准。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959692" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-07-823" data-start="00:05:07,823" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The grand jury material remains sealed.</p>
+<p>大陪审团材料仍将保密。</p>
+<p><button class="play-button sentence" id="s-00-05-10-776" data-start="00:05:10,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, that's not surprising.</p>
+<p>这并不意外。</p>
+<p><button class="play-button sentence" id="s-00-05-12-110" data-start="00:05:12,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is always a long shot.</p>
+<p>此类申请本就难获批准。</p>
+<p><button class="play-button sentence" id="s-00-05-13-211" data-start="00:05:13,211" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a slight glimmer of hope for the Justice Department in New York up there.</p>
+<p>司法部在纽约尚存一线希望——</p>
+<p><button class="play-button sentence" id="s-00-05-18-651" data-start="00:05:18,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The judge is still looking at this.</p>
+<p>法官仍在审议。</p>
+<p><button class="play-button sentence" id="s-00-05-20-131" data-start="00:05:20,131" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's given the Justice Department until next week to provide more legal arguments for why this should be unsealed.</p>
+<p>要求司法部下周前提交更多解封法律依据。</p>
+<p><button class="play-button sentence" id="s-00-05-26-125" data-start="00:05:26,125" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Victims and Maxwell have until August 5th to file their positions on the unsealing.</p>
+<p>受害者与麦克斯韦尔需在8月5日前提交立场文件。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959667" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-32-098" data-start="00:05:32,098" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maxwell is expected to oppose this.</p>
+<p>麦克斯韦尔预计将反对。</p>
+<p><button class="play-button sentence" id="s-00-05-35-168" data-start="00:05:35,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that judge said that they would not allow Maxwell and her attorneys to review this grand jury material.</p>
+<p>法官称不会允许麦克斯韦尔及其律师查阅该材料。</p>
+<p><button class="play-button sentence" id="s-00-05-41-274" data-start="00:05:41,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the headline here is, Kasie, No matter what happens with these grand juries, will continue to face questions about why they are not releasing all of the material within their power to release.</p>
+<p>关键在于无论大陪审团结果如何，他们仍将面临为何不公开所有可公开材料的质疑。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959647" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-52-918" data-start="00:05:52,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this new Wall Street Journal report is just going to continue to amplify those questions.</p>
+<p>《华尔街日报》新报道将加剧此类质疑。</p>
+<p><button class="play-button sentence" id="s-00-05-57-290" data-start="00:05:57,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, of course, Manu Raju, people who have questions include, many Republicans on Capitol Hill, or at least enough of them to cause the House speaker quite a few problems.</p>
+<p>国会山许多共和党人——至少足以令众议院议长困扰的人数——也提出质疑。</p>
+<p><button class="play-button sentence" id="s-00-06-09-334" data-start="00:06:09,334" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's also this, subpoena that just came down for Ghislain Maxwell bringing us up to speed.</p>
+<p>此外，刚向吉斯莱恩·麦克斯韦尔发出的传票带来新进展。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959623" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-16-375" data-start="00:06:16,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-06-16-642" data-start="00:06:16,642" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is not the only subpoena that could come down here.</p>
+<p>这并非唯一可能发出的传票。</p>
+<p><button class="play-button sentence" id="s-00-06-20-612" data-start="00:06:20,612" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kasie.</p>
+<p>凯西。</p>
+<p><button class="play-button sentence" id="s-00-06-21-051" data-start="00:06:21,051" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, the subpoena came down from the House Oversight Committee that came that was pushed by a Republican congressman, Tim Burchett, yesterday.</p>
+<p>众议院监督委员会应共和党议员蒂姆·伯切特要求，昨日批准传票。</p>
+<p><button class="play-button sentence" id="s-00-06-27-920" data-start="00:06:27,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultimately, the House Oversight Committee voted to move ahead with that today, issuing a subpoena asking for a deposition in her prison cell by August 11th.</p>
+<p>委员会今日最终投票通过，要求她8月11日前在狱中作证。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959601" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-38-029" data-start="00:06:38,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, there's one matter.</p>
+<p>另有一事。</p>
+<p><button class="play-button sentence" id="s-00-06-39-331" data-start="00:06:39,331" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a significant move afoot, though, in a separate subcommittee.</p>
+<p>某小组委员会正推动重要动议。</p>
+<p><button class="play-button sentence" id="s-00-06-43-468" data-start="00:06:43,468" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If that's part of the larger House Oversight Committee, Republicans appear poised to defy and join with Democrats to subpoena for all of the Epstein files.</p>
+<p>若属监督委员会管辖，共和党人可能联合民主党人传调所有爱泼斯坦文件。</p>
+<p><button class="play-button sentence" id="s-00-06-54-846" data-start="00:06:54,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That would be a hugely significant move.</p>
+<p>此举影响重大。</p>
+<p><button class="play-button sentence" id="s-00-06-57-649" data-start="00:06:57,649" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, this vote has not happened yet, but in a key subcommittee that is now considering this measure, Democrats have tried to force a vote to consider the call for a subpoena for all of the Epstein files, as pushed by Congresswoman Summer Lee.</p>
+<p>关键小组委员会正审议该措施，民主党人夏默·李推动强制投票传调所有文件。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959569" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-10-403" data-start="00:07:10,403" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They need one Republican to vote for it.</p>
+<p>需一名共和党人支持。</p>
+<p><button class="play-button sentence" id="s-00-07-12-932" data-start="00:07:12,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Congresswoman Nancy Mace of South Carolina just told me moments ago she plans to vote for this measure after getting some changes that she expects to get to redact the names of the victims here.</p>
+<p>南卡罗来纳州议员南希·梅斯称将在确保受害者姓名隐去后支持该动议。</p>
+<p><button class="play-button sentence" id="s-00-07-24-944" data-start="00:07:24,944" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is what she just told me moments ago, that she plans to vote in favor of this Democratic effort to subpoena for these files.</p>
+<p>她表示将支持民主党传调文件的努力。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959546" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-33-519" data-start="00:07:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I will amend the motion or do my own motion.</p>
+<p>“我将修正或自提议案。</p>
+<p><button class="play-button sentence" id="s-00-07-36-956" data-start="00:07:36,956" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and I've requested that the ranking member amend it.</p>
+<p>已要求资深委员修正。</p>
+<p><button class="play-button sentence" id="s-00-07-39-578" data-start="00:07:39,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're negotiating that right now.</p>
+<p>正在协商。</p>
+<p><button class="play-button sentence" id="s-00-07-40-860" data-start="00:07:40,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's very important.</p>
+<p>此事至关重要。</p>
+<p><button class="play-button sentence" id="s-00-07-42-228" data-start="00:07:42,228" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will be supporting it, but it's very important that we protect victims.</p>
+<p>我会支持，但必须保护受害者。”</p>
+<p><button class="play-button sentence" id="s-00-07-45-163" data-start="00:07:45,163" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'll be supporting the motion for sure.</p>
+<p>你确定支持该动议？</p>
+<p><button class="play-button sentence" id="s-00-07-46-840" data-start="00:07:46,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-07-47-199" data-start="00:07:47,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'm going to I'm going to amend the motion to protect the identity of the victims.</p>
+<p>“我将修正议案以保护受害者身份。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959529" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-50-970" data-start="00:07:50,970" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that is should be first and foremost as someone who's fought for the so to protect women and kids.</p>
+<p>作为长期保护妇女儿童权益者，我认为这应为首要原则。”</p>
+<p><button class="play-button sentence" id="s-00-07-59-377" data-start="00:07:59,377" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she is part of that group of Republicans who have signed on to a separate effort, the effort by Congressman Thomas Massie, who, to try to force a vote in the full House of Representatives to release all of the files she supports, Mr. Massey's effort on that issue.</p>
+<p>她也是支持托马斯·马西议员推动众议院全体投票公开所有文件的共和党人之一。</p>
+<p><button class="play-button sentence" id="s-00-08-16-262" data-start="00:08:16,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, on the subpoena itself, the chairman of that subcommittee, Casey Clay Higgins, he's a Republican, he does expect enough Republicans would vote with Democrats to move forward on calling for a subpoena here.</p>
+<p>小组委员会主席凯西·克莱·希金斯（共和党）预计将有足够共和党人联合民主党人推进传票动议。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959492" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-27-105" data-start="00:08:27,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So assuming that motion is approved this afternoon, all indications are that it would be approved.</p>
+<p>若今日下午动议通过（目前迹象显示会通过）——</p>
+<p><button class="play-button sentence" id="s-00-08-32-378" data-start="00:08:32,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then it would be the House oversight chairman, James Comer, would have to issue that subpoena within probably in a matter of days here.</p>
+<p>监督委员会主席詹姆斯·科默需在数日内签发传票。</p>
+<p><button class="play-button sentence" id="s-00-08-38-618" data-start="00:08:38,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So a significant movement here just shows you the pressure the president is under.</p>
+<p>这些重大动向显示总统面临的压力。</p>
+<p><button class="play-button sentence" id="s-00-08-42-721" data-start="00:08:42,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The administration is under from the president's own allies to release more of the Epstein files.</p>
+<p>政府正承受来自总统盟友要求公开更多爱泼斯坦文件的压力。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1ZT8MzyE5x/?t=-2208959471" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-48-326" data-start="00:08:48,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, you're standing out, in the parking lot behind the Capitol, which is the stakeout location, when they are getting out of town, which they are doing a day early because of all the things you just outlined there.</p>
+<p>你此刻所在的国会后方停车场是记者蹲守点，议员们因前述事由提前一日离城。</p>
+<p><button class="play-button sentence" id="s-00-08-59-304" data-start="00:08:59,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Monty Raju on the hill for us.</p>
+<p>国会山现场记者马努·拉朱。</p>
+<p><button class="play-button sentence" id="s-00-09-01-573" data-start="00:09:01,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you both.</p>
+<p>感谢二位。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
