@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>bbc.live: London Time 2025-07-23 23:59 - 00:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The U.N.'s top court ruled that countries can sue others for failing to meet climate targets, declaring a clean environment a human right, despite opposition from wealthy nations.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>bbc.live: London Time 2025-07-23 23:59 - 00:30</h1>
+<p>【BBC News 20250724 马修(老友记钱德勒扮演者)死亡案进展：医生的认罪｜加沙大规模饥荒｜联合国最高法院裁定，各国可以起诉未达到气候目标的国家】</p>
+<p>Summary:
+The U.N.'s top court ruled that countries can sue others for failing to meet climate targets, declaring a clean environment a human right, despite opposition from wealthy nations.</p>
+<p>摘要：
+联合国最高法院裁定，各国可以起诉未达到气候目标的国家，并宣布清洁环境为一项人权，尽管富裕国家表示反对。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 35 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959986" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-13-500" data-start="00:00:13,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MUSIC Live from Washington, this is BBC News.</p>
+<p>音乐 这里是BBC新闻，华盛顿现场直播。</p>
+<p><button class="play-button sentence" id="s-00-00-16-480" data-start="00:00:16,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A hundred eight groups warn of mass starvation across Gaza.</p>
+<p>108个组织警告加沙各地大规模饥荒。</p>
+<p><button class="play-button sentence" id="s-00-00-20-120" data-start="00:00:20,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With the red crossing, children's lives are hanging by a threat.</p>
+<p>在红色通道附近，儿童的生命岌岌可危。</p>
+<p><button class="play-button sentence" id="s-00-00-23-480" data-start="00:00:23,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel denies causing widespread hunger.</p>
+<p>以色列否认导致广泛饥饿。</p>
+<p><button class="play-button sentence" id="s-00-00-26-039" data-start="00:00:26,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Wall Street Journal publishes another report linking Donald Trump to Jeffrey Epstein which the White House says is nothing more than a continuation of fake news.</p>
+<p>《华尔街日报》发布另一份将特朗普与杰弗里·爱泼斯坦联系起来的报道，白宫称这只是假新闻的延续。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959965" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-34-240" data-start="00:00:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the doctor who supplied Hollywood star Matthew Perry with ketamine pleads guilty.</p>
+<p>为好莱坞明星马修·佩里提供氯胺酮的医生认罪。</p>
+<p><button class="play-button sentence" id="s-00-00-38-920" data-start="00:00:38,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MUSIC I'm Sue Meishal Maskanda.</p>
+<p>音乐 我是苏·梅沙尔·马斯坎达。</p>
+<p><button class="play-button sentence" id="s-00-00-48-920" data-start="00:00:48,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for joining us.</p>
+<p>感谢您的收看。</p>
+<p><button class="play-button sentence" id="s-00-00-49-920" data-start="00:00:49,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We begin tonight with the latest from Gaza, where the Hamas-run Health Ministry reports more than a dozen deaths, including children from starvation in the past 24 hours alone.</p>
+<p>今晚我们首先关注加沙最新情况，哈马斯管理的卫生部报告过去24小时内已有十余人死于饥饿，包括儿童。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959940" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-59-880" data-start="00:00:59,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The International Rescue Committee detailed those children facing malnutrition saying their small bodies are shutting down.</p>
+<p>国际救援委员会详细描述了面临营养不良的儿童，称他们瘦弱的身体正在衰竭。</p>
+<p><button class="play-button sentence" id="s-00-01-06-920" data-start="00:01:06,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They can't breathe.</p>
+<p>他们无法呼吸。</p>
+<p><button class="play-button sentence" id="s-00-01-08-159" data-start="00:01:08,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their immune systems are collapsing and they are highly vulnerable to infection.</p>
+<p>他们的免疫系统崩溃，极易感染。</p>
+<p><button class="play-button sentence" id="s-00-01-12-480" data-start="00:01:12,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their lives are hanging by a threat.</p>
+<p>他们的生命悬于一线。</p>
+<p><button class="play-button sentence" id="s-00-01-15-000" data-start="00:01:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel which controls all border crossings in Gaza, rejected claims of famine, saying any age shortage is quote engineered by Hamas.</p>
+<p>控制加沙所有边境的以色列否认饥荒指控，称任何物资短缺都是哈马斯“策划的”。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959917" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-22-760" data-start="00:01:22,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Separately, Israeli air strikes killed at least 17 people, including four children and an infant in Gaza City on Wednesday morning, as he is really offensive against Hamas presses on.</p>
+<p>另据报道，周三早晨以色列空袭加沙城造成至少17人死亡，包括4名儿童和1名婴儿，以军对哈马斯的攻势持续。</p>
+<p><button class="play-button sentence" id="s-00-01-32-599" data-start="00:01:32,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amid these warnings, BBC verifies been looking at those facing starvation in the territory and sent this report.</p>
+<p>在这些警告中，BBC核实了该地区面临饥饿的人群并发布此报道。</p>
+<p><button class="play-button sentence" id="s-00-01-38-840" data-start="00:01:38,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than a hundred aid agencies have sounded the alarm saying mass starvation is spreading across Gaza.</p>
+<p>超百家援助机构拉响警报，称大规模饥荒正在加沙蔓延。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-44-799" data-start="00:01:44,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say that Israel isn't allowing food already inside the strip to be distributed.</p>
+<p>他们称以色列不允许加沙地带现有食物分发。</p>
+<p><button class="play-button sentence" id="s-00-01-50-280" data-start="00:01:50,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're privately run Gaza Humanitarian Foundation backed by Israel and the US bypasses the UN's operations.</p>
+<p>由以色列和美国支持的私营机构“加沙人道基金会”绕过联合国开展行动。</p>
+<p><button class="play-button sentence" id="s-00-01-56-879" data-start="00:01:56,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Palestinians have to travel to aid sites to get food.</p>
+<p>巴勒斯坦人需前往援助站点获取食物。</p>
+<p><button class="play-button sentence" id="s-00-01-59-799" data-start="00:01:59,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a look at this chart.</p>
+<p>请看这张图表。</p>
+<p><button class="play-button sentence" id="s-00-02-01-280" data-start="00:02:01,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see the number of boxes distributed roughly peaked around mid-June but then appears to have decreased over the past month with an increase in the past few days.</p>
+<p>分发箱数在六月中旬达到峰值，之后一月内下降，近日略有回升。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959869" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-10-840" data-start="00:02:10,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The GHF posted photos like this online which gives us an insight into what's being distributed.</p>
+<p>加沙人道基金会发布的在线照片揭示了分发内容。</p>
+<p><button class="play-button sentence" id="s-00-02-17-359" data-start="00:02:17,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see it's mostly dried goods like lentils and pasta.</p>
+<p>主要为扁豆、意面等干货。</p>
+<p><button class="play-button sentence" id="s-00-02-20-840" data-start="00:02:20,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The GHF says each box has enough food to feed between five and six people for three and a half days.</p>
+<p>基金会称每箱食物可供5-6人维持3.5天。</p>
+<p><button class="play-button sentence" id="s-00-02-27-598" data-start="00:02:27,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They provided us with a chart of what they describe as a benchmark box with nutritional values.</p>
+<p>他们提供了标有营养值的基准箱图表。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959846" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-33-199" data-start="00:02:33,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The calorie content of each box works out to around 42,500 calories.</p>
+<p>每箱热量约42,500卡路里。</p>
+<p><button class="play-button sentence" id="s-00-02-38-080" data-start="00:02:38,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's worth saying it says ten grams here but we suspect they mean ten kilograms.</p>
+<p>标注为10克，但疑为10千克。</p>
+<p><button class="play-button sentence" id="s-00-02-42-680" data-start="00:02:42,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that roughly aligns with emergency nutrition standards which recommend about 2,100 calories per person per day according to the UN.</p>
+<p>这基本符合联合国紧急营养标准（人均每日2100卡路里）。</p>
+<p><button class="play-button sentence" id="s-00-02-51-838" data-start="00:02:51,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also worth saying that one of the main reasons the GHF took over aid distribution was because Israel said aid was getting into the hands of Hamas but this new GHF system doesn't have any checks on who aid is being distributed too.</p>
+<p>需指出，以色列称援助物资落入哈马斯之手是基金会接管分发的主因，但新系统未核查受助人身份。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959815" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-04-479" data-start="00:03:04,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has repeatedly denied allegations of mass starvation in Gaza and categorically rejected the statement from these aid agencies.</p>
+<p>以色列多次否认加沙饥荒指控，断然拒绝援助机构声明。</p>
+<p><button class="play-button sentence" id="s-00-03-13-400" data-start="00:03:13,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli body for aid coordination posted this video online saying 950 trucks of aid currently waiting in Gaza to be picked up but this doesn't tell the full story.</p>
+<p>以色列援助协调机构发布视频称950辆援助卡车待分发，但未反映全貌。</p>
+<p><button class="play-button sentence" id="s-00-03-24-280" data-start="00:03:24,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A trucks can't move inside Gaza without permission by Israeli authorities because they need to move along prescribed routes for safety.</p>
+<p>卡车需经以方批准按指定路线行驶。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959787" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-32-400" data-start="00:03:32,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN and other aid agencies have said that they struggle to get this Israeli authorization.</p>
+<p>联合国等机构称难以获得以方授权。</p>
+<p><button class="play-button sentence" id="s-00-03-37-158" data-start="00:03:37,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say this is one of the main obstacles to distributing aid but even once it's inside there's another hurdle.</p>
+<p>这构成主要障碍，且物资进入后仍有阻碍。</p>
+<p><button class="play-button sentence" id="s-00-03-44-079" data-start="00:03:44,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli army has repeatedly been accused of firing on Palestinians while they're trying to access aid and this maintaining the safety of Palestinians trying to access aid is key for aid agencies.</p>
+<p>以军多次被指控向领取物资的巴勒斯坦人开火，保障其安全是援助机构核心诉求。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-55-718" data-start="00:03:55,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN said that in too many cases civilians approaching these trucks come under fire despite repeated assurances that troops wouldn't engage or be present and they said quote absolutely no one should have to risk their lives to get food.</p>
+<p>联合国称尽管多次保证，平民仍屡遭袭击，强调“无人应冒生命危险获取食物”。</p>
+<p><button class="play-button sentence" id="s-00-04-11-680" data-start="00:04:11,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for Palestinians accessing aid remains fraught and with starvation looming the urgency grows by the day.</p>
+<p>巴勒斯坦人获取援助危机四伏，饥荒逼近使紧迫性与日俱增。</p>
+<p><button class="play-button sentence" id="s-00-04-20-439" data-start="00:04:20,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For more on the humanitarian crisis in Gaza I spoke with Honey Amadou and philanthropy director at ANWA USA.</p>
+<p>关于加沙人道危机，我采访了ANWA USA慈善总监霍尼·阿马杜。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959731" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-28-519" data-start="00:04:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You and your late brother opened the Gaza soup kitchen in December of 2023 to help provide aid food aid in Gaza.</p>
+<p>您与已故兄弟于2023年12月开设加沙施粥所。</p>
+<p><button class="play-button sentence" id="s-00-04-37-720" data-start="00:04:37,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I understand you've been telling us that you have had to downsize your operation significantly because as you're reporting a lack of food tell us about what's been happening.</p>
+<p>据悉您因食物短缺大幅缩减规模，请详述现状。</p>
+<p><button class="play-button sentence" id="s-00-04-46-680" data-start="00:04:46,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well thank you for having me obviously we struggle finding food in Gaza to cook for people.</p>
+<p>感谢邀请，我们在加沙难以为民众找到食物。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959708" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-51-920" data-start="00:04:51,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have about 10 kitchens in Gaza and we have to close five because we can't find in a food.</p>
+<p>原有10间厨房，现关闭5间。</p>
+<p><button class="play-button sentence" id="s-00-04-58-279" data-start="00:04:58,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The little food we can have a bit of flintels maybe some white beans maybe some pasta here and there but not enough to keep people to start to keep people alive.</p>
+<p>仅有少量扁豆、白豆和意面，远不足维持生命。</p>
+<p><button class="play-button sentence" id="s-00-05-07-480" data-start="00:05:07,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a real deal food is very expensive and there be an intentional starved by Israel.</p>
+<p>食物价格极高，以色列蓄意制造饥荒。</p>
+<p><button class="play-button sentence" id="s-00-05-12-759" data-start="00:05:12,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a fact and we struggle to get food to people.</p>
+<p>我们难以向民众提供食物。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959683" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-16-240" data-start="00:05:16,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact this is a twofold attack against doctors as your report showed the doctors are busy because they get to treat a lot of Palestinians the Israeli army is busy hurting a lot of Palestinians and two the doctors themselves are not eating and that causes a lot of stress.</p>
+<p>实为双重打击：医生忙于救治伤者，自身却因缺粮承受巨大压力。</p>
+<p><button class="play-button sentence" id="s-00-05-31-240" data-start="00:05:31,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact my uncle is a physician told me people don't no longer come to see him because you want to preserve their energy they have no energy left to go walk about a mile or two miles to see the doctor and the worst part is this is a fictitious children this is engineered suffering in Gaza we're watching unfold.</p>
+<p>我医生叔叔称患者为保存体力不再就诊，最糟的是儿童正经历人为制造的苦难。</p>
+<p><button class="play-button sentence" id="s-00-05-49-240" data-start="00:05:49,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So can you give us a sense when you say food is too expensive that food that is available how expensive are we talking about give our viewers a sense of how difficult it is to purchase the food that is available.</p>
+<p>请说明食物具体价格，让观众了解获取难度。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959639" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-00-560" data-start="00:06:00,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So a kilo of flour usually in the US for a dollar in Gaza fictitious about 50 dollars one kilo of flour that's one example sugar is a hundred dollar if you have a pumpkin that when we pay three dollars for here in the US is fifty dollars we're talking about there is no cooking oil a bottle of cooking oil you buy at the local grocery store for three bucks this is about twenty five to thirty dollars each and it's hard because you cannot really cook at your home there is no gas and then you have to go fetch wood find clean water life is a challenge and you know I just want to talk about Gaza as in the coast and Israelis are not even allowing the fishermen to go fish in Gaza so this is there is no militants in the water people can fish and bring it home and cook and keep families alive that's not happening and in fact today I watch a video of there is a Israeli's detaining to fishermen near Hanyunis and that's the gift of nature for Gaza we have the coast and we're not allowed to fish somebody wants to hold me the Palestinians are not they're supposed to farm without land and fish without water and that's the situation in Gaza and get what there's six thousand eight trucks for under one you and our w s six thousand eight trucks about the kilo outside of Gaza borders and there been denied entry by the F why they have many reasons they have many fabrications but they're really good allegations they're never good about evidence so when it comes to Israeli token points you feel the allegations are good enough to be an evidence but that's far fits in our this is not we mentioned just before the report that israel says that Hamas is manufacturing a hunger crisis and that there are hundreds of eight trucks inside Gaza and that that aid can't be distributed because Hamas militants are getting in the way I mean where does all of this leave civilians obviously because we are seeing this letter from aid agencies more than a hundred agents he's saying that people are starving literally wasting away yeah I mean look there's Israelis who have you believe these UN agencies are the bad guys and they and their mercenary friends they fly from Wyoming and North Carolina are the good guys they're intentionally you're talking about those Gaza humanitarian foundation which is a very debolical plan and people are being starved and people try to find food and when they go to these aid sites more than a thousand Palestinians were killed this is this is tragedy because people want a bag of flour they're not numbers they're not AI some of these people I know and my friends in the last couple of days when I'm saying as these UN agencies and also American agencies that are big and they have the scale to do this they're being stopped from delivered the word central kitchen close in Gaza that's not a UN agency there really been a love with Israel and the Israelis killed their staff and now they're not allowing me to bring food look desperate conditions in Gaza is real people grab food but guess what look at February this this year there was no looting why people loot food when it's scarce and it's expensive you can argue yes when you are you can argue that the Israeli is banning food the restricting food from getting to Gaza is benefiting the bad actors who's going to go fight for a bag of flour when you could buy it for a dollar it is now a thousand dollars that's why it becomes a commodity because it's scarce after some other news the third round of peace talks between Russia and Ukraine in Istanbul ended without a breakthrough and the streets of Ukraine meanwhile they're seeing the biggest protest since Russia's full-scale invasion began more than three years ago these protests were sparked by President Bolotomir Zelensky's decision to sign sweeping legislation but critics say weakened the independence of Ukraine's anti-corruption watchdog.</p>
+<p>其他消息：俄乌第三轮和谈未获突破；乌克兰爆发三年来最大规模抗议，批评者称泽连斯基签署的法案削弱反腐机构独立性。</p>
+<p><button class="play-button sentence" id="s-00-09-43-063" data-start="00:09:43,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Zelensky posted on social media Wednesday that he had heard their concerns but detractors feared could signal the country's backslide into its fraught history of corruption as well as provide the Kremlin in opening to sell further seeds of propaganda and mistrust and there was concern that the protests could cast a shadow on those peace talks we mentioned while the BBC's correspondent Vitaly Shepchenko filed this report on the results of those talks.</p>
+<p>泽连斯基周三在社交媒体回应关切，但反对者担忧此举恐重蹈腐败覆辙，并为克里姆林宫制造舆论裂痕提供机会，抗议或影响和谈进程。BBC记者维塔利·谢普琴科发回和谈结果报道。</p>
+<p><button class="play-button sentence" id="s-00-10-34-278" data-start="00:10:34,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Russian said that they discussed humanitarian issues such as further exchanges of prisoners and it was too early to hold a meeting between the two presidents.</p>
+<p>俄方称讨论了囚犯交换等人道议题，但元首会晤为时尚早。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959351" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-48-643" data-start="00:10:48,643" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What was absent from their news conferences was any indication that progress has been made on the key fundamental differences persisting between the two countries.</p>
+<p>发布会未提及双方核心分歧取得进展。</p>
+<p><button class="play-button sentence" id="s-00-11-00-360" data-start="00:11:00,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK, this is BBC News.</p>
+<p>这里是BBC新闻，全球及英国各地报道。</p>
+<p><button class="play-button sentence" id="s-00-12-01-158" data-start="00:12:01,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your live with BBC News.</p>
+<p>BBC新闻为您直播。</p>
+<p><button class="play-button sentence" id="s-00-12-05-721" data-start="00:12:05,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US House Oversight Committee has subpoenaed Glein Maxwell, a longtime associate of the late sex offender Jeffrey Amstie.</p>
+<p>美国众议院监督委员会传唤已故性犯罪者杰弗里·爱泼斯坦的长期关联人吉斯莱恩·麦克斯韦。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959258" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-21-018" data-start="00:12:21,018" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The committee set a deposition for August 11th at the Florida prison where she's serving a 20-year sentence for sex trafficking and other crimes.</p>
+<p>委员会定于8月11日在佛罗里达监狱取证，她因性交易等罪被判20年。</p>
+<p><button class="play-button sentence" id="s-00-12-28-356" data-start="00:12:28,356" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, US media report that President Trump's attorney general told him months ago that his name is listed in the Epstein files along with other high profile figures.</p>
+<p>另据美媒报道，特朗普的司法部长数月前告知其名字出现在爱泼斯坦文件中。</p>
+<p><button class="play-button sentence" id="s-00-12-38-198" data-start="00:12:38,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In response to those reports, President Trump's communications director Steven Chung said, quote, the fact is that the president kicked him out of his club for being a creep.</p>
+<p>特朗普通讯主管史蒂文·张回应称“总统因爱泼斯坦品行不端将其逐出俱乐部”。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959233" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-46-611" data-start="00:12:46,611" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is nothing more than a continuation of the fake news stories concocted by the Democrats and the liberal media just like the Obama-Russia gate scandal which President Trump was right about.</p>
+<p>称此为民主党与自由派媒体延续“奥巴马-俄罗斯门”式假新闻。</p>
+<p><button class="play-button sentence" id="s-00-12-57-240" data-start="00:12:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And separately on Wednesday, director of National Intelligence, Tulsi Gabbard made a surprise appearance at the White House press briefing.</p>
+<p>周三，国家情报总监图尔西·加巴德意外现身白宫简报会。</p>
+<p><button class="play-button sentence" id="s-00-13-04-354" data-start="00:13:04,354" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She outlined key findings from an intelligence report.</p>
+<p>她概述情报报告关键结论。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959212" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-07-240" data-start="00:13:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She alleges shows that the Obama administration manipulated information about Russian efforts to sway the 2016 election in Donald Trump's favor.</p>
+<p>指控奥巴马政府操纵俄罗斯干预2016年大选的信息以利于特朗普。</p>
+<p><button class="play-button sentence" id="s-00-13-15-580" data-start="00:13:15,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is an allegation that the former president has vehemently denied.</p>
+<p>前总统奥巴马强烈否认该指控。</p>
+<p><button class="play-button sentence" id="s-00-13-19-536" data-start="00:13:19,536" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Gabbard's response when a CBS reporter asked her what was new in this assessment.</p>
+<p>CBS记者询问评估新内容时，加巴德回应称：</p>
+<p><button class="play-button sentence" id="s-00-13-24-908" data-start="00:13:24,908" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you now have that refutes those two?</p>
+<p>“现有证据如何反驳此前结论？”</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959191" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-28-488" data-start="00:13:28,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will encourage you, and my role as the director of National Intelligence.</p>
+<p>“我作为国家情报总监的职责是确保向民众传达真相。”</p>
+<p><button class="play-button sentence" id="s-00-13-33-248" data-start="00:13:33,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My job again, as I said when I came into this role, was to make sure that we are telling the truth to the American people and that we are ensuring that the intelligence community is not being politicized.</p>
+<p>“确保情报界不受政治化影响。”</p>
+<p><button class="play-button sentence" id="s-00-13-45-728" data-start="00:13:45,728" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vice chair of the Senate Intelligence Committee condemned the release of the report as partisan and irresponsible Senator Mark Warner said Tulsi Gabbard's decision could expose classified sources, the Treyar allies, and politicize the very intelligence she has been entrusted to protect.</p>
+<p>参议院情报委员会副主席马克·华纳谴责报告发布具有党派性且不负责任，称加巴德的决定或暴露机密信源、危及盟友，并政治化其本应保护的情报体系。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959157" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-02-918" data-start="00:14:02,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trade representatives from the European Union are in talks with the U.S. to avert a 30 percent tariff rate that President Trump has threatened to impose on EU goods starting August 1.</p>
+<p>欧盟贸易代表正与美方磋商，试图避免特朗普威胁8月1日起对欧盟商品征收30%关税。</p>
+<p><button class="play-button sentence" id="s-00-14-12-759" data-start="00:14:12,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The latest negotiations come after the U.S. and Japan reached a tariff deal late on Tuesday.</p>
+<p>此前美日于周二晚间达成关税协议。</p>
+<p><button class="play-button sentence" id="s-00-14-18-039" data-start="00:14:18,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> U.S. President Trump said that Japan will invest $550 billion in the U.S.</p>
+<p>特朗普称日本将在美投资5500亿美元。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959136" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-23-799" data-start="00:14:23,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In turn, Japanese goods sold to the U.S. will be taxed at 15 percent below the 25 percent tariff that Trump had initially threatened.</p>
+<p>作为交换，日本输美商品关税降至15%（原威胁税率为25%）。</p>
+<p><button class="play-button sentence" id="s-00-14-31-843" data-start="00:14:31,843" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Several EU diplomats have reportedly said that the block is now examining U.S. proposals for a 15 percent baseline tariff.</p>
+<p>欧盟外交官称正评估美方提出的15%基准关税方案。</p>
+<p><button class="play-button sentence" id="s-00-14-38-675" data-start="00:14:38,675" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The European Commission, that's the EU's executive body, says that if no deal is reached, it will place counter tariffs on more than $100 billion worth of U.S. goods starting August 7.</p>
+<p>欧盟委员会表示若未达成协议，将于8月7日起对超千亿美元美国商品加征报复性关税。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959108" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-51-158" data-start="00:14:51,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A landmark decision by the U.N.'s top court has cleared the way for countries to sue other nations that fail to meet climate targets.</p>
+<p>联合国最高法院的一项里程碑式裁决为各国起诉未达到气候目标的国家扫清了道路。</p>
+<p><button class="play-button sentence" id="s-00-14-57-731" data-start="00:14:57,731" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The International Court of Justice ruled that developing nations have a right to seek damages for the impacts of climate change, like destroyed buildings and infrastructure.</p>
+<p>国际法院裁定，发展中国家有权就气候变化的影响（如建筑物和基础设施被毁）寻求赔偿。</p>
+<p><button class="play-button sentence" id="s-00-15-06-999" data-start="00:15:06,999" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The court ruled that a clean, healthy, and sustainable environment is a human right, telling wealthy countries that they must comply with their international commitments to lower pollution or risk having to pay compensation.</p>
+<p>法院裁定，清洁、健康和可持续的环境是一项人权，并告知富裕国家必须履行其减少污染的国际承诺，否则可能面临赔偿。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959081" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-18-072" data-start="00:15:18,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wealthier industrialized nations disagreed with that premise, but the ruling is being seen as a victory for countries most vulnerable to climate change.</p>
+<p>较富裕的工业化国家不同意这一前提，但该裁决被视为最易受气候变化影响国家的胜利。</p>
+<p><button class="play-button sentence" id="s-00-15-25-991" data-start="00:15:25,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although the ICJ says its adviser opinions are not binding, the BBC understands it could pave the way for future litigation.</p>
+<p>尽管国际法院表示其咨询意见不具约束力，但BBC认为这可能为未来的诉讼铺平道路。</p>
+<p><button class="play-button sentence" id="s-00-15-34-618" data-start="00:15:34,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This case began quite literally on the other side of the earth.</p>
+<p>此案始于地球的另一端。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959057" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-42-038" data-start="00:15:42,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was the brainchild of law students at a university in the Pacific Island nation of Vanuatu.</p>
+<p>这是太平洋岛国瓦努阿图一所大学法学院学生的创意。</p>
+<p><button class="play-button sentence" id="s-00-15-50-839" data-start="00:15:50,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Six years later and in a landmark decision, the International Court of Justice here in the Hague cleared the way for countries to sue each other over climate damage.</p>
+<p>六年后，海牙国际法院的一项里程碑式裁决为各国就气候损害相互起诉扫清了道路。</p>
+<p><button class="play-button sentence" id="s-00-16-02-198" data-start="00:16:02,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clarity for them is a base where we can stand and more considered global action can go, and the fight is not ending here.</p>
+<p>对他们来说，明确性是我们立足的基础，也是更审慎的全球行动的基础，而斗争并未就此结束。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959029" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-10-265" data-start="00:16:10,265" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is just the beginning of something new.</p>
+<p>这只是新事物的开始。</p>
+<p><button class="play-button sentence" id="s-00-16-13-239" data-start="00:16:13,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what did what is considered to be the world's highest court have to say?</p>
+<p>那么，被视为世界最高法庭的国际法院说了什么？</p>
+<p><button class="play-button sentence" id="s-00-16-18-712" data-start="00:16:18,712" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It rejected the argument made by some richer countries that their commitments to existing international climate agreements were sufficient and stressed the duty of all countries to prevent significant harm to the environment.</p>
+<p>它驳斥了一些较富裕国家关于其对现有国际气候协议的承诺已足够的论点，并强调所有国家都有责任防止对环境造成重大损害。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208959007" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-32-578" data-start="00:16:32,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It said countries were also responsible for the actions of private companies and individuals under their jurisdiction.</p>
+<p>它表示，各国还应对其管辖范围内的私营公司和个人行为负责。</p>
+<p><button class="play-button sentence" id="s-00-16-39-207" data-start="00:16:39,207" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example, the impact of the emissions from the production of oil and gas failure to meet any of these responsibilities could result in legal action the court warned, potentially including financial compensation to other countries for the damage caused by climate impacts.</p>
+<p>例如，石油和天然气生产排放的影响未能履行这些责任可能导致法律诉讼，法院警告称，可能包括向其他国家支付因气候影响造成的损害的赔偿。</p>
+<p><button class="play-button sentence" id="s-00-16-59-113" data-start="00:16:59,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the court's opinion is not binding and it acknowledged that working out who caused climate impacts could prove very difficult.</p>
+<p>但法院的意见不具约束力，并承认确定谁造成了气候影响可能非常困难。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958970" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-09-354" data-start="00:17:09,354" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nevertheless, some legal experts said it was a victory for climate vulnerable nations.</p>
+<p>尽管如此，一些法律专家表示，这是气候脆弱国家的胜利。</p>
+<p><button class="play-button sentence" id="s-00-17-16-108" data-start="00:17:16,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a legal precedent that will be developed in litigation in lawsuits in domestic courts.</p>
+<p>这是一个将在国内法院诉讼中发展的法律先例。</p>
+<p><button class="play-button sentence" id="s-00-17-23-900" data-start="00:17:23,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It sets the beat for new legislation for action from governments and also from corporations that know their obligations and know what happens if those obligations are not met.</p>
+<p>它为政府和企业的新立法和行动奠定了基础，这些企业和政府知道自己的义务，也知道如果不履行这些义务会发生什么。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958944" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-35-886" data-start="00:17:35,886" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The BBC understands the first case using the opinion could be brought as soon as next week.</p>
+<p>BBC了解到，首个利用该意见的案件可能最早于下周提起。</p>
+<p><button class="play-button sentence" id="s-00-17-43-027" data-start="00:17:43,027" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just in rolat, BBC News.</p>
+<p>BBC新闻，刚刚收到的消息。</p>
+<p><button class="play-button sentence" id="s-00-17-46-920" data-start="00:17:46,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump has been holding in AI summit here in Washington.</p>
+<p>特朗普总统在华盛顿举行人工智能峰会。</p>
+<p><button class="play-button sentence" id="s-00-17-49-988" data-start="00:17:49,988" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been explaining the administration's new artificial intelligence blueprint that aims to loosen environmental rules for AI data centers and expand AI exports.</p>
+<p>他一直在解释政府的新人工智能蓝图，该蓝图旨在放宽人工智能数据中心的环境规则并扩大人工智能出口。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-58-803" data-start="00:17:58,803" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House as a president will also sign several executive orders to promote quote global dominance in the AI race.</p>
+<p>白宫表示，总统还将签署几项行政命令，以促进在人工智能竞赛中的“全球主导地位”。</p>
+<p><button class="play-button sentence" id="s-00-18-05-671" data-start="00:18:05,671" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier I spoke with Owen Daniels, Associate Director of Analysis at the Center for Security and Emerging Technology.</p>
+<p>早些时候，我与安全与新兴技术中心的分析副主任欧文·丹尼尔斯进行了交谈。</p>
+<p><button class="play-button sentence" id="s-00-18-12-920" data-start="00:18:12,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First of all, what do you think of this action plan, the executive orders that the president is introducing?</p>
+<p>首先，您如何看待这一行动计划，即总统正在推出的行政命令？</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958901" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-18-495" data-start="00:18:18,495" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen criticism already that this is simply deregulating the industry.</p>
+<p>我们已经看到批评称这只是放松行业监管。</p>
+<p><button class="play-button sentence" id="s-00-18-24-200" data-start="00:18:24,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, hi, Simea. Thanks for having me.</p>
+<p>是的，嗨，西米亚。谢谢邀请我。</p>
+<p><button class="play-button sentence" id="s-00-18-26-793" data-start="00:18:26,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So looking at this from the perspective of an AI policy researcher, I think there are aspects of the action plan that many of us actually see as quite promising in terms of recommendations that we've previously made to the government.</p>
+<p>因此，从人工智能政策研究人员的角度来看，我认为该行动计划的某些方面实际上是我们许多人认为相当有希望的，就我们之前向政府提出的建议而言。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958878" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-41-335" data-start="00:18:41,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think investing in the kind of open AI model ecosystem, which the US has not done to the extent that it might compare to countries like China is one kind of strength that we've seen in the plans so far.</p>
+<p>因此，我认为投资于开放人工智能模型生态系统是美国尚未做到与中国等国家相媲美的程度，这是我们在计划中看到的优势之一。</p>
+<p><button class="play-button sentence" id="s-00-18-54-440" data-start="00:18:54,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another is building an AI evaluation ecosystem, which I think many of us researchers recognize as being important for developing kind of control robustness in terms of the AI systems that the government tries to use.</p>
+<p>另一个是建立人工智能评估生态系统，我认为我们许多研究人员认为这对于政府在尝试使用的人工智能系统中发展控制稳健性很重要。</p>
+<p><button class="play-button sentence" id="s-00-19-09-273" data-start="00:19:09,273" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then finally, developing a workforce that's capable and ready for the challenges posed by AI as a major part of the action plan.</p>
+<p>最后，开发一支能够并准备好应对人工智能挑战的劳动力是该行动计划的主要部分。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-17-229" data-start="00:19:17,229" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think from that perspective, those are bullet points that ring pretty true to AI policy researchers.</p>
+<p>因此，我认为从这个角度来看，这些要点对人工智能政策研究人员来说相当真实。</p>
+<p><button class="play-button sentence" id="s-00-19-24-183" data-start="00:19:24,183" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the major implementation here or the major challenge here rather is going to be implementation.</p>
+<p>我认为这里的主要实施或主要挑战将是实施。</p>
+<p><button class="play-button sentence" id="s-00-19-30-366" data-start="00:19:30,366" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> AI policy doesn't happen without people.</p>
+<p>人工智能政策离不开人。</p>
+<p><button class="play-button sentence" id="s-00-19-32-819" data-start="00:19:32,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think you're seeing that science policy doesn't necessarily happen in a vacuum.</p>
+<p>我认为您看到科学政策并不一定在真空中发生。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958822" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-37-792" data-start="00:19:37,792" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are kind of tensions and trade-offs between cutting funding, personnel, research and government expertise.</p>
+<p>在削减资金、人员、研究和政府专业知识之间存在某种紧张和权衡。</p>
+<p><button class="play-button sentence" id="s-00-19-44-904" data-start="00:19:44,904" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I think given that these are recommendations, we're going to have to see how the devil is in the details when it comes to the actual implementation.</p>
+<p>因此，鉴于这些是建议，我们将不得不看到在实际实施中细节决定成败。</p>
+<p><button class="play-button sentence" id="s-00-19-53-494" data-start="00:19:53,494" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What about the criticism from some AI experts who have said that this is again deregulating the industry to the benefit of big technology companies excuse me in the US.</p>
+<p>那么，一些人工智能专家的批评呢？他们说这再次放松了对行业的监管，有利于美国的大型科技公司。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958793" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-06-038" data-start="00:20:06,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yeah, and I think this is one of the areas where perhaps there's more continuity than we might expect.</p>
+<p>是的，我认为这是其中一个领域，可能比我们预期的连续性更强。</p>
+<p><button class="play-button sentence" id="s-00-20-13-670" data-start="00:20:13,670" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in the US, most of the kind of executive branch policy over the past decade across both Democratic and Republican administrations has been geared towards developing voluntary standards for the biggest AI companies in order to kind of not stand in the way of innovation by implementing guardrails.</p>
+<p>因此，在美国，过去十年中民主党和共和党政府的大部分行政部门政策都旨在为最大的人工智能公司制定自愿标准，以便通过实施护栏不妨碍创新。</p>
+<p><button class="play-button sentence" id="s-00-20-34-860" data-start="00:20:34,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think obviously rhetorically the administration has kind of adapted a very maximalist approach in talking about removing barriers to innovation.</p>
+<p>我认为显然在言辞上，政府在谈论消除创新障碍时采取了一种非常极端的做法。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-44-680" data-start="00:20:44,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think there's actually quite a bit of continuity when it comes to not trying to impose on companies into harness innovation.</p>
+<p>但我认为在不试图强加公司以利用创新方面实际上有相当多的连续性。</p>
+<p><button class="play-button sentence" id="s-00-20-52-710" data-start="00:20:52,710" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And again, like I think the rhetoric around some of the competition is perhaps higher than it was in the past, but there's probably a surprising amount of continuity to the casual observer.</p>
+<p>再次，我认为围绕某些竞争的言辞可能比过去更高，但对普通观察者来说，连续性可能令人惊讶。</p>
+<p><button class="play-button sentence" id="s-00-21-02-928" data-start="00:21:02,928" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the administration has also talked about a quote, woke bias in AI systems, something that they want to target.</p>
+<p>因此，政府还谈到了人工智能系统中的“觉醒偏见”，这是他们想要针对的目标。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958728" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-11-743" data-start="00:21:11,743" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First of all, can a bias be detected in AI systems?</p>
+<p>首先，人工智能系统中可以检测到偏见吗？</p>
+<p><button class="play-button sentence" id="s-00-21-15-495" data-start="00:21:15,495" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And are you worried about the regulation of that as regulation of speech?</p>
+<p>您是否担心将其作为言论监管进行监管？</p>
+<p><button class="play-button sentence" id="s-00-21-21-319" data-start="00:21:21,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, so bias is one of the kind of longstanding challenges in the AI industry.</p>
+<p>是的，因此偏见是人工智能行业中长期存在的挑战之一。</p>
+<p><button class="play-button sentence" id="s-00-21-27-000" data-start="00:21:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> AI models tend to produce results that are heavily linked to the data that they were trained on.</p>
+<p>人工智能模型倾向于产生与其训练数据紧密相关的结果。</p>
+<p><button class="play-button sentence" id="s-00-21-31-880" data-start="00:21:31,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so controlling bias has been our perpetual issue across AI developers.</p>
+<p>因此，控制偏见一直是人工智能开发人员面临的永恒问题。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958702" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-37-865" data-start="00:21:37,865" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think we don't want models that incorporate bias that's kind of politically oriented in either direction.</p>
+<p>我认为我们不希望模型包含任何政治方向的偏见。</p>
+<p><button class="play-button sentence" id="s-00-21-44-359" data-start="00:21:44,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the extent to which this administration is kind of used the language of woke makes this more of a political football.</p>
+<p>我认为政府在多大程度上使用“觉醒”语言使这更像是一个政治足球。</p>
+<p><button class="play-button sentence" id="s-00-21-52-111" data-start="00:21:52,111" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Perhaps then we would ideally like it to be when it comes to the conversation of bias in AI models.</p>
+<p>也许在讨论人工智能模型中的偏见时，我们理想情况下希望如此。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958682" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-57-995" data-start="00:21:57,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But ideally, we'd like to try to eradicate bias and models the extent that we can and make sure that they're not politically influenced in either direction.</p>
+<p>但理想情况下，我们希望尽可能消除模型中的偏见，并确保它们不受任何政治方向的影响。</p>
+<p><button class="play-button sentence" id="s-00-22-07-159" data-start="00:22:07,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A doctor in Los Angeles has pleaded guilty to four accounts of illegally distributing ketamine to the actor Matthew Perry, who was found dead at his home in October 2023, after accidentally overdosing on the drug.</p>
+<p>洛杉矶一名医生对四项非法向演员马修·佩里分发氯胺酮的指控表示认罪，马修·佩里于2023年10月因意外过量服用该药物在家中去世。</p>
+<p><button class="play-button sentence" id="s-00-22-21-012" data-start="00:22:21,012" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr. Salvador Passencia is the fourth of five people charged in connection to the friend's star's death to plead guilty.</p>
+<p>萨尔瓦多·帕森西亚医生是与《老友记》明星死亡有关的五人中第四个认罪的人。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958652" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-27-916" data-start="00:22:27,916" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak about this now with our correspondent Peter Bose is following the latest on this.</p>
+<p>现在让我们与正在跟踪最新消息的记者彼得·博斯谈谈此事。</p>
+<p><button class="play-button sentence" id="s-00-22-32-450" data-start="00:22:32,450" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Peter, it's good to see you. Tell us more about this guilty plea.</p>
+<p>彼得，很高兴见到你。告诉我们更多关于这一认罪协议的信息。</p>
+<p><button class="play-button sentence" id="s-00-22-36-935" data-start="00:22:36,935" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was a short court appearance and in fact a change from his plea about a month ago, we learned that he'd reached a plea agreement with prosecutors in return for some of the charges that he was facing being dropped.</p>
+<p>这是一次简短的法庭出庭，实际上与大约一个月前的认罪不同，我们了解到他已与检察官达成认罪协议，以换取撤销他面临的部分指控。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958629" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-50-980" data-start="00:22:50,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nevertheless, four charges, as you say, very serious charges of supplying Matthew Perry with ketamine in the months before he died.</p>
+<p>尽管如此，如你所说，四项指控非常严重，指控他在马修·佩里去世前几个月向他提供氯胺酮。</p>
+<p><button class="play-button sentence" id="s-00-22-59-960" data-start="00:22:59,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now his lawyers have pointed out that he wasn't treating the actor when he died and that the ketamine he's applied wasn't directly responsible for his death.</p>
+<p>现在他的律师指出，演员去世时他并未对其进行治疗，而且他提供的氯胺酮并非直接导致其死亡的原因。</p>
+<p><button class="play-button sentence" id="s-00-23-09-586" data-start="00:23:09,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nevertheless, ketamine is a substance that is normally used in a clinical situation as an anesthetic, sometimes used by people with anxiety or depression, but in the case of Matthew Perry, there was no medical justification.</p>
+<p>尽管如此，氯胺酮是一种通常在临床情况下用作麻醉剂的物质，有时被焦虑或抑郁症患者使用，但在马修·佩里的案例中，没有医学理由。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958595" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-24-905" data-start="00:23:24,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Dr. Passencia is facing potentially ten years on each count.</p>
+<p>帕森西亚医生每项指控可能面临十年监禁。</p>
+<p><button class="play-button sentence" id="s-00-23-28-787" data-start="00:23:28,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So when he's sentenced in December, potentially going to prison for up to 40 years.</p>
+<p>因此，当他于12月被判刑时，可能面临长达40年的监禁。</p>
+<p><button class="play-button sentence" id="s-00-23-33-643" data-start="00:23:33,643" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We mentioned that he's the fourth of five people charged in connection with Matthew Perry's death.</p>
+<p>我们提到他是与马修·佩里死亡有关的五人中第四个被指控的人。</p>
+<p><button class="play-button sentence" id="s-00-23-39-485" data-start="00:23:39,485" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What more do we know about how all of this came about?</p>
+<p>关于这一切是如何发生的，我们还知道什么？</p>
+<p><button class="play-button sentence" id="s-00-23-43-447" data-start="00:23:43,447" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we know and it's kind of like piecing together a jigsaw when we hear about each individual case.</p>
+<p>嗯，我们知道，当我们听到每个个案时，这有点像拼图。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958568" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-51-424" data-start="00:23:51,424" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as you say, four people, including this doctor have now pleaded guilty, a fifth has pleaded not guilty, a woman known according to prosecutors in Hollywood as the ketamine queen.</p>
+<p>如你所说，包括这名医生在内的四人现已认罪，第五人表示不认罪，一名被好莱坞检察官称为“氯胺酮女王”的女子。</p>
+<p><button class="play-button sentence" id="s-00-24-02-365" data-start="00:24:02,365" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is a trial that will go ahead next month.</p>
+<p>该审判将于下月进行。</p>
+<p><button class="play-button sentence" id="s-00-24-05-608" data-start="00:24:05,608" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the bigger picture here is the damaging use of ketamine by people at home.</p>
+<p>但更大的图景是家庭中氯胺酮的有害使用。</p>
+<p><button class="play-button sentence" id="s-00-24-10-726" data-start="00:24:10,726" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A problem in this city of Los Angeles, but indeed around the country and in a statement released by the lawyers of Dr. Passencia.</p>
+<p>这是洛杉矶市的一个问题，但实际上是全国性的问题，帕森西亚医生的律师在发布的声明中也提到了这一点。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958541" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-18-564" data-start="00:24:18,564" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He alluded to this. And I just quote you what he said.</p>
+<p>他提到了这一点。我引用他的话。</p>
+<p><button class="play-button sentence" id="s-00-24-21-545" data-start="00:24:21,545" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he hopes that this case will serve as a warning to the medical professionals.</p>
+<p>他说他希望此案能对医疗专业人员起到警示作用。</p>
+<p><button class="play-button sentence" id="s-00-24-26-599" data-start="00:24:26,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he said lead to stricter oversight for the rapidly growing out home ketamine industry.</p>
+<p>他还表示，这将导致对迅速发展的家庭氯胺酮行业进行更严格的监督。</p>
+<p><button class="play-button sentence" id="s-00-24-33-140" data-start="00:24:33,140" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Peter Boes joining us from Los Angeles. Thank you so much for joining us tonight.</p>
+<p>好的，彼得·博斯从洛杉矶加入我们。非常感谢您今晚的参与。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-40-179" data-start="00:24:40,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, a federal judge has ordered the release of Kilmar, Abu-Gha'r-Sea from detention while awaiting trial on smuggling charges.</p>
+<p>现在，一名联邦法官下令在等待走私指控审判期间释放基尔马尔·阿布-加尔-西。</p>
+<p><button class="play-button sentence" id="s-00-24-49-415" data-start="00:24:49,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes as a district judge issued a temporary restraining order that will prevent immigration enforcement agents from deporting him to a third country.</p>
+<p>此前，一名地区法官发布了一项临时限制令，将阻止移民执法官员将其驱逐到第三国。</p>
+<p><button class="play-button sentence" id="s-00-24-57-891" data-start="00:24:57,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If proceedings for deportation to a third country are initiated, authorities must provide 72 hours notice to Abu-Gha'r-Sea and his lawyers to ensure he is given due process.</p>
+<p>如果启动将其驱逐到第三国的程序，当局必须提前72小时通知阿布-加尔-西及其律师，以确保他获得正当程序。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958488" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-11-480" data-start="00:25:11,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, that is our program at this hour.</p>
+<p>好的，这就是我们本小时的节目。</p>
+<p><button class="play-button sentence" id="s-00-25-12-975" data-start="00:25:12,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we just want to bring you the very latest.</p>
+<p>但我们只想为您带来最新消息。</p>
+<p><button class="play-button sentence" id="s-00-25-14-512" data-start="00:25:14,512" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also on our website, BBC.com slash news.</p>
+<p>您也可以在我们的网站BBC.com/news上查看。</p>
+<p><button class="play-button sentence" id="s-00-25-17-253" data-start="00:25:17,253" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have seen more than 108 agencies as we have said who are warning that starvation is spreading in Gaza.</p>
+<p>正如我们所说，我们已经看到超过108个机构警告称加沙的饥饿正在蔓延。</p>
+<p><button class="play-button sentence" id="s-00-25-23-913" data-start="00:25:23,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As we know, those eight agencies have said that people are, quote, wasting away in Gaza.</p>
+<p>如我们所知，这八个机构表示，人们“在加沙日渐消瘦”。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958470" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-29-720" data-start="00:25:29,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We should say Israel, which controls all of the entry of supplies into the territory, has rejected the statement from these organizations and accused them of serving the propaganda of Hamas.</p>
+<p>我们应该指出，控制该地区所有物资进入的以色列拒绝了这些组织的声明，并指责他们为哈马斯的宣传服务。</p>
+<p><button class="play-button sentence" id="s-00-25-40-548" data-start="00:25:40,548" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But doctors with that order, save the children and Oxfam are among the signatories here saying that their colleagues and people they serve are starving and have no access to aid, to medical supplies and to food.</p>
+<p>但该命令的签署方包括拯救儿童组织和乐施会的医生，他们表示他们的同事和他们服务的人正在挨饿，无法获得援助、医疗物资和食物。</p>
+<p><button class="play-button sentence" id="s-00-25-53-800" data-start="00:25:53,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will, of course, continue to follow this story for you at the top of the next hour.</p>
+<p>当然，我们将在下一小时开始时继续为您跟踪这一故事。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KU8TzZE68/?t=-2208958441" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-58-564" data-start="00:25:58,564" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For all of us here in Washington, thank you so much for watching BBC News and do stay with us.</p>
+<p>对于我们在华盛顿的所有人，非常感谢您观看BBC新闻，请继续关注我们。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
