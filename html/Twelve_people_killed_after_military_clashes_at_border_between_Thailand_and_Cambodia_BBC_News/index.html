@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Twelve people killed after military clashes at border between Thailand and Cambodia | BBC News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fighting has erupted between Thailand and Cambodia, escalating a long-standing border dispute, resulting in 12 deaths and mutual military actions, including airstrikes and rocket attacks, with both countries closing borders and evacuating civilians.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Twelve people killed after military clashes at border between Thailand and Cambodia | BBC News</h1>
+<p>【BBC News 20250725 泰国与柬埔寨边境军事冲突致12人死亡】</p>
+<p>Summary:
+Fighting has erupted between Thailand and Cambodia, escalating a long-standing border dispute, resulting in 12 deaths and mutual military actions, including airstrikes and rocket attacks, with both countries closing borders and evacuating civilians.</p>
+<p>摘要：
+泰国与柬埔寨爆发冲突，长期边境争端升级，导致12人死亡，双方采取包括空袭和火箭弹袭击在内的军事行动，两国关闭边境并疏散平民。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-240" data-start="00:00:00,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're with BBC News.</p>
+<p>这里是BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-00-01-326" data-start="00:00:01,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fighting has broken out between Thailand and Cambodia in a dramatic escalation of a border dispute that's been simmering for several months.</p>
+<p>泰国与柬埔寨爆发冲突，持续数月的边境争端急剧升级。</p>
+<p><button class="play-button sentence" id="s-00-00-08-731" data-start="00:00:08,731" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai health minister says at least 11 civilians and one soldier have been killed so far in the clashes.</p>
+<p>泰国卫生部长表示，冲突已造成至少11名平民和1名士兵死亡。</p>
+<p><button class="play-button sentence" id="s-00-00-15-136" data-start="00:00:15,136" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thailand has used fighter jets to bomb targets across the border while Cambodia has fired artillery and rockets into Thailand.</p>
+<p>泰国出动战斗机越境轰炸目标，柬埔寨则向泰国发射火炮和火箭弹。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959976" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-23-024" data-start="00:00:23,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai authorities say all checkpoints between the two countries have been closed.</p>
+<p>泰国当局称，两国间所有检查站均已关闭。</p>
+<p><button class="play-button sentence" id="s-00-00-32-960" data-start="00:00:32,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thailand has ordered the evacuation of nearby val villages on its side of the border.</p>
+<p>泰国已下令疏散边境附近的村庄。</p>
+<p><button class="play-button sentence" id="s-00-00-37-374" data-start="00:00:37,374" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Wednesday, Bangkok announced it was expelling Cambodia's ambassador and was withdrawing its own envoy from Ponen.</p>
+<p>周三，曼谷宣布驱逐柬埔寨大使并撤回驻波贝的使节。</p>
+<p><button class="play-button sentence" id="s-00-00-44-116" data-start="00:00:44,116" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thailand's foreign ministry has been holding a news conference about the incident.</p>
+<p>泰国外交部就此事举行新闻发布会。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959951" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-48-517" data-start="00:00:48,517" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's hear some of what the spokesperson had to say.</p>
+<p>以下是发言人的部分表态。</p>
+<p><button class="play-button sentence" id="s-00-00-51-920" data-start="00:00:51,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Royal Thai government urges Cambodia to cease its repeated act which constitutes severe violations of international law.</p>
+<p>泰王国政府敦促柬埔寨停止其屡次违反国际法的行为。</p>
+<p><button class="play-button sentence" id="s-00-01-01-884" data-start="00:01:01,884" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Such actions fundamentally contradict the principles of good neighborly relations and good faith and will further undermine Cambodia's reputation and credibility on the global stage.</p>
+<p>此类行为严重违背睦邻友好与诚信原则，将进一步损害柬埔寨的国际声誉与信誉。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959924" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-15-760" data-start="00:01:15,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've got some live pictures coming to us.</p>
+<p>我们收到一些现场画面。</p>
+<p><button class="play-button sentence" id="s-00-01-17-078" data-start="00:01:17,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sir, we understand there will be another briefing to the media about the situation uh with Thailand sealing its border with Cambodia after those military clashes have killed at least 12 people.</p>
+<p>据悉，泰国将在军事冲突致12人死亡后封锁柬泰边境，并将向媒体通报最新情况。</p>
+<p><button class="play-button sentence" id="s-00-01-27-272" data-start="00:01:27,272" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, more details coming into us there from the uh on this story with Cambodia accusing has been accused of firing rockets into a Thai village and attacking a hospital while Thailand has carried out air strikes on Cambodian military targets.</p>
+<p>柬埔寨被指控向泰国村庄发射火箭弹并袭击医院，泰国则对柬埔寨军事目标实施空袭。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-44-704" data-start="00:01:44,704" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cambodia's Prime Minister Hun Manet issued a statement on Facebook saying Cambodia has always adeared to a stance of resolving issues peacefully.</p>
+<p>柬埔寨首相洪玛奈在脸书发文称，柬埔寨一贯坚持和平解决问题的立场。</p>
+<p><button class="play-button sentence" id="s-00-01-54-818" data-start="00:01:54,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, in this case, we have no choice but to respond with armed force against this armed invasion.</p>
+<p>但在此情况下，我们不得不以武力回击武装入侵。</p>
+<p><button class="play-button sentence" id="s-00-02-00-325" data-start="00:02:00,325" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When I speak to Panisa Emotra, who's with the BBC's Thai service, she joins us live from Bangkok.</p>
+<p>BBC泰语频道记者帕妮莎·艾莫特拉从曼谷为我们带来实时报道。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-05-759" data-start="00:02:05,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, bring us up to date with the with the very latest on this.</p>
+<p>请介绍最新进展。</p>
+<p><button class="play-button sentence" id="s-00-02-09-598" data-start="00:02:09,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah. So at the moments the both country and both official are trying to talk into the ceasefire but in practicals we still seeing tensions especially with both military still deploy uh weapons and it still results in 12 tai that that include 8 years old.</p>
+<p>目前两国官方正试图协商停火，但实际局势仍紧张，双方军队仍在部署武器，冲突已致12人死亡，包括一名8岁儿童。</p>
+<p><button class="play-button sentence" id="s-00-02-27-766" data-start="00:02:27,766" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Give us a bit of the background to to how we've ended up in a conflict situation what appears to be so quickly.</p>
+<p>请简述冲突迅速升级的背景。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959845" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-34-800" data-start="00:02:34,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah. So the whole conflict has spanned between the last two or three months.</p>
+<p>这场冲突已持续两三个月。</p>
+<p><button class="play-button sentence" id="s-00-02-38-818" data-start="00:02:38,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It stem from just open fires and that resulted in one death in um in Cambodian soldiers and ever since then there has been dispute.</p>
+<p>起初仅是交火导致一名柬埔寨士兵死亡，此后争端不断。</p>
+<p><button class="play-button sentence" id="s-00-02-47-072" data-start="00:02:47,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some period of time it has been lower in term of vi in term of violence.</p>
+<p>期间暴力程度时有缓和。</p>
+<p><button class="play-button sentence" id="s-00-02-50-900" data-start="00:02:50,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But now this morning it has been reported that Cambodians opened fire rocket into Thailand and then um the escalations of today has been just like going down.</p>
+<p>但今晨柬埔寨向泰国发射火箭弹，局势急剧恶化。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959818" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-01-540" data-start="00:03:01,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have seen an attack that hit a hospital in Thailand.</p>
+<p>泰国一家医院遭袭。</p>
+<p><button class="play-button sentence" id="s-00-03-05-680" data-start="00:03:05,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Villager have to evacuate.</p>
+<p>村民被迫撤离。</p>
+<p><button class="play-button sentence" id="s-00-03-07-321" data-start="00:03:07,321" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have talked to one of the of the of the villagers who live in the borders area that they have to evacuate their family member because they could hear the bomb.</p>
+<p>一位边境村民告诉我们，他们因听到爆炸声不得不疏散家人。</p>
+<p><button class="play-button sentence" id="s-00-03-16-239" data-start="00:03:16,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They could see the black smoke and they have to go to the evacuation um centers.</p>
+<p>他们目睹黑烟滚滚，被迫前往疏散中心。</p>
+<p><button class="play-button sentence" id="s-00-03-20-800" data-start="00:03:20,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And unfortunately we have reported 12 dead.</p>
+<p>不幸的是，死亡人数已达12人。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959796" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-23-623" data-start="00:03:23,623" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what is the danger of this turning into a bigger uh conflict between the two countries?</p>
+<p>冲突演变为更大规模战争的风险有多大？</p>
+<p><button class="play-button sentence" id="s-00-03-29-029" data-start="00:03:29,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah. So we have talked to analysts and both from the Cambodians analysts and from the Thai analysts they have the bottom line that they want it to be a ceasefire but it's really hard they seen it's really hard to to come in term together because both countries still kind of operate with the military red and then it's really hard because um they mentioned that the military want to assert the power and they want to of course protect the border of each country.</p>
+<p>分析师们认为双方虽希望停火，但因军队仍处戒备状态且意图宣示主权，达成协议极为困难。</p>
+<p><button class="play-button sentence" id="s-00-03-55-122" data-start="00:03:55,122" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So at the moment there's stills not clear path of how both country can come to term to talk to each other.</p>
+<p>目前两国尚无明确对话路径。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959758" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-01-360" data-start="00:04:01,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> China has explicit their um feeling that they wanted to be dissolved.</p>
+<p>中方明确表示希望争端化解。</p>
+<p><button class="play-button sentence" id="s-00-04-05-452" data-start="00:04:05,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Analysts also suggest that maybe the third um the third party the negotiators or the mediator which in the past we have AEN trying to act in that role but still it doesn't yield result yet.</p>
+<p>分析师建议第三方调解，此前东盟曾尝试斡旋但未奏效。</p>
+<p><button class="play-button sentence" id="s-00-04-16-624" data-start="00:04:16,624" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we still wait and see who will help um the country to dissolve this dispute.</p>
+<p>我们仍在观望谁能协助解决争端。</p>
+<p><button class="play-button sentence" id="s-00-04-22-539" data-start="00:04:22,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in the meantime, how is this being felt by ordinary people in in both countries?</p>
+<p>目前两国普通民众作何反应？</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959733" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-26-959" data-start="00:04:26,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What what's their reaction to the way this has uh escalated so quickly?</p>
+<p>他们对冲突迅速升级有何感受？</p>
+<p><button class="play-button sentence" id="s-00-04-31-918" data-start="00:04:31,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for the normal public, this has been a shock for both country.</p>
+<p>民众对冲突感到震惊。</p>
+<p><button class="play-button sentence" id="s-00-04-35-120" data-start="00:04:35,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many analysts and many correspondents in the areas or in the region didn't really assume that these disputes will will grow to this side, especially for the public.</p>
+<p>许多分析师和记者未预料到争端会恶化至此。</p>
+<p><button class="play-button sentence" id="s-00-04-45-419" data-start="00:04:45,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um two months ago I went into the border area they were building bunker but there's still hope that um the tensions would not go back in like 10 years ago when there were bomb from Cambodia dropped in Thailand but now it's all shatters their hope is all shattered because the tension is already there the fighting the death is already there so people are really panic as I mentioned we talk that people school has been shot student people's older people have to evacuate to like um the facility so fear is stills still hanging around.</p>
+<p>两月前边境还在修建防空洞，民众曾希望局势不会重现十年前柬埔寨向泰国投弹的紧张状态，但如今希望破灭，恐慌蔓延，学校遭袭，老人儿童被迫撤离至避难设施。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1AEb2zZENA/?t=-2208959684" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-15-918" data-start="00:05:15,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vanessa Marsha, thank you very much indeed for bringing us update there on that story.</p>
+<p>感谢瓦妮莎·玛莎带来的最新报道。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
