@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Warnings of malnutrition in Gaza as Donald Trump says Hamas won’t agree ceasefire | BBC News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The UN warns of Gaza's collapsing humanitarian system, with severe malnutrition among children and pregnant women. France plans to recognize Palestinian statehood, drawing US and Israeli criticism, while Trump claims Hamas seeks conflict over ceasefire.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Warnings of malnutrition in Gaza as Donald Trump says Hamas won’t agree ceasefire | BBC News</h1>
+<p>【BBC News 20250726 联合国警告加沙人道主义体系崩溃，儿童和孕妇严重营养不良｜特朗普称哈马斯拒绝停火协议】</p>
+<p>Summary:
+The UN warns of Gaza's collapsing humanitarian system, with severe malnutrition among children and pregnant women. France plans to recognize Palestinian statehood, drawing US and Israeli criticism, while Trump claims Hamas seeks conflict over ceasefire.</p>
+<p>摘要：
+联合国警告加沙人道主义体系崩溃，儿童和孕妇严重营养不良。法国计划承认巴勒斯坦国家地位，引发美以谴责，特朗普称哈马斯无意停火而欲求战。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 26 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-240" data-start="00:00:00,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN says the entire humanitarian system is collapsing.</p>
+<p>联合国称整个人道主义体系正在崩溃。</p>
+<p><button class="play-button sentence" id="s-00-00-04-438" data-start="00:00:04,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The charity MSF says one in four young children and pregnant women are now malnourished.</p>
+<p>慈善机构无国界医生表示，四分之一的幼儿和孕妇目前营养不良。</p>
+<p><button class="play-button sentence" id="s-00-00-10-237" data-start="00:00:10,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pictures, the accounts on the ground are harrowing.</p>
+<p>现场的画面和描述令人痛心。</p>
+<p><button class="play-button sentence" id="s-00-00-13-322" data-start="00:00:13,322" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll talk to the World Food Program here in a moment or two.</p>
+<p>稍后我们将与世界粮食计划署对话。</p>
+<p><button class="play-button sentence" id="s-00-00-16-933" data-start="00:00:16,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But diplomatically, there's also been a major development today with Emanuel Macron saying France will recognize Palestinian statehood in September, the first major Western nation to actually do that.</p>
+<p>但外交上今日也有重大进展，马克龙宣布法国将于9月承认巴勒斯坦国家地位，成为首个这样做的西方大国。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-28-971" data-start="00:00:28,971" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United States says the French decision is reckless.</p>
+<p>美国称法国的决定鲁莽。</p>
+<p><button class="play-button sentence" id="s-00-00-32-158" data-start="00:00:32,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel claims it rewards terror.</p>
+<p>以色列指责这是在奖励恐怖主义。</p>
+<p><button class="play-button sentence" id="s-00-00-34-413" data-start="00:00:34,413" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One other important development in the last few minutes.</p>
+<p>过去几分钟内另一重要进展。</p>
+<p><button class="play-button sentence" id="s-00-00-37-053" data-start="00:00:37,053" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump has just said that Hamas doesn't want a deal and wants to die as he updated journalists on the latest ceasefire talks.</p>
+<p>特朗普向记者更新停火谈判进展时称，哈马斯无意协议且"求死"。</p>
+<p><button class="play-button sentence" id="s-00-00-45-613" data-start="00:00:45,613" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, let's start this hour with this report from Joe Inwood.</p>
+<p>接下来请听乔·英伍德的本小时报道。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959950" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-49-840" data-start="00:00:49,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of Yazan's life has been war.</p>
+<p>亚赞的幼年几乎都在战争中度过。</p>
+<p><button class="play-button sentence" id="s-00-00-52-504" data-start="00:00:52,504" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 2-year-old lives in the Al-Shhati refugee camp in the north of the Gaza Strip.</p>
+<p>这个两岁男孩住在加沙地带北部的海滩难民营。</p>
+<p><button class="play-button sentence" id="s-00-00-56-991" data-start="00:00:56,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His parents say all they can afford are a few vegetables boiled in water.</p>
+<p>其父母称仅能靠清水煮野菜维生。</p>
+<p><button class="play-button sentence" id="s-00-01-01-777" data-start="00:01:01,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't care if the war continues, but let the borders open.</p>
+<p>"我不在乎战争是否持续，但请开放边境。</p>
+<p><button class="play-button sentence" id="s-00-01-05-793" data-start="00:01:05,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let the aid in for the children.</p>
+<p>让援助物资进来救救孩子们。</p>
+<p><button class="play-button sentence" id="s-00-01-08-062" data-start="00:01:08,062" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we leave this boy, maybe soon he will slip through our fingers.</p>
+<p>如果放弃这个孩子，他可能很快会从我们指间消逝。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959927" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-12-659" data-start="00:01:12,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe he will die and we didn't manage to do anything for him.</p>
+<p>或许他会死去，而我们无能为力。"</p>
+<p><button class="play-button sentence" id="s-00-01-15-916" data-start="00:01:15,916" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At a nearby hospital, they see more evidence of what the World Health Organization has called man-made mass starvation caused by the blockade on Gaza.</p>
+<p>附近医院呈现更多证据，印证世卫组织所称加沙封锁导致的"人为大规模饥荒"。</p>
+<p><button class="play-button sentence" id="s-00-01-26-057" data-start="00:01:26,057" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Doctors here say they see children too weak to cry or move.</p>
+<p>医生表示接诊的儿童虚弱到无法哭泣或移动。</p>
+<p><button class="play-button sentence" id="s-00-01-32-159" data-start="00:01:32,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is very catastrophic in Gaza from bad to worse.</p>
+<p>加沙局势灾难性恶化。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959904" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-35-597" data-start="00:01:35,597" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Unfortunately, we had five deaths at the hospital because of malnutrition.</p>
+<p>不幸的是，医院已有五人死于营养不良。</p>
+<p><button class="play-button sentence" id="s-00-01-39-980" data-start="00:01:39,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By comparison to other months, in May we had no deaths.</p>
+<p>相比其他月份，五月零死亡。</p>
+<p><button class="play-button sentence" id="s-00-01-44-116" data-start="00:01:44,116" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In June, we had two deaths.</p>
+<p>六月两人死亡。</p>
+<p><button class="play-button sentence" id="s-00-01-45-863" data-start="00:01:45,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are not done with July and we have already had five deaths.</p>
+<p>七月尚未结束，死亡已达五人。</p>
+<p><button class="play-button sentence" id="s-00-01-49-481" data-start="00:01:49,481" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of those five, we had one case that died because of a lack of medicine.</p>
+<p>其中一例因缺药死亡。</p>
+<p><button class="play-button sentence" id="s-00-01-54-799" data-start="00:01:54,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some small amount of aid is getting through, but it's far from enough.</p>
+<p>少量援助物资进入，但远远不足。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959880" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-59-248" data-start="00:01:59,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The daily search for food gets more desperate.</p>
+<p>每日觅食越发绝望。</p>
+<p><button class="play-button sentence" id="s-00-02-02-347" data-start="00:02:02,347" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has previously accused Hamas of looting supplies and blames the UN for failing to distribute the aid that does get through, something aid agencies and the UN squarely reject.</p>
+<p>以色列曾指控哈马斯劫掠物资，并指责联合国分发不力，遭援助机构和联合国断然否认。</p>
+<p><button class="play-button sentence" id="s-00-02-15-212" data-start="00:02:15,212" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is in the context of an ever worsening humanitarian crisis that France has said it will formally recognize a Palestinian state.</p>
+<p>正是在人道危机持续恶化背景下，法国宣布将正式承认巴勒斯坦国。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959857" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-22-914" data-start="00:02:22,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Macron wrote on social media that we must build the state of Palestine, ensure its viability, and ensure that by accepting its demilitarization and fully recognizing Israel, it contributes to the security of all the Middle East.</p>
+<p>马克龙总统在社媒发文称："必须建立巴勒斯坦国，确保其生存能力，通过接受非军事化并完全承认以色列，为整个中东安全作出贡献。"</p>
+<p><button class="play-button sentence" id="s-00-02-37-592" data-start="00:02:37,592" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is no alternative.</p>
+<p>"别无选择。"</p>
+<p><button class="play-button sentence" id="s-00-02-39-399" data-start="00:02:39,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> France's decision increases pressure on the UK government to follow suit.</p>
+<p>法国的决定加大英国政府跟进压力。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959835" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-44-935" data-start="00:02:44,935" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not just protesters outside Parliament who think that now is the moment to recognize the state of Palestine.</p>
+<p>不仅议会外的抗议者认为此刻应承认巴勒斯坦国。</p>
+<p><button class="play-button sentence" id="s-00-02-50-942" data-start="00:02:50,942" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many Labor MPs want to see it happen, as does the influential Foreign Affairs Select Committee.</p>
+<p>众多工党议员及有影响力的外交事务专责委员会也持此立场。</p>
+<p><button class="play-button sentence" id="s-00-02-57-206" data-start="00:02:57,206" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government says it will act, but when it will have the most impact.</p>
+<p>政府称将采取行动，但需选择最具影响力的时机。</p>
+<p><button class="play-button sentence" id="s-00-03-03-199" data-start="00:03:03,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any decision to recognize a Palestinian state would put the UK not just at odds with Israel, who call it a reward for terror, but also the United States, the one country able to force Israel's hand.</p>
+<p>承认巴勒斯坦国的决定将使英国不仅与以色列（称此举奖励恐怖主义）对立，还将与美国——唯一能施压以色列的国家——产生分歧。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959804" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-15-360" data-start="00:03:15,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All the while, the suffering in Gaza continues with an end to the fighting looking as elusive as ever.</p>
+<p>与此同时，加沙的苦难持续，战事终结仍遥遥无期。</p>
+<p><button class="play-button sentence" id="s-00-03-21-680" data-start="00:03:21,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Inwood, BBC News.</p>
+<p>BBC新闻，乔·英伍德报道。</p>
+<p><button class="play-button sentence" id="s-00-03-23-294" data-start="00:03:23,294" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, in the last few minutes, President Trump has been talking to journalists.</p>
+<p>就在过去几分钟，特朗普总统向记者发表讲话。</p>
+<p><button class="play-button sentence" id="s-00-03-28-347" data-start="00:03:28,347" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He took off on Air Force One for a trip to Scotland when he was leaving the White House.</p>
+<p>他乘坐空军一号离开白宫前往苏格兰时。</p>
+<p><button class="play-button sentence" id="s-00-03-33-738" data-start="00:03:33,738" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president answered questions from journalists on a number of topics, including Gaza.</p>
+<p>总统回答了记者关于加沙等话题的提问。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959780" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-39-783" data-start="00:03:39,783" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a listen.</p>
+<p>请听报道。</p>
+<p><button class="play-button sentence" id="s-00-03-41-016" data-start="00:03:41,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Gaza in negotiations?</p>
+<p>"关于加沙谈判？</p>
+<p><button class="play-button sentence" id="s-00-03-43-360" data-start="00:03:43,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, Gaza.</p>
+<p>是的，加沙。</p>
+<p><button class="play-button sentence" id="s-00-03-44-381" data-start="00:03:44,381" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh they pulled out of Gaza.</p>
+<p>呃他们退出了加沙谈判。</p>
+<p><button class="play-button sentence" id="s-00-03-46-639" data-start="00:03:46,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They pulled out in terms of negotiating.</p>
+<p>他们在谈判方面退出了。</p>
+<p><button class="play-button sentence" id="s-00-03-49-280" data-start="00:03:49,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was uh too bad.</p>
+<p>这非常糟糕。</p>
+<p><button class="play-button sentence" id="s-00-03-51-335" data-start="00:03:51,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hamas Hamas didn't really want to make a deal.</p>
+<p>哈马斯哈马斯并非真心想要协议。</p>
+<p><button class="play-button sentence" id="s-00-03-54-639" data-start="00:03:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they want to die and it's very very bad.</p>
+<p>我认为他们想死，这非常非常糟糕。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959761" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-58-216" data-start="00:03:58,216" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it got it got to be to a point where you're going to have to finish the job.</p>
+<p>事态已发展到必须彻底解决问题的地步。</p>
+<p><button class="play-button sentence" id="s-00-04-03-360" data-start="00:04:03,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They really uh they they asked for things.</p>
+<p>他们确实呃他们提出要求。</p>
+<p><button class="play-button sentence" id="s-00-04-05-960" data-start="00:04:05,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't forget we got a lot of hostages out.</p>
+<p>别忘了我们救出了许多人质。</p>
+<p><button class="play-button sentence" id="s-00-04-08-347" data-start="00:04:08,347" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So now we're down to the final hostages and they know what happens after you get the final hostages and basically because of that they really didn't want to make a deal.</p>
+<p>现在只剩最后一批人质，他们清楚救出最后人质后的后果，正因如此他们根本不想达成协议。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959741" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-18-730" data-start="00:04:18,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I saw that.</p>
+<p>我明白这点。</p>
+<p><button class="play-button sentence" id="s-00-04-19-397" data-start="00:04:19,397" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they pulled out and they're going to have to fight and they're going to have to clean it up.</p>
+<p>所以他们退出谈判，必须继续战斗并解决问题。</p>
+<p><button class="play-button sentence" id="s-00-04-23-490" data-start="00:04:23,490" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're going to have to get rid of it.</p>
+<p>必须彻底清除他们。"</p>
+<p><button class="play-button sentence" id="s-00-04-26-879" data-start="00:04:26,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we'll play you more of that interview a little later, but I'm joined now by a correspondence from Jerusalem, Emir Nada, and also our political correspondent, Nick Erley, who's at Westminster.</p>
+<p>稍后我们将播放更多采访内容，现在连线耶路撒冷记者埃米尔·纳达和威斯敏斯特政治记者尼克·厄雷。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959722" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-37-472" data-start="00:04:37,472" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak to Emir first of all and Emir tell me the latest first of all on the humanitarian situation.</p>
+<p>首先请埃米尔介绍最新人道主义状况。</p>
+<p><button class="play-button sentence" id="s-00-04-46-399" data-start="00:04:46,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, as you said, it's a catastrophic situation in addition to the images we're seeing more and more coming out of Gaza of children in the most distressing of states.</p>
+<p>如您所言，局势灾难性恶化，加沙传出的儿童惨状画面日益增多。</p>
+<p><button class="play-button sentence" id="s-00-04-56-849" data-start="00:04:56,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh obviously acutely malnourished, distended bellies, uh bones bare.</p>
+<p>呃明显严重营养不良，腹部肿胀，呃骨瘦如柴。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-635" data-start="00:05:01,635" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're also seeing the facts being reported from some of the international uh aid agencies on the ground like Doctors Without Borders who today said that a quarter of the baby of the children that they're seeing and pregnant mothers and breastfeeding mothers are acutely malnourished.</p>
+<p>无国界医生等国际援助机构报告称，接诊儿童中四分之一及孕产妇哺乳期妇女严重营养不良。</p>
+<p><button class="play-button sentence" id="s-00-05-17-067" data-start="00:05:17,067" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they also talk about something we've been seeing widely in Gaza, which is uh that staff members, perhaps people who work for international aid organizations who could be considered amongst the salaried of Gaza, they're they're struggling to eat more than once every day or two.</p>
+<p>他们还提到加沙普遍现象：国际援助组织雇员（属当地有薪阶层）也难以保证每日一餐。</p>
+<p><button class="play-button sentence" id="s-00-05-32-435" data-start="00:05:32,435" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And with the the Doctors Without Borders statement didn't mince its word words.</p>
+<p>无国界医生的声明直言不讳。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959662" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-37-390" data-start="00:05:37,390" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It accuses Israel of using starvation deliberately as a weapon of war.</p>
+<p>指控以色列蓄意将饥荒作为战争武器。</p>
+<p><button class="play-button sentence" id="s-00-05-42-236" data-start="00:05:42,236" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has been rejecting these claims.</p>
+<p>以色列一直否认这些指控。</p>
+<p><button class="play-button sentence" id="s-00-05-44-815" data-start="00:05:44,815" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been saying that it's Hamas who's obstructing the delivery of aid.</p>
+<p>称哈马斯阻挠援助物资运送。</p>
+<p><button class="play-button sentence" id="s-00-05-48-099" data-start="00:05:48,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says that international organizations are not picking up the aid that's there.</p>
+<p>指责国际组织未接收现有援助物资。</p>
+<p><button class="play-button sentence" id="s-00-05-52-499" data-start="00:05:52,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And uh those international organizations, we've been speaking to to them over the past week.</p>
+<p>呃过去一周我们采访这些国际组织。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959642" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-57-237" data-start="00:05:57,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've been telling us that they are trying to get that aid when they do manage to get the permissions from the Israeli military to deliver it.</p>
+<p>他们表示虽获以军许可运送物资，却频遭枪击。</p>
+<p><button class="play-button sentence" id="s-00-06-04-886" data-start="00:06:04,886" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It frequently comes under uh Israeli gunfire.</p>
+<p>物资常遭遇呃以军枪击。</p>
+<p><button class="play-button sentence" id="s-00-06-07-653" data-start="00:06:07,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And just today, we've had a a new statement from the uh Israeli government saying that they are looking now to allow aid drops into Gaza.</p>
+<p>今日以政府新声明称考虑允许空投援助至加沙。</p>
+<p><button class="play-button sentence" id="s-00-06-16-293" data-start="00:06:16,293" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, planes flying over, dropping uh parachuted crates of aid.</p>
+<p>即飞机空投物资箱。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-20-079" data-start="00:06:20,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen this before in the war, and it's been chaotic and it's been deadly, crushing people, landing into the sea where people uh we've seen reports of people drowning, and it's seen by many in the humanitarian uh community as a sign of failure when the uh borders to Gaza are right there.</p>
+<p>此前空投混乱致命，曾砸死民众或坠海致溺亡。人道界认为当加沙边境近在咫尺时，空投实属失败标志。</p>
+<p><button class="play-button sentence" id="s-00-06-36-488" data-start="00:06:36,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it is indeed easy to distribute aid.</p>
+<p>分发援助本应容易。</p>
+<p><button class="play-button sentence" id="s-00-06-38-665" data-start="00:06:38,665" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They just need to have the aid get in in as much of a free and open way as possible.</p>
+<p>只需尽可能自由开放地让物资进入。"</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959595" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-44-240" data-start="00:06:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll be back to you in a second, but let's go to Westminster and to Nick.</p>
+<p>稍后继续，现在转至威斯敏斯特的尼克。</p>
+<p><button class="play-button sentence" id="s-00-06-47-321" data-start="00:06:47,321" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Nick, two questions, which is there was that phone call that Karma is going to have with Emanuel Macarron and the German Chancellor.</p>
+<p>尼克，两个问题：卡梅伦将与马克龙及德国总理通话。</p>
+<p><button class="play-button sentence" id="s-00-06-55-383" data-start="00:06:55,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any word coming out of that and the growing frustration from the British government?</p>
+<p>有何进展？英国政府日益沮丧？</p>
+<p><button class="play-button sentence" id="s-00-07-00-131" data-start="00:07:00,131" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How much pressure now on K Starmmer to follow Emanuel Macron in terms of statehood and recognition?</p>
+<p>斯塔默面临多大压力需效仿马克龙承认巴勒斯坦国？</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959573" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-06-345" data-start="00:07:06,345" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think that call's actually happened yet, Matthew.</p>
+<p>马修，我认为通话尚未进行。</p>
+<p><button class="play-button sentence" id="s-00-07-09-486" data-start="00:07:09,486" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there is clearly growing frustration in the UK.</p>
+<p>但英国显然愈发沮丧。</p>
+<p><button class="play-button sentence" id="s-00-07-12-720" data-start="00:07:12,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The statement the prime minister put out last night was pretty strongly worded.</p>
+<p>首相昨晚声明措辞强硬。</p>
+<p><button class="play-button sentence" id="s-00-07-18-399" data-start="00:07:18,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the question is whether that is going to be enough.</p>
+<p>问题在于这是否足够。</p>
+<p><button class="play-button sentence" id="s-00-07-21-115" data-start="00:07:21,115" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think there's there is increasing pressure on the UK to do what France did and say that it's going to formally recognize a state of Palestine.</p>
+<p>我认为英国面临越来越大压力需效仿法国正式承认巴勒斯坦国。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959550" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-29-970" data-start="00:07:29,970" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of that pressure comes simply because such a close ally in France made that decision itself.</p>
+<p>部分压力源于亲密盟友法国已作出决定。</p>
+<p><button class="play-button sentence" id="s-00-07-35-760" data-start="00:07:35,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of it comes from opposition parties.</p>
+<p>部分来自反对党。</p>
+<p><button class="play-button sentence" id="s-00-07-38-319" data-start="00:07:38,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of it comes from Labor MPs and cabinet ministers who have been bringing this up with the prime minister urging him to be more proactive.</p>
+<p>部分来自敦促首相更积极的工党议员和内阁大臣。</p>
+<p><button class="play-button sentence" id="s-00-07-46-168" data-start="00:07:46,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I don't think that it's going to be imminent for the UK.</p>
+<p>但我不认为英国会立即行动。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959530" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-49-954" data-start="00:07:49,954" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> two reasons.</p>
+<p>两个原因。</p>
+<p><button class="play-button sentence" id="s-00-07-51-044" data-start="00:07:51,044" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Firstly, Karma has been working and walking sorry a bit of a diplomatic tightroppe.</p>
+<p>首先，卡梅伦正走外交钢丝。</p>
+<p><button class="play-button sentence" id="s-00-07-55-907" data-start="00:07:55,907" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's trying to keep Europe happy, but he's trying to also stay as close as he can to President Trump.</p>
+<p>既要让欧洲满意，又试图尽可能靠近特朗普总统。</p>
+<p><button class="play-button sentence" id="s-00-08-01-299" data-start="00:08:01,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we know that President Trump's administration has been critical of the French for saying that they were going to recognize a Palestinian state.</p>
+<p>我们知道特朗普政府批评法国承认巴勒斯坦国的决定。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959510" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-09-634" data-start="00:08:09,634" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Given that Kier Star will be meeting President Trump, we think in the next few days in Scotland, I think it's unlikely that he'd want to do this now.</p>
+<p>鉴于斯塔默几天后将在苏格兰会见特朗普总统，我认为他现在不太可能这样做。</p>
+<p><button class="play-button sentence" id="s-00-08-16-925" data-start="00:08:16,925" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Second reason, though, is a practical one.</p>
+<p>第二个是现实原因。</p>
+<p><button class="play-button sentence" id="s-00-08-19-609" data-start="00:08:19,609" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've heard from cabinet ministers in the UK that they're just not sure that this would make that much of a difference.</p>
+<p>英国内阁大臣表示不确定此举能有多大改变。</p>
+<p><button class="play-button sentence" id="s-00-08-24-660" data-start="00:08:24,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They want there to be a ceasefire than more talks about the future before they would recognize a Palestinian state, thinking that it's more likely to happen in that situation than simply saying at the UN that that's what they want to happen.</p>
+<p>他们希望先停火再谈未来，认为比在联合国空谈更可能实现巴勒斯坦建国。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959480" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-39-615" data-start="00:08:39,615" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember, of course, the France decision is a big one diplomatically, but in practical terms, it doesn't actually change anything.</p>
+<p>当然，法国的决定外交上重大，但实质上未改变现状。</p>
+<p><button class="play-button sentence" id="s-00-08-47-449" data-start="00:08:47,449" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yes, absolutely more pressure on the UK government and as we see more of the horrifying images that have been coming out of Gaza in the last few days.</p>
+<p>是的，英国政府绝对面临更大压力，尤其近日加沙骇人画面不断传出。</p>
+<p><button class="play-button sentence" id="s-00-08-56-248" data-start="00:08:56,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that pressure will continue but no sign yet that K star is prepared to make that leap.</p>
+<p>我认为压力将持续，但尚无迹象表明斯塔默准备迈出这一步。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959457" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-02-317" data-start="00:09:02,317" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nick, thank you.</p>
+<p>尼克，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-09-03-309" data-start="00:09:03,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go back to Jerusalem.</p>
+<p>回到耶路撒冷。</p>
+<p><button class="play-button sentence" id="s-00-09-04-948" data-start="00:09:04,948" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emier Benjamin Netanyahu said about an hour or so ago that we are now considering alternative options with the US to bring our hostages home.</p>
+<p>约一小时前内塔尼亚胡称正与美国考虑其他方案营救人质。</p>
+<p><button class="play-button sentence" id="s-00-09-16-126" data-start="00:09:16,126" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you think he means by that?</p>
+<p>你认为他何意？</p>
+<p><button class="play-button sentence" id="s-00-09-20-879" data-start="00:09:20,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not clear what he might mean.</p>
+<p>尚不明确。</p>
+<p><button class="play-button sentence" id="s-00-09-22-432" data-start="00:09:22,432" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen throughout the course of the war uh occasional special forces operations by Israeli troops in Gaza to try and retrieve hostages.</p>
+<p>战争期间以军偶尔在加沙开展特种部队营救行动。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959429" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-30-823" data-start="00:09:30,823" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes they've been successful.</p>
+<p>有时成功。</p>
+<p><button class="play-button sentence" id="s-00-09-32-567" data-start="00:09:32,567" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes they've led to the death of hostages.</p>
+<p>有时导致人质死亡。</p>
+<p><button class="play-button sentence" id="s-00-09-34-713" data-start="00:09:34,713" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not clear if that's what he means.</p>
+<p>不确定他是否指此。</p>
+<p><button class="play-button sentence" id="s-00-09-36-632" data-start="00:09:36,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, it's very hard for us to divine what's actually going on in these negotiations.</p>
+<p>很难推测谈判实况。</p>
+<p><button class="play-button sentence" id="s-00-09-42-080" data-start="00:09:42,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've obviously seen the US and the Israeli delegations being withdrawn with the US side saying that Hamas isn't acting in good faith.</p>
+<p>美以代表团已撤离，美方称哈马斯无诚意。</p>
+<p><button class="play-button sentence" id="s-00-09-49-658" data-start="00:09:49,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we've also been speaking to Hamas officials that have told us that mediators have said to them that the talks haven't collapsed and that mediators have promised that the Israeli delegation will return back.</p>
+<p>但哈马斯官员告知调解人称谈判未破裂，以代表团将返回。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959399" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-00-799" data-start="00:10:00,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So some are wondering is this a negotiation tactic?</p>
+<p>有人质疑这是否谈判策略？</p>
+<p><button class="play-button sentence" id="s-00-10-03-448" data-start="00:10:03,448" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is this an attempt to buy time until the recess of the Israeli parliament uh in about a week?</p>
+<p>是否为拖延时间至以议会约一周后休会？</p>
+<p><button class="play-button sentence" id="s-00-10-09-839" data-start="00:10:09,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh as I say, it's very hard for us to define what uh is actually the strategy here on the Israeli and American uh part.</p>
+<p>呃如我所言，难以界定美以方的实际策略。</p>
+<p><button class="play-button sentence" id="s-00-10-16-969" data-start="00:10:16,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to leave it there, but thanks for that update and thanks to Nick there at Westminster as well.</p>
+<p>就此打住，感谢更新及威斯敏斯特的尼克。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959377" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-22-449" data-start="00:10:22,449" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak live on the program to Anto Renard who's the country director for the West Bank and Gaza at the World Food Program and thank you so much for giving us your time.</p>
+<p>现在连线世界粮食计划署西岸和加沙国别主任安托·雷纳德，感谢抽空。</p>
+<p><button class="play-button sentence" id="s-00-10-32-657" data-start="00:10:32,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ana said a little earlier today, the entire humanitarian system is collapsing.</p>
+<p>安娜稍早称整个人道主义体系正在崩溃。</p>
+<p><button class="play-button sentence" id="s-00-10-38-436" data-start="00:10:38,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that what you're seeing yourself?</p>
+<p>您所见是否如此？</p>
+<p><button class="play-button sentence" id="s-00-10-42-240" data-start="00:10:42,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The challenge that we have as the wolfu program and many humanitarian is that we need to resort to actually have our assistance going through our distribution systems.</p>
+<p>粮食计划署等人道机构面临的挑战是需通过自有系统分发援助。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959347" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-52-393" data-start="00:10:52,393" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we have now is that we realize that some of the basics are actually still not yet met.</p>
+<p>目前基本需求仍未满足。</p>
+<p><button class="play-button sentence" id="s-00-10-58-958" data-start="00:10:58,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We managed to push more trucks within Gaza but not resorting to our distribution.</p>
+<p>我们设法让更多卡车进入加沙，但无法通过自有系统分发。</p>
+<p><button class="play-button sentence" id="s-00-11-04-298" data-start="00:11:04,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If I want to have a bit of a let's say brighter light out there is that the fact that now a price of 1 kg of wheat flour is around 10 to 15 pounds.</p>
+<p>如果说还有一丝希望的话，那就是现在1公斤小麦粉的价格约为10到15英镑。</p>
+<p><button class="play-button sentence" id="s-00-11-14-523" data-start="00:11:14,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It used to be 3 4 days ago around 70 yet it's not sufficient.</p>
+<p>三四天前价格还是70英镑左右，但这仍然不够。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959319" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-20-847" data-start="00:11:20,847" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need actually to go at scale and reach people where they are.</p>
+<p>我们实际上需要大规模行动，将物资送到人们所在的地方。</p>
+<p><button class="play-button sentence" id="s-00-11-24-558" data-start="00:11:24,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is really one of the most dreadful period we've ever faced in Gaza.</p>
+<p>这确实是我们在加沙经历过的最可怕的时期之一。</p>
+<p><button class="play-button sentence" id="s-00-11-29-120" data-start="00:11:29,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now we're actually seeing people dying of starvation.</p>
+<p>现在我们真的看到有人饿死。</p>
+<p><button class="play-button sentence" id="s-00-11-33-155" data-start="00:11:33,155" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The worry is that the numbers will accelerate very very rapidly from now.</p>
+<p>令人担忧的是，从现在开始数字会非常迅速地加速上升。</p>
+<p><button class="play-button sentence" id="s-00-11-39-733" data-start="00:11:39,733" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that what you fear?</p>
+<p>这是你所担心的吗？</p>
+<p><button class="play-button sentence" id="s-00-11-41-919" data-start="00:11:41,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we fear is that if we don't manage to have at least a 100 trucks and I'm so sorry to speak about trucks getting every day into Gaza, we will not be able to avert what is the current situation.</p>
+<p>我们担心的是，如果我们不能确保每天至少有100辆卡车进入加沙——我很抱歉总是谈论卡车——我们将无法避免当前的局势。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959284" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-55-278" data-start="00:11:55,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is why we've been asking for it to have proper safe passages, making sure that like it was in the beginning of this week where our team was taking more than 20 hours just to bring 19 trucks.</p>
+<p>这就是为什么我们一直要求建立安全通道，确保像本周初那样，我们的团队花了20多个小时才运进19辆卡车。</p>
+<p><button class="play-button sentence" id="s-00-12-08-240" data-start="00:12:08,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need to be able to have this flow getting into Gaza, avert the situation as it is and resort to what was our distribution system.</p>
+<p>我们需要让物资持续进入加沙，避免局势恶化，并恢复我们原有的分发系统。</p>
+<p><button class="play-button sentence" id="s-00-12-17-310" data-start="00:12:17,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were efficient.</p>
+<p>它们曾是高效的。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959261" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-18-330" data-start="00:12:18,330" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were actually reaching the right people and making sure that you don't have what you're currently seeing in Gaza.</p>
+<p>它们确实能将物资送到需要的人手中，确保不会出现现在加沙的情况。</p>
+<p><button class="play-button sentence" id="s-00-12-24-459" data-start="00:12:24,459" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was listening to David Mensah, a spokesman for Benjamin Netanyahu, talking to the BBC earlier today.</p>
+<p>我今天早些时候听了本杰明·内塔尼亚胡的发言人戴维·门萨接受BBC的采访。</p>
+<p><button class="play-button sentence" id="s-00-12-31-053" data-start="00:12:31,053" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He made two points.</p>
+<p>他提出了两点。</p>
+<p><button class="play-button sentence" id="s-00-12-32-368" data-start="00:12:32,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said that aid trucks are already in Gaza, hundreds of them, and they haven't been picked up by the aid organizations.</p>
+<p>他说已有数百辆援助卡车在加沙，但援助组织没有去接收。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959240" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-39-786" data-start="00:12:39,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also accused the UN of working with Hamas.</p>
+<p>他还指责联合国与哈马斯合作。</p>
+<p><button class="play-button sentence" id="s-00-12-43-278" data-start="00:12:43,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you hear statements like that, just just give me your response.</p>
+<p>听到这样的言论，请谈谈你的回应。</p>
+<p><button class="play-button sentence" id="s-00-12-49-278" data-start="00:12:49,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, actually, we know how to do our job.</p>
+<p>事实上，我们知道如何完成我们的工作。</p>
+<p><button class="play-button sentence" id="s-00-12-51-368" data-start="00:12:51,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know how to reach people.</p>
+<p>我们知道如何接触到需要帮助的人。</p>
+<p><button class="play-button sentence" id="s-00-12-52-799" data-start="00:12:52,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've proven it during the ceasefire.</p>
+<p>我们在停火期间已经证明了这一点。</p>
+<p><button class="play-button sentence" id="s-00-12-54-878" data-start="00:12:54,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were part of the solution where hostages were being released and us actually holding 35% of all the assistance that get into Gaza.</p>
+<p>我们是人质获释解决方案的一部分，并实际负责进入加沙的所有援助物资的35%。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959215" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-04-145" data-start="00:13:04,145" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What I can tell you is that we're working in endless manner.</p>
+<p>我可以告诉你的是，我们正在不懈地工作。</p>
+<p><button class="play-button sentence" id="s-00-13-08-046" data-start="00:13:08,046" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just over the last three days, we've actually pushed 80 trucks on a daily basis.</p>
+<p>就在过去三天，我们每天实际运送了80辆卡车的物资。</p>
+<p><button class="play-button sentence" id="s-00-13-14-103" data-start="00:13:14,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were not able to do that for the last few days, weeks.</p>
+<p>前几天、前几周我们无法做到这一点。</p>
+<p><button class="play-button sentence" id="s-00-13-17-918" data-start="00:13:17,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are able actually to bring these goods in.</p>
+<p>我们现在确实能够将这些物资运进来。</p>
+<p><button class="play-button sentence" id="s-00-13-21-260" data-start="00:13:21,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have none of our food being rotten.</p>
+<p>我们的食物没有腐烂的。</p>
+<p><button class="play-button sentence" id="s-00-13-23-836" data-start="00:13:23,836" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We actually are and we are already asking to the Israeli to replenish our food on the different platforms.</p>
+<p>我们实际上已经在请求以色列补充我们在不同平台上的食物储备。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959189" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-30-827" data-start="00:13:30,827" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-13-31-094" data-start="00:13:31,094" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we are able to do our job, everything can be facilitated.</p>
+<p>当我们能够完成工作时，一切都会变得顺利。</p>
+<p><button class="play-button sentence" id="s-00-13-35-278" data-start="00:13:35,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is what needs to be done.</p>
+<p>这是需要做的事情。</p>
+<p><button class="play-button sentence" id="s-00-13-36-720" data-start="00:13:36,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two final questions.</p>
+<p>最后两个问题。</p>
+<p><button class="play-button sentence" id="s-00-13-37-935" data-start="00:13:37,935" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first briefly if you would.</p>
+<p>第一个问题请简短回答。</p>
+<p><button class="play-button sentence" id="s-00-13-39-987" data-start="00:13:39,987" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh the IDF now talking about allowing air drops.</p>
+<p>以色列国防军现在讨论允许空投。</p>
+<p><button class="play-button sentence" id="s-00-13-43-598" data-start="00:13:43,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that just another distraction?</p>
+<p>这只是另一种干扰吗？</p>
+<p><button class="play-button sentence" id="s-00-13-45-748" data-start="00:13:45,748" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that what is required to actually get to grips with the enormity of what we're seeing?</p>
+<p>这是否是应对当前严峻局势所需的措施？</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959167" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-52-799" data-start="00:13:52,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Airrop are not a solution.</p>
+<p>空投不是解决方案。</p>
+<p><button class="play-button sentence" id="s-00-13-54-993" data-start="00:13:54,993" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you think of the fact that we managed to have 80 trucks just on average over the last few days, the tonnage is massive.</p>
+<p>如果你考虑到我们过去几天平均每天运送80辆卡车的物资，吨位已经非常巨大。</p>
+<p><button class="play-button sentence" id="s-00-14-03-896" data-start="00:14:03,896" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air drop will not be a solution.</p>
+<p>空投不会成为解决方案。</p>
+<p><button class="play-button sentence" id="s-00-14-05-711" data-start="00:14:05,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The second one that you have is a real challenge.</p>
+<p>第二个问题是真正的挑战。</p>
+<p><button class="play-button sentence" id="s-00-14-08-078" data-start="00:14:08,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember that you have only 12% of the Gaza strip which by the way are safe zone and where most of the population are.</p>
+<p>请记住，加沙地带只有12%是安全区，而且大部分人口集中在那里。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959144" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-15-820" data-start="00:14:15,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How an air drop will be done where there's such small space safe space for population high probability you will put put some of these population at risk with drops.</p>
+<p>在如此狭小的安全空间进行空投，很可能会让部分民众面临风险。</p>
+<p><button class="play-button sentence" id="s-00-14-27-465" data-start="00:14:27,465" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A final question because aid agencies like yourselves have been making this point with ever growing alarm for weeks and months and you've been ignored.</p>
+<p>最后一个问题：像你们这样的援助机构数周数月来一直以日益增长的警报提出这一点，但一直被忽视。</p>
+<p><button class="play-button sentence" id="s-00-14-37-423" data-start="00:14:37,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just give me an idea because you also have a continuation of the military strikes.</p>
+<p>请谈谈你的想法，因为军事打击仍在继续。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959118" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-41-589" data-start="00:14:41,589" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have a continuation of vast amounts of people being forcibly displaced emotionally for you.</p>
+<p>大量民众被迫流离失所的情况也在持续，这对你们来说情感上难以承受。</p>
+<p><button class="play-button sentence" id="s-00-14-48-797" data-start="00:14:48,797" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where does that leave you?</p>
+<p>这让你处于什么状态？</p>
+<p><button class="play-button sentence" id="s-00-14-50-991" data-start="00:14:50,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Angry, frustrated, helpless.</p>
+<p>愤怒、沮丧、无助。</p>
+<p><button class="play-button sentence" id="s-00-14-54-105" data-start="00:14:54,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that the biggest for me is that our staff are at risk whenever we deliver.</p>
+<p>对我来说最严重的是，我们的工作人员每次运送物资时都面临危险。</p>
+<p><button class="play-button sentence" id="s-00-15-01-664" data-start="00:15:01,664" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just on Sunday, we're again shot at.</p>
+<p>就在周日，我们再次遭到枪击。</p>
+<p><button class="play-button sentence" id="s-00-15-04-654" data-start="00:15:04,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had one of our armored vehicle that was again targeted while people were rushing and we were under gunfire.</p>
+<p>我们的一辆装甲车再次成为目标，当时人们正在匆忙行动，而我们处于枪火之下。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959088" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-11-596" data-start="00:15:11,596" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is really my frustration is that not only people are at risk in Gaza, but our own staff, that is just not acceptable.</p>
+<p>真正让我沮丧的是，不仅加沙民众面临危险，我们自己的工作人员也是，这是不可接受的。</p>
+<p><button class="play-button sentence" id="s-00-15-20-679" data-start="00:15:20,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Antoan Renard, we have to leave it there, but thank you for breaking away from your work to talk to us here at BBC News.</p>
+<p>安托万·雷纳德，我们不得不就此结束，但感谢你抽空接受BBC新闻的采访。</p>
+<p><button class="play-button sentence" id="s-00-15-26-951" data-start="00:15:26,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We appreciate it.</p>
+<p>我们非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-15-28-078" data-start="00:15:28,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-15-28-898" data-start="00:15:28,898" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks to you.</p>
+<p>也谢谢你。</p>
+<p><button class="play-button sentence" id="s-00-15-30-000" data-start="00:15:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we're hearing there the latest on the aid situation.</p>
+<p>我们刚刚听到了关于援助情况的最新消息。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959067" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-32-525" data-start="00:15:32,525" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were also hearing earlier from Donald Trump talking to reporters.</p>
+<p>早些时候我们还听到了唐纳德·特朗普对记者的讲话。</p>
+<p><button class="play-button sentence" id="s-00-15-36-182" data-start="00:15:36,182" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was asked a variety of questions.</p>
+<p>他被问到了各种问题。</p>
+<p><button class="play-button sentence" id="s-00-15-38-049" data-start="00:15:38,049" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let me play you a little more because he was actually asked about aid distribution in Gaza.</p>
+<p>让我再播放一段，因为他确实被问到了加沙的援助分发问题。</p>
+<p><button class="play-button sentence" id="s-00-15-42-829" data-start="00:15:42,829" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a listen to his answer.</p>
+<p>听听他的回答。</p>
+<p><button class="play-button sentence" id="s-00-15-44-259" data-start="00:15:44,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. President, do you speak to Netanyahu about allowing aid drops in Gaza from Arab countries?</p>
+<p>总统先生，你是否与内塔尼亚胡谈过允许阿拉伯国家向加沙空投援助？</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959050" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-49-093" data-start="00:15:49,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I speak to him, but I can't tell you what I spoke to him about.</p>
+<p>我和他谈过，但我不能告诉你我们谈了什么。</p>
+<p><button class="play-button sentence" id="s-00-15-51-592" data-start="00:15:51,592" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it was sort of disappointing.</p>
+<p>但有点令人失望。</p>
+<p><button class="play-button sentence" id="s-00-15-53-440" data-start="00:15:53,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although I told you, I mean, I told you.</p>
+<p>虽然我告诉过你，我是说，我告诉过你。</p>
+<p><button class="play-button sentence" id="s-00-15-56-716" data-start="00:15:56,716" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you get down to those last 20 hostages, you get down to that last 10 or 20, it's going to be very hard for Hamas to make a deal because they lose their shield.</p>
+<p>当人质只剩下最后20人、10人或20人时，哈马斯将很难达成协议，因为他们失去了盾牌。</p>
+<p><button class="play-button sentence" id="s-00-16-06-611" data-start="00:16:06,611" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They lose their cover.</p>
+<p>他们失去了掩护。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959032" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-07-839" data-start="00:16:07,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got a lot of them out.</p>
+<p>我们救出了很多人。</p>
+<p><button class="play-button sentence" id="s-00-16-09-616" data-start="00:16:09,616" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of them.</p>
+<p>很多人。</p>
+<p><button class="play-button sentence" id="s-00-16-10-403" data-start="00:16:10,403" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We took a lot of bodies out, too.</p>
+<p>我们也运出了很多遗体。</p>
+<p><button class="play-button sentence" id="s-00-16-11-913" data-start="00:16:11,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, so many of the parents said, "Please get my son's body back."</p>
+<p>你知道，很多父母说："请把我儿子的遗体带回来。"</p>
+<p><button class="play-button sentence" id="s-00-16-16-159" data-start="00:16:16,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're able to do that.</p>
+<p>我们能够做到这一点。</p>
+<p><button class="play-button sentence" id="s-00-16-17-236" data-start="00:16:17,236" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You got a lot of people out alive and people that are not alive, but it was very important to the parents to get their son back even though they knew their son was dead.</p>
+<p>你们救出了很多活着的人，也有已经去世的人，但对父母来说，即使知道儿子已经去世，能带回遗体也非常重要。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208959013" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-26-639" data-start="00:16:26,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that was Donald Trump.</p>
+<p>以上就是唐纳德·特朗普的讲话。</p>
+<p><button class="play-button sentence" id="s-00-16-27-874" data-start="00:16:27,874" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to take a short break.</p>
+<p>我们将短暂休息。</p>
+<p><button class="play-button sentence" id="s-00-16-29-785" data-start="00:16:29,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do stay with us in a moment or two.</p>
+<p>请稍后继续关注。</p>
+<p><button class="play-button sentence" id="s-00-16-31-958" data-start="00:16:31,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll get more reaction to what Emanuel Macron is saying, France recognizing Palestinian statethood from September.</p>
+<p>我们将就埃马纽埃尔·马克龙的言论——法国从9月起承认巴勒斯坦国——获取更多反应。</p>
+<p><button class="play-button sentence" id="s-00-16-39-294" data-start="00:16:39,294" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll talk live on the program to Mustafa Barguti waiting to talk to us there in Ramala.</p>
+<p>我们将与在拉马拉等待的穆斯塔法·巴尔古提进行节目直播连线。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1y3bdzWEq3/?t=-2208958996" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-43-839" data-start="00:16:43,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that interview is coming up next here on BBC News.</p>
+<p>接下来请继续关注BBC新闻的采访。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
