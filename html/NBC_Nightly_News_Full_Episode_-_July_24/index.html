@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>NBC Nightly News Full Episode - July 24</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tonight's episode covers the death of wrestling legend Hulk Hogan, a meeting between a top justice official and Jeffrey Epstein's accomplice, political tensions between President Trump and the Fed chair, the malnutrition crisis in Gaza, and a soldier's emotional homecoming after being blinded in war.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>NBC Nightly News Full Episode - July 24</h1>
+<p>【美国新闻NBC News 20250725 摔跤传奇胡克·霍根的去世｜司法部与爱泼斯坦同谋的会面｜特朗普总统与美联储主席的政治分歧】</p>
+<p>Summary:
+Tonight's episode covers the death of wrestling legend Hulk Hogan, a meeting between a top justice official and Jeffrey Epstein's accomplice, political tensions between President Trump and the Fed chair, the malnutrition crisis in Gaza, and a soldier's emotional homecoming after being blinded in war.</p>
+<p>摘要：
+本期节目报道了摔跤传奇胡克·霍根的去世、司法部高官与杰弗里·爱泼斯坦同谋的会面、特朗普总统与美联储主席的政治分歧、加沙的营养不良危机，以及一名在战争中失明的士兵感人归家的故事。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 34 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959998" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-359" data-start="00:00:01,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, the sudden death of an American icon and wrestling legend, Hulk Hogan.</p>
+<p>今晚，美国偶像和摔跤传奇胡克·霍根突然离世。</p>
+<p><button class="play-button sentence" id="s-00-00-06-400" data-start="00:00:06,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The shirt shredding giant that entertained millions the world over dying at a hospital in Florida.</p>
+<p>这位曾用撕碎T恤表演风靡全球的巨人在佛罗里达州一家医院去世。</p>
+<p><button class="play-button sentence" id="s-00-00-12-375" data-start="00:00:12,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll retrace his explosive rise between the turnbuckles to movies as Hulkamania took over.</p>
+<p>我们将追溯他在擂台间的爆红历程，以及"霍根狂热"席卷影坛的岁月。</p>
+<p><button class="play-button sentence" id="s-00-00-18-638" data-start="00:00:18,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An all-American persona in the ring and his battles outside of it.</p>
+<p>擂台上他是全美英雄，擂台下却争议不断。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959976" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-23-102" data-start="00:00:23,102" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His use of steroids and a sex tape scandal that turned into a landmark lawsuit.</p>
+<p>他承认使用类固醇，性爱录像带丑闻最终演变成标志性诉讼案。</p>
+<p><button class="play-button sentence" id="s-00-00-28-320" data-start="00:00:28,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> plus his dramatic entrance into the world of politics.</p>
+<p>以及他戏剧性涉足政坛的经历。</p>
+<p><button class="play-button sentence" id="s-00-00-32-142" data-start="00:00:32,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also breaking tonight, the deputy attorney general meeting with Jeffrey Epstein co-conspirator Galain Maxwell at the same time.</p>
+<p>今晚另一要闻：司法部副部长同时会见了杰弗里·爱泼斯坦的同谋吉斯莱恩·麦克斯韦。</p>
+<p><button class="play-button sentence" id="s-00-00-39-475" data-start="00:00:39,475" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump is under pressure about the handling of that case.</p>
+<p>特朗普总统因该案件的处理方式面临压力。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-43-099" data-start="00:00:43,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bank battle.</p>
+<p>央行之争。</p>
+<p><button class="play-button sentence" id="s-00-00-44-109" data-start="00:00:44,109" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The awkward photo op with the Fed chair as Jerome Powell and the president publicly disagree, correcting each other on live television.</p>
+<p>美联储主席鲍威尔与总统在直播中公开争执互相纠正，合影时气氛尴尬。</p>
+<p><button class="play-button sentence" id="s-00-00-53-254" data-start="00:00:53,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our team inside of Gaza documenting the dire starvation emergency.</p>
+<p>本台记者进入加沙记录严峻的饥荒危机。</p>
+<p><button class="play-button sentence" id="s-00-00-57-646" data-start="00:00:57,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The alarming images as the crisis deepens.</p>
+<p>随着危机加剧，画面触目惊心。</p>
+<p><button class="play-button sentence" id="s-00-01-00-533" data-start="00:01:00,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The children fighting for nutrition.</p>
+<p>儿童们正在为获取营养苦苦挣扎。</p>
+<p><button class="play-button sentence" id="s-00-01-02-992" data-start="00:01:02,992" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Idaho, the lead prosecutor in the Brian Cobberger case speaking to our Liz Kitz.</p>
+<p>爱达荷州，布莱恩·科伯格案的首席检察官接受本台记者莉兹·基茨采访。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959931" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-08-214" data-start="00:01:08,214" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What Cobberger said to a woman he met on a dating website about the scariest way to die involving the type of knife used in the murders.</p>
+<p>科伯格曾在交友网站对女性描述"最恐怖死法"，提及凶案中使用的同款刀具。</p>
+<p><button class="play-button sentence" id="s-00-01-17-717" data-start="00:01:17,717" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The cost of denial.</p>
+<p>拒绝的代价。</p>
+<p><button class="play-button sentence" id="s-00-01-19-071" data-start="00:01:19,071" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He went to a doctor's office for an injection and ended up being charged hospital prices.</p>
+<p>他前往诊所注射却被收取医院级别费用。</p>
+<p><button class="play-button sentence" id="s-00-01-24-719" data-start="00:01:24,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gotti Schwarz on the surprise facility fees showing up in more and more Americans bills.</p>
+<p>戈蒂·施瓦茨报道越来越多美国人账单上出现的意外设施费。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959909" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-30-319" data-start="00:01:30,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when her health kept her from her elementary school sendoff, her classmates, the community, even the high school marching band made a joyful noise for her return.</p>
+<p>当健康问题让她错过小学毕业典礼后，同学们、社区居民甚至高中军乐队用欢乐声响迎接她归来。</p>
+<p><button class="play-button sentence" id="s-00-01-40-846" data-start="00:01:40,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nightly News starts right now.</p>
+<p>《晚间新闻》现在开始。</p>
+<p><button class="play-button sentence" id="s-00-01-45-438" data-start="00:01:45,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is NBC Nightly News with Tom Yamz.</p>
+<p>这里是汤姆·亚马兹主持的NBC《晚间新闻》。</p>
+<p><button class="play-button sentence" id="s-00-01-52-319" data-start="00:01:52,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And good evening.</p>
+<p>晚上好。</p>
+<p><button class="play-button sentence" id="s-00-01-53-042" data-start="00:01:53,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, the death of a man known the world over who defined the face of wrestling.</p>
+<p>今晚，一位享誉全球、定义摔跤面貌的巨星陨落。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959882" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-57-584" data-start="00:01:57,584" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hulk Hogan, known for his shirt shredding, signature mustache, and muscles.</p>
+<p>胡克·霍根，以撕碎T恤、标志性胡须和肌肉闻名。</p>
+<p><button class="play-button sentence" id="s-00-02-02-473" data-start="00:02:02,473" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan skyrocketed to fame as pro wrestling took off in the 80s as he famously bodys slammed Andre the Giant.</p>
+<p>随着职业摔跤在80年代兴起，霍根因经典招式"背摔巨人安德烈"声名鹊起。</p>
+<p><button class="play-button sentence" id="s-00-02-08-956" data-start="00:02:08,956" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His showmanship skyrocketed to popularity and captured a generation with Hogan appearing in movies like Rocky 3 and even his own reality show, Hogan Knows Best.</p>
+<p>他的表演天赋使其成为文化现象，出演《洛奇3》等电影及真人秀《霍根一家亲》，影响一代人。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959860" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-19-800" data-start="00:02:19,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan became a fixture of Republican politics later in life, appearing at the Republican National Convention just last year.</p>
+<p>晚年他成为共和党政治常客，去年刚出席共和党全国代表大会。</p>
+<p><button class="play-button sentence" id="s-00-02-27-144" data-start="00:02:27,144" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the wrestle wrestler also played a role in bringing down the website Gawker after it posted graphic video of him.</p>
+<p>他还因八卦网站Gawker发布其私密视频提起诉讼，最终导致该网站破产。</p>
+<p><button class="play-button sentence" id="s-00-02-33-658" data-start="00:02:33,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan faced allegations of racism a decade ago in the WWE removing him from the Hall of Fame, but his apologies leading to a reinstatement in 2018.</p>
+<p>十年前他因种族主义言论被WWE除名，2018年道歉后恢复荣誉。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959836" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-43-014" data-start="00:02:43,014" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Joe Frier with more on his life and legacy.</p>
+<p>乔·弗莱尔将带来更多关于他生平和传奇的报道。</p>
+<p><button class="play-button sentence" id="s-00-02-46-800" data-start="00:02:46,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hulk Hogan is here.</p>
+<p>胡克·霍根在此。</p>
+<p><button class="play-button sentence" id="s-00-02-48-115" data-start="00:02:48,115" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hulk Hogan's here.</p>
+<p>胡克·霍根在此。</p>
+<p><button class="play-button sentence" id="s-00-02-49-439" data-start="00:02:49,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What Hulk Hogan created stretched far beyond a 20 by 20 foot wrestling ring.</p>
+<p>霍根创造的传奇远超20x20英尺的摔跤擂台。</p>
+<p><button class="play-button sentence" id="s-00-02-55-598" data-start="00:02:55,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What you going to do?</p>
+<p>你能奈我何？</p>
+<p><button class="play-button sentence" id="s-00-02-56-719" data-start="00:02:56,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hulkamomania will live forever.</p>
+<p>"霍根狂热"将永存。</p>
+<p><button class="play-button sentence" id="s-00-02-59-144" data-start="00:02:59,144" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what you going to do, brothers?</p>
+<p>兄弟们，你能奈我何？</p>
+<p><button class="play-button sentence" id="s-00-03-01-039" data-start="00:03:01,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A mania still alive today, even after word of his death.</p>
+<p>即便在他去世后，这种狂热至今未消。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959815" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-04-767" data-start="00:03:04,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police say they were called to his home in Clearwater, Florida just before 10:00 a.m.</p>
+<p>警方称上午10点前接到其佛罗里达清水市住宅的报警。</p>
+<p><button class="play-button sentence" id="s-00-03-09-598" data-start="00:03:09,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bravo.</p>
+<p>收到。</p>
+<p><button class="play-button sentence" id="s-00-03-10-341" data-start="00:03:10,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rescue 46, LR45, engine 46, cardiac arrest.</p>
+<p>救援46队、LR45、引擎46号，心脏骤停。</p>
+<p><button class="play-button sentence" id="s-00-03-14-316" data-start="00:03:14,316" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan, whose real name was Terry Blea, died at the hospital.</p>
+<p>本名特里·波利亚的霍根在医院去世。</p>
+<p><button class="play-button sentence" id="s-00-03-17-921" data-start="00:03:17,921" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are no signs of foul play or suspicious activity related to this call for service at this time.</p>
+<p>目前未发现与此次报警相关的犯罪或可疑活动迹象。</p>
+<p><button class="play-button sentence" id="s-00-03-23-003" data-start="00:03:23,003" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bursting on the scene in the 1980s, Hogan transformed pro wrestling using his mammoth biceps, what he called his 24-in pythons, to shred t-shirts and the competition, beating the Iron Chic for his first world title and bodys slamming the 500 lb Andre the Giant.</p>
+<p>80年代横空出世的霍根用他自称"24英寸巨蟒"的二头肌撕碎T恤和对手，击败"Iron Chic"获首个世界冠军，并背摔500磅的"巨人安德烈"，彻底改变职业摔跤。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959778" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-41-919" data-start="00:03:41,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan was unabashedly all-American, often speaking directly to kids.</p>
+<p>霍根毫不掩饰其全美英雄形象，常直接向孩子们喊话。</p>
+<p><button class="play-button sentence" id="s-00-03-46-912" data-start="00:03:46,912" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Say your prayers.</p>
+<p>念你的祷词。</p>
+<p><button class="play-button sentence" id="s-00-03-47-881" data-start="00:03:47,881" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eat your vitamins.</p>
+<p>吃你的维生素。</p>
+<p><button class="play-button sentence" id="s-00-03-48-799" data-start="00:03:48,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His appeal made him a cultural phenomenon.</p>
+<p>他的魅力使其成为文化现象。</p>
+<p><button class="play-button sentence" id="s-00-03-51-349" data-start="00:03:51,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm looking at the size of your arms.</p>
+<p>我看着你的手臂尺寸。</p>
+<p><button class="play-button sentence" id="s-00-03-53-285" data-start="00:03:53,285" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't believe this.</p>
+<p>我不敢相信。</p>
+<p><button class="play-button sentence" id="s-00-03-54-878" data-start="00:03:54,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wish I had anything that big.</p>
+<p>真希望我也有那么大的手臂。</p>
+<p><button class="play-button sentence" id="s-00-03-58-000" data-start="00:03:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He starred in movies.</p>
+<p>他主演多部电影。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959760" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-59-120" data-start="00:03:59,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thunder Lips is here.</p>
+<p>"雷霆之唇"在此。</p>
+<p><button class="play-button sentence" id="s-00-04-00-719" data-start="00:04:00,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Including Rocky 3.</p>
+<p>包括《洛奇3》。</p>
+<p><button class="play-button sentence" id="s-00-04-02-158" data-start="00:04:02,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm out of shape.</p>
+<p>我状态不佳。</p>
+<p><button class="play-button sentence" id="s-00-04-03-519" data-start="00:04:03,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Mr. Nanny.</p>
+<p>以及《超级保姆》。</p>
+<p><button class="play-button sentence" id="s-00-04-06-959" data-start="00:04:06,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Later broke into reality TV.</p>
+<p>后来进军真人秀。</p>
+<p><button class="play-button sentence" id="s-00-04-09-191" data-start="00:04:09,191" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The VH1 series Hogan Knows Best.</p>
+<p>VH1频道《霍根一家亲》。</p>
+<p><button class="play-button sentence" id="s-00-04-11-680" data-start="00:04:11,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every day it's drama.</p>
+<p>每天都是戏剧。</p>
+<p><button class="play-button sentence" id="s-00-04-13-113" data-start="00:04:13,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just ridiculous.</p>
+<p>太荒谬了。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-14-412" data-start="00:04:14,412" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were controversies.</p>
+<p>争议始终相伴。</p>
+<p><button class="play-button sentence" id="s-00-04-15-778" data-start="00:04:15,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan admitted to using steroids and in 2015 audio surfaced of him using racist slurs.</p>
+<p>霍根承认使用类固醇，2015年曝光其使用种族歧视言论的录音。</p>
+<p><button class="play-button sentence" id="s-00-04-22-060" data-start="00:04:22,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He apologized but was fired from WWE returning a few years later.</p>
+<p>他道歉后被WWE解雇，数年后回归。</p>
+<p><button class="play-button sentence" id="s-00-04-26-967" data-start="00:04:26,967" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also made headlines for a sex tape published by the media company Gawker.</p>
+<p>他还因八卦媒体Gawker发布其性爱录像带登上头条。</p>
+<p><button class="play-button sentence" id="s-00-04-31-625" data-start="00:04:31,625" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan sued, winning millions and forcing Gawker into bankruptcy.</p>
+<p>霍根提起诉讼获赔数百万，导致Gawker破产。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959723" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-36-448" data-start="00:04:36,448" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The jury agreed with me that privacy is something that we all deserve.</p>
+<p>陪审团认同隐私权是人人应得的权利。</p>
+<p><button class="play-button sentence" id="s-00-04-43-519" data-start="00:04:43,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan also stepped into the political ring, speaking at last year's Republican National Convention.</p>
+<p>霍根还踏入政治擂台，出席去年共和党全国代表大会。</p>
+<p><button class="play-button sentence" id="s-00-04-49-418" data-start="00:04:49,418" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Black Trump a mania run wild, brother.</p>
+<p>兄弟，让"特朗普狂热"席卷吧。</p>
+<p><button class="play-button sentence" id="s-00-04-52-639" data-start="00:04:52,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump is reacting to his death, writing, Hulk Hogan was mega all the way.</p>
+<p>特朗普总统对其去世回应道："霍根始终是超级巨星。"</p>
+<p><button class="play-button sentence" id="s-00-04-57-323" data-start="00:04:57,323" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Strong, tough, smart, but with the biggest heart.</p>
+<p>强壮、坚韧、聪明，却怀有最宽广的胸怀。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-00-377" data-start="00:05:00,377" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From Sylvester Stallone, my heart breaks.</p>
+<p>西尔维斯特·史泰龙表示心碎。</p>
+<p><button class="play-button sentence" id="s-00-05-03-046" data-start="00:05:03,046" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, wrestling legend Ric Flair says, "Hulkster, no one will ever compare to you."</p>
+<p>摔跤传奇瑞克·弗莱尔说："霍根，无人能与你比肩。"</p>
+<p><button class="play-button sentence" id="s-00-05-08-411" data-start="00:05:08,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe joins us now live in studio.</p>
+<p>乔现在加入我们演播室。</p>
+<p><button class="play-button sentence" id="s-00-05-10-974" data-start="00:05:10,974" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Joe, do we know more about how he died?</p>
+<p>乔，关于他的死因有更多信息吗？</p>
+<p><button class="play-button sentence" id="s-00-05-12-879" data-start="00:05:12,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, as we heard there, the 911 call indicates cardiac arrest, but police in Clearwater say they will conduct a full investigation into his death, which they say is standard in cases like this.</p>
+<p>如之前报道，911报警显示心脏骤停，但清水市警方表示将全面调查，称这是此类案件的标准程序。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-22-319" data-start="00:05:22,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hogan's manager tells us that he passed away surrounded by family.</p>
+<p>霍根经纪人告知我们他在家人陪伴下离世。</p>
+<p><button class="play-button sentence" id="s-00-05-26-186" data-start="00:05:26,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom.</p>
+<p>汤姆。</p>
+<p><button class="play-button sentence" id="s-00-05-26-478" data-start="00:05:26,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Joe Frier leading us off.</p>
+<p>好的，乔·弗莱尔开场报道。</p>
+<p><button class="play-button sentence" id="s-00-05-28-000" data-start="00:05:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe, thank you.</p>
+<p>乔，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-05-28-712" data-start="00:05:28,712" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to that meeting between a top justice department official and Jeffrey Epstein's convicted accomplice, Galain Maxwell's attorney, saying she answered all the questions she was asked today.</p>
+<p>现在关注司法部高官与杰弗里·爱泼斯坦已定罪同谋吉斯莱恩·麦克斯韦的会面，其律师称她已回答今日所有询问。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959661" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-38-479" data-start="00:05:38,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett Hake has the late details.</p>
+<p>加勒特·哈克带来最新细节。</p>
+<p><button class="play-button sentence" id="s-00-05-40-591" data-start="00:05:40,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, Attorney General Pam Bondi's top deputy meeting at a Florida courthouse with Galain Maxwell, the convicted accomplice of notorious sex offender Jeffrey Epstein.</p>
+<p>今晚，司法部长帕姆·邦迪的高级副手在佛罗里达州法院与臭名昭著的性犯罪者杰弗里·爱泼斯坦的同谋吉斯莱恩·麦克斯韦会面。</p>
+<p><button class="play-button sentence" id="s-00-05-50-160" data-start="00:05:50,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Deputy Attorney General Todd Blanch meeting privately with Maxwell and her attorneys, posting, "I'll continue my interview with her tomorrow and will share additional information about what we learned at the appropriate time."</p>
+<p>副司法部长托德·布兰奇与麦克斯韦及其律师私下会面后表示："明日将继续询问，并适时分享更多信息。"</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959638" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-01-839" data-start="00:06:01,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This tonight from Maxwell's attorney.</p>
+<p>今晚麦克斯韦律师声明：</p>
+<p><button class="play-button sentence" id="s-00-06-04-079" data-start="00:06:04,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She answered all the questions truthfully, honestly, and to the best of her ability.</p>
+<p>她如实、诚实且尽其所能回答了所有问题。</p>
+<p><button class="play-button sentence" id="s-00-06-08-290" data-start="00:06:08,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Trump administration seeking to cool the ongoing firestorm over its handling of the DOJ's files on Epstein.</p>
+<p>特朗普政府正试图平息对其处理爱泼斯坦司法部档案的持续风暴。</p>
+<p><button class="play-button sentence" id="s-00-06-14-717" data-start="00:06:14,717" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today's meeting blasted by Democrats.</p>
+<p>今日会面遭民主党抨击。</p>
+<p><button class="play-button sentence" id="s-00-06-17-357" data-start="00:06:17,357" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is every reason to fear that Donald Trump could offer Jizlain Maxwell a pardon in exchange for silence or even worse phony exoneration.</p>
+<p>完全有理由担心特朗普可能以赦免换取麦克斯韦沉默，甚至虚假脱罪。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959610" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-29-150" data-start="00:06:29,150" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes 24 hours after the Wall Street Journal report citing senior administration officials that the president was briefed in May by Bondi that his name appears in the unreleased files.</p>
+<p>此前24小时，《华尔街日报》援引政府高官称，邦迪五月曾向总统简报未公开档案中出现其名字。</p>
+<p><button class="play-button sentence" id="s-00-06-39-540" data-start="00:06:39,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The journal reporting the files contained what officials felt was unverified hearsay about many people including Trump who had socialized with Epstein in the past and that being mentioned in the records is not a sign of wrongdoing.</p>
+<p>报道称档案包含官员认为未经证实的多人传闻，包括曾与爱泼斯坦交往的特朗普，但被提及不意味着不当行为。</p>
+<p><button class="play-button sentence" id="s-00-06-51-912" data-start="00:06:51,912" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House calling the story fake news.</p>
+<p>白宫称该报道为假新闻。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959584" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-55-015" data-start="00:06:55,015" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NBC News has reviewed over a thousand pages of documents tied to Epstein or related investigations and conducted interviews with dozens of victims and attorneys, and none has suggested Trump committed a crime.</p>
+<p>NBC新闻查阅上千页爱泼斯坦相关文件，采访数十名受害者及律师，无人指证特朗普犯罪。</p>
+<p><button class="play-button sentence" id="s-00-07-05-502" data-start="00:07:05,502" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All as President Trump tonight toured the Federal Reserve's $2.5 billion building renovation, which has already run over budget, squabbbling over its costs with Fed Chair Jerome Powell.</p>
+<p>与此同时，特朗普总统今晚视察美联储25亿美元大楼翻新工程（已超预算），与主席鲍威尔就费用争执。</p>
+<p><button class="play-button sentence" id="s-00-07-16-477" data-start="00:07:16,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It looks like it's about 3.1 billion.</p>
+<p>看来约31亿。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959561" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-18-950" data-start="00:07:18,950" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It went up a little bit or a lot.</p>
+<p>涨了一点或很多。</p>
+<p><button class="play-button sentence" id="s-00-07-21-674" data-start="00:07:21,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh, so the 2.7 is now 3.1.</p>
+<p>呃，27亿变成31亿。</p>
+<p><button class="play-button sentence" id="s-00-07-25-279" data-start="00:07:25,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not aware of that.</p>
+<p>我不清楚这点。</p>
+<p><button class="play-button sentence" id="s-00-07-26-319" data-start="00:07:26,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it just came out.</p>
+<p>是的，刚出炉。</p>
+<p><button class="play-button sentence" id="s-00-07-28-160" data-start="00:07:28,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You just added in a third building is what that is.</p>
+<p>你们刚加了第三栋楼。</p>
+<p><button class="play-button sentence" id="s-00-07-30-579" data-start="00:07:30,579" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a third building.</p>
+<p>那是第三栋楼。</p>
+<p><button class="play-button sentence" id="s-00-07-32-000" data-start="00:07:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a building that's being built.</p>
+<p>是正在建的楼。</p>
+<p><button class="play-button sentence" id="s-00-07-33-598" data-start="00:07:33,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, it's been it was built 5 years ago.</p>
+<p>不，五年前已建成。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959544" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-35-918" data-start="00:07:35,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We finished Martin 5 years ago.</p>
+<p>马丁楼五年前完工。</p>
+<p><button class="play-button sentence" id="s-00-07-37-839" data-start="00:07:37,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's part of the overall work.</p>
+<p>属于整体工程。</p>
+<p><button class="play-button sentence" id="s-00-07-39-598" data-start="00:07:39,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president asked what Powell could do to get him to back off his criticism.</p>
+<p>总统问鲍威尔如何让他停止批评。</p>
+<p><button class="play-button sentence" id="s-00-07-43-839" data-start="00:07:43,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I'd love him to lower interest rates.</p>
+<p>我希望他降低利率。</p>
+<p><button class="play-button sentence" id="s-00-07-46-091" data-start="00:07:46,091" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Other than that, what can I tell you?</p>
+<p>除此之外还能说什么？</p>
+<p><button class="play-button sentence" id="s-00-07-48-959" data-start="00:07:48,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett joins us now live.</p>
+<p>加勒特现在连线我们。</p>
+<p><button class="play-button sentence" id="s-00-07-50-088" data-start="00:07:50,088" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett, a lot of headlines involving President Trump tonight.</p>
+<p>加勒特，今晚多则头条涉及特朗普总统。</p>
+<p><button class="play-button sentence" id="s-00-07-52-844" data-start="00:07:52,844" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The FCC has approved the $8 billion acquisition of Paramount, which also owns CBS.</p>
+<p>FCC已批准80亿美元收购派拉蒙（含CBS）的交易。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959521" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-58-076" data-start="00:07:58,076" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, Tom.</p>
+<p>是的，汤姆。</p>
+<p><button class="play-button sentence" id="s-00-07-58-837" data-start="00:07:58,837" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The sale to Skyance Media comes on the heels of that $16 million settlement between President Trump and CBS News over a 60 Minutes interview with then Vice President Harris.</p>
+<p>此次出售给天空之刃传媒，紧随特朗普总统与CBS新闻就采访副总统哈里斯的1600万美元和解。</p>
+<p><button class="play-button sentence" id="s-00-08-08-275" data-start="00:08:08,275" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The FCC says Skyance will make significant changes to the CBS broadcast network to ensure a quote diversity of viewpoints across the political spectrum.</p>
+<p>FCC称天空之刃将对CBS广播网重大调整，确保"政治光谱观点多样性"。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959503" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-16-617" data-start="00:08:16,617" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The FCC's lone Democrat dissenting with the decision which she says threatens press freedom.</p>
+<p>FCC唯一民主党人反对该决定，称威胁新闻自由。</p>
+<p><button class="play-button sentence" id="s-00-08-21-598" data-start="00:08:21,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom.</p>
+<p>汤姆。</p>
+<p><button class="play-button sentence" id="s-00-08-21-811" data-start="00:08:21,811" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Carrot Hake first.</p>
+<p>好的，首先卡洛特·哈克。</p>
+<p><button class="play-button sentence" id="s-00-08-23-138" data-start="00:08:23,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Carrot, thank you.</p>
+<p>卡洛特，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-08-24-051" data-start="00:08:24,051" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to the extreme weather spreading and smothering the country.</p>
+<p>现在关注席卷全美的极端天气。</p>
+<p><button class="play-button sentence" id="s-00-08-27-199" data-start="00:08:27,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Really 134 million under heat alert stretching from the Mississippi Valley into the Midwest.</p>
+<p>密西西比河谷至中西部1.34亿人处于高温警报。</p>
+<p><button class="play-button sentence" id="s-00-08-32-699" data-start="00:08:32,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You see it right here.</p>
+<p>如画面所示。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959486" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-33-839" data-start="00:08:33,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is so hot outside in so many places and the heat and humidity track east tomorrow into the Mid-Atlantic.</p>
+<p>多地室外酷热难耐，明日高温高湿将向中大西洋地区移动。</p>
+<p><button class="play-button sentence" id="s-00-08-40-021" data-start="00:08:40,021" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're tracking new chaos tonight in Rudioso, New Mexico.</p>
+<p>我们正追踪新墨西哥州鲁迪奥索的新混乱。</p>
+<p><button class="play-button sentence" id="s-00-08-43-128" data-start="00:08:43,128" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look at this.</p>
+<p>看这里。</p>
+<p><button class="play-button sentence" id="s-00-08-43-720" data-start="00:08:43,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> where crews rescued five people as wildfire burn scars turned into flash floods.</p>
+<p>野火烧痕引发山洪，救援队救出五人。</p>
+<p><button class="play-button sentence" id="s-00-08-49-440" data-start="00:08:49,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, now to those alarming stats from the UN today that 9% of Gaza's children face severe malnutrition.</p>
+<p>现在看联合国今日惊人数据：加沙9%儿童面临严重营养不良。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959463" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-56-310" data-start="00:08:56,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matt Bradley traveling to the border, crossing where food aid is brought in, but critics say it's not enough.</p>
+<p>马特·布拉德利前往边境口岸报道粮食援助进入情况，但批评者称远远不足。</p>
+<p><button class="play-button sentence" id="s-00-09-03-278" data-start="00:09:03,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ysef Alphadi wasn't even 2 months old when hunger killed him.</p>
+<p>尤瑟夫·阿尔法迪不足两月大时被饥饿夺去生命。</p>
+<p><button class="play-button sentence" id="s-00-09-06-833" data-start="00:09:06,833" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now his father carries his son's body before he buries him.</p>
+<p>此刻父亲正抱着儿子遗体准备安葬。</p>
+<p><button class="play-button sentence" id="s-00-09-10-436" data-start="00:09:10,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All this because of a lack of food and formula.</p>
+<p>这一切只因缺乏食物和配方奶粉。</p>
+<p><button class="play-button sentence" id="s-00-09-13-665" data-start="00:09:13,665" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His father said there is nothing in the country.</p>
+<p>其父表示国内一无所有。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959442" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-17-039" data-start="00:09:17,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A new report from the UN Humanitarian Affairs Office says as many as 9% of children in Gaza are suffering severe malnutrition.</p>
+<p>联合国人道主义事务办公室的一份新报告称，加沙多达9%的儿童正遭受严重营养不良。</p>
+<p><button class="play-button sentence" id="s-00-09-24-055" data-start="00:09:24,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the Israeli government says they've put no restrictions on allowing aid into Gaza.</p>
+<p>但以色列政府表示，他们并未对允许援助进入加沙施加任何限制。</p>
+<p><button class="play-button sentence" id="s-00-09-28-559" data-start="00:09:28,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is no famine in Gaza. There is a famine of the truth.</p>
+<p>加沙没有饥荒。有的是真相的饥荒。</p>
+<p><button class="play-button sentence" id="s-00-09-32-000" data-start="00:09:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israelis blame aid agencies for not distributing food that's already been delivered.</p>
+<p>以色列指责援助机构未分发已送达的食物。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959423" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-36-538" data-start="00:09:36,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As we're hearing growing anger around the world about the famine conditions inside Gaza, the Israelis have brought us just inside Gaza now, where they're showing us all of this food aid that they say aid agencies haven't been picking up and distributing it to the people who need it most.</p>
+<p>随着全球对加沙饥荒状况的愤怒日益增长，以色列人带我们进入加沙，展示他们认为援助机构未领取并分发给最需要人群的大量食品援助。</p>
+<p><button class="play-button sentence" id="s-00-09-51-334" data-start="00:09:51,334" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the UN and other aid agencies say Israel's restrictive security conditions as well as the dangers of operating inside Gaza have made aid distribution extremely difficult.</p>
+<p>但联合国和其他援助机构表示，以色列严格的安保条件以及在加沙行动的危险性使得援助分发极其困难。</p>
+<p><button class="play-button sentence" id="s-00-10-01-250" data-start="00:10:01,250" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is only one way to reverse the this trajectory and that is uh by enabling um sustained and unrestricted flow of aid into Gaza and enabling us to carry out our work.</p>
+<p>扭转这一趋势的唯一方法是确保援助持续且不受限制地进入加沙，并让我们能够开展工作。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959385" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-14-320" data-start="00:10:14,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, as for a potential ceasefire deal, President Trump's special envoy Steve Witkoff is headed home tonight saying that Hamas has shown a lack of desire for a deal and is not acting in good faith.</p>
+<p>关于潜在的停火协议，特朗普总统的特使史蒂夫·维特科夫今晚回国，称哈马斯缺乏达成协议的意愿且未展现诚意。</p>
+<p><button class="play-button sentence" id="s-00-10-25-089" data-start="00:10:25,089" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom.</p>
+<p>汤姆。</p>
+<p><button class="play-button sentence" id="s-00-10-25-335" data-start="00:10:25,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Matt Bradley and his team tonight. Matt, thank you to Ukraine and the incredible story of a soldier returning from the front lines to meet his daughter for the first time.</p>
+<p>好的，今晚由马特·布拉德利和他的团队报道。马特，感谢乌克兰，以及一名士兵从前线归来首次见到女儿的感人故事。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959365" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-34-511" data-start="00:10:34,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All after he was blinded in war. Here's Richard Angel with that compelling story.</p>
+<p>这一切发生在他因战争失明后。理查德·安吉尔带来这一震撼故事。</p>
+<p><button class="play-button sentence" id="s-00-10-40-078" data-start="00:10:40,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Calls for Russian President Vladimir Putin to stop his war on Ukraine, including from President Trump, are falling on deaf ears.</p>
+<p>包括特朗普总统在内的要求俄罗斯总统普京停止对乌战争的呼吁未被理睬。</p>
+<p><button class="play-button sentence" id="s-00-10-47-513" data-start="00:10:47,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putin has been intensifying strikes on Ukraine's cities.</p>
+<p>普京加强了对乌克兰城市的袭击。</p>
+<p><button class="play-button sentence" id="s-00-10-51-065" data-start="00:10:51,065" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Ukrainians like Rouslan Koichok are not throwing in the towel.</p>
+<p>但像鲁斯兰·科伊丘克这样的乌克兰人并未放弃。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959343" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-56-240" data-start="00:10:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kachchuk was injured by a Russian artillery shell in March 2023.</p>
+<p>科伊丘克在2023年3月被俄罗斯炮弹炸伤。</p>
+<p><button class="play-button sentence" id="s-00-11-01-114" data-start="00:11:01,114" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is now completely blind.</p>
+<p>他现在完全失明。</p>
+<p><button class="play-button sentence" id="s-00-11-03-345" data-start="00:11:03,345" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He sees no shadows, no outlines.</p>
+<p>他看不到任何影子或轮廓。</p>
+<p><button class="play-button sentence" id="s-00-11-05-851" data-start="00:11:05,851" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You realize that this darkness is forever.</p>
+<p>你意识到这黑暗是永恒的。</p>
+<p><button class="play-button sentence" id="s-00-11-09-341" data-start="00:11:09,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He told us he was injured in Bahmut.</p>
+<p>他告诉我们他在巴赫穆特受伤。</p>
+<p><button class="play-button sentence" id="s-00-11-11-787" data-start="00:11:11,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw the Russian attacks there ourselves as artillery rain down 24/7.</p>
+<p>我们亲眼目睹了那里24小时不间断的俄军炮击。</p>
+<p><button class="play-button sentence" id="s-00-11-20-159" data-start="00:11:20,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One just landed a few seconds ago.</p>
+<p>几秒前刚有一枚炮弹落下。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959316" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-23-679" data-start="00:11:23,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's more is Kachchuk's wife was pregnant before he left for the front lines.</p>
+<p>更重要的是，科伊丘克的妻子在他上前线前已怀孕。</p>
+<p><button class="play-button sentence" id="s-00-11-28-273" data-start="00:11:28,273" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their only daughter, Isabella, was born after he came back blind.</p>
+<p>他们的独女伊莎贝拉在他失明后出生。</p>
+<p><button class="play-button sentence" id="s-00-11-33-291" data-start="00:11:33,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Kosachuk has never seen her and only knows the 2-year-old by touch and smell and sound.</p>
+<p>因此科伊丘克从未见过她，只能通过触觉、嗅觉和声音了解这个2岁的孩子。</p>
+<p><button class="play-button sentence" id="s-00-11-39-869" data-start="00:11:39,869" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He told us it's difficult here at the playground because his daughter doesn't know if she goes out of earshot, he can't find her or protect her.</p>
+<p>他告诉我们，在游乐场很困难，因为女儿不知道若超出听力范围，他就无法找到或保护她。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959291" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-48-120" data-start="00:11:48,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She doesn't understand that she shouldn't go far away from her dad.</p>
+<p>她不明白不该远离父亲。</p>
+<p><button class="play-button sentence" id="s-00-11-52-715" data-start="00:11:52,715" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I worry about it.</p>
+<p>我为此担忧。</p>
+<p><button class="play-button sentence" id="s-00-11-53-872" data-start="00:11:53,872" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he is one of those rare types with an incomparable will, refusing to be broken.</p>
+<p>他说自己是那种拥有无与伦比意志的罕见类型，拒绝被击垮。</p>
+<p><button class="play-button sentence" id="s-00-11-59-847" data-start="00:11:59,847" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now he's exercising, throws a shot put to build strength and rock climbs.</p>
+<p>现在他通过锻炼、投掷铅球增强力量并攀岩。</p>
+<p><button class="play-button sentence" id="s-00-12-05-162" data-start="00:12:05,162" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he is studying for a master's in psychology so he can be a counselor for other wounded Ukrainians.</p>
+<p>他还在攻读心理学硕士学位，以便为其他受伤的乌克兰人提供心理咨询。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-11-759" data-start="00:12:11,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Was it worth it?</p>
+<p>值得吗？</p>
+<p><button class="play-button sentence" id="s-00-12-13-919" data-start="00:12:13,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, he said. I would definitely return to the front line.</p>
+<p>当然，他说。我绝对会重返前线。</p>
+<p><button class="play-button sentence" id="s-00-12-18-559" data-start="00:12:18,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard, you've covered so much war. What stood out to you from this interview?</p>
+<p>理查德，你报道过许多战争。这次采访最触动你的是什么？</p>
+<p><button class="play-button sentence" id="s-00-12-22-107" data-start="00:12:22,107" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That you can't defeat people like this.</p>
+<p>你无法击败这样的人。</p>
+<p><button class="play-button sentence" id="s-00-12-24-320" data-start="00:12:24,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the Russians have been struggling for over 3 years now in Ukraine and have not been able to take over the country because of the unbreakable spirit of men like him.</p>
+<p>俄罗斯在乌克兰挣扎三年多仍未能占领该国，正是因为像他这样不可摧毁的精神。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959246" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-33-336" data-start="00:12:33,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Ukrainians are fighting for their houses.</p>
+<p>乌克兰人为家园而战。</p>
+<p><button class="play-button sentence" id="s-00-12-35-261" data-start="00:12:35,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Russians are fighting a war of choice.</p>
+<p>俄罗斯人发动的是选择之战。</p>
+<p><button class="play-button sentence" id="s-00-12-37-327" data-start="00:12:37,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Ukrainians are not.</p>
+<p>乌克兰人别无选择。</p>
+<p><button class="play-button sentence" id="s-00-12-38-717" data-start="00:12:38,717" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this man shows that.</p>
+<p>这个男人展现了这一点。</p>
+<p><button class="play-button sentence" id="s-00-12-40-320" data-start="00:12:40,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard Angel for us. Richard, thank you for bringing us that story.</p>
+<p>理查德·安吉尔为我们报道。理查德，感谢带来这个故事。</p>
+<p><button class="play-button sentence" id="s-00-12-42-898" data-start="00:12:42,898" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to the latest back here at home on the murders at the University of Idaho where a gag order now lifted was lifted.</p>
+<p>现在关注爱达荷大学谋杀案最新进展，禁言令已被解除。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959231" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-48-969" data-start="00:12:48,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NBC News spoke to the lead prosecutor in the case as documents reveal new chilling details about the crimes.</p>
+<p>NBC新闻采访了本案首席检察官，同时文件披露了犯罪的新骇人细节。</p>
+<p><button class="play-button sentence" id="s-00-12-55-737" data-start="00:12:55,737" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Liz Croitz.</p>
+<p>莉兹·克罗伊茨报道。</p>
+<p><button class="play-button sentence" id="s-00-12-57-600" data-start="00:12:57,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, with Brian Coberger now locked behind bars for life, lead prosecutor Bill Thompson finally able to share details on the case.</p>
+<p>今晚，随着布莱恩·科伯格被判终身监禁，首席检察官比尔·汤普森终于能分享案件细节。</p>
+<p><button class="play-button sentence" id="s-00-13-05-278" data-start="00:13:05,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You say that there's no sense of a motive still, but do you have any working theories that you can share?</p>
+<p>你说仍无明确动机，但有可分享的推测理论吗？</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959207" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-12-559" data-start="00:13:12,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are lots of theories out there, none that I can share because they're just speculative.</p>
+<p>外界有许多理论，但都是推测性的，我无法分享。</p>
+<p><button class="play-button sentence" id="s-00-13-17-154" data-start="00:13:17,154" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thompson speaking after that emotional hearing where Cobberger was sentenced for the murders of Kaylee Gonzalezeves, Zan Kernodal, Ethan Chapen, and Madison Mogan.</p>
+<p>汤普森在科伯格因谋杀凯莉·冈萨雷斯、赞·克诺达尔、伊桑·查平和麦迪逊·莫甘被判刑的听证会后发言。</p>
+<p><button class="play-button sentence" id="s-00-13-25-839" data-start="00:13:25,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mattie was my only child that I ever had.</p>
+<p>麦蒂是我唯一的孩子。</p>
+<p><button class="play-button sentence" id="s-00-13-30-879" data-start="00:13:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police also releasing hundreds of documents, one revealing that Kaylee Gonzalez told her roommates she thought a man was following her and around the same time saw a man staring at her while walking her dog.</p>
+<p>警方还公布了数百份文件，其中一份显示凯莉·冈萨雷斯曾告诉室友她觉得有人跟踪她，同时遛狗时发现一名男子盯着她。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959177" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-42-353" data-start="00:13:42,353" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that the roommates and Kayle's sense that something was a miss probably was accurate.</p>
+<p>我认为室友和凯莉感觉不对劲可能是准确的。</p>
+<p><button class="play-button sentence" id="s-00-13-48-932" data-start="00:13:48,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could that have been Brian Kberger?</p>
+<p>那人可能是布莱恩·科伯格吗？</p>
+<p><button class="play-button sentence" id="s-00-13-51-519" data-start="00:13:51,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sure. Certainly could have been Brian Cobberger,</p>
+<p>当然可能，</p>
+<p><button class="play-button sentence" id="s-00-13-54-603" data-start="00:13:54,603" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but we don't know.</p>
+<p>但我们不确定。</p>
+<p><button class="play-button sentence" id="s-00-13-56-958" data-start="00:13:56,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't know.</p>
+<p>我们不知道。</p>
+<p><button class="play-button sentence" id="s-00-13-58-078" data-start="00:13:58,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another chilling revelation, a tip from a woman who says she matched with Kberger on Tinder just before the murders.</p>
+<p>另一骇人发现是，一名女性提供的线索称谋杀案前她与科伯格在Tinder上配对。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959156" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-03-922" data-start="00:14:03,922" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She says he asked her what would be the worst way to die.</p>
+<p>她说他问她最痛苦的死法是什么。</p>
+<p><button class="play-button sentence" id="s-00-14-06-826" data-start="00:14:06,826" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She responded, "A knife." to which he said like a kbar the exact weapon believed used in the killings.</p>
+<p>她回答"刀"，他说比如卡巴刀——正是凶案使用的武器。</p>
+<p><button class="play-button sentence" id="s-00-14-12-826" data-start="00:14:12,826" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as for that plea deal that took the death penalty off the table for Kobar,</p>
+<p>至于使科伯格免于死刑的认罪协议，</p>
+<p><button class="play-button sentence" id="s-00-14-16-799" data-start="00:14:16,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> what do you say to those families who feel like that was doing a deal with the devil?</p>
+<p>对那些认为这是与魔鬼交易的家庭，你想说什么？</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959139" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-20-357" data-start="00:14:20,357" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We made a proposal on our terms, not his.</p>
+<p>我们按自己的条件提议，而非他的。</p>
+<p><button class="play-button sentence" id="s-00-14-22-732" data-start="00:14:22,732" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there's still those who feel like it's what he wanted was life in prison versus the death penalty.</p>
+<p>有人认为他想要的是终身监禁而非死刑。</p>
+<p><button class="play-button sentence" id="s-00-14-28-320" data-start="00:14:28,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know what was going through or what he wanted.</p>
+<p>我不知道他的想法或需求。</p>
+<p><button class="play-button sentence" id="s-00-14-31-850" data-start="00:14:31,850" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One way or another, he's going to be in prison till he dies.</p>
+<p>无论如何，他将在监狱度过余生。</p>
+<p><button class="play-button sentence" id="s-00-14-35-541" data-start="00:14:35,541" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Liz Kroz, NBC News Boise.</p>
+<p>莉兹·克罗兹，NBC新闻博伊西报道。</p>
+<p><button class="play-button sentence" id="s-00-14-38-078" data-start="00:14:38,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 60 seconds, the cost of denial. Tonight, how a trip to the doctor turned into a surprise bill from a hospital.</p>
+<p>60秒后，拒绝的代价。今晚讲述一次看诊如何变成医院的天价账单。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959114" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-45-120" data-start="00:14:45,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gotti Schwarz explains next.</p>
+<p>戈蒂·施瓦茨接下来解释。</p>
+<p><button class="play-button sentence" id="s-00-14-50-078" data-start="00:14:50,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back now with our series, The Cost of Denial.</p>
+<p>继续我们的系列报道《拒绝的代价》。</p>
+<p><button class="play-button sentence" id="s-00-14-52-197" data-start="00:14:52,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So many people across the country say they received surprise hospital bills for what they thought were routine doctor visits.</p>
+<p>全国许多人表示，他们认为的常规看诊却收到医院意外账单。</p>
+<p><button class="play-button sentence" id="s-00-14-58-992" data-start="00:14:58,992" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Gotti Schwarz investigates.</p>
+<p>戈蒂·施瓦茨调查报道。</p>
+<p><button class="play-button sentence" id="s-00-15-01-503" data-start="00:15:01,503" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you're having health issues, the last thing you want is so much aggravation.</p>
+<p>当你健康出问题时，最不想要的就是这些麻烦。</p>
+<p><button class="play-button sentence" id="s-00-15-07-425" data-start="00:15:07,425" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Todd Bash, a part-time teacher from the Los Angeles area, has been searching for a diagnosis for a spinal problem and an explanation from his insure for his medical bills.</p>
+<p>洛杉矶地区的兼职教师托德·巴什一直在寻求脊柱问题的诊断，以及保险公司对医疗账单的解释。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959082" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-17-520" data-start="00:15:17,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are these extra charges? And they informed me that it was a hospital facility fee.</p>
+<p>这些额外费用是什么？他们告知我这是医院设施费。</p>
+<p><button class="play-button sentence" id="s-00-15-24-356" data-start="00:15:24,356" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, I explained I wasn't at a hospital. I just went to a doctor's appointment.</p>
+<p>我解释自己并未去医院，只是看了门诊。</p>
+<p><button class="play-button sentence" id="s-00-15-29-958" data-start="00:15:29,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what he learned is that even outpatient doctor's offices like the one he went to can charge facility fees if they're owned by or affiliated with hospitals.</p>
+<p>但他了解到，像他就诊的门诊若隶属或附属医院，也可收取设施费。</p>
+<p><button class="play-button sentence" id="s-00-15-39-341" data-start="00:15:39,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a breakdown of an injection I had</p>
+<p>这是我注射费用的明细</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959057" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-42-585" data-start="00:15:42,585" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> after getting an epidural steroid injection at a pain center which has hospital branding.</p>
+<p>在带有医院标识的疼痛中心接受硬膜外类固醇注射后。</p>
+<p><button class="play-button sentence" id="s-00-15-47-089" data-start="00:15:47,089" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His insurance was charged more than $14,000 just for facility fees.</p>
+<p>他的保险仅设施费就被收取超1.4万美元。</p>
+<p><button class="play-button sentence" id="s-00-15-51-913" data-start="00:15:51,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Todd's out-of- pocket costs nearly $700.</p>
+<p>托德自付部分近700美元。</p>
+<p><button class="play-button sentence" id="s-00-15-55-063" data-start="00:15:55,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All for an injection that he says just took a few minutes.</p>
+<p>而他说注射仅需几分钟。</p>
+<p><button class="play-button sentence" id="s-00-15-59-004" data-start="00:15:59,004" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's um shocking.</p>
+<p>这令人震惊。</p>
+<p><button class="play-button sentence" id="s-00-16-01-198" data-start="00:16:01,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even more shocking, he was also being charged a facility fee for a teleaalth appointment about the injection.</p>
+<p>更震惊的是，他因注射的远程问诊也被收取设施费。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959032" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-07-679" data-start="00:16:07,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It seemed shady and uh dishonest and frustrating.</p>
+<p>这显得可疑、不诚实且令人沮丧。</p>
+<p><button class="play-button sentence" id="s-00-16-12-419" data-start="00:16:12,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's happening more and more.</p>
+<p>这种情况越来越多。</p>
+<p><button class="play-button sentence" id="s-00-16-14-458" data-start="00:16:14,458" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2012, just about a quarter of US physicians were employed by hospitals or health systems.</p>
+<p>2012年，仅约四分之一的美国医生受雇于医院或医疗系统。</p>
+<p><button class="play-button sentence" id="s-00-16-19-156" data-start="00:16:19,156" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, it's more than half.</p>
+<p>如今已超半数。</p>
+<p><button class="play-button sentence" id="s-00-16-20-879" data-start="00:16:20,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Critics say that leads to higher prices for the same care.</p>
+<p>批评者称这导致相同护理价格更高。</p>
+<p><button class="play-button sentence" id="s-00-16-23-929" data-start="00:16:23,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're just pasting a giant corporate name on the front of the clinical facility and charging more.</p>
+<p>他们只是在诊所贴上大公司名号并提高收费。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208959009" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-30-399" data-start="00:16:30,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr. Brian Miller, an internal medicine physician at John's Hopkins Hospital, studies healthcare policy.</p>
+<p>约翰霍普金斯医院内科医生布莱恩·米勒博士研究医疗政策。</p>
+<p><button class="play-button sentence" id="s-00-16-36-078" data-start="00:16:36,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The level of service you're getting is actually the same.</p>
+<p>你获得的服务水平实际相同。</p>
+<p><button class="play-button sentence" id="s-00-16-38-356" data-start="00:16:38,356" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're just charging more, 60 to 70% more money for it.</p>
+<p>他们只是多收费60%至70%。</p>
+<p><button class="play-button sentence" id="s-00-16-41-582" data-start="00:16:41,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's like paying for a Mercedes and getting a Hyundai.</p>
+<p>这就像付奔驰的钱却得到现代车。</p>
+<p><button class="play-button sentence" id="s-00-16-45-039" data-start="00:16:45,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Facility fees are frankly about maintaining access to care in a community.</p>
+<p>坦率说，设施费是为维持社区医疗服务。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958990" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-49-178" data-start="00:16:49,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Molly Smith, the vice president at the American Hospital Association, says facility fees are essential and allow hospitals to maintain 24/7 care.</p>
+<p>美国医院协会副主席莫莉·史密斯称设施费对维持医院24/7服务至关重要。</p>
+<p><button class="play-button sentence" id="s-00-16-57-759" data-start="00:16:57,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've spoken to several patients across the country who have described these facility fees as shady or a scam or dishonest.</p>
+<p>我们采访的全国多位患者称这些设施费可疑、欺诈或不诚实。</p>
+<p><button class="play-button sentence" id="s-00-17-05-066" data-start="00:17:05,066" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What would you say to them?</p>
+<p>你想对他们说什么？</p>
+<p><button class="play-button sentence" id="s-00-17-06-720" data-start="00:17:06,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would say that facility fees are absolutely essential to maintaining healthcare services in their community.</p>
+<p>我会说设施费对维持社区医疗服务绝对必要。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958967" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-12-959" data-start="00:17:12,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Without facility fees, I can't underscore this enough. physician practices are not going to be able to sustain themselves under their current business model.</p>
+<p>没有设施费，医生诊所无法以当前商业模式维持——这点再怎么强调都不为过。</p>
+<p><button class="play-button sentence" id="s-00-17-22-430" data-start="00:17:22,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It took Todd months to find an independent doctor, but when he finally did, he was able to get the same kind of injection that cost him $700.</p>
+<p>托德花了数月找到独立医生，最终以700美元获得相同注射。</p>
+<p><button class="play-button sentence" id="s-00-17-29-619" data-start="00:17:29,619" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this time,</p>
+<p>而这次，</p>
+<p><button class="play-button sentence" id="s-00-17-31-151" data-start="00:17:31,151" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> my share is $37.17.</p>
+<p>我自付37.17美元。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958945" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-34-079" data-start="00:17:34,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> $37 for the same service,</p>
+<p>37美元获得相同服务，</p>
+<p><button class="play-button sentence" id="s-00-17-36-558" data-start="00:17:36,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the same exact thing.</p>
+<p>完全一样。</p>
+<p><button class="play-button sentence" id="s-00-17-38-079" data-start="00:17:38,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only difference, he says, is the sign on the front of the building.</p>
+<p>他说唯一区别是建筑前的标识。</p>
+<p><button class="play-button sentence" id="s-00-17-41-732" data-start="00:17:41,732" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gotti Schwarz, NBC News, Los Angeles.</p>
+<p>戈蒂·施瓦茨，NBC新闻洛杉矶报道。</p>
+<p><button class="play-button sentence" id="s-00-17-44-590" data-start="00:17:44,590" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, up next, the scary moment at the beach when 10 people had to be rescued from a sailboat crash.</p>
+<p>接下来是海滩惊魂时刻：10人从帆船事故中获救。</p>
+<p><button class="play-button sentence" id="s-00-17-52-129" data-start="00:17:52,129" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us.</p>
+<p>请继续关注。</p>
+<p><button class="play-button sentence" id="s-00-17-54-160" data-start="00:17:54,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are back now with a major settlement announcement from Columbia University.</p>
+<p>现在关注哥伦比亚大学的重要和解声明。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958922" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-57-839" data-start="00:17:57,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The school saying it will pay $200 million to the federal government.</p>
+<p>该校将向联邦政府支付2亿美元。</p>
+<p><button class="play-button sentence" id="s-00-18-02-172" data-start="00:18:02,172" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The university will get back the majority of federal funding that was cut by the Trump administration back in March.</p>
+<p>大学将取回特朗普政府三月削减的大部分联邦资金。</p>
+<p><button class="play-button sentence" id="s-00-18-07-931" data-start="00:18:07,931" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Trump administration had accused Colombia of violating anti-discrimination laws, specifically towards Jewish students.</p>
+<p>特朗普政府曾指控哥大违反反歧视法，特别是针对犹太学生。</p>
+<p><button class="play-button sentence" id="s-00-18-14-666" data-start="00:18:14,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The school did not admit to any wrongdoing.</p>
+<p>校方未承认任何不当行为。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958902" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-17-369" data-start="00:18:17,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to an update on the death of Food Network Chef Anne Burrell.</p>
+<p>现在更新美食网厨师安妮·伯勒尔死亡事件。</p>
+<p><button class="play-button sentence" id="s-00-18-20-596" data-start="00:18:20,596" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The New York medical examiner saying she died by suicide last month after she was found unresponsive at her home, citing intoxication from multiple substances.</p>
+<p>纽约法医称她上月在家中被发现无反应后自杀身亡，死因是多种物质中毒。</p>
+<p><button class="play-button sentence" id="s-00-18-30-664" data-start="00:18:30,664" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was 55 years old.</p>
+<p>她享年55岁。</p>
+<p><button class="play-button sentence" id="s-00-18-32-169" data-start="00:18:32,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And 10 people had to be rescued after a sailboat crashed into a jetty along the Jersey Shore.</p>
+<p>新泽西海岸一艘帆船撞上防波堤后10人获救。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958882" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-37-632" data-start="00:18:37,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take a look at this.</p>
+<p>看看这个。</p>
+<p><button class="play-button sentence" id="s-00-18-38-647" data-start="00:18:38,647" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Avalon Beach Patrol releasing this video showing the debris that was left behind after the boat was pushed right into the rocks.</p>
+<p>阿瓦隆海滩巡逻队发布的视频显示船只撞上岩石后的残骸。</p>
+<p><button class="play-button sentence" id="s-00-18-45-774" data-start="00:18:45,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Everyone is now doing okay.</p>
+<p>所有人目前平安。</p>
+<p><button class="play-button sentence" id="s-00-18-47-492" data-start="00:18:47,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. When we come back, she was in the hospital and out of school for nearly 2 years.</p>
+<p>好的。稍后带来：一名女孩住院离校近两年后的惊喜归家。</p>
+<p><button class="play-button sentence" id="s-00-18-52-437" data-start="00:18:52,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On her first trip back, a young girl's surprise homecoming.</p>
+<p>她的首次回归，一场意外归家。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958862" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-57-074" data-start="00:18:57,074" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us.</p>
+<p>请继续关注。</p>
+<p><button class="play-button sentence" id="s-00-18-58-559" data-start="00:18:58,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> [Music]</p>
+<p>[音乐]</p>
+<p><button class="play-button sentence" id="s-00-18-59-902" data-start="00:18:59,902" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally tonight, there's no place like home.</p>
+<p>最后今晚：没有什么地方比得上家。</p>
+<p><button class="play-button sentence" id="s-00-19-06-677" data-start="00:19:06,677" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How a town in Iowa welcome back a very special little girl after two long years away.</p>
+<p>爱荷华小镇如何欢迎离家两年的特殊女孩归来。</p>
+<p><button class="play-button sentence" id="s-00-19-12-629" data-start="00:19:12,629" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Adrien Bris.</p>
+<p>阿德里安·布里斯报道。</p>
+<p><button class="play-button sentence" id="s-00-19-14-798" data-start="00:19:14,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I made it.</p>
+<p>我做到了。</p>
+<p><button class="play-button sentence" id="s-00-19-16-359" data-start="00:19:16,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You made it.</p>
+<p>你也做到了。</p>
+<p><button class="play-button sentence" id="s-00-19-18-319" data-start="00:19:18,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, after 682 days in the hospital, she went home.</p>
+<p>今晚，在医院度过了682天后，她回家了。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958835" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-24-720" data-start="00:19:24,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ava Widle is finally home with a new heart and kidney.</p>
+<p>艾娃·怀德尔终于带着新的心脏和肾脏回家了。</p>
+<p><button class="play-button sentence" id="s-00-19-28-548" data-start="00:19:28,548" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't feel like it's real.</p>
+<p>我感觉这不像是真的。</p>
+<p><button class="play-button sentence" id="s-00-19-30-529" data-start="00:19:30,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I feel so happy and thankful for everyone.</p>
+<p>我感到非常开心，感谢每一个人。</p>
+<p><button class="play-button sentence" id="s-00-19-33-525" data-start="00:19:33,525" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ava was born with a severe congenital heart defect and spent the last 2 years fighting for her life at the Mayo Clinic in Minnesota.</p>
+<p>艾娃出生时患有严重的先天性心脏缺陷，过去两年在明尼苏达州的梅奥诊所与生命抗争。</p>
+<p><button class="play-button sentence" id="s-00-19-41-310" data-start="00:19:41,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's the first thing you want to do now that you're home?</p>
+<p>现在你回家了，最想做的第一件事是什么？</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958815" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-44-640" data-start="00:19:44,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, well, first was hug my friends.</p>
+<p>嗯，首先是想拥抱我的朋友。</p>
+<p><button class="play-button sentence" id="s-00-19-46-960" data-start="00:19:46,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been lots of FaceTime calls.</p>
+<p>我们打了很多次FaceTime电话。</p>
+<p><button class="play-button sentence" id="s-00-19-48-640" data-start="00:19:48,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're just like happy to have her back and we really missed her.</p>
+<p>我们很高兴她能回来，我们真的很想念她。</p>
+<p><button class="play-button sentence" id="s-00-19-52-079" data-start="00:19:52,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Turns out her friends aren't the only ones excited to welcome Ava home to Iowa.</p>
+<p>原来，不只是她的朋友对艾娃回到爱荷华州感到兴奋。</p>
+<p><button class="play-button sentence" id="s-00-19-56-772" data-start="00:19:56,772" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eva's old school had a special surprise.</p>
+<p>艾娃的母校准备了一个特别的惊喜。</p>
+<p><button class="play-button sentence" id="s-00-20-03-119" data-start="00:20:03,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her very own clapout.</p>
+<p>专属于她的鼓掌送别仪式。</p>
+<p><button class="play-button sentence" id="s-00-20-04-553" data-start="00:20:04,553" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The traditional sendoff for fifth graders headed to middle school she missed while in the hospital.</p>
+<p>这是五年级学生升入中学时的传统送别仪式，她在住院期间错过了。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-11-628" data-start="00:20:11,628" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The homecoming celebration then moving to a park where the community showed its heart celebrating Ava and her perseverance.</p>
+<p>回家的庆祝活动随后转移到一个公园，社区的人们表达了对艾娃和她坚韧精神的祝福。</p>
+<p><button class="play-button sentence" id="s-00-20-22-325" data-start="00:20:22,325" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-20-23-279" data-start="00:20:23,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She is truly a neo miracle and they never stopped fighting for her and most importantly Ava never stopped fighting.</p>
+<p>她真是一个新生的奇迹，他们从未停止为她奋斗，最重要的是艾娃从未停止奋斗。</p>
+<p><button class="play-button sentence" id="s-00-20-28-640" data-start="00:20:28,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That fight is what made this day possible.</p>
+<p>正是这种奋斗让这一天成为可能。</p>
+<p><button class="play-button sentence" id="s-00-20-31-929" data-start="00:20:31,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Never give up.</p>
+<p>永不放弃。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-33-222" data-start="00:20:33,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay strong.</p>
+<p>保持坚强。</p>
+<p><button class="play-button sentence" id="s-00-20-34-407" data-start="00:20:34,407" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Work hard and one day you'll be able to go home.</p>
+<p>努力工作，总有一天你也能回家。</p>
+<p><button class="play-button sentence" id="s-00-20-37-679" data-start="00:20:37,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A hero's welcome for the girl who never gave up.</p>
+<p>这位永不放弃的女孩受到了英雄般的欢迎。</p>
+<p><button class="play-button sentence" id="s-00-20-41-018" data-start="00:20:41,018" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Adrienne Rois, NBC News Clive, Iowa.</p>
+<p>艾德丽安·罗伊斯，NBC新闻，爱荷华州克莱夫。</p>
+<p><button class="play-button sentence" id="s-00-20-44-458" data-start="00:20:44,458" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So happy Avisa's back.</p>
+<p>艾薇莎回来了，真开心。</p>
+<p><button class="play-button sentence" id="s-00-20-46-507" data-start="00:20:46,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Nightly News for this Thursday.</p>
+<p>以上就是本周四的晚间新闻。</p>
+<p><button class="play-button sentence" id="s-00-20-49-162" data-start="00:20:49,162" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Tom Yamos.</p>
+<p>我是汤姆·亚莫斯。</p>
+<p><button class="play-button sentence" id="s-00-20-49-919" data-start="00:20:49,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks so much for watching tonight and always.</p>
+<p>非常感谢您今晚和一直以来的观看。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17BbDzhEN8/?t=-2208958746" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-53-893" data-start="00:20:53,893" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're here for you.</p>
+<p>我们随时为您服务。</p>
+<p><button class="play-button sentence" id="s-00-20-58-039" data-start="00:20:58,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good night.</p>
+<p>晚安。</p>
+<p><button class="play-button sentence" id="s-00-21-00-640" data-start="00:21:00,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We thank you for watching and remember, stay updated on breaking news and top stories on the NBC News app or watch live on our YouTube channel.</p>
+<p>感谢您的观看，请记住，通过NBC新闻应用或我们的YouTube频道直播，随时了解突发新闻和头条新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
