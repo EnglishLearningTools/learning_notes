@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Israel says it will open Gaza aid corridors after international pressure | BBC News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Israeli military announced a daily pause in fighting in three Gaza areas to allow UN and humanitarian aid convoys safe passage, following international pressure over starvation warnings. Egypt showed aid trucks lining up at the border, while Israel airdropped food packages criticized as inefficient. Pro-Palestinian activists' aid boat was intercepted by Israeli troops.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Israel says it will open Gaza aid corridors after international pressure | BBC News</h1>
+<p>【BBC News 20250728 在国际强压下，以色列开放加沙援助通道｜饥荒危机引发全球关注】</p>
+<p>Summary:
+The Israeli military announced a daily pause in fighting in three Gaza areas to allow UN and humanitarian aid convoys safe passage, following international pressure over starvation warnings. Egypt showed aid trucks lining up at the border, while Israel airdropped food packages criticized as inefficient. Pro-Palestinian activists' aid boat was intercepted by Israeli troops.</p>
+<p>摘要：
+以色列军方宣布在加沙三个地区每日停火，以便联合国和人道主义援助车队安全通行，此举源于国际社会对饥荒警告的施压。埃及画面显示援助卡车在边境集结，以色列空投食品包裹被批低效。亲巴勒斯坦活动人士的援助船遭以军拦截。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 18 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the last hour, the Israeli military has announced a pause in fighting in three areas for humanitarian purposes.</p>
+<p>过去一小时，以色列军方宣布在三个地区实施人道主义停火。</p>
+<p><button class="play-button sentence" id="s-00-00-07-854" data-start="00:00:07,854" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, this is the scene looking into Gaza from Israel.</p>
+<p>这是从以色列眺望加沙的景象。</p>
+<p><button class="play-button sentence" id="s-00-00-10-960" data-start="00:00:10,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The IDF says starting today, between 10am and 8pm local time, there will be a pause in military activity in Al-Mawasi, dear Al-Bala and Gaza City every day until further notice.</p>
+<p>以色列国防军表示，从今天起当地时间上午10点至晚上8点，阿尔马瓦西、迪尔巴拉和加沙城将每日暂停军事活动，直至另行通知。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959973" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-26-160" data-start="00:00:26,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is to allow the safe passage of United Nations and humanitarian aid organization Convoys.</p>
+<p>此举旨在确保联合国和人道主义援助组织车队的安全通行。</p>
+<p><button class="play-button sentence" id="s-00-00-32-894" data-start="00:00:32,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Egyptian TV has shown these pictures of aid trucks lining up at the border before moving off-driving towards the Gaza Strip.</p>
+<p>埃及电视台展示了援助卡车在边境排队等待进入加沙地带的画面。</p>
+<p><button class="play-button sentence" id="s-00-00-43-908" data-start="00:00:43,908" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli move, which includes opening so-called humanitarian corridors, comes after mounting international pressure and warnings of mass starvation of Palestinians in the territory.</p>
+<p>以色列包括开放所谓人道主义走廊的举措，是在国际压力加剧和该地区巴勒斯坦人面临大规模饥荒警告后采取的。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959944" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-55-334" data-start="00:00:55,334" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli military says its planes also dropped seven packages of aid into Gaza earlier this morning containing flour, sugar and canned food.</p>
+<p>以色列军方称今晨还向加沙空投了七包含面粉、糖和罐头的援助物资。</p>
+<p><button class="play-button sentence" id="s-00-01-04-000" data-start="00:01:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The IDF released these pictures of that.</p>
+<p>以色列国防军发布了相关照片。</p>
+<p><button class="play-button sentence" id="s-00-01-06-614" data-start="00:01:06,614" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the aid agencies say the method is inefficient, dangerous, and a distraction.</p>
+<p>但援助机构称这种方式效率低下、危险且转移注意力。</p>
+<p><button class="play-button sentence" id="s-00-01-11-733" data-start="00:01:11,733" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli troops have boarded a boat that was trying to bring aid to Gaza by sea.</p>
+<p>以色列军队登上一艘试图通过海路向加沙运送援助的船只。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959923" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-16-264" data-start="00:01:16,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pro-Palestinian Friedham-Fletilla coalition said the vessel, Handala, was intercepted in international waters.</p>
+<p>亲巴勒斯坦的弗里德姆船队联盟称"汉达拉"号在国际水域被拦截。</p>
+<p><button class="play-button sentence" id="s-00-01-24-159" data-start="00:01:24,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Video footage showed activists on board, with their hands up as soldiers took control before the feed cut out.</p>
+<p>视频显示活动人士举手投降，士兵控制船只后画面中断。</p>
+<p><button class="play-button sentence" id="s-00-01-31-395" data-start="00:01:31,395" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go live to our Middle East correspondent Amir Nada, who's in Jerusalem, and our Gaza correspondent, Rishdi Abeluf, who joins us from Istanbul.</p>
+<p>现在连线我们在耶路撒冷的中东记者阿米尔·纳达，以及在伊斯坦布尔的加沙记者里什迪·阿贝鲁夫。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959900" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-39-578" data-start="00:01:39,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amir, if I can start with you, what do we know about this breaking news of these pauses in fighting in some areas of Gaza?</p>
+<p>阿米尔，首先请告诉我们关于加沙部分地区停火的最新消息。</p>
+<p><button class="play-button sentence" id="s-00-01-50-560" data-start="00:01:50,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the areas that they've announced are areas that the Israeli military has previously told Palestinians to go to areas such as El Mawasi, which is a huge tent encampment, a home to thousands of Palestinians who've been displaced there throughout the war.</p>
+<p>他们宣布的区域是以色列军方此前指示巴勒斯坦人前往的地方，如阿尔马瓦西——一个容纳数千战争流离失所者的巨大帐篷营地。</p>
+<p><button class="play-button sentence" id="s-00-02-06-529" data-start="00:02:06,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So these are already supposed to be areas that are safer areas than elsewhere in Gaza, where the fighting is supposed to be happening at a higher intensity.</p>
+<p>这些本应是比加沙其他战斗更激烈地区更安全的地带。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-15-839" data-start="00:02:15,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the more significant element of this statement is the announcement around humanitarian convoys.</p>
+<p>我认为该声明更重要之处在于人道主义车队的安排。</p>
+<p><button class="play-button sentence" id="s-00-02-22-149" data-start="00:02:22,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Humanitarian agencies have said one of the issues that they face while trying to bring aid into the Gaza Strip is that their convoys are often attacked by the Israeli military, and then they struggle to get permissions to deliver that aid.</p>
+<p>人道机构表示，援助车队常遭以军袭击且难以获得运送许可。</p>
+<p><button class="play-button sentence" id="s-00-02-36-960" data-start="00:02:36,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When they do get it, it's unsafe for the civilians that crowd around it.</p>
+<p>即便获准，聚集的平民也面临危险。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959839" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-40-783" data-start="00:02:40,783" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw deadly incidents this weekend and last weekend.</p>
+<p>本周末和上周末都发生过致命事件。</p>
+<p><button class="play-button sentence" id="s-00-02-44-324" data-start="00:02:44,324" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So if there's going to be a safe route from the borders of Gaza through to the humanitarian areas such as El Mawasi and the areas where Palestinians are, that could indeed actually have a significant effect on the ability of Palestinians to access aid in Gaza.</p>
+<p>若能从加沙边境至阿尔马瓦西等地区建立安全路线，将极大改善巴勒斯坦人获取援助的状况。</p>
+<p><button class="play-button sentence" id="s-00-03-00-960" data-start="00:03:00,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, it is interesting.</p>
+<p>确实耐人寻味。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-02-258" data-start="00:03:02,258" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The statement from the IDF says this was coordinated with the united nations.</p>
+<p>以军声明称此举与联合国协调进行。</p>
+<p><button class="play-button sentence" id="s-00-03-06-479" data-start="00:03:06,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also seen early this morning air drops by the Israelis.</p>
+<p>今晨我们还看到以色列的空投行动。</p>
+<p><button class="play-button sentence" id="s-00-03-15-199" data-start="00:03:15,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's right.</p>
+<p>没错。</p>
+<p><button class="play-button sentence" id="s-00-03-16-277" data-start="00:03:16,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, I think critics might say that that will do more to sort of have a comms benefit for Israel than an actual impact on the humanitarian situation on the ground.</p>
+<p>批评者可能认为这更多是以色列的公关手段，而非实质改善人道状况。</p>
+<p><button class="play-button sentence" id="s-00-03-30-318" data-start="00:03:30,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What humanitarian agencies say Palestinians need is for the Gaza Strip to be flooded with convoys of aid trucks, not seven packages dropped from the air.</p>
+<p>人道机构强调加沙需要大量援助卡车而非七包空投物资。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959780" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-39-921" data-start="00:03:39,921" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obviously Jordan is looking at doing some air drops too with coordination with the UK after approval from Israel.</p>
+<p>约旦也计划在以色列批准后与英国协调空投。</p>
+<p><button class="play-button sentence" id="s-00-03-48-202" data-start="00:03:48,202" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But humanitarian aid agencies say that air drops are not the solution.</p>
+<p>但人道机构指出空投非解决之道。</p>
+<p><button class="play-button sentence" id="s-00-03-52-261" data-start="00:03:52,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're ineffective.</p>
+<p>它们效率低下。</p>
+<p><button class="play-button sentence" id="s-00-03-53-347" data-start="00:03:53,347" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are dangerous.</p>
+<p>且危险。</p>
+<p><button class="play-button sentence" id="s-00-03-55-199" data-start="00:03:55,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gaza is not far away.</p>
+<p>加沙并非偏远地区。</p>
+<p><button class="play-button sentence" id="s-00-03-56-576" data-start="00:03:56,576" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not a remote territory.</p>
+<p>不需要远程投送。</p>
+<p><button class="play-button sentence" id="s-00-03-58-521" data-start="00:03:58,521" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They just need to allow much more, many more trucks to be delivered inside the Gaza Strip.</p>
+<p>只需允许更多卡车进入加沙。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-04-370" data-start="00:04:04,370" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amir, you mentioned the communication side of things.</p>
+<p>阿米尔，你提到传播效应。</p>
+<p><button class="play-button sentence" id="s-00-04-07-919" data-start="00:04:07,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How much do you think what Israel is doing over the last 24 hours is because of that mounting international pressure and the pictures that all of us have seen coming out of Gaza?</p>
+<p>你认为以色列过去24小时行动有多少是迫于国际压力和加沙惨状影像？</p>
+<p><button class="play-button sentence" id="s-00-04-21-920" data-start="00:04:21,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's under huge pressure internationally amongst its allies, amongst the international community, the aid community.</p>
+<p>以色列正面临来自盟友、国际社会和援助界的巨大压力。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959730" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-29-942" data-start="00:04:29,942" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clearly it wants to be seen to respond.</p>
+<p>显然它希望展现回应姿态。</p>
+<p><button class="play-button sentence" id="s-00-04-32-628" data-start="00:04:32,628" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess what we're trying to analyse is whether the response is that it's announcing will actually have the kind of effect that the humanitarian community are calling for.</p>
+<p>关键是其宣布的措施能否达到人道机构期待的效果。</p>
+<p><button class="play-button sentence" id="s-00-04-45-438" data-start="00:04:45,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the statement that Israel put out yesterday evening, they actually denied that there's a starvation crisis in Gaza.</p>
+<p>昨晚声明中以色列否认加沙存在饥荒危机。</p>
+<p><button class="play-button sentence" id="s-00-04-54-757" data-start="00:04:54,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They said that they want to enforce these changes in order to refute the false claim of deliberate starvation.</p>
+<p>称这些改变是为驳斥"蓄意制造饥荒"的指控。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-255" data-start="00:05:01,255" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're in this weird position where Israel is saying it's going to make some changes to the delivery of humanitarian aid in the Gaza Strip.</p>
+<p>矛盾的是以色列一方面承诺改善加沙援助输送，</p>
+<p><button class="play-button sentence" id="s-00-05-08-581" data-start="00:05:08,581" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But at the same time saying that there isn't a crisis.</p>
+<p>一方面否认危机存在。</p>
+<p><button class="play-button sentence" id="s-00-05-11-461" data-start="00:05:11,461" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amir, for the moment, thank you.</p>
+<p>阿米尔，感谢连线。</p>
+<p><button class="play-button sentence" id="s-00-05-13-280" data-start="00:05:13,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go to our Gaza correspondent, Rishdi Avalu, who is in Istanbul.</p>
+<p>现在连线在伊斯坦布尔的加沙记者里什迪·阿瓦鲁。</p>
+<p><button class="play-button sentence" id="s-00-05-17-411" data-start="00:05:17,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rishdi, I know you have your family, some of it, in Gaza and you talk to a lot of people there.</p>
+<p>里什迪，你部分家人仍在加沙并与当地保持联系。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959675" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-24-079" data-start="00:05:24,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is the situation like at the moment?</p>
+<p>目前情况如何？</p>
+<p><button class="play-button sentence" id="s-00-05-27-665" data-start="00:05:27,665" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll look, we will hope for a bitter permanent solution, but they, in general, they will come.</p>
+<p>我们期待持久解决方案，但当前人们普遍欢迎停火。</p>
+<p><button class="play-button sentence" id="s-00-05-36-082" data-start="00:05:36,082" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are a few people who have access to the social media, we're posting all night and this morning that this is a good move.</p>
+<p>能上网的民众整夜发帖称赞此举。</p>
+<p><button class="play-button sentence" id="s-00-05-42-951" data-start="00:05:42,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At least we will, some food will be allowed in the air drop.</p>
+<p>至少空投能让部分食物进入。</p>
+<p><button class="play-button sentence" id="s-00-05-47-047" data-start="00:05:47,047" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last night was a chaotic scene.</p>
+<p>昨夜场面混乱。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959650" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-49-465" data-start="00:05:49,465" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've seen videos and pictures of people fighting each other.</p>
+<p>我看到民众为抢夺食物斗殴的画面。</p>
+<p><button class="play-button sentence" id="s-00-05-54-094" data-start="00:05:54,094" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, punching each other to take some of the food.</p>
+<p>为争抢食物大打出手。</p>
+<p><button class="play-button sentence" id="s-00-05-57-259" data-start="00:05:57,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is just to show you how disparate the people who are starving for the food.</p>
+<p>可见民众饥饿程度。</p>
+<p><button class="play-button sentence" id="s-00-06-02-444" data-start="00:06:02,444" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Five, six, I think seven packages were counted in the north west of Gaza area called Asudaniya near the Gaza City where we believe maybe 200,000 people are living in tents in the area.</p>
+<p>加沙城附近阿斯达尼亚地区仅收到五六包空投物资，当地有约20万帐篷居民。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959622" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-17-186" data-start="00:06:17,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of them were evacuated from Northern Gaza and Eastern Gaza where there is active Israeli military operation in the area.</p>
+<p>多数人是从以军行动激烈的北部和东部撤离的。</p>
+<p><button class="play-button sentence" id="s-00-06-26-864" data-start="00:06:26,864" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So all eyes on the border and there are people are waiting for the food to come in because what has been allowed in the last week, which considered the most difficult week since the beginning of the war, people are waiting for the aid to be in and to be distributed, not to be sent to the Gaza humanitarian foundation where people walk.</p>
+<p>民众紧盯边境等待援助，上周是战争以来最艰难时期，人们希望物资直接分发而非送至需徒步数小时的危险人道站点。</p>
+<p><button class="play-button sentence" id="s-00-06-51-365" data-start="00:06:51,365" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, for hours, sometimes to get to a very dangerous area, about a thousand people were killed.</p>
+<p>约千人曾在前往这些危险区域时丧生。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959582" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-57-168" data-start="00:06:57,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The people who are all the time demanding that food should be handed over to the UN agencies and to be distributed to the people.</p>
+<p>民众一直要求由联合国机构直接分发食物。</p>
+<p><button class="play-button sentence" id="s-00-07-05-431" data-start="00:07:05,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it is very early to judge whether the amount allowed will be changed the crisis, but it's a good move considered by all Palestinians.</p>
+<p>现在判断援助量能否缓解危机为时尚早，但巴勒斯坦人普遍视其为积极举措。</p>
+<p><button class="play-button sentence" id="s-00-07-16-513" data-start="00:07:16,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, because the aid agencies say they have those trucks at the border and we've seen pictures of them moving from Egypt, but it is that issue that we mentioned with Amir.</p>
+<p>援助机构称卡车已在埃及边境待命，但如阿米尔所言——</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959551" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-28-122" data-start="00:07:28,122" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's about the safety of getting those supplies in.</p>
+<p>关键是运输安全。</p>
+<p><button class="play-button sentence" id="s-00-07-35-920" data-start="00:07:35,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, because you know, about 60% of Gaza and now are under Israeli security control, especially the area where the cruisings that is allowed food in, like Kerem Shalom crossing in Rafa'h, the entire city of Rafa'h is under Israeli control.</p>
+<p>加沙60%地区特别是凯雷姆沙洛姆等过境点周边均处于以军控制下。</p>
+<p><button class="play-button sentence" id="s-00-07-50-920" data-start="00:07:50,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is active troop inside it and there is fighting every day in that area.</p>
+<p>该地区每日都有交火。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959523" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-56-445" data-start="00:07:56,445" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the trucks, the humanitarian aid agencies always concern about the safety of the drivers and the trucks.</p>
+<p>援助机构始终担忧司机和卡车安全。</p>
+<p><button class="play-button sentence" id="s-00-08-03-932" data-start="00:08:03,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They need a multiple coordination to enter Rafa'h first and then to go to the border and collect it and they need another coordination to go to the areas and distributed.</p>
+<p>需多次协调才能进入拉法、边境提货并分发。</p>
+<p><button class="play-button sentence" id="s-00-08-14-029" data-start="00:08:14,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We understand that they might allow food from three different cruisings today, one in south, one in the north and one in the middle.</p>
+<p>据悉今日可能开放南、北、中部三个过境点。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959497" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-22-839" data-start="00:08:22,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what is the agencies and Gaza are saying that they need a 500 to 600 truck every day for at least a month to, you know, to ease some of the crisis related to the food and water and most important.</p>
+<p>机构称加沙每日需要500-600辆卡车持续一个月才能缓解粮水危机。</p>
+<p><button class="play-button sentence" id="s-00-08-37-539" data-start="00:08:37,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not only food, they need medicine for the hospitals and they need a fuel to be able to, you know, run the essential operations in the hospitals in Gaza.</p>
+<p>还需药品和维持医院运转的燃料。</p>
+<p><button class="play-button sentence" id="s-00-08-47-006" data-start="00:08:47,006" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know this is a difficult question, Rishdi.</p>
+<p>里什迪，我知道这问题很难——</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959470" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-49-927" data-start="00:08:49,927" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there any optimism amongst the people that you speak to on a daily basis there?</p>
+<p>你联系的民众是否抱有希望？</p>
+<p><button class="play-button sentence" id="s-00-09-00-159" data-start="00:09:00,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it's hard to find this any level of optimism in Gaza, especially after the, you know, about 48 hours ago when the American envoy Steve Whitkov announced that the Americans and the Israelis are walking away from the, you know, ceasefire talks and though, people were hoping that after months of suffering, the ceasefire were coming to place.</p>
+<p>加沙难觅乐观情绪，特别是48小时前美以退出停火谈判后。</p>
+<p><button class="play-button sentence" id="s-00-09-23-258" data-start="00:09:23,258" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The people enjoy a relative calm back in January for about 57 days.</p>
+<p>民众曾在一月享受过57天相对平静。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959432" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-27-758" data-start="00:09:27,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are used to allow hundreds of trucks every day.</p>
+<p>当时每日有数百辆卡车进入。</p>
+<p><button class="play-button sentence" id="s-00-09-31-600" data-start="00:09:31,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The markets were somehow stable and people could start, you know, at least to feel a little bit of relief.</p>
+<p>市场相对稳定，民众稍得喘息。</p>
+<p><button class="play-button sentence" id="s-00-09-38-004" data-start="00:09:38,004" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Optimism is something very hard to find in Gaza but there is always hope that this step will be like a small step considered by them but could lead to a bigger step or a permanent ceasefire that in the war.</p>
+<p>虽难言乐观，人们仍希望这小步能促成停火大计。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959408" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-51-176" data-start="00:09:51,176" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rishdi, thank you very much for your time.</p>
+<p>里什迪，感谢连线。</p>
+<p><button class="play-button sentence" id="s-00-09-53-939" data-start="00:09:53,939" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I appreciate it.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-09-55-045" data-start="00:09:55,045" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rishdi talking to us from Istanbul of course because Israel does not allow the BBC or other international media into the territory at the moment.</p>
+<p>里什迪从伊斯坦布尔发回报道，因以色列目前禁止BBC等国际媒体进入加沙。</p>
+<p><button class="play-button sentence" id="s-00-10-04-233" data-start="00:10:04,233" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our world news correspondent Joe Inwood now looks at the aid situation and a warning.</p>
+<p>现在由国际新闻记者乔·因伍德分析援助现状并带来警示。</p>
+<p><button class="play-button sentence" id="s-00-10-09-536" data-start="00:10:09,536" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It does contain distressing images in this report.</p>
+<p>本报道含令人不安的画面。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959385" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-14-960" data-start="00:10:14,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zainab Abu Ali was just six months old when her parents buried her, killed not by the violence of war but by the malnutrition it has brought to Gaza.</p>
+<p>六个月大的扎伊纳布死于战争引发的营养不良。</p>
+<p><button class="play-button sentence" id="s-00-10-25-393" data-start="00:10:25,393" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She got also bacterial infection and sipsis so she was unable to swallow and she was a yesterday, came to the hospital as a body because of severe starvation.</p>
+<p>她因严重饥饿并发感染无法进食，被送到医院时已成尸体。</p>
+<p><button class="play-button sentence" id="s-00-10-40-337" data-start="00:10:40,337" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is growing international awareness and anger at the scale of the humanitarian crisis.</p>
+<p>国际社会对加沙人道危机的认知与愤怒与日俱增。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959351" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-48-639" data-start="00:10:48,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of the nearly 60,000 people who have now been killed since the start of the war, 127 died from malnutrition.</p>
+<p>战争致近6万人死亡中，127人死于营养不良。</p>
+<p><button class="play-button sentence" id="s-00-10-55-961" data-start="00:10:55,961" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That figure increased by five in just one day according to the Hamas Run Health Ministry.</p>
+<p>哈马斯卫生部称该数字单日新增5例。</p>
+<p><button class="play-button sentence" id="s-00-11-04-066" data-start="00:11:04,066" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To try to tackle the crisis, a series of air drops have been announced.</p>
+<p>为应对危机，多国宣布空投计划。</p>
+<p><button class="play-button sentence" id="s-00-11-09-918" data-start="00:11:09,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UK has said it is coordinating with Jordan to take part as it did last year.</p>
+<p>英国称正与约旦协调如去年般参与空投。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959324" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-15-438" data-start="00:11:15,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These were the scenes then but air drops face logistical challenges.</p>
+<p>这是去年画面，但空投存在物流难题。</p>
+<p><button class="play-button sentence" id="s-00-11-20-798" data-start="00:11:20,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the last round of aid flights, the US Air Force said each plane carried around 12,600 meals.</p>
+<p>美军称每架运输机仅载12,600份餐食。</p>
+<p><button class="play-button sentence" id="s-00-11-26-759" data-start="00:11:26,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This means it would take 160 flights every day to provide just one meal a day to the population of Gaza.</p>
+<p>意味每日需160架次才能让加沙人日均一餐。</p>
+<p><button class="play-button sentence" id="s-00-11-33-803" data-start="00:11:33,803" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the combined transport fleet of the UAE and Jordanian air forces who would carry out the drops is only around 20 aircraft.</p>
+<p>而阿联酋和约旦执行空投的运输机总数仅约20架。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959298" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-41-679" data-start="00:11:41,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air drops could deliver just a tiny fraction of the aid that trucks could.</p>
+<p>空投量远不及卡车运输。</p>
+<p><button class="play-button sentence" id="s-00-11-46-596" data-start="00:11:46,596" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that has led to this blunt assessment from a leading aid organisation.</p>
+<p>这引发主要援助组织的尖锐评价。</p>
+<p><button class="play-button sentence" id="s-00-11-52-399" data-start="00:11:52,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's an obvious solution in Gaza which is to open the borders and allow agencies like the IRC, like our partners in the UN and humanitarian organisations to bring aid in and to distribute it.</p>
+<p>加沙的解决方案显而易见——开放边境让援助机构进入。</p>
+<p><button class="play-button sentence" id="s-00-12-02-318" data-start="00:12:02,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As we would do in any other crisis on, aid drops fundamentally are a grotesque distraction from that priority.</p>
+<p>空投本质是对优先事项的荒谬转移。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959269" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-10-642" data-start="00:12:10,642" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need access, not air drops.</p>
+<p>我们需要准入而非空投。</p>
+<p><button class="play-button sentence" id="s-00-12-14-720" data-start="00:12:14,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the issue of access has been a source of intense argument.</p>
+<p>准入问题引发激烈争论。</p>
+<p><button class="play-button sentence" id="s-00-12-18-046" data-start="00:12:18,046" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Late last night, Israel announced the opening of a series of humanitarian corridors to refute what it called the false claim of deliberate starvation in the Gaza Strip.</p>
+<p>昨晚以色列宣布开放人道走廊，驳斥"蓄意制造饥荒"指控。</p>
+<p><button class="play-button sentence" id="s-00-12-28-227" data-start="00:12:28,227" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But its critics will see it as an emission of the scale of the humanitarian crisis in Gaza, which they say it has caused.</p>
+<p>但批评者视此为以色列对加沙人道危机规模的变相承认。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959244" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-35-759" data-start="00:12:35,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Inwood, BBC News.</p>
+<p>BBC新闻，乔·因伍德报道。</p>
+<p><button class="play-button sentence" id="s-00-13-05-759" data-start="00:13:05,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UK is also going to be starting a new scheme to try and evacuate a relatively small number of critically injured children in Gaza to the UK.</p>
+<p>英国将启动新计划撤离少量加沙重伤儿童。</p>
+<p><button class="play-button sentence" id="s-00-13-36-274" data-start="00:13:36,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there have been two transfers so far.</p>
+<p>目前已有两批转移。</p>
+<p><button class="play-button sentence" id="s-00-13-39-038" data-start="00:13:39,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The charity behind this once 30 children to be brought out from Gaza and evacuated to the UK for treatment as quickly as possible.</p>
+<p>发起慈善计划希望尽快转移30名儿童赴英治疗。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959172" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-47-826" data-start="00:13:47,826" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Politically, of course, here there is intense growing pressure on the government to do more.</p>
+<p>英国国内要求政府采取更多行动的政治压力日增。</p>
+<p><button class="play-button sentence" id="s-00-13-55-200" data-start="00:13:55,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In particular, recognise a Palestinian state, 221 MPs from across the House of Commons signed a letter urging the Prime Minister to follow France's example.</p>
+<p>特别是承认巴勒斯坦国，下议院221名议员签署联名信，敦促首相效仿法国的做法。</p>
+<p><button class="play-button sentence" id="s-00-14-05-839" data-start="00:14:05,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> France has said that it will recognise the Palestinian state when the United Nations meets in New York next month.</p>
+<p>法国表示将在下月联合国纽约会议期间承认巴勒斯坦国。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959147" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-12-740" data-start="00:14:12,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So far, though, the government is pushing back on that and holding its long-standing line that a Palestinian state can only be part of a long-term solution to conflict in the Middle East.</p>
+<p>但迄今为止，政府仍坚持其一贯立场，认为巴勒斯坦国只能作为中东冲突长期解决方案的一部分。</p>
+<p><button class="play-button sentence" id="s-00-14-24-948" data-start="00:14:24,948" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although the SNP are saying that as soon as Parliament is back after the summer recess, they're going to be pushing for a vote on that question in the Commons.</p>
+<p>尽管苏格兰民族党表示，一旦议会夏季休会结束，他们将推动在下议院就此问题投票。</p>
+<p><button class="play-button sentence" id="s-00-14-34-318" data-start="00:14:34,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is occupying a lot of thinking in government at the moment.</p>
+<p>目前这一问题正占据政府的大量考量。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959122" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-37-254" data-start="00:14:37,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, Kirstama is meeting President Trump tomorrow, Monday, in Scotland for talks.</p>
+<p>当然，克里斯塔莫将于明天（周一）在苏格兰与特朗普总统会晤。</p>
+<p><button class="play-button sentence" id="s-00-14-43-927" data-start="00:14:43,927" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Gaza will, of course, I'd be surprised if he didn't feature in their discussions.</p>
+<p>加沙问题无疑将成为他们会谈的重点，否则会令人意外。</p>
+<p><button class="play-button sentence" id="s-00-14-49-918" data-start="00:14:49,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been right and a reminder we have a live page running with the latest on that announcement from Israel of those tactical pauses in fighting in three parts of Gaza.</p>
+<p>需要提醒的是，我们设有实时页面更新以色列宣布在加沙三部分区域实施战术停火的最新消息。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1cL8jzGEDj/?t=-2208959100" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-59-025" data-start="00:14:59,025" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the fact they're going to open aid corridors, you'll find that on the BBC News website and app.</p>
+<p>关于开放援助走廊的详情，您可在BBC新闻网站和应用程序上查阅。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
