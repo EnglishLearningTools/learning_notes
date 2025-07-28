@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>China investigates head monk of Shaolin 'Kung Fu' temple | BBC News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The head monk of China's Shaolin Temple is under investigation for embezzlement and improper relations, including fathering a child, after transforming the temple into a global commercial empire.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>China investigates head monk of Shaolin 'Kung Fu' temple | BBC News</h1>
+<p>【BBC报道少林寺方丈释永信接受调查 20250729】</p>
+<p>Summary:
+The head monk of China's Shaolin Temple is under investigation for embezzlement and improper relations, including fathering a child, after transforming the temple into a global commercial empire.</p>
+<p>摘要：
+中国少林寺方丈因挪用公款和不正当关系（包括育有一子）接受调查，此前他将寺庙转变为全球商业帝国。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 2 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1py8HzoEd6/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-240" data-start="00:00:00,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The head monk of China's Shaolin Temple is being stripped of his robes.</p>
+<p>中国少林寺方丈被剥夺僧袍。</p>
+<p><button class="play-button sentence" id="s-00-00-05-421" data-start="00:00:05,421" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Xi Yong Xin is under investigation for alleged embezzlement and improper relations with women, including claims he fathered a child.</p>
+<p>释永信因涉嫌挪用公款以及与女性不正当关系（包括育有一子）接受调查。</p>
+<p><button class="play-button sentence" id="s-00-00-13-165" data-start="00:00:13,165" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After taking over in 1999, he turned the temple into a global commercial empire.</p>
+<p>自1999年接管后，他将寺庙转变为全球商业帝国。</p>
+<p><button class="play-button sentence" id="s-00-00-17-960" data-start="00:00:17,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> China's top Buddhist authority has revoked his clergy certificate as a criminal probe into this deepens.</p>
+<p>随着刑事调查深入，中国佛教最高机构已撤销其教职证书。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1py8HzoEd6/?t=-2208959975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-24-242" data-start="00:00:24,242" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our China correspondent Steve McDonald has more from Beijing.</p>
+<p>本台驻华记者史蒂夫·麦克唐纳在北京带来更多报道。</p>
+<p><button class="play-button sentence" id="s-00-00-27-760" data-start="00:00:27,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When Xiang Shin took over as Abbott at the Shaolin Temple, he took it immediately in a very commercial direction.</p>
+<p>释永信接任少林寺方丈后，立即将其推向商业化方向。</p>
+<p><button class="play-button sentence" id="s-00-00-36-453" data-start="00:00:36,453" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the movies, the stage shows, the millions of tourists coming to China to see the temple are all testament to this.</p>
+<p>电影、舞台剧以及数百万来华参观寺庙的游客都印证了这一点。</p>
+<p><button class="play-button sentence" id="s-00-00-44-274" data-start="00:00:44,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Shaolin Temple has become a global marketing success.</p>
+<p>少林寺已成为全球营销的成功典范。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1py8HzoEd6/?t=-2208959950" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-49-759" data-start="00:00:49,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so critics of this approach would say they're not surprised that we now have these embezzlement allegations against him.</p>
+<p>因此，批评者表示对如今的挪用公款指控并不意外。</p>
+<p><button class="play-button sentence" id="s-00-00-58-369" data-start="00:00:58,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's long been criticized for taking this important historical and cultural institution and turning it into a shallow money-making exercise.</p>
+<p>他长期被批评将这一重要历史文化机构变成肤浅的牟利工具。</p>
+<p><button class="play-button sentence" id="s-00-01-09-115" data-start="00:01:09,115" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, this is a 1,500-year-old temple.</p>
+<p>要知道，这是一座拥有1500年历史的寺庙。</p>
+<p><button class="play-button sentence" id="s-00-01-13-652" data-start="00:01:13,652" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh they would say, not just something for you to make money from.</p>
+<p>他们会说，这不仅仅是用来赚钱的。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1py8HzoEd6/?t=-2208959921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-18-686" data-start="00:01:18,686" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He of course though has long said there should be engagement with the general public and therefore he's spreading the good word as it were.</p>
+<p>当然，他长期主张应与公众接触，以此传播佛法。</p>
+<p><button class="play-button sentence" id="s-00-01-26-054" data-start="00:01:26,054" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now this is not the first time we've seen allegations of corruption of embezzlement against him.</p>
+<p>这不是他第一次面临贪污挪用公款的指控。</p>
+<p><button class="play-button sentence" id="s-00-01-31-759" data-start="00:01:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back in 2015 very similar allegations were leveled.</p>
+<p>早在2015年就有类似指控。</p>
+<p><button class="play-button sentence" id="s-00-01-35-538" data-start="00:01:35,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At that time though it was all dismissed and apart from the money then as now he's also accused of having improper relations with several women.</p>
+<p>当时指控全被驳回，但除了金钱问题，如今他还被指控与多名女性有不正当关系。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1py8HzoEd6/?t=-2208959890" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-49-118" data-start="00:01:49,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Steve McDonald there in Beijing.</p>
+<p>史蒂夫·麦克唐纳在北京报道。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
