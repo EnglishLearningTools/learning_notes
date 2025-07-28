@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>BBC News at Six, 28/07/2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The triumphant Lionesses return home as back-to-back European champions, inspiring a new generation while political leaders discuss trade and Gaza aid.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>BBC News at Six, 28/07/2025</h1>
+<p>【BBC晚间新闻 20250729 英国成人网站禁止青少年访问，VPN成最热门应用｜英格兰女足蝉联欧洲杯冠军｜特朗普与英国首相斯塔默会晤】</p>
+<p>Summary:
+The triumphant Lionesses return home as back-to-back European champions, inspiring a new generation while political leaders discuss trade and Gaza aid.</p>
+<p>摘要：
+胜利归来的英格兰女足蝉联欧洲杯冠军，激励新一代；与此同时，政治领袖们就贸易和加沙援助展开讨论。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 45 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959985" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-15-000" data-start="00:00:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At 6, the triumphant lionesses return home.</p>
+<p>六点整，凯旋的英格兰女足归国。</p>
+<p><button class="play-button sentence" id="s-00-00-18-600" data-start="00:00:18,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their champions of Europe once again, making history, winning back-to-back titles, inspiring a new generation.</p>
+<p>她们再度加冕欧洲冠军，创造历史，蝉联桂冠，激励新一代。</p>
+<p><button class="play-button sentence" id="s-00-00-27-440" data-start="00:00:27,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're very inspirational because I know that most people see football as a boy's sport.</p>
+<p>她们极具感召力，因为我知道多数人曾认为足球是男性运动。</p>
+<p><button class="play-button sentence" id="s-00-00-32-399" data-start="00:00:32,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what they can't really say anything now because the boys don't really win that much.</p>
+<p>如今人们无话可说——毕竟男足并未赢得如此佳绩。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959960" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-39-598" data-start="00:00:39,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, children are learning that England really do win at penalties.</p>
+<p>是的，孩子们正见证英格兰队真正掌握点球决胜的秘诀。</p>
+<p><button class="play-button sentence" id="s-00-00-43-118" data-start="00:00:43,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister has congratulated the lionesses as they make their way here to Downing Street.</p>
+<p>首相在女足前往唐宁街途中发来贺电。</p>
+<p><button class="play-button sentence" id="s-00-00-50-439" data-start="00:00:50,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm here in Scotland where Donald Trump and Sir Keir Starmer have been meeting.</p>
+<p>我在苏格兰报道，特朗普与基尔·斯塔默爵士在此会晤。</p>
+<p><button class="play-button sentence" id="s-00-00-56-759" data-start="00:00:56,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They talked tariffs and trade, Ukraine and Gaza and how well they work together.</p>
+<p>他们讨论了关税贸易、乌克兰与加沙问题，以及双方的良好合作。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959936" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-03-960" data-start="00:01:03,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that the Prime Minister has been so supportive of us and so strong.</p>
+<p>我认为首相给予了我们极大支持，立场坚定。</p>
+<p><button class="play-button sentence" id="s-00-01-10-560" data-start="00:01:10,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a huge amount that we have already achieved, actually, together a well achieved, as we go forward leading our respective countries.</p>
+<p>我们已共同取得巨大成就，未来将继续引领各自国家前行。</p>
+<p><button class="play-button sentence" id="s-00-01-20-039" data-start="00:01:20,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Jeremy Bowen is with the Royal Jordanian Air Force dropping desperately needed aid into Gaza.</p>
+<p>杰里米·鲍恩随约旦皇家空军向加沙空投急需物资。</p>
+<p><button class="play-button sentence" id="s-00-01-27-480" data-start="00:01:27,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fact this has been permitted by the Israelis means that they have responded to pressure.</p>
+<p>以色列允许此举表明他们迫于压力作出回应。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959903" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-36-159" data-start="00:01:36,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also, this hour how London's lionesses played their part in England's Euro-Success, not only a win, but a moment in history.</p>
+<p>此刻聚焦伦敦女足如何缔造英格兰的欧洲杯辉煌——不仅是胜利，更是历史瞬间。</p>
+<p><button class="play-button sentence" id="s-00-01-43-400" data-start="00:01:43,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We look ahead to tomorrow's victory parade in the capital.</p>
+<p>我们展望明日伦敦胜利游行。</p>
+<p><button class="play-button sentence" id="s-00-01-53-438" data-start="00:01:53,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello to you from Bowen Medi in Aberdeenshire, where the sun is creeping in and out every few seconds.</p>
+<p>这里是阿伯丁郡Bowen Medi，阳光时隐时现。</p>
+<p><button class="play-button sentence" id="s-00-01-58-879" data-start="00:01:58,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Donald Trump is due to arrive in the next few minutes aboard Marine Wond to visit his new golf course here.</p>
+<p>特朗普将乘"海军一号"抵达，参观其新高尔夫球场。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-05-799" data-start="00:02:05,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's not all about relaxation because joining him will be Sir Keir Starmer following a bilateral meeting the two men had earlier in the day.</p>
+<p>但这不仅是休闲——基尔·斯塔默爵士将同行，二人早前已举行双边会谈。</p>
+<p><button class="play-button sentence" id="s-00-02-14-800" data-start="00:02:14,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They talked about the fact that the lionesses were in the first place in the United States.</p>
+<p>他们讨论了女足在美国的领先地位。</p>
+<p><button class="play-button sentence" id="s-00-02-18-800" data-start="00:02:18,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They talked about the fact that the lionesses were in the last few days of the year, but ultimately, the lionesses were expecting the two men had earlier in the day.</p>
+<p>他们谈及女足年末赛况，但最终女足更关注二人早前的会谈。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959853" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-26-318" data-start="00:02:26,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They talked trade and tariffs discussed Ukraine with the President threatening new sanctions on Russia- and they spoke about the humanitarian crisis in Gaza.</p>
+<p>他们讨论贸易关税，总统威胁对俄新制裁的乌克兰议题，以及加沙人道危机。</p>
+<p><button class="play-button sentence" id="s-00-02-35-799" data-start="00:02:35,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, more on all that in a moment, but first the other big story of the day, you guessed it, that historic win for the lionesses in Switzerland last night.</p>
+<p>稍后详述这些，但首先关注今日头条——昨夜女足在瑞士的历史性胜利。</p>
+<p><button class="play-button sentence" id="s-00-02-44-878" data-start="00:02:44,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Securing back-to-back Euros titles.</p>
+<p>成功卫冕欧洲杯。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959832" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-47-280" data-start="00:02:47,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today was the big homecoming with them now for a reception hosted by the deputy prime minister.</p>
+<p>今日荣归故里，副首相将主持欢迎仪式。</p>
+<p><button class="play-button sentence" id="s-00-02-53-038" data-start="00:02:53,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Natalie Perks is there for us now, Natalie.</p>
+<p>娜塔莉·珀克斯在现场报道。</p>
+<p><button class="play-button sentence" id="s-00-02-55-759" data-start="00:02:55,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, the players are still making their way through London, after as you said, becoming the first English side to win back-to-back major titles.</p>
+<p>是的，队员们正穿越伦敦——正如您所说，她们成为首支蝉联大赛冠军的英格兰球队。</p>
+<p><button class="play-button sentence" id="s-00-03-05-840" data-start="00:03:05,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They landed at South End Airport around three hours ago, after a final that continued the theme of keeping fans on the edge of our seats, around 60 million of us, bit our nails to the quick and what's become the most watched TV event of the year so far.</p>
+<p>三小时前她们降落南端机场，这场决赛让六千万观众屏息凝神，成为年度收视之最。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959799" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-20-199" data-start="00:03:20,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So here's the story of how the Lionesses lost their opening match, yet have celebrated making history again.</p>
+<p>以下是女足虽首战失利，仍再创历史的故事。</p>
+<p><button class="play-button sentence" id="s-00-03-28-878" data-start="00:03:28,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> England have returned today with precious cargo.</p>
+<p>英格兰队今日带着珍贵"货物"归来。</p>
+<p><button class="play-button sentence" id="s-00-03-32-400" data-start="00:03:32,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dark glasses hid blurry eyes, but ever-present smiles told the story of a night to remember.</p>
+<p>墨镜掩不住惺忪睡眼，但永恒笑容诉说着难忘之夜。</p>
+<p><button class="play-button sentence" id="s-00-03-41-079" data-start="00:03:41,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The players were still going strong at 4am, with the Holy Trinity of any good celebration.</p>
+<p>凌晨四点队员们仍在狂欢，遵循庆典"三位一体"：蛋糕、香槟与卡拉OK。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-52-000" data-start="00:03:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Family and friends were there to ensure the first England team to win back-to-back major titles got the party their heroics deserved.</p>
+<p>亲友们确保首支蝉联大赛冠军的英格兰队获得配得上壮举的庆典。</p>
+<p><button class="play-button sentence" id="s-00-04-00-039" data-start="00:04:00,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This morning, indistinctly English weather, Captain Leia Williamson cradled the trophy carefully onto the bus for it to make its way home again.</p>
+<p>今晨在典型英式阴霾中，队长莉娅·威廉姆森怀抱奖杯登车，开启凯旋之旅。</p>
+<p><button class="play-button sentence" id="s-00-04-09-280" data-start="00:04:09,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Congratulations, Serena.</p>
+<p>祝贺你，塞雷娜。</p>
+<p><button class="play-button sentence" id="s-00-04-10-080" data-start="00:04:10,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hard fought doesn't begin to cover it.</p>
+<p>"艰难取胜"远不足以形容。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959747" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-12-680" data-start="00:04:12,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One, one after extra time.</p>
+<p>加时赛一比一。</p>
+<p><button class="play-button sentence" id="s-00-04-14-960" data-start="00:04:14,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was absolute torture.</p>
+<p>简直是折磨。</p>
+<p><button class="play-button sentence" id="s-00-04-16-800" data-start="00:04:16,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's what I'm saying.</p>
+<p>这正是我想说的。</p>
+<p><button class="play-button sentence" id="s-00-04-17-879" data-start="00:04:17,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> England put fans through the emotional ringer, white to the end.</p>
+<p>英格兰让球迷经受情感考验，坚持到最后。</p>
+<p><button class="play-button sentence" id="s-00-04-21-639" data-start="00:04:21,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For a nation's so ill at ease with shootouts, emotions were being sorely tested.</p>
+<p>对这个不擅点球的国家，情感遭受严峻考验。</p>
+<p><button class="play-button sentence" id="s-00-04-27-000" data-start="00:04:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could Chloe Kelly repeat the trick of being England's match winner in the final?</p>
+<p>克洛伊·凯利能重演决赛绝杀吗？</p>
+<p><button class="play-button sentence" id="s-00-04-31-160" data-start="00:04:31,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's Kelly.</p>
+<p>是凯利！</p>
+<p><button class="play-button sentence" id="s-00-04-32-319" data-start="00:04:32,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whoop!</p>
+<p>哇哦！</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959726" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-33-040" data-start="00:04:33,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How does it hurt?</p>
+<p>这多痛快！</p>
+<p><button class="play-button sentence" id="s-00-04-34-240" data-start="00:04:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whoop! Whoop!</p>
+<p>哇哦！哇哦！</p>
+<p><button class="play-button sentence" id="s-00-04-36-040" data-start="00:04:36,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Never in doubt.</p>
+<p>毫无悬念。</p>
+<p><button class="play-button sentence" id="s-00-04-38-360" data-start="00:04:38,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Lionesses, go back to back!</p>
+<p>女足成功卫冕！</p>
+<p><button class="play-button sentence" id="s-00-04-41-720" data-start="00:04:41,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But her place on the plane was frozen out by Manchester City.</p>
+<p>但她在曼城队失去位置。</p>
+<p><button class="play-button sentence" id="s-00-04-45-839" data-start="00:04:45,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was dropped by Serena Viedman in February and considered quitting football, but a move to Arsenal brought redemption.</p>
+<p>二月被塞雷娜·维德曼弃用后考虑退役，转会阿森纳迎来重生。</p>
+<p><button class="play-button sentence" id="s-00-04-53-399" data-start="00:04:53,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nice, Thomas.</p>
+<p>干得好，托马斯。</p>
+<p><button class="play-button sentence" id="s-00-04-54-879" data-start="00:04:54,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nice.</p>
+<p>漂亮。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959704" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-55-452" data-start="00:04:55,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had to do it, Slay.</p>
+<p>我们必须成功，斯莱。</p>
+<p><button class="play-button sentence" id="s-00-04-57-399" data-start="00:04:57,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were a lot of tears at full time, especially when I saw my family, because those are the people that got me through those dark moments.</p>
+<p>终场哨响我泪流满面，尤其见到家人——是他们陪我度过至暗时刻。</p>
+<p><button class="play-button sentence" id="s-00-05-04-680" data-start="00:05:04,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tough times don't last, and just around the corner was the Champions League final on that, and now a Euro's final on that, so thank you to everyone that wrote me off.</p>
+<p>艰难时刻终会过去，转角迎来欧冠决赛，如今又是欧洲杯决赛，感谢所有看衰我的人。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959685" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-14-959" data-start="00:05:14,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm grateful.</p>
+<p>我心存感激。</p>
+<p><button class="play-button sentence" id="s-00-05-15-959" data-start="00:05:15,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She wasn't the only one who proved the doubt as wrong.</p>
+<p>她并非唯一打破质疑的人。</p>
+<p><button class="play-button sentence" id="s-00-05-19-319" data-start="00:05:19,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hannah Hampton took the number one jersey from Mary Erbs, despite doctors telling her she'd never play football.</p>
+<p>汉娜·汉普顿从玛丽·厄布斯手中接过1号球衣，尽管医生曾断言她无法踢球。</p>
+<p><button class="play-button sentence" id="s-00-05-26-358" data-start="00:05:26,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her serious eye condition affects depth perception.</p>
+<p>她的严重眼疾影响深度感知。</p>
+<p><button class="play-button sentence" id="s-00-05-29-399" data-start="00:05:29,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet in Switzerland, she never took a rye off the ball.</p>
+<p>但在瑞士，她从未漏接一球。</p>
+<p><button class="play-button sentence" id="s-00-05-32-158" data-start="00:05:32,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a Northern, incredible stop.</p>
+<p>北方人，精彩扑救！</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959663" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-36-959" data-start="00:05:36,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Proper England was the motto that propelled the lionesses record stint in Switzerland.</p>
+<p>"正宗英格兰"是女足在瑞士创纪录征程的座右铭。</p>
+<p><button class="play-button sentence" id="s-00-05-42-718" data-start="00:05:42,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lucy bronze epitomises that.</p>
+<p>露西·布龙泽是典范。</p>
+<p><button class="play-button sentence" id="s-00-05-44-879" data-start="00:05:44,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The veteran defender played the whole tournament with a fractured tibia.</p>
+<p>这位资深后卫带着胫骨骨折踢完全程。</p>
+<p><button class="play-button sentence" id="s-00-05-49-120" data-start="00:05:49,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As she gingerly boarded the team bus this morning after her 140th cap, she'd earned her place in history as having played the most major tournament games for her country.</p>
+<p>今晨第140次代表国家队出场后，她小心翼翼登上大巴——已为国家队出战大赛次数最多的她载入史册。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959639" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-00-560" data-start="00:06:00,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now back to back European champions, like just another level, I think it's something that as soon as I've picked up the England shirt, that's why I wanted to achieve.</p>
+<p>如今蝉联欧洲冠军，仿佛进入新境界——自穿上英格兰战袍起，这就是我的目标。</p>
+<p><button class="play-button sentence" id="s-00-06-08-920" data-start="00:06:08,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wanted to make this team great and one of the greats.</p>
+<p>我渴望让这支球队成为传奇。</p>
+<p><button class="play-button sentence" id="s-00-06-15-399" data-start="00:06:15,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fans agree they've done just that.</p>
+<p>球迷认同她们已做到。</p>
+<p><button class="play-button sentence" id="s-00-06-17-399" data-start="00:06:17,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those at the airport were full of praise for their heroines.</p>
+<p>机场人群对女英雄们赞不绝口。</p>
+<p><button class="play-button sentence" id="s-00-06-20-600" data-start="00:06:20,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've always looked up to them and everything I've done, and it's just been an incredible experience and like see them win.</p>
+<p>我一直以她们为榜样，亲眼见证夺冠是难以置信的经历。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959614" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-25-920" data-start="00:06:25,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I didn't think England could do it this year, but this year they've blown it away.</p>
+<p>我原以为今年英格兰无法夺冠，但她们彻底颠覆认知。</p>
+<p><button class="play-button sentence" id="s-00-06-31-480" data-start="00:06:31,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tomorrow the lionesses will receive a homecoming celebration in front of Buckingham Palace, fitting for footballing royalty and the new queens that have made their mark.</p>
+<p>明日女足将在白金汉宫前接受凯旋庆典，配得上足球王者与新加冕的女王们。</p>
+<p><button class="play-button sentence" id="s-00-06-41-560" data-start="00:06:41,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With a formidable combination of luck and skill, this team showed resilience in the face of adversity.</p>
+<p>凭借运气与实力的强大结合，这支队伍展现了逆境中的韧性。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959590" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-49-240" data-start="00:06:49,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One might call that proper England.</p>
+<p>这可谓"正宗英格兰"。</p>
+<p><button class="play-button sentence" id="s-00-06-51-959" data-start="00:06:51,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Natalie Perks be the Z news.</p>
+<p>娜塔莉·珀克斯，Z新闻。</p>
+<p><button class="play-button sentence" id="s-00-06-56-120" data-start="00:06:56,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well as Natalie was saying, so many of us were glued to our seats last night watching the final, which had a peak live audience of more than 12 million people here on the BBC.</p>
+<p>如娜塔莉所言，昨夜超1200万BBC观众紧盯决赛直播。</p>
+<p><button class="play-button sentence" id="s-00-07-06-879" data-start="00:07:06,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The penalty shootout is now the most watch TV moment of the year across all broadcasters.</p>
+<p>点球大战成为全平台年度最高收视时刻。</p>
+<p><button class="play-button sentence" id="s-00-07-12-478" data-start="00:07:12,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what could this mean for the future of the women's game in the UK?</p>
+<p>这对英国女足运动意味着什么？</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959562" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-17-119" data-start="00:07:17,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Dan Rowan.</p>
+<p>丹·罗恩报道。</p>
+<p><button class="play-button sentence" id="s-00-07-19-319" data-start="00:07:19,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The lionesses had already helped transform the landscape of English football, but having defended their Euro's title on a historic night in Basel, the women's game has just received another major boost.</p>
+<p>女足已改变英足坛格局，而在巴塞尔历史性卫冕后，女子足球再获重大推动。</p>
+<p><button class="play-button sentence" id="s-00-07-30-240" data-start="00:07:30,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amid the celebrations, the chair of the FA told me of her hopes.</p>
+<p>庆祝活动中，英足总主席向我透露她的期望。</p>
+<p><button class="play-button sentence" id="s-00-07-34-360" data-start="00:07:34,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are so many girls, women, young lads here today who will have been absolutely inspired by that.</p>
+<p>今天无数女孩、女性与年轻男孩必将深受鼓舞。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959539" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-40-519" data-start="00:07:40,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The grit, the determination, the resilience.</p>
+<p>这份勇气、决心与韧性。</p>
+<p><button class="play-button sentence" id="s-00-07-43-399" data-start="00:07:43,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You expect a similar effect to what happened three years ago?</p>
+<p>您预期会重现三年前的影响吗？</p>
+<p><button class="play-button sentence" id="s-00-07-46-120" data-start="00:07:46,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it goes up another level.</p>
+<p>我认为将更上层楼。</p>
+<p><button class="play-button sentence" id="s-00-07-47-920" data-start="00:07:47,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It goes up another level.</p>
+<p>更上层楼。</p>
+<p><button class="play-button sentence" id="s-00-07-48-879" data-start="00:07:48,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the first one overseas and against Spain.</p>
+<p>这是首次海外夺冠且击败西班牙。</p>
+<p><button class="play-button sentence" id="s-00-07-51-720" data-start="00:07:51,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ford, Alessio Rousseau, Scordinglands equaliser yesterday.</p>
+<p>福特、阿莱西娅·拉索昨日为英格兰扳平比分。</p>
+<p><button class="play-button sentence" id="s-00-07-55-480" data-start="00:07:55,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's Alessio Rousseau, who brings the lionesses back to life.</p>
+<p>正是阿莱西娅·拉索让女足重获生机。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-00-560" data-start="00:08:00,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This morning at Bearstead FC in Ken's, the club where she learnt to play, the inspirational impact of her success was clear to see.</p>
+<p>今晨在她启蒙俱乐部肯特郡Bearstead FC，其成功的激励效应显而易见。</p>
+<p><button class="play-button sentence" id="s-00-08-08-759" data-start="00:08:08,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're just so elated with it.</p>
+<p>我们欣喜若狂。</p>
+<p><button class="play-button sentence" id="s-00-08-10-103" data-start="00:08:10,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's amazing, amazing achievement.</p>
+<p>惊人成就。</p>
+<p><button class="play-button sentence" id="s-00-08-11-839" data-start="00:08:11,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was our lesson.</p>
+<p>这是我们的课程。</p>
+<p><button class="play-button sentence" id="s-00-08-12-998" data-start="00:08:12,998" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She did it for us.</p>
+<p>她为我们而战。</p>
+<p><button class="play-button sentence" id="s-00-08-14-079" data-start="00:08:14,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I always say if it wasn't for Bearstead, we wouldn't be, we wouldn't run the final.</p>
+<p>我常说若非Bearstead，我们无法闯入决赛。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959502" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-17-399" data-start="00:08:17,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's what I can say now.</p>
+<p>这就是我的感言。</p>
+<p><button class="play-button sentence" id="s-00-08-19-279" data-start="00:08:19,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This, what it meant to potential lionesses throughout the country.</p>
+<p>这对全国潜在女足队员的意义。</p>
+<p><button class="play-button sentence" id="s-00-08-22-759" data-start="00:08:22,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alessio Rousseau plays really good and she improves a lot more.</p>
+<p>阿莱西娅·拉索表现卓越且持续进步。</p>
+<p><button class="play-button sentence" id="s-00-08-27-600" data-start="00:08:27,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every time she practices.</p>
+<p>每次训练都是。</p>
+<p><button class="play-button sentence" id="s-00-08-29-560" data-start="00:08:29,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not going to name all of them because I've got a lot of favourite players because they all inspire me.</p>
+<p>我不逐一列举，因为她们都激励着我。</p>
+<p><button class="play-button sentence" id="s-00-08-34-278" data-start="00:08:34,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're very inspirational because I know that most people see football as a boy's sport.</p>
+<p>她们极具感召力，因足球曾被视为男性运动。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959480" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-39-278" data-start="00:08:39,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what they can't really say anything now because the boys don't really win that much.</p>
+<p>如今人们无言以对——毕竟男足战绩平平。</p>
+<p><button class="play-button sentence" id="s-00-08-45-080" data-start="00:08:45,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The lionesses have helped football to become the most popular team sport for women and girls in England with three million registered players.</p>
+<p>女足推动足球成为英格兰女性最热团体运动，注册球员达三百万。</p>
+<p><button class="play-button sentence" id="s-00-08-52-440" data-start="00:08:52,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's still a significant gender gap in participation and charities say billions of pounds of investment is needed in grassroots facilities over the next decade to cater for the current growth in demand.</p>
+<p>但参与度仍存性别差距，慈善机构称未来十年需投资数十亿英镑建设基层设施以满足需求增长。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959456" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-03-240" data-start="00:09:03,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 80% of schools are now offering football for girls, which is fantastic.</p>
+<p>80%学校现开设女足课程，这很棒。</p>
+<p><button class="play-button sentence" id="s-00-09-08-399" data-start="00:09:08,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've still a lot to do.</p>
+<p>我们仍任重道远。</p>
+<p><button class="play-button sentence" id="s-00-09-09-726" data-start="00:09:09,726" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The game still needs a lot of investment, a lot of support.</p>
+<p>这项运动仍需大量投资与支持。</p>
+<p><button class="play-button sentence" id="s-00-09-13-080" data-start="00:09:13,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right from bottom to the top, more coaches, better referees.</p>
+<p>从基层到顶层，需要更多教练、更优裁判。</p>
+<p><button class="play-button sentence" id="s-00-09-17-918" data-start="00:09:17,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Arsenal's women's team enjoyed an average attendance of 29,000 last season and all their home matches will now be at the club's Emirates Stadium.</p>
+<p>阿森纳女足上赛季场均观众2.9万，所有主场比赛将移至酋长球场。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959433" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-26-240" data-start="00:09:26,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But across the WSL crowds fell by 10% to less than 7,000 last year after a period of growth.</p>
+<p>但女超联赛观众数在增长期后去年下降10%至不足7000人。</p>
+<p><button class="play-button sentence" id="s-00-09-33-200" data-start="00:09:33,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The league's expanding to 14 teams in a bid to drive engagement but some believe more needs to be done to help sell the sport.</p>
+<p>联赛扩军至14队以提升参与度，但有人认为需加大推广力度。</p>
+<p><button class="play-button sentence" id="s-00-09-40-158" data-start="00:09:40,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The players on the pitch, they've done their job.</p>
+<p>场上球员已尽职尽责。</p>
+<p><button class="play-button sentence" id="s-00-09-42-399" data-start="00:09:42,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it's now for people around them, people that are supporting you know, everything the marketing campaigns, everything else.</p>
+<p>现在需要周边人员——营销宣传等各方支持。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959411" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-48-960" data-start="00:09:48,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's now got to be put together and it's got a really, it's their job now to push the game.</p>
+<p>必须整合资源，推动运动发展是他们的职责。</p>
+<p><button class="play-button sentence" id="s-00-09-53-879" data-start="00:09:53,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was only in 1971 that the FA lifted its 50-year ban on women playing the game with the sport struggling for infrastructure and support as it tried to develop in the decades that followed.</p>
+<p>英足总1971年才解除长达50年的女足禁令，此后数十年发展举步维艰。</p>
+<p><button class="play-button sentence" id="s-00-10-04-200" data-start="00:10:04,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sports personnel to live the year is...beth made.</p>
+<p>体育界人士称今年是...beth创造。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959392" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-07-879" data-start="00:10:07,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In contrast, the current generation of stars are set to enjoy an ever-increasing profile, earning power and commercial opportunities.</p>
+<p>相比之下，当代球星将享有日益提升的影响力、收入与商业机会。</p>
+<p><button class="play-button sentence" id="s-00-10-15-599" data-start="00:10:15,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now with the emergence of new heroes and another trophy, the sense is the lionesses can continue to be game-changers as well as champions.</p>
+<p>随着新英雄涌现与再夺桂冠，女足将继续担当变革者与冠军。</p>
+<p><button class="play-button sentence" id="s-00-10-24-038" data-start="00:10:24,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dan Rowan, BBC News.</p>
+<p>BBC新闻，丹·罗恩报道。</p>
+<p><button class="play-button sentence" id="s-00-10-25-558" data-start="00:10:25,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you know what the float pitch is the same?</p>
+<p>您知道浮动球场原理吗？</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959372" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-27-879" data-start="00:10:27,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, back to events here in Scotland, we've got some pictures for you of Donald Trump and Sir Keir Starmer.</p>
+<p>现在回到苏格兰，为您呈现特朗普与基尔·斯塔默爵士的会晤画面。</p>
+<p><button class="play-button sentence" id="s-00-10-36-318" data-start="00:10:36,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There he is, just getting off Air Force One, the two leaders having productive talks.</p>
+<p>他正走下空军一号，两位领导人进行了富有成效的会谈。</p>
+<p><button class="play-button sentence" id="s-00-10-43-120" data-start="00:10:43,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We understand earlier on today and both men will be getting on board Marine One, the helicopter and heading here to our position here where they will be, of course, discussing the issues of the day, including trade tariffs and, of course, here in Scotland, duties on whiskey, which have been a big topic of discussion, certainly for the people up here.</p>
+<p>据悉二人将乘海军一号直升机抵达此处，讨论贸易关税及苏格兰威士忌税等议题。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959324" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-15-798" data-start="00:11:15,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've also been discussing the Middle East, of course, and the situation in Ukraine for the very latest years, Sarah Smith.</p>
+<p>他们还讨论了中东与乌克兰局势，萨拉·史密斯报道最新进展。</p>
+<p><button class="play-button sentence" id="s-00-11-25-438" data-start="00:11:25,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Driving up to Donald Trump's golf course, Ken Mr. and Mrs. Starmer have had any idea what awaited them.</p>
+<p>驱车前往唐纳德·特朗普的高尔夫球场时，斯塔默夫妇完全不知道等待他们的是什么。</p>
+<p><button class="play-button sentence" id="s-00-11-33-639" data-start="00:11:33,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their host, ready to welcome the British Prime Minister in his own country, their greetings entirely drowned out by bagpipes, as were some of the President's own remarks, inaudible, over his own piper.</p>
+<p>东道主准备在自己的国家欢迎英国首相，但问候声完全被风笛声淹没，总统的部分言论也因自己的风笛手而听不清。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959292" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-47-599" data-start="00:11:47,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It must be extremely stressful, never knowing what President Trump might say next when you're right beside him.</p>
+<p>站在特朗普总统身边时，永远不知道他下一句会说什么，这一定让人压力巨大。</p>
+<p><button class="play-button sentence" id="s-00-11-55-000" data-start="00:11:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Inside, the two friends, while they did keep saying how well they get along, had much to discuss.</p>
+<p>在室内，这两位朋友虽然一再强调相处融洽，但仍有许多议题要讨论。</p>
+<p><button class="play-button sentence" id="s-00-12-01-399" data-start="00:12:01,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From trade tariffs on steel to the crisis in Gaza.</p>
+<p>从钢铁贸易关税到加沙危机。</p>
+<p><button class="play-button sentence" id="s-00-12-06-198" data-start="00:12:06,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first priority they agreed was to get humanitarian aid into Gaza as quickly as possible.</p>
+<p>他们一致同意的首要任务是尽快将人道主义援助送入加沙。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-12-000" data-start="00:12:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of those kids are, that's real starvation stuff, I see it.</p>
+<p>那些孩子的情况是真正的饥饿，我亲眼所见。</p>
+<p><button class="play-button sentence" id="s-00-12-16-198" data-start="00:12:16,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you can't fake that.</p>
+<p>这是无法伪造的。</p>
+<p><button class="play-button sentence" id="s-00-12-18-399" data-start="00:12:18,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're going to be even more involved.</p>
+<p>因此我们将更深入地参与。</p>
+<p><button class="play-button sentence" id="s-00-12-21-798" data-start="00:12:21,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We did some air lifts before some air drops, and the people are running for it.</p>
+<p>我们之前进行了空运和空投，民众争相领取。</p>
+<p><button class="play-button sentence" id="s-00-12-28-200" data-start="00:12:28,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the Prime Minister is going to help us.</p>
+<p>首相也将协助我们。</p>
+<p><button class="play-button sentence" id="s-00-12-30-799" data-start="00:12:30,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also recognise the situation on the ground in Gaza is absolutely intolerable.</p>
+<p>同时承认加沙的地面局势完全无法容忍。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959245" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-34-799" data-start="00:12:34,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that, certainly speaking for the British public and myself, those images of starving children in particular are revolting.</p>
+<p>我认为，代表英国公众和我个人而言，那些饥饿儿童的形象尤其令人愤慨。</p>
+<p><button class="play-button sentence" id="s-00-12-45-799" data-start="00:12:45,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a sense of revolting in the British public at what they're seeing.</p>
+<p>英国公众对所见的画面感到愤怒。</p>
+<p><button class="play-button sentence" id="s-00-12-49-399" data-start="00:12:49,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they know, and we know, that humanitarian aid needs to get in at speed, at volume.</p>
+<p>他们和我们都知道，人道主义援助需要快速且大量地进入。</p>
+<p><button class="play-button sentence" id="s-00-12-56-200" data-start="00:12:56,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump, losing patience with Vladimir Putin, says he will shorten to about 10 days.</p>
+<p>唐纳德·特朗普对弗拉基米尔·普京失去耐心，表示将把期限缩短至约10天。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959218" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-01-600" data-start="00:13:01,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His deadline for Russia to agree to a ceasefire in Ukraine.</p>
+<p>这是他给俄罗斯同意乌克兰停火的最后期限。</p>
+<p><button class="play-button sentence" id="s-00-13-05-200" data-start="00:13:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He talks with such nice conversations, such respectful and nice conversations.</p>
+<p>他的谈话总是那么友善、充满敬意。</p>
+<p><button class="play-button sentence" id="s-00-13-09-399" data-start="00:13:09,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then people die the following night and with a missile going into a town and hitting, I mean, recently I guess the nursing home, but they hit other things.</p>
+<p>然而第二天晚上就有导弹击中城镇，最近可能是一家养老院，但他们还击中了其他目标。</p>
+<p><button class="play-button sentence" id="s-00-13-19-000" data-start="00:13:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whatever they hit, people die.</p>
+<p>无论击中什么，都会有人死亡。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959199" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-21-000" data-start="00:13:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump just kept taking questions on anything at all.</p>
+<p>特朗普总统不断回答各种问题。</p>
+<p><button class="play-button sentence" id="s-00-13-25-600" data-start="00:13:25,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every topic, a potential minefield for Kierstharmer, who can't agree with everything he says about London Mayor, Sadiq Khan, for instance.</p>
+<p>每个话题对基尔·斯塔默都是潜在雷区，例如他无法认同特朗普对伦敦市长萨迪克·汗的所有评价。</p>
+<p><button class="play-button sentence" id="s-00-13-33-600" data-start="00:13:33,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not a fan of your mayor.</p>
+<p>我不是你们市长的粉丝。</p>
+<p><button class="play-button sentence" id="s-00-13-35-600" data-start="00:13:35,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he's done a terrible job.</p>
+<p>我认为他做得很糟糕。</p>
+<p><button class="play-button sentence" id="s-00-13-38-600" data-start="00:13:38,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mayor of London, but a nasty person.</p>
+<p>这位伦敦市长是个恶劣的人。</p>
+<p><button class="play-button sentence" id="s-00-13-42-600" data-start="00:13:42,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he's a friend of mine, not shit.</p>
+<p>我以为他是我的朋友，结果不是。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959173" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-46-600" data-start="00:13:46,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now I think he's done a terrible job.</p>
+<p>现在我认为他干得很差。</p>
+<p><button class="play-button sentence" id="s-00-13-49-200" data-start="00:13:49,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Jeffrey Epstein saga has followed Donald Trump to Scotland.</p>
+<p>杰弗里·爱泼斯坦事件跟随特朗普到了苏格兰。</p>
+<p><button class="play-button sentence" id="s-00-13-53-000" data-start="00:13:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This van bearing their pictures appearing in Aberdeen today.</p>
+<p>今天一辆印有他们照片的货车出现在阿伯丁。</p>
+<p><button class="play-button sentence" id="s-00-13-56-798" data-start="00:13:56,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The accusation that he sent the sex offender, Aloud drawing, was addressed at length in term.</p>
+<p>关于他发送性犯罪者画作的指控被详细回应。</p>
+<p><button class="play-button sentence" id="s-00-14-02-600" data-start="00:14:02,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't do drawings.</p>
+<p>我不画画。</p>
+<p><button class="play-button sentence" id="s-00-14-05-000" data-start="00:14:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not a drawing person.</p>
+<p>我不是会画画的人。</p>
+<p><button class="play-button sentence" id="s-00-14-06-200" data-start="00:14:06,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think it was drop?</p>
+<p>你觉得这是伪造的吗？</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959152" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-07-200" data-start="00:14:07,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't do drawings.</p>
+<p>我不画画。</p>
+<p><button class="play-button sentence" id="s-00-14-08-600" data-start="00:14:08,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes he was, you do a building and I'll draw four lines and a little roof for charity.</p>
+<p>有时他为慈善画建筑，我就画四条线加个小屋顶。</p>
+<p><button class="play-button sentence" id="s-00-14-14-600" data-start="00:14:14,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I'm not a drawing person.</p>
+<p>但我不是会画画的人。</p>
+<p><button class="play-button sentence" id="s-00-14-17-000" data-start="00:14:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't do drawings of women that I can tell you.</p>
+<p>我可以明确告诉你，我不画女性。</p>
+<p><button class="play-button sentence" id="s-00-14-20-399" data-start="00:14:20,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wind turbines wind Donald Trump up like little elves.</p>
+<p>风力涡轮机像小精灵一样惹恼特朗普。</p>
+<p><button class="play-button sentence" id="s-00-14-24-198" data-start="00:14:24,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They do tower over his Aberdeen surgolf course and he never misses a chance to complain about them.</p>
+<p>它们确实高耸于他在阿伯丁的高尔夫球场上空，他从不放过抱怨的机会。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959130" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-30-000" data-start="00:14:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we go to Aberdeen, you'll see some of the ugliest windmills you've ever seen.</p>
+<p>去阿伯丁时，你会看到一些最丑陋的风车。</p>
+<p><button class="play-button sentence" id="s-00-14-35-000" data-start="00:14:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's in the height of a 50 story building.</p>
+<p>高度相当于50层楼。</p>
+<p><button class="play-button sentence" id="s-00-14-40-000" data-start="00:14:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you could take a thousand times more energy out of a hole in the ground.</p>
+<p>而你们能从地下的洞里获取千倍能源。</p>
+<p><button class="play-button sentence" id="s-00-14-46-000" data-start="00:14:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This big, this big, it's called oil and gas.</p>
+<p>这么大，这叫石油和天然气。</p>
+<p><button class="play-button sentence" id="s-00-14-50-000" data-start="00:14:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you have it there, the North Sea.</p>
+<p>你们拥有北海资源。</p>
+<p><button class="play-button sentence" id="s-00-14-51-798" data-start="00:14:51,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's speak that nobody would even see.</p>
+<p>那些设施根本不会被人注意到。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959105" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-54-798" data-start="00:14:54,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is not UK government energy policy.</p>
+<p>这不是英国政府的能源政策。</p>
+<p><button class="play-button sentence" id="s-00-14-58-798" data-start="00:14:58,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we believe in a mix and obviously oil and gas is going to be with us for a very long time.</p>
+<p>我们主张能源多元化，显然油气将长期存在。</p>
+<p><button class="play-button sentence" id="s-00-15-04-798" data-start="00:15:04,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that'll be part of the mix.</p>
+<p>它们会是能源结构的一部分。</p>
+<p><button class="play-button sentence" id="s-00-15-07-798" data-start="00:15:07,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also when solar increasingly nuclear, which is what we've been discussing this morning, civil nuclear, as we go forward.</p>
+<p>同时发展太阳能和民用核能——今早我们讨论的重点——将是未来方向。</p>
+<p><button class="play-button sentence" id="s-00-15-15-000" data-start="00:15:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One solitary protestor, pro-Palestine and pro-Scottish independence awaits Donald Trump on the Aberdeenshire coast.</p>
+<p>一名支持巴勒斯坦和苏格兰独立的孤独抗议者在阿伯丁郡海岸等待特朗普。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959077" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-22-798" data-start="00:15:22,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The police are prepared for the imminent arrival of the president and prime minister who are having dinner together tonight at Mr. Trump's East Coast Gulf Resort with lots and lots more time to talk.</p>
+<p>警方已为总统和首相即将抵达做好准备，两人今晚将在特朗普的东海岸高尔夫度假村共进晚餐并有充足时间交谈。</p>
+<p><button class="play-button sentence" id="s-00-15-38-798" data-start="00:15:38,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sarah's with me now.</p>
+<p>现在莎拉和我在一起。</p>
+<p><button class="play-button sentence" id="s-00-15-40-058" data-start="00:15:40,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He really does not like those wind turbines.</p>
+<p>他确实讨厌那些风力涡轮机。</p>
+<p><button class="play-button sentence" id="s-00-15-42-798" data-start="00:15:42,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He does not.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-15-43-798" data-start="00:15:43,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're off into the distance.</p>
+<p>它们矗立在远处。</p>
+<p><button class="play-button sentence" id="s-00-15-45-198" data-start="00:15:45,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But both men talking about how well they get on and yet they're two very different personalities who seem to have clicked and made progress on a number of issues.</p>
+<p>但两人都强调相处融洽，尽管性格迥异却似乎很投契，并在多个议题上取得进展。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959045" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-54-198" data-start="00:15:54,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and with very different politics as well.</p>
+<p>是的，政治立场也截然不同。</p>
+<p><button class="play-button sentence" id="s-00-15-56-198" data-start="00:15:56,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when you see them together, it does appear that it is a genuinely warm friendship based on two people who really do get along and like each other.</p>
+<p>但他们的互动显示出真诚的友谊，源于彼此欣赏和投缘。</p>
+<p><button class="play-button sentence" id="s-00-16-05-000" data-start="00:16:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They said that today.</p>
+<p>他们今天也这样表示。</p>
+<p><button class="play-button sentence" id="s-00-16-07-000" data-start="00:16:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of it is sentiment, I think, on Donald Trump's part.</p>
+<p>我认为特朗普的部分表态带有感情色彩。</p>
+<p><button class="play-button sentence" id="s-00-16-09-198" data-start="00:16:09,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's very fond of Britain of Scotland in particular.</p>
+<p>他尤其喜爱英国，特别是苏格兰。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959028" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-11-798" data-start="00:16:11,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I keep mentioning and talking about the special relationship between our countries and a triumph of diplomacy from Sir Keir Starma.</p>
+<p>我不断强调我们两国的特殊关系，这也是基尔·斯塔默爵士的外交胜利。</p>
+<p><button class="play-button sentence" id="s-00-16-19-000" data-start="00:16:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That he has found a way to get along with somebody who obviously has very, very different political ideas from him.</p>
+<p>他找到了与政治理念截然不同者相处的方法。</p>
+<p><button class="play-button sentence" id="s-00-16-25-000" data-start="00:16:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But of course, I mean, they agree that it's appalling what's happening in Gaza, for instance.</p>
+<p>当然，他们都认为加沙局势骇人听闻。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208959009" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-30-399" data-start="00:16:30,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's not difficult to do.</p>
+<p>这点不难达成共识。</p>
+<p><button class="play-button sentence" id="s-00-16-32-599" data-start="00:16:32,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What you're going to do about it, whether President Trump's going to pressure Israel to allow more food aid, for instance, whether Keir Starma is able to persuade him to do that, that's quite a different matter.</p>
+<p>但具体行动——比如特朗普是否会向以色列施压允许更多粮食援助，斯塔默能否说服他——则是另一回事。</p>
+<p><button class="play-button sentence" id="s-00-16-42-600" data-start="00:16:42,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sure.</p>
+<p>确实。</p>
+<p><button class="play-button sentence" id="s-00-16-43-044" data-start="00:16:43,044" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He flies back to the States tomorrow.</p>
+<p>他明天飞回美国。</p>
+<p><button class="play-button sentence" id="s-00-16-45-799" data-start="00:16:45,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He'll have been here for four days.</p>
+<p>此行共四天。</p>
+<p><button class="play-button sentence" id="s-00-16-47-411" data-start="00:16:47,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How would you sell up the trip?</p>
+<p>你如何评价这次访问？</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958991" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-48-799" data-start="00:16:48,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, he's signed yesterday, probably the biggest trade deal in history.</p>
+<p>他昨天签署了可能是史上最大贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-16-53-399" data-start="00:16:53,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was quite remarkable when the Ursula von Delay and the President of the European Commission came in.</p>
+<p>欧盟委员会主席乌尔苏拉·冯德莱恩到场时场面非凡。</p>
+<p><button class="play-button sentence" id="s-00-16-58-799" data-start="00:16:58,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in less than an hour, they managed to agree terms on a trade deal.</p>
+<p>不到一小时就敲定了协议条款。</p>
+<p><button class="play-button sentence" id="s-00-17-02-399" data-start="00:17:02,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You could see how relaxed he looked as he took that very, very large set of questions in that press conference today.</p>
+<p>今天记者会上回答大量问题时，他显得非常放松。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-08-220" data-start="00:17:08,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he thinks it's gone very well and he can go back to the US with the good news that a trade deal has been signed.</p>
+<p>他认为访问非常成功，可以带着签署协议的喜讯返回美国。</p>
+<p><button class="play-button sentence" id="s-00-17-14-200" data-start="00:17:14,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sure.</p>
+<p>确实。</p>
+<p><button class="play-button sentence" id="s-00-17-14-482" data-start="00:17:14,482" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Sarah Smith, on North America Editor.</p>
+<p>好的，北美编辑莎拉·史密斯。</p>
+<p><button class="play-button sentence" id="s-00-17-16-798" data-start="00:17:16,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many thanks for that.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-17-18-200" data-start="00:17:18,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to move on now because what's been described as a limited number of a trucks have again been entering Gaza, along with more air drops.</p>
+<p>现在转向加沙——数量有限的卡车再次进入，同时还有更多空投物资。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-27-200" data-start="00:17:27,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel says more than 120 truckloads of badly needed food and medicines were given out yesterday by the UN and aid agencies.</p>
+<p>以色列称联合国和援助机构昨天分发了120多车急需的食品药品。</p>
+<p><button class="play-button sentence" id="s-00-17-35-400" data-start="00:17:35,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the Israeli military is observing a tactical pause in three parts of the territory, allowing more aid in at Al-Mawasi, Dar al-Balab and in Gaza City.</p>
+<p>以军正在加沙三地实施战术暂停，允许更多援助进入马瓦西、达尔巴拉和加沙城。</p>
+<p><button class="play-button sentence" id="s-00-17-46-599" data-start="00:17:46,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the Hamas-run health ministry says for some, it's too late, with another 14 people reported to have died from malnutrition in the past 24 hours.</p>
+<p>但哈马斯卫生部表示对某些人已为时已晚——过去24小时又有14人死于营养不良。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958923" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-56-799" data-start="00:17:56,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli government doesn't allow the BBC another news organizations into Gaza.</p>
+<p>以色列政府不允许BBC等新闻机构进入加沙。</p>
+<p><button class="play-button sentence" id="s-00-18-01-798" data-start="00:18:01,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeremy Bowen has been on board of Jordanian plane dropping aid into the territory and he sent us this report.</p>
+<p>杰里米·鲍恩搭乘约旦援助飞机进入该地区并发回报道。</p>
+<p><button class="play-button sentence" id="s-00-18-10-398" data-start="00:18:10,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At a desert airbase in Jordan, some hope perhaps for the starving people of Gaza.</p>
+<p>在约旦沙漠空军基地，或许能给加沙饥民带来一线希望。</p>
+<p><button class="play-button sentence" id="s-00-18-18-000" data-start="00:18:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not just because two aircraft won Jordanian, the other from the United Arab Emirates, were being loaded with relief supplies.</p>
+<p>不仅因为约旦和阿联酋的飞机正在装载救援物资。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-26-199" data-start="00:18:26,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But because the air drops are assigned that the humanitarian crisis in Gaza is now high on the international agenda.</p>
+<p>更因空投表明加沙人道危机已成为国际焦点。</p>
+<p><button class="play-button sentence" id="s-00-18-35-199" data-start="00:18:35,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Deaths from starvation have finally forced it there in a way that months of warnings from Palestinians and from the UN could not.</p>
+<p>饿殍遍野终于引起关注，这是巴勒斯坦人数月警告和联合国呼吁都未能实现的。</p>
+<p><button class="play-button sentence" id="s-00-18-45-199" data-start="00:18:45,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Jordanian aircraft took off for Gaza's airspace.</p>
+<p>约旦飞机飞往加沙领空。</p>
+<p><button class="play-button sentence" id="s-00-18-51-200" data-start="00:18:51,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was a short flight.</p>
+<p>航程很短。</p>
+<p><button class="play-button sentence" id="s-00-18-53-119" data-start="00:18:53,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The loadmasters worked fast to prepare the parachutes for the drop.</p>
+<p>空投员快速准备降落伞。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958860" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-59-200" data-start="00:18:59,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If they didn't open, a ton of relief supplies on a pallet could kill a family if it landed on a tent, which is the only shelter most garsens have now.</p>
+<p>若伞未打开，一吨重的托盘物资砸中帐篷（多数加沙人唯一的栖身之所）可能造成灭门惨剧。</p>
+<p><button class="play-button sentence" id="s-00-19-10-200" data-start="00:19:10,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right, these are the parachutes which will guide the aid down to Gaza.</p>
+<p>这些是引导物资降落的降落伞。</p>
+<p><button class="play-button sentence" id="s-00-19-18-200" data-start="00:19:18,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are eight tons on here, baby melts and food, medical supplies, and there's this aircraft and one other from the UAE now.</p>
+<p>载有八吨婴儿食品、药品，这是约旦飞机，另有一架阿联酋飞机。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958830" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-29-200" data-start="00:19:29,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clearly, on its own, this is not going to make a great deal of difference.</p>
+<p>显然这本身作用有限。</p>
+<p><button class="play-button sentence" id="s-00-19-35-200" data-start="00:19:35,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only thing that really will make a big difference would be a lot of road-proc voice.</p>
+<p>真正有效的只有大规模陆路运输。</p>
+<p><button class="play-button sentence" id="s-00-19-42-200" data-start="00:19:42,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can't do it with air drops, but air drops are symbolic.</p>
+<p>空投无法解决问题，但具有象征意义。</p>
+<p><button class="play-button sentence" id="s-00-19-46-466" data-start="00:19:46,466" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're telegenic, they look good on television.</p>
+<p>它们上镜，在电视上看起来不错。</p>
+<p><button class="play-button sentence" id="s-00-19-50-200" data-start="00:19:50,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they give the impression that something's being done without question.</p>
+<p>给人"正在行动"的印象。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958803" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-56-200" data-start="00:19:56,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fact that this has been permitted by the Israelis means that they have responded to pressure.</p>
+<p>以色列允许空投表明他们迫于压力作出回应。</p>
+<p><button class="play-button sentence" id="s-00-20-05-200" data-start="00:20:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the Hercules approached Gaza, the countdown started, three minutes to go.</p>
+<p>大力神运输机接近加沙时开始三分钟倒计时。</p>
+<p><button class="play-button sentence" id="s-00-20-11-200" data-start="00:20:11,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then, the aircraft was overland and the one minute warning, before it delivered around as much cargo as a single lorry can carry.</p>
+<p>一分钟后，飞机投下约一辆卡车载货量的物资。</p>
+<p><button class="play-button sentence" id="s-00-20-22-200" data-start="00:20:22,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They counted the parachutes and gave a thumbs up, all of them opened.</p>
+<p>他们清点降落伞并竖起大拇指——全部正常打开。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-35-200" data-start="00:20:35,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air drops are usually considered a last resort of where getting limited supplies fast to remote and inaccessible emergencies.</p>
+<p>空投通常是为偏远灾区快速运送有限物资的最后手段。</p>
+<p><button class="play-button sentence" id="s-00-20-44-200" data-start="00:20:44,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Gaza is not remote, and it has been inaccessible because Israel has ruled that it must be.</p>
+<p>但加沙并不偏远，其封锁状态是以色列政策所致。</p>
+<p><button class="play-button sentence" id="s-00-20-52-200" data-start="00:20:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the Jordanians have passed on a message from the Israelis.</p>
+<p>约旦人转达了以色列的信息。</p>
+<p><button class="play-button sentence" id="s-00-20-57-200" data-start="00:20:57,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israelis don't want us to film out of the window at the devastation inside Gaza, but I've spent ten minutes looking at it with my own eyes.</p>
+<p>以色列不希望我们拍摄加沙废墟，但我用双眼观察了十分钟。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958730" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-09-200" data-start="00:21:09,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I can tell you that communities in the north of Gaza, they're doing well.</p>
+<p>可以说加沙北部的社区曾经繁荣。</p>
+<p><button class="play-button sentence" id="s-00-21-14-200" data-start="00:21:14,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very vibrant, tens of thousands of people living hard lives, but actually with a remarkable human spirit.</p>
+<p>数万居民生活艰辛却展现出非凡精神。</p>
+<p><button class="play-button sentence" id="s-00-21-21-200" data-start="00:21:21,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How flat!</p>
+<p>如今多么荒凉！</p>
+<p><button class="play-button sentence" id="s-00-21-22-169" data-start="00:21:22,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's nothing left of them.</p>
+<p>一切荡然无存。</p>
+<p><button class="play-button sentence" id="s-00-21-25-200" data-start="00:21:25,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, if you've been watching satellite pictures, it won't come as any surprise.</p>
+<p>看过卫星图像的人不会意外。</p>
+<p><button class="play-button sentence" id="s-00-21-30-200" data-start="00:21:30,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But seeing it is really something.</p>
+<p>但亲眼所见仍令人震撼。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958706" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-33-200" data-start="00:21:33,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel will not allow reporters like myself to enter Gaza to report the story.</p>
+<p>以色列不允许我这样的记者进入加沙报道。</p>
+<p><button class="play-button sentence" id="s-00-21-41-200" data-start="00:21:41,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they don't want us to see it, to film it anyway, from above either.</p>
+<p>也不希望我们从空中拍摄。</p>
+<p><button class="play-button sentence" id="s-00-21-47-200" data-start="00:21:47,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It took about three quarters of an hour to get back to the King Abdullah air base.</p>
+<p>返回阿卜杜拉国王空军基地约45分钟。</p>
+<p><button class="play-button sentence" id="s-00-21-51-200" data-start="00:21:51,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Emirati aircraft followed a few minutes later.</p>
+<p>阿联酋飞机几分钟后也返回。</p>
+<p><button class="play-button sentence" id="s-00-21-54-200" data-start="00:21:54,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For now, by air and road, this is a limited operation.</p>
+<p>目前空运和陆路运输规模有限。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-58-200" data-start="00:21:58,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel says that unfettered relief supplies heading into Gaza would strengthen her mass.</p>
+<p>以色列称无限制援助会增强哈马斯力量。</p>
+<p><button class="play-button sentence" id="s-00-22-03-200" data-start="00:22:03,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fact is that aid has not been reaching the people who need it most, and if that doesn't change, more will die.</p>
+<p>事实是最需要援助的人未能获得，若不改变，死亡人数将继续上升。</p>
+<p><button class="play-button sentence" id="s-00-22-12-200" data-start="00:22:12,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A pressure is continuing to mount on Israel, not just from European allies, but also inside Israel.</p>
+<p>以色列面临来自欧洲盟友和国内日益增长的压力。</p>
+<p><button class="play-button sentence" id="s-00-22-19-200" data-start="00:22:19,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two leading human rights groups there have said that Israel is committing genocide against the Palestinians.</p>
+<p>两大当地人权组织指控以色列对巴勒斯坦人实施种族灭绝。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958652" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-27-200" data-start="00:22:27,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, that's the first big voices inside Israel itself to say that.</p>
+<p>这是以色列国内首次出现此类重大指控。</p>
+<p><button class="play-button sentence" id="s-00-22-32-200" data-start="00:22:32,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, those accusations are very much rejected by the government.</p>
+<p>当然政府强烈否认这些指控。</p>
+<p><button class="play-button sentence" id="s-00-22-36-200" data-start="00:22:36,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the human rights group Beth Sallam has said that Israel's carrying out coordinated deliberate action to destroy Palestinian society in the Gaza Strip and the other group, which is physicians for human rights Israel, has been looking at what Israel has done to the healthcare system there.</p>
+<p>人权组织"B'Tselem"称以色列在加沙实施有计划的蓄意破坏，另一组织"以色列医师人权协会"则调查以方对当地医疗系统的破坏。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958625" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-54-200" data-start="00:22:54,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it says that Israel's actions have destroyed Gaza's healthcare infrastructure in a matter that is both calculated and systematic.</p>
+<p>该组织称以色列的行为以精心策划、系统性的方式摧毁了加沙医疗基础设施。</p>
+<p><button class="play-button sentence" id="s-00-23-02-200" data-start="00:23:02,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Israel continues, as I say, to deny these accusations, but the volume of them from all kinds of places is on the rise.</p>
+<p>如我所言以色列继续否认，但来自各方的指控正在增加。</p>
+<p><button class="play-button sentence" id="s-00-23-16-200" data-start="00:23:16,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeremy, thank you for that.</p>
+<p>杰里米，感谢报道。</p>
+<p><button class="play-button sentence" id="s-00-23-18-200" data-start="00:23:18,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeremy Bowen, our international editor, many thanks to you and your team for that report.</p>
+<p>国际编辑杰里米·鲍恩，非常感谢你和团队的报道。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958595" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-24-200" data-start="00:23:24,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, here, tomorrow marks a year since three little girls, Bibi King, Elsie.stankham and Alice Agia, were murdered in a knife attack in Southport.</p>
+<p>明天是南港三名小女孩——比比·金、埃尔西·斯坦卡姆和爱丽丝·阿吉亚——在持刀袭击中遇害的一周年。</p>
+<p><button class="play-button sentence" id="s-00-23-35-200" data-start="00:23:35,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three police officers were the first to arrive at the scene, helping to save several other lives, but they say that day has changed them forever.</p>
+<p>三名警察最先抵达现场并救下多人，但他们表示那天永远改变了他们。</p>
+<p><button class="play-button sentence" id="s-00-23-45-200" data-start="00:23:45,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've been speaking to the BBC's Roger Johnson, and a warning, his report contains some distressing details.</p>
+<p>他们接受了BBC罗杰·约翰逊的采访，需注意报道包含令人痛苦的细节。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958567" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-52-200" data-start="00:23:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I remember people in the road waving me down with the hands, driving up to them.</p>
+<p>我记得路上人们挥手拦车，我朝他们开去。</p>
+<p><button class="play-button sentence" id="s-00-24-00-200" data-start="00:24:00,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just could see the look of fear and terror in the faces of the people.</p>
+<p>人们脸上写满恐惧与惊惶。</p>
+<p><button class="play-button sentence" id="s-00-24-04-200" data-start="00:24:04,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Greg looked at me. He said, are you ready? Yeah.</p>
+<p>格雷格看着我问道：“准备好了吗？”我回答：“好了。”</p>
+<p><button class="play-button sentence" id="s-00-24-09-873" data-start="00:24:09,873" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm meeting Greg Scholder, so I've looked up the stairs.</p>
+<p>我与格雷格·斯科尔德会合，抬头望向楼梯。</p>
+<p><button class="play-button sentence" id="s-00-24-16-200" data-start="00:24:16,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Greg and Luke are just about to enter the property, I have started speaking to some of the civilians outside, just to try and get a better understanding of the layout of the building, if there's any other ways in or out, how many offenders potentially there are.</p>
+<p>格雷格和卢克正要进入房屋时，我开始询问外围民众以了解建筑布局、出入口及可能的嫌犯人数。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958526" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-33-200" data-start="00:24:33,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we just knew the right thing was that we couldn't wait for armed response back up, didn't know where they were.</p>
+<p>但我们清楚不能等待武装支援——根本不知他们在何处。</p>
+<p><button class="play-button sentence" id="s-00-24-39-200" data-start="00:24:39,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was that agent, and there was an offender, stood there, just looking at us there and our eyes just standing there at the top of the stairs.</p>
+<p>那名歹徒就站在楼梯顶端盯着我们。</p>
+<p><button class="play-button sentence" id="s-00-24-48-200" data-start="00:24:48,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he had a knife in his hand that was showing us the knife holding it out to front of us.</p>
+<p>他手持刀具向我们挥舞。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958507" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-52-200" data-start="00:24:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was almost like he was saying, I've got a knife, what are you going to do?</p>
+<p>仿佛在挑衅：“我有刀，你们能怎样？”</p>
+<p><button class="play-button sentence" id="s-00-24-57-200" data-start="00:24:57,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think the second he realized he was looking at two men who were actually approaching him and were going to confront him and weigh and scare him.</p>
+<p>当他意识到两名警察正逼近并准备制服他时——</p>
+<p><button class="play-button sentence" id="s-00-25-05-200" data-start="00:25:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He just did mononum.</p>
+<p>他突然僵住了。</p>
+<p><button class="play-button sentence" id="s-00-25-06-422" data-start="00:25:06,422" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The community has come together and it has come together mostly as a result of the actions of the parents of the victims who've been nothing short of inspirational.</p>
+<p>受害者父母以感人行动促成社区团结。</p>
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958483" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-16-200" data-start="00:25:16,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As a father, the thought of something like that happened to a child and then having to get up the next morning and try to proceed with your life is unfathomable, but the three sets of parents have not only done that, but they've continued the legacy of their daughter's name and they brought the community together.</p>
+<p>作为父亲，难以想象遭遇此等悲剧后次日仍需振作，但这三对父母不仅做到，还延续女儿精神并凝聚社区。</p>
+<p><button class="play-button sentence" id="s-00-25-37-200" data-start="00:25:37,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's always said that you can't unsee the things that you've seen, you can't unhare the things that you've heard.</p>
+<p>人们总说：目睹之事无法抹去，耳闻之声难以忘却。</p>
+<p><button class="play-button sentence" id="s-00-25-43-200" data-start="00:25:43,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think I suffer PTSD or anything that's definitely symptoms of as a result, sleepless nights, constant worry about my own family when they're not there.</p>
+<p>我不认为患有PTSD，但确有症状：失眠、家人不在身边时的持续担忧。</p>
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958443" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-56-200" data-start="00:25:56,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And constant reminders, I think we're all living south port, so we obviously see this day to day, the reminders are that day.</p>
+<p>日常生活在南港的我们不断被唤起那天的记忆。</p>
+<p><button class="play-button sentence" id="s-00-26-03-200" data-start="00:26:03,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wouldn't want to give you too much of a sob story because I think it would be disrespectful to the families, our pain and suffering, the tiniest drop in the large stulsion compared to this.</p>
+<p>不愿过度渲染悲情，因相比遇难家庭，我们的痛苦不过沧海一粟。</p>
+<p><button class="play-button sentence" id="s-00-26-16-200" data-start="00:26:16,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And viewers in the Northwest can see the full interview on the BBC in a few minutes.</p>
+<p>西北地区观众稍后可在BBC观看完整采访。</p>
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958417" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-22-916" data-start="00:26:22,916" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's at 6.30.</p>
+<p>时间为6:30。</p>
+<p><button class="play-button sentence" id="s-00-26-25-200" data-start="00:26:25,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now virtual private networks or VPNs which allow computer users to access blocked sites by hiding their internet address have just become the most downloaded free apps on the Apple store in the UK.</p>
+<p>目前，通过隐藏IP访问受限网站的VPN成为英国苹果商店下载量最高的免费应用。</p>
+<p><button class="play-button sentence" id="s-00-26-37-200" data-start="00:26:37,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now it's because new rules of coming to force requiring age checks to access pornographic and other adult sites.</p>
+<p>源于新规要求成人网站实施年龄验证。</p>
+<p><button class="play-button sentence" id="s-00-26-45-200" data-start="00:26:45,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, the climate joins us now.</p>
+<p>现在请克莱姆分析。</p>
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958392" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-47-139" data-start="00:26:47,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zoe, one wonders if users can bypass the new rules so easily, then what's the point of them?</p>
+<p>佐伊，若用户能轻易绕过新规，其意义何在？</p>
+<p><button class="play-button sentence" id="s-00-26-53-200" data-start="00:26:53,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think critics of the online safety act have been asking that question for quite a long time.</p>
+<p>《网络安全法》批评者长期质疑这点。</p>
+<p><button class="play-button sentence" id="s-00-26-58-200" data-start="00:26:58,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The regulator of Com says the rules were never designed to be a silver bullet and it accepts that some young people are going to get around them.</p>
+<p>监管机构称新规非万能药，承认部分青少年会规避。</p>
+<p><button class="play-button sentence" id="s-00-27-05-200" data-start="00:27:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says what it wants to do is to make it more difficult for children specifically to stumble upon harmful or explicit content just when they're scrolling a feed or perhaps going down an online rabbit hole.</p>
+<p>其目标是增加儿童偶然接触有害内容的难度。</p>
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958362" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-17-200" data-start="00:27:17,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says that the responsibility for enforcing these laws lies with the tech companies themselves.</p>
+<p>强调执法责任在科技公司。</p>
+<p><button class="play-button sentence" id="s-00-27-24-200" data-start="00:27:24,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But VPNs are a real challenge because by their very nature nobody really knows who's using them or where they are.</p>
+<p>但VPN因其匿名性成为监管难点。</p>
+<p><button class="play-button sentence" id="s-00-27-31-200" data-start="00:27:31,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And because VPNs are so privacy-focused they don't take a lot of information either.</p>
+<p>且VPN注重隐私，收集信息极少。</p>
+<p><button class="play-button sentence" id="s-00-27-35-200" data-start="00:27:35,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've set up a couple today and all I had to do is give my email address to verify my account and then get started.</p>
+<p>今日注册仅需邮箱验证即可使用。</p>
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958339" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-40-200" data-start="00:27:40,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they are also useful especially for people who are living and working in restrictive regimes.</p>
+<p>对生活在高压体制下的人群尤为实用。</p>
+<p><button class="play-button sentence" id="s-00-27-46-200" data-start="00:27:46,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There aren't any plans to ban VPNs but I think what we might see is a crackdown on promoting them on services that are targeting or indeed attracting children to use them.</p>
+<p>暂无VPN禁令，但可能打击针对儿童的推广行为。</p>
+<p><button class="play-button sentence" id="s-00-28-00-200" data-start="00:28:00,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> OK Zoe, thank you Zoe Kleinman there at Technology Editor reporting.</p>
+<p>感谢科技编辑佐伊·克莱曼。</p>
+<p><button class="play-button sentence" id="s-00-28-06-200" data-start="00:28:06,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now back to the Lionesses there due to be a downing street in the next few minutes for a reception with the Deputy Prime Minister.</p>
+<p>即将播报女足队员赴唐宁街会见副首相。</p>
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958305" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-14-200" data-start="00:28:14,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We understand Natalie Perks is still there once respects a lot of champagne is going to be popped tonight.</p>
+<p>据悉纳塔莉·珀克斯在场，今晚将开启香槟庆祝。</p>
+<p><button class="play-button sentence" id="s-00-28-21-200" data-start="00:28:21,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even more because they were still partying as you saw in my VT earlier at full ray at this morning.</p>
+<p>今晨机场欢庆画面可见她们仍在狂欢。</p>
+<p><button class="play-button sentence" id="s-00-28-27-200" data-start="00:28:27,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The red carpet has literally been rolled out.</p>
+<p>红毯已铺就。</p>
+<p><button class="play-button sentence" id="s-00-28-30-200" data-start="00:28:30,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Angela Rainer, the Deputy Prime Minister has arrived and we think England are around 10 minutes away.</p>
+<p>副首相安吉拉·雷纳到场，女足队员约十分钟后抵达。</p>
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958283" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-36-200" data-start="00:28:36,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw some very bleary eyes didn't we at that airport earlier.</p>
+<p>机场可见她们睡眼惺忪。</p>
+<p><button class="play-button sentence" id="s-00-28-40-200" data-start="00:28:40,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some dark glasses because of that partying.</p>
+<p>因彻夜庆祝戴着墨镜。</p>
+<p><button class="play-button sentence" id="s-00-28-43-200" data-start="00:28:43,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No doubt when they get here they'll be reminding this government of the last government's pledge in 2022 when they won their first euros to ensure girls have equal access to PE at schools.</p>
+<p>届时必将提醒政府兑现2022年夺冠时承诺的校园体育平等。</p>
+<p><button class="play-button sentence" id="s-00-28-54-200" data-start="00:28:54,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's got a lot better but it still isn't quite there.</p>
+<p>虽进展显著，仍未完全实现。</p>
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958262" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-57-200" data-start="00:28:57,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's plenty for the Lionesses to enjoy, to celebrate and to campaign on and of course we've got that homecoming celebration parade at Buckingham Palace tomorrow where the party clive will be continuing.</p>
+<p>女足队员将尽情庆祝并倡导改革，明日白金汉宫凯旋游行继续狂欢。</p>
+<p><button class="play-button sentence" id="s-00-29-11-200" data-start="00:29:11,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Indeed, all right Natalie thanks for that Natalie Perks there in Downing Street and much more from you on the news at 10 coming up.</p>
+<p>感谢唐宁街的纳塔莉·珀克斯，十点新闻再见。</p>
+<p><button class="play-button sentence" id="s-00-29-18-200" data-start="00:29:18,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Time now for a look at the weather.</p>
+<p>现在播报天气预报。</p>
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958239" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-20-200" data-start="00:29:20,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's quite nice here now in Aberdeenshire, Elizabeth.</p>
+<p>阿伯丁郡天气晴好，伊丽莎白。</p>
+<p><button class="play-button sentence" id="s-00-29-23-200" data-start="00:29:23,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are you looking like for the rest of the country?</p>
+<p>全国其他地区如何？</p>
+<p><button class="play-button sentence" id="s-00-29-25-200" data-start="00:29:25,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, thank you Clive.</p>
+<p>感谢克莱夫。</p>
+<p><button class="play-button sentence" id="s-00-29-26-419" data-start="00:29:26,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I'm going to start off with a bit of victory parade weather actually.</p>
+<p>首先关注胜利游行天气。</p>
+<p><button class="play-button sentence" id="s-00-29-30-200" data-start="00:29:30,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think we will be bringing the cheer because it does look like it's going to be quite cloudy through the day tomorrow in London.</p>
+<p>伦敦明日多云但无碍庆祝。</p>
+<p><button class="play-button sentence" id="s-00-29-36-200" data-start="00:29:36,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But a patchy light rain always possible and not enough to dampen the spirits.</p>
+<p>偶有零星小雨，不影响兴致。</p>
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958218" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-41-200" data-start="00:29:41,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that really sets the scene for the rest of this week when it's going to feel fairly average, mundane for July.</p>
+<p>本周天气总体平稳，属七月常态。</p>
+<p><button class="play-button sentence" id="s-00-29-48-200" data-start="00:29:48,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's not too hot, not too cold, not too wet, not too dry and it's not windy either.</p>
+<p>气温适中，无极端天气。</p>
+<p><button class="play-button sentence" id="s-00-29-53-200" data-start="00:29:53,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what's the reason for all of this?</p>
+<p>成因何在？</p>
+<p><button class="play-button sentence" id="s-00-29-55-119" data-start="00:29:55,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, high pressure sits out towards the southwest and never quite manages to build its way in for the rest of July.</p>
+<p>西南高压未能控制七月剩余时间。</p>
+<p><button class="play-button sentence" id="s-00-30-01-200" data-start="00:30:01,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's just allowing these weak weather fronts to approach from the northwest and there is such a weather fronts overnight.</p>
+<p>西北弱锋面过境带来夜间降雨。</p>
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958192" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-07-200" data-start="00:30:07,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight gradually pushing its way further eastwards, bringing some rain across Northern Ireland, western Scotland, northwest England, eventually Wales and southwest England by dawn.</p>
+<p>降雨将东移影响北爱尔兰、苏格兰西部、英格兰西北部，黎明波及威尔士及英格兰西南部。</p>
+<p><button class="play-button sentence" id="s-00-30-16-200" data-start="00:30:16,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we keep the clear skies further east.</p>
+<p>东部保持晴朗。</p>
+<p><button class="play-button sentence" id="s-00-30-18-269" data-start="00:30:18,269" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here it's a bit cooler, very mild, of course, underneath those layers of cloud and then tomorrow.</p>
+<p>云层下较凉爽，明日——</p>
+<p><button class="play-button sentence" id="s-00-30-23-200" data-start="00:30:23,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the cloud and the patchy rain just starts to push its way further eastwards there.</p>
+<p>云层与零星雨区继续东移。</p>
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958171" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-28-200" data-start="00:30:28,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still some brightness further east that will be breaks in the cloud at times and given any breaks for southwest England and Wales, there could be some sharper showers breaking out through the afternoon.</p>
+<p>东部偶有阳光，西南英格兰及威尔士午后或现强阵雨。</p>
+<p><button class="play-button sentence" id="s-00-30-37-200" data-start="00:30:37,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now it's a little bit cooler towards the south to morrow than today and a bit warmer further north.</p>
+<p>明日南部略凉，北部稍暖。</p>
+<p><button class="play-button sentence" id="s-00-30-42-200" data-start="00:30:42,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there will be some decent breaks in that cloud across parts of Scotland into Wednesday, just more of the same really.</p>
+<p>苏格兰周三云层间隙增多，天气模式持续。</p>
+<p><a name="block-73"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958150" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-49-200" data-start="00:30:49,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this band of cloud and showers pushing further eastwards but brightening up nicely from the west a bit later on through the day.</p>
+<p>雨带东移后西部将转晴。</p>
+<p><button class="play-button sentence" id="s-00-30-56-200" data-start="00:30:56,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So quite a decent day of weather if you've got something planned for school holidays, perhaps out and about.</p>
+<p>适合假日外出活动。</p>
+<p><button class="play-button sentence" id="s-00-31-01-200" data-start="00:31:01,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But if you're in the southeast in quadrant, all the way up to perhaps east Yorkshire on Thursday, there could be some heavy sundry showers developing.</p>
+<p>但周四东南部至约克郡东部或有强阵雨。</p>
+<p><a name="block-74"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958131" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-31-08-200" data-start="00:31:08,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But cooler too on Friday.</p>
+<p>周五气温下降。</p>
+<p><button class="play-button sentence" id="s-00-31-09-929" data-start="00:31:09,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's the outlook, but there's more as always on the BBC weather app.</p>
+<p>更多详情见BBC天气应用。</p>
+<p><button class="play-button sentence" id="s-00-31-14-705" data-start="00:31:14,705" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clive. All right, Elizabeth. Thank you for that.</p>
+<p>谢谢伊丽莎白。</p>
+<p><button class="play-button sentence" id="s-00-31-18-161" data-start="00:31:18,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Much more from us here in Scotland that 10 where I can tell you we can hear the rather loud rotor blades of Marine one.</p>
+<p>苏格兰十点新闻将报道海军一号直升机动态。</p>
+<p><button class="play-button sentence" id="s-00-31-26-200" data-start="00:31:26,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president and Sir Keir Starmer due to arrive here very shortly, but that's it for now.</p>
+<p>总统与基尔·斯塔默爵士即将抵达，今日播报至此。</p>
+<p><a name="block-75"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lw8pzLEHo/?t=-2208958108" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-31-31-200" data-start="00:31:31,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's get the news wherever you are.</p>
+<p>无论您身处何地，请持续关注新闻。</p>
+<p><button class="play-button sentence" id="s-00-31-35-009" data-start="00:31:35,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye for now.</p>
+<p>再见。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
