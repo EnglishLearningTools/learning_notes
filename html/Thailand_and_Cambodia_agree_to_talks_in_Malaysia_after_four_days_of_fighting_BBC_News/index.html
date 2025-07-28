@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Thailand and Cambodia agree to talks in Malaysia after four days of fighting | BBC News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cambodia welcomes Trump's ceasefire proposal, Thailand considers dialogue first, but shelling continues amid US tariff pressure. Both sides face economic stakes as trade deadline nears.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Thailand and Cambodia agree to talks in Malaysia after four days of fighting | BBC News</h1>
+<p>【BBC News 20250728 泰国和柬埔寨同意在马来西亚举行停战会谈】</p>
+<p>Summary:
+Cambodia welcomes Trump's ceasefire proposal, Thailand considers dialogue first, but shelling continues amid US tariff pressure. Both sides face economic stakes as trade deadline nears.</p>
+<p>摘要：
+柬埔寨欢迎特朗普的停火提议，泰国坚持先对话，但炮击在美国关税压力下持续。随着贸易截止日期临近，双方都面临经济风险。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 5 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-640" data-start="00:00:00,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cambodia has welcomed a proposal by President Trump for a ceasefire with Thailand after days of crossber fighting.</p>
+<p>柬埔寨对特朗普总统提出的与泰国停火的提议表示欢迎，此前双方已交火数日。</p>
+<p><button class="play-button sentence" id="s-00-00-07-720" data-start="00:00:07,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thailand said it was willing to consider a ceasefire, but that dialogue must come first.</p>
+<p>泰国表示愿意考虑停火，但必须首先进行对话。</p>
+<p><button class="play-button sentence" id="s-00-00-12-684" data-start="00:00:12,684" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Trump told the leaders of both countries there would be no talks on reducing US tariffs until the fighting stopped.</p>
+<p>特朗普告诉两国领导人，在战斗停止之前不会讨论降低美国关税的问题。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959979" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-20-312" data-start="00:00:20,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shelling continued overnight after the US president's calls.</p>
+<p>美国总统通话后，炮击持续了一整夜。</p>
+<p><button class="play-button sentence" id="s-00-00-24-438" data-start="00:00:24,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Southeast Asia correspondent Jonathan Head reports from the Thai Cambodian border.</p>
+<p>我们的东南亚记者乔纳森·海德从泰柬边境发回报道。</p>
+<p><button class="play-button sentence" id="s-00-00-31-278" data-start="00:00:31,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, could President Trump have more success here in Southeast Asia than he's had so far in Gaza or Ukraine?</p>
+<p>那么，特朗普总统在东南亚是否会比在加沙或乌克兰取得更大成功？</p>
+<p><button class="play-button sentence" id="s-00-00-38-212" data-start="00:00:38,212" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The response to his unexpected phone calls to both prime ministers of Cambodia and Thailand has so far been very positive.</p>
+<p>他对柬埔寨和泰国总理的意外电话到目前为止反应非常积极。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-46-238" data-start="00:00:46,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Cambodian side um eagerly want a ceasefire.</p>
+<p>柬埔寨方面迫切希望停火。</p>
+<p><button class="play-button sentence" id="s-00-00-49-221" data-start="00:00:49,221" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's President Trump's demand.</p>
+<p>这是特朗普总统的要求。</p>
+<p><button class="play-button sentence" id="s-00-00-50-717" data-start="00:00:50,717" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um Hunmet said you he was very grateful for President Trump's intervention.</p>
+<p>洪森表示，他对特朗普总统的干预非常感激。</p>
+<p><button class="play-button sentence" id="s-00-00-54-994" data-start="00:00:54,994" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But remember, Cambodia had already asked for a ceasefire at the UN on Friday.</p>
+<p>但别忘了，柬埔寨上周五已在联合国要求停火。</p>
+<p><button class="play-button sentence" id="s-00-00-58-933" data-start="00:00:58,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> its own military forces are much weaker than Thailand's and we believe they've probably probably been taking a lot of punishment from the relentless Thai artillery barges and air strikes that we've seen over the last three days.</p>
+<p>柬埔寨的军事力量远弱于泰国，我们认为他们可能在过去三天里遭受了泰国无情的炮舰和空袭的打击。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-11-433" data-start="00:01:11,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the Thai side, the response is is is positive and warm, but the Thai prime minister said only that they would agree to a ceasefire in principle if they saw good intentions from the Cambodian side.</p>
+<p>泰国方面的反应积极而热情，但泰国总理仅表示，如果看到柬埔寨方面的诚意，他们原则上同意停火。</p>
+<p><button class="play-button sentence" id="s-00-01-23-689" data-start="00:01:23,689" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's actually been the Thai position all along.</p>
+<p>这实际上是泰国一贯的立场。</p>
+<p><button class="play-button sentence" id="s-00-01-25-923" data-start="00:01:25,923" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai military and the government do not appear ready for a ceasefire right now.</p>
+<p>泰国军方和政府目前似乎并不准备停火。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959909" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-30-560" data-start="00:01:30,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As far as the Thai military is concerned, they still have unfinished business.</p>
+<p>就泰国军方而言，他们仍有未完成的任务。</p>
+<p><button class="play-button sentence" id="s-00-01-34-197" data-start="00:01:34,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're still they still want to push Cambodian forces well back from the border and probably inflict more damage on them.</p>
+<p>他们仍希望将柬埔寨军队远远赶出边境，并可能对其造成更多打击。</p>
+<p><button class="play-button sentence" id="s-00-01-40-052" data-start="00:01:40,052" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a lot of anger in this country over those rocket attacks on Thursday which killed 13 Thai civilians.</p>
+<p>该国对周四造成13名泰国平民死亡的火箭袭击感到愤怒。</p>
+<p><button class="play-button sentence" id="s-00-01-46-235" data-start="00:01:46,235" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, and the Thai side has always said what they want is dialogue with Cambodia first before any ceasefire.</p>
+<p>泰国方面一直表示，他们希望在停火前首先与柬埔寨对话。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959887" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-52-636" data-start="00:01:52,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai prime minister reiterated that position um in his response to Donald Trump's phone call.</p>
+<p>泰国总理在回应特朗普的电话时重申了这一立场。</p>
+<p><button class="play-button sentence" id="s-00-01-59-040" data-start="00:01:59,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So ostensibly um that phone call hasn't changed anything and we have seen uh shelling overnight coming both ways.</p>
+<p>表面上，这通电话没有改变任何事，我们看到整夜双方仍在炮击。</p>
+<p><button class="play-button sentence" id="s-00-02-06-399" data-start="00:02:06,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen some buildings destroyed here in Thailand.</p>
+<p>我们看到泰国这边一些建筑被毁。</p>
+<p><button class="play-button sentence" id="s-00-02-08-430" data-start="00:02:08,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We assume the ties have just kept up that ongoing artillery barrage over to the Cambodian side.</p>
+<p>我们认为泰国仍在持续向柬埔寨一侧炮击。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-14-285" data-start="00:02:14,285" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um but the key point in President Trump's uh statement was that he said he also warned both sides that their current trade talks on his tariffs would not go on if there wasn't a ceasefire.</p>
+<p>但特朗普声明的关键点是，他警告双方，如果不停火，目前的关税贸易谈判将无法继续。</p>
+<p><button class="play-button sentence" id="s-00-02-26-526" data-start="00:02:26,526" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now neither country can afford these talks to fail and there's only four days left to the trade tariff deadline.</p>
+<p>现在两国都无法承受谈判失败，距离贸易关税截止日期只剩四天。</p>
+<p><button class="play-button sentence" id="s-00-02-33-434" data-start="00:02:33,434" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh we know in Thailand there's enormous criticism of the government that they appear to have been slow to get their tariff talks going.</p>
+<p>我们知道泰国国内对政府批评声很大，认为他们在关税谈判上行动迟缓。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959839" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-40-465" data-start="00:02:40,465" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both countries, Cambodia and Thailand, are very exposed to the US market.</p>
+<p>柬埔寨和泰国都非常依赖美国市场。</p>
+<p><button class="play-button sentence" id="s-00-02-44-435" data-start="00:02:44,435" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've they're currently facing a 36% tariff.</p>
+<p>他们目前面临36%的关税。</p>
+<p><button class="play-button sentence" id="s-00-02-47-109" data-start="00:02:47,109" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh many neighboring countries have now done deals that bring those tariffs down to 20% or lower.</p>
+<p>许多邻国已达成协议，将关税降至20%或更低。</p>
+<p><button class="play-button sentence" id="s-00-02-54-060" data-start="00:02:54,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, in a way, that threat, I think, will be the deciding factor.</p>
+<p>因此，我认为这一威胁将成为决定性因素。</p>
+<p><button class="play-button sentence" id="s-00-02-57-226" data-start="00:02:57,226" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think either Thailand or Cambodia can afford that for those tariff talks to fail and they will comply with Donald Trump's wishes for at least an announcement of a ceasefire probably within the next two days or so.</p>
+<p>我认为泰柬两国都无法承受关税谈判失败，他们可能会在未来两天左右按照特朗普的意愿宣布停火。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Go8LzsELk/?t=-2208959808" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-11-330" data-start="00:03:11,330" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Southeast Asia correspondent, Jonathan Head.</p>
+<p>我们的东南亚记者乔纳森·海德。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
