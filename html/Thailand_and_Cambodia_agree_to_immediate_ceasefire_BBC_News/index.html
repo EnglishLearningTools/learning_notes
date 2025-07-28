@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Thailand and Cambodia agree to 'immediate ceasefire' | BBC News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thailand and Cambodia have agreed to an unconditional ceasefire to end border clashes after days of fighting, following pressure from President Trump over trade deals.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Thailand and Cambodia agree to 'immediate ceasefire' | BBC News</h1>
+<p>【泰国和柬埔寨同意“立即停火”｜BBC News 20250729】</p>
+<p>Summary:
+Thailand and Cambodia have agreed to an unconditional ceasefire to end border clashes after days of fighting, following pressure from President Trump over trade deals.</p>
+<p>摘要：
+泰国和柬埔寨同意无条件停火以结束多日的边境冲突，此前特朗普总统在贸易协议上施压。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 6 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-160" data-start="00:00:00,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have breaking news to bring you that Thailand and Cambodia, the two neighbors have agreed an unconditional ceasefire to end days of fighting along their border.</p>
+<p>我们为您带来突发新闻：泰国和柬埔寨这两个邻国已同意无条件停火，以结束多日的边境冲突。</p>
+<p><button class="play-button sentence" id="s-00-00-09-892" data-start="00:00:09,892" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, these are the two leaders shaking hands at the end of a press conference in Malaysia.</p>
+<p>现在，两国领导人在马来西亚的新闻发布会结束时握手。</p>
+<p><button class="play-button sentence" id="s-00-00-14-713" data-start="00:00:14,713" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's where the talks happened, announcing the pause in the violence.</p>
+<p>会谈在此举行，宣布暂停暴力冲突。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959981" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-18-135" data-start="00:00:18,135" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It will come into effect midnight local time.</p>
+<p>停火将于当地时间午夜生效。</p>
+<p><button class="play-button sentence" id="s-00-00-20-668" data-start="00:00:20,668" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump had warned both sides that he wouldn't sign a trade deal with either countries until a ceasefire had been agreed.</p>
+<p>特朗普总统曾警告双方，在达成停火协议之前，他不会与任何一方签署贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-00-27-490" data-start="00:00:27,490" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At least 33 people have been killed.</p>
+<p>至少33人丧生。</p>
+<p><button class="play-button sentence" id="s-00-00-29-352" data-start="00:00:29,352" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thousands displaced since last Thursday when fighting escalated following months of tensions.</p>
+<p>自上周四战斗升级以来，已有数千人流离失所，此前数月紧张局势不断加剧。</p>
+<p><button class="play-button sentence" id="s-00-00-34-013" data-start="00:00:34,013" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Each side has been blaming the other for causing the escalation.</p>
+<p>双方互相指责对方导致局势升级。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959962" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-37-860" data-start="00:00:37,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is a dispute that dates back more than a century when their borders were drawn following the French occupation of Cambodia.</p>
+<p>但这一争端可追溯至一个多世纪前，当时柬埔寨被法国占领后划定了边界。</p>
+<p><button class="play-button sentence" id="s-00-00-44-573" data-start="00:00:44,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jonathan Head, our Southeast Asia correspondent, has the latest for us on this unconditional ceasefire.</p>
+<p>我们的东南亚记者乔纳森·海德为我们带来关于此次无条件停火的最新消息。</p>
+<p><button class="play-button sentence" id="s-00-00-52-000" data-start="00:00:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I think this deal came a great deal more quickly than expected.</p>
+<p>嗯，我认为这项协议达成得比预期快得多。</p>
+<p><button class="play-button sentence" id="s-00-00-55-695" data-start="00:00:55,695" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mood in the morning after these talks were announced was still quite uneasy.</p>
+<p>会谈宣布后的早晨，气氛仍然相当紧张。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959939" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-00-042" data-start="00:01:00,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai side were not talking with great enthusiasm about them and Thailand has not been willing to accept a ceasefire since Cambodia asked for one last Friday.</p>
+<p>泰方对此并不热情，且自柬埔寨上周五提出停火请求以来，泰国一直不愿接受。</p>
+<p><button class="play-button sentence" id="s-00-01-09-705" data-start="00:01:09,705" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai position is they still don't believe Cambodia is sincere about peace.</p>
+<p>泰方的立场是，他们仍不相信柬埔寨对和平是真诚的。</p>
+<p><button class="play-button sentence" id="s-00-01-14-277" data-start="00:01:14,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're very angry about the continued fairly indiscriminate rocket attacks that have been coming over the border from the Cambodian side which have hurt a lot and killed a lot of civilians on the Thai side.</p>
+<p>他们对柬埔寨方面持续且近乎无差别的火箭弹袭击感到愤怒，这些袭击已造成泰国境内大量平民伤亡。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959915" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-24-614" data-start="00:01:24,614" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thai military which is much more powerful than Cambodia's has been pushing Cambodian forces back and does not view the job as finished.</p>
+<p>泰国军队比柬埔寨强大得多，一直在将柬埔寨军队逼退，并认为任务尚未完成。</p>
+<p><button class="play-button sentence" id="s-00-01-33-239" data-start="00:01:33,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think in the end it has to be that threat from President Trump to stop trade talks which finally forced Thailand's hand and decided it that it must agree to a ceasefire very quickly.</p>
+<p>但我认为，最终是特朗普总统停止贸易谈判的威胁迫使泰国迅速同意停火。</p>
+<p><button class="play-button sentence" id="s-00-01-47-316" data-start="00:01:47,316" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's hard to overstate how critical these talks are to both Cambodia and Thailand.</p>
+<p>很难夸大这些会谈对柬埔寨和泰国的重要性。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959887" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-52-729" data-start="00:01:52,729" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're very exposed.</p>
+<p>两国处境非常脆弱。</p>
+<p><button class="play-button sentence" id="s-00-01-53-798" data-start="00:01:53,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They rely very heavily on exports to the US.</p>
+<p>它们严重依赖对美国的出口。</p>
+<p><button class="play-button sentence" id="s-00-01-56-967" data-start="00:01:56,967" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both are facing 36% tariffs from the US if they can't negotiate them down.</p>
+<p>如果无法通过谈判降低关税，两国将面临美国36%的关税。</p>
+<p><button class="play-button sentence" id="s-00-02-02-584" data-start="00:02:02,584" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And remember the deadline is Friday.</p>
+<p>记住，截止日期是周五。</p>
+<p><button class="play-button sentence" id="s-00-02-04-479" data-start="00:02:04,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are very intense trade talks going on.</p>
+<p>目前正在进行非常紧张的贸易谈判。</p>
+<p><button class="play-button sentence" id="s-00-02-07-200" data-start="00:02:07,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The thought that those talks could be suspended if they didn't stop the fighting I think was a great threat to their economies, to their governments, too.</p>
+<p>如果不停火，这些谈判可能会暂停，我认为这对它们的经济和政府都是巨大威胁。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-14-039" data-start="00:02:14,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their governments need to show their own people that they can get a deal as several of their neighbors already have.</p>
+<p>两国政府需要向民众证明，它们能像其他邻国一样达成协议。</p>
+<p><button class="play-button sentence" id="s-00-02-20-039" data-start="00:02:20,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that probably changed the mood.</p>
+<p>因此，这可能改变了气氛。</p>
+<p><button class="play-button sentence" id="s-00-02-22-235" data-start="00:02:22,235" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wouldn't say either the Thai or Cambodian prime minister looked particularly sort of cheerful at this meeting in Malaysia, but they both agreed to honor the ceasefire.</p>
+<p>我不会说泰国或柬埔寨总理在马来西亚的会议上看起来特别高兴，但他们都同意遵守停火协议。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959847" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-32-340" data-start="00:02:32,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The real critical job now is to make it happen.</p>
+<p>现在的关键任务是落实停火。</p>
+<p><button class="play-button sentence" id="s-00-02-36-199" data-start="00:02:36,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fighting is supposed to stop at midnight local time.</p>
+<p>战斗应于当地时间午夜停止。</p>
+<p><button class="play-button sentence" id="s-00-02-39-369" data-start="00:02:39,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That will be a huge relief to the people living along the border on both sides.</p>
+<p>这对边境两侧的居民将是巨大的解脱。</p>
+<p><button class="play-button sentence" id="s-00-02-44-718" data-start="00:02:44,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tens of thousands are displaced.</p>
+<p>数万人流离失所。</p>
+<p><button class="play-button sentence" id="s-00-02-47-018" data-start="00:02:47,018" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a really terrible experience under these bombardments.</p>
+<p>在炮火下的经历非常可怕。</p>
+<p><button class="play-button sentence" id="s-00-02-49-863" data-start="00:02:49,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they'll be very relieved.</p>
+<p>因此他们会非常欣慰。</p>
+<p><button class="play-button sentence" id="s-00-02-51-492" data-start="00:02:51,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the two armies are still right up against each other.</p>
+<p>但两军仍在对峙。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-55-561" data-start="00:02:55,561" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still skirmishing even as the talks were going on.</p>
+<p>甚至在会谈进行时仍有小规模冲突。</p>
+<p><button class="play-button sentence" id="s-00-02-58-067" data-start="00:02:58,067" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were shells and rockets coming across and there's a great deal of mistrust and a lot of anger, a lot of nationalist feeling has been stirred up.</p>
+<p>炮弹和火箭弹仍在交火，双方存在极大不信任和愤怒，民族主义情绪被激化。</p>
+<p><button class="play-button sentence" id="s-00-03-05-919" data-start="00:03:05,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, it is going to be quite difficult to police that ceasefire.</p>
+<p>因此，监督停火将相当困难。</p>
+<p><button class="play-button sentence" id="s-00-03-09-352" data-start="00:03:09,352" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Malaysia has offered to help monitor it and will bring in other Southeast Asian countries to do that.</p>
+<p>马来西亚已提出协助监督，并将引入其他东南亚国家参与。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17X8HzHEXq/?t=-2208959805" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-14-763" data-start="00:03:14,763" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not clear yet how much both Cambodia and Thailand are willing to allow outsiders to come in and monitor it, but that's what will be necessary.</p>
+<p>目前尚不清楚柬埔寨和泰国愿意让外部力量介入监督的程度，但这是必要的。</p>
+<p><button class="play-button sentence" id="s-00-03-23-343" data-start="00:03:23,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it will be necessary to persuade their forces to move back from the disputed border which has been enormously reinforced in recent days.</p>
+<p>还需要说服双方军队从争议边境后撤，该地区近日已大幅增兵。</p>
+<p><button class="play-button sentence" id="s-00-03-31-759" data-start="00:03:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those are going to be big challenges and given the mood between the two countries and the anger that's been stirred up over the past five days of fighting, I think it's going to be quite a tough job to make the ceasefire.</p>
+<p>这些将是巨大挑战，考虑到两国间的情绪及过去五天战斗激化的愤怒，我认为落实停火将非常艰难。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
