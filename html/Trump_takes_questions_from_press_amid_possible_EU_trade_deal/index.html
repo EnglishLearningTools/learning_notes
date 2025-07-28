@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Trump takes questions from press amid possible EU trade deal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="President Trump and EU Commission President Ursula von der Leyen discuss trade relations, tariffs, and other international issues during a meeting in Scotland.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Trump takes questions from press amid possible EU trade deal</h1>
+<p>【CNN News 20250728 特朗普高调施压欧盟争取史上最大贸易协议，谈加沙援助显不满，炮轰风电与移民政策】</p>
+<p>Summary:
+President Trump and EU Commission President Ursula von der Leyen discuss trade relations, tariffs, and other international issues during a meeting in Scotland.</p>
+<p>摘要：
+特朗普总统和欧盟委员会主席冯德莱恩在苏格兰会晤期间讨论了贸易关系、关税和其他国际问题。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 43 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-533" data-start="00:00:00,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-00-01-367" data-start="00:00:01,367" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a beautiful Sunday in Scotland, and we thought we could cut things short by and certainly travel distance by having our meeting here.</p>
+<p>这是苏格兰一个美好的周日，我们认为在这里会面可以缩短行程节省时间。</p>
+<p><button class="play-button sentence" id="s-00-00-12-512" data-start="00:00:12,512" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we discussed options and I just it's an honor to have the president of the European Union with us.</p>
+<p>我们讨论了各种方案，能与欧盟主席共处是我的荣幸。</p>
+<p><button class="play-button sentence" id="s-00-00-20-887" data-start="00:00:20,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ursula has been, really done a terrific job for them, not for us, but she's done a great job, and, she's highly respected by us also.</p>
+<p>冯德莱恩为他们（欧盟）做了出色工作——不是为我们——但她做得很好，我们也非常尊重她。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959967" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-32-131" data-start="00:00:32,131" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, we look forward to talking to see if we can do something.</p>
+<p>我们期待通过商谈看看能否有所作为。</p>
+<p><button class="play-button sentence" id="s-00-00-36-735" data-start="00:00:36,735" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we've had, a very good relationship over the years, but it's been a very one sided transaction, very unfair to the United States.</p>
+<p>多年来我们关系良好，但交易一直非常单边化，对美国极不公平。</p>
+<p><button class="play-button sentence" id="s-00-00-47-146" data-start="00:00:47,146" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think both sides want to see fairness.</p>
+<p>我认为双方都希望公平。</p>
+<p><button class="play-button sentence" id="s-00-00-49-249" data-start="00:00:49,249" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's been a very, very one sided deal.</p>
+<p>但这始终是个极度单边的协议。</p>
+<p><button class="play-button sentence" id="s-00-00-52-351" data-start="00:00:52,351" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it shouldn't be.</p>
+<p>本不该如此。</p>
+<p><button class="play-button sentence" id="s-00-00-54-186" data-start="00:00:54,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so we're here with her very brilliant staff and hopefully will resolve a few issues.</p>
+<p>现在我们与她优秀的团队在一起，希望能解决一些问题。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959938" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-01-895" data-start="00:01:01,895" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's a great honor.</p>
+<p>这是莫大的荣幸。</p>
+<p><button class="play-button sentence" id="s-00-01-02-896" data-start="00:01:02,896" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, we just built this ballroom and we're building a great ballroom at the White House.</p>
+<p>我们刚建成这个宴会厅，白宫也正在建造一个宏伟的宴会厅。</p>
+<p><button class="play-button sentence" id="s-00-01-06-900" data-start="00:01:06,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House has wanted a ballroom for 150 years, but they never had a real estate person.</p>
+<p>白宫150年来一直想要宴会厅，但从未有过懂房地产的总统。</p>
+<p><button class="play-button sentence" id="s-00-01-12-272" data-start="00:01:12,272" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, nobody no president knew how to build a ballroom.</p>
+<p>没有哪位总统知道如何建造宴会厅。</p>
+<p><button class="play-button sentence" id="s-00-01-15-108" data-start="00:01:15,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this just opened, you know, a relatively short time ago, and it's been quite the success.</p>
+<p>这个（宴会厅）刚启用不久，已获得巨大成功。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959919" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-20-416" data-start="00:01:20,416" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, I think I was just saying I could take this one, drop it right down there, and it would be beautiful.</p>
+<p>我刚才还说，把这个直接放到白宫都会很完美。</p>
+<p><button class="play-button sentence" id="s-00-01-25-552" data-start="00:01:25,552" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is exactly what they wanted.</p>
+<p>这正是他们想要的。</p>
+<p><button class="play-button sentence" id="s-00-01-27-587" data-start="00:01:27,587" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's an honor to have you at the new ballroom at Turnberry and thank you very much.</p>
+<p>很荣幸能在特伯里新宴会厅接待你们，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-01-33-192" data-start="00:01:33,192" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-01-33-969" data-start="00:01:33,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much, Mr. President.</p>
+<p>非常感谢您，总统先生。</p>
+<p><button class="play-button sentence" id="s-00-01-36-400" data-start="00:01:36,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for inviting me here.</p>
+<p>非常感谢您的邀请。</p>
+<p><button class="play-button sentence" id="s-00-01-39-231" data-start="00:01:39,231" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Indeed it is today about, trade between the European Union and the United States.</p>
+<p>今天确实关乎欧盟与美国的贸易。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-46-572" data-start="00:01:46,572" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are together the two largest economies worldwide.</p>
+<p>我们是全球前两大经济体。</p>
+<p><button class="play-button sentence" id="s-00-01-50-041" data-start="00:01:50,041" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-01-50-609" data-start="00:01:50,609" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> if you look at the trade volume, it's the biggest trade volume globally with $1.7 trillion among us.</p>
+<p>我们的双边贸易额达1.7万亿美元，是全球最大贸易规模。</p>
+<p><button class="play-button sentence" id="s-00-01-58-979" data-start="00:01:58,979" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if you look at our markets, it's a huge market, 800 million people, if you take the United States and the European Union.</p>
+<p>我们的市场覆盖8亿人口。</p>
+<p><button class="play-button sentence" id="s-00-02-07-192" data-start="00:02:07,192" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, I'm very much looking forward to the discussions we will have now.</p>
+<p>非常期待接下来的讨论。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-12-699" data-start="00:02:12,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> our staff have done some of the heavy lifting, but now it's on us.</p>
+<p>团队已完成基础工作，现在取决于我们。</p>
+<p><button class="play-button sentence" id="s-00-02-17-871" data-start="00:02:17,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, you are known as a, tough negotiator and dealmaker.</p>
+<p>您以强硬谈判者和交易促成者著称。</p>
+<p><button class="play-button sentence" id="s-00-02-24-377" data-start="00:02:24,377" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is front and fair and what is in front.</p>
+<p>关键在于公平。</p>
+<p><button class="play-button sentence" id="s-00-02-27-780" data-start="00:02:27,780" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of us important.</p>
+<p>对我们很重要。</p>
+<p><button class="play-button sentence" id="s-00-02-29-081" data-start="00:02:29,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People.</p>
+<p>人民。</p>
+<p><button class="play-button sentence" id="s-00-02-29-477" data-start="00:02:29,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are successful.</p>
+<p>我们会成功。</p>
+<p><button class="play-button sentence" id="s-00-02-30-383" data-start="00:02:30,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it would be the biggest deal each of us has ever struck.</p>
+<p>这将是双方有史以来最大协议。</p>
+<p><button class="play-button sentence" id="s-00-02-34-787" data-start="00:02:34,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm very much looking forward.</p>
+<p>非常期待。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959843" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-36-672" data-start="00:02:36,672" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Never struck by anybody.</p>
+<p>前所未有。</p>
+<p><button class="play-button sentence" id="s-00-02-37-723" data-start="00:02:37,723" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's yeah, that's true.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-02-39-359" data-start="00:02:39,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right now we have that, that honor goes to Japan.</p>
+<p>目前纪录保持者是日本。</p>
+<p><button class="play-button sentence" id="s-00-02-42-427" data-start="00:02:42,427" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just struck a deal with Japan, as you know, and they were very close to a deal with China.</p>
+<p>我们刚与日本达成协议，他们此前几乎与中国谈成。</p>
+<p><button class="play-button sentence" id="s-00-02-47-753" data-start="00:02:47,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We really sort of made a deal with China.</p>
+<p>我们也算与中国达成了协议。</p>
+<p><button class="play-button sentence" id="s-00-02-49-669" data-start="00:02:49,669" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we'll see how that goes.</p>
+<p>拭目以待。</p>
+<p><button class="play-button sentence" id="s-00-02-51-770" data-start="00:02:51,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have numerous other deals.</p>
+<p>还有其他多项协议。</p>
+<p><button class="play-button sentence" id="s-00-02-53-269" data-start="00:02:53,269" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And mostly I'm just going to charge tariffs.</p>
+<p>主要是征收关税。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-55-947" data-start="00:02:55,947" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you know, it's not a deal per se, but people are going to pay tariffs.</p>
+<p>虽非协议本身，但人们必须付关税。</p>
+<p><button class="play-button sentence" id="s-00-02-59-579" data-start="00:02:59,579" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're doing them at the low end at the high end because we don't want to hurt anybody.</p>
+<p>我们设定高低不同税率以免伤害任何人。</p>
+<p><button class="play-button sentence" id="s-00-03-03-849" data-start="00:03:03,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And pretty well.</p>
+<p>效果不错。</p>
+<p><button class="play-button sentence" id="s-00-03-05-251" data-start="00:03:05,251" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, you and I both figured this is, this is really the biggest trading partnership in the world.</p>
+<p>我们都明白这是全球最大贸易伙伴关系。</p>
+<p><button class="play-button sentence" id="s-00-03-11-890" data-start="00:03:11,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we should give it a shot, right?</p>
+<p>应该尝试达成协议，对吧？</p>
+<p><button class="play-button sentence" id="s-00-03-14-026" data-start="00:03:14,026" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-03-14-526" data-start="00:03:14,526" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very much looking forward to that.</p>
+<p>非常期待。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959803" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-16-361" data-start="00:03:16,361" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> thank you very much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-03-17-197" data-start="00:03:17,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I do too, any questions on Friday?</p>
+<p>我也期待，周五前有问题吗？</p>
+<p><button class="play-button sentence" id="s-00-03-21-533" data-start="00:03:21,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the chances of a deal, 50%, maybe.</p>
+<p>达成概率约50%。</p>
+<p><button class="play-button sentence" id="s-00-03-23-618" data-start="00:03:23,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It seems like you're in quite a good thing.</p>
+<p>您似乎状态不错。</p>
+<p><button class="play-button sentence" id="s-00-03-25-905" data-start="00:03:25,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How would you rate those chances now?</p>
+<p>您现在评估概率如何？</p>
+<p><button class="play-button sentence" id="s-00-03-28-074" data-start="00:03:28,074" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm actually not in a good mood, but I will tell you, I think the chances are.</p>
+<p>其实心情不好，但我觉得概率...</p>
+<p><button class="play-button sentence" id="s-00-03-34-514" data-start="00:03:34,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I think I would say probably 5050 of making a deal.</p>
+<p>约50%。</p>
+<p><button class="play-button sentence" id="s-00-03-39-284" data-start="00:03:39,284" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hope.</p>
+<p>希望达成。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959780" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-39-837" data-start="00:03:39,837" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd like to make a deal.</p>
+<p>我希望达成协议。</p>
+<p><button class="play-button sentence" id="s-00-03-41-587" data-start="00:03:41,587" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's good for both, but that's a 5050 decision made.</p>
+<p>对双方都好，但成败各半。</p>
+<p><button class="play-button sentence" id="s-00-03-46-451" data-start="00:03:46,451" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sticking points on.</p>
+<p>分歧在于...</p>
+<p><button class="play-button sentence" id="s-00-03-48-360" data-start="00:03:48,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we have 3 or 4 sticking points I'd rather not get, and we'll be discussing them, but, I think the main sticking point is fairness.</p>
+<p>有3-4个难点，主要在于公平性。</p>
+<p><button class="play-button sentence" id="s-00-03-56-201" data-start="00:03:56,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>明白。</p>
+<p><button class="play-button sentence" id="s-00-03-56-640" data-start="00:03:56,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please.</p>
+<p>请说。</p>
+<p><button class="play-button sentence" id="s-00-03-57-254" data-start="00:03:57,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if I'm honest.</p>
+<p>坦白说...</p>
+<p><button class="play-button sentence" id="s-00-03-58-570" data-start="00:03:58,570" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it about money?</p>
+<p>是钱的问题吗？</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959760" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-59-472" data-start="00:03:59,472" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So why don't you give me.</p>
+<p>请解释。</p>
+<p><button class="play-button sentence" id="s-00-04-01-974" data-start="00:04:01,974" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> no, the golf was.</p>
+<p>不，高尔夫...</p>
+<p><button class="play-button sentence" id="s-00-04-03-342" data-start="00:04:03,342" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The golf was beautiful.</p>
+<p>高尔夫很棒。</p>
+<p><button class="play-button sentence" id="s-00-04-05-110" data-start="00:04:05,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's.</p>
+<p>这是...</p>
+<p><button class="play-button sentence" id="s-00-04-05-466" data-start="00:04:05,466" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Golf can never be bad.</p>
+<p>高尔夫从不会糟。</p>
+<p><button class="play-button sentence" id="s-00-04-06-746" data-start="00:04:06,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even if you play badly.</p>
+<p>即使打得差。</p>
+<p><button class="play-button sentence" id="s-00-04-07-813" data-start="00:04:07,813" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's, It's still good.</p>
+<p>依然美好。</p>
+<p><button class="play-button sentence" id="s-00-04-09-549" data-start="00:04:09,549" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you had a bad day on the golf course, it's okay.</p>
+<p>球场表现不佳也没关系。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959746" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-13-051" data-start="00:04:13,051" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> it's better than other days, but, no, I think, I look forward to this meeting.</p>
+<p>比其他日子好，我期待这次会晤。</p>
+<p><button class="play-button sentence" id="s-00-04-19-858" data-start="00:04:19,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we've had a hard time, with trade with Europe, very hard time.</p>
+<p>与欧洲贸易很艰难。</p>
+<p><button class="play-button sentence" id="s-00-04-26-899" data-start="00:04:26,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd like to see it resolved.</p>
+<p>希望解决。</p>
+<p><button class="play-button sentence" id="s-00-04-29-334" data-start="00:04:29,334" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But if it isn't, well, you know, have tariffs and they'll do what they have to do, but we have a good chance of getting it resolved.</p>
+<p>若不成，就征税，但很有希望解决。</p>
+<p><button class="play-button sentence" id="s-00-04-35-742" data-start="00:04:35,742" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll probably know in about an hour.</p>
+<p>一小时内见分晓。</p>
+<p><button class="play-button sentence" id="s-00-04-38-278" data-start="00:04:38,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It shouldn't take that long.</p>
+<p>无需太久。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959720" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-39-312" data-start="00:04:39,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's, you know, it's complicated but not really complicated when you get right down to it.</p>
+<p>看似复杂实则不然。</p>
+<p><button class="play-button sentence" id="s-00-04-43-382" data-start="00:04:43,382" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right.</p>
+<p>对。</p>
+<p><button class="play-button sentence" id="s-00-04-43-791" data-start="00:04:43,791" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, pharmaceutical first of deadline.</p>
+<p>制药业期限优先。</p>
+<p><button class="play-button sentence" id="s-00-04-46-052" data-start="00:04:46,052" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there any chance of that?</p>
+<p>有可能吗？</p>
+<p><button class="play-button sentence" id="s-00-04-47-487" data-start="00:04:47,487" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, no, the August 1st is there for everyone.</p>
+<p>8月1日对所有人生效。</p>
+<p><button class="play-button sentence" id="s-00-04-51-156" data-start="00:04:51,156" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The deals all start on August 1st.</p>
+<p>所有协议8月1日启动。</p>
+<p><button class="play-button sentence" id="s-00-04-53-559" data-start="00:04:53,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of the deals other than steel and aluminum, which we've been getting, 50% tariffs from, I guess just about everybody.</p>
+<p>除钢铁铝业外，几乎所有行业都面临50%关税。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959697" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-02-035" data-start="00:05:02,035" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And those have come in and we've taken in, you know, hundreds of billions of dollars just on steel and aluminum.</p>
+<p>仅钢铝关税就收入数千亿美元。</p>
+<p><button class="play-button sentence" id="s-00-05-08-341" data-start="00:05:08,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You see, in the numbers.</p>
+<p>数据可见。</p>
+<p><button class="play-button sentence" id="s-00-05-10-009" data-start="00:05:10,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had a tremendous amount of money coming over the last month.</p>
+<p>上月收入惊人。</p>
+<p><button class="play-button sentence" id="s-00-05-14-846" data-start="00:05:14,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's coming in, you know, very rapidly, which is fair.</p>
+<p>增速很快，这很公平。</p>
+<p><button class="play-button sentence" id="s-00-05-18-517" data-start="00:05:18,517" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a lot of, steel mills and plants, aluminum mills and plants being built.</p>
+<p>新建了许多钢厂铝厂。</p>
+<p><button class="play-button sentence" id="s-00-05-23-055" data-start="00:05:23,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a lot of AI being built, and we have a lot of auto plants being built or going to be built because they don't want to pay tariffs.</p>
+<p>还建了许多AI和汽车工厂——他们想避税。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959670" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-29-896" data-start="00:05:29,896" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, you know, if they don't want to pay tariffs, the best way to do it is just build your plant in the United States.</p>
+<p>不想付关税就该在美国建厂。</p>
+<p><button class="play-button sentence" id="s-00-05-36-069" data-start="00:05:36,069" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, please.</p>
+<p>请说。</p>
+<p><button class="play-button sentence" id="s-00-05-36-952" data-start="00:05:36,952" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you expect.</p>
+<p>您预期...</p>
+<p><button class="play-button sentence" id="s-00-05-38-237" data-start="00:05:38,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From the Europeans in terms of coping with that one piece?</p>
+<p>欧洲如何应对这点？</p>
+<p><button class="play-button sentence" id="s-00-05-41-341" data-start="00:05:41,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many components.</p>
+<p>涉及多领域。</p>
+<p><button class="play-button sentence" id="s-00-05-42-917" data-start="00:05:42,917" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, they have to open up to American products.</p>
+<p>他们必须对美国产品开放市场。</p>
+<p><button class="play-button sentence" id="s-00-05-45-144" data-start="00:05:45,144" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, we're open to European products that we have been for forever.</p>
+<p>我们一直对欧洲产品开放。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959650" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-49-014" data-start="00:05:49,014" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think we have we just about don't have any I don't think we have any product we simply can't sell.</p>
+<p>我们几乎没有不能卖的产品。</p>
+<p><button class="play-button sentence" id="s-00-05-54-786" data-start="00:05:54,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess you could get a little bit cute with chips, but that's, you know, a little bit different category, you know, Europe is very closed.</p>
+<p>芯片可能特殊些，但欧洲市场非常封闭。</p>
+<p><button class="play-button sentence" id="s-00-06-03-963" data-start="00:06:03,963" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't sell cars into Europe.</p>
+<p>我们汽车进不了欧洲。</p>
+<p><button class="play-button sentence" id="s-00-06-07-033" data-start="00:06:07,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we don't sell essentially agriculture of any great degree.</p>
+<p>农产品也难进入。</p>
+<p><button class="play-button sentence" id="s-00-06-09-901" data-start="00:06:09,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They want to have their farmers do it and they want to have their car companies do it.</p>
+<p>他们保护本国农业和汽车业。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959625" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-14-607" data-start="00:06:14,607" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm just I'm not saying anything that nobody knows that we have, a rough situation.</p>
+<p>众所周知我们处境艰难。</p>
+<p><button class="play-button sentence" id="s-00-06-20-079" data-start="00:06:20,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we want to sell cars in Europe, we're not allowed to.</p>
+<p>想卖车去欧洲却被禁止。</p>
+<p><button class="play-button sentence" id="s-00-06-23-315" data-start="00:06:23,315" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, as you know, they sell millions and millions of cars.</p>
+<p>他们却卖数百万辆车到美国。</p>
+<p><button class="play-button sentence" id="s-00-06-27-420" data-start="00:06:27,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mercedes, BMW, so many different, Volkswagen.</p>
+<p>奔驰、宝马、大众等。</p>
+<p><button class="play-button sentence" id="s-00-06-32-725" data-start="00:06:32,725" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> so many different cars and so many millions of cars, I would imagine.</p>
+<p>数量惊人。</p>
+<p><button class="play-button sentence" id="s-00-06-37-262" data-start="00:06:37,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Number one, I didn't look at that, but I would imagine number one by far more so than even Japan.</p>
+<p>虽未查数据，但肯定远超日本。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959598" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-41-767" data-start="00:06:41,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Japan sells a lot of cars, too.</p>
+<p>日本也卖很多车。</p>
+<p><button class="play-button sentence" id="s-00-06-44-336" data-start="00:06:44,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the Japan deal worked out very favorable, you know, very good.</p>
+<p>但日本协议很有利。</p>
+<p><button class="play-button sentence" id="s-00-06-47-206" data-start="00:06:47,206" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think I hope for them to, and, that's what we want to do, make everybody happy.</p>
+<p>希望欧洲也能如此，皆大欢喜。</p>
+<p><button class="play-button sentence" id="s-00-06-57-048" data-start="00:06:57,048" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> say it?</p>
+<p>请说？</p>
+<p><button class="play-button sentence" id="s-00-06-58-100" data-start="00:06:58,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel be doing more to allow food aid to Gaza.</p>
+<p>以色列应允许更多粮食援助进入加沙。</p>
+<p><button class="play-button sentence" id="s-00-07-02-721" data-start="00:07:02,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is you saying Israel?</p>
+<p>您对此看法？</p>
+<p><button class="play-button sentence" id="s-00-07-04-290" data-start="00:07:04,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Should Israel be doing more to allow food into Gaza?</p>
+<p>以色列是否应允许更多粮食进入加沙？</p>
+<p><button class="play-button sentence" id="s-00-07-07-293" data-start="00:07:07,293" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you know, we gave 60, million dollars two weeks ago and nobody even acknowledged it for food.</p>
+<p>我们两周前提供6000万美元粮食援助却无人感谢。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959562" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-17-530" data-start="00:07:17,530" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's terrible.</p>
+<p>很糟糕。</p>
+<p><button class="play-button sentence" id="s-00-07-19-456" data-start="00:07:19,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> you really at least want to have somebody say thank you.</p>
+<p>至少该有人道谢。</p>
+<p><button class="play-button sentence" id="s-00-07-22-408" data-start="00:07:22,408" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No other country gave anything.</p>
+<p>其他国家分文未出。</p>
+<p><button class="play-button sentence" id="s-00-07-24-110" data-start="00:07:24,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We gave $60 million two weeks ago for food for Gaza.</p>
+<p>我们为加沙提供6000万美元粮食援助。</p>
+<p><button class="play-button sentence" id="s-00-07-29-093" data-start="00:07:29,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> nobody acknowledged it.</p>
+<p>无人认可。</p>
+<p><button class="play-button sentence" id="s-00-07-32-718" data-start="00:07:32,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nobody talks about it.</p>
+<p>无人提及。</p>
+<p><button class="play-button sentence" id="s-00-07-34-920" data-start="00:07:34,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it makes you feel a little bad when you do that and, you have other countries not giving anything.</p>
+<p>这让人心寒。</p>
+<p><button class="play-button sentence" id="s-00-07-41-761" data-start="00:07:41,761" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> none of the European countries, by the way, gave I mean, nobody gave but us and nobody said, gee,</p>
+<p>欧洲国家都未援助。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959531" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-48-166" data-start="00:07:48,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it would be nice to have at least a thank you.</p>
+<p>至少该有感谢。</p>
+<p><button class="play-button sentence" id="s-00-07-50-569" data-start="00:07:50,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I took a lot of heat, you know, when I, when I do that, a lot of people are unhappy about that because they say, well, why are we doing it to nobody else?</p>
+<p>我因此受批评，人们质问为何只我们援助。</p>
+<p><button class="play-button sentence" id="s-00-07-58-343" data-start="00:07:58,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think we had a humanitarian reason for doing it.</p>
+<p>但这是出于人道主义。</p>
+<p><button class="play-button sentence" id="s-00-08-02-682" data-start="00:08:02,682" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's going to happen?</p>
+<p>未来如何？</p>
+<p><button class="play-button sentence" id="s-00-08-03-682" data-start="00:08:03,682" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know, I can tell you that Hamas, as I said, what happened at the end, you know, we've gotten back a lot of hostages.</p>
+<p>哈马斯最终交还许多人质。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959508" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-11-656" data-start="00:08:11,656" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> a tremendous number of hostages, most of them, now we have dead hostages, and the mothers want them back.</p>
+<p>多数已遇难，但母亲们想要回遗体。</p>
+<p><button class="play-button sentence" id="s-00-08-19-999" data-start="00:08:19,999" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have 20 people approximately, but that are living.</p>
+<p>现约有20名生还者。</p>
+<p><button class="play-button sentence" id="s-00-08-23-802" data-start="00:08:23,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we have a lot of bodies, and the parents want those bodies as much as they would want their child.</p>
+<p>父母们渴望要回遗体。</p>
+<p><button class="play-button sentence" id="s-00-08-30-431" data-start="00:08:30,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If that child were alive.</p>
+<p>如同孩子活着时那样。</p>
+<p><button class="play-button sentence" id="s-00-08-32-511" data-start="00:08:32,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was I met with parents that were.</p>
+<p>我见过这些父母。</p>
+<p><button class="play-button sentence" id="s-00-08-35-047" data-start="00:08:35,047" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was so sad.</p>
+<p>非常悲伤。</p>
+<p><button class="play-button sentence" id="s-00-08-37-115" data-start="00:08:37,115" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> sir, please get my son back.</p>
+<p>"先生，请带回我儿子"</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959480" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-39-451" data-start="00:08:39,451" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How is your son doing?</p>
+<p>"他怎样了？"</p>
+<p><button class="play-button sentence" id="s-00-08-40-785" data-start="00:08:40,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, he's dead, but they have his body, and it's so important.</p>
+<p>"已遇难，但遗体在他们手中，这很重要"</p>
+<p><button class="play-button sentence" id="s-00-08-44-657" data-start="00:08:44,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's more important.</p>
+<p>这更重要。</p>
+<p><button class="play-button sentence" id="s-00-08-46-491" data-start="00:08:46,491" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's almost like more.</p>
+<p>几乎更...</p>
+<p><button class="play-button sentence" id="s-00-08-47-460" data-start="00:08:47,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's as important as if the child were living.</p>
+<p>与孩子活着同等重要。</p>
+<p><button class="play-button sentence" id="s-00-08-50-629" data-start="00:08:50,629" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These people were, I mean, they're devastated.</p>
+<p>这些父母心碎。</p>
+<p><button class="play-button sentence" id="s-00-08-55-301" data-start="00:08:55,301" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I said, when you get it down to a certain number, you're not going to be able to make a deal with Hamas, because once they give them up, then they feel that that's going to be the end of them.</p>
+<p>当人质减少到某数量，哈马斯就不愿交易，因交出人质意味着终结。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959452" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-07-913" data-start="00:09:07,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what I said is exactly true.</p>
+<p>事实如此。</p>
+<p><button class="play-button sentence" id="s-00-09-09-948" data-start="00:09:09,948" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> they had a routine discussion the other day, and all of a sudden they hardened up.</p>
+<p>前几天谈判时他们突然强硬。</p>
+<p><button class="play-button sentence" id="s-00-09-13-251" data-start="00:09:13,251" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't want to give them back.</p>
+<p>不愿交还。</p>
+<p><button class="play-button sentence" id="s-00-09-15-254" data-start="00:09:15,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so Israel is going to have to make a decision.</p>
+<p>以色列必须做决定。</p>
+<p><button class="play-button sentence" id="s-00-09-20-793" data-start="00:09:20,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know what I do, but I don't think it's appropriate that I say, but, Israel is going to have to make a decision.</p>
+<p>我有想法但不便说，以色列须做决定。</p>
+<p><button class="play-button sentence" id="s-00-09-26-731" data-start="00:09:26,731" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. president, when you are in the Middle East, you talked about the images coming out of Gaza, understanding kids.</p>
+<p>总统先生，您在中东时谈及加沙儿童惨状。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959427" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-32-738" data-start="00:09:32,738" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those images are still going on much worse than children starving.</p>
+<p>情况比儿童挨饿更糟。</p>
+<p><button class="play-button sentence" id="s-00-09-38-043" data-start="00:09:38,043" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you what do you see?</p>
+<p>您看到什么？</p>
+<p><button class="play-button sentence" id="s-00-09-39-144" data-start="00:09:39,144" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're feeling.</p>
+<p>我们感受如何？</p>
+<p><button class="play-button sentence" id="s-00-09-40-418" data-start="00:09:40,418" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well.</p>
+<p>这个...</p>
+<p><button class="play-button sentence" id="s-00-09-40-907" data-start="00:09:40,907" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's terrible.</p>
+<p>很可怕。</p>
+<p><button class="play-button sentence" id="s-00-09-42-181" data-start="00:09:42,181" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> when I see the children and when I see, especially over the last couple of weeks, and people are stealing the food, they're stealing the money.</p>
+<p>最近尤其看到儿童挨饿，人们抢粮抢钱。</p>
+<p><button class="play-button sentence" id="s-00-09-50-056" data-start="00:09:50,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're stealing the money for the food.</p>
+<p>抢购粮钱。</p>
+<p><button class="play-button sentence" id="s-00-09-53-292" data-start="00:09:53,292" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> they're stealing weapons.</p>
+<p>抢武器。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959405" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-54-360" data-start="00:09:54,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're stealing everything.</p>
+<p>抢一切。</p>
+<p><button class="play-button sentence" id="s-00-09-55-494" data-start="00:09:55,494" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a mess.</p>
+<p>一片混乱。</p>
+<p><button class="play-button sentence" id="s-00-09-56-128" data-start="00:09:56,128" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That whole place is a mess.</p>
+<p>整个加沙混乱。</p>
+<p><button class="play-button sentence" id="s-00-09-59-565" data-start="00:09:59,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the Gaza Strip, you know, was given many years ago so that they could have peace.</p>
+<p>多年前设立加沙是为和平。</p>
+<p><button class="play-button sentence" id="s-00-10-05-538" data-start="00:10:05,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That didn't work out too well when Israel gave that up.</p>
+<p>以色列撤离后适得其反。</p>
+<p><button class="play-button sentence" id="s-00-10-09-808" data-start="00:10:09,808" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whoever was the prime minister at the time who I know who it was, but it was not exactly a very clever thing to do, because that was given so that they finally have peace and it's actually made the situation worse.</p>
+<p>当时总理（我知道是谁）此举不明智，本想促和却恶化局势。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959374" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-25-024" data-start="00:10:25,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we'll see what happens.</p>
+<p>静观其变。</p>
+<p><button class="play-button sentence" id="s-00-10-27-326" data-start="00:10:27,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think Iran is acting up.</p>
+<p>伊朗在挑衅。</p>
+<p><button class="play-button sentence" id="s-00-10-28-995" data-start="00:10:28,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that we have a lot of people, like we have Venezuela acting up in a different way.</p>
+<p>委内瑞拉也在以不同方式挑衅。</p>
+<p><button class="play-button sentence" id="s-00-10-34-100" data-start="00:10:34,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're sending they continue to send people that we rebuff to our border.</p>
+<p>持续遣送被拒人员到我们边境。</p>
+<p><button class="play-button sentence" id="s-00-10-39-105" data-start="00:10:39,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They can continue to send drugs into our country.</p>
+<p>还输送毒品。</p>
+<p><button class="play-button sentence" id="s-00-10-42-187" data-start="00:10:42,187" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Venezuela.</p>
+<p>委内瑞拉。</p>
+<p><button class="play-button sentence" id="s-00-10-43-042" data-start="00:10:43,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-10-43-542" data-start="00:10:43,542" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've been very nasty and we can't let that happen.</p>
+<p>行为恶劣，我们不能容忍。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959352" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-47-846" data-start="00:10:47,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we and we have other countries do we do have and this is just getting a little off subject, but we have now the safest border we've ever had.</p>
+<p>虽然跑题，但我们边境现在史上最安全。</p>
+<p><button class="play-button sentence" id="s-00-10-56-522" data-start="00:10:56,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think in many respects we probably have the most successful.</p>
+<p>多方面都最成功。</p>
+<p><button class="play-button sentence" id="s-00-10-59-658" data-start="00:10:59,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I say it all the time, every leader.</p>
+<p>我常对各国领导人说。</p>
+<p><button class="play-button sentence" id="s-00-11-01-783" data-start="00:11:01,783" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When I went to NATO the other day, every leader said, you have the hottest country in the world.</p>
+<p>日前北约会议上，各国领导人都说美国是全球最火热国家。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959332" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-07-265" data-start="00:11:07,265" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have the hottest country Now we're taking in hundreds of billions of dollars.</p>
+<p>我们正吸纳数千亿美元。</p>
+<p><button class="play-button sentence" id="s-00-11-12-871" data-start="00:11:12,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we have the highest stock market we've ever had.</p>
+<p>股市历史新高。</p>
+<p><button class="play-button sentence" id="s-00-11-16-075" data-start="00:11:16,075" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have the best numbers we've ever had, but we have hundreds of billions of dollars pouring into our country.</p>
+<p>各项指标最佳，资金源源涌入。</p>
+<p><button class="play-button sentence" id="s-00-11-22-615" data-start="00:11:22,615" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it's, the hottest.</p>
+<p>最火热。</p>
+<p><button class="play-button sentence" id="s-00-11-24-250" data-start="00:11:24,250" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And by the way, one year ago, our country was dead.</p>
+<p>一年前美国还死气沉沉。</p>
+<p><button class="play-button sentence" id="s-00-11-28-888" data-start="00:11:28,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had a dead country because of an incompetent president and incompetent Democrats.</p>
+<p>因为无能总统和民主党。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959305" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-34-025" data-start="00:11:34,025" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All they know how to do is talk and think about conspiracy theories and nonsense.</p>
+<p>他们只会空谈阴谋论。</p>
+<p><button class="play-button sentence" id="s-00-11-39-398" data-start="00:11:39,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If they'd waste their time talking about America being great again, it would be so much nicer, so much easier.</p>
+<p>若把时间用在让美国再伟大上会更好。</p>
+<p><button class="play-button sentence" id="s-00-11-46-471" data-start="00:11:46,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Be very successful.</p>
+<p>非常成功。</p>
+<p><button class="play-button sentence" id="s-00-11-48-407" data-start="00:11:48,407" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we were a dead country and now we have the hottest country anywhere in the world.</p>
+<p>曾经死气沉沉，如今全球最火热。</p>
+<p><button class="play-button sentence" id="s-00-11-52-110" data-start="00:11:52,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-11-52-383" data-start="00:11:52,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any other question?</p>
+<p>还有其他问题吗？</p>
+<p><button class="play-button sentence" id="s-00-11-53-312" data-start="00:11:53,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president said President Trump on this particular deal, if you managed to do a deal today, will that be the end of the matter?</p>
+<p>关于此协议，若今日达成是否就彻底解决？</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959280" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-59-618" data-start="00:11:59,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or could there be more tariffs coming, particularly on no.</p>
+<p>还会有更多关税吗？</p>
+<p><button class="play-button sentence" id="s-00-12-02-754" data-start="00:12:02,754" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we do a deal today with the European Union, that will be the end of it.</p>
+<p>今日若达成协议就彻底解决。</p>
+<p><button class="play-button sentence" id="s-00-12-07-592" data-start="00:12:07,592" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're not won't we'll go, I guess a number of years at least before we have to even discuss it again.</p>
+<p>至少多年内无需再议。</p>
+<p><button class="play-button sentence" id="s-00-12-13-666" data-start="00:12:13,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, that would be the end of it for and this is the biggest deal.</p>
+<p>这是最大协议。</p>
+<p><button class="play-button sentence" id="s-00-12-16-769" data-start="00:12:16,769" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People don't realize this is bigger than any other deal we have.</p>
+<p>比我们其他协议都大。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959257" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-22-173" data-start="00:12:22,173" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> great countries, great countries that I'm familiar with.</p>
+<p>伟大的国家。</p>
+<p><button class="play-button sentence" id="s-00-12-25-811" data-start="00:12:25,811" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many of them.</p>
+<p>许多。</p>
+<p><button class="play-button sentence" id="s-00-12-27-058" data-start="00:12:27,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So are you.</p>
+<p>你也是。</p>
+<p><button class="play-button sentence" id="s-00-12-28-080" data-start="00:12:28,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is really the biggest deal.</p>
+<p>这确实是最大的协议。</p>
+<p><button class="play-button sentence" id="s-00-12-29-849" data-start="00:12:29,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the I guess we're the biggest, out there.</p>
+<p>我想我们是最大的。</p>
+<p><button class="play-button sentence" id="s-00-12-33-019" data-start="00:12:33,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they're the second.</p>
+<p>他们是第二。</p>
+<p><button class="play-button sentence" id="s-00-12-34-653" data-start="00:12:34,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when we come together, this will be the biggest deal.</p>
+<p>当我们联手时，这将是最大的协议。</p>
+<p><button class="play-button sentence" id="s-00-12-37-322" data-start="00:12:37,322" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we if that happens.</p>
+<p>如果这能实现的话。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959241" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-38-356" data-start="00:12:38,356" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it could happen.</p>
+<p>这是有可能的。</p>
+<p><button class="play-button sentence" id="s-00-12-39-191" data-start="00:12:39,191" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Should happen.</p>
+<p>应该实现。</p>
+<p><button class="play-button sentence" id="s-00-12-41-577" data-start="00:12:41,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-12-44-964" data-start="00:12:44,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one pharmaceuticals will be I mean could be we'll do something but basically pharmaceuticals won't be part of it because we have to have them built made in the United States.</p>
+<p>制药行业可能我们会做些安排，但基本上不会纳入协议，因为我们必须确保它们在美国生产。</p>
+<p><button class="play-button sentence" id="s-00-12-55-908" data-start="00:12:55,908" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we want them And I think it's easy to say, and I think it's important to say pharmaceuticals, are very special.</p>
+<p>我们希望如此，而且制药行业非常特殊，这一点很重要。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959215" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-04-250" data-start="00:13:04,250" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can't be in a position where we don't have.</p>
+<p>我们不能处于无法自给自足的境地。</p>
+<p><button class="play-button sentence" id="s-00-13-06-317" data-start="00:13:06,317" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we're relying on other countries now.</p>
+<p>我们现在依赖其他国家。</p>
+<p><button class="play-button sentence" id="s-00-13-08-988" data-start="00:13:08,988" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Europe is going to make pharmaceuticals, drugs and everything else for us to a lot.</p>
+<p>欧洲为我们生产大量药品和其他产品。</p>
+<p><button class="play-button sentence" id="s-00-13-12-691" data-start="00:13:12,691" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're going to have also our own.</p>
+<p>但我们也要有自己的生产能力。</p>
+<p><button class="play-button sentence" id="s-00-13-15-059" data-start="00:13:15,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Question for president.</p>
+<p>向总统提问。</p>
+<p><button class="play-button sentence" id="s-00-13-16-895" data-start="00:13:16,895" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-13-17-186" data-start="00:13:17,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you give your assessment of what you feel the chances of a deal of the best?</p>
+<p>您认为达成协议的最佳机会有多大？</p>
+<p><button class="play-button sentence" id="s-00-13-21-767" data-start="00:13:21,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just talked about a 5050 chance and the biggest obstacle being fairness.</p>
+<p>我们刚刚讨论了五五开的机会，最大的障碍是公平性。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959194" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-25-423" data-start="00:13:25,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What would you say are those things for you?</p>
+<p>您认为这些因素是什么？</p>
+<p><button class="play-button sentence" id="s-00-13-28-039" data-start="00:13:28,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the president is right.</p>
+<p>我认为总统是对的。</p>
+<p><button class="play-button sentence" id="s-00-13-29-341" data-start="00:13:29,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a 50 to 50% chance to strike a deal.</p>
+<p>我们有50%的机会达成协议。</p>
+<p><button class="play-button sentence" id="s-00-13-33-178" data-start="00:13:33,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And indeed it is about rebalancing.</p>
+<p>这确实是关于重新平衡。</p>
+<p><button class="play-button sentence" id="s-00-13-35-880" data-start="00:13:35,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you can call it fairness.</p>
+<p>你可以称之为公平。</p>
+<p><button class="play-button sentence" id="s-00-13-37-549" data-start="00:13:37,549" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can call it rebalancing.</p>
+<p>也可以称之为重新平衡。</p>
+<p><button class="play-button sentence" id="s-00-13-39-751" data-start="00:13:39,751" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we have a surplus.</p>
+<p>我们有顺差。</p>
+<p><button class="play-button sentence" id="s-00-13-40-820" data-start="00:13:40,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United States has a deficit, and we have to rebalance it.</p>
+<p>美国有逆差，我们必须重新平衡。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959175" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-44-222" data-start="00:13:44,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have an excellent trade relation.</p>
+<p>我们有很好的贸易关系。</p>
+<p><button class="play-button sentence" id="s-00-13-45-912" data-start="00:13:45,912" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a huge volume of trade that we have together.</p>
+<p>我们的贸易量非常大。</p>
+<p><button class="play-button sentence" id="s-00-13-49-294" data-start="00:13:49,294" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> so we will make it more sustainable.</p>
+<p>因此我们将使其更可持续。</p>
+<p><button class="play-button sentence" id="s-00-13-52-264" data-start="00:13:52,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump can use investors in 15 a 15% tariff rates for the EU.</p>
+<p>特朗普可以对欧盟投资者征收15%的关税。</p>
+<p><button class="play-button sentence" id="s-00-13-57-369" data-start="00:13:57,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Better meaning lower.</p>
+<p>最好是降低。</p>
+<p><button class="play-button sentence" id="s-00-13-58-803" data-start="00:13:58,803" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, it's a good time to return to Gaza and meet the British Prime Minister tomorrow.</p>
+<p>不，现在是回到加沙问题并明天会见英国首相的好时机。</p>
+<p><button class="play-button sentence" id="s-00-14-03-477" data-start="00:14:03,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's going to ask you to consider again peace talks between Israel and Hamas.</p>
+<p>他将要求您重新考虑以色列和哈马斯之间的和平谈判。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959152" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-07-580" data-start="00:14:07,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are you now saying there's no point?</p>
+<p>您现在认为这没有意义吗？</p>
+<p><button class="play-button sentence" id="s-00-14-09-782" data-start="00:14:09,782" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we're meeting about a lot of things.</p>
+<p>我们讨论了很多事情。</p>
+<p><button class="play-button sentence" id="s-00-14-11-317" data-start="00:14:11,317" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have our trade deal and it's been a great deal.</p>
+<p>我们有贸易协议，而且效果很好。</p>
+<p><button class="play-button sentence" id="s-00-14-14-186" data-start="00:14:14,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's good.</p>
+<p>这很好。</p>
+<p><button class="play-button sentence" id="s-00-14-15-215" data-start="00:14:15,215" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's good for, it's good for them and good for us.</p>
+<p>这对他们和我们都有利。</p>
+<p><button class="play-button sentence" id="s-00-14-18-456" data-start="00:14:18,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think, you know, the UK is very happy.</p>
+<p>我认为英国非常满意。</p>
+<p><button class="play-button sentence" id="s-00-14-20-793" data-start="00:14:20,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've been trying for 12 years to get it and they got it.</p>
+<p>他们努力了12年才达成协议。</p>
+<p><button class="play-button sentence" id="s-00-14-23-761" data-start="00:14:23,761" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's it's a great trade deal for both.</p>
+<p>这对双方都是很好的贸易协议。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959133" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-26-130" data-start="00:14:26,130" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It works out very well.</p>
+<p>效果非常好。</p>
+<p><button class="play-button sentence" id="s-00-14-27-099" data-start="00:14:27,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we are discussing it.</p>
+<p>但我们仍在讨论。</p>
+<p><button class="play-button sentence" id="s-00-14-28-466" data-start="00:14:28,466" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll be discussing that.</p>
+<p>我们会继续讨论。</p>
+<p><button class="play-button sentence" id="s-00-14-29-735" data-start="00:14:29,735" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think we're going to be discussing a lot about, Israel.</p>
+<p>我认为我们会讨论很多关于以色列的问题。</p>
+<p><button class="play-button sentence" id="s-00-14-33-064" data-start="00:14:33,064" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're very much involved in terms of wanting something to happen.</p>
+<p>他们非常希望有所进展。</p>
+<p><button class="play-button sentence" id="s-00-14-36-841" data-start="00:14:36,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's doing a very good job, by the way.</p>
+<p>顺便说一句，他做得很好。</p>
+<p><button class="play-button sentence" id="s-00-14-38-711" data-start="00:14:38,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also in.</p>
+<p>在加沙也是。</p>
+<p><button class="play-button sentence" id="s-00-14-39-392" data-start="00:14:39,392" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gaza, did you speak with Prime Minister Netanyahu this weekend about getting.</p>
+<p>加沙，您本周末与内塔尼亚胡总理谈过准备事宜吗？</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959116" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-43-381" data-start="00:14:43,381" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ready to go?</p>
+<p>准备好了吗？</p>
+<p><button class="play-button sentence" id="s-00-14-44-716" data-start="00:14:44,716" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I talked to him.</p>
+<p>我和他谈过。</p>
+<p><button class="play-button sentence" id="s-00-14-45-618" data-start="00:14:45,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I did, I talked to him about, a lot of things.</p>
+<p>是的，我和他谈了很多事情。</p>
+<p><button class="play-button sentence" id="s-00-14-49-621" data-start="00:14:49,621" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I talked to him about Iran.</p>
+<p>我谈到了伊朗。</p>
+<p><button class="play-button sentence" id="s-00-14-51-523" data-start="00:14:51,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think Iran has been very nasty with their words, with their mouth.</p>
+<p>我认为伊朗的言辞非常恶劣。</p>
+<p><button class="play-button sentence" id="s-00-14-56-562" data-start="00:14:56,562" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they've been very nasty.</p>
+<p>我认为他们非常恶劣。</p>
+<p><button class="play-button sentence" id="s-00-15-01-133" data-start="00:15:01,133" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> they got the hell knocked out of them, and they.</p>
+<p>他们被狠狠打击了。</p>
+<p><button class="play-button sentence" id="s-00-15-03-836" data-start="00:15:03,836" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think they know it.</p>
+<p>我认为他们不知道。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959094" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-05-370" data-start="00:15:05,370" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I actually don't think they know.</p>
+<p>我真的不认为他们知道。</p>
+<p><button class="play-button sentence" id="s-00-15-06-763" data-start="00:15:06,763" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They really do.</p>
+<p>他们确实如此。</p>
+<p><button class="play-button sentence" id="s-00-15-07-472" data-start="00:15:07,472" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The the whole things are conjecture.</p>
+<p>整件事都是猜测。</p>
+<p><button class="play-button sentence" id="s-00-15-09-418" data-start="00:15:09,418" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a lot of con jobs going on, but, Iran was, was beaten up very badly for good reason.</p>
+<p>我们有很多骗局，但伊朗被狠狠打击是有充分理由的。</p>
+<p><button class="play-button sentence" id="s-00-15-19-951" data-start="00:15:19,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we cannot have them have a nuclear weapon, but they still talk about enrichment.</p>
+<p>我们不能让他们拥有核武器，但他们仍在谈论浓缩铀。</p>
+<p><button class="play-button sentence" id="s-00-15-24-702" data-start="00:15:24,702" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, who would do that?</p>
+<p>谁会这么做？</p>
+<p><button class="play-button sentence" id="s-00-15-25-857" data-start="00:15:25,857" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You just come out of something that's so bad and they talk about, we want to continue enrichment.</p>
+<p>刚刚经历了这么糟糕的事情，他们却说想继续浓缩铀。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959068" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-31-529" data-start="00:15:31,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who would say that?</p>
+<p>谁会这么说？</p>
+<p><button class="play-button sentence" id="s-00-15-32-398" data-start="00:15:32,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How stupid can you be to say that?</p>
+<p>说这种话有多愚蠢？</p>
+<p><button class="play-button sentence" id="s-00-15-34-667" data-start="00:15:34,667" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're not going to allow that to happen.</p>
+<p>所以我们不会允许这种情况发生。</p>
+<p><button class="play-button sentence" id="s-00-15-37-035" data-start="00:15:37,035" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're not allowing that to happen.</p>
+<p>我们不会允许。</p>
+<p><button class="play-button sentence" id="s-00-15-40-004" data-start="00:15:40,004" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so Gaza.</p>
+<p>关于加沙。</p>
+<p><button class="play-button sentence" id="s-00-15-41-874" data-start="00:15:41,874" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Will I do more aid?</p>
+<p>我会提供更多援助吗？</p>
+<p><button class="play-button sentence" id="s-00-15-43-241" data-start="00:15:43,241" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The U.S, the U.S. is going to do more aid for Gaza, but we'd like to have other countries participate.</p>
+<p>美国将为加沙提供更多援助，但我们希望其他国家参与。</p>
+<p><button class="play-button sentence" id="s-00-15-49-285" data-start="00:15:49,285" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to mention that to the European Union today.</p>
+<p>我们今天会向欧盟提到这一点。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959047" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-52-968" data-start="00:15:52,968" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that's an international problem.</p>
+<p>这是一个国际问题。</p>
+<p><button class="play-button sentence" id="s-00-15-55-860" data-start="00:15:55,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not a U.S. problem.</p>
+<p>不是美国的问题。</p>
+<p><button class="play-button sentence" id="s-00-15-57-423" data-start="00:15:57,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's an international problem.</p>
+<p>这是一个国际问题。</p>
+<p><button class="play-button sentence" id="s-00-15-59-792" data-start="00:15:59,792" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we're giving a lot of money and a lot of food, a lot of everything.</p>
+<p>我们提供了大量资金、食物和其他物资。</p>
+<p><button class="play-button sentence" id="s-00-16-02-226" data-start="00:16:02,226" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we were there, I think people would have starved.</p>
+<p>如果我们不在那里，人们可能会饿死。</p>
+<p><button class="play-button sentence" id="s-00-16-05-264" data-start="00:16:05,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Frankly, they would have starved.</p>
+<p>坦白说，他们会饿死。</p>
+<p><button class="play-button sentence" id="s-00-16-07-700" data-start="00:16:07,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not like they're eating well.</p>
+<p>而且他们吃得并不好。</p>
+<p><button class="play-button sentence" id="s-00-16-10-668" data-start="00:16:10,668" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But a lot of that food is getting sold by stolen by Hamas.</p>
+<p>但很多食物被哈马斯偷走并出售。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959025" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-14-873" data-start="00:16:14,873" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> they're stealing the food.</p>
+<p>他们在偷食物。</p>
+<p><button class="play-button sentence" id="s-00-16-15-908" data-start="00:16:15,908" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're stealing You ship it in and they steal it.</p>
+<p>你们运进来，他们偷走。</p>
+<p><button class="play-button sentence" id="s-00-16-20-111" data-start="00:16:20,111" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then they sell it.</p>
+<p>然后他们卖掉。</p>
+<p><button class="play-button sentence" id="s-00-16-23-315" data-start="00:16:23,315" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To you said that Europe is being crushed by mass migration.</p>
+<p>你说欧洲正被大规模移民压垮。</p>
+<p><button class="play-button sentence" id="s-00-16-26-884" data-start="00:16:26,884" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I agree with your friends on this.</p>
+<p>我同意你朋友的观点。</p>
+<p><button class="play-button sentence" id="s-00-16-28-354" data-start="00:16:28,354" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would agree with you on that.</p>
+<p>我也同意你的看法。</p>
+<p><button class="play-button sentence" id="s-00-16-30-722" data-start="00:16:30,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I'd let you respond to that if you like.</p>
+<p>如果你愿意，我会让你回应。</p>
+<p><button class="play-button sentence" id="s-00-16-33-192" data-start="00:16:33,192" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we have been working intensively on the topic of irregular migration.</p>
+<p>我们一直在密集讨论非正常移民问题。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208959001" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-38-429" data-start="00:16:38,429" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have, from the very beginning said that migration is a European challenge that needs a European answer.</p>
+<p>我们从一开始就说移民是欧洲的挑战，需要欧洲的解决方案。</p>
+<p><button class="play-button sentence" id="s-00-16-47-538" data-start="00:16:47,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> as Europeans, we will fulfill our international obligations as we have done in the past, also in the future.</p>
+<p>作为欧洲人，我们将履行国际义务，过去如此，未来也将如此。</p>
+<p><button class="play-button sentence" id="s-00-16-54-145" data-start="00:16:54,145" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we as Europeans are the ones who decide who comes to the European Union and under what circumstances and not the smugglers and traffickers.</p>
+<p>但作为欧洲人，我们决定谁可以进入欧盟以及以何种方式进入，而不是走私者和贩运者。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958976" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-03-589" data-start="00:17:03,589" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the principle in which we are working.</p>
+<p>这是我们的原则。</p>
+<p><button class="play-button sentence" id="s-00-17-05-990" data-start="00:17:05,990" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Try and make it.</p>
+<p>努力实现。</p>
+<p><button class="play-button sentence" id="s-00-17-07-625" data-start="00:17:07,625" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll say this.</p>
+<p>我们会这么说。</p>
+<p><button class="play-button sentence" id="s-00-17-08-594" data-start="00:17:08,594" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> they did ask me when I got off the plane.</p>
+<p>他们确实在我下飞机时问我。</p>
+<p><button class="play-button sentence" id="s-00-17-11-963" data-start="00:17:11,963" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> immigration.</p>
+<p>移民问题。</p>
+<p><button class="play-button sentence" id="s-00-17-13-011" data-start="00:17:13,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Europe has tremendous problem.</p>
+<p>欧洲有严重的问题。</p>
+<p><button class="play-button sentence" id="s-00-17-15-366" data-start="00:17:15,366" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We do too, but we've sealed our borders of we have nobody coming in, and we have, hundreds of thousands of people being taken out and the bad ones first.</p>
+<p>我们也有，但我们封锁了边境，没有人能进来，而且我们已经驱逐了数十万人，先处理坏人。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958955" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-24-542" data-start="00:17:24,542" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think we're doing a very good job of that.</p>
+<p>我认为我们做得很好。</p>
+<p><button class="play-button sentence" id="s-00-17-26-612" data-start="00:17:26,612" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we had I mean, it literally registered zero people last month.</p>
+<p>但上个月确实没有人进入。</p>
+<p><button class="play-button sentence" id="s-00-17-30-684" data-start="00:17:30,684" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You probably saw that nobody and, Europe has a very similar problem.</p>
+<p>你可能看到了，欧洲也有类似的问题。</p>
+<p><button class="play-button sentence" id="s-00-17-37-890" data-start="00:17:37,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they're going to end up in the same place.</p>
+<p>我认为他们最终会和我们一样。</p>
+<p><button class="play-button sentence" id="s-00-17-39-857" data-start="00:17:39,857" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You might as well go there quicker.</p>
+<p>你们不如更快行动。</p>
+<p><button class="play-button sentence" id="s-00-17-42-060" data-start="00:17:42,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the other thing I say to Europe, we've we will not allow a windmill to be built They're killing us.</p>
+<p>我还要对欧洲说，我们不会允许建造风力发电机，它们正在毁掉我们。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958931" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-48-366" data-start="00:17:48,366" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're killing the beauty of our scenery or our valleys, our beautiful plains.</p>
+<p>它们破坏了我们的风景、山谷和美丽的平原。</p>
+<p><button class="play-button sentence" id="s-00-17-54-873" data-start="00:17:54,873" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'm not talking about airplanes.</p>
+<p>我不是在说飞机。</p>
+<p><button class="play-button sentence" id="s-00-17-56-375" data-start="00:17:56,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm talking about beautiful plains of beautiful areas And you look up and you see windmills all over the place.</p>
+<p>我说的是美丽的平原和地区，但你抬头看到到处都是风力发电机。</p>
+<p><button class="play-button sentence" id="s-00-18-04-750" data-start="00:18:04,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a it's a horrible thing.</p>
+<p>这很糟糕。</p>
+<p><button class="play-button sentence" id="s-00-18-06-384" data-start="00:18:06,384" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the most expensive form of energy.</p>
+<p>这是最昂贵的能源形式。</p>
+<p><button class="play-button sentence" id="s-00-18-08-464" data-start="00:18:08,464" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's no good.</p>
+<p>这不好。</p>
+<p><button class="play-button sentence" id="s-00-18-09-320" data-start="00:18:09,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're made in China.</p>
+<p>它们是中国制造的。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958909" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-10-888" data-start="00:18:10,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Almost all of them, when they start to rust and rot in eight years, you can't really turn them off.</p>
+<p>几乎所有的风力发电机在八年后就会生锈腐烂，你无法关闭它们。</p>
+<p><button class="play-button sentence" id="s-00-18-17-261" data-start="00:18:17,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can't them.</p>
+<p>你无法处理它们。</p>
+<p><button class="play-button sentence" id="s-00-18-17-863" data-start="00:18:17,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They won't let you bury the propellers.</p>
+<p>他们不允许你埋掉螺旋桨。</p>
+<p><button class="play-button sentence" id="s-00-18-19-811" data-start="00:18:19,811" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, they're the props because they're a certain type of fiber that doesn't go well with the land.</p>
+<p>因为螺旋桨是由某种纤维制成的，不适合埋在地下。</p>
+<p><button class="play-button sentence" id="s-00-18-25-537" data-start="00:18:25,537" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's what they say.</p>
+<p>他们是这么说的。</p>
+<p><button class="play-button sentence" id="s-00-18-26-371" data-start="00:18:26,371" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The environmentalists say you can't bury them because the fiber doesn't go In other words, if you bury it, it will harm our soil.</p>
+<p>环保主义者说不能埋，因为纤维会损害土壤。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958885" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-34-980" data-start="00:18:34,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The whole thing is a con job.</p>
+<p>整件事都是骗局。</p>
+<p><button class="play-button sentence" id="s-00-18-37-015" data-start="00:18:37,015" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's very expensive.</p>
+<p>这非常昂贵。</p>
+<p><button class="play-button sentence" id="s-00-18-39-384" data-start="00:18:39,384" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in all fairness, Germany tried it.</p>
+<p>公平地说，德国尝试过。</p>
+<p><button class="play-button sentence" id="s-00-18-41-220" data-start="00:18:41,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, when doesn't work, it's ever.</p>
+<p>但从未成功。</p>
+<p><button class="play-button sentence" id="s-00-18-43-816" data-start="00:18:43,816" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You need subsidy for wind and energy.</p>
+<p>风能需要补贴。</p>
+<p><button class="play-button sentence" id="s-00-18-45-590" data-start="00:18:45,590" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You should not need subsidy with energy.</p>
+<p>能源不应该需要补贴。</p>
+<p><button class="play-button sentence" id="s-00-18-47-549" data-start="00:18:47,549" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You make money, you don't lose money.</p>
+<p>你应该赚钱，而不是亏钱。</p>
+<p><button class="play-button sentence" id="s-00-18-49-862" data-start="00:18:49,862" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But more important than that is it ruins the landscape.</p>
+<p>更重要的是它破坏了景观。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958866" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-53-132" data-start="00:18:53,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It kills the birds.</p>
+<p>它杀死了鸟类。</p>
+<p><button class="play-button sentence" id="s-00-18-54-566" data-start="00:18:54,566" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're noisy.</p>
+<p>它们很吵。</p>
+<p><button class="play-button sentence" id="s-00-18-55-712" data-start="00:18:55,712" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> you know, you have a certain place in the Massachusetts area that over the last 20 years had 1 or 2 whales wash ashore.</p>
+<p>你知道，马萨诸塞州某个地方在过去20年有1到2头鲸鱼搁浅。</p>
+<p><button class="play-button sentence" id="s-00-19-06-077" data-start="00:19:06,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And over the last short period of time they had 18.</p>
+<p>但在最近短时间内有18头。</p>
+<p><button class="play-button sentence" id="s-00-19-11-849" data-start="00:19:11,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because it's driving them loco, driving them crazy.</p>
+<p>因为这让他们发疯。</p>
+<p><button class="play-button sentence" id="s-00-19-15-119" data-start="00:19:15,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, windmills will not come there.</p>
+<p>现在那里不会有风力发电机。</p>
+<p><button class="play-button sentence" id="s-00-19-17-486" data-start="00:19:17,486" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not going to happen And, it's very expensive.</p>
+<p>这不会发生，而且非常昂贵。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958838" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-21-393" data-start="00:19:21,393" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I would love to say I mean, today I'm playing the best course, I think, in the world Turnberry, even though I own it, it's probably the best course in the world.</p>
+<p>我想说，今天我打的是世界上最好的球场——坦伯利，尽管我拥有它，它可能是世界上最好的球场。</p>
+<p><button class="play-button sentence" id="s-00-19-29-566" data-start="00:19:29,566" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-19-30-001" data-start="00:19:30,001" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I look over the horizon and I see nine windmills.</p>
+<p>我望向地平线，看到九台风力发电机。</p>
+<p><button class="play-button sentence" id="s-00-19-33-971" data-start="00:19:33,971" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I great at the end of the 18-- I said, isn't that a shame?</p>
+<p>在第18洞结束时，我说，这不是很遗憾吗？</p>
+<p><button class="play-button sentence" id="s-00-19-37-776" data-start="00:19:37,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What a shame.</p>
+<p>真遗憾。</p>
+<p><button class="play-button sentence" id="s-00-19-39-178" data-start="00:19:39,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have the same thing all over.</p>
+<p>到处都是这种情况。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958819" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-40-519" data-start="00:19:40,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All over Europe in particular.</p>
+<p>尤其是欧洲。</p>
+<p><button class="play-button sentence" id="s-00-19-42-280" data-start="00:19:42,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have windmills all over the place.</p>
+<p>到处都是风力发电机。</p>
+<p><button class="play-button sentence" id="s-00-19-43-749" data-start="00:19:43,749" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of the countries prohibited.</p>
+<p>有些国家禁止了。</p>
+<p><button class="play-button sentence" id="s-00-19-47-181" data-start="00:19:47,181" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, people ought to know these, these windmills, a very destructive.</p>
+<p>但人们应该知道，这些风力发电机非常具有破坏性。</p>
+<p><button class="play-button sentence" id="s-00-19-52-523" data-start="00:19:52,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're environmentally unsound.</p>
+<p>它们对环境有害。</p>
+<p><button class="play-button sentence" id="s-00-19-54-492" data-start="00:19:54,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just the exact opposite, because the environment is they're not really environmentalists.</p>
+<p>恰恰相反，因为他们不是真正的环保主义者。</p>
+<p><button class="play-button sentence" id="s-00-19-58-829" data-start="00:19:58,829" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're political hacks.</p>
+<p>他们是政治骗子。</p>
+<p><button class="play-button sentence" id="s-00-20-00-531" data-start="00:20:00,531" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're, these are people that they almost want to harm the country.</p>
+<p>这些人几乎是想伤害国家。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958793" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-06-404" data-start="00:20:06,404" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you look at these beautiful landscapes all over, all over the, you know, the world, many countries have gotten smart.</p>
+<p>但你看这些美丽的风景，世界上许多国家已经变得聪明。</p>
+<p><button class="play-button sentence" id="s-00-20-12-344" data-start="00:20:12,344" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will not allow it.</p>
+<p>他们不会允许。</p>
+<p><button class="play-button sentence" id="s-00-20-14-046" data-start="00:20:14,046" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will not.</p>
+<p>他们不会。</p>
+<p><button class="play-button sentence" id="s-00-20-14-645" data-start="00:20:14,645" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So worst form of energy, the most expensive form of energy.</p>
+<p>所以这是最糟糕、最昂贵的能源形式。</p>
+<p><button class="play-button sentence" id="s-00-20-19-951" data-start="00:20:19,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> windmills should not be allowed.</p>
+<p>不应该允许风力发电机。</p>
+<p><button class="play-button sentence" id="s-00-20-21-586" data-start="00:20:21,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, everybody, at the time you spoke to the leaders of both countries, I did talk to us.</p>
+<p>好的，各位，在你与两国领导人交谈时，我也和我们谈过。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958770" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-29-560" data-start="00:20:29,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hope you're talking about Cambodia and Thailand.</p>
+<p>我希望你指的是柬埔寨和泰国。</p>
+<p><button class="play-button sentence" id="s-00-20-32-753" data-start="00:20:32,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I had an interesting time dealing with Thailand.</p>
+<p>我与泰国的交涉很有趣。</p>
+<p><button class="play-button sentence" id="s-00-20-36-201" data-start="00:20:36,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we do a lot of trade with Thailand and with Cambodia.</p>
+<p>我们与泰国和柬埔寨有很多贸易往来。</p>
+<p><button class="play-button sentence" id="s-00-20-40-505" data-start="00:20:40,505" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet I'm reading that they're killing each other, you know, they're fighting.</p>
+<p>但我看到他们在互相残杀，他们在打仗。</p>
+<p><button class="play-button sentence" id="s-00-20-43-976" data-start="00:20:43,976" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're in a war.</p>
+<p>他们在战争中。</p>
+<p><button class="play-button sentence" id="s-00-20-45-810" data-start="00:20:45,810" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I say this should be an easy one for me because I've settled with India and Pakistan and Serbia and Kosovo is going at it, but they have for a long time, in all fairness, you know, about that and, and others, the Congo and, you know, what's, what's going on.</p>
+<p>我认为这对我来说应该很容易，因为我解决了印度和巴基斯坦、塞尔维亚和科索沃的问题，但他们已经打了很久，公平地说，还有刚果和其他地方的冲突。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958736" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-03-961" data-start="00:21:03,961" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's been a horrible thing with Rwanda.</p>
+<p>卢旺达的情况很可怕。</p>
+<p><button class="play-button sentence" id="s-00-21-07-833" data-start="00:21:07,833" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a horrible thing.</p>
+<p>这很可怕。</p>
+<p><button class="play-button sentence" id="s-00-21-08-900" data-start="00:21:08,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 31 years, 7 million, 8 million people killed, machetes, machetes it's a terrible thing we we got that was, we did, five of them.</p>
+<p>31年，700万到800万人被杀，砍刀，砍刀，这是可怕的事情，我们解决了其中五个。</p>
+<p><button class="play-button sentence" id="s-00-21-22-647" data-start="00:21:22,647" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I was saying, you know, we have a trade deal.</p>
+<p>我说，我们有贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-21-25-284" data-start="00:21:25,284" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were working on another we finalized another trade deal yesterday, and I asked my people, I said, how are we doing with Cambodia and how are we doing with Thailand?</p>
+<p>我们昨天敲定了另一项贸易协议，我问我的团队，我们与柬埔寨和泰国的进展如何？</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958704" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-35-156" data-start="00:21:35,156" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they said, you they're going to be coming in at some point to talk.</p>
+<p>他们说他们会在某个时候来谈。</p>
+<p><button class="play-button sentence" id="s-00-21-38-663" data-start="00:21:38,663" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I said, well, let's call them right now.</p>
+<p>我说，现在就打电话给他们。</p>
+<p><button class="play-button sentence" id="s-00-21-39-964" data-start="00:21:39,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I called the prime ministers of each, and I said, we're not going to make a trade deal unless you settle the war.</p>
+<p>于是我打电话给两国的总理，说除非你们结束战争，否则我们不会达成贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-21-46-771" data-start="00:21:46,771" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of people are killed.</p>
+<p>很多人被杀。</p>
+<p><button class="play-button sentence" id="s-00-21-47-806" data-start="00:21:47,806" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know that in a short period of time, the border, they're fighting pretty like wild.</p>
+<p>你知道在短时间内，边境上的战斗非常激烈。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958686" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-53-478" data-start="00:21:53,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I spoke to both of the prime ministers, and I think by the time I got it off, I think they want to settle.</p>
+<p>我与两位总理交谈，我认为结束时他们想和解。</p>
+<p><button class="play-button sentence" id="s-00-21-58-950" data-start="00:21:58,950" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now I know they're meeting today or tomorrow and we're going to work with them.</p>
+<p>我知道他们今天或明天会见面，我们会与他们合作。</p>
+<p><button class="play-button sentence" id="s-00-22-04-805" data-start="00:22:04,805" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Marco Rubio is working with him also his people and him.</p>
+<p>马可·鲁比奥也在和他以及他的团队合作。</p>
+<p><button class="play-button sentence" id="s-00-22-08-794" data-start="00:22:08,794" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think we're going to get that.</p>
+<p>我认为我们会成功。</p>
+<p><button class="play-button sentence" id="s-00-22-10-665" data-start="00:22:10,665" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That would be a great thing.</p>
+<p>那将是一件好事。</p>
+<p><button class="play-button sentence" id="s-00-22-11-730" data-start="00:22:11,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's going to that would have turned out to be a bad one.</p>
+<p>但如果不解决，结果会很糟糕。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958665" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-14-799" data-start="00:22:14,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I will tell you, India and Pakistan, they were really getting ready to go at it.</p>
+<p>我告诉你，印度和巴基斯坦当时真的准备开战。</p>
+<p><button class="play-button sentence" id="s-00-22-21-006" data-start="00:22:21,006" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So getting those things settled, if I could do it.</p>
+<p>所以如果能解决这些问题。</p>
+<p><button class="play-button sentence" id="s-00-22-23-107" data-start="00:22:23,107" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if I can use trade to do that, it's, you know, it's my honor.</p>
+<p>如果能用贸易来实现，那是我的荣幸。</p>
+<p><button class="play-button sentence" id="s-00-22-26-211" data-start="00:22:26,211" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I had great talks with two very good people that, I, they both really would like to make a deal.</p>
+<p>我与两位非常优秀的人进行了很好的交谈，他们都真心想达成协议。</p>
+<p><button class="play-button sentence" id="s-00-22-34-051" data-start="00:22:34,051" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we'll see what happens.</p>
+<p>我们拭目以待。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-35-753" data-start="00:22:35,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How about one more, two more?</p>
+<p>再来一两个问题？</p>
+<p><button class="play-button sentence" id="s-00-22-37-455" data-start="00:22:37,455" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump's outstanding order of defense.</p>
+<p>特朗普总统的国防命令。</p>
+<p><button class="play-button sentence" id="s-00-22-39-490" data-start="00:22:39,490" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-22-40-102" data-start="00:22:40,102" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hey, They got a fair deal on trade in strength.</p>
+<p>嘿，他们在贸易上达成了公平的协议。</p>
+<p><button class="play-button sentence" id="s-00-22-43-298" data-start="00:22:43,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> they're spending a lot of on defense, but we're spending a lot more.</p>
+<p>他们在国防上花了很多钱，但我们花得更多。</p>
+<p><button class="play-button sentence" id="s-00-22-46-565" data-start="00:22:46,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you know, and we've been very generous to NATO for many, many years.</p>
+<p>你知道，多年来我们对北约一直非常慷慨。</p>
+<p><button class="play-button sentence" id="s-00-22-52-770" data-start="00:22:52,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, no, but we had a terrific meeting with NATO.</p>
+<p>不，但我们与北约开了一次很棒的会议。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958623" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-56-597" data-start="00:22:56,597" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd love to do as well.</p>
+<p>我也很乐意这样做。</p>
+<p><button class="play-button sentence" id="s-00-22-58-376" data-start="00:22:58,376" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had a, a meeting where they put up 5% instead of 2%, and they're going to pay it instead of not paying because he's, you know, many people didn't pay the 2% or anywhere near it, and the 2% was too low.</p>
+<p>我们开了一次会，他们将分摊比例从2%提高到5%，并且会支付，因为你知道，很多人之前连2%或接近的比例都没支付，而且2%太低了。</p>
+<p><button class="play-button sentence" id="s-00-23-10-922" data-start="00:23:10,922" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're going to be sending now, military equipment and other equipment to NATO, and they'll be doing what they want.</p>
+<p>我们现在将向北约运送军事装备和其他装备，他们会按自己的意愿行事。</p>
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958601" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-18-630" data-start="00:23:18,630" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I guess this, for the most part, working with Ukraine.</p>
+<p>但我想这主要是与乌克兰合作。</p>
+<p><button class="play-button sentence" id="s-00-23-22-768" data-start="00:23:22,768" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we, we had a fantastic meeting.</p>
+<p>但我们开了一次非常棒的会议。</p>
+<p><button class="play-button sentence" id="s-00-23-25-336" data-start="00:23:25,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess it's now almost four weeks ago, one of the best meetings they've ever had at NATO.</p>
+<p>我想这大约是四周前的事了，那是北约开过的最好的会议之一。</p>
+<p><button class="play-button sentence" id="s-00-23-30-608" data-start="00:23:30,608" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the spirit and the coming together was incredible.</p>
+<p>那种精神和团结令人难以置信。</p>
+<p><button class="play-button sentence" id="s-00-23-34-678" data-start="00:23:34,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I stood and I listened to almost 30 speeches.</p>
+<p>我站着听了近30场演讲。</p>
+<p><button class="play-button sentence" id="s-00-23-39-584" data-start="00:23:39,584" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was a lot, and I was really late and I had to leave, but I didn't want to leave before those last ten spoke, because they go home and they tell their wife.</p>
+<p>我待了很久，已经很晚了必须离开，但我不想在最后十个人发言前走，因为他们回家后会告诉妻子。</p>
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958571" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-48-926" data-start="00:23:48,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump left and it was so nice They were all mentioning the United States and me, but they were mentioning the United States to be here.</p>
+<p>特朗普走了，这很好。他们都在提到美国和我，但他们提到美国是为了在这里。</p>
+<p><button class="play-button sentence" id="s-00-23-57-169" data-start="00:23:57,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's such an honor, you know, etc. and I thought it would have been there, but I did stay.</p>
+<p>这是一种荣誉，等等。我以为会在那里，但我确实留下来了。</p>
+<p><button class="play-button sentence" id="s-00-24-00-905" data-start="00:24:00,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was very hard because I was extremely late for something else that was, you know, pretty important.</p>
+<p>这很难，因为我还有其他非常重要的事情，已经非常晚了。</p>
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958553" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-06-844" data-start="00:24:06,844" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we had a tremendous NATO meeting.</p>
+<p>我们开了一次非常棒的北约会议。</p>
+<p><button class="play-button sentence" id="s-00-24-10-557" data-start="00:24:10,557" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm sure you heard that.</p>
+<p>我相信你听说了。</p>
+<p><button class="play-button sentence" id="s-00-24-11-750" data-start="00:24:11,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah. Yeah, it was great.</p>
+<p>是的，非常棒。</p>
+<p><button class="play-button sentence" id="s-00-24-14-352" data-start="00:24:14,352" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> are some great people that you deal with on two fronts.</p>
+<p>你在两个战线上打交道的人都很棒。</p>
+<p><button class="play-button sentence" id="s-00-24-17-470" data-start="00:24:17,470" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. But you deal with on primarily the trade front.</p>
+<p>对，但主要是贸易战线。</p>
+<p><button class="play-button sentence" id="s-00-24-21-292" data-start="00:24:21,292" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I will tell you, they came together and the relationship is really good.</p>
+<p>但我要告诉你，他们团结一致，关系非常好。</p>
+<p><button class="play-button sentence" id="s-00-24-26-431" data-start="00:24:26,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was a great and interesting question because you probably have reported it that way.</p>
+<p>这是一个很棒且有趣的问题，因为你可能已经这样报道了。</p>
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958527" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-32-436" data-start="00:24:32,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> it, it really we came together and they went from 2% to 5%, which nobody would have thought that was even.</p>
+<p>我们真的团结一致，他们将比例从2%提高到5%，没人会想到这甚至可能。</p>
+<p><button class="play-button sentence" id="s-00-24-39-376" data-start="00:24:39,376" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who would even think that?</p>
+<p>谁会想到呢？</p>
+<p><button class="play-button sentence" id="s-00-24-41-480" data-start="00:24:41,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because they didn't want to be a 2%, all of a sudden they're 5%.</p>
+<p>因为他们之前连2%都不愿意，突然变成了5%。</p>
+<p><button class="play-button sentence" id="s-00-24-44-749" data-start="00:24:44,749" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's that's the right number.</p>
+<p>这才是正确的数字。</p>
+<p><button class="play-button sentence" id="s-00-24-48-086" data-start="00:24:48,086" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so it was it was a great honor.</p>
+<p>所以这是一种巨大的荣誉。</p>
+<p><button class="play-button sentence" id="s-00-24-50-422" data-start="00:24:50,422" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I got to know the heads of those countries really very well at that meeting almost a month ago.</p>
+<p>我在大约一个月前的会议上真正了解了那些国家的领导人。</p>
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958504" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-55-892" data-start="00:24:55,892" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. Thank you very much, everybody.</p>
+<p>好的，非常感谢大家。</p>
+<p><button class="play-button sentence" id="s-00-24-57-796" data-start="00:24:57,796" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll let you know what's up.</p>
+<p>我们会告诉你们最新情况。</p>
+<p><button class="play-button sentence" id="s-00-25-00-632" data-start="00:25:00,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your orders. Of course.</p>
+<p>你们的命令。当然。</p>
+<p><button class="play-button sentence" id="s-00-25-01-799" data-start="00:25:01,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any time soon I will.</p>
+<p>我会尽快。</p>
+<p><button class="play-button sentence" id="s-00-25-03-234" data-start="00:25:03,234" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love Doonbeg, I, I'll go.</p>
+<p>我喜欢杜恩贝格，我会去的。</p>
+<p><button class="play-button sentence" id="s-00-25-05-002" data-start="00:25:05,002" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so not in this trip but I'll go sir.</p>
+<p>所以不是这次旅行，但我会去的，先生。</p>
+<p><button class="play-button sentence" id="s-00-25-07-571" data-start="00:25:07,571" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. Thank you very much.</p>
+<p>好的，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-25-10-040" data-start="00:25:10,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for this.</p>
+<p>谢谢这个。</p>
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958487" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-12-309" data-start="00:25:12,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was for the era.</p>
+<p>这是为了这个时代。</p>
+<p><button class="play-button sentence" id="s-00-25-13-310" data-start="00:25:13,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We came from a very.</p>
+<p>我们来自一个非常。</p>
+<p><button class="play-button sentence" id="s-00-25-16-146" data-start="00:25:16,146" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello. I'm Jake Tapper in Washington with State of the Union.</p>
+<p>你好，我是华盛顿的杰克·塔珀，带来《国情咨文》。</p>
+<p><button class="play-button sentence" id="s-00-25-19-718" data-start="00:25:19,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you were just listening to President Trump live, speaking with European commissioner, European Commission President Ursula von der Leyen, live from Scotland, we’re days away from the president's self-imposed tariff deadline.</p>
+<p>你刚刚听到的是特朗普总统与欧盟委员会主席乌尔苏拉·冯德莱恩的现场对话，来自苏格兰，距离总统自行设定的关税截止日期只剩几天。</p>
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958466" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-33-097" data-start="00:25:33,097" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You heard the leaders there talking about the big financial stakes involved here.</p>
+<p>你听到两位领导人讨论了涉及的重大经济利益。</p>
+<p><button class="play-button sentence" id="s-00-25-36-867" data-start="00:25:36,867" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This could be the biggest deal trade deal ever.</p>
+<p>这可能是史上最大的贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-25-39-538" data-start="00:25:39,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump saying earlier today that he feels there's a 5050 chance, that they will be able to strike a deal the United States in the European Union this week.</p>
+<p>特朗普总统今天早些时候表示，他认为有50%的可能性本周能与欧盟达成协议。</p>
+<p><button class="play-button sentence" id="s-00-25-48-354" data-start="00:25:48,354" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also reiterated that the tariff rate will not go below 15%.</p>
+<p>他还重申，关税税率不会低于15%。</p>
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958447" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-52-349" data-start="00:25:52,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Either way.</p>
+<p>无论如何。</p>
+<p><button class="play-button sentence" id="s-00-25-53-169" data-start="00:25:53,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president also making some interesting comments on Gaza and the growing devastation there, the starvation crisis, saying the United States will continue to give more aid to Gaza.</p>
+<p>总统还对加沙日益严重的破坏和饥饿危机发表了有趣的评论，表示美国将继续向加沙提供更多援助。</p>
+<p><button class="play-button sentence" id="s-00-26-03-662" data-start="00:26:03,662" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He added that it would be nice to get a thank you and that other countries should, pitch in as well.</p>
+<p>他补充说，如果能得到感谢会很好，其他国家也应该出力。</p>
+<p><button class="play-button sentence" id="s-00-26-09-733" data-start="00:26:09,733" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CNN chief national affairs correspondent Jeff Zeleny is in Scotland with the president.</p>
+<p>CNN首席国内事务记者杰夫·泽莱尼与总统一起在苏格兰。</p>
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958425" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-14-239" data-start="00:26:14,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeff, what did you think were the big headlines from that?</p>
+<p>杰夫，你认为这次对话的重点是什么？</p>
+<p><button class="play-button sentence" id="s-00-26-19-117" data-start="00:26:19,117" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, I mean, the point of the meeting here, obviously, several, other questions led the president, down a few, different alleyways here.</p>
+<p>你看，这次会议的重点显然是几个其他问题让总统谈到了不同的方向。</p>
+<p><button class="play-button sentence" id="s-00-26-28-118" data-start="00:26:28,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the point of the meeting is the deadline is fast approaching for a trade deal with the European Union.</p>
+<p>但会议的重点是与欧盟的贸易协议截止日期即将到来。</p>
+<p><button class="play-button sentence" id="s-00-26-33-290" data-start="00:26:33,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is why Ursula von der Leyen is, at the, Turnberry, a golf resort.</p>
+<p>这就是为什么乌尔苏拉·冯德莱恩在坦伯利高尔夫度假村。</p>
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958401" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-38-563" data-start="00:26:38,563" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I thought her comments at the very beginning of this was certainly interesting, trying to flatter the president in some regards, saying that you're known as a,</p>
+<p>所以我认为她一开始的评论很有趣，试图在某些方面奉承总统，说您以……</p>
+<p><button class="play-button sentence" id="s-00-26-48-606" data-start="00:26:48,606" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he jumped in and said, and a fair one.</p>
+<p>他插话说，而且是公平的。</p>
+<p><button class="play-button sentence" id="s-00-26-50-474" data-start="00:26:50,474" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we will see what comes out of this meeting.</p>
+<p>所以我们将看看这次会议的结果。</p>
+<p><button class="play-button sentence" id="s-00-26-54-346" data-start="00:26:54,346" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> if there is not a deal that is struck a 30% across the board, tariff is set to, go into effect on Friday.</p>
+<p>如果未能达成协议，周五将全面实施30%的关税。</p>
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958377" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-02-386" data-start="00:27:02,386" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, we have seen tariffs come and go, threats come and go.</p>
+<p>当然，我们见过关税来来去去，威胁来来去去。</p>
+<p><button class="play-button sentence" id="s-00-27-05-557" data-start="00:27:05,557" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we will see about that.</p>
+<p>所以我们拭目以待。</p>
+<p><button class="play-button sentence" id="s-00-27-07-092" data-start="00:27:07,092" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he did say that 15% is as low as they would go.</p>
+<p>但他确实表示15%是他们的底线。</p>
+<p><button class="play-button sentence" id="s-00-27-11-261" data-start="00:27:11,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also said pharmaceuticals are not going to be a part of this.</p>
+<p>他还表示药品不会包括在内。</p>
+<p><button class="play-button sentence" id="s-00-27-14-432" data-start="00:27:14,432" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is very important here because pharmaceuticals from the the European nations are one of the leading imports, into the U.S. so that certainly is important as they strike this deal.</p>
+<p>这非常重要，因为欧洲国家的药品是美国的主要进口商品之一，因此在达成协议时这一点很重要。</p>
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958353" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-26-478" data-start="00:27:26,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But on Gaza.</p>
+<p>但关于加沙。</p>
+<p><button class="play-button sentence" id="s-00-27-27-378" data-start="00:27:27,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely.</p>
+<p>绝对。</p>
+<p><button class="play-button sentence" id="s-00-27-27-975" data-start="00:27:27,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is hanging over this meeting and certainly will be hanging over the president's meeting tomorrow with British Prime Minister, Keir Starmer on Israel, saying specifically, Israel is going to have to make a decision here.</p>
+<p>这个问题笼罩着这次会议，也肯定会笼罩总统明天与英国首相凯尔·斯塔默关于以色列的会晤，他特别表示以色列将不得不做出决定。</p>
+<p><button class="play-button sentence" id="s-00-27-39-423" data-start="00:27:39,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So those are some of the headlines here, as the president has been spending a couple of days now in Scotland, largely golfing, just coming off the golf course to have this meeting here today.</p>
+<p>所以这是一些重点，总统在苏格兰待了几天，主要是打高尔夫，刚刚离开高尔夫球场来参加今天的会议。</p>
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1CL8jzGEVG/?t=-2208958331" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-48-414" data-start="00:27:48,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is one of the biggest, trade deals.</p>
+<p>但这是最大的贸易协议之一。</p>
+<p><button class="play-button sentence" id="s-00-27-50-615" data-start="00:27:50,615" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And their relationship certainly has not been that warm going into this meeting.</p>
+<p>而他们的关系在会议前并不那么热络。</p>
+<p><button class="play-button sentence" id="s-00-27-54-638" data-start="00:27:54,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It certainly looked, fairly friendly. today.</p>
+<p>今天看起来相当友好。</p>
+<p><button class="play-button sentence" id="s-00-27-57-409" data-start="00:27:57,409" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll see, what comes out of this meeting this afternoon, Jake.</p>
+<p>我们将看看今天下午会议的结果，杰克。</p>
+<p><button class="play-button sentence" id="s-00-28-01-179" data-start="00:28:01,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right. Jeff Zeleny, thanks so much.</p>
+<p>好的，杰夫·泽莱尼，非常感谢。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
