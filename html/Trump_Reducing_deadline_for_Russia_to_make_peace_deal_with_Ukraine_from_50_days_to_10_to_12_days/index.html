@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Trump: Reducing deadline for Russia to make peace deal with Ukraine from 50 days to '10 to 12 days'</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The president shortened the deadline for Russia to negotiate peace with Ukraine from 50 days to 10-12 days, expressing disappointment in Putin and threatening new sanctions.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Trump: Reducing deadline for Russia to make peace deal with Ukraine from 50 days to '10 to 12 days'</h1>
+<p>【特朗普：将俄罗斯与乌克兰达成和平协议的期限从50天缩短至“10到12天”｜CNN News 20250729】</p>
+<p>Summary:
+The president shortened the deadline for Russia to negotiate peace with Ukraine from 50 days to 10-12 days, expressing disappointment in Putin and threatening new sanctions.</p>
+<p>摘要：
+总统将俄罗斯与乌克兰谈判和平的期限从50天缩短至10-12天，对普京表示失望，并威胁实施新制裁。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 15 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-166" data-start="00:00:00,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president also issued Jeff a new cease fire deadline for Russia's President, Vladimir Putin.</p>
+<p>总统还向俄罗斯总统弗拉基米尔·普京下达了新的停火期限。</p>
+<p><button class="play-button sentence" id="s-00-00-06-173" data-start="00:00:06,173" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Russians are continuing their brutal attacks against Ukraine.</p>
+<p>俄罗斯人继续对乌克兰发动残酷攻击。</p>
+<p><button class="play-button sentence" id="s-00-00-10-109" data-start="00:00:10,109" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell our viewers about that already.</p>
+<p>已经向我们的观众通报了这一情况。</p>
+<p><button class="play-button sentence" id="s-00-00-13-123" data-start="00:00:13,123" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, if that was also very notable.</p>
+<p>好吧，如果那也非常值得注意。</p>
+<p><button class="play-button sentence" id="s-00-00-15-414" data-start="00:00:15,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, all eyes have been on Ukraine and Russia for so long now.</p>
+<p>当然，所有人的目光都集中在乌克兰和俄罗斯上已经很久了。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959979" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-20-887" data-start="00:00:20,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it was two weeks ago when President Trump set a 50 day deadline for Russia to come to the table and make, some kind of, peace.</p>
+<p>但两周前，特朗普总统设定了50天的期限，要求俄罗斯坐到谈判桌前达成某种和平协议。</p>
+<p><button class="play-button sentence" id="s-00-00-30-797" data-start="00:00:30,797" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump, shortened that dramatically.</p>
+<p>特朗普总统大幅缩短了这一期限。</p>
+<p><button class="play-button sentence" id="s-00-00-33-174" data-start="00:00:33,174" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he is disappointed and frustrated in the Russian president.</p>
+<p>他表示对俄罗斯总统感到失望和沮丧。</p>
+<p><button class="play-button sentence" id="s-00-00-37-070" data-start="00:00:37,070" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So now he said it's a 10 to 12 day time frame.</p>
+<p>所以现在他说期限是10到12天。</p>
+<p><button class="play-button sentence" id="s-00-00-41-508" data-start="00:00:41,508" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president also said this.</p>
+<p>总统还说了这些。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959954" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-45-512" data-start="00:00:45,512" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to make a new deadline of about ten, 10 or 12 days from today.</p>
+<p>我将设定一个新的期限，大约从今天起10或12天。</p>
+<p><button class="play-button sentence" id="s-00-00-52-719" data-start="00:00:52,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no reason in waiting.</p>
+<p>没有理由再等待。</p>
+<p><button class="play-button sentence" id="s-00-00-56-689" data-start="00:00:56,689" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's 50 days, and I want to be generous.</p>
+<p>原本是50天，我想表现得慷慨一些。</p>
+<p><button class="play-button sentence" id="s-00-00-58-725" data-start="00:00:58,725" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, we just don't see any progress being made.</p>
+<p>但我们没有看到任何进展。</p>
+<p><button class="play-button sentence" id="s-00-01-04-030" data-start="00:01:04,030" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So President Trump said that he's disappointed in Vladimir Putin, and he stopped short of saying that he is lying.</p>
+<p>所以特朗普总统表示对弗拉基米尔·普京感到失望，但没有直接说他撒谎。</p>
+<p><button class="play-button sentence" id="s-00-01-11-671" data-start="00:01:11,671" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was asked that question directly.</p>
+<p>他被直接问到了这个问题。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959926" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-13-706" data-start="00:01:13,706" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If he believes that President Putin has been lying about his interest in working toward some type of a peace deal.</p>
+<p>他是否认为普京总统在推动某种和平协议的兴趣上撒了谎。</p>
+<p><button class="play-button sentence" id="s-00-01-20-513" data-start="00:01:20,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the American president said that the sanctions and new tariffs could be on the table with Russia.</p>
+<p>但美国总统表示，可能对俄罗斯实施制裁和新关税。</p>
+<p><button class="play-button sentence" id="s-00-01-27-127" data-start="00:01:27,127" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The question, though, in this long evolution of a President Trump, he almost sounded wistful, Wolf, as he was talking about, what once, in his words, was a friendship with Vladimir Putin.</p>
+<p>然而，问题是，在特朗普总统的长期演变中，他谈到与弗拉基米尔·普京曾经的友谊时，几乎听起来有些怀念。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959902" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-37-362" data-start="00:01:37,362" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now is anything but that.</p>
+<p>现在已完全不同。</p>
+<p><button class="play-button sentence" id="s-00-01-38-998" data-start="00:01:38,998" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So he used the word disappointed once again.</p>
+<p>所以他再次使用了“失望”这个词。</p>
+<p><button class="play-button sentence" id="s-00-01-41-100" data-start="00:01:41,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's that 10 to 12 day deadline.</p>
+<p>但关键是那10到12天的期限。</p>
+<p><button class="play-button sentence" id="s-00-01-43-335" data-start="00:01:43,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that is so important.</p>
+<p>现在这非常重要。</p>
+<p><button class="play-button sentence" id="s-00-01-45-772" data-start="00:01:45,772" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A Ukraine, of course, is welcoming that announcement here today, Wolf.</p>
+<p>当然，乌克兰今天对此宣布表示欢迎。</p>
+<p><button class="play-button sentence" id="s-00-01-49-722" data-start="00:01:49,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that deadline now 10 to 12 days, as opposed to 50 days.</p>
+<p>现在的期限是10到12天，而不是50天。</p>
+<p><button class="play-button sentence" id="s-00-01-53-245" data-start="00:01:53,245" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very significant, because the president once again saying that he would impose secondary sanctions, what he called secondary sanctions against countries that trade with Russia.</p>
+<p>非常重要，因为总统再次表示将对与俄罗斯贸易的国家实施所谓的二级制裁。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959876" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-03-689" data-start="00:02:03,689" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In other words, if you're a country that does a lot of trading with Russia, purchasing Russian oil, for example, India or other countries, you're going to be facing major sanctions from the United States, tariffs, sanctions and other sanctions as well.</p>
+<p>换句话说，如果你是与俄罗斯有大量贸易的国家，比如购买俄罗斯石油的印度或其他国家，你将面临美国的主要制裁、关税和其他制裁。</p>
+<p><button class="play-button sentence" id="s-00-02-16-969" data-start="00:02:16,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This potentially is a significant threat to the Russian economy, I assume.</p>
+<p>我认为这对俄罗斯经济可能构成重大威胁。</p>
+<p><button class="play-button sentence" id="s-00-02-20-919" data-start="00:02:20,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right?</p>
+<p>对吧？</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959855" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-24-110" data-start="00:02:24,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It certainly is.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-02-25-044" data-start="00:02:25,044" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, the Russian economy has been struggling already, as we know.</p>
+<p>我是说，俄罗斯经济已经在挣扎，众所周知。</p>
+<p><button class="play-button sentence" id="s-00-02-28-981" data-start="00:02:28,981" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but sanctions, would, certainly heighten that and enhance that.</p>
+<p>但制裁肯定会加剧和强化这一点。</p>
+<p><button class="play-button sentence" id="s-00-02-34-153" data-start="00:02:34,153" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> there have been many Republican members of Congress who were eager to, put sanctions on, but there has been a bit of a waiting game, for these ongoing deadlines.</p>
+<p>许多共和党国会议员一直渴望实施制裁，但对于这些不断变化的期限，他们一直在观望。</p>
+<p><button class="play-button sentence" id="s-00-02-42-528" data-start="00:02:42,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Wolf, a question that certainly, should be raised is this 10 to 12 days an actual deadline, or is this, giving a bit more time here?</p>
+<p>所以，沃尔夫，一个必须提出的问题是，这10到12天是真正的期限，还是给了更多时间？</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959827" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-52-104" data-start="00:02:52,104" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, in any respects, it is, shorter than the 50 day deadline that President Trump made back on July 14th, two weeks ago today.</p>
+<p>但无论如何，这比特朗普总统在7月14日（两周前的今天）设定的50天期限更短。</p>
+<p><button class="play-button sentence" id="s-00-03-01-580" data-start="00:03:01,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the Russians now have 10 to 12 days to stop launching rockets and missiles and drones at targets inside Ukraine.</p>
+<p>所以俄罗斯现在有10到12天的时间停止向乌克兰境内目标发射火箭、导弹和无人机。</p>
+<p><button class="play-button sentence" id="s-00-03-09-556" data-start="00:03:09,556" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll see if they if President Putin accepts that or not.</p>
+<p>我们将看看普京总统是否接受这一点。</p>
+<p><button class="play-button sentence" id="s-00-03-12-625" data-start="00:03:12,625" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeff Zeleny on the scene for us in Scotland.</p>
+<p>杰夫·泽勒尼在苏格兰为我们现场报道。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959805" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-14-894" data-start="00:03:14,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks very, very much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-03-16-262" data-start="00:03:16,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been lying to you about its intentions.</p>
+<p>他在意图上对你撒了谎。</p>
+<p><button class="play-button sentence" id="s-00-03-19-899" data-start="00:03:19,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I don't want to use the word lie.</p>
+<p>好吧，我不想用“撒谎”这个词。</p>
+<p><button class="play-button sentence" id="s-00-03-21-300" data-start="00:03:21,300" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All I know is we'd have a good talk.</p>
+<p>我只知道我们有过很好的谈话。</p>
+<p><button class="play-button sentence" id="s-00-03-23-635" data-start="00:03:23,635" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it seemed on, let's say, three occasions, it seemed that we were going to have a a ceasefire and maybe peace.</p>
+<p>似乎有三次，我们似乎要达成停火甚至和平。</p>
+<p><button class="play-button sentence" id="s-00-03-29-474" data-start="00:03:29,474" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you divided up and you do whatever you have to do that obviously to get to the end.</p>
+<p>你们分开并做任何必须做的事情以达到目标。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959785" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-34-213" data-start="00:03:34,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And all of a sudden, missiles are flying into Kiev and other places.</p>
+<p>突然之间，导弹飞向基辅和其他地方。</p>
+<p><button class="play-button sentence" id="s-00-03-39-818" data-start="00:03:39,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I say, what's that all about?</p>
+<p>我说，这是怎么回事？</p>
+<p><button class="play-button sentence" id="s-00-03-41-621" data-start="00:03:41,621" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I spoke to him 3 or 4 hours ago, and it looked like we were on our way.</p>
+<p>我三四小时前和他谈过，看起来我们正在取得进展。</p>
+<p><button class="play-button sentence" id="s-00-03-46-825" data-start="00:03:46,825" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then I'd say, forget it, and I'm not going to talk anymore.</p>
+<p>然后我说，算了，我不再谈了。</p>
+<p><button class="play-button sentence" id="s-00-03-52-278" data-start="00:03:52,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, this has happened on too many occasions and I don't like it.</p>
+<p>你知道，这种情况发生太多次了，我不喜欢。</p>
+<p><button class="play-button sentence" id="s-00-03-57-569" data-start="00:03:57,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't like it on Russia.</p>
+<p>我不喜欢俄罗斯这样。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959759" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-00-205" data-start="00:04:00,205" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump apparently taking a hard line when it comes to these peace talks that he wants.</p>
+<p>特朗普显然在他想要的和平谈判上采取了强硬立场。</p>
+<p><button class="play-button sentence" id="s-00-04-08-114" data-start="00:04:08,114" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> on Ukraine have listen.</p>
+<p>关于乌克兰，听着。</p>
+<p><button class="play-button sentence" id="s-00-04-11-450" data-start="00:04:11,450" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to make a new deadline of about ten, It's 50 days.</p>
+<p>我将设定一个新的期限，大约10天，原本是50天。</p>
+<p><button class="play-button sentence" id="s-00-04-23-629" data-start="00:04:23,629" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to be generous, but, This is like, sort of negotiations, sort of, you know, in real time, isn't it?</p>
+<p>我想表现得慷慨一些，但这就像是实时谈判，对吧？</p>
+<p><button class="play-button sentence" id="s-00-04-34-439" data-start="00:04:34,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been moving deadlines, so we know for months.</p>
+<p>他一直在改变期限，我们几个月来都知道。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959722" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-37-442" data-start="00:04:37,442" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is this a real shift in his stance?</p>
+<p>这是他的立场真正转变吗？</p>
+<p><button class="play-button sentence" id="s-00-04-39-077" data-start="00:04:39,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you believe on Ukraine?</p>
+<p>你相信关于乌克兰的说法吗？</p>
+<p><button class="play-button sentence" id="s-00-04-41-747" data-start="00:04:41,747" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it's interesting, Becky, because there is a true line in, Trump's shift both on Gaza and on Ukraine.</p>
+<p>好吧，贝基，这很有趣，因为特朗普在加沙和乌克兰的立场转变有一条真实的线索。</p>
+<p><button class="play-button sentence" id="s-00-04-49-322" data-start="00:04:49,322" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it comes down to what we actually saw back in his first term with Bashar al Assad and the attacks on places like Aleppo that, had significant, casualties of children.</p>
+<p>这可以追溯到他第一任期时对巴沙尔·阿萨德和阿勒颇等地袭击的态度，那些袭击造成了大量儿童伤亡。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959696" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-03-002" data-start="00:05:03,002" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That seems to impact Trump.</p>
+<p>这似乎影响了特朗普。</p>
+<p><button class="play-button sentence" id="s-00-05-05-437" data-start="00:05:05,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It seems to change his calculus because before he's been very dismissive about the civilian casualties, obviously, about the territorial integrity of Ukraine.</p>
+<p>这似乎改变了他的考量，因为他之前对平民伤亡和乌克兰领土完整非常不屑一顾。</p>
+<p><button class="play-button sentence" id="s-00-05-16-569" data-start="00:05:16,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet when we start to see some of these images, when obviously he's on the phone with Putin and Putin's, whispering all of these flattering things to him, and yet then he turns on the television Fox News here in the U.S. and he sees those civilians, those children being pulled out of apartment buildings that is starting to have an impact.</p>
+<p>然而，当我们开始看到这些画面时，当他与普京通话，普京对他甜言蜜语时，他打开美国的福克斯新闻，看到那些平民、那些孩子被从公寓楼里拉出来，这开始产生影响。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959663" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-36-903" data-start="00:05:36,903" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And world leaders should pay attention to this.</p>
+<p>世界领导人应该注意到这一点。</p>
+<p><button class="play-button sentence" id="s-00-05-39-038" data-start="00:05:39,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Certainly, for the likes of Netanyahu and Putin, they've overplayed their hand.</p>
+<p>当然，对于内塔尼亚胡和普京这样的人来说，他们做得过火了。</p>
+<p><button class="play-button sentence" id="s-00-05-45-077" data-start="00:05:45,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Putin, I think, is going to pay a price for it.</p>
+<p>我认为普京将为此付出代价。</p>
+<p><button class="play-button sentence" id="s-00-05-50-016" data-start="00:05:50,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's fascinating.</p>
+<p>这很有趣。</p>
+<p><button class="play-button sentence" id="s-00-05-50-816" data-start="00:05:50,816" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I did also want to ask you about the comment from President Trump just a short time ago, talking specifically about Russia and Ukraine, saying he is once again very disappointed in Vladimir Putin and that he said, and I'm quoting him here, I'm going, I'm going to reduce the 50 days talking about that timeline that he had given Vladimir Putin earlier this month, saying, I think we know the answer.</p>
+<p>我还想问你特朗普总统不久前关于俄罗斯和乌克兰的评论，他说他再次对弗拉基米尔·普京感到非常失望，他说，我引用他的话，“我将减少50天的期限”，指的是他本月早些时候给普京的时间表，他说，“我想我们知道答案。”</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959627" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-12-738" data-start="00:06:12,738" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's going to happen?</p>
+<p>会发生什么？</p>
+<p><button class="play-button sentence" id="s-00-06-14-206" data-start="00:06:14,206" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What could this potentially change in your view?</p>
+<p>你认为这可能会改变什么？</p>
+<p><button class="play-button sentence" id="s-00-06-17-810" data-start="00:06:17,810" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, I think the president needs to act a he's basically said that there's not going to be change in action.</p>
+<p>我是说，我认为总统需要行动，他基本上说行动不会有变化。</p>
+<p><button class="play-button sentence" id="s-00-06-23-583" data-start="00:06:23,583" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> from Vladimir Putin.</p>
+<p>来自弗拉基米尔·普京。</p>
+<p><button class="play-button sentence" id="s-00-06-24-884" data-start="00:06:24,884" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was an arbitrary 50 day, pause that he sort of put on to see if Russia would assess its position in Ukraine.</p>
+<p>那是一个任意的50天暂停，他想看看俄罗斯是否会重新评估其在乌克兰的立场。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959608" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-31-824" data-start="00:06:31,824" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's clear Vladimir Putin has no intention of ending the war in Ukraine.</p>
+<p>很明显，弗拉基米尔·普京无意结束乌克兰战争。</p>
+<p><button class="play-button sentence" id="s-00-06-35-894" data-start="00:06:35,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there is bipartisan legislation, that's ready to be passed that would enact more sanctions on Russia.</p>
+<p>所以有两党立法准备通过，将对俄罗斯实施更多制裁。</p>
+<p><button class="play-button sentence" id="s-00-06-41-533" data-start="00:06:41,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that is a good thing.</p>
+<p>我认为这是好事。</p>
+<p><button class="play-button sentence" id="s-00-06-43-201" data-start="00:06:43,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but the president ultimately can make that choice.</p>
+<p>但总统最终可以做出选择。</p>
+<p><button class="play-button sentence" id="s-00-06-45-271" data-start="00:06:45,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it seems like he's signaling that he's willing to do that sooner rather than later.</p>
+<p>他似乎表示愿意尽早这样做。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959589" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-50-041" data-start="00:06:50,041" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sabrina, always good to talk to you.</p>
+<p>萨布丽娜，很高兴和你交谈。</p>
+<p><button class="play-button sentence" id="s-00-06-51-244" data-start="00:06:51,244" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-06-52-167" data-start="00:06:52,167" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it was on Ukraine.</p>
+<p>但这是关于乌克兰的。</p>
+<p><button class="play-button sentence" id="s-00-06-54-012" data-start="00:06:54,012" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Certainly.</p>
+<p>当然。</p>
+<p><button class="play-button sentence" id="s-00-06-54-909" data-start="00:06:54,909" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> an interesting comment from, the the president talking about how he is frustrated once again with Vladimir Putin.</p>
+<p>总统的有趣评论，谈到他再次对弗拉基米尔·普京感到沮丧。</p>
+<p><button class="play-button sentence" id="s-00-07-02-387" data-start="00:07:02,387" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> he, of course, has said that before, but it was about two weeks ago that he sent a 50 day deadline for Putin to effectively withdraw forces and stop firing on Ukraine.</p>
+<p>他当然之前说过，但大约两周前，他向普京发出50天期限，要求其有效撤军并停止对乌克兰开火。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959567" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-12-331" data-start="00:07:12,331" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the president now says he is going to diminish that, shorten that time frame.</p>
+<p>总统现在表示他将缩短这一时间框架。</p>
+<p><button class="play-button sentence" id="s-00-07-17-069" data-start="00:07:17,069" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No details on how long, he would shorten it, to.</p>
+<p>没有详细说明会缩短到多久。</p>
+<p><button class="play-button sentence" id="s-00-07-21-240" data-start="00:07:21,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But clearly another sign of his frustration with, Russia.</p>
+<p>但这显然是他对俄罗斯沮丧的另一个迹象。</p>
+<p><button class="play-button sentence" id="s-00-07-24-704" data-start="00:07:24,704" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a certainly is something that European leaders are eager to hear.</p>
+<p>这当然是欧洲领导人渴望听到的。</p>
+<p><button class="play-button sentence" id="s-00-07-28-281" data-start="00:07:28,281" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president, siding more with, with a Ukrainian president Volodymyr Zelensky on the.</p>
+<p>总统更多地站在乌克兰总统弗拉基米尔·泽连斯基一边。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959545" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-34-187" data-start="00:07:34,187" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Gaza, Ukraine front and center as well as, trade deals also being discussed here in Scotland at a meeting.</p>
+<p>所以加沙、乌克兰成为焦点，贸易协议也在苏格兰的会议上讨论。</p>
+<p><button class="play-button sentence" id="s-00-07-40-492" data-start="00:07:40,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The American president seems to be hosting Erica.</p>
+<p>美国总统似乎在接待埃里卡。</p>
+<p><button class="play-button sentence" id="s-00-07-43-930" data-start="00:07:43,930" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeff appreciate it.</p>
+<p>杰夫，谢谢。</p>
+<p><button class="play-button sentence" id="s-00-07-44-930" data-start="00:07:44,930" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you John.</p>
+<p>谢谢约翰。</p>
+<p><button class="play-button sentence" id="s-00-07-46-899" data-start="00:07:46,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So a moment ago, the president said that he would consider reducing the 50 day period he had issued about a week and a half ago.</p>
+<p>所以刚才，总统表示他将考虑缩短大约一周半前设定的50天期限。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959524" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-55-540" data-start="00:07:55,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said Vladimir Putin has 50 days to to move toward making peace in Ukraine, or the United States would push for secondary sanctions.</p>
+<p>他说弗拉基米尔·普京有50天时间推动乌克兰和平，否则美国将推动二级制裁。</p>
+<p><button class="play-button sentence" id="s-00-08-02-447" data-start="00:08:02,447" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president just said he is thinking about reducing that time frame.</p>
+<p>总统刚刚表示他正在考虑缩短这一时间框架。</p>
+<p><button class="play-button sentence" id="s-00-08-05-718" data-start="00:08:05,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your response to that?</p>
+<p>你对此有何回应？</p>
+<p><button class="play-button sentence" id="s-00-08-10-122" data-start="00:08:10,122" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, China, I support secondary sanctions.</p>
+<p>好吧，中国，我支持二级制裁。</p>
+<p><button class="play-button sentence" id="s-00-08-12-524" data-start="00:08:12,524" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've got over 80 senators, Republicans and Democrats in the Senate, prepared to move forward on legislation to do that.</p>
+<p>我们有超过80名参议员，共和党和民主党，准备推进相关立法。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959499" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-20-266" data-start="00:08:20,266" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> my understanding is the only reason we haven't is that, the President Trump and the Trump administration have asked the Republican leader not to move forward on it right now.</p>
+<p>我的理解是，我们唯一没有推进的原因是特朗普总统和特朗普政府要求共和党领导人暂时不要推进。</p>
+<p><button class="play-button sentence" id="s-00-08-29-709" data-start="00:08:29,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, Vladimir Putin has played Donald Trump like a violin from the very beginning.</p>
+<p>看，弗拉基米尔·普京从一开始就像拉小提琴一样摆弄唐纳德·特朗普。</p>
+<p><button class="play-button sentence" id="s-00-08-35-914" data-start="00:08:35,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> as Donald Trump came into his presidency, he threw the Ukrainian people under the bus.</p>
+<p>当唐纳德·特朗普就任总统时，他把乌克兰人民出卖了。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959478" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-41-220" data-start="00:08:41,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That only emboldened Putin further.</p>
+<p>这只会进一步鼓励普京。</p>
+<p><button class="play-button sentence" id="s-00-08-44-817" data-start="00:08:44,817" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> so, you know, Putin has been essentially ignoring President Trump from day one and pretty much without serious consequence.</p>
+<p>所以，你知道，普京基本上从第一天起就无视特朗普总统，而且几乎没有严重后果。</p>
+<p><button class="play-button sentence" id="s-00-08-54-033" data-start="00:08:54,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm glad you know, Trump is his waking up appears to be waking up.</p>
+<p>我很高兴你知道，特朗普似乎正在醒悟。</p>
+<p><button class="play-button sentence" id="s-00-08-58-303" data-start="00:08:58,303" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but it really is very late in the game.</p>
+<p>但这确实为时已晚。</p>
+<p><button class="play-button sentence" id="s-00-09-01-274" data-start="00:09:01,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you think this is?</p>
+<p>你认为这是什么？</p>
+<p><button class="play-button sentence" id="s-00-09-02-508" data-start="00:09:02,508" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you believe in this shift, your hearing from President Trump, or how much weight do you put in that?</p>
+<p>你相信特朗普总统的这种转变吗，或者你对此有多重视？</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aW8Hz3E1u/?t=-2208959450" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-09-849" data-start="00:09:09,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I can't believe it until I see it.</p>
+<p>好吧，我亲眼所见才能相信。</p>
+<p><button class="play-button sentence" id="s-00-09-13-719" data-start="00:09:13,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we've been wanting to move forward on this legislation.</p>
+<p>我们一直希望推进这项立法。</p>
+<p><button class="play-button sentence" id="s-00-09-17-423" data-start="00:09:17,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> in the Senate.</p>
+<p>在参议院。</p>
+<p><button class="play-button sentence" id="s-00-09-17-990" data-start="00:09:17,990" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> John, this is the secondary sanctions legislation.</p>
+<p>约翰，这是二级制裁立法。</p>
+<p><button class="play-button sentence" id="s-00-09-21-386" data-start="00:09:21,386" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and it's it's the Trump administration and President Trump who have been putting the brakes on it, always trying to give Putin one more chance.</p>
+<p>是特朗普政府和特朗普总统一直在阻止它，总是想再给普京一次机会。</p>
+<p><button class="play-button sentence" id="s-00-09-29-869" data-start="00:09:29,869" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and Putin has just been playing Donald Trump for additional time.</p>
+<p>而普京只是在拖延唐纳德·特朗普的时间。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
