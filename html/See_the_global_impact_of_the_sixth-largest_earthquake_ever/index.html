@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>See the global impact of the sixth-largest earthquake ever</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One of the strongest earthquakes ever recorded, measuring 8.8 magnitude, struck off Russia's Far East coast, triggering tsunami warnings across the Pacific. The quake, among the top ten strongest in the past 150 years, caused significant seafloor displacement, leading to destructive waves. Japan evacuated nearly 2 million people, while Hawaii experienced 6-foot-high waves. A nearby volcano also erupted following the seismic activity.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>See the global impact of the sixth-largest earthquake ever</h1>
+<p>【自然的力量！看俄罗斯远东地震如何影响全球｜CNN】</p>
+<p>Summary:
+One of the strongest earthquakes ever recorded, measuring 8.8 magnitude, struck off Russia's Far East coast, triggering tsunami warnings across the Pacific. The quake, among the top ten strongest in the past 150 years, caused significant seafloor displacement, leading to destructive waves. Japan evacuated nearly 2 million people, while Hawaii experienced 6-foot-high waves. A nearby volcano also erupted following the seismic activity.</p>
+<p>摘要：
+俄罗斯远东海域发生8.8级强震，为150年来最强地震之一，引发太平洋范围海啸警报。海底地壳抬升约1米，形成巨大海啸波。日本近200万人紧急撤离，北海道民众逃至屋顶避难；夏威夷出现6英尺高巨浪，沿岸交通瘫痪。震区附近火山随后喷发，岩浆涌出伴随爆炸。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 5 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959995" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-04-770" data-start="00:00:04,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the strongest earthquakes ever recorded struck off the Russian east coast a few hours ago.</p>
+<p>有记录以来最强烈的地震之一几小时前袭击了俄罗斯东海岸。</p>
+<p><button class="play-button sentence" id="s-00-00-27-126" data-start="00:00:27,126" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the largest earthquake we've had in over a decade worldwide.</p>
+<p>这是全球十多年来最大的地震。</p>
+<p><button class="play-button sentence" id="s-00-00-31-964" data-start="00:00:31,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so.</p>
+<p>因此。</p>
+<p><button class="play-button sentence" id="s-00-00-32-518" data-start="00:00:32,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's among the top ten earthquakes that have been measured by humans in the last century and a half.</p>
+<p>它是过去一个半世纪人类测量到的前十大地震之一。</p>
+<p><button class="play-button sentence" id="s-00-00-39-271" data-start="00:00:39,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so it's it's quite a large earthquake.</p>
+<p>所以这是一次相当大的地震。</p>
+<p><button class="play-button sentence" id="s-00-00-41-975" data-start="00:00:41,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What happens is that close by the earthquake and on the coastline, a of Kamchatka, the tsunami was probably quite enormous and damaging.</p>
+<p>在地震附近和堪察加半岛海岸线，海啸可能非常巨大且具有破坏性。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959947" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-52-401" data-start="00:00:52,401" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, the coastline itself is very sparsely populated.</p>
+<p>但海岸线本身人口非常稀少。</p>
+<p><button class="play-button sentence" id="s-00-00-56-389" data-start="00:00:56,389" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> main city in Kamchatka is about 150,000 people.</p>
+<p>堪察加半岛的主要城市约有15万人口。</p>
+<p><button class="play-button sentence" id="s-00-01-00-329" data-start="00:01:00,329" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is actually in a in a harbor that's somewhat protected from that.</p>
+<p>实际上位于一个某种程度上受保护的海港内。</p>
+<p><button class="play-button sentence" id="s-00-01-04-831" data-start="00:01:04,831" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but when the wave that set up there again, this earthquake basically moves the seafloor upward by roughly a meter or a few feet, something like that.</p>
+<p>但当海浪再次形成时，这次地震基本上将海底向上推高了大约一米或几英尺。</p>
+<p><button class="play-button sentence" id="s-00-01-14-106" data-start="00:01:14,106" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that leads to a bulge of water that starts traveling across the ocean.</p>
+<p>这导致水隆起并开始穿越海洋传播。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-087" data-start="00:01:27,087" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tsunami alerts in force for millions throughout the Pacific region.</p>
+<p>太平洋地区数百万人收到海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-01-32-058" data-start="00:01:32,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tsunami threat triggered by a massive 8.8 magnitude quake that struck Russia's Far East hours ago, the first waves hitting Russia and Japan, where nearly 2 million people have been evacuated.</p>
+<p>几小时前俄罗斯远东地区发生的8.8级大地震引发海啸威胁，首波海浪袭击俄罗斯和日本，近200万人被疏散。</p>
+<p><button class="play-button sentence" id="s-00-01-45-138" data-start="00:01:45,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is video from Japan's second biggest island, Hokkaido, where people fled to the highest rooftops that they could find.</p>
+<p>这是日本第二大岛北海道的视频，人们逃往能找到的最高屋顶。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959886" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-53-646" data-start="00:01:53,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A megathrust earthquake.</p>
+<p>这是一次巨型逆冲地震。</p>
+<p><button class="play-button sentence" id="s-00-01-55-447" data-start="00:01:55,447" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happens at a subduction zone.</p>
+<p>它发生在俯冲带。</p>
+<p><button class="play-button sentence" id="s-00-01-57-417" data-start="00:01:57,417" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A tectonic plate is going under another, and part of the surface of the ocean is thrust up.</p>
+<p>一个构造板块俯冲到另一个下方，部分海面被推高。</p>
+<p><button class="play-button sentence" id="s-00-02-03-790" data-start="00:02:03,790" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Think of a continental plate being thrust up, and it's the push of water from down below that creates the tsunami.</p>
+<p>想象大陆板块被推高，下方水的推力形成了海啸。</p>
+<p><button class="play-button sentence" id="s-00-02-10-697" data-start="00:02:10,697" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a lot of energy being pushed out.</p>
+<p>释放了大量能量。</p>
+<p><button class="play-button sentence" id="s-00-02-12-998" data-start="00:02:12,998" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, if you are standing on a boat in the middle of the Pacific Ocean, you might not even notice.</p>
+<p>现在，如果你站在太平洋中央的船上，可能根本察觉不到。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959860" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-19-838" data-start="00:02:19,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are getting some pretty remarkable images, from where this earthquake struck, when it first struck, off the far east coast of Russia at the time this happened.</p>
+<p>我们收到了一些非常引人注目的图像，来自地震最初发生的地方，即俄罗斯远东海岸附近。</p>
+<p><button class="play-button sentence" id="s-00-02-33-719" data-start="00:02:33,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> doctors in a cancer center were performing a surgery.</p>
+<p>一家癌症中心的医生正在做手术。</p>
+<p><button class="play-button sentence" id="s-00-02-38-891" data-start="00:02:38,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And had to basically hold the patient, as you see there, hold on to the equipment in the operating room as well as steady themselves.</p>
+<p>他们不得不稳住病人，如你所见，还要抓住手术室设备并稳住自己。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959830" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-49-002" data-start="00:02:49,002" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just an indication of how dramatic this was.</p>
+<p>这显示了情况有多剧烈。</p>
+<p><button class="play-button sentence" id="s-00-03-03-550" data-start="00:03:03,550" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over in Hawaii, there was a lot of chaos in the hours leading up to the waves coming ashore there where there was flooding and there were waves almost as six feet high.</p>
+<p>在夏威夷，海浪登陆前的几小时一片混乱，洪水泛滥，海浪高达近六英尺。</p>
+<p><button class="play-button sentence" id="s-00-03-13-092" data-start="00:03:13,092" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, as they told people to evacuate, there was a logjam of traffic as people were trying to make their way up to higher elevations, up to buildings for storeys or higher.</p>
+<p>当人们被告知疏散时，交通堵塞，人们试图前往更高处或高层建筑。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959796" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-23-502" data-start="00:03:23,502" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here in Southern California, officials are the most concerned about the current.</p>
+<p>在南加州，官员们最担心的是洋流。</p>
+<p><button class="play-button sentence" id="s-00-03-27-105" data-start="00:03:27,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're asking people here in LA County to stay out of the water.</p>
+<p>他们要求洛杉矶县的居民远离水域。</p>
+<p><button class="play-button sentence" id="s-00-03-31-009" data-start="00:03:31,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're clearing the beaches.</p>
+<p>他们正在清理海滩。</p>
+<p><button class="play-button sentence" id="s-00-03-32-412" data-start="00:03:32,412" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've cleared all the events.</p>
+<p>他们取消了所有活动。</p>
+<p><button class="play-button sentence" id="s-00-03-33-612" data-start="00:03:33,612" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're asking RVs to move because, yes, there wasn't any significant damage here.</p>
+<p>他们要求房车移动，因为这里没有重大损失。</p>
+<p><button class="play-button sentence" id="s-00-03-37-984" data-start="00:03:37,984" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There wasn't any flooding, which is great news.</p>
+<p>没有洪水，这是个好消息。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959779" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-40-419" data-start="00:03:40,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But these waves are strong.</p>
+<p>但这些海浪很强劲。</p>
+<p><button class="play-button sentence" id="s-00-03-43-789" data-start="00:03:43,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to take you to Russia, where a volcano in this general proximity of this earthquake zone is now erupting.</p>
+<p>我想带你们看看俄罗斯，地震带附近的一座火山正在喷发。</p>
+<p><button class="play-button sentence" id="s-00-03-53-532" data-start="00:03:53,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen images of lava oozing from the side of the volcano.</p>
+<p>我们看到了熔岩从火山侧面渗出的画面。</p>
+<p><button class="play-button sentence" id="s-00-03-57-736" data-start="00:03:57,736" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities have reported explosions.</p>
+<p>当局报告了爆炸。</p>
+<p><button class="play-button sentence" id="s-00-04-00-340" data-start="00:04:00,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, there are some tourists in the area who said they want to stay to watch the eruption.</p>
+<p>事实上，该地区一些游客表示想留下来观看喷发。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JP8kz1EU9/?t=-2208959753" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-06-179" data-start="00:04:06,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that is all taking place as this earthquake, struck this far east coast of Russia several hours before.</p>
+<p>这一切都发生在几小时前俄罗斯远东海岸地震之后。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
