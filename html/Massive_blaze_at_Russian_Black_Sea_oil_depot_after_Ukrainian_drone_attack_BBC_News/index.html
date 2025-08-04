@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Russian Oil Depot Fire Blamed on Ukrainian Drone Attack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Russia accused Ukraine of launching drone strikes on an oil depot near the Black Sea, causing massive fires and flight cancellations. Ukraine targeted multiple Russian military installations over the weekend, while Russian missiles hit Ukrainian cities, destroying homes and civilian infrastructure. The southern city of Mikolive saw significant damage, with at least seven injured. Both sides vowed to continue attacks, with no end to the conflict in sight.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Russian Oil Depot Fire Blamed on Ukrainian Drone Attack</h1>
+<p>【BBC News 20250804 俄乌战火升级：黑海油库遭袭爆炸｜多城遭导弹空袭｜前线居民紧急撤离】</p>
+<p>Summary:
+Russia accused Ukraine of launching drone strikes on an oil depot near the Black Sea, causing massive fires and flight cancellations. Ukraine targeted multiple Russian military installations over the weekend, while Russian missiles hit Ukrainian cities, destroying homes and civilian infrastructure. The southern city of Mikolive saw significant damage, with at least seven injured. Both sides vowed to continue attacks, with no end to the conflict in sight.</p>
+<p>摘要：
+俄罗斯指责乌克兰无人机袭击黑海附近油库，引发大火并导致航班取消。乌军周末袭击了俄南部多个军事设施，俄军则对乌克兰城市发动导弹攻击，摧毁民宅和基础设施。南部城市米科利夫受损严重，至少7人受伤。双方誓言继续攻击，冲突结束遥遥无期。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 3 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV14YtuzfECm/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-320" data-start="00:00:00,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A massive fire at an oil depot near the Black Sea resort of Sachi has been blamed by Russia on a Ukrainian drone attack.</p>
+<p>俄罗斯将黑海度假胜地萨奇附近一处油库的大火归咎于乌克兰的无人机袭击。</p>
+<p><button class="play-button sentence" id="s-00-00-07-431" data-start="00:00:07,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was one of a series of strikes on Russian military infrastructure this weekend.</p>
+<p>这是本周末针对俄罗斯军事基础设施的一系列袭击之一。</p>
+<p><button class="play-button sentence" id="s-00-00-11-943" data-start="00:00:11,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, a number of Ukrainian cities have been struck by Russian missiles.</p>
+<p>与此同时，乌克兰多个城市遭到俄罗斯导弹袭击。</p>
+<p><button class="play-button sentence" id="s-00-00-16-399" data-start="00:00:16,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One strike destroyed homes and civilian infrastructure in the southern city of Mikolive.</p>
+<p>其中一次袭击摧毁了南部城市米科利夫的房屋和民用基础设施。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV14YtuzfECm/?t=-2208959977" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-22-204" data-start="00:00:22,204" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Inwood has this report.</p>
+<p>乔·因伍德带来以下报道。</p>
+<p><button class="play-button sentence" id="s-00-00-25-600" data-start="00:00:25,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hearing drones in the sky and gunfire on the ground, residents in the city of Samara start filming &gt;&gt; when a fuel tank at an oil refinery is hit.</p>
+<p>萨马拉市的居民听到空中的无人机声和地面的枪声后开始拍摄&gt;&gt;一座炼油厂的燃料罐被击中时。</p>
+<p><button class="play-button sentence" id="s-00-00-36-368" data-start="00:00:36,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was one of several Ukrainian drone strikes launched over the weekend, targeting installations across the south of Russia.</p>
+<p>这是乌克兰周末发动的多次无人机袭击之一，目标是俄罗斯南部的设施。</p>
+<p><button class="play-button sentence" id="s-00-00-44-226" data-start="00:00:44,226" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A massive fire was also caused at an oil depot near the Black Sea resort of Soi, causing nearby flights to be cancelled.</p>
+<p>黑海度假胜地索伊附近的一处油库也发生大火，导致附近航班取消。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV14YtuzfECm/?t=-2208959945" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-54-399" data-start="00:00:54,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to express my gratitude for our special longrange operations on Russian territory.</p>
+<p>我要感谢我们在俄罗斯领土上的特殊远程行动。</p>
+<p><button class="play-button sentence" id="s-00-00-59-253" data-start="00:00:59,253" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their impact is significant and each of them is tangible for the enemy and our operations will continue.</p>
+<p>它们的影响重大，每一次行动都对敌人造成实际打击，我们的行动将继续。</p>
+<p><button class="play-button sentence" id="s-00-01-05-680" data-start="00:01:05,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia is dragging out the war, so it will receive just responses.</p>
+<p>俄罗斯正在拖延战争，因此它将得到公正的回应。</p>
+<p><button class="play-button sentence" id="s-00-01-11-599" data-start="00:01:11,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> &gt;&gt; Overnight, Russia launched its own attacks as it often has, hitting Ukrainian cities.</p>
+<blockquote>
+<blockquote>
+<p>夜间，俄罗斯照常发动了自己的袭击，打击了乌克兰城市。</p>
+</blockquote>
+</blockquote>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV14YtuzfECm/?t=-2208959923" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-16-994" data-start="00:01:16,994" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was Mikolia in the south where homes and civilian infrastructure was destroyed.</p>
+<p>这是南部的米科利亚，那里的房屋和民用基础设施被摧毁。</p>
+<p><button class="play-button sentence" id="s-00-01-22-871" data-start="00:01:22,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Local authorities say at least seven people were injured in this frontline city, so often the target of Russian fire.</p>
+<p>当地政府表示，这座前线城市至少有七人受伤，这里经常成为俄罗斯炮火的目标。</p>
+<p><button class="play-button sentence" id="s-00-01-30-719" data-start="00:01:30,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just to the southeast, Hesson was also hit.</p>
+<p>就在东南方向，赫松也遭到袭击。</p>
+<p><button class="play-button sentence" id="s-00-01-33-499" data-start="00:01:33,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities say a bridge across the Nepro River was badly damaged and urged residents to evacuate.</p>
+<p>当局表示，横跨涅普罗河的一座桥梁严重受损，并敦促居民撤离。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV14YtuzfECm/?t=-2208959898" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-41-920" data-start="00:01:41,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes at the end of a particularly deadly week for Ukraine, including an attack on Keev that killed 31 people.</p>
+<p>这是乌克兰特别致命的一周结束时发生的，包括对基辅的袭击造成31人死亡。</p>
+<p><button class="play-button sentence" id="s-00-01-49-680" data-start="00:01:49,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump has set a deadline of Friday for Vladimir Putin to end the war.</p>
+<p>特朗普总统设定了周五为弗拉基米尔·普京结束战争的最后期限。</p>
+<p><button class="play-button sentence" id="s-00-01-54-257" data-start="00:01:54,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That looks as far away as ever.</p>
+<p>这看起来仍然遥遥无期。</p>
+<p><button class="play-button sentence" id="s-00-01-57-374" data-start="00:01:57,374" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe Inwood, BBC News.</p>
+<p>BBC新闻，乔·因伍德报道。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
