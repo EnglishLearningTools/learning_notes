@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Wildfire Ravages Southwest France: Unprecedented Destruction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A rapidly spreading wildfire in southwest France has consumed an area larger than Paris, destroying forests and villages. Over 2,000 firefighters are battling the blaze, but conditions may worsen due to wind and extreme dryness. This single fire has already surpassed France’s total wildfire destruction in 2024 and doubled 2023’s damage. Climate change is increasing fire risks in the Mediterranean region, with experts calling it an unprecedented disaster.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Wildfire Ravages Southwest France: Unprecedented Destruction</h1>
+<p>【法国南部野火肆虐：巴黎两倍面积被毁】</p>
+<p>Summary:
+A rapidly spreading wildfire in southwest France has consumed an area larger than Paris, destroying forests and villages. Over 2,000 firefighters are battling the blaze, but conditions may worsen due to wind and extreme dryness. This single fire has already surpassed France’s total wildfire destruction in 2024 and doubled 2023’s damage. Climate change is increasing fire risks in the Mediterranean region, with experts calling it an unprecedented disaster.</p>
+<p>摘要：
+法国西南部野火迅速蔓延，过火面积已超巴黎两倍，吞噬森林和村庄。2000多名消防员昼夜奋战，但强风和极端干燥天气可能加剧火势。此次火灾破坏力已超过法国2024年全年野火损失，是2023年的两倍。专家指出，气候变化正加剧地中海地区火灾风险，此次灾情规模"前所未有"。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 2 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3>00:00:00</h3>
+<p><button class="play-button sentence" id="s-00-00-00-320" data-start="00:00:00,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With lightning speed, the wildfire has devoured an area bigger than the city of Paris.</p>
+<p>野火以闪电般的速度吞噬了比巴黎市还大的区域。</p>
+<p><button class="play-button sentence" id="s-00-00-05-620" data-start="00:00:05,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Forests and villages alike have succumbed with many more in its path.</p>
+<p>森林和村庄都未能幸免，还有更多地区处于火势蔓延路径上。</p>
+<p><button class="play-button sentence" id="s-00-00-11-279" data-start="00:00:11,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents and tourists forced to flee.</p>
+<p>居民和游客被迫逃离。</p>
+<p><button class="play-button sentence" id="s-00-00-15-599" data-start="00:00:15,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In this corner of southwest France, houses have been reduced to smoking ruins.</p>
+<p>在法国西南部的这一角落，房屋已化为冒烟的废墟。</p>
+<p><button class="play-button sentence" id="s-00-00-20-409" data-start="00:00:20,409" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many roads are closed.</p>
+<p>许多道路被封闭。</p>
+<p><button class="play-button sentence" id="s-00-00-22-465" data-start="00:00:22,465" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And despite the intense efforts of firefighters, conditions may well worsen before they improve. on the ground.</p>
+<p>尽管消防员全力以赴，但情况很可能在好转前进一步恶化。</p>
+<p><a name="block-2"></a></p>
+<h3>00:00:32</h3>
+<p><button class="play-button sentence" id="s-00-00-32-063" data-start="00:00:32,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, we've got almost 2,000 firefighters.</p>
+<p>我们投入了近2000名消防员。</p>
+<p><button class="play-button sentence" id="s-00-00-34-712" data-start="00:00:34,712" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's 600 vehicles and a large aerial presence that you often hear above your heads.</p>
+<p>动用了600辆车辆和大量空中支援力量，头顶常能听到它们的轰鸣。</p>
+<p><button class="play-button sentence" id="s-00-00-38-799" data-start="00:00:38,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a very significant presence in total.</p>
+<p>这是一支规模非常庞大的救援力量。</p>
+<p><button class="play-button sentence" id="s-00-00-41-179" data-start="00:00:41,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the area, we have at our disposal the maximum number of personnel and resources that we have in the south of France in its entirety.</p>
+<p>我们在该地区部署了法国南部可调动的全部人员和资源。</p>
+<p><button class="play-button sentence" id="s-00-00-49-520" data-start="00:00:49,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This blaze alone has already consumed as much land as was destroyed by wildfires in France in 2024 while more than doubling the destruction wrought in 2023.</p>
+<p>仅这场大火烧毁的土地就已相当于法国2024年全年野火破坏面积，更是2023年损毁面积的两倍多。</p>
+<p><a name="block-3"></a></p>
+<h3>00:01:01</h3>
+<p><button class="play-button sentence" id="s-00-01-01-388" data-start="00:01:01,388" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is important to know that the risk of fire is greatest in the Mediterranean.</p>
+<p>必须注意的是，地中海地区的火灾风险最高。</p>
+<p><button class="play-button sentence" id="s-00-01-07-760" data-start="00:01:07,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In France, this is the hottest and driest area of France, but with climate change, these fire risks are expected to become more significant during the summer.</p>
+<p>这里是法国最炎热干燥的区域，而随着气候变化，夏季火灾风险预计将进一步加剧。</p>
+<p><button class="play-button sentence" id="s-00-01-15-978" data-start="00:01:15,978" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Much now will depend on wind direction, either slowing these flames or fanning them in multiple directions as fire crews describe a disaster of unprecedented scale.</p>
+<p>当前火势很大程度上取决于风向——风力可能延缓火势，也可能助长火焰向多个方向蔓延，消防人员称这是一场空前规模的灾难。</p>
+<p><a name="block-4"></a></p>
+<h3>00:01:28</h3>
+<p><button class="play-button sentence" id="s-00-01-28-911" data-start="00:01:28,911" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jonah, Alazer.</p>
+<p>乔纳，阿拉泽。</p>
+<p><button class="play-button sentence" id="s-00-01-30-640" data-start="00:01:30,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't miss out.</p>
+<p>别错过。</p>
+<p><button class="play-button sentence" id="s-00-01-31-642" data-start="00:01:31,642" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Get the full picture.</p>
+<p>获取完整报道。</p>
+<p><button class="play-button sentence" id="s-00-01-33-040" data-start="00:01:33,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Subscribe to Alazer for reliable news and expert insights.</p>
+<p>订阅阿拉泽，获取可靠新闻与专家解读。</p>
+<p><button class="play-button sentence" id="s-00-01-37-513" data-start="00:01:37,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like, share, stay ahead.</p>
+<p>点赞、分享，保持领先。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
