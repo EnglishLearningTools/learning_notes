@@ -903,48 +903,55 @@
       let lastSortedIndex = -1;
       let ascending = true;
 
-      // Sorting logic
-      document.querySelectorAll('th').forEach(function(th, index) {
-        th.addEventListener('click', function () {
-          const table = th.closest('table');
-          const tbody = table.querySelector('tbody');
-          const rows = Array.from(tbody.querySelectorAll('tr'));
+      function sortTableByColumn(table, columnIndex, asc) {
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
 
-          // Clear sort icons
-          table.querySelectorAll('th').forEach(th => {
-            th.textContent = th.textContent.replace(/[▲▼]/g, '').trim();
-          });
+        rows.sort(function(a, b) {
+          const aText = a.children[columnIndex].innerText.trim();
+          const bText = b.children[columnIndex].innerText.trim();
 
-          // Sort rows
-          rows.sort(function(a, b) {
-            const aText = a.children[index].innerText.trim();
-            const bText = b.children[index].innerText.trim();
-            const aNum = parseFloat(aText);
-            const bNum = parseFloat(bText);
-
-            let result;
-            if (!isNaN(aNum) && !isNaN(bNum)) {
-              result = aNum - bNum;
-            } else {
-              result = aText.localeCompare(bText, 'zh-Hans');
-            }
-
-            return ascending ? result : -result;
-          });
-
-          rows.forEach(row => tbody.appendChild(row));
-          th.textContent = th.textContent.trim() + (ascending ? ' ▲' : ' ▼');
-
-          if (lastSortedIndex === index) {
-            ascending = !ascending;
+          // Try parsing as date first
+          const aDate = Date.parse(aText);
+          const bDate = Date.parse(bText);
+          let result;
+          if (!isNaN(aDate) && !isNaN(bDate)) {
+            result = aDate - bDate;
           } else {
-            ascending = true;
-            lastSortedIndex = index;
+            result = aText.localeCompare(bText, 'zh-Hans');
           }
+
+          return asc ? result : -result;
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+
+        // Add sort indicator
+        const th = table.querySelectorAll('th')[columnIndex];
+        table.querySelectorAll('th').forEach(th => {
+          th.textContent = th.textContent.replace(/[▲▼]/g, '').trim();
+        });
+        th.textContent = th.textContent.trim() + (asc ? ' ▲' : ' ▼');
+      }
+
+      const table = document.querySelector('table.sortable');
+      if (table) {
+        // Default sort by 日期 (2nd column, index 1), descending
+        sortTableByColumn(table, 1, false);
+        lastSortedIndex = 1;
+        ascending = false;
+      }
+
+      // Add click event to each column header
+      table.querySelectorAll('th').forEach(function(th, index) {
+        th.addEventListener('click', function () {
+          ascending = (lastSortedIndex === index) ? !ascending : true;
+          lastSortedIndex = index;
+          sortTableByColumn(table, index, ascending);
         });
       });
 
-      // Global search across all table cells
+      // Global search
       const searchInput = document.getElementById('searchGlobal');
       if (searchInput) {
         searchInput.addEventListener('input', function () {
