@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagasaki Marks 80th Anniversary of Atomic Bombing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Japanese city of Nagasaki commemorated the 80th anniversary of the US atomic bombing that killed 74,000 people instantly. Survivors and officials gathered at Peace Park to honor victims and renew calls for nuclear disarmament. Historians debated whether the bombings truly hastened WWII's end, as current global nuclear tensions rise with over 12,000 weapons stockpiled worldwide.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Nagasaki Marks 80th Anniversary of Atomic Bombing</h1>
+<p>【BBC News 20250809 全球现存超一万枚核武器｜长崎原子弹爆炸80周年｜幸存者疾呼废核｜历史学家争议战争终结真相】</p>
+<p>Summary:
+The Japanese city of Nagasaki commemorated the 80th anniversary of the US atomic bombing that killed 74,000 people instantly. Survivors and officials gathered at Peace Park to honor victims and renew calls for nuclear disarmament. Historians debated whether the bombings truly hastened WWII's end, as current global nuclear tensions rise with over 12,000 weapons stockpiled worldwide.</p>
+<p>摘要：
+日本长崎市举行原子弹爆炸80周年纪念活动，7.4万人在爆炸中瞬间丧生。幸存者与政要齐聚和平公园悼念遇难者，呼吁废除核武器。历史学家就"核爆是否加速二战结束"展开激辩，而全球现存的1.23万枚核武器使当前局势更趋紧张。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 26 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-15-199" data-start="00:00:15,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> ello there, live from Washington, this is BBC News.</p>
+<p>大家好，这里是BBC新闻，华盛顿现场直播。</p>
+<p><button class="play-button sentence" id="s-00-00-19-440" data-start="00:00:19,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Japanese city of Nagasaki commemorates the 80th anniversary of the US atomic bombing that killed 74,000 people instantly and hastened the end of World War II.</p>
+<p>日本长崎市纪念美国原子弹轰炸80周年，该事件造成7.4万人当场丧生并加速了二战结束。</p>
+<p><button class="play-button sentence" id="s-00-00-38-640" data-start="00:00:38,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're bringing you these live pictures from the memorial ceremony in Nagasaki and we'll be discussing the legacy of the bombing and survivors.</p>
+<p>我们为您带来长崎纪念仪式的现场画面，并将讨论轰炸的影响与幸存者。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-47-439" data-start="00:00:47,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're bringing you their push for nuclear disarmament.</p>
+<p>我们为您报道他们推动核裁军的努力。</p>
+<p><button class="play-button sentence" id="s-00-01-00-320" data-start="00:01:00,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello there, I'm Rich Preston in Washington and a very warm welcome to our special coverage of the 80th anniversary of the atomic bombing of Nagasaki.</p>
+<p>大家好，我是华盛顿的Rich Preston，热烈欢迎收看我们长崎原子弹轰炸80周年特别报道。</p>
+<p><button class="play-button sentence" id="s-00-01-09-120" data-start="00:01:09,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the last hour we've heard from a chorus of atomic bomb survivors at a memorial ceremony in Nagasaki's Peace Park.</p>
+<p>过去一小时里，我们聆听了长崎和平公园纪念仪式上原子弹幸存者们的合唱。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959922" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-17-080" data-start="00:01:17,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 9,000 people are there this morning to remember the fallen atomic bomb victims.</p>
+<p>今晨有超过9000人聚集于此悼念原子弹遇难者。</p>
+<p><button class="play-button sentence" id="s-00-01-23-638" data-start="00:01:23,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That includes top Japanese officials as well as foreign diplomats for more than 100 countries.</p>
+<p>其中包括日本高层官员及来自100多个国家的外交官。</p>
+<p><button class="play-button sentence" id="s-00-01-30-159" data-start="00:01:30,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are pictures from the memorial ceremony near the bombsite in the Matsuyama neighborhood.</p>
+<p>这些是松山街区爆炸点附近纪念仪式的画面。</p>
+<p><button class="play-button sentence" id="s-00-01-36-750" data-start="00:01:36,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The attacks on Hiroshima and Nagasaki hastened the end of the Second World War but killed more than 118,000 people lost instantly across both cities.</p>
+<p>广岛与长崎的袭击加速了二战结束，但造成两城超11.8万人当场死亡。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959891" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-48-480" data-start="00:01:48,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many more people died later as a result from radiation sickness, bringing the final number of those believed to have been killed to at least 200,000.</p>
+<p>更多人后来因辐射病去世，最终死亡人数估计至少达20万。</p>
+<p><button class="play-button sentence" id="s-00-01-59-840" data-start="00:01:59,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, despite that staggering toll, eight decades on the debate over nuclear disarmament continues and despite treaties, promises and a world increasingly at risk, the number of nuclear weapons remains high.</p>
+<p>尽管伤亡惊人，八十年来核裁军争论持续；尽管有条约承诺，世界风险加剧，核武器数量仍居高不下。</p>
+<p><button class="play-button sentence" id="s-00-02-13-413" data-start="00:02:13,413" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's thought there's a total of 12,300 nuclear weapons in the world right now.</p>
+<p>据信目前全球共有12300枚核武器。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959861" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-18-800" data-start="00:02:18,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joining us live on the program is Kai Bird of Pulitzer Prize-winning historian and journalist, best known for his works on the atomic bombings of Hiroshima and Nagasaki, and Michael Bam, Bell of Combat Veteran and World War II historian.</p>
+<p>节目现场连线嘉宾包括普利策奖得主、以研究广岛长崎原子弹闻名的历史学家兼记者Kai Bird，以及二战历史学家、退伍军人Michael Bam Bell。</p>
+<p><button class="play-button sentence" id="s-00-02-32-887" data-start="00:02:32,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very good to have you both on the program with us.</p>
+<p>非常荣幸二位参与节目。</p>
+<p><button class="play-button sentence" id="s-00-02-35-999" data-start="00:02:35,999" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kai, if we can begin with you, 80 years.</p>
+<p>Kai，从您开始——80年。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959841" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-38-558" data-start="00:02:38,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw the events in Hiroshima, three days ago.</p>
+<p>三天前我们见证了广岛纪念活动。</p>
+<p><button class="play-button sentence" id="s-00-02-41-642" data-start="00:02:41,642" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now Nagasaki's turn to remember the events there 80 years ago.</p>
+<p>如今轮到长崎纪念80年前的事件。</p>
+<p><button class="play-button sentence" id="s-00-02-45-654" data-start="00:02:45,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you talk us through the significance of today?</p>
+<p>能否谈谈今日的意义？</p>
+<p><button class="play-button sentence" id="s-00-02-49-934" data-start="00:02:49,934" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it's highly significant.</p>
+<p>这意义重大。</p>
+<p><button class="play-button sentence" id="s-00-02-52-675" data-start="00:02:52,675" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the dawning of the atomic age that we're going to always be living with.</p>
+<p>这是原子时代的黎明，我们将永远与之共存。</p>
+<p><button class="play-button sentence" id="s-00-02-59-210" data-start="00:02:59,210" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to have to be figuring out how to live with the bomb.</p>
+<p>我们必须学会如何与核弹共处。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959816" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-03-310" data-start="00:03:03,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it's important to...</p>
+<p>我认为重要的是...</p>
+<p><button class="play-button sentence" id="s-00-03-05-638" data-start="00:03:05,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kai, I'm sorry, if I may just cut in.</p>
+<p>Kai抱歉打断——</p>
+<p><button class="play-button sentence" id="s-00-03-08-139" data-start="00:03:08,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just want to bring our audiences the sounds of the bells ringing in Nagasaki.</p>
+<p>请听众聆听长崎鸣钟声。</p>
+<p><button class="play-button sentence" id="s-00-03-17-638" data-start="00:03:17,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, yes.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-03-32-878" data-start="00:03:32,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ok, thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-03-45-758" data-start="00:03:45,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ok, it's over.</p>
+<p>钟声结束了。</p>
+<p><button class="play-button sentence" id="s-00-03-46-778" data-start="00:03:46,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please enjoy your meal.</p>
+<p>请享用您的餐点。</p>
+<p><button class="play-button sentence" id="s-00-03-52-479" data-start="00:03:52,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, cool time.</p>
+<p>凉爽时刻。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-53-668" data-start="00:03:53,668" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is Bell's ringing to mark the exact moment that the bomb exploded over Nagasaki three days afterwards in a similar bomb dropped over Hiroshima.</p>
+<p>钟声标记炸弹在长崎上空爆炸的精确时刻——三天前类似炸弹落在广岛。</p>
+<p><button class="play-button sentence" id="s-00-04-04-990" data-start="00:04:04,990" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that is the first time that the two bells have run together in 80 years.</p>
+<p>这是80年来两座钟首次同时鸣响。</p>
+<p><button class="play-button sentence" id="s-00-04-11-318" data-start="00:04:11,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only one of the bells could be recovered.</p>
+<p>其中一座钟得以修复。</p>
+<p><button class="play-button sentence" id="s-00-04-16-000" data-start="00:04:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The other one was rebuilt, restored as a result of donations from American church goers.</p>
+<p>另一座通过美国教徒捐款重建修复。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959733" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-26-240" data-start="00:04:26,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the mayor of Nagasaki now approaching the memorial in the peace park.</p>
+<p>长崎市长正走向和平公园纪念碑。</p>
+<p><button class="play-button sentence" id="s-00-04-31-174" data-start="00:04:31,174" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's expected to speak to crowds shortly.</p>
+<p>预计他将很快向人群讲话。</p>
+<p><button class="play-button sentence" id="s-00-04-34-380" data-start="00:04:34,380" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's take a listen to what he has to say.</p>
+<p>请听他发言。</p>
+<p><button class="play-button sentence" id="s-00-04-37-973" data-start="00:04:37,973" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 10 languages.</p>
+<p>十种语言。</p>
+<p><button class="play-button sentence" id="s-00-04-52-480" data-start="00:04:52,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nagasaki.</p>
+<p>长崎。</p>
+<p><button class="play-button sentence" id="s-00-04-53-598" data-start="00:04:53,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The peace.</p>
+<p>和平。</p>
+<p><button class="play-button sentence" id="s-00-04-59-920" data-start="00:04:59,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, another 9, 4 blocks, 65.</p>
+<p>另9区4段65号。</p>
+<p><button class="play-button sentence" id="s-00-05-14-000" data-start="00:05:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 10 years.</p>
+<p>十年。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959684" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-15-920" data-start="00:05:15,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> do you expect it this world.</p>
+<p>你期待这样的世界吗。</p>
+<p><button class="play-button sentence" id="s-00-05-23-458" data-start="00:05:23,458" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm sure.</p>
+<p>我确信。</p>
+<p><button class="play-button sentence" id="s-00-05-26-079" data-start="00:05:26,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This fight, and now immediately, conflict, it's a vision cycle.</p>
+<p>这场斗争，此刻冲突，是愿景循环。</p>
+<p><button class="play-button sentence" id="s-00-05-37-120" data-start="00:05:37,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> conflicts are deteriorating.</p>
+<p>冲突正在恶化。</p>
+<p><button class="play-button sentence" id="s-00-05-39-519" data-start="00:05:39,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Getting worse in different parts of the world.</p>
+<p>全球多地局势加剧。</p>
+<p><button class="play-button sentence" id="s-00-05-43-439" data-start="00:05:43,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need to have the unique, stronghold of the Kiki to make the creation of human beings.</p>
+<p>我们需要Kiki的独特堡垒来实现人类创造。</p>
+<p><button class="play-button sentence" id="s-00-05-53-720" data-start="00:05:53,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is an immediate threat to one of the two of us.</p>
+<p>这对我们双方都是直接威胁。</p>
+<p><button class="play-button sentence" id="s-00-05-59-680" data-start="00:05:59,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> COVID-19 weeks are coming.</p>
+<p>COVID-19周即将到来。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959635" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-04-899" data-start="00:06:04,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the former tiny Maoatengalibanyangan diamond left and right people, there were dead bodies like stones on the ground.</p>
+<p>在昔日的Maoatengalibanyangan钻石区，左右都是如石块般的尸体。</p>
+<p><button class="play-button sentence" id="s-00-06-37-519" data-start="00:06:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he said with the scars in the body he exposed making up this appeal to the world.</p>
+<p>他展示身上伤痕向世界呼吁。</p>
+<p><button class="play-button sentence" id="s-00-06-51-519" data-start="00:06:51,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look at my eyes.</p>
+<p>看我的眼睛。</p>
+<p><button class="play-button sentence" id="s-00-06-54-519" data-start="00:06:54,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I don't want anyone to.</p>
+<p>我不希望任何人。</p>
+<p><button class="play-button sentence" id="s-00-07-04-519" data-start="00:07:04,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have no other way to do it.</p>
+<p>我别无选择。</p>
+<p><button class="play-button sentence" id="s-00-07-10-519" data-start="00:07:10,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have no other way to do it.</p>
+<p>我别无他法。</p>
+<p><button class="play-button sentence" id="s-00-07-16-519" data-start="00:07:16,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have no other way to do it.</p>
+<p>我无路可走。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959557" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-22-519" data-start="00:07:22,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No more hip-hop.</p>
+<p>不再有嘻哈。</p>
+<p><button class="play-button sentence" id="s-00-07-28-519" data-start="00:07:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is what Hibakusha thought.</p>
+<p>这是被爆者的心声。</p>
+<p><button class="play-button sentence" id="s-00-07-38-519" data-start="00:07:38,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hibakusha had this conviction to move the world.</p>
+<p>被爆者怀揣撼动世界的信念。</p>
+<p><button class="play-button sentence" id="s-00-07-46-519" data-start="00:07:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-07-48-519" data-start="00:07:48,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Japan Confederation of A&amp;H Bomb, Sufferers, Kong.</p>
+<p>日本原水爆受害者团体协议会。</p>
+<p><button class="play-button sentence" id="s-00-07-53-519" data-start="00:07:53,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The organization was awarded no peace prize, who suffered from the bottling and psychological wounds.</p>
+<p>该组织未获和平奖，成员承受身心创伤。</p>
+<p><button class="play-button sentence" id="s-00-08-09-519" data-start="00:08:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Made their stand in Nagasaki.</p>
+<p>在长崎表明立场。</p>
+<p><button class="play-button sentence" id="s-00-08-19-519" data-start="00:08:19,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People can abolish the war, the nuclear weapons.</p>
+<p>人们能废除战争与核武器。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959494" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-25-519" data-start="00:08:25,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They had their hopes.</p>
+<p>他们怀抱希望。</p>
+<p><button class="play-button sentence" id="s-00-08-31-519" data-start="00:08:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Citizens supported this move.</p>
+<p>市民支持此举。</p>
+<p><button class="play-button sentence" id="s-00-08-38-519" data-start="00:08:38,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government has been in Nagasaki for the first time.</p>
+<p>政府首次来到长崎。</p>
+<p><button class="play-button sentence" id="s-00-08-44-519" data-start="00:08:44,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Earth Citizen, the Earth Citizen, that we can work together for the peace in the future.</p>
+<p>地球公民，地球公民，我们能为未来和平携手。</p>
+<p><button class="play-button sentence" id="s-00-08-56-519" data-start="00:08:56,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Earth Citizen, this speed can mobilize people so that we can achieve world peace.</p>
+<p>地球公民，这速度能动员人们实现世界和平。</p>
+<p><button class="play-button sentence" id="s-00-09-08-519" data-start="00:09:08,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Earth Citizen, the citizens in the world.</p>
+<p>地球公民，世界公民。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959443" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-16-519" data-start="00:09:16,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We may be small and power may be small, but we can put our hands together to make the difference.</p>
+<p>我们虽渺小，力量虽微，但携手便能改变。</p>
+<p><button class="play-button sentence" id="s-00-09-28-519" data-start="00:09:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hibakusha made action.</p>
+<p>被爆者采取行动。</p>
+<p><button class="play-button sentence" id="s-00-09-31-519" data-start="00:09:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our first step is to know each other, through dialogue and exchanges.</p>
+<p>我们第一步是通过对话交流相互了解。</p>
+<p><button class="play-button sentence" id="s-00-09-39-519" data-start="00:09:39,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a role we can play as citizens through sport and art.</p>
+<p>这是公民通过体育艺术可扮演的角色。</p>
+<p><button class="play-button sentence" id="s-00-09-56-519" data-start="00:09:56,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Through the ripped means of communication we can communicate with each other, go by.</p>
+<p>通过现有通讯手段我们能够交流。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959394" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-05-519" data-start="00:10:05,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nagasaki is hosting more.</p>
+<p>长崎正承载更多。</p>
+<p><button class="play-button sentence" id="s-00-10-09-519" data-start="00:10:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> May our peace at the moment.</p>
+<p>愿此刻和平永驻。</p>
+<p><button class="play-button sentence" id="s-00-10-14-519" data-start="00:10:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are making this solidarity movement as Earth Citizen.</p>
+<p>我们作为地球公民发起团结运动。</p>
+<p><button class="play-button sentence" id="s-00-10-21-519" data-start="00:10:21,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can understand each other.</p>
+<p>我们能相互理解。</p>
+<p><button class="play-button sentence" id="s-00-10-27-519" data-start="00:10:27,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can work towards one peace.</p>
+<p>我们能共筑和平。</p>
+<p><button class="play-button sentence" id="s-00-10-33-519" data-start="00:10:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are leading.</p>
+<p>我们在引领。</p>
+<p><button class="play-button sentence" id="s-00-10-36-519" data-start="00:10:36,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earth Citizen.</p>
+<p>地球公民。</p>
+<p><button class="play-button sentence" id="s-00-10-42-519" data-start="00:10:42,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the eighth anniversary of the United Nations, with a vision of creating a peaceful world.</p>
+<p>联合国成立八周年，怀揣创造和平世界的愿景。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959349" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-50-519" data-start="00:10:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This box, the Higurasi, is the anniversary of the United Nations.</p>
+<p>此盒——Higurasi，象征联合国周年。</p>
+<p><button class="play-button sentence" id="s-00-10-58-519" data-start="00:10:58,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We must get back to the border by law.</p>
+<p>我们必须依法回归边界。</p>
+<p><button class="play-button sentence" id="s-00-11-05-519" data-start="00:11:05,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meeting will be held next year.</p>
+<p>会议将于明年举行。</p>
+<p><button class="play-button sentence" id="s-00-11-10-519" data-start="00:11:10,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is an important anniversary.</p>
+<p>这是重要周年纪念。</p>
+<p><button class="play-button sentence" id="s-00-11-16-519" data-start="00:11:16,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In order for us to abolish the nuclear weapons, it is important to make a clear path.</p>
+<p>为废除核武器，明确路径至关重要。</p>
+<p><button class="play-button sentence" id="s-00-11-25-519" data-start="00:11:25,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can postpone this.</p>
+<p>我们可以推迟。</p>
+<p><button class="play-button sentence" id="s-00-11-29-519" data-start="00:11:29,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can never postpone this.</p>
+<p>我们绝不能推迟。</p>
+<p><button class="play-button sentence" id="s-00-11-33-519" data-start="00:11:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would like to tell this to the Japanese government.</p>
+<p>我想告知日本政府。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959299" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-40-519" data-start="00:11:40,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have back to ask them to respect the right spirit of peaceful constitution.</p>
+<p>我们要求他们尊重和平宪法的真谛。</p>
+<p><button class="play-button sentence" id="s-00-11-53-519" data-start="00:11:53,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to then defend it on nuclear deterrent to work as a leader for peace.</p>
+<p>我们必须捍卫核威慑下的和平领导者角色。</p>
+<p><button class="play-button sentence" id="s-00-12-03-519" data-start="00:12:03,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The average age of the box is 86.</p>
+<p>被爆者平均年龄86岁。</p>
+<p><button class="play-button sentence" id="s-00-12-09-519" data-start="00:12:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't have too much time.</p>
+<p>他们时日无多。</p>
+<p><button class="play-button sentence" id="s-00-12-14-519" data-start="00:12:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is important to strengthen support for them.</p>
+<p>加强支持至关重要。</p>
+<p><button class="play-button sentence" id="s-00-12-20-519" data-start="00:12:20,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As soon as possible, we need to provide support for the box that has not been provided to the surface of support.</p>
+<p>需尽快为未获援助的被爆者提供支持。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959248" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-31-519" data-start="00:12:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Victims of A-Born, H-Born, A-Born, and all victims of the same respect.</p>
+<p>原子弹氢弹受害者应获同等尊重。</p>
+<p><button class="play-button sentence" id="s-00-12-41-519" data-start="00:12:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On this, the day of age is anniversary, it is Nagasaki's vision.</p>
+<p>在此周年纪念日，这是长崎的愿景。</p>
+<p><button class="play-button sentence" id="s-00-12-48-519" data-start="00:12:48,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To the United Nations, this is the memory of Hibaku A-Born memory.</p>
+<p>致联合国：这是被爆原子弹的记忆。</p>
+<p><button class="play-button sentence" id="s-00-12-57-519" data-start="00:12:57,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will keep telling you sorry.</p>
+<p>我们将持续诉说这份痛楚。</p>
+<p><button class="play-button sentence" id="s-00-13-00-519" data-start="00:13:00,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In order for us to make Nagasaki as the human's lost, A-Born, who is the victim, will renew my commitment to the 8th of August.</p>
+<p>为使长崎成为人类最后的被爆地，受害者将在8月8日重申承诺。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959201" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-18-519" data-start="00:13:18,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shiro, Subechi, August 9th, 25th.</p>
+<p>白、须部地，8月9日25时。</p>
+<p><button class="play-button sentence" id="s-00-13-25-519" data-start="00:13:25,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is the mayor of Nagasaki.</p>
+<p>这是长崎市长的发言。</p>
+<p><button class="play-button sentence" id="s-00-13-27-519" data-start="00:13:27,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shiro, Suzuki, they are giving the Nagasaki peace declaration at the peace park there in Nagasaki.</p>
+<p>白、铃木，他们正在长崎和平公园发表和平宣言。</p>
+<p><button class="play-button sentence" id="s-00-13-34-519" data-start="00:13:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you can see, it is just coming up.</p>
+<p>如您所见，宣言即将开始。</p>
+<p><button class="play-button sentence" id="s-00-13-36-519" data-start="00:13:36,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had two bells ringing at two minutes.</p>
+<p>两座钟鸣响两分钟。</p>
+<p><button class="play-button sentence" id="s-00-13-41-519" data-start="00:13:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last 11 marking, the exact moment that the bomb was detonated over Nagasaki on the 9th of August 1945.</p>
+<p>最后11秒标记1945年8月9日炸弹在长崎爆炸的精确时刻。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959167" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-52-519" data-start="00:13:52,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three days after a similar bomb had been detonated over Hiroshima.</p>
+<p>三天前类似炸弹在广岛引爆。</p>
+<p><button class="play-button sentence" id="s-00-13-57-519" data-start="00:13:57,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joining us on the program is Kai Bird, a surprise winning historian and journalist.</p>
+<p>节目嘉宾Kai Bird是意外获奖的历史学家兼记者。</p>
+<p><button class="play-button sentence" id="s-00-14-02-519" data-start="00:14:02,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michael Bell, a combat veteran and World War II historian.</p>
+<p>Michael Bell是二战老兵兼历史学家。</p>
+<p><button class="play-button sentence" id="s-00-14-06-519" data-start="00:14:06,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If I can come back to you, we heard the mayor of Nagasaki saying that it is important.</p>
+<p>回到您——长崎市长强调重要性。</p>
+<p><button class="play-button sentence" id="s-00-14-12-519" data-start="00:14:12,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The memory of these events is not forgotten and says Nagasaki will not give up its mission of peace.</p>
+<p>这些事件的记忆不容遗忘，长崎不会放弃和平使命。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959137" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-22-519" data-start="00:14:22,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, absolutely.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-14-24-079" data-start="00:14:24,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a very important moment.</p>
+<p>这是重要时刻。</p>
+<p><button class="play-button sentence" id="s-00-14-26-519" data-start="00:14:26,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I take issue as an historian with the whole notion that these two bombs hasten the end of the war.</p>
+<p>作为历史学家，我质疑这两颗炸弹加速战争结束的说法。</p>
+<p><button class="play-button sentence" id="s-00-14-34-519" data-start="00:14:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know that is a controversial statement, but I think the historical evidence that has been unearthed over the decades really supports the notion that the war actually was ended by the Soviet entry into the Pacific War.</p>
+<p>这说法具争议性，但数十年来发掘的史料支持战争实际因苏联参战而结束的观点。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959109" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-50-519" data-start="00:14:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And not the two bombs that were dropped on August 6th and August 9th.</p>
+<p>而非8月6日与9日投下的两颗炸弹。</p>
+<p><button class="play-button sentence" id="s-00-14-55-519" data-start="00:14:55,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it is important to remember that Robert Oppenheimer, the father of the atomic bomb, the man who created this weapon of mass destruction, said just three months after Hiroshima and Nagasaki were bombed, he described these weapons as weapons of terror that were used on essentially already defeated enemy.</p>
+<p>需记住原子弹之父奥本海默在轰炸后三个月称这些为恐怖武器，用于实质上已战败的敌人。</p>
+<p><button class="play-button sentence" id="s-00-15-20-519" data-start="00:15:20,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I would argue that these weapons are not military weapons.</p>
+<p>因此我认为这些非军事武器。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959073" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-26-108" data-start="00:15:26,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have no military use.</p>
+<p>它们无军事用途。</p>
+<p><button class="play-button sentence" id="s-00-15-28-519" data-start="00:15:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, you know, in the first instance, Hiroshima and Nagasaki, quite clearly, were not military targets.</p>
+<p>首先广岛长崎显然非军事目标。</p>
+<p><button class="play-button sentence" id="s-00-15-38-519" data-start="00:15:38,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 98% of the victims were civilians, women and children and old men, not soldiers.</p>
+<p>98%遇难者是平民——妇孺老人，非士兵。</p>
+<p><button class="play-button sentence" id="s-00-15-46-519" data-start="00:15:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's the nature of this weapon.</p>
+<p>这就是该武器的本质。</p>
+<p><button class="play-button sentence" id="s-00-15-49-658" data-start="00:15:49,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is so large, one weapon that can take out an entire city.</p>
+<p>威力巨大，一弹可摧毁整座城市。</p>
+<p><button class="play-button sentence" id="s-00-15-54-519" data-start="00:15:54,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I mean, they are weapons.</p>
+<p>是的，它们是武器。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959043" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-56-519" data-start="00:15:56,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'd say it's controversial, but to be honest, not completely uncommon view that, as you mentioned, these weapons did not facilitate an end of the war.</p>
+<p>虽具争议，但如您所言，这些武器未促成战争结束的观点并不罕见。</p>
+<p><button class="play-button sentence" id="s-00-16-07-519" data-start="00:16:07,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was coming anyway and many academics and writers and historians have put forward that theory.</p>
+<p>战争本将结束，许多学者作家历史学家提出该理论。</p>
+<p><button class="play-button sentence" id="s-00-16-14-850" data-start="00:16:14,850" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michael Bell, if I can come to you picking up from Kai's points there when America was planning these operations, they were modeling and building models of Japanese civilian homes.</p>
+<p>Michael Bell，接续Kai的观点——美国策划行动时曾建模日本民宅。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208959011" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-28-519" data-start="00:16:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kai said these were not military targets necessarily.</p>
+<p>Kai称这些未必是军事目标。</p>
+<p><button class="play-button sentence" id="s-00-16-32-032" data-start="00:16:32,032" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were striking.</p>
+<p>它们是打击目标。</p>
+<p><button class="play-button sentence" id="s-00-16-33-331" data-start="00:16:33,331" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We live in a world now where there are more than 12,000 nuclear weapons.</p>
+<p>当今世界存在超1.2万枚核武器。</p>
+<p><button class="play-button sentence" id="s-00-16-37-838" data-start="00:16:37,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's thought in the world.</p>
+<p>据信如此。</p>
+<p><button class="play-button sentence" id="s-00-16-39-519" data-start="00:16:39,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How is this mission of peace progressing, would you say?</p>
+<p>您认为和平使命进展如何？</p>
+<p><button class="play-button sentence" id="s-00-16-45-519" data-start="00:16:45,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I mean, certainly as Kai suggested, you know, the proliferation of nuclear weapons today is incredibly concerning, you know, particularly as we as we move from the weapons of World War II into thermal nuclear warheads today.</p>
+<p>如Kai所言，当今核扩散极其令人担忧，尤其从二战武器转向现代热核弹头。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958978" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-01-519" data-start="00:17:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How do we actually have responsible state craft that can reduce these arsenals?</p>
+<p>如何通过负责任的国家行为减少这些武库？</p>
+<p><button class="play-button sentence" id="s-00-17-07-519" data-start="00:17:07,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's difficult to imagine that we can turn back the nuclear age as he's described it.</p>
+<p>难以想象能如他所言逆转核时代。</p>
+<p><button class="play-button sentence" id="s-00-17-14-519" data-start="00:17:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And certainly there's great concern.</p>
+<p>确实存在重大忧虑。</p>
+<p><button class="play-button sentence" id="s-00-17-17-505" data-start="00:17:17,505" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think, you know, to understand the perspectives, the moral aspects of the use of these weapons is really important for our statesman today.</p>
+<p>我认为理解使用这些武器的道德层面对当今政治家至关重要。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958951" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-28-519" data-start="00:17:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as they think through the implications of the policies that are pursued.</p>
+<p>当他们思考政策影响时。</p>
+<p><button class="play-button sentence" id="s-00-17-33-519" data-start="00:17:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, on that point, you know, various treaties and deals exist to prevent the proliferation of nuclear weapons and to prevent their use.</p>
+<p>关于这点，现有各种条约协议防止核扩散与使用。</p>
+<p><button class="play-button sentence" id="s-00-17-43-519" data-start="00:17:43,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we are seeing some of those deals starting to fall apart and people walk away from them.</p>
+<p>但我们看到部分协议开始破裂，各方退出。</p>
+<p><button class="play-button sentence" id="s-00-17-49-655" data-start="00:17:49,655" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michael, is that the way things are going?</p>
+<p>Michael，这是趋势吗？</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958927" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-52-519" data-start="00:17:52,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, I think you can certainly make that case, you know, in some ways, I think today's ceremony is important because it reminds us of the terrible cost of these weapons.</p>
+<p>某种程度上确实如此，今日仪式很重要，它提醒我们这些武器的可怕代价。</p>
+<p><button class="play-button sentence" id="s-00-18-05-519" data-start="00:18:05,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You may argue that there's strategic value and stability, but you know, that's only if we have people that understand the implications of their use, the historical consequences.</p>
+<p>或可争论其战略价值与稳定性，但这需人们理解使用后果与历史影响。</p>
+<p><button class="play-button sentence" id="s-00-18-16-519" data-start="00:18:16,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And really, you know, the significantly greater potential of present day nuclear weapons, because even even more fundamental destruction, not just in cities, but you know, to our planet itself.</p>
+<p>当今核武器更具毁灭潜力——不仅针对城市，更针对整个星球。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958885" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-34-519" data-start="00:18:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kai, if I can ask you about the context of Nagasaki, we had three days previously seen this devastating weapon detonated above Hiroshima.</p>
+<p>Kai，请问长崎背景——三天前我们目睹该毁灭性武器在广岛引爆。</p>
+<p><button class="play-button sentence" id="s-00-18-46-519" data-start="00:18:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why did the Japanese Emperor not decide to surrender then?</p>
+<p>为何日本天皇当时未决定投降？</p>
+<p><button class="play-button sentence" id="s-00-18-53-519" data-start="00:18:53,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, they actually after Hiroshima, they had no idea what had actually taken place on the ground.</p>
+<p>广岛后他们并不清楚地面实况。</p>
+<p><button class="play-button sentence" id="s-00-19-02-130" data-start="00:19:02,130" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They dispatched a team of people to investigate the nature of the weapon and the devastation that had happened, but it took time to go there and three days is nothing.</p>
+<p>他们派出一队人马去调查武器的性质以及已发生的破坏，但前往那里需要时间，而三天根本不算什么。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-17-519" data-start="00:19:17,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so three days later, Nagasaki happened and, you know, if you can argue that Hiroshima was a psychological terror weapon that would shock the Japanese hard line generals into surrendering, you would have needed to give them a few more days a week or even two to figure out what had happened and to absorb the fact three days later, Nagasaki happened.</p>
+<p>因此三天后，长崎遭到轰炸。要知道，如果有人认为广岛原子弹是一种心理恐怖武器，旨在震慑日本强硬派将领投降，那他们本需要更多时间——一周甚至两周——来弄清发生了什么并消化这一事实，然而三天后长崎就遭袭了。</p>
+<p><button class="play-button sentence" id="s-00-19-44-519" data-start="00:19:44,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, you know, Harry Truman, the president at the time, did not actually know that Nagasaki was going to happen three days after Hiroshima.</p>
+<p>当时的总统哈里·杜鲁门其实并不知道长崎会在广岛遭袭三天后被轰炸。</p>
+<p><button class="play-button sentence" id="s-00-19-55-905" data-start="00:19:55,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He gave sort of a blanket directive to use these weapons.</p>
+<p>他只是下达了使用这些武器的笼统指令。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958799" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-00-519" data-start="00:20:00,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And General Groves, who was in charge, wanted to very quickly use both weapons, one plutonium based weapon and the second uranium, a different type of weapon.</p>
+<p>而负责此事的格罗夫斯将军希望尽快使用两种武器——一枚钚弹和另一枚不同类型的铀弹。</p>
+<p><button class="play-button sentence" id="s-00-20-17-334" data-start="00:20:17,334" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He wanted to quote, test both.</p>
+<p>用他的话说，他想"测试两者"。</p>
+<p><button class="play-button sentence" id="s-00-20-20-519" data-start="00:20:20,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they chose, they had five Japanese cities that were pristine targets that had been untouched by all the firebombing.</p>
+<p>他们从五个未遭燃烧弹袭击的原始目标城市中做出了选择。</p>
+<p><button class="play-button sentence" id="s-00-20-31-519" data-start="00:20:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so General Groves, you know, put those five cities on the list and he just ordered it to happen.</p>
+<p>于是格罗夫斯将军将这五座城市列入名单并直接下令实施。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958761" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-38-027" data-start="00:20:38,027" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And after Nagasaki, it's, it's important to remember that Harry Truman noted in his private handwritten diary that he had given orders to stop any further atomic attacks.</p>
+<p>长崎之后必须记住：哈里·杜鲁门在私人日记中写道，他已下令停止进一步的原子弹攻击。</p>
+<p><button class="play-button sentence" id="s-00-20-49-519" data-start="00:20:49,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He didn't want to see any more reporting about mass civilian casualties of women and children.</p>
+<p>他不想再看到关于妇女儿童大规模伤亡的报道。</p>
+<p><button class="play-button sentence" id="s-00-20-59-519" data-start="00:20:59,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're seeing an understanding almost if I make eye.</p>
+<p>我们几乎能感受到某种共识——</p>
+<p><button class="play-button sentence" id="s-00-21-02-654" data-start="00:21:02,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're seeing these pictures from the peace park now, but the children's choir is assembling.</p>
+<p>此刻我们正看着和平公园的画面，儿童合唱团正在集结。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958731" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-08-341" data-start="00:21:08,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've just seen one of the survivors speaking to the cries there.</p>
+<p>我们刚看到一位幸存者在现场含泪发言。</p>
+<p><button class="play-button sentence" id="s-00-21-12-279" data-start="00:21:12,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's take a listen.</p>
+<p>请听现场。</p>
+<p><button class="play-button sentence" id="s-00-21-19-519" data-start="00:21:19,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, we're going to introduce the six-year-old Shiroyama elementary school students.</p>
+<p>今天我们将介绍六岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-21-29-519" data-start="00:21:29,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the six-year-old students.</p>
+<p>我们将介绍这些六岁的学生。</p>
+<p><button class="play-button sentence" id="s-00-22-19-519" data-start="00:22:19,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the six-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍六岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-22-29-519" data-start="00:22:29,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the six-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍六岁的城山小学学生们。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958641" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-38-519" data-start="00:22:38,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the seven-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍七岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-22-47-519" data-start="00:22:47,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the seven-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍七岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-22-56-519" data-start="00:22:56,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the seven-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍七岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-23-05-519" data-start="00:23:05,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the seven-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍七岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-23-14-519" data-start="00:23:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the seven-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍七岁的城山小学学生们。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958596" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-23-519" data-start="00:23:23,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to introduce the seven-year-old Shiroyama elementary school students.</p>
+<p>我们将介绍七岁的城山小学学生们。</p>
+<p><button class="play-button sentence" id="s-00-23-32-519" data-start="00:23:32,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Children's choir there in Nagasaki Peace Park in front of the Nagasaki Peace Statue.</p>
+<p>儿童合唱团此刻就在长崎和平公园的和平雕像前。</p>
+<p><button class="play-button sentence" id="s-00-23-40-519" data-start="00:23:40,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's right hand pointing upwards as a warning of nuclear threat.</p>
+<p>雕像右手指向天空警示核威胁。</p>
+<p><button class="play-button sentence" id="s-00-23-45-519" data-start="00:23:45,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The left hand extended horizontally symbolizing eternal peace.</p>
+<p>左手水平伸展象征永恒和平。</p>
+<p><button class="play-button sentence" id="s-00-23-50-519" data-start="00:23:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The statues eyes are closed in prayer with the victims' souls.</p>
+<p>雕像双目轻闭，与遇难者灵魂一同祈祷。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958563" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-56-519" data-start="00:23:56,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the 80th anniversary of the 9th of August, 2025, 80 years since the US dropped its second atomic bomb of World War II.</p>
+<p>今天是2025年8月9日——美国在二战中投下第二颗原子弹的80周年纪念日。</p>
+<p><button class="play-button sentence" id="s-00-24-06-519" data-start="00:24:06,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This time on the city of Nagasaki, we joined on the program by Kai Bird and Michael Bell to experts on this topic.</p>
+<p>这次在长崎市，我们邀请到该话题专家凯·伯德和迈克尔·贝尔参与节目。</p>
+<p><button class="play-button sentence" id="s-00-24-14-519" data-start="00:24:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michael, if I can come back to you now, these were two weapons which were detonated towards the end of the war.</p>
+<p>迈克尔，请回到这个话题——这两枚武器是在战争末期引爆的。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958534" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-25-519" data-start="00:24:25,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got brought about with them a nuclear threat that the world had not seen before and pushed us in to the Cold War.</p>
+<p>它们带来了前所未有的核威胁，将我们推入冷战。</p>
+<p><button class="play-button sentence" id="s-00-24-34-519" data-start="00:24:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was an unprecedented fear during that time.</p>
+<p>那是当时史无前例的恐惧。</p>
+<p><button class="play-button sentence" id="s-00-24-44-519" data-start="00:24:44,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that's absolutely right.</p>
+<p>我认为完全正确。</p>
+<p><button class="play-button sentence" id="s-00-24-46-519" data-start="00:24:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, you know, Tukuyas, as you look at the ebb and flow of the Cold War, the fears of incredible proliferation, but also when you start to have multiple, multiple targeted warheads, thermonuclear throw weight.</p>
+<p>纵观冷战起伏，人们既恐惧核扩散，也担忧多弹头热核武器的出现。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958492" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-07-519" data-start="00:25:07,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In many ways that the, the Roshman Nagasaki attacks, you know, pale in comparison to the capabilities that unfortunately the world is fielded today in these new personal.</p>
+<p>从许多方面看，广岛长崎的破坏力与当今世界持有的新型武器相比已相形见绌。</p>
+<p><button class="play-button sentence" id="s-00-25-17-519" data-start="00:25:17,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You also have emerging nuclear powers that actually start to think about the war fighting relevance and nuclear weapons, how they can use them.</p>
+<p>新兴核国家甚至开始考虑核武器的实战价值及运用方式。</p>
+<p><button class="play-button sentence" id="s-00-25-25-519" data-start="00:25:25,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that's one of the important lessons of both Roshman Nagasaki that this guy suggested these are not, you know, war fighting weapons.</p>
+<p>这正是广岛长崎的重要教训——正如这位所言，这些并非实战武器。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958464" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-35-519" data-start="00:25:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These, these are, you know, psychological or terror weapons.</p>
+<p>它们是心理威慑或恐怖武器。</p>
+<p><button class="play-button sentence" id="s-00-25-41-519" data-start="00:25:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the idea that these have a war fighting relevance today, I think is something that is important for us to reflect on these attacks, to understand the implications, the moral character.</p>
+<p>但认为它们具有实战价值的观点，值得我们通过反思这些袭击事件来理解其道德内涵。</p>
+<p><button class="play-button sentence" id="s-00-25-53-519" data-start="00:25:53,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kai, at the time, how did Nagasaki deal with the aftermath of this weapon?</p>
+<p>凯，当时长崎如何应对核爆后果？</p>
+<p><button class="play-button sentence" id="s-00-26-00-344" data-start="00:26:00,344" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did hospitals cope?</p>
+<p>医院如何处置？</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958437" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-02-581" data-start="00:26:02,581" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What kind of support was available to those who weren't killed instantly?</p>
+<p>幸存者能获得什么支援？</p>
+<p><button class="play-button sentence" id="s-00-26-09-519" data-start="00:26:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, there was very minimal support, you know, hospitals were destroyed.</p>
+<p>支援极其有限——医院已被摧毁。</p>
+<p><button class="play-button sentence" id="s-00-26-15-619" data-start="00:26:15,619" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It took days for Japanese rescue teams to come in and give minimal support to, to the survivors.</p>
+<p>日本救援队数日后才抵达提供基本援助。</p>
+<p><button class="play-button sentence" id="s-00-26-23-519" data-start="00:26:23,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, many people were injured and many people were exposed to extreme radiation that they had no idea what this was about.</p>
+<p>许多人受伤并暴露在强辐射中，却对此一无所知。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958403" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-36-519" data-start="00:26:36,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they, you know, many of them died slowly, very painful deaths over many months, three to six months.</p>
+<p>他们中很多人经历数月（三到六个月）缓慢而痛苦的死亡。</p>
+<p><button class="play-button sentence" id="s-00-26-48-519" data-start="00:26:48,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it was just an extraordinarily new experience for humanity.</p>
+<p>这对人类而言是极其陌生的体验。</p>
+<p><button class="play-button sentence" id="s-00-26-57-519" data-start="00:26:57,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And unfortunately, we're facing the same threat today.</p>
+<p>不幸的是，我们今天仍面临同样威胁。</p>
+<p><button class="play-button sentence" id="s-00-27-01-519" data-start="00:27:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I, I think actually today we face a more imminent threat of using these weapons again than we did even during the Cold War, because people have become complacent.</p>
+<p>我认为当前核武器使用威胁比冷战时期更紧迫——因为人们已变得麻木。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958362" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-17-519" data-start="00:27:17,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've learned after 80 years to survive, to live with the bomb.</p>
+<p>80年来我们学会与核弹共存。</p>
+<p><button class="play-button sentence" id="s-00-27-23-090" data-start="00:27:23,090" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now we're facing multiple military conflicts in the Ukraine where the Russian leader has threatened to use tactical nuclear weapons.</p>
+<p>如今乌克兰等多地爆发军事冲突，俄领导人甚至威胁使用战术核武器。</p>
+<p><button class="play-button sentence" id="s-00-27-35-519" data-start="00:27:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have conflicts in India and Pakistan over Kashmir.</p>
+<p>印巴在克什米尔地区存在冲突。</p>
+<p><button class="play-button sentence" id="s-00-27-39-705" data-start="00:27:39,705" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And both parties are armed with nuclear weapons.</p>
+<p>双方都拥有核武装。</p>
+<p><button class="play-button sentence" id="s-00-27-43-519" data-start="00:27:43,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm excited.</p>
+<p>我很激动。</p>
+<p><button class="play-button sentence" id="s-00-27-44-323" data-start="00:27:44,323" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I apologize again.</p>
+<p>再次致歉。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958334" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-45-494" data-start="00:27:45,494" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shiro Suzuki, I beg your pardon.</p>
+<p>铃木城，请原谅。</p>
+<p><button class="play-button sentence" id="s-00-27-47-470" data-start="00:27:47,470" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shigeru Ishiba, the Japanese Prime Minister is speaking now.</p>
+<p>石破茂首相正在发言。</p>
+<p><button class="play-button sentence" id="s-00-27-51-275" data-start="00:27:51,275" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's take a listen.</p>
+<p>请听讲话。</p>
+<p><button class="play-button sentence" id="s-00-27-52-519" data-start="00:27:52,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the ceremony, I would like to extend my respect for the victims.</p>
+<p>仪式上我谨向遇难者致敬。</p>
+<p><button class="play-button sentence" id="s-00-28-03-519" data-start="00:28:03,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are also people who are suffering from the disease.</p>
+<p>还有深受后遗症折磨的人们。</p>
+<p><button class="play-button sentence" id="s-00-28-12-519" data-start="00:28:12,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 80 years ago today, this city was dismitted by the one bomb.</p>
+<p>80年前的今天，一枚原子弹摧毁了这座城市。</p>
+<p><button class="play-button sentence" id="s-00-28-27-519" data-start="00:28:27,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was more powerful than the one detonated by Hiroshima.</p>
+<p>其威力超过广岛那枚。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958284" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-35-519" data-start="00:28:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 70,000 people were set to be victimized, many of them were citizens.</p>
+<p>约七万人遇难，其中多为市民。</p>
+<p><button class="play-button sentence" id="s-00-28-46-519" data-start="00:28:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were survivors, but they have suffered for a very long time.</p>
+<p>幸存者也长期遭受痛苦。</p>
+<p><button class="play-button sentence" id="s-00-28-54-519" data-start="00:28:54,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 80 years ago, there are still divisions around nuclear disarmament and security situation is very severe.</p>
+<p>80年后的今天，核裁军分歧仍在，安全形势严峻。</p>
+<p><button class="play-button sentence" id="s-00-29-08-519" data-start="00:29:08,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, it is difficult.</p>
+<p>然而前路艰难。</p>
+<p><button class="play-button sentence" id="s-00-29-12-727" data-start="00:29:12,727" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the only country who has received an A-bombs, we are striving to lead the world society community for peace.</p>
+<p>作为唯一遭受原子弹轰炸的国家，我们正努力引领国际社会走向和平。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958229" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-30-519" data-start="00:29:30,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we are making steady steps.</p>
+<p>我们正稳步前行。</p>
+<p><button class="play-button sentence" id="s-00-29-43-519" data-start="00:29:43,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shigeru Ishiba is taking out the Nagasaki's peace partner.</p>
+<p>石破茂正展示长崎和平宣言。</p>
+<p><button class="play-button sentence" id="s-00-29-48-519" data-start="00:29:48,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And these commemoration events remembering 80 years since the United States dropped.</p>
+<p>这些纪念活动铭记美国投弹80周年。</p>
+<p><button class="play-button sentence" id="s-00-29-53-519" data-start="00:29:53,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the second atomic bomb of World War II on Nagasaki.</p>
+<p>这是二战中投向长崎的第二颗原子弹。</p>
+<p><button class="play-button sentence" id="s-00-29-58-519" data-start="00:29:58,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you to my guest, this half-hour, Kaiberd and Michael Bell.</p>
+<p>感谢本时段嘉宾凯·伯德与迈克尔·贝尔。</p>
+<p><button class="play-button sentence" id="s-00-30-03-519" data-start="00:30:03,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To the both of you for joining us, you can get more on the BBC News website.</p>
+<p>二位参与节目，更多内容请访问BBC新闻网站。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TCtszMEbQ/?t=-2208958190" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-09-519" data-start="00:30:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please stick with us here.</p>
+<p>请继续关注我们。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
