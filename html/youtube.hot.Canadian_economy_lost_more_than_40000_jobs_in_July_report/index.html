@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Canada's July Jobs Report: Worst Numbers in Seven Years</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Statistics Canada's July jobs report revealed a shocking loss of 41,000 positions - the worst non-pandemic decline in seven years. Youth unemployment surged past 14%, the highest since 2010, with 34,000 young workers losing jobs. Over half of economic sectors shrank, particularly construction and export-reliant industries hit by US trade wars. Economists now predict a 50% chance of Bank of Canada rate cuts amid rising unemployment.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Canada's July Jobs Report: Worst Numbers in Seven Years</h1>
+<p>【加拿大青年失业率破14%｜失业潮席卷全国｜贸易战重创核心产业】</p>
+<p>Summary:
+Statistics Canada's July jobs report revealed a shocking loss of 41,000 positions - the worst non-pandemic decline in seven years. Youth unemployment surged past 14%, the highest since 2010, with 34,000 young workers losing jobs. Over half of economic sectors shrank, particularly construction and export-reliant industries hit by US trade wars. Economists now predict a 50% chance of Bank of Canada rate cuts amid rising unemployment.</p>
+<p>摘要：
+加拿大统计局7月就业数据令人震惊：非疫情期间单月流失4.1万个岗位，创七年最差纪录。15-24岁青年失业率突破14%，达2010年以来峰值。16个行业中有10个出现岗位缩减，建筑业和受美加贸易战影响的出口行业遭受重创。随着失业率持续攀升，经济学家预测加拿大央行9月降息概率达50%。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 3 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KbttzLEdB/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Statistics Canada has released the jobs report for July and as Scott Peterson explains, the numbers are worse than economists anticipated.</p>
+<p>加拿大统计局发布了7月份的就业报告，正如Scott Peterson所解释的，这些数字比经济学家预期的更糟。</p>
+<p><button class="play-button sentence" id="s-00-00-09-300" data-start="00:00:09,300" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Big disappointment economists were expecting job gains for July.</p>
+<p>令人大失所望的是，经济学家原本预计7月份就业会增加。</p>
+<p><button class="play-button sentence" id="s-00-00-12-800" data-start="00:00:12,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instead, we saw a loss of 41,000 positions outside of the pandemic.</p>
+<p>然而，我们看到非疫情期间减少了41,000个职位。</p>
+<p><button class="play-button sentence" id="s-00-00-18-039" data-start="00:00:18,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the largest loss going back about seven years.</p>
+<p>这是大约七年来最大的损失。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KbttzLEdB/?t=-2208959978" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-21-079" data-start="00:00:21,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And a lot of those positions were full-time jobs.</p>
+<p>其中许多职位是全职工作。</p>
+<p><button class="play-button sentence" id="s-00-00-24-480" data-start="00:00:24,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's important because that is the bread and butter of the economy, people having full-time jobs.</p>
+<p>这一点很重要，因为全职工作是经济的支柱。</p>
+<p><button class="play-button sentence" id="s-00-00-29-199" data-start="00:00:29,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It symbolizes stability.</p>
+<p>它象征着稳定性。</p>
+<p><button class="play-button sentence" id="s-00-00-31-300" data-start="00:00:31,300" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also, most of them were private sector jobs.</p>
+<p>而且，其中大部分是私营部门的工作。</p>
+<p><button class="play-button sentence" id="s-00-00-34-399" data-start="00:00:34,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's important metric as well.</p>
+<p>这也是一个重要的指标。</p>
+<p><button class="play-button sentence" id="s-00-00-36-240" data-start="00:00:36,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But digging into these numbers, many younger people paid the price as well.</p>
+<p>但深入研究这些数字，许多年轻人也付出了代价。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KbttzLEdB/?t=-2208959958" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-41-439" data-start="00:00:41,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those between 15 and 24 years old, for example, that demographic lost 34,000 positions.</p>
+<p>例如，15至24岁的人群失去了34,000个职位。</p>
+<p><button class="play-button sentence" id="s-00-00-48-039" data-start="00:00:48,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People youth unemployment was up over 14 percent.</p>
+<p>年轻人的失业率上升至14%以上。</p>
+<p><button class="play-button sentence" id="s-00-00-52-200" data-start="00:00:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And again, outside of the pandemic, that was the highest it's been since 2010.</p>
+<p>同样，在非疫情期间，这是自2010年以来的最高水平。</p>
+<p><button class="play-button sentence" id="s-00-00-56-520" data-start="00:00:56,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And any students out there looking for summer employment know the problems associated with that.</p>
+<p>任何正在寻找暑期工作的学生都知道与此相关的问题。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KbttzLEdB/?t=-2208959937" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-02-479" data-start="00:01:02,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw a 10 out of 16 sectors shedding jobs for the month.</p>
+<p>我们看到16个行业中有10个在本月减少了工作岗位。</p>
+<p><button class="play-button sentence" id="s-00-01-08-159" data-start="00:01:08,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Employment was down in information sectors.</p>
+<p>信息行业的就业率下降。</p>
+<p><button class="play-button sentence" id="s-00-01-12-000" data-start="00:01:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Culture, recreation and construction.</p>
+<p>文化、娱乐和建筑业。</p>
+<p><button class="play-button sentence" id="s-00-01-15-040" data-start="00:01:15,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alberta led the decline losing about 17,000 jobs.</p>
+<p>阿尔伯塔省领先下滑，失去了约17,000个工作岗位。</p>
+<p><button class="play-button sentence" id="s-00-01-18-560" data-start="00:01:18,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of those in the construction industry, the Ontario jobless rate continues to tick up.</p>
+<p>其中许多是建筑行业的工作，安大略省的失业率继续上升。</p>
+<p><button class="play-button sentence" id="s-00-01-24-120" data-start="00:01:24,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's it now.</p>
+<p>现在就是这样。</p>
+<p><button class="play-button sentence" id="s-00-01-25-120" data-start="00:01:25,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And at that level, that's a full percentage point higher than the national unemployment rate, which is 6.9%.</p>
+<p>在这一水平上，比全国失业率6.9%高出整整一个百分点。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KbttzLEdB/?t=-2208959907" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-32-358" data-start="00:01:32,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this month really showed clear evidence of the destruction caused by the trade war with the US, particularly the aluminum steel and any industry associated with exports into the US.</p>
+<p>因此，本月确实清楚地显示了与美国贸易战造成的破坏，特别是铝钢和任何与美国出口相关的行业。</p>
+<p><button class="play-button sentence" id="s-00-01-44-200" data-start="00:01:44,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also economists are now looking at the Bank of Canada with the rising unemployment rate, potentially going further from the 6.9 where it is now.</p>
+<p>此外，经济学家现在正在关注加拿大央行，随着失业率上升，可能会从目前的6.9%进一步上升。</p>
+<p><button class="play-button sentence" id="s-00-01-52-319" data-start="00:01:52,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're seeing now almost a 50-50 chance that the Bank of Canada will now possibly cut rates the next time it meets and that's September 17th.</p>
+<p>我们现在看到加拿大央行下次会议（9月17日）降息的可能性几乎是五五开。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KbttzLEdB/?t=-2208959879" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-00-118" data-start="00:02:00,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Scott Pitchett and the CBC News Toronto.</p>
+<p>Scott Pitchett，CBC新闻多伦多。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
