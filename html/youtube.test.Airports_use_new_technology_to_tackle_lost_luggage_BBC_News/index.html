@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Future of Airport Logistics: Self-Driving Vehicles Take the Wheel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Airports worldwide are turning to automation to handle increasing passenger numbers and luggage volumes. Amsterdam Airport is trialing self-driving baggage dollies to streamline logistics, though challenges remain in integrating this technology safely. The vehicles use LIDAR and cameras to navigate crowded areas, aiming to optimize luggage transfer between planes. While full airport autonomy is targeted for 2050, gradual implementation is key to ensuring safety in this highly regulated environment.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Future of Airport Logistics: Self-Driving Vehicles Take the Wheel</h1>
+<p>【机场物流革命：自动驾驶车辆如何改变行李运输 | 阿姆斯特丹机场试点 | 2050年全自动化愿景】</p>
+<p>Summary:
+Airports worldwide are turning to automation to handle increasing passenger numbers and luggage volumes. Amsterdam Airport is trialing self-driving baggage dollies to streamline logistics, though challenges remain in integrating this technology safely. The vehicles use LIDAR and cameras to navigate crowded areas, aiming to optimize luggage transfer between planes. While full airport autonomy is targeted for 2050, gradual implementation is key to ensuring safety in this highly regulated environment.</p>
+<p>摘要：
+全球机场正转向自动化技术以应对日益增长的旅客和行李量。阿姆斯特丹机场正在测试自动驾驶行李拖车以优化物流，但安全整合这项技术仍存在挑战。这些车辆通过激光雷达和摄像头在拥挤区域导航，旨在提升行李转运效率。尽管全自动化机场的目标定在2050年，但在这个高度监管的环境中，逐步实施才是确保安全的关键。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 6 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959992" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-08-000" data-start="00:00:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's three hours before the flight, you've got your passport in hand, and your bag just disappeared in a conveyor belt, hopefully making it to the plane.</p>
+<p>距离航班起飞还有三个小时，你手里拿着护照，而你的行李刚刚消失在传送带上，希望它能顺利登机。</p>
+<p><button class="play-button sentence" id="s-00-00-19-920" data-start="00:00:19,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the experience of millions of us every year, and our thirst for travel is making airports like here in Amsterdam look to new technology.</p>
+<p>这是我们每年数百万人的共同经历，对旅行的渴望促使像阿姆斯特丹这样的机场寻求新技术。</p>
+<p><button class="play-button sentence" id="s-00-00-29-359" data-start="00:00:29,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This might seem like obvious places for automation, but with thousands of passengers, bits of luggage and other trucks, introducing self-driving vehicles isn't without its challenges.</p>
+<p>这似乎是自动化的理想场所，但由于成千上万的乘客、行李碎片和其他车辆，引入自动驾驶车辆并非没有挑战。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959959" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-40-878" data-start="00:00:40,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, we've come behind the scenes here to find out what the future has in store for airport logistics.</p>
+<p>因此，我们来到幕后，探索机场物流的未来。</p>
+<p><button class="play-button sentence" id="s-00-00-50-119" data-start="00:00:50,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We tried to dissect various processes or parts of the airport where we can trial with these new forms of technology, and then if that is proven to be safe and successful, then we can scale to different parts of the airport in different processes.</p>
+<p>我们尝试剖析机场的各个流程或部分，以试验这些新技术形式，如果证明安全且成功，就可以扩展到机场的不同流程和区域。</p>
+<p><button class="play-button sentence" id="s-00-01-04-078" data-start="00:01:04,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's so much traffic, planes, people, it's quite a big challenge having it here.</p>
+<p>这里有如此多的车辆、飞机和人群，在这里实施是一项巨大挑战。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959930" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-09-640" data-start="00:01:09,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the very challenging to add self-driving technology in this system that is already optimized, and as you can see it's very busy already.</p>
+<p>在这个已经优化的系统中加入自动驾驶技术极具挑战性，而且如你所见，这里已经非常繁忙。</p>
+<p><button class="play-button sentence" id="s-00-01-16-400" data-start="00:01:16,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't believe in a turnkey moment that we just go to bed one day and then wake up to an autonomous airport.</p>
+<p>我们不相信会有一蹴而就的时刻，某天睡一觉醒来就发现机场完全自动化了。</p>
+<p><button class="play-button sentence" id="s-00-01-22-239" data-start="00:01:22,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we have to trial, we have to explore new technologies, new use cases to gradually grow towards that point.</p>
+<p>因此我们必须试验，探索新技术和新用例，逐步向目标迈进。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959909" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-30-838" data-start="00:01:30,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The airport's latest trial is of an autonomous baggage dolly that can help get our luggage from storage in the terminal out to the aircraft.</p>
+<p>机场最新的试验是一种自动驾驶行李车，可以帮助将行李从航站楼仓库运送到飞机上。</p>
+<p><button class="play-button sentence" id="s-00-01-39-039" data-start="00:01:39,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's effectively like any other vehicle on this airport.</p>
+<p>它实际上就像机场上的其他车辆一样。</p>
+<p><button class="play-button sentence" id="s-00-01-42-918" data-start="00:01:42,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You say, where you are now, go to stand 17, go pick up a bag, take it to the baggage hall, go to one of the belts on belt 24, and offload it there.</p>
+<p>你告诉它当前位置，去17号站台取行李，运到行李大厅，再到24号传送带卸货。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959888" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-51-718" data-start="00:01:51,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the computer inside the vehicle will determine the route you need to take and then go and do it.</p>
+<p>车内的计算机会确定路线并执行任务。</p>
+<p><button class="play-button sentence" id="s-00-01-56-640" data-start="00:01:56,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has to follow vehicles in front of it, stopper junctions, give way to pedestrians.</p>
+<p>它必须跟随前方车辆，在路口停车，礼让行人。</p>
+<p><button class="play-button sentence" id="s-00-02-02-560" data-start="00:02:02,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it does that by using LIDAR, so we have a LIDAR sensor here.</p>
+<p>它通过激光雷达实现这一点，这里装有激光雷达传感器。</p>
+<p><button class="play-button sentence" id="s-00-02-06-200" data-start="00:02:06,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also use a number of cameras, so these cameras might be just CCTV cameras, you know, for like evidence gathering, for example.</p>
+<p>我们还使用多个摄像头，这些可能是普通的监控摄像头，用于证据收集等。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-12-240" data-start="00:02:12,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also we use stereo cameras here.</p>
+<p>此外，我们还使用立体摄像头。</p>
+<p><button class="play-button sentence" id="s-00-02-14-800" data-start="00:02:14,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the stereo cameras are used to identify an obstacle, so is it something that's fixed? Is it something that could be moved like a bag that's in the way?</p>
+<p>立体摄像头用于识别障碍物，判断它是固定的还是可移动的（比如挡路的行李）。</p>
+<p><button class="play-button sentence" id="s-00-02-29-359" data-start="00:02:29,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is one of the often hidden parts of the airport.</p>
+<p>这是机场常被忽视的区域之一。</p>
+<p><button class="play-button sentence" id="s-00-02-32-438" data-start="00:02:32,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right underneath the main terminal, this is the transfer luggage hall, where baggage that's come off of one plane and needs to go to another one is stored.</p>
+<p>主航站楼正下方是中转行李大厅，存放着从一架飞机卸下需要转运到另一架的行李。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959839" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-40-718" data-start="00:02:40,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one of the big challenges is how to store them and how to transport them between the planes.</p>
+<p>一大挑战是如何存储并在飞机间运输这些行李。</p>
+<p><button class="play-button sentence" id="s-00-02-45-878" data-start="00:02:45,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's what they're hoping the self-driving vehicles might help with.</p>
+<p>这正是他们希望自动驾驶车辆能解决的问题。</p>
+<p><button class="play-button sentence" id="s-00-02-49-680" data-start="00:02:49,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For big flights, luggage is often loaded into these containers called ULDs and carried on a trailer out to the aircraft once several of them are full.</p>
+<p>大型航班的行李通常装入ULD集装箱，装满多个后由拖车运往飞机。</p>
+<p><button class="play-button sentence" id="s-00-03-01-840" data-start="00:03:01,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the design of this autonomous vehicle changes that process.</p>
+<p>但这种自动驾驶车辆的设计改变了这一流程。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959814" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-05-759" data-start="00:03:05,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this vehicle looks completely different to what you see on an airport because the ULDs on the vehicle not touted behind it.</p>
+<p>这种车辆与机场常见车辆完全不同，因为ULD集装箱不是拖在车后。</p>
+<p><button class="play-button sentence" id="s-00-03-13-120" data-start="00:03:13,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Once that one ULD is ready, let's get this sent out, load onto the aircraft, then the next one can be getting built in parallel.</p>
+<p>一个ULD准备好就立即送出装机，同时准备下一个。</p>
+<p><button class="play-button sentence" id="s-00-03-19-479" data-start="00:03:19,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the idea is to look at challenging the current way the operations are done in airports.</p>
+<p>因此，目标是挑战机场现有的运营方式。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-25-878" data-start="00:03:25,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Skip the airport have also been trialing self-driving vehicles for transporting flight crew and passengers requiring additional help.</p>
+<p>斯基普机场还试验用自动驾驶车辆运送机组人员和需要特殊帮助的乘客。</p>
+<p><button class="play-button sentence" id="s-00-03-33-158" data-start="00:03:33,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the road to us routinely seeing this tech in operation is long.</p>
+<p>但要常规化使用这项技术还有很长的路。</p>
+<p><button class="play-button sentence" id="s-00-03-38-400" data-start="00:03:38,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is the timeline to actually making the airports autonomous?</p>
+<p>实现机场完全自动化的时间表是怎样的？</p>
+<p><button class="play-button sentence" id="s-00-03-42-598" data-start="00:03:42,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The timeline for the fully autonomous airport is set on 2050, 50, but I'm very surprised in the last two years how far technology has matured.</p>
+<p>完全自动化机场的目标定在2050年，但过去两年技术的成熟速度令我惊讶。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1NdbAzCEjC/?t=-2208959768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-51-199" data-start="00:03:51,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, integrating that safely in a already very crowded operation might still require us to wait until 2015.</p>
+<p>然而，在已经非常拥挤的运营中安全整合该技术可能仍需等到2015年。</p>
+<p><button class="play-button sentence" id="s-00-04-00-878" data-start="00:04:00,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With self-driving vehicles becoming more common in other industries and even on our roads, that timeline might feel long.</p>
+<p>随着自动驾驶车辆在其他行业甚至道路上的普及，这个时间表可能显得漫长。</p>
+<p><button class="play-button sentence" id="s-00-04-08-919" data-start="00:04:08,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is a highly regulated environment and one of the toughest challenges is convincing authorities this innovation can be brought in safely and ultimately keep airports moving so our flights depart on time.</p>
+<p>但这是高度监管的环境，最大挑战之一是让当局相信这项创新能安全引入，最终保障机场运转使航班准时起飞。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
