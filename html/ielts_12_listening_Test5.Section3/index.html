@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Future of Public Libraries: A Student Discussion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Two library science students, Trudy and Stuart, discuss their upcoming paper on public libraries. They explore topics like technological impacts, funding changes, and evolving community roles. The conversation highlights debates around digitalization's effects and potential future transformations of library spaces.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Future of Public Libraries: A Student Discussion</h1>
+<p>【剑桥雅思12｜听力真题 Test 5 Section 3｜数字时代的图书馆何去何从？｜从纸质到电子的转型挑战｜社区文化中心的新角色】</p>
+<p>Summary:
+Two library science students, Trudy and Stuart, discuss their upcoming paper on public libraries. They explore topics like technological impacts, funding changes, and evolving community roles. The conversation highlights debates around digitalization's effects and potential future transformations of library spaces.</p>
+<p>摘要：
+两位图书管理学学生特鲁迪和斯图尔特就公共图书馆的未来展开讨论。他们从技术冲击、资金变化到社区功能转型等多角度分析，重点关注数字化带来的挑战，以及图书馆可能演变为综合性文化空间的发展趋势。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 8 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Section 3 You will hear two students called Trudy and Stuart, who are both studying to be librarians, discussing a paper that they are going to write together.</p>
+<p>第3部分 你将听到两位名叫特鲁迪和斯图尔特的学生讨论他们将要合作撰写的一篇论文，他们都是图书馆学专业的学生。</p>
+<p><button class="play-button sentence" id="s-00-00-15-000" data-start="00:00:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, you have some time to look at questions 21 to 23.</p>
+<p>首先，你有时间看一下第21至23题。</p>
+<p><button class="play-button sentence" id="s-00-00-30-000" data-start="00:00:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now listen carefully and answer questions 21 to 23.</p>
+<p>现在请仔细听并回答第21至23题。</p>
+<p><button class="play-button sentence" id="s-00-00-54-000" data-start="00:00:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay Stuart, we need to start planning our paper on public libraries.</p>
+<p>好的，斯图尔特，我们需要开始规划关于公共图书馆的论文了。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959941" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-58-094" data-start="00:00:58,094" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you thought of an angle yet?</p>
+<p>你想好切入点了吗？</p>
+<p><button class="play-button sentence" id="s-00-01-00-000" data-start="00:01:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there's so much we could look into how libraries have changed over the centuries for instance, or how different countries organise them.</p>
+<p>嗯，我们可以研究的内容很多，比如几个世纪以来图书馆的变化，或者不同国家如何组织图书馆。</p>
+<p><button class="play-button sentence" id="s-00-01-09-214" data-start="00:01:09,214" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you think Trudy?</p>
+<p>你觉得呢，特鲁迪？</p>
+<p><button class="play-button sentence" id="s-00-01-11-000" data-start="00:01:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe we should concentrate on this country and try and relate the changes in libraries to external developments, like the fact that far more people can read than a century ago, and that the local population may speak lots of different languages.</p>
+<p>也许我们应该集中在这个国家，尝试将图书馆的变化与外部发展联系起来，比如现在识字的人比一个世纪前多得多，而且当地人口可能说多种不同的语言。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959916" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-24-000" data-start="00:01:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We could include something about changes in the source of funding too.</p>
+<p>我们还可以加入一些关于资金来源变化的内容。</p>
+<p><button class="play-button sentence" id="s-00-01-28-000" data-start="00:01:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, but remember we're only supposed to write a short paper, so it's probably best if we don't go into funding in any detail.</p>
+<p>是的，但记住我们只需要写一篇短文，所以最好不要详细讨论资金问题。</p>
+<p><button class="play-button sentence" id="s-00-01-35-000" data-start="00:01:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. Well, should we just brainstorm a few ideas to get started?</p>
+<p>好的。那我们先头脑风暴一些想法来开始吧？</p>
+<p><button class="play-button sentence" id="s-00-01-40-000" data-start="00:01:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, we obviously need to look at the impact of new technology, particularly the internet.</p>
+<p>好的，我们显然需要研究新技术的影响，尤其是互联网。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-47-000" data-start="00:01:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that lots of books have been digitalised, people can access them from their own computers at home.</p>
+<p>现在许多书已经数字化，人们可以在家通过电脑访问它们。</p>
+<p><button class="play-button sentence" id="s-00-01-52-000" data-start="00:01:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if everyone did that, libraries would be obsolete.</p>
+<p>如果每个人都这样做，图书馆就会过时。</p>
+<p><button class="play-button sentence" id="s-00-01-55-000" data-start="00:01:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes. But the digitalised books that are available online for free are mostly out of copyright, aren't they?</p>
+<p>是的。但网上免费提供的数字化书籍大多已经过了版权期，对吧？</p>
+<p><button class="play-button sentence" id="s-00-02-02-000" data-start="00:02:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And copyright in this country lasts for 70 years after the author dies, so you won't find the latest best seller or up-to-date information.</p>
+<p>而且在这个国家，版权在作者去世后持续70年，所以你找不到最新的畅销书或最新信息。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959868" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-12-000" data-start="00:02:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's an important point.</p>
+<p>这一点很重要。</p>
+<p><button class="play-button sentence" id="s-00-02-14-000" data-start="00:02:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anyway, I find it hard to concentrate when I'm reading a long text on a screen.</p>
+<p>总之，我在屏幕上阅读长文本时很难集中注意力。</p>
+<p><button class="play-button sentence" id="s-00-02-18-000" data-start="00:02:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd much rather read a physical book, and it takes longer to read on a screen.</p>
+<p>我更喜欢读实体书，而且在屏幕上阅读花的时间更长。</p>
+<p><button class="play-button sentence" id="s-00-02-23-000" data-start="00:02:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, I prefer it.</p>
+<p>哦，我更喜欢屏幕阅读。</p>
+<p><button class="play-button sentence" id="s-00-02-24-326" data-start="00:02:24,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I suppose it's just a personal preference.</p>
+<p>我想这只是个人偏好。</p>
+<p><button class="play-button sentence" id="s-00-02-28-000" data-start="00:02:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I expect the libraries will go on evolving in the next few years.</p>
+<p>我预计图书馆在未来几年会继续发展。</p>
+<p><button class="play-button sentence" id="s-00-02-32-000" data-start="00:02:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some have already become centres where community activities take place, like local clubs meeting there.</p>
+<p>有些已经成为社区活动的中心，比如当地俱乐部在那里聚会。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959843" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-37-000" data-start="00:02:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that'll become even more common.</p>
+<p>我认为这会变得更加普遍。</p>
+<p><button class="play-button sentence" id="s-00-02-40-000" data-start="00:02:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, and that they'll still be serving their traditional function.</p>
+<p>所以，它们仍将发挥传统功能。</p>
+<p><button class="play-button sentence" id="s-00-02-44-000" data-start="00:02:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I'm not so sure.</p>
+<p>但我不太确定。</p>
+<p><button class="play-button sentence" id="s-00-02-46-000" data-start="00:02:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are financial implications after all.</p>
+<p>毕竟还有财务问题。</p>
+<p><button class="play-button sentence" id="s-00-02-49-000" data-start="00:02:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What I'm afraid will happen is that books and magazines will all disappear, and there'll just be rows and rows of computers.</p>
+<p>我担心的是书籍和杂志都会消失，只剩下一排排的电脑。</p>
+<p><button class="play-button sentence" id="s-00-02-56-000" data-start="00:02:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They won't look anything like the libraries we're used to.</p>
+<p>它们看起来不会像我们熟悉的图书馆。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959822" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-58-000" data-start="00:02:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we'll see.</p>
+<p>嗯，我们拭目以待。</p>
+<p><button class="play-button sentence" id="s-00-03-02-000" data-start="00:03:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before you hear the rest of the discussion, you have some time to look at questions 24 to 30.</p>
+<p>在听接下来的讨论之前，你有时间看一下第24至30题。</p>
+<p><button class="play-button sentence" id="s-00-03-36-000" data-start="00:03:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now listen and answer questions 24 to 30.</p>
+<p>现在请听并回答第24至30题。</p>
+<p><button class="play-button sentence" id="s-00-03-42-000" data-start="00:03:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've just had an idea.</p>
+<p>我刚刚想到一个主意。</p>
+<p><button class="play-button sentence" id="s-00-03-45-000" data-start="00:03:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why don't we make an in-depth study of our local public libraries background to our paper?</p>
+<p>我们为什么不深入研究本地公共图书馆的背景作为论文内容呢？</p>
+<p><button class="play-button sentence" id="s-00-03-49-000" data-start="00:03:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, that'll be interesting, and raise all sorts of issues.</p>
+<p>是的，这会很有趣，并提出各种问题。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-54-000" data-start="00:03:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's make a list of possible things we could have in our paper.</p>
+<p>我们列一个清单，列出论文中可能包含的内容。</p>
+<p><button class="play-button sentence" id="s-00-03-58-000" data-start="00:03:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've just had an idea.</p>
+<p>我刚刚想到一个主意。</p>
+<p><button class="play-button sentence" id="s-00-04-00-000" data-start="00:04:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why don't we make an in-depth study of our local public libraries background to our paper?</p>
+<p>我们为什么不深入研究本地公共图书馆的背景作为论文内容呢？</p>
+<p><button class="play-button sentence" id="s-00-04-04-000" data-start="00:04:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we could ask some possible things we could ask about, then work out some sort of structure.</p>
+<p>如果我们能列出一些可以询问的内容，然后制定某种结构。</p>
+<p><button class="play-button sentence" id="s-00-04-09-000" data-start="00:04:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For instance, we could interview some of the staff and find out whether the library has its own budget or if that's controlled by the local council.</p>
+<p>例如，我们可以采访一些工作人员，了解图书馆是否有自己的预算，或者是否由地方议会控制。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959743" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-17-000" data-start="00:04:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what their policies are.</p>
+<p>以及他们的政策是什么。</p>
+<p><button class="play-button sentence" id="s-00-04-19-000" data-start="00:04:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know they don't allow food, but I'd love to find out what types of noise they ban.</p>
+<p>我知道他们不允许吃东西，但我想知道他们禁止哪些类型的噪音。</p>
+<p><button class="play-button sentence" id="s-00-04-24-000" data-start="00:04:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There always seems to be a lot of talking, but never music.</p>
+<p>似乎总是有很多人说话，但从没有音乐。</p>
+<p><button class="play-button sentence" id="s-00-04-27-000" data-start="00:04:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know if that's a policy or it just happens.</p>
+<p>我不知道这是政策还是偶然现象。</p>
+<p><button class="play-button sentence" id="s-00-04-30-000" data-start="00:04:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've often wondered.</p>
+<p>我经常想知道。</p>
+<p><button class="play-button sentence" id="s-00-04-32-000" data-start="00:04:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Things like how the library is affected by employment laws.</p>
+<p>比如图书馆如何受劳动法影响。</p>
+<p><button class="play-button sentence" id="s-00-04-37-000" data-start="00:04:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I suppose there are rules about working hours, facilities for staff and so on.</p>
+<p>我想应该有关于工作时间、员工设施等的规定。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-41-000" data-start="00:04:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. Then there are other issues relating to the design of the building and how customers use it.</p>
+<p>对。还有其他与建筑设计及顾客使用相关的问题。</p>
+<p><button class="play-button sentence" id="s-00-04-47-000" data-start="00:04:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like what measures does the library take to ensure their safety?</p>
+<p>比如图书馆采取什么措施确保他们的安全？</p>
+<p><button class="play-button sentence" id="s-00-04-50-000" data-start="00:04:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They'd need floor coverings that aren't slippery.</p>
+<p>他们需要防滑的地板覆盖物。</p>
+<p><button class="play-button sentence" id="s-00-04-53-000" data-start="00:04:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An emergency exits, for instance.</p>
+<p>比如紧急出口。</p>
+<p><button class="play-button sentence" id="s-00-04-55-000" data-start="00:04:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, and another thing.</p>
+<p>哦，还有一件事。</p>
+<p><button class="play-button sentence" id="s-00-04-57-000" data-start="00:04:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's the question of the kind of insurance the library needs to have in case anyone gets injured.</p>
+<p>还有一个问题是图书馆需要购买哪种保险以防有人受伤。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-000" data-start="00:05:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, that's something else to find out.</p>
+<p>是的，这是另一个需要了解的内容。</p>
+<p><button class="play-button sentence" id="s-00-05-04-000" data-start="00:05:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know something I've often wondered.</p>
+<p>你知道我经常想的一件事吗？</p>
+<p><button class="play-button sentence" id="s-00-05-06-000" data-start="00:05:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's that?</p>
+<p>是什么？</p>
+<p><button class="play-button sentence" id="s-00-05-07-000" data-start="00:05:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you know they've got an archive of local newspapers going back years.</p>
+<p>嗯，你知道他们有多年来的地方报纸档案。</p>
+<p><button class="play-button sentence" id="s-00-05-11-000" data-start="00:05:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, next to it, they've got the diary of a well-known politician from the late 19th century.</p>
+<p>旁边还有一本19世纪末著名政治家的日记。</p>
+<p><button class="play-button sentence" id="s-00-05-17-000" data-start="00:05:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wonder why it's there.</p>
+<p>我想知道为什么它在那里。</p>
+<p><button class="play-button sentence" id="s-00-05-19-000" data-start="00:05:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you know what his connection was with this area?</p>
+<p>你知道他与这个地区有什么联系吗？</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959678" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-22-000" data-start="00:05:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No idea.</p>
+<p>不知道。</p>
+<p><button class="play-button sentence" id="s-00-05-23-000" data-start="00:05:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's add it to our list of things to find out.</p>
+<p>我们把它加到需要了解的清单里吧。</p>
+<p><button class="play-button sentence" id="s-00-05-26-000" data-start="00:05:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I've just thought.</p>
+<p>嗯，我刚想到。</p>
+<p><button class="play-button sentence" id="s-00-05-28-000" data-start="00:05:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So people might ask in the library about local organisations like sports clubs.</p>
+<p>所以人们可能会在图书馆询问当地组织，比如体育俱乐部。</p>
+<p><button class="play-button sentence" id="s-00-05-33-000" data-start="00:05:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I wonder if they keep a database or whether they just look online.</p>
+<p>我想知道他们是有一个数据库还是只是上网查。</p>
+<p><button class="play-button sentence" id="s-00-05-37-000" data-start="00:05:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. I quite fancy finding out what the differences are between a library that's open to the public and one that's part of a museum, for example.</p>
+<p>对。我很想知道向公众开放的图书馆和博物馆内的图书馆有什么区别。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1TYtXzUEBg/?p=3?t=-2208959654" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-46-000" data-start="00:05:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They must be very different.</p>
+<p>它们肯定很不一样。</p>
+<p><button class="play-button sentence" id="s-00-05-47-000" data-start="00:05:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hmm. Then something else I'd like to know is.</p>
+<p>嗯。还有我想知道的是……</p>
+<p><button class="play-button sentence" id="s-00-05-53-000" data-start="00:05:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is the end of section three.</p>
+<p>第3部分到此结束。</p>
+<p><button class="play-button sentence" id="s-00-05-56-000" data-start="00:05:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You now have half a minute to check your answers.</p>
+<p>现在你有半分钟检查答案。</p>
+<p><button class="play-button sentence" id="s-00-06-26-000" data-start="00:06:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now turn to section four.</p>
+<p>现在请翻到第4部分。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
