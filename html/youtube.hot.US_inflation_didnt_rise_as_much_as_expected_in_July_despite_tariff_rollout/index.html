@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>A Brand New Measure of Inflation and How Far You Can Stretch Your Dollar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The latest inflation report shows consumer prices held steady at 2.7% annually, with energy costs declining but shelter and beef prices rising sharply. Core inflation reached 3.1%, the highest since February, driven by tariff impacts on goods like furniture and apparel. Economists note mixed signals as the Federal Reserve weighs potential rate cuts amid labor market softening and political scrutiny over data reliability.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>A Brand New Measure of Inflation and How Far You Can Stretch Your Dollar</h1>
+<p>【CNN News 20250813 美国七月物价趋稳但牛肉价格飙升，美联储降息压力加大】</p>
+<p>Summary:
+The latest inflation report shows consumer prices held steady at 2.7% annually, with energy costs declining but shelter and beef prices rising sharply. Core inflation reached 3.1%, the highest since February, driven by tariff impacts on goods like furniture and apparel. Economists note mixed signals as the Federal Reserve weighs potential rate cuts amid labor market softening and political scrutiny over data reliability.</p>
+<p>摘要：
+最新通胀数据显示美国消费者价格指数同比稳定在2.7%，能源价格下降但住房成本和牛肉价格大幅上涨。受关税影响的核心通胀率攀升至3.1%，创二月以来新高。经济学家指出，在劳动力市场疲软和数据可信度遭政治质疑的背景下，这份矛盾数据令美联储降息决策更趋复杂。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 14 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3>00:00:00</h3>
+<p><button class="play-button sentence" id="s-00-00-00-033" data-start="00:00:00,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A brand new measure of inflation and how far you can stretch your dollar.</p>
+<p>一种衡量通胀的新方法，以及你的钱能撑多久。</p>
+<p><button class="play-button sentence" id="s-00-00-04-437" data-start="00:00:04,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This morning's new numbers deliver some good news.</p>
+<p>今天早上的新数据带来了一些好消息。</p>
+<p><button class="play-button sentence" id="s-00-00-06-972" data-start="00:00:06,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Inflation did not rise as much as expected last month.</p>
+<p>上个月的通胀涨幅低于预期。</p>
+<p><button class="play-button sentence" id="s-00-00-10-977" data-start="00:00:10,977" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The consumer price index held steady at 2.7%.</p>
+<p>消费者价格指数稳定在2.7%。</p>
+<p><button class="play-button sentence" id="s-00-00-15-180" data-start="00:00:15,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's compared to last July.</p>
+<p>这是与去年7月相比的数据。</p>
+<p><button class="play-button sentence" id="s-00-00-17-016" data-start="00:00:17,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's the same inflation rate as the month before.</p>
+<p>与上个月的通胀率相同。</p>
+<p><button class="play-button sentence" id="s-00-00-20-586" data-start="00:00:20,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go to CNN business and politics correspondent Vanessa Yurkevich.</p>
+<p>让我们连线CNN商业和政治记者Vanessa Yurkevich。</p>
+<p><a name="block-2"></a></p>
+<h3>00:00:24</h3>
+<p><button class="play-button sentence" id="s-00-00-24-501" data-start="00:00:24,501" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vanessa, what does this new CPI number tell us?</p>
+<p>Vanessa，这个新的CPI数据告诉我们什么？</p>
+<p><button class="play-button sentence" id="s-00-00-27-926" data-start="00:00:27,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it shows us that inflation really held steady amidst these historic tariff levels that we have not seen since the 1930s.</p>
+<p>它表明，在自20世纪30年代以来未见的这些历史性关税水平下，通胀确实保持稳定。</p>
+<p><button class="play-button sentence" id="s-00-00-35-701" data-start="00:00:35,701" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you mentioned, Wolf, on an annual basis in July, inflation up 2.7%, and on a monthly basis, inflation up 0.2%.</p>
+<p>正如你提到的，Wolf，7月份同比通胀上涨2.7%，环比上涨0.2%。</p>
+<p><button class="play-button sentence" id="s-00-00-44-277" data-start="00:00:44,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's really a mirror image to what we saw in the previous month of June.</p>
+<p>这与我们在6月份看到的情况几乎一致。</p>
+<p><a name="block-3"></a></p>
+<h3>00:00:48</h3>
+<p><button class="play-button sentence" id="s-00-00-48-914" data-start="00:00:48,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, when we look at key categories that we track regularly energy, food and shelter.</p>
+<p>现在，我们来看看我们定期追踪的关键类别：能源、食品和住房。</p>
+<p><button class="play-button sentence" id="s-00-00-54-439" data-start="00:00:54,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take a look what happened here.</p>
+<p>看看这里发生了什么。</p>
+<p><button class="play-button sentence" id="s-00-00-56-222" data-start="00:00:56,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Energy was down 1.1%, led because gas prices fell by 2.2%.</p>
+<p>能源下降了1.1%，主要是由于汽油价格下降了2.2%。</p>
+<p><button class="play-button sentence" id="s-00-01-02-992" data-start="00:01:02,992" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Food flat.</p>
+<p>食品价格持平。</p>
+<p><button class="play-button sentence" id="s-00-01-04-531" data-start="00:01:04,531" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So prices at the grocery store actually came down by 0.1%.</p>
+<p>杂货店的价格实际上下降了0.1%。</p>
+<p><button class="play-button sentence" id="s-00-01-08-400" data-start="00:01:08,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then shelter.</p>
+<p>然后是住房。</p>
+<p><button class="play-button sentence" id="s-00-01-09-168" data-start="00:01:09,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's what we pay for rent.</p>
+<p>这是我们支付的租金。</p>
+<p><button class="play-button sentence" id="s-00-01-10-537" data-start="00:01:10,537" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw an increase there.</p>
+<p>我们看到那里有所增加。</p>
+<p><a name="block-4"></a></p>
+<h3>00:01:11</h3>
+<p><button class="play-button sentence" id="s-00-01-11-870" data-start="00:01:11,870" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the biggest share of this report, up 0.2%.</p>
+<p>这是本报告中最大的部分，上涨了0.2%。</p>
+<p><button class="play-button sentence" id="s-00-01-14-974" data-start="00:01:14,974" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when we look at core inflation we can see where the tariffs where the price increases are starting to take effect.</p>
+<p>但当我们观察核心通胀时，我们可以看到关税和价格上涨开始产生影响的地方。</p>
+<p><button class="play-button sentence" id="s-00-01-22-081" data-start="00:01:22,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was hotter than expected and the highest level since February, up 3.1% on an annual basis, a point 3% month over month in July.</p>
+<p>它比预期更热，是自2月以来的最高水平，同比上涨3.1%，7月环比上涨0.3%。</p>
+<p><button class="play-button sentence" id="s-00-01-33-225" data-start="00:01:33,225" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Key categories that we have been tracking because of the tariff pressures are toys, furniture.</p>
+<p>由于关税压力，我们一直在追踪的关键类别是玩具、家具。</p>
+<p><a name="block-5"></a></p>
+<h3>00:01:39</h3>
+<p><button class="play-button sentence" id="s-00-01-39-099" data-start="00:01:39,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Appliances.</p>
+<p>家电。</p>
+<p><button class="play-button sentence" id="s-00-01-40-160" data-start="00:01:40,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Apparel.</p>
+<p>服装。</p>
+<p><button class="play-button sentence" id="s-00-01-40-932" data-start="00:01:40,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see almost all of those up a little bit, except for appliances, which are down by 0.9%.</p>
+<p>你可以看到几乎所有类别都略有上涨，除了家电，下降了0.9%。</p>
+<p><button class="play-button sentence" id="s-00-01-48-240" data-start="00:01:48,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just spoke to the CEO of a major U.S. retailer, who said that he's actually not surprised that prices are rising slower than expected.</p>
+<p>我刚与一家美国大型零售商的CEO交谈，他说他对价格上涨速度低于预期并不感到意外。</p>
+<p><button class="play-button sentence" id="s-00-01-56-483" data-start="00:01:56,483" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's some feathering going on with prices where things can go up one month, things can come down another month.</p>
+<p>价格有一些波动，有些月份会上涨，有些月份会下降。</p>
+<p><a name="block-6"></a></p>
+<h3>00:02:02</h3>
+<p><button class="play-button sentence" id="s-00-02-02-325" data-start="00:02:02,325" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Wolf, that is in reaction to the volatility around the tariffs changing week to week, even day to day.</p>
+<p>Wolf，这是对关税每周甚至每天都在变化的波动的反应。</p>
+<p><button class="play-button sentence" id="s-00-02-08-995" data-start="00:02:08,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as a whole inflation looking tame amidst these really historic tariffs Wolf.</p>
+<p>但总体而言，在这些真正历史性的关税背景下，通胀看起来是温和的，Wolf。</p>
+<p><button class="play-button sentence" id="s-00-02-13-821" data-start="00:02:13,821" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Vanessa it's I think important to point out that these new numbers come from the Bureau of Labor Statistics.</p>
+<p>Vanessa，我认为重要的是指出这些新数据来自劳工统计局。</p>
+<p><button class="play-button sentence" id="s-00-02-20-840" data-start="00:02:20,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the same agency that President Trump criticized without evidence of manipulating numbers to support Democrats.</p>
+<p>这是特朗普总统在没有证据的情况下批评其操纵数据以支持民主党的同一机构。</p>
+<p><a name="block-7"></a></p>
+<h3>00:02:27</h3>
+<p><button class="play-button sentence" id="s-00-02-27-379" data-start="00:02:27,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But will he be happy about these new numbers?</p>
+<p>但他会对这些新数据感到高兴吗？</p>
+<p><button class="play-button sentence" id="s-00-02-30-449" data-start="00:02:30,449" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Wolf, we'll wait for that Truth Social post to see if he is indeed happy.</p>
+<p>嗯，Wolf，我们会等待他在Truth Social上的帖子，看看他是否真的高兴。</p>
+<p><button class="play-button sentence" id="s-00-02-34-086" data-start="00:02:34,086" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he didn't just fire the commissioner of the BLS.</p>
+<p>但他不仅仅解雇了劳工统计局的局长。</p>
+<p><button class="play-button sentence" id="s-00-02-37-456" data-start="00:02:37,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been a lot of layoffs at the Bureau of Labor Statistics.</p>
+<p>劳工统计局已经有很多裁员。</p>
+<p><button class="play-button sentence" id="s-00-02-41-101" data-start="00:02:41,101" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The people who are involved in collecting this inflation data, so much so that they've suspended collecting data in three key metro areas and have cut back on surveys and collections in 15% of the rest of the country.</p>
+<p>参与收集这些通胀数据的人员，以至于他们暂停了三个关键大都市区的数据收集，并削减了全国其他地区15%的调查和收集。</p>
+<p><a name="block-8"></a></p>
+<h3>00:02:55</h3>
+<p><button class="play-button sentence" id="s-00-02-55-842" data-start="00:02:55,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So economists have said that this could be a little bit of a cloudy report, and we may see more volatility in the months ahead, Wolf.</p>
+<p>因此，经济学家表示，这份报告可能有点模糊，我们可能会在未来几个月看到更多的波动，Wolf。</p>
+<p><button class="play-button sentence" id="s-00-03-03-483" data-start="00:03:03,483" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Americans, Vanessa, are also dealing with record high beef prices this summer.</p>
+<p>Vanessa，美国人今年夏天还面临着创纪录的高牛肉价格。</p>
+<p><button class="play-button sentence" id="s-00-03-08-020" data-start="00:03:08,020" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you spoke you had a chance to speak to the CEO of Omaha Steaks.</p>
+<p>你有机会与Omaha Steaks的CEO交谈。</p>
+<p><button class="play-button sentence" id="s-00-03-11-489" data-start="00:03:11,489" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the home delivery service.</p>
+<p>那是家庭配送服务。</p>
+<p><a name="block-9"></a></p>
+<h3>00:03:13</h3>
+<p><button class="play-button sentence" id="s-00-03-13-588" data-start="00:03:13,588" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does he say about where these prices are going.</p>
+<p>他对这些价格的走势有何看法。</p>
+<p><button class="play-button sentence" id="s-00-03-16-996" data-start="00:03:16,996" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prices in the month of July for beef have spiked up 2.4%, and on an annual basis, up 11.5%.</p>
+<p>7月份牛肉价格飙升了2.4%，同比上涨了11.5%。</p>
+<p><button class="play-button sentence" id="s-00-03-26-072" data-start="00:03:26,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is some of the steepest price increases that we have seen in this inflation report.</p>
+<p>这是我们在这次通胀报告中看到的一些最陡峭的价格上涨。</p>
+<p><button class="play-button sentence" id="s-00-03-31-110" data-start="00:03:31,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I did speak to the CEO of Omaha Steaks, who told me that this has been a long time coming, and he's not sure prices are going to fall anytime soon.</p>
+<p>我确实与Omaha Steaks的CEO交谈过，他告诉我这是长期积累的结果，他不确定价格会很快下降。</p>
+<p><a name="block-10"></a></p>
+<h3>00:03:39</h3>
+<p><button class="play-button sentence" id="s-00-03-39-358" data-start="00:03:39,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take a listen to our conversation.</p>
+<p>听听我们的对话。</p>
+<p><button class="play-button sentence" id="s-00-03-41-839" data-start="00:03:41,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we're at the lowest herd size in 70 years.</p>
+<p>嗯，我们的牛群数量处于70年来的最低水平。</p>
+<p><button class="play-button sentence" id="s-00-03-47-360" data-start="00:03:47,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and at the same time, demand is an all time high.</p>
+<p>与此同时，需求处于历史最高水平。</p>
+<p><button class="play-button sentence" id="s-00-03-50-330" data-start="00:03:50,330" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't expect the herd rebuild to really start turning the corner until Q3 of 26.</p>
+<p>我不认为牛群重建会在26年第三季度之前真正开始好转。</p>
+<p><button class="play-button sentence" id="s-00-03-58-037" data-start="00:03:58,037" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, you know, we're in for, quite a long haul here until we start to see some relief, in retail, grocery and at other specialty providers like Omaha Steaks.</p>
+<p>所以，你知道，我们在这里要经历相当长的时间，直到我们开始在零售、杂货和其他专业供应商如Omaha Steaks看到一些缓解。</p>
+<p><a name="block-11"></a></p>
+<h3>00:04:10</h3>
+<p><button class="play-button sentence" id="s-00-04-10-250" data-start="00:04:10,250" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> of beef costs coming down.</p>
+<p>牛肉成本下降。</p>
+<p><button class="play-button sentence" id="s-00-04-12-050" data-start="00:04:12,050" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How is the beef market impacted by tariffs.</p>
+<p>牛肉市场如何受到关税的影响。</p>
+<p><button class="play-button sentence" id="s-00-04-14-621" data-start="00:04:14,621" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In ground beef in America? 8 to 20% is imported from outside the United States without, foreign imports of weed trim.</p>
+<p>在美国的碎牛肉中？8%到20%是从美国以外进口的，没有杂草修剪的外国进口。</p>
+<p><button class="play-button sentence" id="s-00-04-26-132" data-start="00:04:26,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, America could not support, at least today, could not support you know, America's demand for ground beef.</p>
+<p>你知道，美国无法支持，至少今天无法支持，你知道，美国对碎牛肉的需求。</p>
+<p><button class="play-button sentence" id="s-00-04-32-639" data-start="00:04:32,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, you know, that's why the price is going up.</p>
+<p>所以，你知道，这就是价格上涨的原因。</p>
+<p><a name="block-12"></a></p>
+<h3>00:04:36</h3>
+<p><button class="play-button sentence" id="s-00-04-36-141" data-start="00:04:36,141" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> you know, because the demand is there.</p>
+<p>你知道，因为需求在那里。</p>
+<p><button class="play-button sentence" id="s-00-04-39-045" data-start="00:04:39,045" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and so companies that source foreign beef are incented to do it.</p>
+<p>因此，采购外国牛肉的公司有动力这样做。</p>
+<p><button class="play-button sentence" id="s-00-04-45-285" data-start="00:04:45,285" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> despite the price.</p>
+<p>尽管价格很高。</p>
+<p><button class="play-button sentence" id="s-00-04-48-420" data-start="00:04:48,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so you heard right there, prices continuing to rise and likely not to fall until sometime next year.</p>
+<p>所以你刚才听到，价格继续上涨，可能要到明年某个时候才会下降。</p>
+<p><button class="play-button sentence" id="s-00-04-54-994" data-start="00:04:54,994" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also, one of the prices that we've been tracking is coffee prices.</p>
+<p>此外，我们一直在追踪的价格之一是咖啡价格。</p>
+<p><button class="play-button sentence" id="s-00-04-58-730" data-start="00:04:58,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That, along with beef, is on the rise because of weather conditions, but also because some of those significant tariffs put on our trading partners like Brazil.</p>
+<p>与牛肉一样，咖啡价格也在上涨，原因是天气条件，但也因为我们对巴西等贸易伙伴征收的一些重要关税。</p>
+<p><a name="block-13"></a></p>
+<h3>00:05:07</h3>
+<p><button class="play-button sentence" id="s-00-05-07-305" data-start="00:05:07,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A 50% tariff, Wolf, where we get a lot of our coffee.</p>
+<p>50%的关税，Wolf，我们从那里进口很多咖啡。</p>
+<p><button class="play-button sentence" id="s-00-05-10-596" data-start="00:05:10,596" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well. Good point, Vanessa Yurkevich Thank you very much.</p>
+<p>嗯。好观点，Vanessa Yurkevich，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-05-13-980" data-start="00:05:13,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With us now, senior markets reporter for Axios Madison Mills.</p>
+<p>现在和我们在一起的是Axios的高级市场记者Madison Mills。</p>
+<p><button class="play-button sentence" id="s-00-05-17-107" data-start="00:05:17,107" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Madison, thanks for being here.</p>
+<p>Madison，感谢你的到来。</p>
+<p><button class="play-button sentence" id="s-00-05-18-750" data-start="00:05:18,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I first just give us some context.</p>
+<p>首先给我们一些背景。</p>
+<p><button class="play-button sentence" id="s-00-05-20-586" data-start="00:05:20,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vanessa just laid it all out for us.</p>
+<p>Vanessa刚刚为我们详细说明了。</p>
+<p><a name="block-14"></a></p>
+<h3>00:05:22</h3>
+<p><button class="play-button sentence" id="s-00-05-22-788" data-start="00:05:22,788" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does this say to you?</p>
+<p>这对你来说意味着什么？</p>
+<p><button class="play-button sentence" id="s-00-05-24-589" data-start="00:05:24,589" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, what's really interesting is we're seeing the stock market rally in this morning.</p>
+<p>嗯，真正有趣的是我们今天早上看到股市上涨。</p>
+<p><button class="play-button sentence" id="s-00-05-28-161" data-start="00:05:28,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's no surprise because investors have been very glass half full since really those lows that we saw back in April.</p>
+<p>这并不奇怪，因为自4月份的低点以来，投资者一直非常乐观。</p>
+<p><button class="play-button sentence" id="s-00-05-34-834" data-start="00:05:34,834" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as your reporter just smartly laid out, this is sort of a mixed print.</p>
+<p>但正如你的记者刚刚巧妙地指出的，这有点像一个混合的报告。</p>
+<p><button class="play-button sentence" id="s-00-05-39-072" data-start="00:05:39,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you look under the hood, the core CPI that strips out some of the volatile sectors like food and energy that came in hot.</p>
+<p>当你深入观察时，剔除食品和能源等波动性较大的行业的核心CPI表现强劲。</p>
+<p><a name="block-15"></a></p>
+<h3>00:05:45</h3>
+<p><button class="play-button sentence" id="s-00-05-45-812" data-start="00:05:45,812" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the headline number came in called so for the Federal Reserve.</p>
+<p>但整体数字对美联储来说是温和的。</p>
+<p><button class="play-button sentence" id="s-00-05-49-081" data-start="00:05:49,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How do you view these acceleration numbers?</p>
+<p>你如何看待这些加速数字？</p>
+<p><button class="play-button sentence" id="s-00-05-51-149" data-start="00:05:51,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it actually good news for the path forward on inflation.</p>
+<p>这对通胀的前进道路来说真的是好消息吗？</p>
+<p><button class="play-button sentence" id="s-00-05-53-929" data-start="00:05:53,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what what do you think?</p>
+<p>你怎么看？</p>
+<p><button class="play-button sentence" id="s-00-05-55-355" data-start="00:05:55,355" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How will they internalize that.</p>
+<p>他们将如何内化这一点。</p>
+<p><button class="play-button sentence" id="s-00-05-56-889" data-start="00:05:56,889" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because they as they weigh any sort of rate cut.</p>
+<p>因为他们在权衡任何形式的降息时。</p>
+<p><button class="play-button sentence" id="s-00-05-59-559" data-start="00:05:59,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well and I'm reading emails from the sources as I'm on set with you right now, and they are telling me that this is a dovish print, meaning the Federal Reserve has the option to view this as an excuse to cut interest rates or as reason to cut interest rates.</p>
+<p>嗯，我现在正在阅读消息来源的电子邮件，他们告诉我这是一个鸽派的报告，意味着美联储可以选择将其视为降息的借口或降息的理由。</p>
+<p><a name="block-16"></a></p>
+<h3>00:06:13</h3>
+<p><button class="play-button sentence" id="s-00-06-13-072" data-start="00:06:13,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But then, from Mohamed El-Erian, one of my favorite sources on Wall Street, a bond legend, he is saying that that divergence between the headline and the core number that's going to make it more difficult for the Federal Reserve to reach consensus.</p>
+<p>但随后，来自我在华尔街最喜欢的消息来源之一、债券传奇人物Mohamed El-Erian，他表示整体数字和核心数字之间的分歧将使美联储更难达成共识。</p>
+<p><button class="play-button sentence" id="s-00-06-24-750" data-start="00:06:24,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then at the same time, you have the labor market numbers that came in a little bit rough in the last jobs report.</p>
+<p>与此同时，你在上次就业报告中看到的劳动力市场数字有点糟糕。</p>
+<p><button class="play-button sentence" id="s-00-06-29-788" data-start="00:06:29,788" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the fed looks at unemployment and inflation.</p>
+<p>美联储关注失业率和通胀。</p>
+<p><a name="block-17"></a></p>
+<h3>00:06:32</h3>
+<p><button class="play-button sentence" id="s-00-06-32-158" data-start="00:06:32,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they're in a very difficult spot right now.</p>
+<p>所以他们现在处于一个非常困难的境地。</p>
+<p><button class="play-button sentence" id="s-00-06-33-959" data-start="00:06:33,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. Because they really have to take it all.</p>
+<p>对。因为他们真的必须全面考虑。</p>
+<p><button class="play-button sentence" id="s-00-06-36-062" data-start="00:06:36,062" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know big picture.</p>
+<p>你知道大局。</p>
+<p><button class="play-button sentence" id="s-00-06-37-497" data-start="00:06:37,497" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it sounds like based on what Panetta was saying and now how you're also adding layers to this, that it's really what you need to know about today is that there's the core inflation numbers.</p>
+<p>听起来，根据Panetta所说的，以及你现在如何进一步补充，今天真正需要知道的是核心通胀数字。</p>
+<p><button class="play-button sentence" id="s-00-06-46-345" data-start="00:06:46,345" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then there's there's the other data set.</p>
+<p>然后还有其他数据集。</p>
+<p><a name="block-18"></a></p>
+<h3>00:06:48</h3>
+<p><button class="play-button sentence" id="s-00-06-48-807" data-start="00:06:48,807" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And those are those are two things that you have to take them all together.</p>
+<p>这是你必须综合考虑的两件事。</p>
+<p><button class="play-button sentence" id="s-00-06-51-778" data-start="00:06:51,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Exactly. That's exactly right.</p>
+<p>没错。完全正确。</p>
+<p><button class="play-button sentence" id="s-00-06-53-211" data-start="00:06:53,211" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it points to the challenge for the Federal Reserve because of that dual mandate of employment and inflation.</p>
+<p>它指出了美联储面临的挑战，因为其双重使命是就业和通胀。</p>
+<p><button class="play-button sentence" id="s-00-06-59-727" data-start="00:06:59,727" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've seen them kind of talking about how they're favoring inflation.</p>
+<p>我们看到他们某种程度上在谈论他们如何倾向于通胀。</p>
+<p><button class="play-button sentence" id="s-00-07-03-656" data-start="00:07:03,656" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You hear Fed Chair Jay Powell talking about that 2% inflation target time and time again.</p>
+<p>你听到美联储主席Jay Powell一次又一次地谈论2%的通胀目标。</p>
+<p><a name="block-19"></a></p>
+<h3>00:07:08</h3>
+<p><button class="play-button sentence" id="s-00-07-08-795" data-start="00:07:08,795" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when you start to see cracks in the labor market, if those get more severe you could see the fed transitioning to focus on the labor market and cutting rates to protect that labor market.</p>
+<p>但当你开始看到劳动力市场的裂缝时，如果这些裂缝变得更严重，你可能会看到美联储转向关注劳动力市场，并通过降息来保护劳动力市场。</p>
+<p><button class="play-button sentence" id="s-00-07-17-836" data-start="00:07:17,836" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then of course, we also have the tariff zooming in the background here, and whether or not that's going to lead to any further cracks in the labor market as well.</p>
+<p>当然，我们还有关税在背景中放大，以及这是否会导致劳动力市场出现更多裂缝。</p>
+<p><button class="play-button sentence" id="s-00-07-25-677" data-start="00:07:25,677" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also to, as Kate mentioned, the Bureau of Labor Statistics, you know, has had it had their chief destination fired because Trump didn't like the numbers.</p>
+<p>还有，正如Kate提到的，劳工统计局，你知道，他们的主管被解雇了，因为特朗普不喜欢这些数字。</p>
+<p><a name="block-20"></a></p>
+<h3>00:07:35</h3>
+<p><button class="play-button sentence" id="s-00-07-35-053" data-start="00:07:35,053" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their reaction will be very telling today.</p>
+<p>他们今天的反应将非常有说服力。</p>
+<p><button class="play-button sentence" id="s-00-07-37-088" data-start="00:07:37,088" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But just as someone who reads these numbers, the risk of politicizing these numbers has to be high.</p>
+<p>但作为一个阅读这些数字的人，这些数字被政治化的风险一定很高。</p>
+<p><button class="play-button sentence" id="s-00-07-42-894" data-start="00:07:42,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's certainly high.</p>
+<p>确实很高。</p>
+<p><button class="play-button sentence" id="s-00-07-44-029" data-start="00:07:44,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's why it's been so critical historically to have a nonpartisan Bureau of Labor Statistics.</p>
+<p>这就是为什么历史上拥有一个无党派的劳工统计局如此重要。</p>
+<p><button class="play-button sentence" id="s-00-07-49-802" data-start="00:07:49,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's not just important for consumers who are understanding the economy.</p>
+<p>因此，这不仅对理解经济的消费者很重要。</p>
+<p><a name="block-21"></a></p>
+<h3>00:07:53</h3>
+<p><button class="play-button sentence" id="s-00-07-53-664" data-start="00:07:53,664" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's important for traders.</p>
+<p>对交易者也很重要。</p>
+<p><button class="play-button sentence" id="s-00-07-54-740" data-start="00:07:54,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's important for my sources on Wall Street who are trading, you know, inflation protected securities to trust in this data.</p>
+<p>对我的华尔街消息来源来说也很重要，他们在交易通胀保护证券时需要信任这些数据。</p>
+<p><button class="play-button sentence" id="s-00-08-00-680" data-start="00:08:00,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's very critical for for global markets.</p>
+<p>对全球市场非常关键。</p>
+<p><button class="play-button sentence" id="s-00-08-03-216" data-start="00:08:03,216" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's certainly going to be something we're covering going.</p>
+<p>所以这肯定是我们未来要报道的内容。</p>
+<p><button class="play-button sentence" id="s-00-08-05-451" data-start="00:08:05,451" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Forward right Madison Mills thank you so much.</p>
+<p>继续前进，Madison Mills，非常感谢。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
