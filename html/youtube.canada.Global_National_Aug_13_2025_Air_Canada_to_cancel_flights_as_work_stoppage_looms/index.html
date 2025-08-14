@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Canada in Crisis: Airline Strikes, Wildfires, and Supreme Court Battles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Canada faces a turbulent week as Air Canada flight attendants threaten a strike, wildfires rage across multiple provinces, and the Supreme Court re-examines the controversial notwithstanding clause. Meanwhile, a 10-year-old chess prodigy makes history.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Canada in Crisis: Airline Strikes, Wildfires, and Supreme Court Battles</h1>
+<p>【Global News 20250814 加拿大面临多重危机：加拿大航空乘务员罢工在即、多省野火肆虐、最高法院争议｜一位10岁的国际象棋神童创造了历史】</p>
+<p>Summary:
+Canada faces a turbulent week as Air Canada flight attendants threaten a strike, wildfires rage across multiple provinces, and the Supreme Court re-examines the controversial notwithstanding clause. Meanwhile, a 10-year-old chess prodigy makes history.</p>
+<p>摘要：
+加拿大本周陷入多重危机：加拿大航空乘务员罢工在即，多省野火肆虐，最高法院重新审视备受争议的“但书条款”。与此同时，一位10岁的国际象棋神童创造了历史。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 36 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959995" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-04-400" data-start="00:00:04,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> [Music] On this Wednesday night, turbulence ahead.</p>
+<p>在这个星期三的晚上，前方有动荡。</p>
+<p><button class="play-button sentence" id="s-00-00-06-227" data-start="00:00:06,227" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're praying that we can come back on Monday.</p>
+<p>我们祈祷能在周一回来。</p>
+<p><button class="play-button sentence" id="s-00-00-08-328" data-start="00:00:08,328" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The disruptions of Air Canada flight attendants strike or get locked out.</p>
+<p>加拿大航空乘务员的罢工或停工造成的混乱。</p>
+<p><button class="play-button sentence" id="s-00-00-12-510" data-start="00:00:12,510" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Newfoundland and Labrador's multi-million dollar wildfire fight.</p>
+<p>纽芬兰与拉布拉多省耗资数百万的野火扑救行动。</p>
+<p><button class="play-button sentence" id="s-00-00-17-103" data-start="00:00:17,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> New Brunswick's intensifying flames.</p>
+<p>新不伦瑞克省愈演愈烈的火焰。</p>
+<p><button class="play-button sentence" id="s-00-00-19-532" data-start="00:00:19,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what all these fires across Canada mean for aquatic life.</p>
+<p>而加拿大各地这些火灾对水生生物意味着什么。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959976" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-23-278" data-start="00:00:23,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those can have a whole host of problems under scrutiny.</p>
+<p>这些问题可能会引发一系列需要仔细研究的问题。</p>
+<p><button class="play-button sentence" id="s-00-00-26-678" data-start="00:00:26,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why the Supreme Court is re-examining the ability of governments to override Canada's Charter of Rights and Freedoms.</p>
+<p>为什么最高法院正在重新审视政府是否有权凌驾于加拿大的《权利与自由宪章》之上。</p>
+<p><button class="play-button sentence" id="s-00-00-33-553" data-start="00:00:33,553" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, a 10-year-old chess champion.</p>
+<p>此外，还有一位10岁的国际象棋冠军。</p>
+<p><button class="play-button sentence" id="s-00-00-36-329" data-start="00:00:36,329" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She continues to push through and break like new boundaries.</p>
+<p>她不断突破并打破新的界限。</p>
+<p><button class="play-button sentence" id="s-00-00-40-079" data-start="00:00:40,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The girl who made all the right moves to land in the history books.</p>
+<p>这个女孩凭借正确的举动载入史册。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959950" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-49-200" data-start="00:00:49,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Global National with Donna Freezen.</p>
+<p>这里是Donna Freezen主持的《环球国家新闻》。</p>
+<p><button class="play-button sentence" id="s-00-00-51-679" data-start="00:00:51,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good evening and thanks for joining us.</p>
+<p>晚上好，感谢您的收看。</p>
+<p><button class="play-button sentence" id="s-00-00-53-359" data-start="00:00:53,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Canada's largest airline appears to be heading towards a major disruption right at the height of tourist season.</p>
+<p>加拿大最大的航空公司似乎正面临旅游旺季期间的重大混乱。</p>
+<p><button class="play-button sentence" id="s-00-00-59-022" data-start="00:00:59,022" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The union representing Air Canada's 10,000 flight attendants has issued a strike notice that would take effect at 1:00 a.m. Eastern on Saturday.</p>
+<p>代表加拿大航空1万名乘务员的工会已发出罢工通知，将于东部时间周六凌晨1点生效。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959933" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-06-906" data-start="00:01:06,906" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the company says it may lock them out if no deal is reached before then.</p>
+<p>公司表示，如果在此之前未达成协议，可能会将他们拒之门外。</p>
+<p><button class="play-button sentence" id="s-00-01-11-511" data-start="00:01:11,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And to prepare for that possibility, it will gradually begin suspending flights starting on Thursday.</p>
+<p>为应对这种可能性，公司将从周四开始逐步暂停航班。</p>
+<p><button class="play-button sentence" id="s-00-01-17-462" data-start="00:01:17,462" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If Air Canada flights are grounded, tens of thousands of passengers would be left scrambling to find alternatives.</p>
+<p>如果加拿大航空的航班停飞，数万名乘客将不得不匆忙寻找替代方案。</p>
+<p><button class="play-button sentence" id="s-00-01-24-073" data-start="00:01:24,073" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nitu Garcha has our top story tonight.</p>
+<p>Nitu Garcha为我们带来今晚的头条新闻。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-840" data-start="00:01:27,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The clock is ticking down to a possible strike or lockout.</p>
+<p>罢工或停工的可能性正在倒计时。</p>
+<p><button class="play-button sentence" id="s-00-01-31-680" data-start="00:01:31,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm actually American and so when we cross the border today, we just found out about it.</p>
+<p>我其实是美国人，所以今天我们过境时才得知此事。</p>
+<p><button class="play-button sentence" id="s-00-01-36-640" data-start="00:01:36,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm sure they're going to come to some sort of conclusion hopefully.</p>
+<p>我相信他们会达成某种协议，希望如此。</p>
+<p><button class="play-button sentence" id="s-00-01-38-949" data-start="00:01:38,949" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If not, I guess I'm driving home.</p>
+<p>如果没有，我想我只能开车回家了。</p>
+<p><button class="play-button sentence" id="s-00-01-40-078" data-start="00:01:40,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're praying that we can come back on Monday.</p>
+<p>我们祈祷能在周一回来。</p>
+<p><button class="play-button sentence" id="s-00-01-41-643" data-start="00:01:41,643" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're very fortunate that we're on our way home here at Vancouver International Airport.</p>
+<p>我们很幸运，已经在温哥华国际机场准备回家。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-46-407" data-start="00:01:46,407" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The uncertainty is starting to set in.</p>
+<p>不确定性开始蔓延。</p>
+<p><button class="play-button sentence" id="s-00-01-48-544" data-start="00:01:48,544" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If no deal is reached, major disruptions could hit thousands of Air Canada passengers.</p>
+<p>如果未达成协议，数千名加拿大航空乘客将面临重大混乱。</p>
+<p><button class="play-button sentence" id="s-00-01-54-156" data-start="00:01:54,156" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With negotiations stalled and no deal in sight, Air Canada is already scaling back its operations.</p>
+<p>由于谈判陷入僵局且无协议在望，加拿大航空已经开始缩减运营。</p>
+<p><button class="play-button sentence" id="s-00-02-00-532" data-start="00:02:00,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first signs of what could be a full-blown shutdown by the weekend.</p>
+<p>这可能是周末全面停飞的首个迹象。</p>
+<p><button class="play-button sentence" id="s-00-02-04-582" data-start="00:02:04,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The union says the dispute centers largely on unpaid labor.</p>
+<p>工会表示，争议主要集中在无偿劳动上。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959871" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-08-514" data-start="00:02:08,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tasks flight attendants perform before and after flights they say go uncompensated.</p>
+<p>他们说乘务员在航班前后执行的任务没有得到补偿。</p>
+<p><button class="play-button sentence" id="s-00-02-14-080" data-start="00:02:14,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The company needs to come back to the table.</p>
+<p>公司需要回到谈判桌前。</p>
+<p><button class="play-button sentence" id="s-00-02-15-983" data-start="00:02:15,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We filed strike notice to apply the pressure to the company who holds the final cards in this.</p>
+<p>我们提交了罢工通知，向掌握最终决定权的公司施压。</p>
+<p><button class="play-button sentence" id="s-00-02-21-759" data-start="00:02:21,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air Canada said this week its latest offer includes a 38% pay increase over four years, adding on Wednesday it's made arrangements with other carriers to provide customers alternate travel options or full refunds.</p>
+<p>加拿大航空本周表示，其最新提议包括四年内加薪38%，并在周三补充说，已与其他航空公司安排为客户提供替代旅行选择或全额退款。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959845" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-34-400" data-start="00:02:34,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that the reason why Air Canada responded as it did was to try to uh uh expedite the resolution process.</p>
+<p>我认为加拿大航空之所以这样回应，是为了试图加快解决进程。</p>
+<p><button class="play-button sentence" id="s-00-02-45-326" data-start="00:02:45,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After the union refused Air Canada's offer of third party arbitration, he says he wouldn't be surprised if the government stepped in.</p>
+<p>在工会拒绝加拿大航空的第三方仲裁提议后，他表示如果政府介入，他不会感到惊讶。</p>
+<p><button class="play-button sentence" id="s-00-02-52-657" data-start="00:02:52,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ottawa says it's closely monitoring the situation, urging both sides to stay at the table while keeping mediators ready.</p>
+<p>渥太华表示正在密切关注局势，敦促双方留在谈判桌前，同时准备好调解人。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959819" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-00-080" data-start="00:03:00,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Newfoundland and Labrador is hosting athletes and families from across the country for the Canada Games.</p>
+<p>纽芬兰与拉布拉多省正在为来自全国各地的运动员和家庭举办加拿大运动会。</p>
+<p><button class="play-button sentence" id="s-00-03-05-384" data-start="00:03:05,384" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One Winnipeg mother says she paid out of pocket for a non-refundable flight on another airline just in case.</p>
+<p>一位温尼伯的母亲表示，她自费购买了另一家航空公司的不可退款机票以防万一。</p>
+<p><button class="play-button sentence" id="s-00-03-11-680" data-start="00:03:11,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I couldn't risk not having a flight out to see my kid in the Canada games.</p>
+<p>我不能冒险没有航班去看我的孩子参加加拿大运动会。</p>
+<p><button class="play-button sentence" id="s-00-03-16-959" data-start="00:03:16,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Passengers and crews are left waiting, hoping for a deal before time and flights run out.</p>
+<p>乘客和机组人员只能等待，希望在时间和航班耗尽之前达成协议。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959797" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-22-898" data-start="00:03:22,898" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nitu Gara, Global News, Vancouver.</p>
+<p>Nitu Gara，环球新闻，温哥华报道。</p>
+<p><button class="play-button sentence" id="s-00-03-25-695" data-start="00:03:25,695" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Atlantic Canada, heat warnings are in place in every province.</p>
+<p>在加拿大大西洋地区，每个省都发布了高温警告。</p>
+<p><button class="play-button sentence" id="s-00-03-29-760" data-start="00:03:29,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In parts of Newfoundland and Labrador, it continues to be hot and humid and four wildfires are still burning out of control.</p>
+<p>在纽芬兰与拉布拉多省的部分地区，天气仍然炎热潮湿，四场野火仍在失控燃烧。</p>
+<p><button class="play-button sentence" id="s-00-03-36-959" data-start="00:03:36,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Members of Canada's armed forces are now providing firefighting support.</p>
+<p>加拿大武装部队成员正在提供灭火支援。</p>
+<p><button class="play-button sentence" id="s-00-03-41-169" data-start="00:03:41,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heidi Petrachic is in St. John's where thousands of people are on edge.</p>
+<p>Heidi Petrachic在圣约翰斯，那里数千人处于紧张状态。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-45-482" data-start="00:03:45,482" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heidi, Donna, the section of the TransCanada Highway behind me remains closed to help with firefighting efforts here on the outskirts of St.</p>
+<p>Heidi，Donna，我身后的横加高速公路部分路段仍然关闭，以协助圣郊区的灭火工作。</p>
+<p><button class="play-button sentence" id="s-00-03-53-423" data-start="00:03:53,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you can still smell a lot of smoke as measures to both battle the province's wildfires and prevent any more ramp up.</p>
+<p>你仍然能闻到很多烟味，因为正在采取措施扑灭该省的野火并防止进一步蔓延。</p>
+<p><button class="play-button sentence" id="s-00-04-04-878" data-start="00:04:04,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three aircraft attacked the St. John's area wildfire from above while officials say firefighters on the ground are working to stop the spread.</p>
+<p>三架飞机从空中扑灭圣约翰斯地区的野火，而官员表示地面消防员正在努力阻止火势蔓延。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959746" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-13-178" data-start="00:04:13,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With hundreds of people out of their homes and thousands prepared to leave if they have to, everyone is watching and worrying.</p>
+<p>数百人已经离开家园，数千人准备在必要时撤离，所有人都在观望和担忧。</p>
+<p><button class="play-button sentence" id="s-00-04-19-909" data-start="00:04:19,909" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then it's the waiting and the not knowing what's gonna happen.</p>
+<p>然后是等待和不知道会发生什么。</p>
+<p><button class="play-button sentence" id="s-00-04-23-439" data-start="00:04:23,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Couldn't keep up.</p>
+<p>无法跟上。</p>
+<p><button class="play-button sentence" id="s-00-04-24-639" data-start="00:04:24,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An hour away, Eugene Howell takes photos of the province's largest wildfire in Conception Bay North.</p>
+<p>一小时车程外，Eugene Howell拍摄了该省最大的野火——北康塞普申湾野火的照片。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959728" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-31-335" data-start="00:04:31,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was forced from his home by the Kingston fire, which has surpassed 6,000 hectares.</p>
+<p>他因金斯顿火灾被迫离开家园，该火灾已超过6000公顷。</p>
+<p><button class="play-button sentence" id="s-00-04-37-070" data-start="00:04:37,070" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He snapped hundreds of photos like these along this rugged coastline over the years.</p>
+<p>多年来，他在这崎岖的海岸线上拍摄了数百张这样的照片。</p>
+<p><button class="play-button sentence" id="s-00-04-42-630" data-start="00:04:42,630" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His voice is raspy after a fight against cancer.</p>
+<p>在与癌症抗争后，他的声音变得沙哑。</p>
+<p><button class="play-button sentence" id="s-00-04-46-067" data-start="00:04:46,067" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He knows his next fight will be to help with rebuilding these old homes.</p>
+<p>他知道他的下一场战斗将是帮助重建这些老房子。</p>
+<p><button class="play-button sentence" id="s-00-04-51-172" data-start="00:04:51,172" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of the old homes are hundreds of years old, but maybe we'll go back and say maybe we can, you know, go back there and and to live.</p>
+<p>许多老房子有数百年历史，但也许我们会回去，说也许我们可以回去居住。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-918" data-start="00:05:01,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A call with the prime minister was encouraging for the premier.</p>
+<p>与总理的通话让省长感到鼓舞。</p>
+<p><button class="play-button sentence" id="s-00-05-05-759" data-start="00:05:05,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He offered um any and all help that the Canadian government can do.</p>
+<p>他提供了加拿大政府能提供的任何和所有帮助。</p>
+<p><button class="play-button sentence" id="s-00-05-10-418" data-start="00:05:10,418" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The province is spending millions to bring in firefighting aircraft.</p>
+<p>该省花费数百万引进灭火飞机。</p>
+<p><button class="play-button sentence" id="s-00-05-14-313" data-start="00:05:14,313" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With budgets and resources stretched, officials remain frustrated by burn ban violations, two of the new $50,000 fines already laid.</p>
+<p>由于预算和资源紧张，官员们对违反燃烧禁令感到沮丧，已经开出了两张新的5万加元罚单。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959676" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-23-439" data-start="00:05:23,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, they're introducing a new restriction to try to prevent any more.</p>
+<p>因此，他们正在引入新的限制措施，试图防止更多违规行为。</p>
+<p><button class="play-button sentence" id="s-00-05-27-839" data-start="00:05:27,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When our weather indices are uh very high or extreme, we will be banning ATVs on forested roads.</p>
+<p>当我们的天气指数非常高或极端时，我们将禁止在森林道路上使用全地形车。</p>
+<p><button class="play-button sentence" id="s-00-05-36-411" data-start="00:05:36,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When it comes to what's already burning, wildland fire expert Mike Flanigan says expect a long and hard battle.</p>
+<p>谈到已经燃烧的火灾，野外火灾专家Mike Flanigan表示要做好长期艰苦战斗的准备。</p>
+<p><button class="play-button sentence" id="s-00-05-44-000" data-start="00:05:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a smoldering part and it can burn deep down into that organic layer.</p>
+<p>有一部分在阴燃，它可以深入到有机层燃烧。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959650" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-49-519" data-start="00:05:49,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, the firefighters either have to use lots of water or they have to dig.</p>
+<p>因此，消防员要么使用大量水，要么必须挖掘。</p>
+<p><button class="play-button sentence" id="s-00-05-53-680" data-start="00:05:53,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes they have to use heavy equipment.</p>
+<p>有时他们不得不使用重型设备。</p>
+<p><button class="play-button sentence" id="s-00-05-55-526" data-start="00:05:55,526" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, what's really needed is substantial rain, but that's not in the near forecast.</p>
+<p>现在真正需要的是大量降雨，但近期预报中没有。</p>
+<p><button class="play-button sentence" id="s-00-06-00-051" data-start="00:06:00,051" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is coming is help on the ground from the Canadian Armed Forces.</p>
+<p>即将到来的是加拿大武装部队的地面支援。</p>
+<p><button class="play-button sentence" id="s-00-06-04-160" data-start="00:06:04,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are members in the province right now organizing to be deployed as soon as tomorrow.</p>
+<p>目前省内已有成员组织，最早明天部署。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959630" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-09-741" data-start="00:06:09,741" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donna.</p>
+<p>Donna。</p>
+<p><button class="play-button sentence" id="s-00-06-10-209" data-start="00:06:10,209" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right. Hi Petraic in St. John's. Thank you.</p>
+<p>好的。Hi Petraic在圣约翰斯。谢谢。</p>
+<p><button class="play-button sentence" id="s-00-06-13-205" data-start="00:06:13,205" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In New Brunswick, six new fires were reported in the past 24 hours, pushing the total number of active fires there to 16.</p>
+<p>在新不伦瑞克省，过去24小时内报告了六起新火灾，使该地区的活跃火灾总数达到16起。</p>
+<p><button class="play-button sentence" id="s-00-06-20-444" data-start="00:06:20,444" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two are considered out of control.</p>
+<p>其中两起被认为失控。</p>
+<p><button class="play-button sentence" id="s-00-06-22-694" data-start="00:06:22,694" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Irish Town fire north of Monton poses the greatest threat to people and property.</p>
+<p>蒙顿北部的爱尔兰镇火灾对人员和财产构成最大威胁。</p>
+<p><button class="play-button sentence" id="s-00-06-26-959" data-start="00:06:26,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hundreds of people have been told to be ready to evacuate on short notice.</p>
+<p>数百人被告知要做好随时撤离的准备。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959609" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-30-870" data-start="00:06:30,870" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The largest fire is in northern New Brunswick and it did expand overnight.</p>
+<p>最大的火灾发生在新不伦瑞克省北部，并且在一夜之间扩大。</p>
+<p><button class="play-button sentence" id="s-00-06-35-360" data-start="00:06:35,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anna Mandon is in that area tonight.</p>
+<p>Anna Mandon今晚在该地区。</p>
+<p><button class="play-button sentence" id="s-00-06-38-000" data-start="00:06:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anna, Donna, I'm here in Mirmashi where for a week a fire has burned hundreds of hectares.</p>
+<p>Anna，Donna，我在Mirmashi，这里一周以来火灾已经烧毁了数百公顷。</p>
+<p><button class="play-button sentence" id="s-00-06-43-888" data-start="00:06:43,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The main road north out of the community is blocked for kilometers.</p>
+<p>社区北面的主要道路被封锁了数公里。</p>
+<p><button class="play-button sentence" id="s-00-06-47-839" data-start="00:06:47,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the closest on this road we can get to the fire, which officials say is immensely challenging to fight.</p>
+<p>这是我们在这条路上能接近火灾的最近距离，官员表示扑救极具挑战性。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959584" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-55-680" data-start="00:06:55,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since last Wednesday, a fire on the outskirts of Mirmashi has been out of control.</p>
+<p>自上周三以来，Mirmashi郊区的一场火灾一直失控。</p>
+<p><button class="play-button sentence" id="s-00-07-00-496" data-start="00:07:00,496" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On day eight, the fire showed some slowing, but as of Wednesday afternoon, it spanned over 1,300 hectares.</p>
+<p>第八天，火势有所减缓，但截至周三下午，火灾面积已超过1300公顷。</p>
+<p><button class="play-button sentence" id="s-00-07-07-405" data-start="00:07:07,405" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh we have put dozens of people and air resources and others on the Miramashy fire, it continues to grow.</p>
+<p>我们已经在Miramashy火灾上投入了数十人和空中资源等，但它仍在蔓延。</p>
+<p><button class="play-button sentence" id="s-00-07-14-160" data-start="00:07:14,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While many residents in nearby communities feel they're in limbo, Norman Maserol lives past the roadblock.</p>
+<p>虽然附近社区的许多居民感到他们处于不确定状态，但Norman Maserol住在路障之外。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959560" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-19-759" data-start="00:07:19,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there was a couple days you were feeling good, but then when you look up here and you see the smoke again, he wishes they had more information about the fire.</p>
+<p>嗯，有几天你感觉很好，但当你抬头看到烟雾时，他希望他们能获得更多关于火灾的信息。</p>
+<p><button class="play-button sentence" id="s-00-07-27-120" data-start="00:07:27,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's not a lot of details being given on how close it is or, you know, or what danger or even if it's coming this way.</p>
+<p>关于火灾有多近、危险程度甚至是否朝这个方向蔓延，没有提供太多细节。</p>
+<p><button class="play-button sentence" id="s-00-07-37-519" data-start="00:07:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, another nearby resident also lives past the barricade.</p>
+<p>与此同时，另一位附近居民也住在路障之外。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959538" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-41-519" data-start="00:07:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not that good. Like, hope they don't come back.</p>
+<p>情况不太好。希望他们不要回来。</p>
+<p><button class="play-button sentence" id="s-00-07-44-000" data-start="00:07:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the smoke rises on the horizon in Miramashi, residents are concerned.</p>
+<p>当烟雾在Miramashi的地平线上升起时，居民们感到担忧。</p>
+<p><button class="play-button sentence" id="s-00-07-49-222" data-start="00:07:49,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see the smoke in that there.</p>
+<p>你可以看到那里的烟雾。</p>
+<p><button class="play-button sentence" id="s-00-07-51-304" data-start="00:07:51,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm afraid of it jumping across and hitting all those people.</p>
+<p>我担心它会跳过并袭击所有人。</p>
+<p><button class="play-button sentence" id="s-00-07-54-639" data-start="00:07:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have much respect to the front lines for what they're doing.</p>
+<p>我对前线人员所做的工作深表敬意。</p>
+<p><button class="play-button sentence" id="s-00-07-57-081" data-start="00:07:57,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a dangerous job and they're doing amazing.</p>
+<p>这是一项危险的工作，他们做得非常出色。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-00-639" data-start="00:08:00,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's thunderstorms in the forecast and the natural resources minister says how much precipitation the region gets will have a big impact on putting out the fire.</p>
+<p>预报有雷暴，自然资源部长表示该地区的降水量将对扑灭火灾产生重大影响。</p>
+<p><button class="play-button sentence" id="s-00-08-08-832" data-start="00:08:08,832" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The moisture level in the woods needs to change.</p>
+<p>森林中的湿度水平需要改变。</p>
+<p><button class="play-button sentence" id="s-00-08-11-573" data-start="00:08:11,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, we are going to be seeing some rain over the next 24 36 hours.</p>
+<p>因此，我们将在未来24到36小时内看到一些降雨。</p>
+<p><button class="play-button sentence" id="s-00-08-18-353" data-start="00:08:18,353" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, that's going to be immensely helpful.</p>
+<p>嗯，这将非常有帮助。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959498" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-21-235" data-start="00:08:21,235" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And while one house and three cottages have been evacuated, Heron says residents of the town of Levlet to the north of the fire don't need to leave yet.</p>
+<p>虽然一栋房屋和三间小屋已被疏散，但Heron表示火灾北部的Levlet镇居民尚不需要撤离。</p>
+<p><button class="play-button sentence" id="s-00-08-29-651" data-start="00:08:29,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donna.</p>
+<p>Donna。</p>
+<p><button class="play-button sentence" id="s-00-08-30-207" data-start="00:08:30,207" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, and Amanda in Miramashi, New Brunswick. Thank you.</p>
+<p>好的，Amanda在新不伦瑞克省的Miramashi。谢谢。</p>
+<p><button class="play-button sentence" id="s-00-08-34-498" data-start="00:08:34,498" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nova Scotia's premier says it is now so dry and hot that wildfires can spread dangerously fast.</p>
+<p>新斯科舍省省长表示，现在天气如此干燥炎热，野火可以危险地迅速蔓延。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959479" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-40-760" data-start="00:08:40,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So far, we've been dodging bullets.</p>
+<p>到目前为止，我们一直在躲避子弹。</p>
+<p><button class="play-button sentence" id="s-00-08-43-405" data-start="00:08:43,405" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh, think about it. 17 fires just, you know, in the last 24 hours.</p>
+<p>嗯，想想看。过去24小时内就有17起火灾。</p>
+<p><button class="play-button sentence" id="s-00-08-47-478" data-start="00:08:47,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The province is a tinder box.</p>
+<p>该省就像一个火药桶。</p>
+<p><button class="play-button sentence" id="s-00-08-49-863" data-start="00:08:49,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's so easy for a fire to start right now.</p>
+<p>现在很容易起火。</p>
+<p><button class="play-button sentence" id="s-00-08-53-575" data-start="00:08:53,575" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, we haven't had any rain since June.</p>
+<p>嗯，自六月以来我们一直没有降雨。</p>
+<p><button class="play-button sentence" id="s-00-08-56-799" data-start="00:08:56,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The largest wildfire burning near a Halifax business park has shrunk to about 15 hectares, but is still out of control.</p>
+<p>哈利法克斯商业区附近最大的野火已缩小到约15公顷，但仍未得到控制。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959456" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-03-410" data-start="00:09:03,410" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Businesses in the area were evacuated Tuesday, and a special air quality statement remains in effect for Halifax.</p>
+<p>该地区的企业周二被疏散，哈利法克斯仍处于特殊空气质量声明之下。</p>
+<p><button class="play-button sentence" id="s-00-09-09-988" data-start="00:09:09,988" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Officials in BC say a wildfire on Vancouver Island exploded overnight.</p>
+<p>不列颠哥伦比亚省的官员表示，温哥华岛上的一场野火在一夜之间爆发。</p>
+<p><button class="play-button sentence" id="s-00-09-15-537" data-start="00:09:15,537" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Mount Underwood fire has burned more than 2100 hectares.</p>
+<p>Mount Underwood火灾已烧毁超过2100公顷。</p>
+<p><button class="play-button sentence" id="s-00-09-19-034" data-start="00:09:19,034" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's bigger than the city of Victoria.</p>
+<p>这比维多利亚市还大。</p>
+<p><button class="play-button sentence" id="s-00-09-21-642" data-start="00:09:21,642" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Multiple communities near Port Alurnie have declared local states of emergency.</p>
+<p>Port Alurnie附近的多个社区已宣布进入地方紧急状态。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959433" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-26-125" data-start="00:09:26,125" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 500 properties in the region are still without electricity because the fire knocked out power.</p>
+<p>由于火灾导致停电，该地区500多处房产仍然没有电力供应。</p>
+<p><button class="play-button sentence" id="s-00-09-32-446" data-start="00:09:32,446" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Ontario government has launched a $1 billion emergency loan program to support companies hardest hit by US tariffs.</p>
+<p>安大略省政府推出了一项10亿加元的紧急贷款计划，以支持受美国关税打击最严重的公司。</p>
+<p><button class="play-button sentence" id="s-00-09-40-159" data-start="00:09:40,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's aimed mainly at steel, aluminum, and the auto manufacturing sector.</p>
+<p>主要针对钢铁、铝和汽车制造业。</p>
+<p><button class="play-button sentence" id="s-00-09-44-799" data-start="00:09:44,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prairie farmers are also hurting.</p>
+<p>草原地区的农民也受到伤害。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959413" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-46-770" data-start="00:09:46,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> China is imposing a 75% tariff on imports of Canadian canola, and farmers are worried there will be little demand for their harvest this fall.</p>
+<p>中国对加拿大油菜籽进口征收75%的关税，农民们担心今年秋季他们的收成需求将很少。</p>
+<p><button class="play-button sentence" id="s-00-09-54-831" data-start="00:09:54,831" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, Manitoba Premier Wob Canoe asked the federal government for immediate support for canola farmers.</p>
+<p>今天，曼尼托巴省省长Wob Canoe要求联邦政府立即为油菜籽农民提供支持。</p>
+<p><button class="play-button sentence" id="s-00-10-00-664" data-start="00:10:00,664" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says the tariff could cost Canada a billion dollars in just one day.</p>
+<p>他表示，关税可能在一天内让加拿大损失10亿加元。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959394" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-05-183" data-start="00:10:05,183" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US president keeps lowering expectations about his upcoming meeting with Russia's president.</p>
+<p>美国总统不断降低对他即将与俄罗斯总统会晤的期望。</p>
+<p><button class="play-button sentence" id="s-00-10-10-979" data-start="00:10:10,979" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump had a call with European leaders today along with Ukraine's president and Canada's prime minister.</p>
+<p>唐纳德·特朗普今天与欧洲领导人、乌克兰总统和加拿大总理通了电话。</p>
+<p><button class="play-button sentence" id="s-00-10-17-170" data-start="00:10:17,170" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump is warning of severe consequences if Russia does not agree to end its war on Ukraine.</p>
+<p>特朗普警告说，如果俄罗斯不同意结束对乌克兰的战争，将面临严重后果。</p>
+<p><button class="play-button sentence" id="s-00-10-22-317" data-start="00:10:22,317" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he's also downplaying the possibility of reaching a peace deal with Putin.</p>
+<p>但他也淡化了与普京达成和平协议的可能性。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959372" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-27-676" data-start="00:10:27,676" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jackson Proco reports.</p>
+<p>Jackson Proco报道。</p>
+<p><button class="play-button sentence" id="s-00-10-30-240" data-start="00:10:30,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This American military base in Alaska will host the talks aimed at ending the war in Ukraine.</p>
+<p>这个位于阿拉斯加的美国军事基地将主办旨在结束乌克兰战争的会谈。</p>
+<p><button class="play-button sentence" id="s-00-10-35-848" data-start="00:10:35,848" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's where President Donald Trump will meet face tof face with Vladimir Putin to press the Russians for a ceasefire.</p>
+<p>唐纳德·特朗普总统将在这里与弗拉基米尔·普京面对面会晤，敦促俄罗斯人停火。</p>
+<p><button class="play-button sentence" id="s-00-10-42-879" data-start="00:10:42,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to find out where we are and what we're doing.</p>
+<p>我要弄清楚我们在哪里以及我们在做什么。</p>
+<p><button class="play-button sentence" id="s-00-10-46-159" data-start="00:10:46,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump is already making vague threats against Moscow if there is no deal.</p>
+<p>特朗普已经在没有协议的情况下对莫斯科发出模糊的威胁。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959349" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-50-720" data-start="00:10:50,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There will be very severe consequences.</p>
+<p>将会产生非常严重的后果。</p>
+<p><button class="play-button sentence" id="s-00-10-52-639" data-start="00:10:52,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's also vowing another summit that would give Ukraine a seat at the table.</p>
+<p>他还承诺举行另一次峰会，让乌克兰获得一席之地。</p>
+<p><button class="play-button sentence" id="s-00-10-56-639" data-start="00:10:56,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would like to do it almost immediately and we'll have a quick second meeting between President Putin and President Zalinski and myself.</p>
+<p>我希望几乎立即进行，我们将很快举行普京总统、泽连斯基总统和我之间的第二次会议。</p>
+<p><button class="play-button sentence" id="s-00-11-05-839" data-start="00:11:05,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine's president spent the morning in a virtual huddle with Trump, European leaders and Prime Minister Mark Carney.</p>
+<p>乌克兰总统上午与特朗普、欧洲领导人和马克·卡尼总理进行了虚拟会议。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959327" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-12-320" data-start="00:11:12,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vladimir Zalinski says he's ready for a ceasefire, but issued a blunt warning.</p>
+<p>弗拉基米尔·泽连斯基表示他已准备好停火，但也发出了直白的警告。</p>
+<p><button class="play-button sentence" id="s-00-11-17-600" data-start="00:11:17,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putin definitely does not want peace.</p>
+<p>普京绝对不想要和平。</p>
+<p><button class="play-button sentence" id="s-00-11-19-697" data-start="00:11:19,697" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He wants the occupation of our country.</p>
+<p>他想要占领我们的国家。</p>
+<p><button class="play-button sentence" id="s-00-11-21-440" data-start="00:11:21,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> European leaders are adamant any deal must include security guarantees for Ukraine to um ensure that any peace, if there is peace, is lasting peace and that um Ukraine can defend its territorial integrity.</p>
+<p>欧洲领导人坚持认为任何协议都必须包含对乌克兰的安全保障，以确保任何和平（如果有的话）是持久的，并且乌克兰能够捍卫其领土完整。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959302" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-37-371" data-start="00:11:37,371" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To get there, both Ukraine and Russia will likely have to make concessions over land.</p>
+<p>为了实现这一点，乌克兰和俄罗斯可能都必须在领土问题上做出让步。</p>
+<p><button class="play-button sentence" id="s-00-11-43-236" data-start="00:11:43,236" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A former Trump adviser is already warning the summit with Putin sets up a worrying dynamic for Keefe.</p>
+<p>特朗普的一位前顾问已经警告称，与普京的峰会为基辅制造了一种令人担忧的动态。</p>
+<p><button class="play-button sentence" id="s-00-11-49-679" data-start="00:11:49,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump wants this to be his deal that that he makes with Putin that he then presents to Zilinski, which obviously is very dangerous for the Ukrainians.</p>
+<p>特朗普希望这是他与普京达成的协议，然后他再将其提交给泽连斯基，这对乌克兰人来说显然非常危险。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959279" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-00-514" data-start="00:12:00,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, uh, and and it certainly fits right into Putin's game plan.</p>
+<p>所以，这完全符合普京的计划。</p>
+<p><button class="play-button sentence" id="s-00-12-04-397" data-start="00:12:04,397" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Keep the Ukrainians out, keep the pesky Europeans out, just one-on-one between him and Trump.</p>
+<p>把乌克兰人排除在外，把讨厌的欧洲人排除在外，只是他和特朗普之间的一对一。</p>
+<p><button class="play-button sentence" id="s-00-12-12-000" data-start="00:12:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For now, it's a tense waiting game to see whether the first round of talks yields a second and whether the terms of any agreement can satisfy two countries at war.</p>
+<p>目前，这是一场紧张的等待游戏，看看第一轮会谈是否会带来第二轮，以及任何协议的条款是否能满足两个交战国家的需求。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959257" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-22-294" data-start="00:12:22,294" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jackson Prosco, Global News, Washington.</p>
+<p>杰克逊·普罗斯科，环球新闻，华盛顿。</p>
+<p><button class="play-button sentence" id="s-00-12-26-161" data-start="00:12:26,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Alaska's capital, there was fear a melting glacier could cause serious flooding and some homes were evacuated.</p>
+<p>在阿拉斯加首府，人们担心融化的冰川可能导致严重洪水，一些房屋被疏散。</p>
+<p><button class="play-button sentence" id="s-00-12-33-200" data-start="00:12:33,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This time lapse from the US Geological Survey shows the rising water levels of lakes and rivers fed by men the mendenhole glacier.</p>
+<p>美国地质调查局的这段延时视频显示了由门登霍尔冰川补给的湖泊和河流水位上升。</p>
+<p><button class="play-button sentence" id="s-00-12-40-818" data-start="00:12:40,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Forecasters say water levels have now crested, setting a new record just above 5 meters.</p>
+<p>预报员表示水位现已达到峰值，创下略高于5米的新纪录。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959234" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-45-919" data-start="00:12:45,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emergency flood barriers installed in Juno, Alaska appear to have funneled the flood waters away from neighborhoods.</p>
+<p>在阿拉斯加朱诺安装的紧急防洪屏障似乎已将洪水引离居民区。</p>
+<p><button class="play-button sentence" id="s-00-12-52-240" data-start="00:12:52,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Scientists say climate change is causing the glacier to melt faster, increasing the flood danger.</p>
+<p>科学家表示气候变化导致冰川加速融化，增加了洪水风险。</p>
+<p><button class="play-button sentence" id="s-00-12-57-975" data-start="00:12:57,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The consequences of Canada's wildfires underwater.</p>
+<p>加拿大野火在水下的后果。</p>
+<p><button class="play-button sentence" id="s-00-13-02-043" data-start="00:13:02,043" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Coming up, what they could be doing to aquatic life.</p>
+<p>接下来，它们可能对水生生物造成的影响。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959213" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-06-375" data-start="00:13:06,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What a mess on this train track in Texas.</p>
+<p>德克萨斯州这条火车轨道上的一片混乱。</p>
+<p><button class="play-button sentence" id="s-00-13-14-005" data-start="00:13:14,005" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 30 cars, some carrying hazardous materials, derailed.</p>
+<p>超过30节车厢脱轨，其中一些载有危险材料。</p>
+<p><button class="play-button sentence" id="s-00-13-17-846" data-start="00:13:17,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happened near a town about an hour and a half west of Dallas.</p>
+<p>事故发生在达拉斯以西约一个半小时车程的一个小镇附近。</p>
+<p><button class="play-button sentence" id="s-00-13-20-791" data-start="00:13:20,791" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No one was injured, and though hazmat teams were sent, authorities say there are no signs of leaks from the train cars.</p>
+<p>无人受伤，尽管已派出危险品处理小组，但当局表示没有迹象表明车厢有泄漏。</p>
+<p><button class="play-button sentence" id="s-00-13-28-339" data-start="00:13:28,339" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Manitoba has been hit hard by wildfires this year.</p>
+<p>马尼托巴省今年遭受了严重的野火袭击。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959188" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-31-600" data-start="00:13:31,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 1.75 million hectares have already burned this season.</p>
+<p>本季已有超过175万公顷土地被烧毁。</p>
+<p><button class="play-button sentence" id="s-00-13-35-846" data-start="00:13:35,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And beyond the ravaged forests and poor air quality is potential damage to lakes and rivers.</p>
+<p>除了被毁的森林和糟糕的空气质量外，湖泊和河流也可能受到损害。</p>
+<p><button class="play-button sentence" id="s-00-13-41-839" data-start="00:13:41,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fires are damaging aquatic environments in subtle ways.</p>
+<p>野火正在以微妙的方式破坏水生环境。</p>
+<p><button class="play-button sentence" id="s-00-13-45-164" data-start="00:13:45,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Marty Blunt looks at the impact on one of Manitoba's biggest provincial parks.</p>
+<p>马蒂·布伦特研究了野火对马尼托巴省最大的省级公园之一的影响。</p>
+<p><button class="play-button sentence" id="s-00-13-50-582" data-start="00:13:50,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Conserving and protecting species of fish for decades to come.</p>
+<p>为未来几十年保护和保存鱼类物种。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959163" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-56-760" data-start="00:13:56,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the focus of the White Shell Fish Hatchery nestled along the Manitoba Ontario border.</p>
+<p>这是位于马尼托巴省和安大略省边界的白壳鱼类孵化场的重点。</p>
+<p><button class="play-button sentence" id="s-00-14-02-240" data-start="00:14:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> breeding, growing, and releasing fish across Manitoba like this brown trout.</p>
+<p>繁殖、养殖并放归马尼托巴省的鱼类，比如这条褐鳟。</p>
+<p><button class="play-button sentence" id="s-00-14-07-475" data-start="00:14:07,475" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's tag.</p>
+<p>这是标记。</p>
+<p><button class="play-button sentence" id="s-00-14-08-879" data-start="00:14:08,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this year, an onland threat could pose a risk beneath the water's surface as a record- setting wildfire season takes a toll on aquatic ecosystems.</p>
+<p>但今年，随着创纪录的野火季节对水生生态系统造成影响，陆地上的威胁可能对水下构成风险。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959140" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-19-039" data-start="00:14:19,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Loss of riparian habitat, so that's the trees and the brush around the lake systems.</p>
+<p>河岸栖息地的丧失，即湖泊系统周围的树木和灌木。</p>
+<p><button class="play-button sentence" id="s-00-14-25-469" data-start="00:14:25,469" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> uh that introduces more light and so that causes a whole can cause a whole host of problems.</p>
+<p>这会引入更多光线，从而导致一系列问题。</p>
+<p><button class="play-button sentence" id="s-00-14-32-480" data-start="00:14:32,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fisheries manager Alexandra Shonne says wildfires can change the temperature of lakes and the loss of trees and vegetation can create increased runoff.</p>
+<p>渔业经理亚历山德拉·肖恩表示，野火会改变湖泊温度，而树木和植被的丧失会增加径流。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959117" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-42-240" data-start="00:14:42,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As simple as just silt and dirt that's now being flooded into lakes.</p>
+<p>简单到只是淤泥和泥土现在被冲入湖泊。</p>
+<p><button class="play-button sentence" id="s-00-14-47-671" data-start="00:14:47,671" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> or it could be more uh toxic, changing fish behavior or changing how they feed or changing how they reproduce.</p>
+<p>或者可能是更有毒的物质，改变鱼类的行为、摄食方式或繁殖方式。</p>
+<p><button class="play-button sentence" id="s-00-14-55-679" data-start="00:14:55,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The impacts likely becoming more severe as wildfire seasons intensify.</p>
+<p>随着野火季节加剧，影响可能会变得更加严重。</p>
+<p><button class="play-button sentence" id="s-00-15-00-559" data-start="00:15:00,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that can certainly have an impact on our freshwater, especially if the fires are occurring um near freshwater bodies or if the same areas keep being impacted by fires because then they'll have little time to recover in between.</p>
+<p>这肯定会对我们的淡水产生影响，特别是如果野火发生在淡水水体附近，或者同一地区不断受到野火影响，因为它们几乎没有恢复的时间。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959084" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-15-440" data-start="00:15:15,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take a big one.</p>
+<p>举个例子。</p>
+<p><button class="play-button sentence" id="s-00-15-16-362" data-start="00:15:16,362" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The wildfire is also preventing the hatchery from stalking certain lakes up north.</p>
+<p>野火还阻止了孵化场向北部某些湖泊投放鱼苗。</p>
+<p><button class="play-button sentence" id="s-00-15-21-348" data-start="00:15:21,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Shan says the full impact is something only time will tell.</p>
+<p>肖恩表示，全面影响只有时间才能证明。</p>
+<p><button class="play-button sentence" id="s-00-15-25-209" data-start="00:15:25,209" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There can be these really prolonged effects.</p>
+<p>可能会有这些非常长期的影响。</p>
+<p><button class="play-button sentence" id="s-00-15-27-877" data-start="00:15:27,877" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So sometimes you're dealing with changes that might last a few days, but sometimes like pH or water chemistry, you're dealing with changes that are going to last years.</p>
+<p>所以有时你面对的变化可能持续几天，但有时像pH值或水化学，你面对的变化将持续数年。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959061" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-38-632" data-start="00:15:38,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And while a prolonged and intense wildfire season can pose a risk to aquatic ecosystems, experts say it can also allow for regrowth and regeneration for some plants and trees.</p>
+<p>尽管漫长而强烈的野火季节可能对水生生态系统构成风险，但专家表示，它也可能促进某些植物和树木的再生。</p>
+<p><button class="play-button sentence" id="s-00-15-49-442" data-start="00:15:49,442" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A benefit following a wildfire season that has brought so much devastation.</p>
+<p>在带来如此多破坏的野火季节之后的一个好处。</p>
+<p><button class="play-button sentence" id="s-00-15-53-560" data-start="00:15:53,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donna Marne Blunt in Manitoba's white shell provincial part.</p>
+<p>唐娜·马恩·布伦特在马尼托巴省白壳省级公园报道。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959042" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-57-654" data-start="00:15:57,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks, Marne.</p>
+<p>谢谢，马恩。</p>
+<p><button class="play-button sentence" id="s-00-15-58-958" data-start="00:15:58,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Veto power ahead.</p>
+<p>否决权即将到来。</p>
+<p><button class="play-button sentence" id="s-00-15-59-900" data-start="00:15:59,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why the Supreme Court is weighing in on one aspect of Canada's Charter of Rights and Freedoms.</p>
+<p>为什么最高法院正在权衡加拿大《权利与自由宪章》的一个方面。</p>
+<p><button class="play-button sentence" id="s-00-16-05-320" data-start="00:16:05,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> [Music]</p>
+<p>[音乐]</p>
+<p><button class="play-button sentence" id="s-00-16-06-529" data-start="00:16:06,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Saskatchewan's premier says he will be watching a Supreme Court case closely later this year when the court weighs in on the future of Canada's notwithstanding clause.</p>
+<p>萨斯喀彻温省省长表示，他将在今年晚些时候密切关注最高法院审理的一个案件，届时法院将权衡加拿大“但书条款”的未来。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208959021" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-18-926" data-start="00:16:18,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The clause is unique to Canada.</p>
+<p>该条款是加拿大独有的。</p>
+<p><button class="play-button sentence" id="s-00-16-20-522" data-start="00:16:20,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It allows governments to enact laws that may conflict with sections of Canada's Charter of Rights and Freedoms.</p>
+<p>它允许政府颁布可能与加拿大《权利与自由宪章》部分条款冲突的法律。</p>
+<p><button class="play-button sentence" id="s-00-16-26-443" data-start="00:16:26,443" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heather Urick's West explains what the Supreme Court is considering.</p>
+<p>希瑟·尤里克·韦斯特解释了最高法院正在考虑的内容。</p>
+<p><button class="play-button sentence" id="s-00-16-30-513" data-start="00:16:30,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was seen as a legal victory for Saskatchewan's transgender community when a court of appeal ruled the use of the notwithstanding clause could not stop a judicial review.</p>
+<p>当上诉法院裁定“但书条款”的使用不能阻止司法审查时，这被视为萨斯喀彻温省跨性别群体的法律胜利。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958998" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-41-519" data-start="00:16:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They can't strike that law down, but they can at least tell the public about the ways in which the um the law is infringing rights.</p>
+<p>他们不能废除该法律，但他们至少可以告诉公众该法律侵犯权利的方式。</p>
+<p><button class="play-button sentence" id="s-00-16-49-958" data-start="00:16:49,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Saskatchewan case deals with a law requiring parental consent if kids under 16 want to change their names or pronouns at school.</p>
+<p>萨斯喀彻温省的案件涉及一项法律，要求16岁以下的孩子在学校更改姓名或代词时需获得父母同意。</p>
+<p><button class="play-button sentence" id="s-00-16-59-090" data-start="00:16:59,090" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> LGBTQ2 plus rights are protected under Canada's Charter of Rights and Freedoms.</p>
+<p>LGBTQ2+权利受加拿大《权利与自由宪章》保护。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-04-304" data-start="00:17:04,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Protection that is safeguarded by the court.</p>
+<p>这种保护由法院维护。</p>
+<p><button class="play-button sentence" id="s-00-17-07-302" data-start="00:17:07,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when the charter passed back in 1982, notwithstanding clause powers were given to governments, ultimately giving the elected branch a final say.</p>
+<p>但当宪章于1982年通过时，“但书条款”的权力被赋予政府，最终让民选部门拥有最终决定权。</p>
+<p><button class="play-button sentence" id="s-00-17-17-357" data-start="00:17:17,357" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a really unique part of our constitution that doesn't exist anywhere else.</p>
+<p>这是我们宪法中非常独特的部分，其他地方不存在。</p>
+<p><button class="play-button sentence" id="s-00-17-21-918" data-start="00:17:21,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's incredibly dangerous and I think it's incredibly dangerous that governments are increasingly comfortable using it.</p>
+<p>我认为这非常危险，而且政府越来越习惯于使用它，这非常危险。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-27-666" data-start="00:17:27,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Governments are accountable to voters and any use of the clause has to be renewed every 5 years.</p>
+<p>政府对选民负责，该条款的任何使用必须每5年更新一次。</p>
+<p><button class="play-button sentence" id="s-00-17-33-892" data-start="00:17:33,892" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's why opponents believe courts need to be able to review challenge laws carefully.</p>
+<p>这就是为什么反对者认为法院需要能够仔细审查挑战法律。</p>
+<p><button class="play-button sentence" id="s-00-17-39-440" data-start="00:17:39,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is so important because it allows for people to be able to be educated about what their government is doing and to make informed choices when they're at the ballot box.</p>
+<p>这非常重要，因为它让人们能够了解政府的行为，并在投票时做出明智的选择。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-47-759" data-start="00:17:47,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a parallel case that had a different decision in in Quebec.</p>
+<p>在魁北克有一个类似案件，但做出了不同的裁决。</p>
+<p><button class="play-button sentence" id="s-00-17-51-160" data-start="00:17:51,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so that case is before the Supreme Court of Canada.</p>
+<p>因此该案正在加拿大最高法院审理。</p>
+<p><button class="play-button sentence" id="s-00-17-53-533" data-start="00:17:53,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would say that that's where it's going to be decided.</p>
+<p>我认为这将在那里决定。</p>
+<p><button class="play-button sentence" id="s-00-17-56-465" data-start="00:17:56,465" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A ruling in that case, which involves a six-year-old law banning public sector workers from wearing religious symbols on the job, will determine how courts deal with every use of the clause across the country and if they can rule that laws are infringing upon protected rights, even if they can't take the law down.</p>
+<p>该案的裁决涉及一项六年前的法律，禁止公共部门工作人员在工作时佩戴宗教标志，这将决定法院如何处理全国范围内该条款的每一次使用，以及他们是否可以裁定法律侵犯受保护权利，即使他们不能废除法律。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958905" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-14-798" data-start="00:18:14,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heather Urex West, Global News, Calgary.</p>
+<p>希瑟·尤雷克斯·韦斯特，环球新闻，卡尔加里。</p>
+<p><button class="play-button sentence" id="s-00-18-18-079" data-start="00:18:18,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next, tennis legend Venus Williams gears up for a record return to the court.</p>
+<p>接下来，网球传奇维纳斯·威廉姆斯准备创纪录地重返赛场。</p>
+<p><button class="play-button sentence" id="s-00-18-28-558" data-start="00:18:28,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dennis great Venus Williams is making a comeback.</p>
+<p>丹尼斯，伟大的维纳斯·威廉姆斯正在复出。</p>
+<p><button class="play-button sentence" id="s-00-18-31-176" data-start="00:18:31,176" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 45-year-old received a wildcard invitation today to play singles in the US Open.</p>
+<p>这位45岁的选手今天收到外卡邀请，将参加美国公开赛单打比赛。</p>
+<p><button class="play-button sentence" id="s-00-18-36-231" data-start="00:18:36,231" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's won seven Grand Slam titles in singles and will be the tournament's oldest singles participant since 1981.</p>
+<p>她赢得了七个大满贯单打冠军，并将成为自1981年以来该赛事最年长的单打选手。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958875" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-44-880" data-start="00:18:44,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's also being honored with a new Barbie doll.</p>
+<p>她还被授予一款新的芭比娃娃以表敬意。</p>
+<p><button class="play-button sentence" id="s-00-18-47-180" data-start="00:18:47,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It celebrates Williams athletic achievements and her pursuit of pay equity.</p>
+<p>它庆祝威廉姆斯的运动成就和她对薪酬平等的追求。</p>
+<p><button class="play-button sentence" id="s-00-18-51-214" data-start="00:18:51,214" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> at Wimbledon in 2007.</p>
+<p>在2007年的温布尔登。</p>
+<p><button class="play-button sentence" id="s-00-18-53-113" data-start="00:18:53,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was the first woman to receive the same prize money as the men at a top level tournament.</p>
+<p>她是在顶级赛事中获得与男性相同奖金的第一位女性。</p>
+<p><button class="play-button sentence" id="s-00-18-58-928" data-start="00:18:58,928" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A girl in the UK has her sight set on becoming the best chess player in the world.</p>
+<p>英国一位女孩立志成为世界上最好的国际象棋选手。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958855" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-04-629" data-start="00:19:04,629" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She is only 10 and she is already making a name for herself.</p>
+<p>她只有10岁，但已经名声在外。</p>
+<p><button class="play-button sentence" id="s-00-19-08-196" data-start="00:19:08,196" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She just became the youngest female chess player to ever beat a grandmaster, a 60-year-old man.</p>
+<p>她刚刚成为击败国际象棋特级大师（一位60岁男性）的最年轻女性棋手。</p>
+<p><button class="play-button sentence" id="s-00-19-14-871" data-start="00:19:14,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eric Sorenson on the rapid rise of a chess prodigy.</p>
+<p>埃里克·索伦森报道一位国际象棋神童的迅速崛起。</p>
+<p><button class="play-button sentence" id="s-00-19-18-349" data-start="00:19:18,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have to watch closely.</p>
+<p>你必须仔细观察。</p>
+<p><button class="play-button sentence" id="s-00-19-20-412" data-start="00:19:20,412" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rapid chest requires quick decisions.</p>
+<p>快棋需要快速决策。</p>
+<p><button class="play-button sentence" id="s-00-19-22-798" data-start="00:19:22,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Conquest looks resigned.</p>
+<p>征服看起来认输了。</p>
+<p><button class="play-button sentence" id="s-00-19-24-160" data-start="00:19:24,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And oh, really bad stuff.</p>
+<p>哦，真的很糟糕。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958832" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-27-599" data-start="00:19:27,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whatever.</p>
+<p>不管怎样。</p>
+<p><button class="play-button sentence" id="s-00-19-28-594" data-start="00:19:28,594" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well done.</p>
+<p>干得好。</p>
+<p><button class="play-button sentence" id="s-00-19-29-599" data-start="00:19:29,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There it is.</p>
+<p>就是这样。</p>
+<p><button class="play-button sentence" id="s-00-19-30-299" data-start="00:19:30,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michael Adams on the right, the British champion again.</p>
+<p>右边的迈克尔·亚当斯，再次成为英国冠军。</p>
+<p><button class="play-button sentence" id="s-00-19-34-006" data-start="00:19:34,006" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet, it was an earlier match that's getting much of the world's attention.</p>
+<p>然而，更早的一场比赛引起了全世界的关注。</p>
+<p><button class="play-button sentence" id="s-00-19-37-998" data-start="00:19:37,998" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bodana Sandan defeated a grandmaster, the youngest girl ever to do so at age 10.</p>
+<p>博达娜·桑丹击败了一位特级大师，成为10岁达成此成就的最年轻女孩。</p>
+<p><button class="play-button sentence" id="s-00-19-43-440" data-start="00:19:43,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remarkable, not just because of her age, but her gender.</p>
+<p>了不起，不仅因为她的年龄，还因为她的性别。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-46-400" data-start="00:19:46,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She has so much talent.</p>
+<p>她非常有天赋。</p>
+<p><button class="play-button sentence" id="s-00-19-47-750" data-start="00:19:47,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cindy Kiao played at the University of Toronto, one of the only girls competing.</p>
+<p>辛迪·乔在多伦多大学下棋，是少数参赛的女孩之一。</p>
+<p><button class="play-button sentence" id="s-00-19-53-119" data-start="00:19:53,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She says Bodana is succeeding in an environment dominated by boys and men.</p>
+<p>她说博达娜在一个由男孩和男性主导的环境中取得了成功。</p>
+<p><button class="play-button sentence" id="s-00-19-57-759" data-start="00:19:57,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When she's entering a field where she's just constantly facing people who aren't like herself, she continues to push through and break like new boundaries.</p>
+<p>当她进入一个不断面对与自己不同的人的领域时，她继续突破并打破新的界限。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958792" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-07-200" data-start="00:20:07,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When Bodana was seven, she was already surrounded by trophies and medals.</p>
+<p>当博达娜7岁时，她已经周围摆满了奖杯和奖牌。</p>
+<p><button class="play-button sentence" id="s-00-20-11-234" data-start="00:20:11,234" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her dad said she was first intrigued by the horse she saw on a chessboard.</p>
+<p>她的父亲说她最初是被棋盘上的马吸引的。</p>
+<p><button class="play-button sentence" id="s-00-20-15-372" data-start="00:20:15,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I have to explain this is horse but it is called as knight in this game called chess.</p>
+<p>我必须解释这是马，但在这个叫国际象棋的游戏中它被称为骑士。</p>
+<p><button class="play-button sentence" id="s-00-20-20-825" data-start="00:20:20,825" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At age eight still needing a booster seat to see the board.</p>
+<p>8岁时，她还需要增高垫才能看到棋盘。</p>
+<p><button class="play-button sentence" id="s-00-20-24-095" data-start="00:20:24,095" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her dream was simple.</p>
+<p>她的梦想很简单。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-25-501" data-start="00:20:25,501" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um to become world champion.</p>
+<p>嗯，成为世界冠军。</p>
+<p><button class="play-button sentence" id="s-00-20-27-919" data-start="00:20:27,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This international chess master called her a baby assassin.</p>
+<p>这位国际象棋大师称她为“婴儿刺客”。</p>
+<p><button class="play-button sentence" id="s-00-20-31-440" data-start="00:20:31,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was playing fast but not banging the pieces down just slowly sort of like a boa constrictor.</p>
+<p>她下得很快，但没有用力拍棋子，而是像蟒蛇一样慢慢来。</p>
+<p><button class="play-button sentence" id="s-00-20-37-170" data-start="00:20:37,170" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fast forward to this summer.</p>
+<p>快进到今年夏天。</p>
+<p><button class="play-button sentence" id="s-00-20-38-798" data-start="00:20:38,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How does it feel to be so young and small and beating these adults?</p>
+<p>这么年轻、这么小却击败这些成年人，感觉如何？</p>
+<p><button class="play-button sentence" id="s-00-20-43-359" data-start="00:20:43,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's nice.</p>
+<p>很好。</p>
+<p><button class="play-button sentence" id="s-00-20-43-984" data-start="00:20:43,984" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's like encouraging and hopefully it encourages other people as well.</p>
+<p>这很鼓舞人心，希望也能鼓励其他人。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958752" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-47-535" data-start="00:20:47,535" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cindy Cow thinks she will inspire girls to try chess and to keep playing.</p>
+<p>辛迪·乔认为她会激励女孩们尝试国际象棋并继续下棋。</p>
+<p><button class="play-button sentence" id="s-00-20-51-599" data-start="00:20:51,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When new girls try to play chess and they see these achievements, they think that they can achieve the same for themselves.</p>
+<p>当新女孩尝试下棋并看到这些成就时，她们会认为自己也能取得同样的成就。</p>
+<p><button class="play-button sentence" id="s-00-20-57-264" data-start="00:20:57,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The young prodigy says she can still improve.</p>
+<p>这位年轻的天才表示她还能进步。</p>
+<p><button class="play-button sentence" id="s-00-20-59-673" data-start="00:20:59,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My favorite thing about chess is that you can learn lots for from it and you have to lose to get better.</p>
+<p>我最喜欢国际象棋的一点是你可以从中学到很多东西，而且你必须输才能进步。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958733" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-06-240" data-start="00:21:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The problem for Bodana, it's getting harder to lose.</p>
+<p>博达娜的问题是，输棋变得越来越难。</p>
+<p><button class="play-button sentence" id="s-00-21-10-319" data-start="00:21:10,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eric Sorenson, Global News Toronto.</p>
+<p>埃里克·索伦森，环球新闻多伦多。</p>
+<p><button class="play-button sentence" id="s-00-21-13-440" data-start="00:21:13,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's one to watch.</p>
+<p>她是值得关注的人。</p>
+<p><button class="play-button sentence" id="s-00-21-14-394" data-start="00:21:14,394" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is Global National for this Wednesday.</p>
+<p>这是本周三的环球国家新闻。</p>
+<p><button class="play-button sentence" id="s-00-21-16-445" data-start="00:21:16,445" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Donna Fzen.</p>
+<p>我是唐娜·芬岑。</p>
+<p><button class="play-button sentence" id="s-00-21-17-278" data-start="00:21:17,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your Canada is going global this week.</p>
+<p>本周，你的加拿大正在走向全球。</p>
+<p><button class="play-button sentence" id="s-00-21-19-624" data-start="00:21:19,624" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're showing you pictures of Canadian pride we've received from all over the world.</p>
+<p>我们正在向您展示我们从世界各地收到的加拿大自豪感的照片。</p>
+<p><button class="play-button sentence" id="s-00-21-23-034" data-start="00:21:23,034" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, we're showcasing Holton, Netherlands, Port Barton, Philippines, and Porto Morelos, Mexico.</p>
+<p>今晚，我们将展示荷兰的霍尔顿、菲律宾的巴顿港和墨西哥的莫雷洛斯港。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1jFbjzbEhL/?t=-2208958711" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-28-932" data-start="00:21:28,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please keep them coming.</p>
+<p>请继续发送照片。</p>
+<p><button class="play-button sentence" id="s-00-21-30-290" data-start="00:21:30,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Send your pictures from wherever you are to Global National at globalenews.ca.</p>
+<p>无论您身在何处，请将照片发送至Global National的globalenews.ca。</p>
+<p><button class="play-button sentence" id="s-00-21-34-818" data-start="00:21:34,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And thanks for watching.</p>
+<p>感谢您的观看。</p>
+<p><button class="play-button sentence" id="s-00-21-36-281" data-start="00:21:36,281" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hope to see you here again tomorrow.</p>
+<p>希望明天能再次见到您。</p>
+<p><button class="play-button sentence" id="s-00-21-39-882" data-start="00:21:39,882" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye-bye.</p>
+<p>再见。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
