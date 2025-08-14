@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Deadly Cancers Left Behind in Survival Rate Progress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Researchers warn that while overall cancer survival rates have doubled in England and Wales since the 1970s, certain lethal cancers like pancreatic, esophageal, and stomach cancers have seen minimal progress. Analysis of 10 million patient records reveals these "cancers of unmet need" often spread before detection, with treatment advancements lagging behind other cancers. Experts emphasize urgent need for increased research funding and earlier diagnosis strategies.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Deadly Cancers Left Behind in Survival Rate Progress</h1>
+<p>【BBC News 20250814 胰腺癌、食道癌和胃癌的治疗进展严重滞后｜早期诊断成破局关键】</p>
+<p>Summary:
+Researchers warn that while overall cancer survival rates have doubled in England and Wales since the 1970s, certain lethal cancers like pancreatic, esophageal, and stomach cancers have seen minimal progress. Analysis of 10 million patient records reveals these "cancers of unmet need" often spread before detection, with treatment advancements lagging behind other cancers. Experts emphasize urgent need for increased research funding and earlier diagnosis strategies.</p>
+<p>摘要：
+最新研究显示，尽管英格兰和威尔士地区癌症总体十年生存率较50年前翻倍达到50%，但胰腺癌、食道癌和胃癌的治疗进展严重滞后。基于1000万份病例数据的分析发现，这些"难治型癌症"通常在确诊时已扩散，治愈率停滞不前。专家呼吁政府在新癌症战略中重点关注早期诊断技术和治疗方案研发。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-160" data-start="00:00:00,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, researchers are warning that a group of lethal cancers has been left behind by the rapid improvement in survival rates for many other forms of the disease over the past 50 years.</p>
+<p>现在，研究人员警告称，在过去50年里，许多其他类型癌症的生存率迅速提高，但有一组致命癌症却被抛在了后面。</p>
+<p><button class="play-button sentence" id="s-00-00-11-062" data-start="00:00:11,062" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say that while 10-year survival rates across all cancers now stand at nearly 50% in England and Wales, double what they were in the 1970s, the treatment of some cancers has seen little progress.</p>
+<p>他们表示，尽管英格兰和威尔士所有癌症的10年生存率现在接近50%，是20世纪70年代的两倍，但某些癌症的治疗进展甚微。</p>
+<p><button class="play-button sentence" id="s-00-00-24-320" data-start="00:00:24,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm joined now by Professor Michelle Coleman, the head of the cancer survival group at the London School of Hygiene and Tropical Medicine.</p>
+<p>现在与我连线的是伦敦卫生与热带医学院癌症生存小组负责人米歇尔·科尔曼教授。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959968" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-31-076" data-start="00:00:31,076" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Professor Coleman, thank you very much for your time today.</p>
+<p>科尔曼教授，非常感谢您今天抽出时间。</p>
+<p><button class="play-button sentence" id="s-00-00-34-296" data-start="00:00:34,296" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I should just begin by saying that the u the research is based on a really substantial uh sample of 10 million records of of cancer patients.</p>
+<p>首先，这项研究基于一个非常庞大的样本，即1000万份癌症患者的记录。</p>
+<p><button class="play-button sentence" id="s-00-00-44-399" data-start="00:00:44,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, as for this left behind group of cancers, which are they?</p>
+<p>那么，这些被抛在后面的癌症是哪些呢？</p>
+<p><button class="play-button sentence" id="s-00-00-50-519" data-start="00:00:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you've summarized it quite neatly.</p>
+<p>嗯，您总结得很到位。</p>
+<p><button class="play-button sentence" id="s-00-00-52-640" data-start="00:00:52,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The cancers for which survival has not improved very much or not as much as one would wish are those often described as cancers of unmet need.</p>
+<p>生存率改善不大或不如预期的癌症通常被称为“需求未满足的癌症”。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959937" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-02-318" data-start="00:01:02,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In this case, cancers of the pancreas, the esophagus or the gullet if you will and the stomach.</p>
+<p>具体来说，就是胰腺癌、食道癌（或称为咽喉癌）以及胃癌。</p>
+<p><button class="play-button sentence" id="s-00-01-08-770" data-start="00:01:08,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And those cancers have stubbornly resisted improvements in survival that as you mentioned Denita have been seen for many other cancers.</p>
+<p>正如您提到的丹妮塔，这些癌症的生存率顽固地未能像许多其他癌症那样得到改善。</p>
+<p><button class="play-button sentence" id="s-00-01-18-239" data-start="00:01:18,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you know, I I think the really important message to come out of this study is that we've been able to summarize the experience of over 10 million cancer patients using data from the National Cancer Registries in England and Wales and to produce a one-number summary that summarizes all of the different trends in survival for the different cancers including their variations by age and sex and as well as over time.</p>
+<p>但您知道，我认为这项研究真正重要的信息是，我们利用英格兰和威尔士国家癌症登记处的数据，总结了1000多万癌症患者的经历，并得出了一个单一数字的总结，概括了不同癌症生存率的所有不同趋势，包括按年龄、性别以及随时间的变化。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-46-522" data-start="00:01:46,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And whilst there have been really remarkable improvements in survival uh in that survival index over the first 40 years, the improvement has slowed down substantially in the last 10 to 15 years.</p>
+<p>尽管在前40年里，生存指数的改善确实非常显著，但在过去10到15年里，改善速度大幅放缓。</p>
+<p><button class="play-button sentence" id="s-00-01-59-658" data-start="00:01:59,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that I think is the problem.</p>
+<p>我认为这就是问题所在。</p>
+<p><button class="play-button sentence" id="s-00-02-01-975" data-start="00:02:01,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why professor um sorry for interrupting but I'm just wanting to wanting to find out why there is this difference this disparity.</p>
+<p>教授，抱歉打断您，但我想了解为什么会出现这种差异和不平等。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959870" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-09-616" data-start="00:02:09,616" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it that uh those cancers you mentioned are not getting the same level of investment into research?</p>
+<p>是不是您提到的这些癌症没有得到同等水平的研究投入？</p>
+<p><button class="play-button sentence" id="s-00-02-16-318" data-start="00:02:16,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that is is likely to be part of it because whilst research is going on into the management of all of the cancers I've mentioned, the ones with very low levels of survival, uh they are very difficult cancers to treat.</p>
+<p>我认为这可能是部分原因，因为尽管针对我提到的所有癌症的治疗研究都在进行，但那些生存率极低的癌症确实非常难以治疗。</p>
+<p><button class="play-button sentence" id="s-00-02-29-640" data-start="00:02:29,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cancers of the pancreas, the stomach, the esophagus very often have spread quite a lot to other nearby organs by the time that they are diagnosed.</p>
+<p>胰腺癌、胃癌和食道癌在确诊时通常已经扩散到附近的其他器官。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959840" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-39-185" data-start="00:02:39,185" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And at that point it is extremely difficult to treat them with anything approaching curative intent and paliation is whether that be from surgery or drugs or radiotherapy may be all that can be attempted.</p>
+<p>到那时，几乎无法以治愈为目的进行治疗，而缓解治疗——无论是手术、药物还是放疗——可能是唯一的选择。</p>
+<p><button class="play-button sentence" id="s-00-02-54-089" data-start="00:02:54,089" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think the the pressure should be driven by research into how the diagnosis as well as the treatment of those cancers could be improved so that they're diagnosed at an earlier stage when more effective treatment is available.</p>
+<p>我认为，研究的重点应该是如何改进这些癌症的诊断和治疗，以便在更早的阶段确诊，从而提供更有效的治疗。</p>
+<p><button class="play-button sentence" id="s-00-03-09-461" data-start="00:03:09,461" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, that that was exactly the point I was about to come on to.</p>
+<p>是的，这正是我接下来要说的重点。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959807" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-12-383" data-start="00:03:12,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It does uh emphasize, doesn't it?</p>
+<p>这确实强调了这一点，不是吗？</p>
+<p><button class="play-button sentence" id="s-00-03-14-019" data-start="00:03:14,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, we we're talking mainly about the research end and the treatment end of it, but it's that early diagnosis.</p>
+<p>您知道，我们主要讨论的是研究和治疗方面，但早期诊断才是关键。</p>
+<p><button class="play-button sentence" id="s-00-03-19-568" data-start="00:03:19,568" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then if they are particularly difficult to treat or sufficient treatments haven't been developed yet, it's particularly important that that people do go and see their doctors if they have any symptoms they're concerned about.</p>
+<p>如果这些癌症特别难以治疗或尚未开发出足够的治疗方法，那么人们如果有任何担忧的症状，及时就医就显得尤为重要。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-31-914" data-start="00:03:31,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely right.</p>
+<p>完全正确。</p>
+<p><button class="play-button sentence" id="s-00-03-33-152" data-start="00:03:33,152" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I I want to bring you back to the the more uh the broader point, if you will, that this research addresses, namely that it's an index of progress in how the NHS or how effective the NHS is at managing all cancers combined.</p>
+<p>但我想请您回到这项研究更广泛的要点，即它是衡量英国国民医疗服务体系（NHS）在管理所有癌症方面的进展或有效性的指标。</p>
+<p><button class="play-button sentence" id="s-00-03-48-402" data-start="00:03:48,402" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is a message for government.</p>
+<p>这是向政府传递的信息。</p>
+<p><button class="play-button sentence" id="s-00-03-50-643" data-start="00:03:50,643" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government has announced the uh plan to introduce a long-term strategy for cancer control.</p>
+<p>政府已宣布计划制定一项癌症控制的长期战略。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-57-564" data-start="00:03:57,564" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're expecting this later this year and I think that the new strategy does need to take account of the problems in improving survival not only for those difficult to treat cancers but for the others where also progress could usefully be made.</p>
+<p>我们预计今年晚些时候会看到这一战略，我认为新战略确实需要考虑提高生存率的问题，不仅针对那些难以治疗的癌症，还包括其他可以取得进展的癌症。</p>
+<p><button class="play-button sentence" id="s-00-04-12-849" data-start="00:04:12,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes. So we know as you say that the the government is looking at a long-term strategy for the NHS.</p>
+<p>是的。正如您所说，我们知道政府正在为NHS制定长期战略。</p>
+<p><button class="play-button sentence" id="s-00-04-18-553" data-start="00:04:18,553" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We we talk a lot about waiting times for treatment.</p>
+<p>我们经常讨论治疗等待时间。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-21-759" data-start="00:04:21,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We talk a lot about uh staffing and so on.</p>
+<p>我们也经常讨论人员配备等问题。</p>
+<p><button class="play-button sentence" id="s-00-04-24-800" data-start="00:04:24,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In terms of the cancers where progress has been made, can that progress continue to grow if those fundamental issues aren't tackled?</p>
+<p>对于那些已经取得进展的癌症，如果不解决这些基本问题，进展还能继续吗？</p>
+<p><button class="play-button sentence" id="s-00-04-32-653" data-start="00:04:32,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've only got time for a very brief answer.</p>
+<p>我们时间有限，请简短回答。</p>
+<p><button class="play-button sentence" id="s-00-04-34-782" data-start="00:04:34,782" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One sentence if you would.</p>
+<p>一句话即可。</p>
+<p><button class="play-button sentence" id="s-00-04-36-751" data-start="00:04:36,751" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The short answer is yes.</p>
+<p>简短回答是“可以”。</p>
+<p><button class="play-button sentence" id="s-00-04-37-875" data-start="00:04:37,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Survival here for many of those cancers is not as high as incomparably wealthy countries elsewhere in Europe.</p>
+<p>这里许多癌症的生存率不如欧洲其他极其富裕的国家高。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qpbiz5Ewk/?t=-2208959716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-43-900" data-start="00:04:43,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. Uh, Professor Michelle Coleman, thank you very much for joining us from the London School of Hygiene and Tropical Medicine.</p>
+<p>好的。米歇尔·科尔曼教授，非常感谢您从伦敦卫生与热带医学院与我们连线。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
