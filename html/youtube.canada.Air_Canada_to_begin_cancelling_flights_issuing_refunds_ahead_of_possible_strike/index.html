@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Canada Flight Cancellations Loom as Strike Threatens Summer Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Air Canada is preparing to cancel flights and issue refunds as over 10,000 flight attendants threaten to strike starting early Saturday. The airline has responded with a lockout notice, potentially grounding its fleet. Key disputes include wages and unpaid work hours, while travelers face uncertainty during peak summer season.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Air Canada Flight Cancellations Loom as Strike Threatens Summer Travel</h1>
+<p>【CBC News 20250814 加拿大航空罢工在即：万人停工、航班停飞、暑期出行陷混乱】</p>
+<p>Summary:
+Air Canada is preparing to cancel flights and issue refunds as over 10,000 flight attendants threaten to strike starting early Saturday. The airline has responded with a lockout notice, potentially grounding its fleet. Key disputes include wages and unpaid work hours, while travelers face uncertainty during peak summer season.</p>
+<p>摘要：
+加拿大航空因超1万名空乘人员计划周六罢工，正逐步取消航班并启动退款程序。资方同步发出停工通知，可能导致全面停飞。劳资矛盾聚焦薪资和隐形加班问题，暑期出行高峰面临大规模中断。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 17 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-400" data-start="00:00:00,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're closely following a developing story that could ruin summer travel plans for thousands of Canadians.</p>
+<p>我们正在密切关注一则可能打乱数千加拿大人夏季旅行计划的突发新闻。</p>
+<p><button class="play-button sentence" id="s-00-00-05-940" data-start="00:00:05,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air Canada says that it will start cancelling flights and issuing refunds ahead of a potential flight attendance strike.</p>
+<p>加拿大航空公司表示，由于可能出现空乘人员罢工，它将开始取消航班并发放退款。</p>
+<p><button class="play-button sentence" id="s-00-00-12-443" data-start="00:00:12,443" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 10,000 workers could walk off the job early Saturday morning, Eastern time.</p>
+<p>超过1万名工人可能在东部时间周六凌晨罢工。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959982" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-17-349" data-start="00:00:17,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In response to the strike notice, Air Canada has issued a lockout notice.</p>
+<p>针对罢工通知，加拿大航空已发布停工通知。</p>
+<p><button class="play-button sentence" id="s-00-00-21-401" data-start="00:00:21,401" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The airline says the first flights will be cancelled tomorrow with more on Friday ahead of a possible total grounding of the fleet.</p>
+<p>该航空公司表示，首批航班将于明天取消，周五将有更多航班取消，之后可能全面停飞。</p>
+<p><button class="play-button sentence" id="s-00-00-29-123" data-start="00:00:29,123" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The company is seeking government direction directed arbitration to resolve the situation.</p>
+<p>公司正在寻求政府指导的仲裁来解决这一局面。</p>
+<p><button class="play-button sentence" id="s-00-00-34-719" data-start="00:00:34,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Important note here, Air Canada Express flights are not going to be affected.</p>
+<p>重要提示：加拿大航空快运航班不会受到影响。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959961" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-38-878" data-start="00:00:38,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now CBC's Clara Pastika is at Toronto's Pearson International Airport.</p>
+<p>现在，CBC的克拉拉·帕斯蒂卡正在多伦多皮尔逊国际机场。</p>
+<p><button class="play-button sentence" id="s-00-00-44-037" data-start="00:00:44,037" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clara, you are at ground zero here.</p>
+<p>克拉拉，你现在就在现场。</p>
+<p><button class="play-button sentence" id="s-00-00-45-977" data-start="00:00:45,977" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us about the breakdown in talks and what it could mean for all of those travelers, Air Canada customers.</p>
+<p>请告诉我们谈判破裂的情况，以及这对所有旅客和加拿大航空客户意味着什么。</p>
+<p><button class="play-button sentence" id="s-00-00-53-840" data-start="00:00:53,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Sarah, certainly uh many people heading uh to the airport today to get on an Air Canada flight.</p>
+<p>嗯，莎拉，确实有很多人今天前往机场搭乘加拿大航空的航班。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959939" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-00-099" data-start="00:01:00,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh entering with some some apprehension.</p>
+<p>他们带着一些担忧进入机场。</p>
+<p><button class="play-button sentence" id="s-00-01-02-404" data-start="00:01:02,404" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many people going straight to the board, seeing uh if their flight is doing uh okay, we have had the chance to look at the board and it is uh looking pretty usual.</p>
+<p>许多人直接去看航班信息板，查看他们的航班是否正常，我们有机会看了看，情况看起来还算正常。</p>
+<p><button class="play-button sentence" id="s-00-01-11-491" data-start="00:01:11,491" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most flights going ahead uh many flights uh still on time.</p>
+<p>大多数航班仍在继续，许多航班仍然准点。</p>
+<p><button class="play-button sentence" id="s-00-01-15-435" data-start="00:01:15,435" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But of course, this is all because Air Canada's 10,000 workers represented by the union QP issued uh that strike notice uh a bit after midnight yesterday, followed by uh the airline uh issuing a notice of a lockout.</p>
+<p>但当然，这一切是因为加拿大航空的1万名工人，由工会QP代表，在昨天午夜后不久发布了罢工通知，随后航空公司发布了停工通知。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959908" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-31-774" data-start="00:01:31,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Air Canada and Air Canada Rouge flights are the flights that the airline has decided to begin uh suspending uh gradually over the next uh 72 hours.</p>
+<p>现在，加拿大航空和加拿大航空Rouge的航班是航空公司决定在未来72小时内逐步暂停的航班。</p>
+<p><button class="play-button sentence" id="s-00-01-43-188" data-start="00:01:43,188" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> uh Air Canada Express uh not uh being affected uh by that.</p>
+<p>加拿大航空快运航班不受此影响。</p>
+<p><button class="play-button sentence" id="s-00-01-48-938" data-start="00:01:48,938" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh so far uh people are sort of getting on flights now, but certainly lots of people have some questions.</p>
+<p>到目前为止，人们还在登机，但肯定有很多人有疑问。</p>
+<p><button class="play-button sentence" id="s-00-01-54-020" data-start="00:01:54,020" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have had the chance to speak with a representative from Air Canada about some of these uh contingency plans given everything that's happening.</p>
+<p>我们有机会与加拿大航空的代表谈论了针对当前情况的一些应急计划。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959877" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-02-954" data-start="00:02:02,954" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a listen.</p>
+<p>请听一下。</p>
+<p><button class="play-button sentence" id="s-00-02-03-971" data-start="00:02:03,971" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we go into a disruption, we have agreements with more than 100 airlines to try to find seats to protect our customers.</p>
+<p>如果我们陷入混乱，我们与100多家航空公司有协议，试图找到座位以保护我们的客户。</p>
+<p><button class="play-button sentence" id="s-00-02-13-919" data-start="00:02:13,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, we have to be u conscious of course that at this time of the year there are very little seats available.</p>
+<p>当然，我们必须意识到，每年的这个时候可用座位非常少。</p>
+<p><button class="play-button sentence" id="s-00-02-21-164" data-start="00:02:21,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for those for whom we won't be able to find seats uh then we will refund or give them the opportunity to travel later.</p>
+<p>因此，对于那些我们无法找到座位的乘客，我们将退款或给他们提供稍后旅行的机会。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-30-400" data-start="00:02:30,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, not everyone has the option to travel later depending on what they have going in on in their life and why they might be traveling.</p>
+<p>当然，并不是每个人都有稍后旅行的选择，这取决于他们的生活安排和旅行原因。</p>
+<p><button class="play-button sentence" id="s-00-02-39-819" data-start="00:02:39,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We do know that some of the biggest sticking points in this negotiation have been pay and that uh flight attendants are uh doing work before and after a flight that they're not necessarily uh being uh compensated uh for.</p>
+<p>我们确实知道，这次谈判中最大的分歧之一是薪酬问题，空乘人员在航班前后所做的工作并不一定能得到补偿。</p>
+<p><button class="play-button sentence" id="s-00-02-53-218" data-start="00:02:53,218" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, those are some of the issues uh going on uh behind uh the scenes uh uh in uh in this uh labor situation here.</p>
+<p>因此，这些是当前劳资纠纷背后的一些问题。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959818" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-01-444" data-start="00:03:01,444" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Claire, I'm trying to imagine if you are a traveler on Air Canada right now, you're going up, you're just starting out on your trip and you're looking to see if your flight's going and it is and you're getting on board that flight and heading off somewhere.</p>
+<p>克莱尔，我在想象如果你现在是加拿大航空的旅客，你正准备开始旅行，查看航班是否正常，然后登机前往某地。</p>
+<p><button class="play-button sentence" id="s-00-03-13-293" data-start="00:03:13,293" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a bit of a leap of faith uh I think that they're taking knowing that there's possible cancellations that could be imminent here.</p>
+<p>我认为他们是在冒险，因为知道可能会有航班取消。</p>
+<p><button class="play-button sentence" id="s-00-03-20-004" data-start="00:03:20,004" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are you hearing from passengers?</p>
+<p>你从乘客那里听到了什么？</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959797" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-22-252" data-start="00:03:22,252" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I mean, speaking of faith, like we're hearing people praying that all will work out.</p>
+<p>嗯，说到信仰，我们听到人们在祈祷一切顺利。</p>
+<p><button class="play-button sentence" id="s-00-03-29-018" data-start="00:03:29,018" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh we're hearing some that are saying, "Oh, you know, it's par for the course.</p>
+<p>我们听到一些人说：“哦，你知道，这是常有的事。”</p>
+<p><button class="play-button sentence" id="s-00-03-32-586" data-start="00:03:32,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some people have more flexible situation, but people are going to weddings, people are going to funerals, uh different things like that, hoping that other members uh of their family uh make it there and back where they're they're heading to or where they're heading home from.</p>
+<p>有些人的情况更灵活，但有人要去参加婚礼，有人要去参加葬礼，诸如此类的事情，希望他们的家人能到达目的地或从目的地返回。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-45-511" data-start="00:03:45,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But uh why don't you have a listen to some of what I'm hearing?</p>
+<p>但为什么不听听我听到的一些内容呢？</p>
+<p><button class="play-button sentence" id="s-00-03-48-874" data-start="00:03:48,874" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to the funeral is on Friday.</p>
+<p>我要参加的葬礼在周五。</p>
+<p><button class="play-button sentence" id="s-00-03-52-479" data-start="00:03:52,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's why I'm leaving today and make sure that I leave today and not later so that I would able to get out.</p>
+<p>所以这就是为什么我今天出发，确保今天走而不是晚些时候，这样我才能赶到。</p>
+<p><button class="play-button sentence" id="s-00-03-58-719" data-start="00:03:58,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're planning on going to Halifax and we just got here and learned about this very last minute.</p>
+<p>我们计划去哈利法克斯，刚刚到这里，最后一刻才得知这个消息。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-04-507" data-start="00:04:04,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So because of that we're not sure if we're going to go or not.</p>
+<p>因此，我们不确定是否还要去。</p>
+<p><button class="play-button sentence" id="s-00-04-07-382" data-start="00:04:07,382" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I believe anywhere from like 1 to a week it could happen as long as the cancellation's being.</p>
+<p>我认为只要取消持续，可能1天到1周内都会发生。</p>
+<p><button class="play-button sentence" id="s-00-04-13-013" data-start="00:04:13,013" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But well yeah I mean we also have some family flying in from where we're flying like from Newfoundland.</p>
+<p>但是的，我们还有一些家人从纽芬兰等地飞来。</p>
+<p><button class="play-button sentence" id="s-00-04-17-987" data-start="00:04:17,987" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they're a little worried they're not going to be able to make it back.</p>
+<p>所以他们有点担心无法返回。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959737" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-22-800" data-start="00:04:22,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So certainly uh uncertainty about what these passengers uh are going to to face, what they should do, but also uncertainty about exactly what's going to happen with this strike.</p>
+<p>因此，这些乘客将面临什么、他们应该做什么，当然存在不确定性，同时也不确定这次罢工究竟会如何发展。</p>
+<p><button class="play-button sentence" id="s-00-04-32-986" data-start="00:04:32,986" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for now, we have an impass.</p>
+<p>但目前，我们陷入了僵局。</p>
+<p><button class="play-button sentence" id="s-00-04-34-995" data-start="00:04:34,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have uh these uh gradual cancellation of flights expected uh over uh the coming uh days and we will be following along to see what happens and if a strike or lockout uh goes ahead early Saturday morning.</p>
+<p>我们预计未来几天航班将逐步取消，我们将继续关注事态发展，看看罢工或停工是否会在周六凌晨进行。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959711" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-48-345" data-start="00:04:48,345" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CBC's Clara Pacika at Toronto Pearson International Airport.</p>
+<p>CBC的克拉拉·帕西卡在多伦多皮尔逊国际机场报道。</p>
+<p><button class="play-button sentence" id="s-00-04-52-488" data-start="00:04:52,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-04-53-360" data-start="00:04:53,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We begin with news that could throw a wrench in the summer travel plans for many Canadians.</p>
+<p>我们首先报道一则可能打乱许多加拿大人夏季旅行计划的消息。</p>
+<p><button class="play-button sentence" id="s-00-04-58-577" data-start="00:04:58,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air Canada says it will start suspending flights from tomorrow after the union representing more than 10,000 flight attendants issued a strike notice.</p>
+<p>加拿大航空表示，在代表超过1万名空乘人员的工会发布罢工通知后，将从明天开始暂停航班。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959692" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-07-722" data-start="00:05:07,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Its members could walk off the job as early as 12:58 a.m. Eastern on Saturday.</p>
+<p>其成员最早可能在周六东部时间凌晨12点58分罢工。</p>
+<p><button class="play-button sentence" id="s-00-05-13-964" data-start="00:05:13,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In response, the country's biggest airline has issued a lockout notice.</p>
+<p>作为回应，该国最大的航空公司已发布停工通知。</p>
+<p><button class="play-button sentence" id="s-00-05-18-094" data-start="00:05:18,094" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both sides blaming the impass at the bargaining table on a dispute over wages.</p>
+<p>双方将谈判桌上的僵局归咎于工资争议。</p>
+<p><button class="play-button sentence" id="s-00-05-23-067" data-start="00:05:23,067" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The reason we went down this road and the reason we are here is to get a tentative agreement at the table to bring forward for our members.</p>
+<p>我们走上这条路的原因是为了在谈判桌上达成一项暂定协议，提交给我们的成员。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959668" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-31-120" data-start="00:05:31,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this time of the year, there are very little seats available.</p>
+<p>每年的这个时候，可用座位非常少。</p>
+<p><button class="play-button sentence" id="s-00-05-34-949" data-start="00:05:34,949" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for those for whom we won't be able to find seats, uh then we will refge or give them the opportunity to travel later.</p>
+<p>因此，对于那些我们无法找到座位的乘客，我们将退款或给他们提供稍后旅行的机会。</p>
+<p><button class="play-button sentence" id="s-00-05-43-600" data-start="00:05:43,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CBC senior business correspondent Peter Armstrong is following these developments and he joins us live from Vancouver.</p>
+<p>CBC高级商业记者彼得·阿姆斯特朗正在关注这些进展，他从温哥华现场加入我们。</p>
+<p><button class="play-button sentence" id="s-00-05-49-384" data-start="00:05:49,384" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh, Peter, what would a strike or lockout mean for the Canadian travel industry?</p>
+<p>嗯，彼得，罢工或停工对加拿大旅游业意味着什么？</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959645" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-54-389" data-start="00:05:54,389" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, it it it it could be devastating for the industry, for the entire economy, frankly.</p>
+<p>坦白说，这可能对行业乃至整个经济造成毁灭性打击。</p>
+<p><button class="play-button sentence" id="s-00-06-00-794" data-start="00:06:00,794" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And and it it's it's important to highlight though where we're at in the process, right?</p>
+<p>但重要的是要强调我们目前处于什么阶段，对吧？</p>
+<p><button class="play-button sentence" id="s-00-06-05-947" data-start="00:06:05,947" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, like it you say things like the strike notice has been issued and lockout notice has been issued and people rightly start to freak out.</p>
+<p>就像你说的，罢工通知和停工通知已经发布，人们理所当然地开始恐慌。</p>
+<p><button class="play-button sentence" id="s-00-06-13-626" data-start="00:06:13,626" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's important to remember they still have all day today, all day Thursday, all day Friday to try to reach a deal and offset this.</p>
+<p>重要的是要记住，他们还有今天全天、周四全天、周五全天的时间来尝试达成协议并避免这种情况。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-20-491" data-start="00:06:20,491" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And part of the reason that the stakes are so high is because if they go off this cliff and if they can't reach a deal and they actually get into a point where they're cancelling or blocking flights, that that would be devastating for the airline industry.</p>
+<p>风险如此之高的部分原因是，如果他们无法达成协议，真的到了取消或阻止航班的地步，那将对航空业造成毁灭性打击。</p>
+<p><button class="play-button sentence" id="s-00-06-34-360" data-start="00:06:34,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember when the Air Canada pilots went on strike?</p>
+<p>还记得加拿大航空飞行员罢工的时候吗？</p>
+<p><button class="play-button sentence" id="s-00-06-37-205" data-start="00:06:37,205" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh was that just last year?</p>
+<p>那是去年吗？</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959601" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-38-653" data-start="00:06:38,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> uh you know the the estimate with on that was that it was costing the economy something like hund00 million a day uh you know the total cost I think was $1.4 4 billion dollars.</p>
+<p>你知道，当时的估计是每天给经济造成约1亿美元的损失，总成本我认为是14亿美元。</p>
+<p><button class="play-button sentence" id="s-00-06-48-449" data-start="00:06:48,449" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, you know, but then the trickle on effect of that is enormous.</p>
+<p>你知道，但其连锁效应是巨大的。</p>
+<p><button class="play-button sentence" id="s-00-06-52-800" data-start="00:06:52,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You you think about, you know, we're trying to to grow the Canadian economy in spite of the threat of tariffs and trade war from the south.</p>
+<p>想想看，尽管面临来自南方的关税和贸易战威胁，我们仍在努力发展加拿大经济。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959579" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-00-921" data-start="00:07:00,921" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you can't have people flying, it's really hard to to be making those business deals, to be moving those tourists, to be getting across the country and growing the economy.</p>
+<p>如果人们无法飞行，就很难达成商业交易、运送游客、跨越全国并发展经济。</p>
+<p><button class="play-button sentence" id="s-00-07-08-779" data-start="00:07:08,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the small businesses across the country that are so dependent on travel and tourism and business travel as well.</p>
+<p>全国依赖旅行、旅游和商务旅行的小企业也是如此。</p>
+<p><button class="play-button sentence" id="s-00-07-16-160" data-start="00:07:16,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not to mention the chaos this will cause for every other airline and every other way of getting around this country.</p>
+<p>更不用说这将给其他航空公司和全国其他交通方式带来的混乱。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959557" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-22-545" data-start="00:07:22,545" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh the stakes are enormously high.</p>
+<p>风险非常高。</p>
+<p><button class="play-button sentence" id="s-00-07-24-801" data-start="00:07:24,801" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They pick this time, this busy travel time in the summer for a reason because the stakes are high and it gives both sides a little bit more leverage as they try to get the most out of the deal that they can for their side.</p>
+<p>他们选择夏季这个繁忙的旅行时间是有原因的，因为风险高，这给双方在谈判中争取最大利益时增加了筹码。</p>
+<p><button class="play-button sentence" id="s-00-07-37-180" data-start="00:07:37,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh but as I say, I think it's really important to just remember this is part of a negotiation.</p>
+<p>但正如我所说，重要的是要记住这是谈判的一部分。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959538" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-41-704" data-start="00:07:41,704" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The threat of a strike and the strike notice, these are all part of that.</p>
+<p>罢工威胁和罢工通知都是其中的一部分。</p>
+<p><button class="play-button sentence" id="s-00-07-44-997" data-start="00:07:44,997" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um and and you you have to think and you have to hope that these two sides will still find a way to come to an agreement before they actually bring the whole house toppling down.</p>
+<p>你必须思考并希望双方仍能找到办法在真正摧毁一切之前达成协议。</p>
+<p><button class="play-button sentence" id="s-00-07-55-279" data-start="00:07:55,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-07-55-498" data-start="00:07:55,498" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, to your point about the effect on the economy, we're already hearing from some business leaders.</p>
+<p>关于对经济的影响，我们已经听到一些商业领袖的声音。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959520" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-59-771" data-start="00:07:59,771" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are calling for government intervention before this goes any further.</p>
+<p>他们呼吁政府在此事进一步发展之前进行干预。</p>
+<p><button class="play-button sentence" id="s-00-08-03-456" data-start="00:08:03,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What can you tell us about that?</p>
+<p>你能告诉我们什么？</p>
+<p><button class="play-button sentence" id="s-00-08-05-598" data-start="00:08:05,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I mean usually Sarah and you know this that that usually to get you know a back to work legislation or even to force both sides into binding arbitration you need legislation you need the house to be sitting you need to recall everybody uh and and and go through it that way.</p>
+<p>我的意思是，莎拉，你知道通常要通过复工立法或迫使双方进入约束性仲裁，你需要立法，需要议会开会，需要召回所有人，然后走这个流程。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959497" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-22-011" data-start="00:08:22,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a mechanism that Air Canada has asked the the government to use that would allow them to force both sides into binding arbitration without using that legislation.</p>
+<p>加拿大航空要求政府使用一种机制，可以在不使用立法的情况下迫使双方进入约束性仲裁。</p>
+<p><button class="play-button sentence" id="s-00-08-31-879" data-start="00:08:31,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, it'll be interesting to see how the government, how the union, how uh, you know, sort of civil society reacts to that because that would be a change in the process.</p>
+<p>因此，看看政府、工会以及民间社会如何反应会很有趣，因为这将改变流程。</p>
+<p><button class="play-button sentence" id="s-00-08-41-955" data-start="00:08:41,955" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But yeah, you know, we're we're hearing from the Canadian Chamber of Commerce, from the Canadian Federation of Independent Business, Dan Kelly, who you know well from from the CFIB said, "Canada can't afford any more economic uncertainty.</p>
+<p>是的，你知道，我们听到加拿大商会、加拿大独立企业联合会的丹·凯利说：“加拿大不能再承受更多的经济不确定性。”</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959466" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-53-765" data-start="00:08:53,765" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> a federal government needs to be prepared to intervene immediately given the threat of an Air Canada flight attendant strike.</p>
+<p>鉴于加拿大航空空乘人员罢工的威胁，联邦政府需要准备好立即干预。</p>
+<p><button class="play-button sentence" id="s-00-08-59-546" data-start="00:08:59,546" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The impact on small businesses, tourism, and our growing need for greater interprovincial and international trade connections would be massive.</p>
+<p>对小企业、旅游业以及我们对更多省际和国际贸易联系日益增长的需求的影响将是巨大的。</p>
+<p><button class="play-button sentence" id="s-00-09-06-552" data-start="00:09:06,552" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I I think that comes back to the point I was making about why the stakes are so high, right?</p>
+<p>我认为这回到了我之前说的为什么风险如此之高的观点，对吧？</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959448" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-11-650" data-start="00:09:11,650" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We we are trying as best we can to grow the economy in spite of the trade war and the tariffs and all of the uncertainty that they bring.</p>
+<p>尽管贸易战、关税及其带来的不确定性，我们仍在尽力发展经济。</p>
+<p><button class="play-button sentence" id="s-00-09-19-488" data-start="00:09:19,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> piling this kind of uncertainty and the chaos that would come with an actual strike or a lockout would be enormous and would be massively consequential for the Canadian economy as well.</p>
+<p>再加上这种不确定性以及实际罢工或停工带来的混乱将是巨大的，对加拿大经济也将产生重大影响。</p>
+<p><button class="play-button sentence" id="s-00-09-29-536" data-start="00:09:29,536" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh which is why I think you know there is still hope that these two sides can reach a deal and there's certainly an awful lot of pressure on both the union and the airline to get back to the table and really get back to negotiating.</p>
+<p>这就是为什么我认为双方仍有可能达成协议，而且工会和航空公司都面临巨大压力，需要回到谈判桌前真正重新谈判。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1KzbBzGEGp/?t=-2208959418" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-41-181" data-start="00:09:41,181" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Peter, off the top I think I slipped and said that you were from in Vancouver.</p>
+<p>彼得，一开始我说错了，说你在温哥华。</p>
+<p><button class="play-button sentence" id="s-00-09-45-373" data-start="00:09:45,373" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh of course you're based in Toronto.</p>
+<p>当然，你是在多伦多。</p>
+<p><button class="play-button sentence" id="s-00-09-47-278" data-start="00:09:47,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> appreciate your time and that analysis for us.</p>
+<p>感谢你的时间和分析。</p>
+<p><button class="play-button sentence" id="s-00-09-49-402" data-start="00:09:49,402" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's CBC senior business correspondent Peter Armstrong in Toronto.</p>
+<p>这是CBC高级商业记者彼得·阿姆斯特朗在多伦多的报道。</p>
+<p><button class="play-button sentence" id="s-00-09-55-626" data-start="00:09:55,626" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> [Music]</p>
+<p>[音乐]</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
