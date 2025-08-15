@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Trump-Putin Summit in Alaska: A High-Stakes Meeting Amid Ukraine War</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The historic summit between President Trump and President Putin in Alaska is underway, with the world watching for potential outcomes to end the war in Ukraine. The talks, held without Ukrainian representation, focus on possible ceasefire agreements and economic incentives. Experts debate whether the meeting will lead to tangible progress or merely symbolic gestures, as skepticism grows over Trump’s ability to deliver on his promise to end the conflict.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Trump-Putin Summit in Alaska: A High-Stakes Meeting Amid Ukraine War</h1>
+<p>【BBC美俄峰会特别报道 20250816 特朗普与普京阿拉斯加会晤，乌克兰战争能否迎来转机？】</p>
+<p>Summary:
+The historic summit between President Trump and President Putin in Alaska is underway, with the world watching for potential outcomes to end the war in Ukraine. The talks, held without Ukrainian representation, focus on possible ceasefire agreements and economic incentives. Experts debate whether the meeting will lead to tangible progress or merely symbolic gestures, as skepticism grows over Trump’s ability to deliver on his promise to end the conflict.</p>
+<p>摘要：
+美俄领导人在阿拉斯加举行历史性峰会，全球瞩目乌克兰和平前景。会谈未邀请乌克兰代表，聚焦停火协议与经济合作可能。专家质疑会议能否取得实质进展，特朗普的“结束战争”承诺面临考验。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 46 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959990" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-10-000" data-start="00:00:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome back.</p>
+<p>欢迎回来。</p>
+<p><button class="play-button sentence" id="s-00-00-10-743" data-start="00:00:10,743" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm live here in Anchorage in the USA of Alaska where the summit between President Trump and President Putin is now underway.</p>
+<p>我现在在美国阿拉斯加的安克雷奇现场直播，特朗普总统和普京总统之间的峰会正在进行中。</p>
+<p><button class="play-button sentence" id="s-00-00-17-551" data-start="00:00:17,551" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are the latest pictures with those talks going on between the president's teams.</p>
+<p>这些是最新的画面，双方总统的团队正在进行会谈。</p>
+<p><button class="play-button sentence" id="s-00-00-22-643" data-start="00:00:22,643" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no Ukrainian representative at the summit.</p>
+<p>此次峰会没有乌克兰代表参加。</p>
+<p><button class="play-button sentence" id="s-00-00-25-562" data-start="00:00:25,562" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember, Vladimir Zelensky has said his country is counting on the United States to open a path towards three-way peace talks that include Ukraine.</p>
+<p>请记住，弗拉基米尔·泽连斯基曾表示，他的国家指望美国开辟一条包括乌克兰在内的三方和平谈判的道路。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959965" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-34-646" data-start="00:00:34,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The world, though, of course is watching.</p>
+<p>当然，全世界都在关注。</p>
+<p><button class="play-button sentence" id="s-00-00-36-938" data-start="00:00:36,938" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's watching for any possible outcomes from this summit, but all the while the war in Ukraine rages on just today, more reports and more Russian attacks on Ukraine.</p>
+<p>人们关注这次峰会的任何可能结果，但与此同时，乌克兰战争仍在激烈进行，今天又有更多关于俄罗斯袭击乌克兰的报道。</p>
+<p><button class="play-button sentence" id="s-00-00-47-956" data-start="00:00:47,956" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's bring in our panel tonight to talk about the development.</p>
+<p>因此，今晚让我们请来专家小组讨论这一进展。</p>
+<p><button class="play-button sentence" id="s-00-00-51-509" data-start="00:00:51,509" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Faradroh Anamasca, a Democratic political consultant who served as Director of Press Advance under President Barack Obama, and also Matt Teral, who's managing Parliament firehouse strategies for the Chief of Staff for Senator Marco Rubio's presidential campaign.</p>
+<p>我们有法拉德罗·阿纳马斯卡，一位民主党政治顾问，曾在奥巴马总统任内担任新闻推进主任，还有马特·特拉尔，他曾为参议员马尔科·鲁比奥的总统竞选团队担任幕僚长，负责议会消防站战略。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-05-179" data-start="00:01:05,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you to both for being with us.</p>
+<p>感谢两位的到来。</p>
+<p><button class="play-button sentence" id="s-00-01-06-919" data-start="00:01:06,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know you've been following events as we have.</p>
+<p>我知道你们和我们一样一直在关注这些事件。</p>
+<p><button class="play-button sentence" id="s-00-01-09-429" data-start="00:01:09,429" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Joanna, let me start with you in terms of what you make of what we've seen so far, even before the two men have spoken.</p>
+<p>乔安娜，让我先问你，对于到目前为止我们所看到的情况，甚至在两位领导人发言之前，你有什么看法？</p>
+<p><button class="play-button sentence" id="s-00-01-16-621" data-start="00:01:16,621" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've got no indication of how these talks are going so far, but it's been quite a significant hour or two.</p>
+<p>目前我们还没有任何迹象表明这些会谈的进展如何，但这一两个小时非常重要。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959916" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-23-543" data-start="00:01:23,543" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has been a significant event, having planned dozens of these kinds of events at the presidential level.</p>
+<p>这是一次重要的事件，因为曾在总统级别策划过数十次此类活动。</p>
+<p><button class="play-button sentence" id="s-00-01-31-230" data-start="00:01:31,230" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a lot of back and forth that we don't see behind the scenes.</p>
+<p>幕后有很多我们看不到的来回交涉。</p>
+<p><button class="play-button sentence" id="s-00-01-35-575" data-start="00:01:35,575" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I am very interested in what concessions the White House gave to the Russian security team to get him to this base.</p>
+<p>我非常感兴趣的是，白宫向俄罗斯安全团队做出了哪些让步，才让他来到这个基地。</p>
+<p><button class="play-button sentence" id="s-00-01-44-165" data-start="00:01:44,165" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's worrisome to me.</p>
+<p>这让我感到担忧。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959894" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-45-846" data-start="00:01:45,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, when I watch the, you know, pomp and circum, the, all the, you know, ritual of this, I go back to, he did something similar with Kim Jong-un rolled out the red carpet.</p>
+<p>现在，当我看到这些盛大的仪式和排场时，我想起了他与金正恩会面时也铺了红地毯。</p>
+<p><button class="play-button sentence" id="s-00-01-59-572" data-start="00:01:59,572" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he's not exactly on speed dial when, you know, you've got Kim Jong-un giving troops to Putin to send to Ukraine.</p>
+<p>而且，当金正恩向普京提供军队派往乌克兰时，他并不在快速拨号名单上。</p>
+<p><button class="play-button sentence" id="s-00-02-08-635" data-start="00:02:08,635" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So as much as we see all of this, the ritual, them setting all of this up, the outcome, I think that's the important thing.</p>
+<p>因此，尽管我们看到了所有这些仪式和安排，但结果才是最重要的。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959863" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-16-400" data-start="00:02:16,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is very much unclear.</p>
+<p>这一点非常不明确。</p>
+<p><button class="play-button sentence" id="s-00-02-18-117" data-start="00:02:18,117" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what's happening in that meeting may not be the outcome that even the Trump team wants.</p>
+<p>而且，这次会议的结果可能连特朗普团队都不想要。</p>
+<p><button class="play-button sentence" id="s-00-02-24-436" data-start="00:02:24,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matt, our Russia editor, Steve Rosenberg, said these images that we saw of President Trump and Putin on the red carpet.</p>
+<p>马特，我们的俄罗斯编辑史蒂夫·罗森伯格说，我们看到特朗普总统和普京在红地毯上的画面。</p>
+<p><button class="play-button sentence" id="s-00-02-33-575" data-start="00:02:33,575" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump has brought President Putin in from the cold.</p>
+<p>特朗普总统将普京总统从冷落中带了出来。</p>
+<p><button class="play-button sentence" id="s-00-02-37-063" data-start="00:02:37,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Does that concern you?</p>
+<p>这让你担心吗？</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959841" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-38-638" data-start="00:02:38,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It does concern me.</p>
+<p>确实让我担心。</p>
+<p><button class="play-button sentence" id="s-00-02-39-964" data-start="00:02:39,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think what's happening right now is President Trump is trying to get this war to come to an end.</p>
+<p>我认为现在的情况是，特朗普总统正试图结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-02-45-419" data-start="00:02:45,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, something he can't be done, and something he's been trying to deliver on.</p>
+<p>你知道，有些事情他无法完成，有些事情他一直在努力实现。</p>
+<p><button class="play-button sentence" id="s-00-02-49-330" data-start="00:02:49,330" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, you know, look, right now this is a moment.</p>
+<p>而且，你看，现在是一个关键时刻。</p>
+<p><button class="play-button sentence" id="s-00-02-51-598" data-start="00:02:51,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a first step, and hopefully the next steps will come with a second meeting here.</p>
+<p>这是第一步，希望接下来的步骤会在这里的第二次会议中实现。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959823" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-56-080" data-start="00:02:56,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think President Trump has done an effective job of managing expectations going into this meeting.</p>
+<p>我认为特朗普总统在管理人们对这次会议的期望方面做得很好。</p>
+<p><button class="play-button sentence" id="s-00-03-01-680" data-start="00:03:01,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, talk about how the night sure will come with this meeting.</p>
+<p>你知道，谈到这次会议将如何带来夜晚的确定。</p>
+<p><button class="play-button sentence" id="s-00-03-04-458" data-start="00:03:04,458" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It'll be a listing session.</p>
+<p>这将是一次列席会议。</p>
+<p><button class="play-button sentence" id="s-00-03-05-598" data-start="00:03:05,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And hopefully, you know, a springboard, if you will, or laying the foundation for a second meeting, where President Zelensky will be at the table.</p>
+<p>希望这次会议能成为跳板，或者为第二次会议奠定基础，届时泽连斯基总统将出席。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959807" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-12-526" data-start="00:03:12,526" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the bottom line is this is a moment for them to get together here and figure out what is needed in this war.</p>
+<p>但关键是他们现在聚在一起，弄清楚这场战争需要什么。</p>
+<p><button class="play-button sentence" id="s-00-03-18-199" data-start="00:03:18,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The path that's been, we've been going down has not been a good path.</p>
+<p>我们一直走的这条路并不好。</p>
+<p><button class="play-button sentence" id="s-00-03-21-776" data-start="00:03:21,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a path that has led to continued war.</p>
+<p>这是一条导致战争持续的道路。</p>
+<p><button class="play-button sentence" id="s-00-03-24-336" data-start="00:03:24,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the past few months, President Trump has been trying to do what he can do to end this war.</p>
+<p>过去几个月，特朗普总统一直在尽力结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-03-28-295" data-start="00:03:28,295" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think the question is what got President Putin to this moment.</p>
+<p>我认为问题是，是什么让普京总统来到这一刻。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-31-497" data-start="00:03:31,497" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it is President Putin has been watching what President Trump has been doing.</p>
+<p>我认为普京总统一直在观察特朗普总统的所作所为。</p>
+<p><button class="play-button sentence" id="s-00-03-35-813" data-start="00:03:35,813" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He saw what President Trump did in terms of supplying weapons to Ukraine.</p>
+<p>他看到了特朗普总统在向乌克兰提供武器方面的行动。</p>
+<p><button class="play-button sentence" id="s-00-03-39-665" data-start="00:03:39,665" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He saw what President Trump did in launching strikes again against Iran.</p>
+<p>他看到了特朗普总统再次对伊朗发动打击。</p>
+<p><button class="play-button sentence" id="s-00-03-43-919" data-start="00:03:43,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When I ran, it's a deadline to come to the table and negotiate.</p>
+<p>当我竞选时，这是一个来到谈判桌前的最后期限。</p>
+<p><button class="play-button sentence" id="s-00-03-46-887" data-start="00:03:46,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he saw what President Trump just did recently in putting those secondary tariffs on India, India being a major importer of Russian oil.</p>
+<p>他还看到了特朗普总统最近对印度实施的二级关税，印度是俄罗斯石油的主要进口国。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-57-651" data-start="00:03:57,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So look, the bottom line is this.</p>
+<p>所以，关键是。</p>
+<p><button class="play-button sentence" id="s-00-03-59-348" data-start="00:03:59,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia's economy is not a great shape.</p>
+<p>俄罗斯的经济状况不佳。</p>
+<p><button class="play-button sentence" id="s-00-04-01-360" data-start="00:04:01,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Putin right now, I think, needs President Trump more and President Trump needs President Putin.</p>
+<p>我认为，普京总统现在更需要特朗普总统，而特朗普总统也需要普京总统。</p>
+<p><button class="play-button sentence" id="s-00-04-05-272" data-start="00:04:05,272" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's see what happens at this meeting today, but hopefully at least to a second meeting.</p>
+<p>让我们看看今天的会议会发生什么，但希望至少能促成第二次会议。</p>
+<p><button class="play-button sentence" id="s-00-04-09-120" data-start="00:04:09,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And next step here.</p>
+<p>以及下一步。</p>
+<p><button class="play-button sentence" id="s-00-04-10-324" data-start="00:04:10,324" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Man, it's been here in London and you talk there about managing expectations.</p>
+<p>伙计，这是在伦敦，你在那里谈到了管理期望。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-14-997" data-start="00:04:14,997" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump changing some of his rhetoric.</p>
+<p>特朗普总统改变了一些他的言辞。</p>
+<p><button class="play-button sentence" id="s-00-04-17-327" data-start="00:04:17,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But on the campaign trail, he said he would end this war on day one.</p>
+<p>但在竞选期间，他说他会在第一天结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-04-20-673" data-start="00:04:20,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, here we are.</p>
+<p>现在，我们在这里。</p>
+<p><button class="play-button sentence" id="s-00-04-21-596" data-start="00:04:21,596" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, there is a summit.</p>
+<p>是的，有一个峰会。</p>
+<p><button class="play-button sentence" id="s-00-04-22-849" data-start="00:04:22,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a meeting between the two men.</p>
+<p>两位领导人举行了会晤。</p>
+<p><button class="play-button sentence" id="s-00-04-24-963" data-start="00:04:24,963" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the slogan that they're building this event as is pursuing peace.</p>
+<p>但他们为这次活动打造的口号是追求和平。</p>
+<p><button class="play-button sentence" id="s-00-04-28-800" data-start="00:04:28,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's not ending the war on day one.</p>
+<p>这并不是在第一天结束战争。</p>
+<p><button class="play-button sentence" id="s-00-04-30-689" data-start="00:04:30,689" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anything but this is a start of a very long process, isn't it?</p>
+<p>但这只是一个漫长过程的开始，不是吗？</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959724" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-35-199" data-start="00:04:35,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, look, this war to start under President Trump.</p>
+<p>好吧，这场战争是在特朗普总统任内开始的。</p>
+<p><button class="play-button sentence" id="s-00-04-37-546" data-start="00:04:37,546" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This war started under President Biden.</p>
+<p>这场战争是在拜登总统任内开始的。</p>
+<p><button class="play-button sentence" id="s-00-04-39-360" data-start="00:04:39,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And President Trump has made more progress than any other world leader in getting this war to come to an end.</p>
+<p>特朗普总统在结束这场战争方面比其他任何世界领导人都取得了更多进展。</p>
+<p><button class="play-button sentence" id="s-00-04-44-720" data-start="00:04:44,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a pause a step forward today of getting President Putin and President Trump together to figure out what is needed to end this war.</p>
+<p>今天是让普京总统和特朗普总统聚在一起，弄清楚结束这场战争需要什么的一个暂停和前进的一步。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959708" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-51-540" data-start="00:04:51,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he's trying to deliver on that campaign promise.</p>
+<p>他正在努力兑现竞选承诺。</p>
+<p><button class="play-button sentence" id="s-00-04-54-313" data-start="00:04:54,313" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And frankly, I think it's important to recognize we're looking at this meeting today didn't come overnight.</p>
+<p>坦率地说，我认为重要的是要认识到，我们今天看到的这次会议并非一夜之间发生的。</p>
+<p><button class="play-button sentence" id="s-00-05-00-063" data-start="00:05:00,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, it's been multiple steps to getting here, whether it's been the U.S. Ukraine, middle agreement with the much in my view serves as a security guarantee that's owned right for Ukraine because that will be greater partnership between the United States and Ukraine in terms of economic partnership.</p>
+<p>你知道，走到这一步经历了多个步骤，无论是美乌之间的协议，在我看来，这为乌克兰提供了安全保障，因为这将加强美国和乌克兰在经济伙伴关系方面的合作。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959684" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-15-767" data-start="00:05:15,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also the other things I talked about earlier, which is the fact that you've seen President Putin see what President Trump has been doing on tariffs and sanctions.</p>
+<p>还有我之前谈到的其他事情，即普京总统看到了特朗普总统在关税和制裁方面的行动。</p>
+<p><button class="play-button sentence" id="s-00-05-23-554" data-start="00:05:23,554" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What he's been doing on countries like Iran, who miss its deadline for negotiation.</p>
+<p>他对伊朗等国家采取的行动，这些国家错过了谈判的最后期限。</p>
+<p><button class="play-button sentence" id="s-00-05-28-302" data-start="00:05:28,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think President Putin right now is concerned about what President Trump will do if President Putin decides not to end this war.</p>
+<p>我认为普京总统现在担心的是，如果他决定不结束这场战争，特朗普总统会采取什么行动。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959665" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-34-523" data-start="00:05:34,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Putin's economy in Russia is out in good shape.</p>
+<p>普京总统的俄罗斯经济状况不佳。</p>
+<p><button class="play-button sentence" id="s-00-05-37-278" data-start="00:05:37,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think he knows that President Trump is not messing around.</p>
+<p>我认为他知道特朗普总统不会胡来。</p>
+<p><button class="play-button sentence" id="s-00-05-40-086" data-start="00:05:40,086" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think at this stage, President Putin better come here and find a way to get this war to come to an end.</p>
+<p>我认为在这个阶段，普京总统最好来这里，找到结束这场战争的方法。</p>
+<p><button class="play-button sentence" id="s-00-05-45-199" data-start="00:05:45,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Otherwise, I don't think President Trump is going to leave this meeting without taking action to get President Putin to get this war to come to an end.</p>
+<p>否则，我不认为特朗普总统会在不采取行动让普京总统结束这场战争的情况下离开这次会议。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959646" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-53-439" data-start="00:05:53,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Matt and Johanna, we'll be back with both of you in a moment as we continue to analyze the events here on the ground in Alaska.</p>
+<p>好的，马特和乔安娜，我们稍后再请你们回来，继续分析阿拉斯加现场的事件。</p>
+<p><button class="play-button sentence" id="s-00-06-00-577" data-start="00:06:00,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But let's bring in Matthew Schmidt now, his associate professor at the National Security Department.</p>
+<p>但现在让我们请来马修·施密特，他是国家安全系的副教授。</p>
+<p><button class="play-button sentence" id="s-00-06-06-217" data-start="00:06:06,217" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matthew, thanks so much for joining us.</p>
+<p>马修，非常感谢你的加入。</p>
+<p><button class="play-button sentence" id="s-00-06-08-586" data-start="00:06:08,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How do you think President Putin is viewing all of this?</p>
+<p>你认为普京总统如何看待这一切？</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959627" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-12-932" data-start="00:06:12,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's a big win for him already.</p>
+<p>我认为这对他来说已经是一个巨大的胜利。</p>
+<p><button class="play-button sentence" id="s-00-06-16-138" data-start="00:06:16,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you look at Russian media, they're going all around saying whose idea was it to go to Alaska?</p>
+<p>如果你看看俄罗斯媒体，他们到处都在说去阿拉斯加是谁的主意？</p>
+<p><button class="play-button sentence" id="s-00-06-22-991" data-start="00:06:22,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was the already Usha College, it was a Russian, uh, ministers idea.</p>
+<p>这是乌沙学院的主意，是一位俄罗斯部长的想法。</p>
+<p><button class="play-button sentence" id="s-00-06-27-938" data-start="00:06:27,938" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh, what do they call Alaska?</p>
+<p>他们怎么称呼阿拉斯加？</p>
+<p><button class="play-button sentence" id="s-00-06-29-958" data-start="00:06:29,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They call it Russian America?</p>
+<p>他们称之为俄属美洲？</p>
+<p><button class="play-button sentence" id="s-00-06-31-542" data-start="00:06:31,542" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do they call the areas of Ukraine that they're illegally occupying?</p>
+<p>他们怎么称呼他们非法占领的乌克兰地区？</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959605" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-34-560" data-start="00:06:34,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They call it Russian Ukraine.</p>
+<p>他们称之为俄属乌克兰。</p>
+<p><button class="play-button sentence" id="s-00-06-36-686" data-start="00:06:36,686" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is playing very well to the domestic audience.</p>
+<p>所以这对国内观众来说非常有利。</p>
+<p><button class="play-button sentence" id="s-00-06-40-514" data-start="00:06:40,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think we forget that that Putin is here in large part to transmit that message back to his people, not just to us.</p>
+<p>我认为我们忘记了普京在这里很大程度上是为了向他的民众传达这一信息，而不仅仅是对我们。</p>
+<p><button class="play-button sentence" id="s-00-06-48-954" data-start="00:06:48,954" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the same time, we've seen President Trump in the lead up to the summit say, I will not be happy if President Putin doesn't agree to a ceasefire.</p>
+<p>与此同时，我们看到特朗普总统在峰会前表示，如果普京总统不同意停火，他不会高兴。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959580" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-59-480" data-start="00:06:59,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I might walk away and we might never see each other again.</p>
+<p>我可能会离开，我们可能再也不会见面。</p>
+<p><button class="play-button sentence" id="s-00-07-02-237" data-start="00:07:02,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How do you think President Putin is handling this, you know, bottom line demand that we're seeing from President Trump?</p>
+<p>你认为普京总统如何处理特朗普总统的这一底线要求？</p>
+<p><button class="play-button sentence" id="s-00-07-09-541" data-start="00:07:09,541" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he knows Trump well, right?</p>
+<p>我认为他很了解特朗普，对吧？</p>
+<p><button class="play-button sentence" id="s-00-07-12-258" data-start="00:07:12,258" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as gas staff, their gas has reminded us, uh, we don't know what Trump's going to do tomorrow despite what he says today.</p>
+<p>正如天然气工作人员提醒我们的那样，尽管特朗普今天说了什么，我们不知道他明天会做什么。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959559" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-20-879" data-start="00:07:20,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Putin is a master of the Soviet art of reflective control.</p>
+<p>普京是苏联反射控制艺术的大师。</p>
+<p><button class="play-button sentence" id="s-00-07-25-166" data-start="00:07:25,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been shaping Trump's view of the reality of this war.</p>
+<p>他一直在塑造特朗普对这场战争现实的看法。</p>
+<p><button class="play-button sentence" id="s-00-07-30-387" data-start="00:07:30,387" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has, you know, played on Trump's fundamental sense that the war was started by Ukraine, not by Russia.</p>
+<p>你知道，他利用了特朗普的基本观念，即这场战争是由乌克兰而非俄罗斯发起的。</p>
+<p><button class="play-button sentence" id="s-00-07-37-863" data-start="00:07:37,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's looking at, uh, you know, at this as a land deal, right?</p>
+<p>他把这看作是一笔土地交易，对吧？</p>
+<p><button class="play-button sentence" id="s-00-07-41-364" data-start="00:07:41,364" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Again, as a previous guest, it says, as a landswap, as though it's not really about Ukraine, you know, Ukraine lands for Ukrainian lands.</p>
+<p>就像之前的嘉宾所说，这是一笔土地交换，仿佛这并不真正关乎乌克兰，你知道，乌克兰的土地换乌克兰的土地。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959530" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-49-059" data-start="00:07:49,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, and so in this way, Putin is firmly in control of where Trump is on this and is able to shape what's already there in Trump's mind in terms of his understanding of what this is all about.</p>
+<p>因此，通过这种方式，普京牢牢控制了特朗普在这方面的立场，并能够塑造特朗普对这一切的理解。</p>
+<p><button class="play-button sentence" id="s-00-08-05-120" data-start="00:08:05,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We do understand that President Putin, of course, with this business delegation, he's brought with him is keen to make economic deals with the U.S.</p>
+<p>我们确实理解，普京总统当然带着这个商业代表团，他渴望与美国达成经济协议。</p>
+<p><button class="play-button sentence" id="s-00-08-12-779" data-start="00:08:12,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To what extent do you think President Putin sees or feels pressure to stop fighting and make an agreement?</p>
+<p>你认为普京总统在多大程度上看到或感受到停止战斗并达成协议的压力？</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959498" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-22-000" data-start="00:08:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he will make some kind of agreement outside of the war on economics or on our central, because he's giving that to Trump.</p>
+<p>我认为他会在战争之外达成某种经济或核心协议，因为他要把这个给特朗普。</p>
+<p><button class="play-button sentence" id="s-00-08-31-511" data-start="00:08:31,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He understands that Trump needs to walk away with some kind of wind, and that's what he's going to do one way or another.</p>
+<p>他明白特朗普需要带着某种胜利离开，这就是他无论如何都要做的。</p>
+<p><button class="play-button sentence" id="s-00-08-39-251" data-start="00:08:39,251" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What he's not prepared to do yet is see it any meaningful position in order to create a just and lasting peace.</p>
+<p>他还没有准备好做出任何有意义的让步，以创造公正和持久的和平。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959472" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-47-257" data-start="00:08:47,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You may get a cease fire, but a cease fire isn't an end to the war, right?</p>
+<p>你可能会得到停火，但停火并不是战争的结束，对吧？</p>
+<p><button class="play-button sentence" id="s-00-08-52-125" data-start="00:08:52,125" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a delay.</p>
+<p>这是一种拖延。</p>
+<p><button class="play-button sentence" id="s-00-08-53-017" data-start="00:08:53,017" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A cease fire isn't peace.</p>
+<p>停火不是和平。</p>
+<p><button class="play-button sentence" id="s-00-08-54-720" data-start="00:08:54,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have to have, you know, deterrence.</p>
+<p>你必须要有威慑。</p>
+<p><button class="play-button sentence" id="s-00-08-57-221" data-start="00:08:57,221" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have to have commitment to enforce these ideas, and we're a long way from that yet.</p>
+<p>你必须承诺执行这些想法，而我们离那还很远。</p>
+<p><button class="play-button sentence" id="s-00-09-04-720" data-start="00:09:04,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that's an important point there.</p>
+<p>是的，这是一个重要的观点。</p>
+<p><button class="play-button sentence" id="s-00-09-06-123" data-start="00:09:06,123" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Matthew Schmidt, thank you for sharing your analysis with us.</p>
+<p>好的，马修·施密特，感谢你与我们分享你的分析。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959450" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-09-768" data-start="00:09:09,768" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, one of the key questions of course around this summit, though, is simple.</p>
+<p>当然，这次峰会的一个关键问题很简单。</p>
+<p><button class="play-button sentence" id="s-00-09-17-200" data-start="00:09:17,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is at stake?</p>
+<p>利害攸关的是什么？</p>
+<p><button class="play-button sentence" id="s-00-09-18-163" data-start="00:09:18,163" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Donald Trump has been the one to build himself as the man to bring this war to an end.</p>
+<p>唐纳德·特朗普一直将自己塑造成结束这场战争的人。</p>
+<p><button class="play-button sentence" id="s-00-09-23-270" data-start="00:09:23,270" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So how that goes at this summit could impact the perception of the President, not just among his peers on the world stage, but also at home in the United States, two new polling today, such as a decent portion of Americans actually lack the faith that he can make it happen as well.</p>
+<p>因此，这次峰会的进展可能会影响总统在世界舞台上的同行以及美国国内对他的看法，今天的两项新民调显示，相当一部分美国人实际上也缺乏对他能够实现这一目标的信心。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959417" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-42-639" data-start="00:09:42,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some new numbers released on Thursday show that nearly 60% of people are either not too confident or not at all confident.</p>
+<p>周四发布的一些新数据显示，近60%的人要么不太有信心，要么完全没有信心。</p>
+<p><button class="play-button sentence" id="s-00-09-50-495" data-start="00:09:50,495" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump can make, quote, wise decisions about the conflict.</p>
+<p>特朗普总统能够对冲突做出“明智”的决定。</p>
+<p><button class="play-button sentence" id="s-00-09-55-440" data-start="00:09:55,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's bring a panel back in Johanna Masca, Matt Terrell, Johanna, really interesting numbers there portraying how Americans feel about the conflict.</p>
+<p>让我们再次请来专家小组乔安娜·马斯卡、马特·特拉尔，乔安娜，这些数字非常有趣，描绘了美国人对这场冲突的感受。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959394" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-05-926" data-start="00:10:05,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you make of that?</p>
+<p>你怎么看？</p>
+<p><button class="play-button sentence" id="s-00-10-07-380" data-start="00:10:07,380" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The evolution of American opinion on this conflict?</p>
+<p>美国人对这场冲突看法的演变？</p>
+<p><button class="play-button sentence" id="s-00-10-11-070" data-start="00:10:11,070" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, there's a frustration growing in America with President Trump's promises made and not kept.</p>
+<p>是的，美国人对特朗普总统的承诺未能兑现感到越来越沮丧。</p>
+<p><button class="play-button sentence" id="s-00-10-17-559" data-start="00:10:17,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think what we're seeing is of course his rhetoric changes, his timeline change, he says he's going to bring about a deal.</p>
+<p>我认为我们看到的是，当然他的言辞在变化，他的时间表在变化，他说他将达成一项协议。</p>
+<p><button class="play-button sentence" id="s-00-10-25-925" data-start="00:10:25,925" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Hillary Clinton, of course, his former rival, even said of this summit, if he actually does bring about peace, she herself will nominate him for a Nobel Peace Prize.</p>
+<p>当然，他的前竞争对手希拉里·克林顿甚至谈到这次峰会时说，如果他真的带来和平，她本人将提名他获得诺贝尔和平奖。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959364" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-35-891" data-start="00:10:35,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think there is a healthy skepticism because we are seeing even his domestic promises fall flat.</p>
+<p>但我认为有一种健康的怀疑态度，因为我们甚至看到他的国内承诺也未能实现。</p>
+<p><button class="play-button sentence" id="s-00-10-42-914" data-start="00:10:42,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tariffs which he said foreign countries would pay, Americans are paying, they're feeling that pain.</p>
+<p>他说外国会支付的关税，实际上是美国人在支付，他们感受到了这种痛苦。</p>
+<p><button class="play-button sentence" id="s-00-10-49-412" data-start="00:10:49,412" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I'm not surprised that the sentiment is skeptical because that's the overall mood in America right now.</p>
+<p>因此，我并不感到惊讶情绪是怀疑的，因为这是美国目前的整体氛围。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959343" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-56-078" data-start="00:10:56,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matt, is there a chance that all of this can backfire spectacularly for President Trump?</p>
+<p>马特，这一切有没有可能对特朗普总统造成惊人的反噬？</p>
+<p><button class="play-button sentence" id="s-00-11-01-678" data-start="00:11:01,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a sense that he's given President Putin this platform on the world stage, he's warmly welcomed him on a red carpet.</p>
+<p>从某种意义上说，他给了普京总统这个国际舞台，还红毯热情欢迎了他。</p>
+<p><button class="play-button sentence" id="s-00-11-06-887" data-start="00:11:06,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've chaired the armored vehicle together.</p>
+<p>他们一起乘坐了装甲车。</p>
+<p><button class="play-button sentence" id="s-00-11-09-307" data-start="00:11:09,307" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have all these talks.</p>
+<p>他们进行了所有这些会谈。</p>
+<p><button class="play-button sentence" id="s-00-11-10-639" data-start="00:11:10,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As we heard from Matthew Smith telling us that it's playing very well domestically in Russia for President Putin.</p>
+<p>正如我们从马修·史密斯那里听到的，这对普京总统在俄罗斯国内非常有利。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959324" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-15-789" data-start="00:11:15,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Actually, for President Trump, if he's got that win on the world stage, the optics are good for President Putin.</p>
+<p>实际上，对特朗普总统来说，如果他在国际舞台上取得这一胜利，表面效果对普京总统有利。</p>
+<p><button class="play-button sentence" id="s-00-11-22-518" data-start="00:11:22,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then actually no deal is done.</p>
+<p>然而实际上并没有达成任何协议。</p>
+<p><button class="play-button sentence" id="s-00-11-24-622" data-start="00:11:24,622" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He gets the win.</p>
+<p>他赢得了胜利。</p>
+<p><button class="play-button sentence" id="s-00-11-25-600" data-start="00:11:25,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And President Trump looks a little bit embarrassed, doesn't he?</p>
+<p>而特朗普总统看起来有点尴尬，不是吗？</p>
+<p><button class="play-button sentence" id="s-00-11-30-080" data-start="00:11:30,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, look, I think President Trump is leading on this.</p>
+<p>嗯，我认为特朗普总统在这件事上处于主导地位。</p>
+<p><button class="play-button sentence" id="s-00-11-33-081" data-start="00:11:33,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since your point, he is owning this.</p>
+<p>按照你的观点，他掌控着这一切。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959304" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-35-038" data-start="00:11:35,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's leadership.</p>
+<p>这就是领导力。</p>
+<p><button class="play-button sentence" id="s-00-11-36-793" data-start="00:11:36,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's putting political capital, if you will, into this.</p>
+<p>可以说，他正在投入政治资本。</p>
+<p><button class="play-button sentence" id="s-00-11-40-915" data-start="00:11:40,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he did campaign on ending this war.</p>
+<p>他确实在竞选时承诺结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-11-43-394" data-start="00:11:43,394" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he's trying to do exactly that.</p>
+<p>而他正在努力实现这一点。</p>
+<p><button class="play-button sentence" id="s-00-11-45-343" data-start="00:11:45,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think he is confident, though, that he will get this war to come to an end.</p>
+<p>但我认为他有信心能够结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-11-49-499" data-start="00:11:49,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he's confident that this meeting will be a step forward among many steps, so he needed to be taken to get this war to come to an end.</p>
+<p>我相信他有信心这次会晤将是众多步骤中的一步，需要采取这些步骤来结束战争。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959282" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-57-452" data-start="00:11:57,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And whether you get a ceasefire out of this meeting or the guarantees of the next meeting, I think what's important here is to get the information needed and to figure out what is needed from President Putin, in particular, to get him to the negotiating table of President Zelensky to get this war to come to an end.</p>
+<p>无论这次会晤能否达成停火或确保下次会晤，我认为重要的是获取必要信息，并弄清楚尤其需要普京总统做什么，才能让他与泽连斯基总统坐到谈判桌前以结束战争。</p>
+<p><button class="play-button sentence" id="s-00-12-11-982" data-start="00:12:11,982" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But ultimately, it comes down to results.</p>
+<p>但最终，一切取决于结果。</p>
+<p><button class="play-button sentence" id="s-00-12-13-655" data-start="00:12:13,655" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think right now it comes down to President Trump doing what he does best.</p>
+<p>我认为现在关键在于特朗普总统发挥他最擅长的能力。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959262" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-17-598" data-start="00:12:17,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's negotiating, making deals.</p>
+<p>那就是谈判和达成协议。</p>
+<p><button class="play-button sentence" id="s-00-12-19-497" data-start="00:12:19,497" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it was a smart move to do this meeting, frankly.</p>
+<p>坦率地说，我认为举行这次会晤是明智之举。</p>
+<p><button class="play-button sentence" id="s-00-12-22-240" data-start="00:12:22,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think right now it's all about figuring out what can be done in this meeting to get to those next steps.</p>
+<p>我认为现在的重点是弄清楚在这次会晤中能做些什么以推动后续步骤。</p>
+<p><button class="play-button sentence" id="s-00-12-27-631" data-start="00:12:27,631" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But look, President Trump went into this meeting with a plan.</p>
+<p>但你看，特朗普总统是带着计划参加这次会晤的。</p>
+<p><button class="play-button sentence" id="s-00-12-31-096" data-start="00:12:31,096" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been working for weeks.</p>
+<p>他已经为此工作了数周。</p>
+<p><button class="play-button sentence" id="s-00-12-32-524" data-start="00:12:32,524" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm putting together a strategy plan for this meeting.</p>
+<p>我正在为这次会晤制定战略计划。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959244" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-35-260" data-start="00:12:35,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, look, he's going to go into this prepared.</p>
+<p>所以你看，他会做好充分准备。</p>
+<p><button class="play-button sentence" id="s-00-12-37-528" data-start="00:12:37,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also, look, it's been months here, a President Trump trend to do specific things to get President Trump, excuse me, President Putin to the table.</p>
+<p>而且你看，几个月来，特朗普总统一直在采取具体措施让普京总统坐到谈判桌前。</p>
+<p><button class="play-button sentence" id="s-00-12-45-206" data-start="00:12:45,206" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And look, that's been economic pressure.</p>
+<p>你看，那就是经济施压。</p>
+<p><button class="play-button sentence" id="s-00-12-47-261" data-start="00:12:47,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've seen that with tariffs in India.</p>
+<p>你从对印度的关税中就能看到这一点。</p>
+<p><button class="play-button sentence" id="s-00-12-49-200" data-start="00:12:49,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you've also seen President Trump doing deals like the U.S. EU trade deal that shifted $750 billion of energy that the EU won't be spending in Russia and instead is spending on U.S. energy.</p>
+<p>但你也看到特朗普总统达成了诸如美欧贸易协议之类的交易，该协议转移了7500亿美元的能源投资，欧盟不再将这些资金投向俄罗斯，而是用于美国能源。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959216" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-03-323" data-start="00:13:03,323" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you're seeing those kinds of things take place that I think's put a lot of pressure on President Putin.</p>
+<p>所以你会看到这类事情正在发生，我认为这给普京总统带来了很大压力。</p>
+<p><button class="play-button sentence" id="s-00-13-07-803" data-start="00:13:07,803" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that that's going to really help, frankly, in terms of getting this across the finish line, hopefully getting to peace and hopefully getting to a permanent end of this war.</p>
+<p>坦率地说，我认为这将真正有助于推动此事跨越终点线，有望实现和平并永久结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-13-17-120" data-start="00:13:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Johanna, what's your sense of how members of Congress in particular are looking at what's happening today?</p>
+<p>乔安娜，你如何看待国会议员们特别是如何看待今天发生的事？</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959197" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-22-732" data-start="00:13:22,732" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know that the Senate had this bipartisan film moving forward with pretty significant sanctions threatened on countries that do business with Russia, on Russia itself.</p>
+<p>我们知道参议院两党正在推进一项相当严厉的制裁法案，威胁对与俄罗斯做生意的国家和俄罗斯本身实施制裁。</p>
+<p><button class="play-button sentence" id="s-00-13-31-759" data-start="00:13:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They held back a bit because President Trump and the White House said they wanted room to maneuver.</p>
+<p>他们有所保留，因为特朗普总统和白宫表示他们需要回旋余地。</p>
+<p><button class="play-button sentence" id="s-00-13-35-840" data-start="00:13:35,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They didn't want to be boxed into a corner.</p>
+<p>他们不想被逼入死角。</p>
+<p><button class="play-button sentence" id="s-00-13-38-260" data-start="00:13:38,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think that they will be satisfied, let's say, with the outcome of this, if there isn't a ceasefire?</p>
+<p>你认为如果没有停火，他们会对此结果满意吗？</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959174" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-46-000" data-start="00:13:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, of course, it depends on the Congressperson.</p>
+<p>当然，这取决于具体的国会议员。</p>
+<p><button class="play-button sentence" id="s-00-13-48-786" data-start="00:13:48,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think, you know, the interesting thing is a lot of other countries are willing to wait out our changes of leadership.</p>
+<p>我认为有趣的是，许多其他国家愿意等待我们的领导层更迭。</p>
+<p><button class="play-button sentence" id="s-00-13-55-506" data-start="00:13:55,506" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I've seen this, you know, in America, we have this very... We can solve it, right?</p>
+<p>我在美国看到，我们总是觉得...我们能解决这个问题，对吧？</p>
+<p><button class="play-button sentence" id="s-00-13-59-741" data-start="00:13:59,741" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to solve it.</p>
+<p>我们会解决它。</p>
+<p><button class="play-button sentence" id="s-00-14-00-890" data-start="00:14:00,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This term President Trump is going to solve it or President Obama is going to solve it.</p>
+<p>这一任期的特朗普总统会解决它，或者奥巴马总统会解决它。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959155" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-04-461" data-start="00:14:04,461" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then the problem is, it isn't solved and it just comes back up in another term in a different way.</p>
+<p>但问题是，它并没有解决，只是以另一种方式在另一个任期重新出现。</p>
+<p><button class="play-button sentence" id="s-00-14-11-640" data-start="00:14:11,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think that Congress absolutely has a role and should have a bigger role because they are there with longevity.</p>
+<p>所以我认为国会绝对可以发挥作用，而且应该发挥更大作用，因为他们的任期更长。</p>
+<p><button class="play-button sentence" id="s-00-14-20-134" data-start="00:14:20,134" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They can plan and have a strong position.</p>
+<p>他们可以制定计划并保持坚定立场。</p>
+<p><button class="play-button sentence" id="s-00-14-22-987" data-start="00:14:22,987" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But of course, Congress's popularity is at an all-time low.</p>
+<p>但当然，国会的支持率正处于历史最低点。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959132" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-27-353" data-start="00:14:27,353" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm not so sure if you pulled Americans on whether you wanted Congress to have a bigger hand in this that it would actually go about.</p>
+<p>所以我不太确定如果询问美国人是否希望国会在此事上发挥更大作用，结果会如何。</p>
+<p><button class="play-button sentence" id="s-00-14-36-591" data-start="00:14:36,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Matt, you know, a question for you, it hasn't been clear to me really what President Trump would see as actually a success coming out of the summit.</p>
+<p>马特，我想问你一个问题，我还不清楚特朗普总统认为这次峰会的真正成功是什么。</p>
+<p><button class="play-button sentence" id="s-00-14-46-534" data-start="00:14:46,534" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you think that would be?</p>
+<p>你认为会是什么？</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959111" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-48-557" data-start="00:14:48,557" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I think success out of this meeting is having this be the foundation for a second meeting.</p>
+<p>我认为这次会晤的成功在于为第二次会晤奠定基础。</p>
+<p><button class="play-button sentence" id="s-00-14-53-503" data-start="00:14:53,503" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I do think that President Trump recognizes that you have to get President Poon and President Zelensky to the table.</p>
+<p>我确实认为特朗普总统认识到必须让普京总统和泽连斯基总统坐到谈判桌前。</p>
+<p><button class="play-button sentence" id="s-00-14-58-981" data-start="00:14:58,981" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're not going to win, you know, anything here.</p>
+<p>你知道，你在这里不会赢得任何东西。</p>
+<p><button class="play-button sentence" id="s-00-15-01-307" data-start="00:15:01,307" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're not going to conclude this war.</p>
+<p>你不会结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-15-03-096" data-start="00:15:03,096" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're not going to end this war on the battlefield.</p>
+<p>你不会在战场上结束这场战争。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959094" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-05-568" data-start="00:15:05,568" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're going to end this war at the Negotiating Table.</p>
+<p>你将在谈判桌上结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-15-08-211" data-start="00:15:08,211" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So look, you got to get President Poon to the Negotiating Table with President Zelensky.</p>
+<p>所以你看，你必须让普京总统与泽连斯基总统坐到谈判桌前。</p>
+<p><button class="play-button sentence" id="s-00-15-12-706" data-start="00:15:12,706" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think a win out of this would be getting a second meeting set up or at least having the foundation, the understanding for what that second meeting will look like.</p>
+<p>所以我认为这次会晤的胜利将是安排第二次会晤，或至少为第二次会晤奠定基础和共识。</p>
+<p><button class="play-button sentence" id="s-00-15-21-264" data-start="00:15:21,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also the foundation understanding for what is needed to really get this war to come to an end.</p>
+<p>同时也要就真正结束这场战争需要什么达成基本共识。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959073" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-26-039" data-start="00:15:26,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is needed to get this war to be a permanent end?</p>
+<p>需要什么才能使这场战争永久结束？</p>
+<p><button class="play-button sentence" id="s-00-15-28-753" data-start="00:15:28,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So look, you know, again, I go back to I think President Trump did a really effective job of managing expectations going into this meeting.</p>
+<p>所以你看，我再次认为特朗普总统在管理人们对这次会晤的期望方面做得非常有效。</p>
+<p><button class="play-button sentence" id="s-00-15-37-073" data-start="00:15:37,073" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's been clear, you know, be, you know, what a 25% chance I think he said that this meeting could go south and there could be nothing that comes of this, you know, that he just gets up and leaves, if you will.</p>
+<p>他很清楚，他说过这次会晤有25%的可能性会失败，可能毫无结果，也就是说他可能会起身离开。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959053" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-46-911" data-start="00:15:46,911" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think he's going to get up and leave.</p>
+<p>我不认为他会起身离开。</p>
+<p><button class="play-button sentence" id="s-00-15-49-075" data-start="00:15:49,075" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think this is going to be frankly a meeting that you'll see some positive outcome from I'm optimistic about it.</p>
+<p>坦率地说，我认为这次会晤将产生一些积极成果，我对此持乐观态度。</p>
+<p><button class="play-button sentence" id="s-00-15-55-446" data-start="00:15:55,446" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But look, it also is about a ceasefire.</p>
+<p>但你看，这也关乎停火。</p>
+<p><button class="play-button sentence" id="s-00-15-57-501" data-start="00:15:57,501" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think the order of this has got to be, you know, getting to a ceasefire, getting President Poon to the Negotiating Table.</p>
+<p>我认为顺序应该是先达成停火，再让普京总统坐到谈判桌前。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959036" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-03-305" data-start="00:16:03,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then also we got to talk about things like security guarantees, you know, land.</p>
+<p>然后我们还要讨论安全保障等问题，比如领土。</p>
+<p><button class="play-button sentence" id="s-00-16-07-045" data-start="00:16:07,045" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's all more to come here.</p>
+<p>这些都是后续要讨论的。</p>
+<p><button class="play-button sentence" id="s-00-16-08-611" data-start="00:16:08,611" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the first step I think is a ceasefire and getting that being set up for President Poon, President Zelensky to get to the Negotiating Table and talk about what needs to be done to get this war to come to an end.</p>
+<p>但我认为第一步是停火，并为此创造条件让普京总统和泽连斯基总统坐到谈判桌前，讨论需要采取哪些措施来结束这场战争。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208959020" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-19-360" data-start="00:16:19,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As those talks, as we said, are underway here in Alaska.</p>
+<p>正如我们所说，这些会谈正在阿拉斯加进行。</p>
+<p><button class="play-button sentence" id="s-00-16-23-686" data-start="00:16:23,686" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matt Johanna will be back with you in a moment around the world and across the UK.</p>
+<p>马特和乔安娜稍后将与您再次见面，关注全球和英国各地的动态。</p>
+<p><button class="play-button sentence" id="s-00-16-33-803" data-start="00:16:33,803" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is BBC News.</p>
+<p>这里是BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-17-19-680" data-start="00:17:19,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome back to our continuing coverage of that summit, that historic summit between President Trump and President Putin in Alaska.</p>
+<p>欢迎继续关注我们对这次峰会的持续报道，这是特朗普总统和普京总统在阿拉斯加举行的历史性峰会。</p>
+<p><button class="play-button sentence" id="s-00-17-50-223" data-start="00:17:50,223" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course today, the focus is on whether they can find a way to end the war in Ukraine.</p>
+<p>当然，今天的焦点是他们能否找到结束乌克兰战争的方法。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958924" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-55-839" data-start="00:17:55,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, one of the tools that they could use to negotiate is business and trade a key tool for them, perhaps.</p>
+<p>现在，他们可以用来谈判的工具之一是商业和贸易，这可能是他们的关键工具。</p>
+<p><button class="play-button sentence" id="s-00-18-02-064" data-start="00:18:02,064" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And earlier this week, President Trump warned that Russia could face very, quote, severe consequences if President Putin fails to end the war.</p>
+<p>本周早些时候，特朗普总统警告说，如果普京总统未能结束战争，俄罗斯可能面临"非常严重的后果"。</p>
+<p><button class="play-button sentence" id="s-00-18-10-810" data-start="00:18:10,810" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, he reiterated those threats, describing them as, quote, very severe.</p>
+<p>今天，他重申了这些威胁，称其为"非常严重"。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958904" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-15-355" data-start="00:18:15,355" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, that appears to be in addition to the action Mr. Trump has already taken against countries that continue to trade with Russia, despite wise-scale international sanctions.</p>
+<p>这似乎是特朗普先生已经对那些继续与俄罗斯贸易的国家采取的行动之外的举措，尽管国际社会实施了大规模制裁。</p>
+<p><button class="play-button sentence" id="s-00-18-25-028" data-start="00:18:25,028" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'll know he announced sweeping secondary tariffs on any country that buys from or sells to Russia.</p>
+<p>你知道，他宣布对任何从俄罗斯购买或向俄罗斯出售商品的国家实施全面的二级关税。</p>
+<p><button class="play-button sentence" id="s-00-18-31-176" data-start="00:18:31,176" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> India was the first to be punished under those terms over its extensive purchases of Russian oil.</p>
+<p>印度因其大量购买俄罗斯石油而成为第一个受到这些条款惩罚的国家。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958882" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-37-668" data-start="00:18:37,668" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as well as the trade threats, Sand and Negotiating Tatsy, there could also be maybe some trade incentives.</p>
+<p>但除了贸易威胁，可能还有一些贸易激励措施。</p>
+<p><button class="play-button sentence" id="s-00-18-44-027" data-start="00:18:44,027" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump had previously raised the possibility of offering Russia new economic opportunities if it ends the war.</p>
+<p>特朗普总统此前曾提出，如果俄罗斯结束战争，可能会为其提供新的经济机会。</p>
+<p><button class="play-button sentence" id="s-00-18-50-484" data-start="00:18:50,484" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There could also be a deal to access rare earth minerals used in all sorts of electronics in return.</p>
+<p>还可能达成一项协议，以换取用于各种电子产品的稀土矿产的获取权。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958863" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-56-105" data-start="00:18:56,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US may be closely eyeing Russia's copious reserves of oil and gas.</p>
+<p>美国可能正密切关注俄罗斯丰富的石油和天然气储备。</p>
+<p><button class="play-button sentence" id="s-00-19-00-055" data-start="00:19:00,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's talk to our panel once again, Johanna Masker's Democratic political consultant, serviced as Director of press advance on the President Barack Obama and Matt Terrell still withers managing Director of Firehouse Strategies, former Chief of Staff for Marco Rubio's presidential campaign.</p>
+<p>让我们再次与我们的专家小组交谈，乔安娜·马斯克是民主党政治顾问，曾担任奥巴马总统的新闻推进主任，马特·特雷尔是Firehouse Strategies的常务董事，曾担任马可·鲁比奥总统竞选活动的参谋长。</p>
+<p><button class="play-button sentence" id="s-00-19-14-899" data-start="00:19:14,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good to have you still with us, Johanna.</p>
+<p>乔安娜，很高兴你还在我们这里。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-17-293" data-start="00:19:17,293" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know that so much of the negotiating tactics of both men are about geopolitics, they're about trade, they're about business.</p>
+<p>我们知道，这两个人的谈判策略很大程度上涉及地缘政治、贸易和商业。</p>
+<p><button class="play-button sentence" id="s-00-19-24-854" data-start="00:19:24,854" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not just the current matter at hand and they'll go into these talks when they Johanna with armed with all sorts of different strategies and what they can offer each other in terms of concessions.</p>
+<p>这不仅仅是当前的问题，他们乔安娜将带着各种不同的策略进入这些会谈，以及他们可以在让步方面互相提供什么。</p>
+<p><button class="play-button sentence" id="s-00-19-36-140" data-start="00:19:36,140" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, they will.</p>
+<p>是的，他们会。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958822" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-37-414" data-start="00:19:37,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They'll go in with different you know, things that they're able to, you know, bring to the table to appease the other party.</p>
+<p>他们会带着不同的东西进入会谈，你知道，能够带到谈判桌上安抚对方。</p>
+<p><button class="play-button sentence" id="s-00-19-46-400" data-start="00:19:46,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And President Trump has always had a very positive demeanor when he's talking to people, including even Governor Newsom when he's talking directly to them.</p>
+<p>特朗普总统在与人们交谈时总是表现出非常积极的态度，甚至包括与纽瑟姆州长直接交谈时。</p>
+<p><button class="play-button sentence" id="s-00-19-55-343" data-start="00:19:55,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now I think what success looks like for us as a country, it should be we should have a bipartisan consensus that denuclearization.</p>
+<p>现在我认为对我们国家来说，成功的模样应该是两党就无核化达成共识。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958796" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-03-359" data-start="00:20:03,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, if we started drawing down our nuclear weapons as we were before with Medvedev before Putin came back into power, that would be a positive outcome.</p>
+<p>你知道，如果我们像普京重新掌权前与梅德韦杰夫时期那样开始削减核武器，那将是一个积极的结果。</p>
+<p><button class="play-button sentence" id="s-00-20-14-687" data-start="00:20:14,687" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we could end, of course, the war in Ukraine, but you should before you're having business together, talk about security concessions.</p>
+<p>当然，如果我们能结束乌克兰的战争，但在你们一起做生意之前，应该先讨论安全保障让步。</p>
+<p><button class="play-button sentence" id="s-00-20-23-728" data-start="00:20:23,728" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's one of the things that I'm concerned about is if you talk business and you don't talk about human rights, to me, I don't think you're doing America's values of favor.</p>
+<p>这是我担心的事情之一，如果你谈论商业而不谈论人权，我认为你没有为美国的价值观服务。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958765" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-34-480" data-start="00:20:34,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and Matt, you're going into an negotiation and we know that President Trump likes to negotiate.</p>
+<p>是的，马特，你即将进入一场谈判，我们知道特朗普总统喜欢谈判。</p>
+<p><button class="play-button sentence" id="s-00-20-40-761" data-start="00:20:40,761" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He often comes at it from a business point of view about what you can you give me and what can I get it and offer you in return.</p>
+<p>他经常从商业角度出发，考虑你能给我什么，我能得到什么并回报你。</p>
+<p><button class="play-button sentence" id="s-00-20-47-617" data-start="00:20:47,617" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is within his gift here?</p>
+<p>他在这里能提供什么？</p>
+<p><button class="play-button sentence" id="s-00-20-49-667" data-start="00:20:49,667" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's what I think a lot of people will struggle to understand is these two men are meeting Ukraine is not at the table, European leaders not at the table and already we've had discussion of things like security guarantees, landswobbing, maybe even things like prisoner release.</p>
+<p>我认为很多人难以理解的是，这两个人会晤时乌克兰不在谈判桌上，欧洲领导人也不在谈判桌上，而我们已经讨论了安全保障、领土让步甚至可能是囚犯释放等问题。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958737" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-02-739" data-start="00:21:02,739" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What can President Trump actually offer to President Putin?</p>
+<p>特朗普总统实际上能向普京总统提供什么？</p>
+<p><button class="play-button sentence" id="s-00-21-06-528" data-start="00:21:06,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, he can offer it, we're not going to put massive tariffs in place of an destroy your economy.</p>
+<p>嗯，他可以提供的是，我们不会实施大规模关税来摧毁你的经济。</p>
+<p><button class="play-button sentence" id="s-00-21-13-438" data-start="00:21:13,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we can offer is an offer ampere.</p>
+<p>我们可以提供的是安培的报价。</p>
+<p><button class="play-button sentence" id="s-00-21-15-454" data-start="00:21:15,454" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But hasn't the world done not already?</p>
+<p>但世界不是已经这样做了吗？</p>
+<p><button class="play-button sentence" id="s-00-21-17-680" data-start="00:21:17,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, Russia's subject to so many international sanctions and seemingly not change the huge amount in the outcome of this war.</p>
+<p>我的意思是，俄罗斯受到如此多的国际制裁，但似乎对这场战争的结果没有太大改变。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958714" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-25-453" data-start="00:21:25,453" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, President Trump has a lot of tools in his toolkit that he has yet to use.</p>
+<p>嗯，特朗普总统的工具箱里有很多他尚未使用的工具。</p>
+<p><button class="play-button sentence" id="s-00-21-29-839" data-start="00:21:29,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, look, just take a look at India.</p>
+<p>我的意思是，看看印度。</p>
+<p><button class="play-button sentence" id="s-00-21-31-759" data-start="00:21:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sure, we've put secondary tariffs on that, but according to the administration appears that they are willing potentially to put even more tariffs on India.</p>
+<p>当然，我们已经对其实施了二级关税，但根据政府的说法，他们可能愿意对印度实施更多关税。</p>
+<p><button class="play-button sentence" id="s-00-21-39-166" data-start="00:21:39,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> China, that's a country that take a look at as well.</p>
+<p>中国，这也是一个值得关注的国家。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958697" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-42-879" data-start="00:21:42,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> China turns on Russia, it's game over here for Russia, in my view.</p>
+<p>在我看来，如果中国转向俄罗斯，俄罗斯就完蛋了。</p>
+<p><button class="play-button sentence" id="s-00-21-46-864" data-start="00:21:46,864" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So look, at the end of the day, it's about President Trump getting the word to come to an end.</p>
+<p>所以你看，归根结底，这是关于特朗普总统让战争结束。</p>
+<p><button class="play-button sentence" id="s-00-21-50-966" data-start="00:21:50,966" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And frankly, I got to be honest, at least in my view, I'm also sure the United States gets anything out of this.</p>
+<p>坦率地说，我必须诚实地说，至少在我看来，我也不确定美国能从这件事中得到什么。</p>
+<p><button class="play-button sentence" id="s-00-21-55-999" data-start="00:21:55,999" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, the truth is, it's just the right thing to do.</p>
+<p>看吧，事实是，这样做才是正确的。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-58-565" data-start="00:21:58,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have bloodshed, you have people dying, you have suffering, and I think President Trump views it as the right thing to do to just get this war to come to an end.</p>
+<p>有流血，有人死亡，有苦难，我认为特朗普总统认为结束这场战争是正确的做法。</p>
+<p><button class="play-button sentence" id="s-00-22-06-078" data-start="00:22:06,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, it's not as if Russia can really offer us anything, in my view, at least, in terms of economies or things of that nature, really.</p>
+<p>你知道，在我看来，俄罗斯实际上并不能给我们带来什么，至少在经济或类似方面确实如此。</p>
+<p><button class="play-button sentence" id="s-00-22-14-277" data-start="00:22:14,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, you have the United States investing in energy.</p>
+<p>我是说，美国正在投资能源。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958662" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-17-499" data-start="00:22:17,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have that U.S. EU trade deal that shifted $750 billion of energy investment away from the EU towards Russia, towards the United States.</p>
+<p>美欧贸易协议将7500亿美元的能源投资从欧盟转向了俄罗斯，又转向了美国。</p>
+<p><button class="play-button sentence" id="s-00-22-27-358" data-start="00:22:27,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So look, the bottom line is, this is President Trump putting a lot of political capital into this, because I think he just views as the right thing to do.</p>
+<p>所以，归根结底，特朗普总统在这件事上投入了大量政治资本，因为他认为这是正确的做法。</p>
+<p><button class="play-button sentence" id="s-00-22-34-226" data-start="00:22:34,226" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yes, he did campaign on it.</p>
+<p>是的，他确实在竞选时承诺过这一点。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-35-411" data-start="00:22:35,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he's working to deliver on it.</p>
+<p>我认为他正在努力兑现这一承诺。</p>
+<p><button class="play-button sentence" id="s-00-22-36-880" data-start="00:22:36,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But look, the answer to the question, this comes down to just getting the war to come to an end.</p>
+<p>但问题的答案归根结底在于结束这场战争。</p>
+<p><button class="play-button sentence" id="s-00-22-40-640" data-start="00:22:40,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it's more or less if President Putin decides not to take action, President Trump taking the necessary action to move President Putin in the right direction here.</p>
+<p>我认为，如果普京总统决定不采取行动，特朗普总统将采取必要行动推动普京朝正确的方向前进。</p>
+<p><button class="play-button sentence" id="s-00-22-49-200" data-start="00:22:49,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think negotiations the biggest thing, and again, President Putin to get to a ceasefire, and then to the Gioşee table of President Zelenskiy.</p>
+<p>我认为谈判是最重要的事情，普京总统需要达成停火，然后与泽连斯基总统坐到谈判桌前。</p>
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958624" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-55-041" data-start="00:22:55,041" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the next steps here.</p>
+<p>这就是接下来的步骤。</p>
+<p><button class="play-button sentence" id="s-00-22-55-920" data-start="00:22:55,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Matt Jana, really good to have you on the program with us tonight, with your analysis of those events as they unfold right now in Alaska.</p>
+<p>我是马特·贾纳，很高兴今晚你能加入我们的节目，分析正在阿拉斯加发生的事件。</p>
+<p><button class="play-button sentence" id="s-00-23-02-651" data-start="00:23:02,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will have continuing coverage through the night, of course, but good to have you with us on the program.</p>
+<p>我们当然会整晚持续报道，但很高兴你能和我们一起参与节目。</p>
+<p><button class="play-button sentence" id="s-00-23-07-884" data-start="00:23:07,884" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I want to end this hour, if I can, with our Chief International Correspondent, at least to set, who's with me.</p>
+<p>如果可以的话，我想在这一小时结束时请我们的首席国际记者，至少介绍一下，他正和我在一起。</p>
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958607" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-12-286" data-start="00:23:12,286" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And least, you've been looking at this as it unfolds throughout the evening.</p>
+<p>至少，你整晚都在关注事件的进展。</p>
+<p><button class="play-button sentence" id="s-00-23-16-086" data-start="00:23:16,086" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'm interested, first of all, in your take about what we've seen in the last couple of hours, and then crucially, I guess.</p>
+<p>首先，我对你过去几小时的观察很感兴趣，然后关键的是，我想。</p>
+<p><button class="play-button sentence" id="s-00-23-21-838" data-start="00:23:21,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is a really big question.</p>
+<p>这是一个非常重要的问题。</p>
+<p><button class="play-button sentence" id="s-00-23-23-590" data-start="00:23:23,590" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What might we expect overnight?</p>
+<p>我们今晚可能会看到什么？</p>
+<p><button class="play-button sentence" id="s-00-23-26-878" data-start="00:23:26,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it's got off to a very, very good start for President Putin.</p>
+<p>对普京总统来说，这是一个非常好的开端。</p>
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958588" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-31-145" data-start="00:23:31,145" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been saying for days now, the very fact that he can fly to Alaska, not be arrested by anyone for his indictment at the International Criminal Court, be met personally on the tarmac, and it turned out to be a red carpet by President Trump, such a warm welcome, as we just heard.</p>
+<p>我们几天来一直在说，他能够飞往阿拉斯加，而不会因国际刑事法院的起诉而被逮捕，在停机坪上受到特朗普总统的亲自迎接，结果是一场红毯待遇，如此热烈的欢迎，正如我们刚才听到的。</p>
+<p><button class="play-button sentence" id="s-00-23-51-456" data-start="00:23:51,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He often is very warm when he meets people, usually outside the White House, as we've been seeing time.</p>
+<p>他与人会面时通常非常热情，通常是在白宫外，正如我们多次看到的那样。</p>
+<p><button class="play-button sentence" id="s-00-23-57-081" data-start="00:23:57,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And again, the two of them, the image of the two of them getting into the beast, as it's called, the armored black armored vehicle that even though President Putin's called.</p>
+<p>再次，他们两人，两人进入“野兽”的画面，也就是那辆装甲黑色装甲车，尽管普京总统的车也在那里。</p>
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958554" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-05-408" data-start="00:24:05,408" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, his car was there, too.</p>
+<p>是的，他的车也在那里。</p>
+<p><button class="play-button sentence" id="s-00-24-06-522" data-start="00:24:06,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is also there.</p>
+<p>他也在那里。</p>
+<p><button class="play-button sentence" id="s-00-24-07-200" data-start="00:24:07,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he jumped in, and I was watching very closely.</p>
+<p>他跳了进去，我一直在密切关注。</p>
+<p><button class="play-button sentence" id="s-00-24-09-660" data-start="00:24:09,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Putin went around to the other side of it, walking ahead of President Trump and then the images of them smiling inside.</p>
+<p>普京总统绕到车的另一侧，走在特朗普总统前面，然后是他们微笑的画面。</p>
+<p><button class="play-button sentence" id="s-00-24-17-779" data-start="00:24:17,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it says, so perhaps if you want to be positive about it, then you say, well, it's set the right mood.</p>
+<p>所以可以说，如果你想积极看待，那么你会说，这营造了良好的氛围。</p>
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958536" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-23-920" data-start="00:24:23,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they can sit down.</p>
+<p>这样他们可以坐下来谈判。</p>
+<p><button class="play-button sentence" id="s-00-24-25-314" data-start="00:24:25,314" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the President Trump has something he wants to urge President Putin to do, that President Putin may be in a good mood.</p>
+<p>特朗普总统有一些他想敦促普京总统做的事情，普京总统可能心情不错。</p>
+<p><button class="play-button sentence" id="s-00-24-33-653" data-start="00:24:33,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he's a widely, a widely negotiated President Putin.</p>
+<p>但他是一个经验丰富的谈判者，普京总统。</p>
+<p><button class="play-button sentence" id="s-00-24-37-680" data-start="00:24:37,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He knows exactly what he wants.</p>
+<p>他非常清楚自己想要什么。</p>
+<p><button class="play-button sentence" id="s-00-24-39-417" data-start="00:24:39,417" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he's up against President Trump, who seems to change his mind every week on what he wants, depending on whether he's going to the Europeans, to the Russians, to President Zelensky.</p>
+<p>而他面对的特朗普总统似乎每周都会改变主意，取决于他是与欧洲人、俄罗斯人还是泽连斯基总统打交道。</p>
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958511" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-48-800" data-start="00:24:48,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's a new detail that is brings an interesting dimension to this.</p>
+<p>但有一个新的细节为这件事增添了有趣的维度。</p>
+<p><button class="play-button sentence" id="s-00-24-53-440" data-start="00:24:53,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When they met in Finland, many years ago, during President Trump's first term, it was one on one with their translators.</p>
+<p>多年前，在特朗普总统的第一个任期内，他们在芬兰会面时是一对一，带着翻译。</p>
+<p><button class="play-button sentence" id="s-00-25-00-492" data-start="00:25:00,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And many thought, oh, my goodness, what is President Trump going to get away?</p>
+<p>许多人想，天哪，特朗普总统会做出什么？</p>
+<p><button class="play-button sentence" id="s-00-25-03-935" data-start="00:25:03,935" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that one, we saw that extraordinary press conference where he sided with President Putin against his intelligents, the verdict of his intelligence agencies on the Russian interference.</p>
+<p>那次，我们看到了那场非凡的新闻发布会，他站在普京总统一边，反对他的情报机构关于俄罗斯干预的结论。</p>
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958486" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-13-679" data-start="00:25:13,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this time we understand it is going to be three on three.</p>
+<p>但这次我们了解到将是三对三的会谈。</p>
+<p><button class="play-button sentence" id="s-00-25-16-896" data-start="00:25:16,896" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Steve Whitkov, his envoy for everything, is going to be at the, but so is Marco Rubio, who was widely seen as a Russian hawk.</p>
+<p>所以史蒂夫·惠特科夫，他的全能特使，将会在场，但马可·鲁比奥也在，他被广泛视为对俄鹰派。</p>
+<p><button class="play-button sentence" id="s-00-25-25-012" data-start="00:25:25,012" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's interesting that the two of them are there, because Rubio was involved in the first negotiations that were held in Saudi Arabia.</p>
+<p>所以有趣的是他们两人都在场，因为鲁比奥参与了之前在沙特阿拉伯举行的首次谈判。</p>
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958466" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-33-149" data-start="00:25:33,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But maybe there's a bit of, maybe there may be some guardrails that Steve Whitkov, who many say has been taken in time and again during the five visits.</p>
+<p>但也许有一些护栏，许多人说史蒂夫·惠特科夫在五次访问中多次被牵着鼻子走。</p>
+<p><button class="play-button sentence" id="s-00-25-41-429" data-start="00:25:41,429" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Marco Rubio will add a little bit more experience and a bit more hinterland on this issue.</p>
+<p>而马可·鲁比奥将在这个问题上增加一些经验和背景。</p>
+<p><button class="play-button sentence" id="s-00-25-46-610" data-start="00:25:46,610" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Least, so good to have you with us throughout the evening.</p>
+<p>至少，很高兴整晚有你陪伴我们。</p>
+<p><button class="play-button sentence" id="s-00-25-49-514" data-start="00:25:49,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your analysis on that really valuable for us tonight.</p>
+<p>你今晚的分析对我们非常有价值。</p>
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1sFb4zuEFS/?t=-2208958448" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-51-673" data-start="00:25:51,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just want to leave you though on the images of where we're expecting that press conference.</p>
+<p>不过，我想留给你的是我们期待新闻发布会举行的画面。</p>
+<p><button class="play-button sentence" id="s-00-25-55-429" data-start="00:25:55,429" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If, indeed, there is anything to announce to the press, continuing coverage throughout the evening here on BBC News.</p>
+<p>如果确实有任何消息要向媒体宣布，BBC新闻将整晚持续报道。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
