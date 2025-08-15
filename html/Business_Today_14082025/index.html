@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>UK Economy Growth, Nuclear Fusion, and Apprenticeships: A Triple Focus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The UK government's economic growth mission faces scrutiny as GDP figures loom. Heathrow's third runway struggles contrast with Istanbul Airport's success. Nuclear fusion startups promise limitless clean energy, while apprenticeships gain traction as a cost-effective career path.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>UK Economy Growth, Nuclear Fusion, and Apprenticeships: A Triple Focus</h1>
+<p>【BBC经济新闻 20250815 英国经济增速放缓，希思罗机场扩建遇阻，核聚变能源能否改变未来？】</p>
+<p>Summary:
+The UK government's economic growth mission faces scrutiny as GDP figures loom. Heathrow's third runway struggles contrast with Istanbul Airport's success. Nuclear fusion startups promise limitless clean energy, while apprenticeships gain traction as a cost-effective career path.</p>
+<p>摘要：
+英国政府将经济增长列为首要任务，但最新GDP数据可能显示增长乏力。希思罗机场扩建计划进展缓慢，而伊斯坦布尔机场的三跑道系统已投入运营。核聚变技术初创企业探索清洁能源解决方案，同时学徒制成为年轻人避开高额学费的就业新选择。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 38 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959993" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-07-000" data-start="00:00:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UK Government's number one mission is to grow the economy, but are they succeeding?</p>
+<p>英国政府的首要任务是经济增长，但他们成功了吗？</p>
+<p><button class="play-button sentence" id="s-00-00-12-000" data-start="00:00:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are going to be finding out when the latest GDP figures are published shortly.</p>
+<p>我们将在最新的GDP数据稍后公布时一探究竟。</p>
+<p><button class="play-button sentence" id="s-00-00-18-000" data-start="00:00:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what lessons could Heathrow learn from Istanbul's airport as they struggle to build a third runway?</p>
+<p>希思罗机场在努力建设第三条跑道时，能从伊斯坦布尔机场学到什么经验？</p>
+<p><button class="play-button sentence" id="s-00-00-25-000" data-start="00:00:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, we'll nuclear fusion, fix the world's energy problems, the BBC visits the start-up lab to find the answer.</p>
+<p>此外，我们将探讨核聚变如何解决全球能源问题，BBC探访初创实验室寻找答案。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959967" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-33-000" data-start="00:00:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And how do you go from being a humble apprentice to a three-star Michelin chef?</p>
+<p>如何从一名普通的学徒成长为米其林三星主厨？</p>
+<p><button class="play-button sentence" id="s-00-00-38-000" data-start="00:00:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll be hearing from the woman who did exactly that and while learning on the job is key.</p>
+<p>我将采访做到这一点的女性，并探讨在职学习的重要性。</p>
+<p><button class="play-button sentence" id="s-00-00-46-000" data-start="00:00:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello and live from London, this is Business Today, I'm LeQuester Burek.</p>
+<p>大家好，这里是伦敦直播的《今日商业》，我是LeQuester Burek。</p>
+<p><button class="play-button sentence" id="s-00-00-50-000" data-start="00:00:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we begin here in the UK where in less than an hour and a half new figures will be published, which show how the UK economy performed in the three months from April to June.</p>
+<p>我们从英国开始，不到一个半小时后，将公布显示英国经济在4月至6月三个月表现的新数据。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959938" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-02-000" data-start="00:01:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, before that, let's cast our mind back to the first quarter of the year.</p>
+<p>在此之前，让我们回顾一下今年第一季度的情况。</p>
+<p><button class="play-button sentence" id="s-00-01-07-000" data-start="00:01:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UK economy grew by 0.7% and that was between January and March.</p>
+<p>英国经济在1月至3月间增长了0.7%。</p>
+<p><button class="play-button sentence" id="s-00-01-13-000" data-start="00:01:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was higher than expected and analysts at the time warned that any significant increase in economic activity could be short-lived.</p>
+<p>这一数字高于预期，分析师当时警告称，经济活动的任何显著增长都可能是短暂的。</p>
+<p><button class="play-button sentence" id="s-00-01-21-000" data-start="00:01:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ben King has more on this.</p>
+<p>Ben King将带来更多报道。</p>
+<p><button class="play-button sentence" id="s-00-01-25-000" data-start="00:01:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wholesome family fun is on the menu for the 5,000 people at Butler's Bogna Regis.</p>
+<p>Butler's Bogna Regis为5000人准备了健康的家庭娱乐活动。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959910" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-30-000" data-start="00:01:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But with a difficult economic outlook, the boss is feeling the downs as well as the ups.</p>
+<p>但由于经济前景艰难，老板感受到了起伏。</p>
+<p><button class="play-button sentence" id="s-00-01-36-000" data-start="00:01:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The overall picture is quite depressed.</p>
+<p>整体情况相当低迷。</p>
+<p><button class="play-button sentence" id="s-00-01-39-126" data-start="00:01:39,126" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you look at that from a guest's intention to buy point of view, they've told us that they're more worried now than they've been for a long time.</p>
+<p>从客人的购买意愿来看，他们告诉我们，现在比过去很长一段时间都更担忧。</p>
+<p><button class="play-button sentence" id="s-00-01-48-000" data-start="00:01:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so we have to work very hard to make sure that we show value for money.</p>
+<p>因此我们必须非常努力，确保物有所值。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959888" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-52-000" data-start="00:01:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They still want to come on holiday.</p>
+<p>他们仍然想来度假。</p>
+<p><button class="play-button sentence" id="s-00-01-53-593" data-start="00:01:53,593" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's really clear.</p>
+<p>这一点非常明确。</p>
+<p><button class="play-button sentence" id="s-00-01-54-582" data-start="00:01:54,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's still a big priority for them to come on holiday.</p>
+<p>度假仍然是他们的重要优先事项。</p>
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But they have to see value for money.</p>
+<p>但他们必须看到物有所值。</p>
+<p><button class="play-button sentence" id="s-00-01-59-000" data-start="00:01:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And despite the sun, Sam is still feeling a little gloomy about the economy.</p>
+<p>尽管阳光明媚，Sam对经济仍感到有些悲观。</p>
+<p><button class="play-button sentence" id="s-00-02-05-000" data-start="00:02:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Things need to change, things need to improve.</p>
+<p>事情需要改变，需要改善。</p>
+<p><button class="play-button sentence" id="s-00-02-07-228" data-start="00:02:07,228" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The economy is not where it should be.</p>
+<p>经济并未达到应有的水平。</p>
+<p><button class="play-button sentence" id="s-00-02-09-000" data-start="00:02:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People need to feel more in control of their own money, I think, really.</p>
+<p>我认为，人们需要对自己的钱有更多的掌控感。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-13-000" data-start="00:02:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Got two little ones.</p>
+<p>我有两个孩子。</p>
+<p><button class="play-button sentence" id="s-00-02-14-073" data-start="00:02:14,073" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And obviously they like to go out.</p>
+<p>显然他们喜欢外出。</p>
+<p><button class="play-button sentence" id="s-00-02-15-842" data-start="00:02:15,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's things that we want to do over the six weeks holiday.</p>
+<p>我们想在六周的假期里做一些事情。</p>
+<p><button class="play-button sentence" id="s-00-02-19-000" data-start="00:02:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's difficult because everything is just so pricey.</p>
+<p>但这很困难，因为一切都太贵了。</p>
+<p><button class="play-button sentence" id="s-00-02-23-000" data-start="00:02:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many businesses are struggling with higher national insurance contributions and the national living wage.</p>
+<p>许多企业正艰难应对更高的国民保险缴费和全国生活工资。</p>
+<p><button class="play-button sentence" id="s-00-02-30-000" data-start="00:02:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some are weather like we saw in June can often be good for the economy.</p>
+<p>像我们在6月看到的一些天气通常对经济有利。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959846" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-34-000" data-start="00:02:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Work goes faster on building sites and people spend more in bars and pubs.</p>
+<p>建筑工地的工作进展更快，人们在酒吧和酒馆的消费更多。</p>
+<p><button class="play-button sentence" id="s-00-02-39-000" data-start="00:02:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the government haven't been able to dodge the problem of weak growth.</p>
+<p>但政府未能避开增长乏力的问题。</p>
+<p><button class="play-button sentence" id="s-00-02-43-000" data-start="00:02:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That means less activity to boost company profits and pay rises for workers.</p>
+<p>这意味着提振公司利润和工人加薪的活动减少。</p>
+<p><button class="play-button sentence" id="s-00-02-48-000" data-start="00:02:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it means the government's tax revenues grow more slowly too, so it's harder to fund public services.</p>
+<p>这也意味着政府的税收增长更慢，因此更难为公共服务提供资金。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959825" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-55-000" data-start="00:02:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The chancellor says she's trying to lift it, but her plans take time.</p>
+<p>财政大臣表示她正试图提振经济，但她的计划需要时间。</p>
+<p><button class="play-button sentence" id="s-00-03-01-000" data-start="00:03:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back at Buttland's, the boss is optimistic.</p>
+<p>回到Buttland's，老板很乐观。</p>
+<p><button class="play-button sentence" id="s-00-03-05-000" data-start="00:03:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sunshine always helps and good messages that say it's not all doom and gloom and we can afford to go out and do things and try and grow our economy.</p>
+<p>阳光总有帮助，好消息是并非一切都是悲观和黯淡的，我们可以负担外出和做事的费用，并尝试增长经济。</p>
+<p><button class="play-button sentence" id="s-00-03-13-000" data-start="00:03:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government will be looking for a way to make economic reality match this cheery vision.</p>
+<p>政府将寻找方法使经济现实与这一乐观愿景相匹配。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959801" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-19-000" data-start="00:03:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ben King, BBC News.</p>
+<p>Ben King，BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-03-22-000" data-start="00:03:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well joining me now to discuss this further is Andrew Wishart, who is the senior UK economist at Behrenberg.</p>
+<p>现在与我进一步讨论的是Behrenberg的英国高级经济学家Andrew Wishart。</p>
+<p><button class="play-button sentence" id="s-00-03-28-000" data-start="00:03:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Andrew, hello, welcome to the programme.</p>
+<p>Andrew，你好，欢迎来到节目。</p>
+<p><button class="play-button sentence" id="s-00-03-30-000" data-start="00:03:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know if you heard what the contributors, members of the public, told us here at the BBC, but sentiment does not seem particularly positive.</p>
+<p>我不知道你是否听到了BBC公众成员的意见，但情绪似乎并不特别积极。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959781" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-39-000" data-start="00:03:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I think that's absolutely right.</p>
+<p>是的，我认为完全正确。</p>
+<p><button class="play-button sentence" id="s-00-03-42-000" data-start="00:03:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Week sentiment has been a little bit of a drag recently, but the interesting thing to me is, and we'll get more detail on this today, is that that week sentiment hasn't actually caused spending in cash terms to fall that much.</p>
+<p>最近情绪有些拖累，但有趣的是，我们今天会得到更多细节，这种情绪并未导致现金支出大幅下降。</p>
+<p><button class="play-button sentence" id="s-00-03-59-000" data-start="00:03:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, retail sales are on the increase and even business investment look good in Q1.</p>
+<p>事实上，零售额在增长，甚至第一季度的商业投资看起来也不错。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-05-000" data-start="00:04:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We get an update on the consumer spending and investment figures today.</p>
+<p>我们今天将获得消费者支出和投资数据的最新情况。</p>
+<p><button class="play-button sentence" id="s-00-04-10-000" data-start="00:04:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I actually think they're likely to remain strong.</p>
+<p>我实际上认为它们可能会保持强劲。</p>
+<p><button class="play-button sentence" id="s-00-04-14-000" data-start="00:04:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the bigger problem at the moment is that a lot of this spending isn't translating into higher real GDP because actually prices are going up quite quickly and therefore people are spending more businesses, spending more investment too, but a lot of that is going towards the higher price of the things they're buying as opposed to into real growth and business is getting more bang for their butt more goods and services for what they're spending.</p>
+<p>我认为目前更大的问题是，许多支出并未转化为更高的实际GDP，因为实际上价格上涨很快，因此人们在企业和投资上花费更多，但其中很多都用于购买更高价格的商品，而非实际增长，企业从支出中获得了更多的商品和服务。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959717" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-43-000" data-start="00:04:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, on real growth, I mean, you heard there, the chancellor said that these plans, her plans take time.</p>
+<p>关于实际增长，你听到财政大臣说这些计划需要时间。</p>
+<p><button class="play-button sentence" id="s-00-04-49-000" data-start="00:04:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Were her plans the correct ones in the first place?</p>
+<p>她的计划一开始是否正确？</p>
+<p><button class="play-button sentence" id="s-00-04-54-000" data-start="00:04:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, I think the government's sort of big early decisions in power a year ago in the, or just just under a year ago in the budget, have been very difficult for the economy because effectively the increase in the minimum wage and the employer national insurance contributions have raised the cost of employing people a lot and we are seeing the evidence of that in the jobs market, but also the weaker GDP data for Q2.</p>
+<p>我认为政府大约一年前在预算中做出的早期重大决定对经济非常困难，因为最低工资和雇主国民保险缴费的增加大幅提高了雇佣成本，我们在就业市场看到了证据，第二季度的GDP数据也较弱。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-23-000" data-start="00:05:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also saw other taxes like stamp duty increase in Q2 that cause housing market activity to drop quite sharply in April.</p>
+<p>我们还看到第二季度印花税等其他税收增加，导致4月房地产市场活动大幅下降。</p>
+<p><button class="play-button sentence" id="s-00-05-31-000" data-start="00:05:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's all likely to be a drag on the figures today.</p>
+<p>所有这些都可能拖累今天的数据。</p>
+<p><button class="play-button sentence" id="s-00-05-34-000" data-start="00:05:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're thinking that the economy probably expanded about 0.1% quarter and quarter in Q2, which is down from a very strong start to the year of 0.7% Q1Q.</p>
+<p>我们认为第二季度经济可能环比增长约0.1%，低于第一季度0.7%的强劲开局。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959655" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-45-000" data-start="00:05:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think that's partly due to the effect of these tax changes and therefore it should be a temporary soft patch, but there's no doubt that the high attacks on employers is a drag on the number of people they're employing and therefore in turn the amount that those companies are making.</p>
+<p>但我认为这在一定程度上是由于这些税收变化的影响，因此应该是暂时的疲软，但毫无疑问，对雇主的高税收拖累了他们雇佣的人数，进而影响了这些公司的盈利。</p>
+<p><button class="play-button sentence" id="s-00-06-04-000" data-start="00:06:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the tax changes you mentioned there, what about the impact of this trade war?</p>
+<p>你提到的税收变化，贸易战的影响如何？</p>
+<p><button class="play-button sentence" id="s-00-06-11-000" data-start="00:06:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that's had a really big impact on the growth data as well.</p>
+<p>是的，这对增长数据也有很大影响。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959624" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-16-000" data-start="00:06:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that the trade war is one reason why GDP growth was so strong in the first quarter, 0.7% Q1Q mainly because US customers bought exports in from the UK earlier than usual, because they're worried that the US administration was going to apply tariffs.</p>
+<p>贸易战是第一季度GDP增长强劲（0.7%）的原因之一，主要是因为美国客户比往常更早从英国购买出口商品，因为他们担心美国政府将征收关税。</p>
+<p><button class="play-button sentence" id="s-00-06-37-000" data-start="00:06:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's going into reversing in the second quarter.</p>
+<p>这在第二季度出现了逆转。</p>
+<p><button class="play-button sentence" id="s-00-06-41-651" data-start="00:06:41,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So trade is likely to be a drag on the growth figures.</p>
+<p>因此贸易可能会拖累增长数据。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959594" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-46-000" data-start="00:06:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think looking ahead, the UK is actually quite isolated from the effect of the trade war.</p>
+<p>但我认为展望未来，英国实际上相对孤立于贸易战的影响。</p>
+<p><button class="play-button sentence" id="s-00-06-52-000" data-start="00:06:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't really sell many goods into the US.</p>
+<p>我们并未向美国销售很多商品。</p>
+<p><button class="play-button sentence" id="s-00-06-56-000" data-start="00:06:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course we've got that deal for the 10% universal tariff on UK exports into the US now.</p>
+<p>当然，我们现在达成了对英国出口到美国的商品征收10%普遍关税的协议。</p>
+<p><button class="play-button sentence" id="s-00-07-04-000" data-start="00:07:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think for the UK economy, yes, the trade was unhelpful in the quarter to quarter volatility, but I don't expect it to be a major problem for growth going forward.</p>
+<p>因此我认为对英国经济来说，贸易确实加剧了季度波动，但我预计它不会成为未来增长的主要问题。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959565" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-15-000" data-start="00:07:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Andrew Wishard, thank you very much.</p>
+<p>好的，Andrew Wishard，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-07-17-000" data-start="00:07:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as I said, those figures will be released in a short while this morning.</p>
+<p>如我所说，这些数据将在今天上午稍后公布。</p>
+<p><button class="play-button sentence" id="s-00-07-23-000" data-start="00:07:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the rise of pound sterling seems unstoppable.</p>
+<p>英镑的上涨似乎势不可挡。</p>
+<p><button class="play-button sentence" id="s-00-07-27-366" data-start="00:07:27,366" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The British currency rose to its highest since July the 10th at $1.359 an early morning trading as investors are growing increasingly convinced that US interest rates are likely to fall more quickly than British ones following a benign reading of US inflation.</p>
+<p>英镑在早盘交易中涨至7月10日以来的最高点1.359美元，因投资者越来越确信，在美国通胀数据温和后，美国利率可能比英国利率下降更快。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959531" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-49-000" data-start="00:07:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joining me now is animal download investment manager from Aubrey Capital Management.</p>
+<p>现在与我连线的是Aubrey Capital Management的投资经理Anna McDonald。</p>
+<p><button class="play-button sentence" id="s-00-07-54-214" data-start="00:07:54,214" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello to you.</p>
+<p>你好。</p>
+<p><button class="play-button sentence" id="s-00-07-55-000" data-start="00:07:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anna, your thoughts about the strength of the pound.</p>
+<p>Anna，你对英镑走强的看法。</p>
+<p><button class="play-button sentence" id="s-00-07-59-000" data-start="00:07:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm sorry, I didn't hear that.</p>
+<p>抱歉，我没听清。</p>
+<p><button class="play-button sentence" id="s-00-08-01-000" data-start="00:08:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I said, I just want your thoughts on the strength of the pound at the moment.</p>
+<p>我说，我想听听你对当前英镑走强的看法。</p>
+<p><button class="play-button sentence" id="s-00-08-05-000" data-start="00:08:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, as you mentioned, we've really got two conflicting things here.</p>
+<p>是的，如你所言，我们这里确实有两件相互矛盾的事情。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959510" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-10-000" data-start="00:08:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've got the US, which is looking like it's going to cut rates next next month.</p>
+<p>美国看起来将在下个月降息。</p>
+<p><button class="play-button sentence" id="s-00-08-15-000" data-start="00:08:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been a lot of pressures we've heard from Trump on the Federal Reserve to cut rates, but also they've had quite benign as you say inflation reading and a pretty weak jobs report, which just gives the fed that reason to cut rates by maybe 25 basis points of one quarter of 1% next month.</p>
+<p>我们听到特朗普向美联储施压降息，而且如你所说，通胀数据相当温和，就业报告相当疲弱，这给了美联储下个月降息25个基点（即0.25%）的理由。</p>
+<p><button class="play-button sentence" id="s-00-08-35-000" data-start="00:08:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That markets and I'm pricing that chance in at about 96% so they really think it's going to happen on the other hand, as we heard, Bailey governor Bailey of the of the bank of England, he was talking about how actually the monetary policy committee is facing some really tough decisions because we've got some quite stubborn inflation.</p>
+<p>市场和我将这种可能性定价为约96%，因此他们真的认为这会发生；另一方面，如我们所闻，英国央行行长Bailey谈到货币政策委员会实际上正面临一些非常艰难的决定，因为我们有一些相当顽固的通胀。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959463" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-57-000" data-start="00:08:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were just talking about rising costs of employment, that's feeds into services inflation and that means that rates are coming down to the right as much as we'd expect in the UK.</p>
+<p>我们刚刚谈到雇佣成本上升，这会推高服务通胀，这意味着英国的利率不会像我们预期的那样下降。</p>
+<p><button class="play-button sentence" id="s-00-09-09-000" data-start="00:09:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if you can earn more by keeping your money in pounds, that that will encourage the strength of sterling.</p>
+<p>如果你通过持有英镑赚取更多收益，那将鼓励英镑走强。</p>
+<p><button class="play-button sentence" id="s-00-09-18-000" data-start="00:09:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not just sterling, we've seen rates as we're in, we've seen currencies all pretty strong against the dollar, which is down about 10% against basket currencies this year, but yeah, sterling is one of the chief beneficiaries of that.</p>
+<p>不仅是英镑，我们看到所有货币对美元都相当强劲，美元今年对一篮子货币下跌约10%，但英镑是主要受益者之一。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959425" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-35-000" data-start="00:09:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You mentioned that Andrew Bailey saying that there are some tough decisions ahead.</p>
+<p>你提到Andrew Bailey说前面有一些艰难的决定。</p>
+<p><button class="play-button sentence" id="s-00-09-38-925" data-start="00:09:38,925" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wonder if you could just elaborate on that.</p>
+<p>我想知道你是否能详细说明一下。</p>
+<p><button class="play-button sentence" id="s-00-09-41-000" data-start="00:09:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, well, I think the MPC had to do an unprecedented two rounds of voting last time because they couldn't decide between whether they what was more important, is it the weakening economy or is it stubborn inflation?</p>
+<p>是的，我认为货币政策委员会上次不得不进行前所未有的两轮投票，因为他们无法决定什么更重要，是经济疲弱还是顽固的通胀？</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959404" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-56-000" data-start="00:09:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their remit is to get inflation down to 2%, but it's about the high 3%, so 3.6%.</p>
+<p>他们的职责是将通胀降至2%，但现在约为3.6%。</p>
+<p><button class="play-button sentence" id="s-00-10-04-000" data-start="00:10:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's the problem they're facing.</p>
+<p>这就是他们面临的问题。</p>
+<p><button class="play-button sentence" id="s-00-10-06-532" data-start="00:10:06,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've got a slowing economy, yet they have this stubborn inflation.</p>
+<p>经济在放缓，但他们又有顽固的通胀。</p>
+<p><button class="play-button sentence" id="s-00-10-11-201" data-start="00:10:11,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's the real quandary that they find themselves in.</p>
+<p>这就是他们真正的困境。</p>
+<p><button class="play-button sentence" id="s-00-10-15-000" data-start="00:10:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the US they've got, I suppose the privilege of having the reserve currency in the world.</p>
+<p>美国拥有世界储备货币的特权。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959377" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-22-256" data-start="00:10:22,256" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So even though they also have some very significant levels of debt, they are able to to to in a way get through that in a in in a different way.</p>
+<p>因此尽管他们也有非常高的债务水平，但他们能够以不同的方式应对。</p>
+<p><button class="play-button sentence" id="s-00-10-33-000" data-start="00:10:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are much more vulnerable to to the levels of debt that we have and all that focus on Rachel Reeves in terms of her fiscal program and that's just going to intensify as we head into the budget.</p>
+<p>我们对债务水平更加脆弱，所有注意力都集中在Rachel Reeves的财政计划上，随着我们进入预算季，这种情况只会加剧。</p>
+<p><button class="play-button sentence" id="s-00-10-46-000" data-start="00:10:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anna McDonald, thank you very much for that.</p>
+<p>Anna McDonald，非常感谢。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959350" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-49-217" data-start="00:10:49,217" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-10-50-000" data-start="00:10:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-10-52-000" data-start="00:10:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, whilst discussions and proposals for a third-run were at Heathrow Airport began back in the 1980s, they are still ongoing.</p>
+<p>尽管希思罗机场第三条跑道的讨论和提案始于1980年代，但至今仍在进行中。</p>
+<p><button class="play-button sentence" id="s-00-11-00-000" data-start="00:11:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, IGA Istanbul Airport began operating Europe's first triple independent runway system in April of this year.</p>
+<p>与此同时，IGA伊斯坦布尔机场于今年4月开始运营欧洲首个三条独立跑道系统。</p>
+<p><button class="play-button sentence" id="s-00-11-09-000" data-start="00:11:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The third runway has enabled an increasing capacity and also allowed IGA in Istanbul to maintain its status as Europe's busiest air hub for three consecutive years.</p>
+<p>第三条跑道提高了容量，并使伊斯坦布尔IGA连续三年保持欧洲最繁忙航空枢纽的地位。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959320" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-20-000" data-start="00:11:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what could Heathrow learn from IGA Istanbul?</p>
+<p>那么希思罗机场能从伊斯坦布尔IGA学到什么？</p>
+<p><button class="play-button sentence" id="s-00-11-25-000" data-start="00:11:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My mother, Kalinjai, is a board member of IGA Istanbul Airport and played a key role in its development.</p>
+<p>我的母亲Kalinjai是伊斯坦布尔IGA机场的董事会成员，在其发展中发挥了关键作用。</p>
+<p><button class="play-button sentence" id="s-00-11-31-905" data-start="00:11:31,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning and it's great to have you with us on the program.</p>
+<p>早上好，很高兴你能参加我们的节目。</p>
+<p><button class="play-button sentence" id="s-00-11-36-000" data-start="00:11:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what did you do right then in developing Istanbul's airport?</p>
+<p>那么你们在开发伊斯坦布尔机场时做对了什么？</p>
+<p><button class="play-button sentence" id="s-00-11-41-000" data-start="00:11:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think commitment and understanding the benefits that the airport can bring to the city.</p>
+<p>我认为是承诺和理解机场能为城市带来的好处。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959291" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-49-000" data-start="00:11:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes airports are seen as transportation projects but the airports are like ports are fundamental elements of the city.</p>
+<p>有时机场被视为交通项目，但机场和港口一样是城市的基本要素。</p>
+<p><button class="play-button sentence" id="s-00-11-58-000" data-start="00:11:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it should be considered with their impact on the city.</p>
+<p>因此应考虑它们对城市的影响。</p>
+<p><button class="play-button sentence" id="s-00-12-03-000" data-start="00:12:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In our case, two studies we have started with is that one is the economic impact study and second is environmental impact study.</p>
+<p>在我们的案例中，我们首先进行了两项研究：经济影响研究和环境影响研究。</p>
+<p><button class="play-button sentence" id="s-00-12-13-000" data-start="00:12:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Economic impact study showed us that the new airport can be equivalent almost 5% of global GDP, national GDP.</p>
+<p>经济影响研究表明，新机场几乎相当于全国GDP的5%。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959257" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-23-000" data-start="00:12:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And environmental reports showed us that noise pollution, air pollution would decrease with the new airport because existing all the airport in Istanbul was too busy and airplanes were traveling in the air and creating CO2 emissions.</p>
+<p>环境报告显示，新机场将减少噪音污染和空气污染，因为伊斯坦布尔现有机场过于繁忙，飞机在空中飞行并产生二氧化碳排放。</p>
+<p><button class="play-button sentence" id="s-00-12-41-000" data-start="00:12:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These discussions held with many people and communicated with people very professionally and we work with best people who are experts in their field and people got excited and wanted this airport in their city.</p>
+<p>这些讨论与许多人进行，并以非常专业的方式沟通，我们与各自领域最优秀的专家合作，人们对此感到兴奋并希望这个机场建在他们的城市。</p>
+<p><button class="play-button sentence" id="s-00-12-59-000" data-start="00:12:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So why then do you think is Heathrow not moving fast enough?</p>
+<p>那么，为什么你认为希思罗机场进展不够快？</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959216" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-03-573" data-start="00:13:03,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where would you start off first if you were to sweep in and take control of the third runway?</p>
+<p>如果你要接手并掌控第三条跑道，你会首先从哪里开始？</p>
+<p><button class="play-button sentence" id="s-00-13-10-573" data-start="00:13:10,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where is Heathrow tripping up?</p>
+<p>希思罗机场在哪里出了问题？</p>
+<p><button class="play-button sentence" id="s-00-13-13-000" data-start="00:13:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we started building this Istanbul airport, we went many airports around the world, Atlanta, Hong Kong, Singapore to see what they have done.</p>
+<p>当我们开始建设伊斯坦布尔机场时，我们去了世界各地的许多机场，如亚特兰大、香港、新加坡，看看他们做了什么。</p>
+<p><button class="play-button sentence" id="s-00-13-24-000" data-start="00:13:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because if there is something that someone else has done in the world before you, it should be honored and it should be discovered.</p>
+<p>因为如果世界上有人在你之前做过某些事情，那应该被尊重和发现。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959187" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-33-000" data-start="00:13:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we did that.</p>
+<p>所以我们这样做了。</p>
+<p><button class="play-button sentence" id="s-00-13-34-178" data-start="00:13:34,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If I were to develop Heathrow expansion, I would create a better dialogue with other people who had done a similar thing.</p>
+<p>如果我要开发希思罗机场的扩建项目，我会与做过类似事情的人建立更好的对话。</p>
+<p><button class="play-button sentence" id="s-00-13-44-000" data-start="00:13:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think that might be something I would start doing.</p>
+<p>所以我认为这可能是我会开始做的事情。</p>
+<p><button class="play-button sentence" id="s-00-13-50-000" data-start="00:13:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there a risk that London could lose its relevance when it comes to its place as a key transport hub and an airport hub?</p>
+<p>伦敦作为关键交通枢纽和机场枢纽的地位是否存在失去相关性的风险？</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959157" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-02-360" data-start="00:14:02,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's at risk?</p>
+<p>风险是什么？</p>
+<p><button class="play-button sentence" id="s-00-14-04-000" data-start="00:14:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Global aviation trend is the movements are moving to East, so that's a threat for Heathrow on its own.</p>
+<p>全球航空趋势是向东转移，这对希思罗机场本身是一个威胁。</p>
+<p><button class="play-button sentence" id="s-00-14-14-000" data-start="00:14:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And airports in East, for example Dubai, Riyadh and as Istanbul we have already started, are increasing their capacity.</p>
+<p>而东部的机场，例如迪拜、利雅得，以及我们已经开始的伊斯坦布尔，正在增加其容量。</p>
+<p><button class="play-button sentence" id="s-00-14-28-000" data-start="00:14:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So if a London doesn't bring a holistic aviation infrastructure plan, I think it will be behind the race with airports, especially Istanbul to Dubai and maybe other Middle Eastern hubs.</p>
+<p>因此，如果伦敦不提出一个全面的航空基础设施计划，我认为它将落后于与伊斯坦布尔、迪拜以及其他中东枢纽机场的竞争。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959115" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-45-000" data-start="00:14:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mehmet, Kalanjai, thank you very much indeed for your insight.</p>
+<p>Mehmet, Kalanjai，非常感谢你的见解。</p>
+<p><button class="play-button sentence" id="s-00-14-48-419" data-start="00:14:48,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-14-49-000" data-start="00:14:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-14-51-000" data-start="00:14:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK you're watching BBC News.</p>
+<p>在世界各地和英国各地，您正在观看BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-15-03-000" data-start="00:15:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kettaman is an increasingly popular drug for young people.</p>
+<p>Kettaman是一种越来越受年轻人欢迎的药物。</p>
+<p><button class="play-button sentence" id="s-00-15-07-000" data-start="00:15:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When I took get for the first time, it would lighten up in the nose.</p>
+<p>当我第一次服用时，它会让我鼻子感到轻松。</p>
+<p><button class="play-button sentence" id="s-00-15-10-000" data-start="00:15:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have seen, as young as 13 years old, Panorama meets those on the front line.</p>
+<p>我们见过年仅13岁的人，《全景》节目采访了前线人员。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959086" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-14-000" data-start="00:15:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have never seen something so destructive.</p>
+<p>我从未见过如此具有破坏性的事情。</p>
+<p><button class="play-button sentence" id="s-00-15-17-000" data-start="00:15:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I died that night.</p>
+<p>那晚我差点死了。</p>
+<p><button class="play-button sentence" id="s-00-15-19-000" data-start="00:15:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Panorama, Britain's Kettaman Crisis.</p>
+<p>《全景》：英国的Kettaman危机。</p>
+<p><button class="play-button sentence" id="s-00-15-21-444" data-start="00:15:21,444" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Watch now on BBC iPlayer.</p>
+<p>现在在BBC iPlayer上观看。</p>
+<p><button class="play-button sentence" id="s-00-15-30-000" data-start="00:15:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's taken until my 57th year to discover that I have bipolar.</p>
+<p>直到57岁，我才发现自己患有双相情感障碍。</p>
+<p><button class="play-button sentence" id="s-00-15-35-000" data-start="00:15:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does it take to be the best there's ever been at something?</p>
+<p>成为某方面有史以来最优秀的人需要什么？</p>
+<p><button class="play-button sentence" id="s-00-15-38-000" data-start="00:15:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Passion.</p>
+<p>热情。</p>
+<p><button class="play-button sentence" id="s-00-15-40-000" data-start="00:15:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also they're fighting German troops.</p>
+<p>而且他们正在与德军作战。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959058" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-41-666" data-start="00:15:41,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd like to point out this is basically the plot of diehard.</p>
+<p>我想指出，这基本上是《虎胆龙威》的剧情。</p>
+<p><button class="play-button sentence" id="s-00-15-44-000" data-start="00:15:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Happy Kaya, Rencoat.</p>
+<p>Happy Kaya, Rencoat。</p>
+<p><button class="play-button sentence" id="s-00-15-46-000" data-start="00:15:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow.</p>
+<p>哇。</p>
+<p><button class="play-button sentence" id="s-00-15-48-000" data-start="00:15:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only on the BBC.</p>
+<p>仅在BBC。</p>
+<p><button class="play-button sentence" id="s-00-15-49-392" data-start="00:15:49,392" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Watch on iPlayer.</p>
+<p>在iPlayer上观看。</p>
+<p><button class="play-button sentence" id="s-00-15-51-000" data-start="00:15:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Listen on sounds.</p>
+<p>在Sounds上收听。</p>
+<p><button class="play-button sentence" id="s-00-16-03-000" data-start="00:16:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now we do often look at economic data or the stock market to try to measure the health of a nation.</p>
+<p>现在我们经常通过经济数据或股市来衡量一个国家的健康状况。</p>
+<p><button class="play-button sentence" id="s-00-16-09-000" data-start="00:16:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it seems that what we choose to spend on our lunch orders can also be very revealing about consumer confidence in parting with our hard earned cash.</p>
+<p>但似乎我们在午餐上的花费也能非常揭示消费者对花掉辛苦赚来的钱的信心。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208959020" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-20-000" data-start="00:16:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our North America business correspondent, Erin Dalmore explains.</p>
+<p>我们的北美商业记者Erin Dalmore解释道。</p>
+<p><button class="play-button sentence" id="s-00-16-24-000" data-start="00:16:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The consumer slowdown is coming for fast food.</p>
+<p>消费者放缓正在影响快餐业。</p>
+<p><button class="play-button sentence" id="s-00-16-27-000" data-start="00:16:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cover, an American dining chain that's popular for takeout salads and grain bowls saw it shares dropped 16% on Wednesday after reporting weak earnings.</p>
+<p>Cover是一家以沙拉和谷物碗外卖闻名的美国餐饮连锁店，周三报告盈利疲软后股价下跌16%。</p>
+<p><button class="play-button sentence" id="s-00-16-36-000" data-start="00:16:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fast casual eatery missed second quarter same store sales expectations and cut its full year sales growth forecast for the very first time since it went public in 2023.</p>
+<p>这家休闲快餐店第二季度同店销售额未达预期，并自2023年上市以来首次下调全年销售增长预测。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958994" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-46-000" data-start="00:16:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over this year, Kava shares have fallen 38%.</p>
+<p>今年以来，Kava股价下跌了38%。</p>
+<p><button class="play-button sentence" id="s-00-16-50-000" data-start="00:16:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not alone.</p>
+<p>并非只有它如此。</p>
+<p><button class="play-button sentence" id="s-00-16-50-987" data-start="00:16:50,987" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Chipotle Mexican Grill, the burrito and rice bowl maker, is down 27% this year.</p>
+<p>墨西哥卷饼和米饭碗制造商Chipotle Mexican Grill今年下跌27%。</p>
+<p><button class="play-button sentence" id="s-00-16-56-000" data-start="00:16:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Burger and milkshake hub Shake Shack is down nearly 19% this year.</p>
+<p>汉堡和奶昔连锁店Shake Shack今年下跌近19%。</p>
+<p><button class="play-button sentence" id="s-00-17-00-000" data-start="00:17:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the Guest Seed Up Salad Bar Sweet Green is down to whopping 72% this year.</p>
+<p>而沙拉连锁店Sweet Green今年下跌高达72%。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-05-000" data-start="00:17:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, usually what we call fast casual eateries, the kind of places you go for lunch to carry back to your workplace or sit and have with a friend for a half hour, do pretty well in sales even when the wider restaurant industry is seeing a decline in foot traffic.</p>
+<p>通常我们所说的休闲快餐店，即那些你去吃午餐带回工作场所或与朋友坐半小时的地方，即使在更广泛的餐饮业客流量下降时，销售也相当不错。</p>
+<p><button class="play-button sentence" id="s-00-17-19-000" data-start="00:17:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it seems like the special place they occupy in consumers' hearts isn't justifying the bite they're taking out of consumers' wallets.</p>
+<p>但似乎它们在消费者心中的特殊地位并不能证明它们从消费者钱包中拿走的份额是合理的。</p>
+<p><button class="play-button sentence" id="s-00-17-25-000" data-start="00:17:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's why we're watching this and treating it like a bellweather.</p>
+<p>这就是为什么我们关注并将其视为风向标。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-28-000" data-start="00:17:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Consumer spending powers some 70% of the U.S. economy.</p>
+<p>消费者支出约占美国经济的70%。</p>
+<p><button class="play-button sentence" id="s-00-17-31-252" data-start="00:17:31,252" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the engine that propels businesses and hiring and growth.</p>
+<p>它是推动企业、招聘和增长的引擎。</p>
+<p><button class="play-button sentence" id="s-00-17-35-000" data-start="00:17:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When consumers spend less, it can be a sign of an economic downturn to come.</p>
+<p>当消费者减少支出时，可能是经济衰退即将到来的信号。</p>
+<p><button class="play-button sentence" id="s-00-17-39-000" data-start="00:17:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even the mere thinking there's a downturn can cause consumers to pull back spending.</p>
+<p>甚至仅仅认为经济会下滑就可能导致消费者减少支出。</p>
+<p><button class="play-button sentence" id="s-00-17-43-000" data-start="00:17:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that can become a self-fulfilling prophecy.</p>
+<p>而这可能成为一种自我实现的预言。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-46-000" data-start="00:17:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So while Donald Trump is remaking the global world order through tariffs, consumers are showing they'd rather hold on to their cash than put in their lunch orders.</p>
+<p>因此，当唐纳德·特朗普通过关税重塑全球秩序时，消费者表现出他们宁愿保留现金也不愿点午餐。</p>
+<p><button class="play-button sentence" id="s-00-17-55-000" data-start="00:17:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was Erin Dalmore there.</p>
+<p>以上就是Erin Dalmore的报道。</p>
+<p><button class="play-button sentence" id="s-00-17-56-741" data-start="00:17:56,741" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's a question for you.</p>
+<p>这里有一个问题问你。</p>
+<p><button class="play-button sentence" id="s-00-17-58-161" data-start="00:17:58,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could nuclear fusion supply endless, clean energy?</p>
+<p>核聚变能否提供无限的清洁能源？</p>
+<p><button class="play-button sentence" id="s-00-18-01-000" data-start="00:18:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, BBC tech now's Nick Quack has been to the fused testing lab in Montreal and Canada.</p>
+<p>BBC科技记者Nick Quack已经前往加拿大蒙特利尔的核聚变测试实验室。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958913" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-07-000" data-start="00:18:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a start-up that's aiming to use nuclear fusion to solve the world's energy problems.</p>
+<p>这是一家旨在利用核聚变解决世界能源问题的初创公司。</p>
+<p><button class="play-button sentence" id="s-00-18-12-000" data-start="00:18:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a laboratory south of Montreal, Canada scientists are busy trying to build the pathway for a new energy solution.</p>
+<p>在加拿大蒙特利尔南部的一个实验室里，科学家们正忙于为新的能源解决方案铺路。</p>
+<p><button class="play-button sentence" id="s-00-18-25-000" data-start="00:18:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fuse is a start-up on an incredibly tricky mission to commercialize nuclear fusion and we've been granted exclusive access.</p>
+<p>Fuse是一家致力于将核聚变商业化的初创公司，任务极其艰巨，我们获得了独家访问权。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958886" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-34-000" data-start="00:18:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right here is our assembly area.</p>
+<p>这里就是我们的组装区。</p>
+<p><button class="play-button sentence" id="s-00-18-38-000" data-start="00:18:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fusion is a process that occurs naturally inside the sun and it's what powers it.</p>
+<p>聚变是太阳内部自然发生的过程，也是其能量的来源。</p>
+<p><button class="play-button sentence" id="s-00-18-44-000" data-start="00:18:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When two atomic nuclei combine, they release energy.</p>
+<p>当两个原子核结合时，它们会释放能量。</p>
+<p><button class="play-button sentence" id="s-00-18-48-000" data-start="00:18:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here on Earth, scientists have been trying to recreate that for almost a century.</p>
+<p>在地球上，科学家们近一个世纪以来一直在尝试重现这一过程。</p>
+<p><button class="play-button sentence" id="s-00-18-53-000" data-start="00:18:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But now, in the midst of trade wars and with our environment hanging in the balance, the race is on.</p>
+<p>但现在，在贸易战和环境岌岌可危的情况下，竞赛已经开始。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958860" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-00-000" data-start="00:19:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The blocking fusion power is going to be a technology that will propel humanity and unlock civilization for centuries.</p>
+<p>核聚变能源将成为推动人类并解锁未来几个世纪文明的技术。</p>
+<p><button class="play-button sentence" id="s-00-19-08-000" data-start="00:19:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The promise virtually limitless and more or less clean energy.</p>
+<p>它承诺提供几乎无限且基本清洁的能源。</p>
+<p><button class="play-button sentence" id="s-00-19-13-000" data-start="00:19:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the nation that cracks it, energy independence and a windfall of riches.</p>
+<p>对于破解这一技术的国家来说，将获得能源独立和巨额财富。</p>
+<p><button class="play-button sentence" id="s-00-19-20-000" data-start="00:19:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've built Titan, a pulsed power driver capable of producing lightning and a bottle, the equivalent of 800 strikes at once.</p>
+<p>他们建造了Titan，一种能够产生闪电的脉冲功率驱动器，相当于800次闪电同时击中一个瓶子。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958830" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-30-000" data-start="00:19:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is Titan.</p>
+<p>这就是Titan。</p>
+<p><button class="play-button sentence" id="s-00-19-35-000" data-start="00:19:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Check that out.</p>
+<p>看看吧。</p>
+<p><button class="play-button sentence" id="s-00-19-37-000" data-start="00:19:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it's a one-terror.</p>
+<p>是的，它是一个一太瓦的装置。</p>
+<p><button class="play-button sentence" id="s-00-19-38-000" data-start="00:19:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The key innovation here is how do you trigger 238 of those bricks, but then less than 292nd delay or jitter between them.</p>
+<p>这里的关键创新是如何触发238个这样的模块，同时确保它们之间的延迟或抖动小于292纳秒。</p>
+<p><button class="play-button sentence" id="s-00-19-47-000" data-start="00:19:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's kind of our core technology is being able to build that triggering system.</p>
+<p>这就是我们的核心技术，即能够构建这种触发系统。</p>
+<p><button class="play-button sentence" id="s-00-19-51-000" data-start="00:19:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite efforts here, the rollout of nuclear fusion as a practical solution could still be decades away, according to experts who cite significant scientific and engineering challenges needing to be overcome.</p>
+<p>尽管这里付出了努力，但专家表示，核聚变作为实际解决方案的推出可能还需要几十年，因为需要克服重大的科学和工程挑战。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958795" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-05-000" data-start="00:20:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Billions of dollars are being poured into cracking fusion globally.</p>
+<p>全球有数十亿美元投入核聚变研究。</p>
+<p><button class="play-button sentence" id="s-00-20-09-243" data-start="00:20:09,243" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And competition is close by.</p>
+<p>竞争非常激烈。</p>
+<p><button class="play-button sentence" id="s-00-20-11-000" data-start="00:20:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sam Altman-Batheelian just secured 400 million odd for its efforts in its latest funding round.</p>
+<p>Sam Altman-Batheelian在最新一轮融资中为其努力获得了约4亿美元。</p>
+<p><button class="play-button sentence" id="s-00-20-19-000" data-start="00:20:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Several countries around the world are also gearing up.</p>
+<p>世界多个国家也在加紧准备。</p>
+<p><button class="play-button sentence" id="s-00-20-22-481" data-start="00:20:22,481" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> China's reactor, dubbed the artificial sun, is making massive strides.</p>
+<p>中国的“人造太阳”反应堆正在取得巨大进展。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958773" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-27-000" data-start="00:20:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in the UK, the Atomic Energy Authority aims to open the world's first fusion power plant by 2040.</p>
+<p>而在英国，原子能管理局的目标是在2040年前开放世界上第一家核聚变发电厂。</p>
+<p><button class="play-button sentence" id="s-00-20-35-000" data-start="00:20:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're going through the final checklist preparations before they fire up Titan.</p>
+<p>他们正在启动Titan前的最后检查准备。</p>
+<p><button class="play-button sentence" id="s-00-20-42-000" data-start="00:20:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My hands are getting sweaty.</p>
+<p>我的手开始出汗了。</p>
+<p><button class="play-button sentence" id="s-00-20-43-285" data-start="00:20:43,285" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know why I'm getting evidence.</p>
+<p>我不知道为什么我这么紧张。</p>
+<p><button class="play-button sentence" id="s-00-20-46-000" data-start="00:20:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three, two, one, break.</p>
+<p>三、二、一，启动。</p>
+<p><button class="play-button sentence" id="s-00-20-53-000" data-start="00:20:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Will we solve it or not to be determined?</p>
+<p>我们能否解决这个问题还有待确定？</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958744" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-55-883" data-start="00:20:55,883" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are we going to make a large contribution in solving this large monumental problem?</p>
+<p>我们是否会在解决这一重大问题上做出巨大贡献？</p>
+<p><button class="play-button sentence" id="s-00-21-02-000" data-start="00:21:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, we're already doing so.</p>
+<p>是的，我们已经在做了。</p>
+<p><button class="play-button sentence" id="s-00-21-06-000" data-start="00:21:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now today is a level result staying England and Wales and whilst good results have traditionally led to a period of study at university.</p>
+<p>今天是英格兰和威尔士的A-level成绩公布日，传统上，好成绩会让学生进入大学学习一段时间。</p>
+<p><button class="play-button sentence" id="s-00-21-14-000" data-start="00:21:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In today's job market, higher education degrees no longer seem to carry the same prestige or guarantees of lucrative employment that they did 20 years ago.</p>
+<p>在当今的就业市场上，高等教育学位似乎不再像20年前那样具有同样的声望或保证高薪就业。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-24-000" data-start="00:21:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is, however, another route open to students after completing A levels and that is taking up an apprenticeship.</p>
+<p>然而，学生在完成A-level后还有另一条路可走，那就是参加学徒制。</p>
+<p><button class="play-button sentence" id="s-00-21-31-000" data-start="00:21:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Claire Smith is a three star Michelin chef and is also a former apprentice and she's helping to launch a new £1 million talent fund to break down the financial and structural development.</p>
+<p>Claire Smith是一位米其林三星厨师，也曾是学徒，她正在帮助推出一个新的100万英镑人才基金，以解决财务和结构性发展问题。</p>
+<p><button class="play-button sentence" id="s-00-21-43-000" data-start="00:21:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many small organisations face when hiring apprenticeships and I'm so glad to say Claire joins me now.</p>
+<p>许多小型组织在招聘学徒时面临的问题，我很高兴Claire现在加入我们。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958689" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-50-083" data-start="00:21:50,083" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning to you Claire.</p>
+<p>早上好，Claire。</p>
+<p><button class="play-button sentence" id="s-00-21-52-000" data-start="00:21:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning.</p>
+<p>早上好。</p>
+<p><button class="play-button sentence" id="s-00-21-54-000" data-start="00:21:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll tell you very quickly touch on this financial package, £1 million.</p>
+<p>我会很快告诉你这个100万英镑的财务方案。</p>
+<p><button class="play-button sentence" id="s-00-21-59-744" data-start="00:21:59,744" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What exactly or rather why was it needed?</p>
+<p>具体是什么，或者说为什么需要它？</p>
+<p><button class="play-button sentence" id="s-00-22-04-000" data-start="00:22:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was, I mean, it's been provided by Virgin Media too, which is a called that talent fund essentially to help these small businesses cover the cost for them to hire apprentices because it was the number one reason that many small businesses, charities, local authorities and said that they there was a reason they couldn't hire apprentices was simply the costs.</p>
+<p>它是由Virgin Media提供的，本质上是一个人才基金，旨在帮助这些小企业支付招聘学徒的成本，因为许多小企业、慈善机构和地方政府表示，他们无法招聘学徒的首要原因就是成本。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958652" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-28-000" data-start="00:22:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you say the cost as an apprentice you are earning whilst you're learning that's what it is isn't it?</p>
+<p>你说成本，作为学徒，你是在学习的同时赚钱，对吧？</p>
+<p><button class="play-button sentence" id="s-00-22-34-000" data-start="00:22:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely.</p>
+<p>没错。</p>
+<p><button class="play-button sentence" id="s-00-22-34-944" data-start="00:22:34,944" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, there's a cost to the businesses to set up apprenticeships but essentially, I mean, I guess that, you know, this they can apply for this fund through the Virgin Media O2 website and to help cover that cost but apprenticeships are, you know, just another option.</p>
+<p>企业设立学徒制是有成本的，但基本上，他们可以通过Virgin Media O2网站申请这笔基金来帮助支付这些成本，但学徒制只是另一种选择。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958626" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-54-000" data-start="00:22:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think a really, really good option for young people to consider it is, you know, you're earning whilst you're learning, you're getting your qualifications and experience at the same time.</p>
+<p>我认为这是年轻人可以考虑的一个非常好的选择，你在学习的同时赚钱，同时获得资格和经验。</p>
+<p><button class="play-button sentence" id="s-00-23-04-000" data-start="00:23:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And for me, probably the most important thing about that was the few years that I studied and and I was getting that experience.</p>
+<p>对我来说，最重要的是那几年我学习并获得经验。</p>
+<p><button class="play-button sentence" id="s-00-23-11-000" data-start="00:23:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was also figuring out what exactly I wanted to do in which area I wanted to go into within hospitality because I guess every industry there's there's many different departments that you can go into.</p>
+<p>我也在弄清楚我到底想在 hospitality 行业的哪个领域发展，因为我想每个行业都有许多不同的部门可以选择。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958596" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-24-000" data-start="00:23:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And by the time you finished your qualifications, you've got a really good head start.</p>
+<p>当你完成资格认证时，你已经有了一个非常好的起点。</p>
+<p><button class="play-button sentence" id="s-00-23-29-000" data-start="00:23:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So when you were going through this process, Claire, were employers open to taking somebody on at your stage in your career or education?</p>
+<p>Claire，当你经历这个过程时，雇主是否愿意接受你当时职业或教育阶段的人？</p>
+<p><button class="play-button sentence" id="s-00-23-39-058" data-start="00:23:39,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What was your experience?</p>
+<p>你的经历是什么？</p>
+<p><button class="play-button sentence" id="s-00-23-42-000" data-start="00:23:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's easier to get an apprenticeship in a larger business because small businesses just don't have the resources to do that.</p>
+<p>我认为在大型企业中获得学徒制更容易，因为小企业没有资源这样做。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958566" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-54-000" data-start="00:23:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's a shame because I think small businesses, you get very close up and personal learning, you know, you've got those opportunities to get very much involved in sport or businesses.</p>
+<p>这很遗憾，因为我认为在小企业中，你可以获得非常亲密和个性化的学习，有机会深入参与体育或商业。</p>
+<p><button class="play-button sentence" id="s-00-24-06-000" data-start="00:24:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it does, you know, take resources and time that they just don't have.</p>
+<p>但这确实需要他们不具备的资源和时间。</p>
+<p><button class="play-button sentence" id="s-00-24-10-000" data-start="00:24:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are there age limits for apprenticeships, Claire?</p>
+<p>学徒制有年龄限制吗，Claire？</p>
+<p><button class="play-button sentence" id="s-00-24-14-000" data-start="00:24:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, no, I don't think we leave there is.</p>
+<p>不，不，我认为没有。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958543" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-16-058" data-start="00:24:16,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's a, you know, we said the traditional university route, you know, of course, incredible for young people, but this is also you can get apprenticeship degrees.</p>
+<p>我们说传统的大学路径对年轻人来说当然很棒，但你也可以通过学徒制获得学位。</p>
+<p><button class="play-button sentence" id="s-00-24-26-000" data-start="00:24:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you can take it as far as you want, really.</p>
+<p>你可以根据自己的意愿走多远都行。</p>
+<p><button class="play-button sentence" id="s-00-24-28-846" data-start="00:24:28,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think there's a real entrepreneurial ship of becoming an apprentice, you know, you can own your business.</p>
+<p>我认为成为学徒有一种真正的创业精神，你可以拥有自己的企业。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958524" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-36-000" data-start="00:24:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The world you're most are really.</p>
+<p>世界就在你面前。</p>
+<p><button class="play-button sentence" id="s-00-24-38-000" data-start="00:24:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was just asking for a friend, so to speak.</p>
+<p>我只是替朋友问问。</p>
+<p><button class="play-button sentence" id="s-00-24-41-000" data-start="00:24:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, are employers getting it right?</p>
+<p>那么，雇主们做得对吗？</p>
+<p><button class="play-button sentence" id="s-00-24-45-000" data-start="00:24:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think so.</p>
+<p>我认为是的。</p>
+<p><button class="play-button sentence" id="s-00-24-45-661" data-start="00:24:45,661" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think you know, they're trying to get it right.</p>
+<p>我认为他们在努力做对。</p>
+<p><button class="play-button sentence" id="s-00-24-48-600" data-start="00:24:48,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I certainly hire apprentices and I think it's something that's very important to get young people involved at a young age as well and give them the support whilst they're learning and really getting them a good start into their careers.</p>
+<p>我当然会雇佣学徒，我认为让年轻人尽早参与并在学习时给予他们支持，让他们在职业生涯中有一个良好的开端非常重要。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958497" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-03-000" data-start="00:25:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then when they're qualified, you know, they usually stay with us and continue.</p>
+<p>当他们获得资格后，通常会留下来继续工作。</p>
+<p><button class="play-button sentence" id="s-00-25-07-000" data-start="00:25:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very quickly, you're at that stage where you're asking yourself, should I go to university or should I do an apprenticeship?</p>
+<p>很快，你会问自己，我应该上大学还是应该参加学徒制？</p>
+<p><button class="play-button sentence" id="s-00-25-13-000" data-start="00:25:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is the first and most pertinent issue or factor you should be looking at?</p>
+<p>什么是你应该首先关注的最相关的问题或因素？</p>
+<p><button class="play-button sentence" id="s-00-25-18-000" data-start="00:25:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think you really consider the fact that the cost of going to university and if you really believe that there's a career from that degree that you're going to be investing in.</p>
+<p>我认为你确实需要考虑上大学的成本，以及你是否真的相信你所投资的学位能带来职业发展。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV122bHzaEDW/?t=-2208958470" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-30-000" data-start="00:25:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think, you know, there's a lot of youngsters going to university and coming out with considerable debts.</p>
+<p>我认为，你知道，有很多年轻人上了大学，却背负了巨额债务。</p>
+<p><button class="play-button sentence" id="s-00-25-37-000" data-start="00:25:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alright.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-25-38-230" data-start="00:25:38,230" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-25-39-000" data-start="00:25:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Claire, I'm so sorry to interrupt, but thank you very much.</p>
+<p>克莱尔，很抱歉打断你，但非常感谢你。</p>
+<p><button class="play-button sentence" id="s-00-25-43-410" data-start="00:25:43,410" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We didn't even get onto your chef life, but anyway, thank you.</p>
+<p>我们甚至还没聊到你的厨师生涯，但无论如何，谢谢你。</p>
+<p><button class="play-button sentence" id="s-00-25-48-000" data-start="00:25:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is BBC News.</p>
+<p>这里是BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-25-49-150" data-start="00:25:49,150" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm back with you at the top of the hour with all the world's top stories.</p>
+<p>我将在整点时段为您带来全球头条新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
