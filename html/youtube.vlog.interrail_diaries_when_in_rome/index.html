@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Rome Travel Vlog: Exploring the Eternal City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The vlog follows a spontaneous trip to Rome, where the travelers explore iconic landmarks like the Colosseum and St. Peter's Basilica, enjoy delicious Italian food, and discover hidden gems in neighborhoods like Trastevere. Despite the intense heat and unexpected challenges, their love for the city grows as they immerse themselves in its rich history and vibrant culture.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Rome Travel Vlog: Exploring the Eternal City</h1>
+<p>【Vlog生活口语｜罗马旅行日记：永恒之城的惊喜之旅｜油管@Birta Hlin】</p>
+<p>Summary:
+The vlog follows a spontaneous trip to Rome, where the travelers explore iconic landmarks like the Colosseum and St. Peter's Basilica, enjoy delicious Italian food, and discover hidden gems in neighborhoods like Trastevere. Despite the intense heat and unexpected challenges, their love for the city grows as they immerse themselves in its rich history and vibrant culture.</p>
+<p>摘要：
+这段视频记录了一次即兴的罗马之旅，游客们探索了斗兽场和圣彼得大教堂等地标，品尝了美味的意大利美食，并在特拉斯提弗列等街区发现了隐藏的宝藏。尽管天气炎热且遇到意外挑战，但随着他们深入体验这座城市丰富的历史和充满活力的文化，他们对罗马的热爱与日俱增。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 18 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959989" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-11-000" data-start="00:00:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello guys and welcome back to my channel.</p>
+<p>大家好，欢迎回到我的频道。</p>
+<p><button class="play-button sentence" id="s-00-00-14-571" data-start="00:00:14,571" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are currently in Rome and it's a dream come true to be here.</p>
+<p>我们现在在罗马，能来到这里真是梦想成真。</p>
+<p><button class="play-button sentence" id="s-00-00-19-673" data-start="00:00:19,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are so happy.</p>
+<p>我们非常开心。</p>
+<p><button class="play-button sentence" id="s-00-00-21-000" data-start="00:00:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's currently 10 o'clock and we are heading out and the plan for the beginning of the day is to do a bit of sighting before we get breakfast.</p>
+<p>现在是10点，我们正准备出门，今天的计划是先观光一会儿再去吃早餐。</p>
+<p><button class="play-button sentence" id="s-00-00-29-000" data-start="00:00:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we booked our hotel through booking.com and we just thought that it was a random hotel not located in the city center or anything.</p>
+<p>我们通过booking.com预订了这家酒店，本以为它只是家普通的酒店，不在市中心之类的地方。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959963" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-37-000" data-start="00:00:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we were surprised when we arrived because the traffic here is insane and there is like restaurant on every single corner here.</p>
+<p>但到达后我们很惊讶，因为这里的交通非常疯狂，而且几乎每个角落都有餐厅。</p>
+<p><button class="play-button sentence" id="s-00-00-45-000" data-start="00:00:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today it's supposed to be 34 degrees and I don't think we are prepared for this type of heat.</p>
+<p>今天气温预计会达到34度，我觉得我们还没准备好应对这种高温。</p>
+<p><button class="play-button sentence" id="s-00-00-53-000" data-start="00:00:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe we should do a little outfit check before we head out.</p>
+<p>也许我们出门前应该检查一下穿搭。</p>
+<p><button class="play-button sentence" id="s-00-00-57-000" data-start="00:00:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So these are our outfits.</p>
+<p>这就是我们的穿搭。</p>
+<p><button class="play-button sentence" id="s-00-00-58-866" data-start="00:00:58,866" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm wearing birken socks with some white socks trying that for the first time.</p>
+<p>我穿着勃肯鞋配白袜子，这是第一次尝试。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959935" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-04-644" data-start="00:01:04,644" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I literally spent like 40 minutes trying to pick my outfit.</p>
+<p>我花了差不多40分钟挑选衣服。</p>
+<p><button class="play-button sentence" id="s-00-01-09-000" data-start="00:01:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a struggle now because we've been rotating through all of our outfits like again and again and again and again.</p>
+<p>现在很纠结，因为我们已经把所有的衣服轮着穿了一遍又一遍。</p>
+<p><button class="play-button sentence" id="s-00-01-16-000" data-start="00:01:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to show you our hotel room.</p>
+<p>我要带你们看看我们的酒店房间。</p>
+<p><button class="play-button sentence" id="s-00-01-18-215" data-start="00:01:18,215" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I recorded this clip yesterday when we arrived and we were a little bit surprised because the room is so big and spacious and very clean and very nice because it was pretty cheap.</p>
+<p>这段视频是昨天到达时录的，我们有点惊讶，因为房间又大又宽敞，非常干净漂亮，而且价格很便宜。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959911" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-29-000" data-start="00:01:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I guess we were very lucky with this one.</p>
+<p>所以我觉得我们这次很幸运。</p>
+<p><button class="play-button sentence" id="s-00-01-46-000" data-start="00:01:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were trying to find some interesting places on the way to the breakfast place and we found this castle called Castell Sant'Angelo.</p>
+<p>我们想在去早餐店的路上找些有趣的地方，结果发现了这座叫圣天使城堡的建筑。</p>
+<p><button class="play-button sentence" id="s-00-02-12-000" data-start="00:02:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not as busy as the other landlords so it's definitely a must visit when you're here in Rome.</p>
+<p>这里不像其他景点那么拥挤，所以来罗马一定要来看看。</p>
+<p><button class="play-button sentence" id="s-00-02-17-448" data-start="00:02:17,448" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We get this amazing view over the whole city.</p>
+<p>我们可以看到整个城市的壮丽景色。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959860" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-20-000" data-start="00:02:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example, the St. Peter's Basilica in the Vatican city.</p>
+<p>比如梵蒂冈的圣彼得大教堂。</p>
+<p><button class="play-button sentence" id="s-00-02-23-721" data-start="00:02:23,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just the view is breathtaking.</p>
+<p>这景色简直令人叹为观止。</p>
+<p><button class="play-button sentence" id="s-00-02-32-000" data-start="00:02:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a very good start of the day but now it's time for some hydration, some food.</p>
+<p>今天开了个好头，但现在该补充水分和食物了。</p>
+<p><button class="play-button sentence" id="s-00-02-39-000" data-start="00:02:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are going to go to the coffee spot that Halle게 found.</p>
+<p>所以我们要去Halle找到的那家咖啡店。</p>
+<p><button class="play-button sentence" id="s-00-02-42-790" data-start="00:02:42,790" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is it called? Barneum Roma and it's one of the places that you guys recommended.</p>
+<p>叫什么来着？Barneum Roma，是你们推荐的地方之一。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959832" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-48-000" data-start="00:02:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You guys always share the best spots and we are so grateful to get all of these tips and tricks.</p>
+<p>你们总是分享最好的地方，我们非常感激这些建议和小技巧。</p>
+<p><button class="play-button sentence" id="s-00-02-54-000" data-start="00:02:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Honestly, it's made our trips like 10 times better so...</p>
+<p>说实话，这让我们的旅行体验提升了十倍……</p>
+<p><button class="play-button sentence" id="s-00-03-10-000" data-start="00:03:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just bought these sunglasses.</p>
+<p>我们刚买了这副太阳镜。</p>
+<p><button class="play-button sentence" id="s-00-03-15-882" data-start="00:03:15,882" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I forgot mine at home and these are actually for Halle게 but today I will be using them since I didn't bring ones.</p>
+<p>我的忘在家里了，这其实是Halle的，但今天我没带，所以先借来用。</p>
+<p><button class="play-button sentence" id="s-00-03-35-000" data-start="00:03:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Barneum Roma, the breakfast spot that we went to, was so nice.</p>
+<p>不过Barneum Roma这家早餐店真的很棒。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959779" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-40-046" data-start="00:03:40,046" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's definitely a recommendation to you guys if you are in Rome.</p>
+<p>如果你们来罗马，我绝对推荐这里。</p>
+<p><button class="play-button sentence" id="s-00-03-45-000" data-start="00:03:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The staff was so friendly.</p>
+<p>店员非常友好。</p>
+<p><button class="play-button sentence" id="s-00-03-46-833" data-start="00:03:46,833" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our waitress was from Norway and I actually spotted it myself.</p>
+<p>我们的服务员来自挪威，其实是我自己发现的。</p>
+<p><button class="play-button sentence" id="s-00-03-51-166" data-start="00:03:51,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I heard her say something and I was like, oh my god, she is probably from Scandinavia.</p>
+<p>我听她说了句话，心想：天哪，她可能来自斯堪的纳维亚。</p>
+<p><button class="play-button sentence" id="s-00-03-57-000" data-start="00:03:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I was right.</p>
+<p>结果我猜对了。</p>
+<p><button class="play-button sentence" id="s-00-03-58-278" data-start="00:03:58,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Overall, a very nice breakfast place or lunch, whatever.</p>
+<p>总之，这家早餐店（或午餐店）非常不错。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-05-000" data-start="00:04:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were walking down this random street and all of these people were selling like jewelry.</p>
+<p>我们走在一条随机的街上，发现很多人都在卖珠宝。</p>
+<p><button class="play-button sentence" id="s-00-04-25-714" data-start="00:04:25,714" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They had like these jewelry stands.</p>
+<p>他们摆着珠宝摊。</p>
+<p><button class="play-button sentence" id="s-00-04-34-000" data-start="00:04:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Usually it's all of the same stuff over and over.</p>
+<p>通常卖的都是重复的东西。</p>
+<p><button class="play-button sentence" id="s-00-04-37-789" data-start="00:04:37,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's mass produced.</p>
+<p>我觉得是批量生产的。</p>
+<p><button class="play-button sentence" id="s-00-04-39-968" data-start="00:04:39,968" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But then we found a very special stand.</p>
+<p>但后来我们发现了一个很特别的摊位。</p>
+<p><button class="play-button sentence" id="s-00-04-43-000" data-start="00:04:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the guy was making the jewelry himself and I found this one and I immediately fell in love.</p>
+<p>摊主亲自制作珠宝，我发现了这款，立刻爱上了。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959710" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-49-553" data-start="00:04:49,553" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's so cool.</p>
+<p>我觉得它太酷了。</p>
+<p><button class="play-button sentence" id="s-00-04-51-000" data-start="00:04:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he made it on the spot.</p>
+<p>他当场制作。</p>
+<p><button class="play-button sentence" id="s-00-04-52-709" data-start="00:04:52,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was so cool to see it.</p>
+<p>看着这个过程太棒了。</p>
+<p><button class="play-button sentence" id="s-00-04-54-255" data-start="00:04:54,255" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I ended up buying two pieces, one for my best friend.</p>
+<p>最后我买了两件，一件送给我最好的朋友。</p>
+<p><button class="play-button sentence" id="s-00-04-58-000" data-start="00:04:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think this is definitely something that you would love.</p>
+<p>我觉得你一定会喜欢这个。</p>
+<p><button class="play-button sentence" id="s-00-05-01-945" data-start="00:05:01,945" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are going to be matching.</p>
+<p>这样我们就能配成对啦。</p>
+<p><button class="play-button sentence" id="s-00-05-19-000" data-start="00:05:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are so fascinated by this city.</p>
+<p>我们对这座城市非常着迷。</p>
+<p><button class="play-button sentence" id="s-00-05-21-024" data-start="00:05:21,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The streets are so alive and of course because of its rich history.</p>
+<p>街道充满活力，当然也因为其丰富的历史。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959675" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-25-000" data-start="00:05:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's so cool to be able to visit these iconic ancient landmarks and now we are off to the legendary Trevi fountain.</p>
+<p>能参观这些标志性的古迹太酷了，现在我们要去传说中的特雷维喷泉。</p>
+<p><button class="play-button sentence" id="s-00-05-42-000" data-start="00:05:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We walked past this place that we had seen on Tik Tok.</p>
+<p>我们路过了一家在Tik Tok上见过的店。</p>
+<p><button class="play-button sentence" id="s-00-05-44-706" data-start="00:05:44,706" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a place that serves only takeaway drinks.</p>
+<p>这家店只提供外带饮品。</p>
+<p><button class="play-button sentence" id="s-00-05-47-160" data-start="00:05:47,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's only five euros.</p>
+<p>只要五欧元。</p>
+<p><button class="play-button sentence" id="s-00-05-48-482" data-start="00:05:48,482" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have apple or spreads and other cocktails.</p>
+<p>他们有苹果酒、雪泥和其他鸡尾酒。</p>
+<p><button class="play-button sentence" id="s-00-05-51-000" data-start="00:05:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think we're going to cool down our bed and have a drink.</p>
+<p>所以我觉得我们该喝点东西凉快一下。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959645" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-55-000" data-start="00:05:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are on a vintage store hunt.</p>
+<p>我们在寻找古着店。</p>
+<p><button class="play-button sentence" id="s-00-05-59-411" data-start="00:05:59,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I got a message on Instagram that I should be able to find some cool vintage stores in a neighborhood called Monti.</p>
+<p>我在Instagram上收到消息，说在Monti区能找到不错的古着店。</p>
+<p><button class="play-button sentence" id="s-00-06-16-000" data-start="00:06:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are currently strolling the streets here and are on a hunt for a cool vintage store.</p>
+<p>所以我们现在在这里闲逛，寻找酷炫的古着店。</p>
+<p><button class="play-button sentence" id="s-00-06-25-000" data-start="00:06:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I found this really cool shirt that I wanted to try out.</p>
+<p>我发现了这件很酷的衬衫想试试。</p>
+<p><button class="play-button sentence" id="s-00-06-37-580" data-start="00:06:37,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a bit different than I usually buy.</p>
+<p>和我平时买的风格有点不同。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-46-806" data-start="00:06:46,806" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it looks cool.</p>
+<p>但看起来很酷。</p>
+<p><button class="play-button sentence" id="s-00-06-55-000" data-start="00:06:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I also have a few things that I want to try on.</p>
+<p>我还有几件想试穿的衣服。</p>
+<p><button class="play-button sentence" id="s-00-06-58-564" data-start="00:06:58,564" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think these looks pretty cool.</p>
+<p>我觉得这些看起来挺酷的。</p>
+<p><button class="play-button sentence" id="s-00-07-01-237" data-start="00:07:01,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are kind of like jords.</p>
+<p>有点像工装裤。</p>
+<p><button class="play-button sentence" id="s-00-07-03-514" data-start="00:07:03,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's try it on.</p>
+<p>那就试试吧。</p>
+<p><button class="play-button sentence" id="s-00-07-25-000" data-start="00:07:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One, two, three, four.</p>
+<p>一、二、三、四。</p>
+<p><button class="play-button sentence" id="s-00-07-36-000" data-start="00:07:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are at the Colosseum and it's truly magical to see it in real life.</p>
+<p>我们现在在斗兽场，亲眼看到它真是太神奇了。</p>
+<p><button class="play-button sentence" id="s-00-07-44-793" data-start="00:07:44,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It feels unreal.</p>
+<p>感觉不真实。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959533" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-46-991" data-start="00:07:46,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We unfortunately didn't manage to get tickets to get inside.</p>
+<p>可惜我们没买到进去的门票。</p>
+<p><button class="play-button sentence" id="s-00-07-55-000" data-start="00:07:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because you guys know that our trip was quite spontaneous to go on this inter-rail.</p>
+<p>因为你们知道我们是临时决定来这趟铁路旅行的。</p>
+<p><button class="play-button sentence" id="s-00-08-00-847" data-start="00:08:00,847" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's like fully booked until August to go to the Colosseum.</p>
+<p>斗兽场的门票已经订到八月了。</p>
+<p><button class="play-button sentence" id="s-00-08-05-000" data-start="00:08:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I don't think we would have been able to get tickets.</p>
+<p>所以我觉得我们可能买不到票。</p>
+<p><button class="play-button sentence" id="s-00-08-08-778" data-start="00:08:08,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we don't want to be sad about it.</p>
+<p>但我们不想为此难过。</p>
+<p><button class="play-button sentence" id="s-00-08-11-129" data-start="00:08:11,129" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we can admire the beauty from the outside.</p>
+<p>我们可以从外面欣赏它的美。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959505" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-14-320" data-start="00:08:14,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yeah, it's amazing.</p>
+<p>是的，太棒了。</p>
+<p><button class="play-button sentence" id="s-00-08-16-000" data-start="00:08:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This day has been really successful.</p>
+<p>今天非常成功。</p>
+<p><button class="play-button sentence" id="s-00-08-18-354" data-start="00:08:18,354" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been able to see so many things and explore the city really well, I think.</p>
+<p>我们看到了很多东西，也很好地探索了这座城市。</p>
+<p><button class="play-button sentence" id="s-00-08-23-291" data-start="00:08:23,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're getting kind of tired and hungry.</p>
+<p>但我们有点累也有点饿了。</p>
+<p><button class="play-button sentence" id="s-00-08-26-025" data-start="00:08:26,025" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think it's time for dinner.</p>
+<p>所以该吃晚饭了。</p>
+<p><button class="play-button sentence" id="s-00-08-28-000" data-start="00:08:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to a Roman restaurant called Trattoria da Anso al 29.</p>
+<p>我们要去一家叫Trattoria da Anso al 29的罗马餐厅。</p>
+<p><button class="play-button sentence" id="s-00-08-31-789" data-start="00:08:31,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're hoping that we can order like cacio e pepe or carbonara because we're really craving some pasta, spaghetti or something like that.</p>
+<p>我们希望能点奶酪胡椒意面或培根蛋面，因为我们现在超想吃意面、意大利面之类的。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959480" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-40-000" data-start="00:08:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It takes about 25 minutes to walk over there.</p>
+<p>步行到那里大约25分钟。</p>
+<p><button class="play-button sentence" id="s-00-08-42-534" data-start="00:08:42,534" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's located in Trastavaire neighborhood, which is supposed to be really nice.</p>
+<p>餐厅位于Trastavaire区，据说很不错。</p>
+<p><button class="play-button sentence" id="s-00-08-47-328" data-start="00:08:47,328" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're going to explore that more tomorrow.</p>
+<p>我们明天会进一步探索那里。</p>
+<p><button class="play-button sentence" id="s-00-08-50-000" data-start="00:08:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So very excited about that.</p>
+<p>所以非常期待。</p>
+<p><button class="play-button sentence" id="s-00-08-52-000" data-start="00:08:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were a bit shocked when we arrived at the restaurant because the line was insane.</p>
+<p>到达餐厅时我们有点震惊，因为队伍太长了。</p>
+<p><button class="play-button sentence" id="s-00-09-05-911" data-start="00:09:05,911" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've never seen a line this long for like a table out of restaurant.</p>
+<p>我从没见过为了一家餐厅排这么长的队。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959443" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-17-000" data-start="00:09:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, we're not going to wait for like two hours to get a table there.</p>
+<p>所以我们不打算等两小时就为吃顿饭。</p>
+<p><button class="play-button sentence" id="s-00-09-21-233" data-start="00:09:21,233" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think you can get decent pasta everywhere.</p>
+<p>我觉得到处都能吃到不错的意面。</p>
+<p><button class="play-button sentence" id="s-00-09-23-934" data-start="00:09:23,934" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's going to be fine.</p>
+<p>没问题的。</p>
+<p><button class="play-button sentence" id="s-00-09-25-248" data-start="00:09:25,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will find something nice.</p>
+<p>我们会找到好地方的。</p>
+<p><button class="play-button sentence" id="s-00-09-27-000" data-start="00:09:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a new day in Rome.</p>
+<p>罗马新的一天。</p>
+<p><button class="play-button sentence" id="s-00-09-31-382" data-start="00:09:31,382" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And today we are going to explore the Vatican city.</p>
+<p>今天我们要探索梵蒂冈城。</p>
+<p><button class="play-button sentence" id="s-00-09-41-608" data-start="00:09:41,608" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then later we are going to go to the neighborhood Trastavaire.</p>
+<p>之后我们会去Trastavaire区。</p>
+<p><button class="play-button sentence" id="s-00-09-55-000" data-start="00:09:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And probably something more very exciting.</p>
+<p>可能还有其他激动人心的安排。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959401" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-58-699" data-start="00:09:58,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we are going to start our day by having a panini.</p>
+<p>但我们要先吃个帕尼尼开启这一天。</p>
+<p><button class="play-button sentence" id="s-00-10-02-899" data-start="00:10:02,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We found a sandwich shop close to our hotel.</p>
+<p>我们在酒店附近找到一家三明治店。</p>
+<p><button class="play-button sentence" id="s-00-10-06-499" data-start="00:10:06,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, we're going to head out and grab some paninis.</p>
+<p>所以我们要出门去买些帕尼尼。</p>
+<p><button class="play-button sentence" id="s-00-10-25-000" data-start="00:10:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The paninis were very tasty and it was a great way to start the day.</p>
+<p>帕尼尼非常美味，是开启一天的好方式。</p>
+<p><button class="play-button sentence" id="s-00-10-31-545" data-start="00:10:31,545" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But however, we took a very bad decision and bought this kind of sound pellicino.</p>
+<p>但我们做了个错误的决定，买了这种叫pellicino的饮料。</p>
+<p><button class="play-button sentence" id="s-00-10-39-666" data-start="00:10:39,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We thought it would be like a bitter lemonade or something.</p>
+<p>我们以为它会是苦柠檬水之类的。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959354" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-45-606" data-start="00:10:45,606" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it tastes like a bad medicine.</p>
+<p>但尝起来像难喝的药。</p>
+<p><button class="play-button sentence" id="s-00-10-49-000" data-start="00:10:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't buy this at all.</p>
+<p>千万别买这个。</p>
+<p><button class="play-button sentence" id="s-00-10-51-181" data-start="00:10:51,181" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just don't buy it.</p>
+<p>千万别买。</p>
+<p><button class="play-button sentence" id="s-00-10-53-000" data-start="00:10:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have arrived in the Vatican city.</p>
+<p>我们到达了梵蒂冈城。</p>
+<p><button class="play-button sentence" id="s-00-10-59-363" data-start="00:10:59,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are currently waiting in line to get into the St. Peter's Basilica.</p>
+<p>我们正在排队进入圣彼得大教堂。</p>
+<p><button class="play-button sentence" id="s-00-11-11-666" data-start="00:11:11,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's free admission.</p>
+<p>这里是免费入场的。</p>
+<p><button class="play-button sentence" id="s-00-11-16-121" data-start="00:11:16,121" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the line is pretty long.</p>
+<p>队伍很长。</p>
+<p><button class="play-button sentence" id="s-00-11-21-000" data-start="00:11:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It goes pretty long but it goes by pretty quickly.</p>
+<p>虽然队伍长但移动得很快。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959315" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-24-604" data-start="00:11:24,604" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think it's only going to be like 20 minutes or something.</p>
+<p>所以我觉得大概只要20分钟左右。</p>
+<p><button class="play-button sentence" id="s-00-11-29-000" data-start="00:11:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are speechless after visiting the St. Peter's Basilica.</p>
+<p>参观完圣彼得大教堂后我们说不出话来。</p>
+<p><button class="play-button sentence" id="s-00-11-45-860" data-start="00:11:45,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We didn't expect it to be this magnificent.</p>
+<p>没想到它如此宏伟。</p>
+<p><button class="play-button sentence" id="s-00-11-58-000" data-start="00:11:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Honestly, it was so beautiful.</p>
+<p>说实话，太美了。</p>
+<p><button class="play-button sentence" id="s-00-12-00-000" data-start="00:12:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It doesn't look so big from the outside but when you get inside, it's just huge.</p>
+<p>从外面看没那么大，但进去后发现非常巨大。</p>
+<p><button class="play-button sentence" id="s-00-12-05-000" data-start="00:12:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were talking about that this was the biggest church that we've been to and then we figured out it is the biggest church in the world.</p>
+<p>我们讨论说这是我们去过最大的教堂，后来发现它确实是世界上最大的教堂。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-11-929" data-start="00:12:11,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that makes sense.</p>
+<p>这就说得通了。</p>
+<p><button class="play-button sentence" id="s-00-12-13-000" data-start="00:12:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was so amazing to be able to see the masterpieces inside the church.</p>
+<p>能看到教堂里的杰作真是太棒了。</p>
+<p><button class="play-button sentence" id="s-00-12-17-435" data-start="00:12:17,435" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example, Michelangelo, he designed the dome and it was so beautiful.</p>
+<p>比如米开朗基罗设计的穹顶，非常美丽。</p>
+<p><button class="play-button sentence" id="s-00-12-22-099" data-start="00:12:22,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also saw La Pieta, which is one of his most famous artworks.</p>
+<p>我们还看到了《圣殇》，是他最著名的作品之一。</p>
+<p><button class="play-button sentence" id="s-00-12-26-000" data-start="00:12:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, St. Peter's Basilica is definitely a must visit if you're here in Rome.</p>
+<p>所以如果你来罗马，圣彼得大教堂绝对值得一游。</p>
+<p><button class="play-button sentence" id="s-00-12-30-569" data-start="00:12:30,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And especially since it's free admission so there's no excuse for not going.</p>
+<p>尤其是免费入场，没有理由不去。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959245" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-35-000" data-start="00:12:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are going to have a walk and we were thinking about having some tiramisu.</p>
+<p>所以我们要散散步，考虑吃点提拉米苏。</p>
+<p><button class="play-button sentence" id="s-00-12-40-702" data-start="00:12:40,702" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got recommended a place called Two Sizes.</p>
+<p>有人推荐了一家叫Two Sizes的店。</p>
+<p><button class="play-button sentence" id="s-00-12-44-000" data-start="00:12:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And apparently it's supposed to be the best tiramisu in Rome.</p>
+<p>据说是罗马最好吃的提拉米苏。</p>
+<p><button class="play-button sentence" id="s-00-12-48-172" data-start="00:12:48,172" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you guys know that we love tiramisu.</p>
+<p>你们知道我们超爱提拉米苏。</p>
+<p><button class="play-button sentence" id="s-00-12-50-872" data-start="00:12:50,872" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we need to go and give it a try.</p>
+<p>所以必须去尝尝。</p>
+<p><button class="play-button sentence" id="s-00-12-56-000" data-start="00:12:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are going to have a look at the tiramisu.</p>
+<p>我们要去看看提拉米苏。</p>
+<p><button class="play-button sentence" id="s-00-13-08-000" data-start="00:13:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very, very tasty but I don't think it's the best one I've had.</p>
+<p>非常非常好吃，但不是我吃过最好吃的。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959207" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-13-000" data-start="00:13:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, the pistachio one is really good.</p>
+<p>好吧，开心果味的确实不错。</p>
+<p><button class="play-button sentence" id="s-00-13-15-851" data-start="00:13:15,851" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess it's called Two Sizes because they have two sizes.</p>
+<p>我猜它叫Two Sizes是因为有两种尺寸。</p>
+<p><button class="play-button sentence" id="s-00-13-20-000" data-start="00:13:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got a big one.</p>
+<p>我们买了大份的。</p>
+<p><button class="play-button sentence" id="s-00-13-21-197" data-start="00:13:21,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw people walking with a small one and we were like, that's way too small.</p>
+<p>看到别人拿着小份的，我们觉得太小了。</p>
+<p><button class="play-button sentence" id="s-00-13-51-000" data-start="00:13:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were on our way to go to Trasteveer, the neighborhood that we planned on visiting today.</p>
+<p>我们正要去Trasteveer区，这是今天计划要去的。</p>
+<p><button class="play-button sentence" id="s-00-14-04-000" data-start="00:14:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we decided to take a little detour and visit the Gianni Coulomb Hill, which is like a scenic spot where you get a panoramic view over Rome.</p>
+<p>但我们决定绕道去Gianni Coulomb山，这是个能俯瞰罗马全景的景点。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959145" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-15-000" data-start="00:14:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it is so beautiful but it was a very steep hill to get here.</p>
+<p>这里非常美，但上山的路很陡。</p>
+<p><button class="play-button sentence" id="s-00-14-19-929" data-start="00:14:19,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's like 34 degrees.</p>
+<p>而且气温有34度。</p>
+<p><button class="play-button sentence" id="s-00-14-22-000" data-start="00:14:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are so wetting very much.</p>
+<p>所以我们出了很多汗。</p>
+<p><button class="play-button sentence" id="s-00-14-46-000" data-start="00:14:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we have been strolling the streets here in Trasteveer and it's such a cute neighborhood.</p>
+<p>我们在Trasteveer区闲逛，这个街区非常可爱。</p>
+<p><button class="play-button sentence" id="s-00-15-00-000" data-start="00:15:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's filled with restaurants, cafes, bars and we even found a couple of vintage stores that were really nice.</p>
+<p>到处都是餐厅、咖啡馆、酒吧，我们还发现了几家不错的古着店。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959091" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-09-000" data-start="00:15:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I honestly think that the heat is kind of getting to us.</p>
+<p>但说实话，高温让我们有点受不了。</p>
+<p><button class="play-button sentence" id="s-00-15-12-388" data-start="00:15:12,388" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are just a little bit tired and exhausted.</p>
+<p>我们有点累和疲惫。</p>
+<p><button class="play-button sentence" id="s-00-15-15-000" data-start="00:15:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also been walking around so much.</p>
+<p>我们也走了很多路。</p>
+<p><button class="play-button sentence" id="s-00-15-17-302" data-start="00:15:17,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By the way, we haven't really been taking any public transport.</p>
+<p>顺便说，我们基本没坐公共交通。</p>
+<p><button class="play-button sentence" id="s-00-15-21-000" data-start="00:15:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been walking almost the whole time here.</p>
+<p>几乎全程都在步行。</p>
+<p><button class="play-button sentence" id="s-00-15-24-943" data-start="00:15:24,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were planning on buying like a weekly pass or 72 hour pass.</p>
+<p>本来打算买周票或72小时票。</p>
+<p><button class="play-button sentence" id="s-00-15-30-000" data-start="00:15:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I would rather walk and just get some fresh air and see the beautiful surroundings here.</p>
+<p>但我宁愿走路呼吸新鲜空气，欣赏这里的美景。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959064" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-36-000" data-start="00:15:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have already made a reservation at a place called Marucià, which is an Italian pizza place and the pizzas there look delicious.</p>
+<p>我们已经预订了一家叫Marucià的意大利披萨店，那里的披萨看起来很好吃。</p>
+<p><button class="play-button sentence" id="s-00-15-44-000" data-start="00:15:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we were also thinking about having soupli, which is an Italian appetizer, which is like a ball of rice with tomato sauce and it's like deep fried.</p>
+<p>我们还考虑点supplì，这是一种意大利开胃菜，像是裹着番茄酱的饭团油炸而成。</p>
+<p><button class="play-button sentence" id="s-00-15-53-000" data-start="00:15:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also looks delicious.</p>
+<p>看起来也很美味。</p>
+<p><button class="play-button sentence" id="s-00-15-55-000" data-start="00:15:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we are just going to walk over there.</p>
+<p>所以我们这就走过去。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208959042" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-58-000" data-start="00:15:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our table is in like 15 minutes.</p>
+<p>我们的座位大约15分钟后可用。</p>
+<p><button class="play-button sentence" id="s-00-16-00-437" data-start="00:16:00,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm so hungry, very excited for some pizza.</p>
+<p>我饿坏了，非常期待披萨。</p>
+<p><button class="play-button sentence" id="s-00-16-06-000" data-start="00:16:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We arrived to our hotel room and it feels so good.</p>
+<p>我们回到酒店房间，感觉真好。</p>
+<p><button class="play-button sentence" id="s-00-16-18-195" data-start="00:16:18,195" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can't wait to take a shower and just snuggle in bed.</p>
+<p>等不及要洗个澡然后窝在床上。</p>
+<p><button class="play-button sentence" id="s-00-16-32-000" data-start="00:16:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the pizza was really good.</p>
+<p>不过披萨真的很好吃。</p>
+<p><button class="play-button sentence" id="s-00-16-34-000" data-start="00:16:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was very fluffy.</p>
+<p>非常松软。</p>
+<p><button class="play-button sentence" id="s-00-16-35-279" data-start="00:16:35,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the fluffiest pizza we've ever had.</p>
+<p>是我们吃过最松软的披萨。</p>
+<p><button class="play-button sentence" id="s-00-16-38-000" data-start="00:16:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Overall, our trip in Rome has been so fantastic.</p>
+<p>总的来说，我们的罗马之旅太棒了。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208958998" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-42-000" data-start="00:16:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Honestly, I wouldn't have bought this t-shirt if it wasn't true because we have fallen in love with the city.</p>
+<p>说实话，如果不是真的爱上这座城市，我也不会买这件T恤。</p>
+<p><button class="play-button sentence" id="s-00-16-51-000" data-start="00:16:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just so amazing in many ways.</p>
+<p>它在很多方面都很棒。</p>
+<p><button class="play-button sentence" id="s-00-16-55-000" data-start="00:16:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first and foremost, it's kind of unreal to be surrounded by the city's history.</p>
+<p>首先，被这座城市的历史包围感觉很不真实。</p>
+<p><button class="play-button sentence" id="s-00-16-59-842" data-start="00:16:59,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's so cool to be learning about it and visiting all of these phenomenal places here in Rome.</p>
+<p>在罗马学习和参观所有这些非凡的地方真是太棒了。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208958974" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-05-245" data-start="00:17:05,245" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're just endless almost.</p>
+<p>它们几乎无穷无尽。</p>
+<p><button class="play-button sentence" id="s-00-17-07-000" data-start="00:17:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, we can't forget about the food here.</p>
+<p>当然，我们不能忘记这里的美食。</p>
+<p><button class="play-button sentence" id="s-00-17-10-023" data-start="00:17:10,023" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's so delicious.</p>
+<p>它非常美味。</p>
+<p><button class="play-button sentence" id="s-00-17-11-175" data-start="00:17:11,175" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can almost go to any place and you will guarantee it gets some delicious food.</p>
+<p>你几乎可以去任何地方，保证能吃到美味的食物。</p>
+<p><button class="play-button sentence" id="s-00-17-16-000" data-start="00:17:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we just really like the vibe here.</p>
+<p>我们真的很喜欢这里的氛围。</p>
+<p><button class="play-button sentence" id="s-00-17-19-061" data-start="00:17:19,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think honestly, Rome is a very high ranked city on our list.</p>
+<p>老实说，我认为罗马在我们的榜单上排名很高。</p>
+<p><button class="play-button sentence" id="s-00-17-24-000" data-start="00:17:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But yeah, we are very tired after this very warm day of walking.</p>
+<p>但是，是的，在这个非常炎热的步行一天后，我们非常疲惫。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208958949" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-30-117" data-start="00:17:30,117" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we had so much fun here in Rome and we will for sure be back.</p>
+<p>但我们在罗马玩得非常开心，我们一定会再来。</p>
+<p><button class="play-button sentence" id="s-00-17-36-000" data-start="00:17:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I will be wearing this t-shirt till the day I die.</p>
+<p>我会一直穿着这件T恤，直到我死去的那一天。</p>
+<p><button class="play-button sentence" id="s-00-17-41-000" data-start="00:17:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our next destination is going to be... Nice in France.</p>
+<p>我们的下一个目的地将是……法国的尼斯。</p>
+<p><button class="play-button sentence" id="s-00-17-49-000" data-start="00:17:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we are very, very excited.</p>
+<p>我们非常非常兴奋。</p>
+<p><button class="play-button sentence" id="s-00-17-51-586" data-start="00:17:51,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are going to be laying by the beach, bathing in the sun and just relaxing.</p>
+<p>我们将躺在海滩上，沐浴阳光，放松身心。</p>
+<p><button class="play-button sentence" id="s-00-17-58-000" data-start="00:17:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We definitely need some relaxing, so it's going to be so nice.</p>
+<p>我们确实需要放松一下，所以这将非常美好。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1udbEzfE6z/?t=-2208958919" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-01-000" data-start="00:18:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we'll see you guys next week in France.</p>
+<p>所以我们下周在法国见。</p>
+<p><button class="play-button sentence" id="s-00-18-06-368" data-start="00:18:06,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye!</p>
+<p>再见！</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
