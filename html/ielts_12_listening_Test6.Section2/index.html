@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Munich Theatre Tour: Finalized Plans and Exciting Itinerary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A man details the finalized plans for a group's theatre tour in Munich, including flight arrangements, hotel costs, and daily activities. The itinerary features a castle visit, a Lebanese dinner, and meetings with theatre professionals. Attendees will experience diverse plays, from a modern premiere to an outdoor garden performance, culminating in a historic Old Town Hall show.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Munich Theatre Tour: Finalized Plans and Exciting Itinerary</h1>
+<p>【慕尼黑戏剧之旅：行程亮点揭秘 | 110欧超值住宿 | 首映夜+古堡探秘】</p>
+<p>Summary:
+A man details the finalized plans for a group's theatre tour in Munich, including flight arrangements, hotel costs, and daily activities. The itinerary features a castle visit, a Lebanese dinner, and meetings with theatre professionals. Attendees will experience diverse plays, from a modern premiere to an outdoor garden performance, culminating in a historic Old Town Hall show.</p>
+<p>摘要：
+一位男士详细介绍了慕尼黑戏剧之旅的最终计划，包括航班安排、酒店费用和每日活动。行程涵盖古堡游览、黎巴嫩晚餐及与戏剧专业人士的会面。团队将体验多元戏剧——从现代首映剧到户外花园演出，最终在历史悠久的旧市政厅观看谢幕表演。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Section 2.</p>
+<p>第二节。</p>
+<p><button class="play-button sentence" id="s-00-00-03-200" data-start="00:00:03,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You will hear a man talking to a group of people about a Torah theatre in the city of Munich in Germany that he has arranged for them.</p>
+<p>你将听到一位男士向一群人介绍他为他们在德国慕尼黑安排的托拉剧院活动。</p>
+<p><button class="play-button sentence" id="s-00-00-14-919" data-start="00:00:14,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, you have some time to look at questions 11 to 15.</p>
+<p>首先，你们有一些时间浏览第11至15题。</p>
+<p><button class="play-button sentence" id="s-00-00-30-000" data-start="00:00:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now listen carefully and answer questions 11 to 15.</p>
+<p>现在请仔细听并回答第11至15题。</p>
+<p><button class="play-button sentence" id="s-00-00-55-399" data-start="00:00:55,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right, I've now almost succeeded in finalising plans for our tour, so I'll bring you up to date with what I know.</p>
+<p>好的，我已经基本完成了我们旅行的计划，现在向大家汇报最新进展。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959926" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-13-319" data-start="00:01:13,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you know, we're flying first to Munich on Monday the 4th.</p>
+<p>如你们所知，我们将在4日星期一飞往慕尼黑。</p>
+<p><button class="play-button sentence" id="s-00-01-19-959" data-start="00:01:19,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The flight is at 11.30, so it's too early to have lunch at the airport.</p>
+<p>航班在11:30起飞，所以在机场吃午餐太早了。</p>
+<p><button class="play-button sentence" id="s-00-01-26-838" data-start="00:01:26,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I suggest we meet there for coffee at 10, which should give us plenty of time for breakfast before we leave home.</p>
+<p>我建议我们10点在机场喝咖啡，这样出发前有充足时间吃早餐。</p>
+<p><button class="play-button sentence" id="s-00-01-37-280" data-start="00:01:37,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we arrive in Munich, we'll be met at the airport by Klaus Bauer.</p>
+<p>抵达慕尼黑时，克劳斯·鲍尔会在机场接我们。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-43-959" data-start="00:01:43,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Klaus works for a tour operator and he'll look after us for the time we'll be in Germany.</p>
+<p>克劳斯为一家旅行社工作，他在德国期间会照顾我们。</p>
+<p><button class="play-button sentence" id="s-00-01-51-599" data-start="00:01:51,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's already liaised with the managers of the theatres we're going to visit, and he's also arranged for an officer of the National Theatre in Munich to show us round the theatre one afternoon during our stay.</p>
+<p>他已经联系了我们要参观的剧院经理，还安排了慕尼黑国家剧院的一位官员在我们停留期间的某个下午带我们参观剧院。</p>
+<p><button class="play-button sentence" id="s-00-02-07-719" data-start="00:02:07,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, last time we discussed this trip, I didn't have the precise cost for hotel rooms, but now I have.</p>
+<p>上次讨论这次旅行时，我还没有酒店房间的准确价格，但现在有了。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959863" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-16-840" data-start="00:02:16,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The normal rate at the hotel where we're staying is 150 euros a night for a double room.</p>
+<p>我们入住的酒店双人间通常价格是每晚150欧元。</p>
+<p><button class="play-button sentence" id="s-00-02-24-878" data-start="00:02:24,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd hoped to get that down to 120 euros, but in fact I've been able to negotiate a rate of 110.</p>
+<p>我原本希望能降到120欧元，但实际上我谈到了110欧元。</p>
+<p><button class="play-button sentence" id="s-00-02-35-120" data-start="00:02:35,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That'll be reflected in the final payment which you'll need to make by the end of this week.</p>
+<p>这会在你们本周截止的最终付款中体现。</p>
+<p><button class="play-button sentence" id="s-00-02-42-120" data-start="00:02:42,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Tuesday, the day after our arrival, I had hoped we could sit in on a rehearsal at one of the theatres, but unfortunately that's proved very difficult to arrange.</p>
+<p>周二，也就是抵达后的第二天，我原本希望我们能旁听一家剧院的排练，但遗憾的是这很难安排。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959823" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-56-560" data-start="00:02:56,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So instead we'll have a coach trip to one of the amazing castles in the mountains south of Munich.</p>
+<p>因此，我们将改为乘大巴前往慕尼黑南部山区的一座壮观城堡。</p>
+<p><button class="play-button sentence" id="s-00-03-05-038" data-start="00:03:05,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Tuesday evening we'll all have dinner together in a restaurant near our hotel.</p>
+<p>周二晚上我们会在酒店附近的一家餐厅共进晚餐。</p>
+<p><button class="play-button sentence" id="s-00-03-11-598" data-start="00:03:11,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From talking to you all about your preferences, it was clear that a typical local restaurant would be to meet oriented for some of you.</p>
+<p>通过和大家的交流，我发现对某些人来说典型的当地餐厅可能不太合适。</p>
+<p><button class="play-button sentence" id="s-00-03-23-318" data-start="00:03:23,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of you suggested an Italian restaurant, but I must confess that I decided to book a Lebanese one as we have plenty of opportunities to go to an Italian restaurant at home.</p>
+<p>有些人提议意大利餐厅，但我必须承认我决定订一家黎巴嫩餐厅，因为我们在家有很多机会去意大利餐厅。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959782" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-37-118" data-start="00:03:37,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Wednesday afternoon, the director of the play we're going to see that evening will talk to us at the theatre.</p>
+<p>周三下午，我们当晚要看的戏剧的导演会在剧院与我们交流。</p>
+<p><button class="play-button sentence" id="s-00-03-45-598" data-start="00:03:45,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She'll describe the whole process of producing a play, including how she chose the actors, and as the play we're going to see is a modern one how she worked with the playwright.</p>
+<p>她会介绍制作一部戏剧的全过程，包括如何选角，以及由于我们要看的是一部现代戏剧，她如何与剧作家合作。</p>
+<p><button class="play-button sentence" id="s-00-04-00-919" data-start="00:04:00,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before you hear the rest of the talk, you have some time to look at questions 16 to 20.</p>
+<p>在听接下来的内容前，你们有一些时间浏览第16至20题。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959729" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-30-920" data-start="00:04:30,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now listen and answer questions 16 to 20.</p>
+<p>现在请听并回答第16至20题。</p>
+<p><button class="play-button sentence" id="s-00-04-37-920" data-start="00:04:37,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right, now I'd just like to make a few points about the plays we're going to see, partly because it might influence your choice of clothes to take with you.</p>
+<p>好的，现在我想简单谈谈我们要看的戏剧，部分原因是这可能会影响你们的着装选择。</p>
+<p><button class="play-button sentence" id="s-00-04-52-920" data-start="00:04:52,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The play we're seeing on Wednesday evening is a modern one, and we're going to the premiere.</p>
+<p>周三晚上我们要看的是一部现代戏剧的首演。</p>
+<p><button class="play-button sentence" id="s-00-04-59-920" data-start="00:04:59,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it'll be quite a dressy occasion, though of course you don't have to dress formally.</p>
+<p>所以这会是一个比较正式的场合，当然你们不必穿得太正式。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959693" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-06-920" data-start="00:05:06,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I gather it's rather a multimedia production with amazing lighting effects and a soundtrack of electronic music, though unfortunately the playwright is ill and is unlikely to be able to attend.</p>
+<p>我了解到这是一部多媒体制作，灯光效果惊艳，配乐是电子音乐，但遗憾的是剧作家生病了，可能无法出席。</p>
+<p><button class="play-button sentence" id="s-00-05-22-920" data-start="00:05:22,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Thursday we're seeing a play that was first performed last year when it was commissioned to mark a hundred years since the birth in the town of a well-known scientist.</p>
+<p>周四我们要看的是一部去年首演的戏剧，当时是为了纪念一位著名科学家在该镇诞辰一百周年而委托创作的。</p>
+<p><button class="play-button sentence" id="s-00-05-34-920" data-start="00:05:34,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to see a revival of that production, which aroused a lot of interest.</p>
+<p>我们将观看这部作品的重演，它曾引起很大关注。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959658" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-41-920" data-start="00:05:41,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Friday's play will really make you think hard about what clothes to pack, as it'll be in the garden of a palace.</p>
+<p>周五的戏剧会让大家认真考虑带什么衣服，因为它将在宫殿的花园里演出。</p>
+<p><button class="play-button sentence" id="s-00-05-49-920" data-start="00:05:49,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a beautiful setting, but I'd better warn you, there won't be much protection from the wind.</p>
+<p>环境很美，但我得提醒你们，那里没什么挡风的地方。</p>
+<p><button class="play-button sentence" id="s-00-05-57-920" data-start="00:05:57,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On Saturday we're going by coach to a theatre in another town, not far from Munich.</p>
+<p>周六我们将乘大巴前往慕尼黑附近另一个镇的一家剧院。</p>
+<p><button class="play-button sentence" id="s-00-06-04-920" data-start="00:06:04,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This will be the opening of a drama festival, and the mayor and all the other dignitaries of the town will be attending.</p>
+<p>这将是戏剧节的开幕式，镇长和镇上的其他要员都会出席。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959625" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-14-920" data-start="00:06:14,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After the performance, the mayor is hosting a reception for all the audience, and there'll be a band playing traditional music of the region.</p>
+<p>演出结束后，镇长将为所有观众举办招待会，还有乐队演奏当地传统音乐。</p>
+<p><button class="play-button sentence" id="s-00-06-24-920" data-start="00:06:24,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And after having a day off on Sunday, our final play is on Monday, and it's in the stunning setting of the Old Town Hall, which dates back to the 14th century.</p>
+<p>周日休息一天后，我们最后一场戏剧在周一，地点是令人惊叹的14世纪老市政厅。</p>
+<p><button class="play-button sentence" id="s-00-06-37-920" data-start="00:06:37,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The performance marks the 50 years that the lead actor has been on stage, and the play is the one where he made his first professional appearance all those years ago.</p>
+<p>这场演出是为了纪念男主角登台50周年，而这部戏剧正是他多年前首次职业亮相的作品。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=2?t=-2208959589" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-50-920" data-start="00:06:50,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the day after that, we'll be flying back home.</p>
+<p>之后的一天，我们将飞回家。</p>
+<p><button class="play-button sentence" id="s-00-06-57-309" data-start="00:06:57,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, have you got any questions before I...</p>
+<p>现在，在我……之前，你们有什么问题吗？</p>
+<p><button class="play-button sentence" id="s-00-07-02-920" data-start="00:07:02,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is the end of section 2.</p>
+<p>第二节到此结束。</p>
+<p><button class="play-button sentence" id="s-00-07-06-205" data-start="00:07:06,205" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You now have half a minute to check your answers.</p>
+<p>现在你们有半分钟时间检查答案。</p>
+<p><button class="play-button sentence" id="s-00-07-32-920" data-start="00:07:32,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now turn to section 3.</p>
+<p>现在请翻到第三节。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

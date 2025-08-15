@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>A Student's Journey into Scandinavian Studies: From Danish Roots to Icelandic Dreams</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="James, a student with Danish heritage, discusses his Scandinavian studies with tutor Beth Cartwright. He shares his motivation for the course, plans to study in Iceland, and interest in journalism. They explore course options, literature paper topics, and effective research methods for academic writing.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>A Student's Journey into Scandinavian Studies: From Danish Roots to Icelandic Dreams</h1>
+<p>【丹麦血统点燃北欧梦｜留学生对话导师全记录｜冰岛文学VS丹麦电视课程】</p>
+<p>Summary:
+James, a student with Danish heritage, discusses his Scandinavian studies with tutor Beth Cartwright. He shares his motivation for the course, plans to study in Iceland, and interest in journalism. They explore course options, literature paper topics, and effective research methods for academic writing.</p>
+<p>摘要：
+拥有丹麦血统的詹姆斯与导师贝丝探讨北欧研究课程。他透露选择该专业的家庭渊源，表达对冰岛留学的向往和从事新闻业的志向。对话涉及学期课程安排、文学论文选题技巧，以及如何高效开展学术研究的实用建议。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959970" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-30-000" data-start="00:00:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now listen carefully and answer questions 21 to 25.</p>
+<p>请仔细听并回答第21至25题。</p>
+<p><button class="play-button sentence" id="s-00-01-01-000" data-start="00:01:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh good morning, you must be James.</p>
+<p>早上好，你一定是詹姆斯吧。</p>
+<p><button class="play-button sentence" id="s-00-01-04-171" data-start="00:01:04,171" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Beth Cartwright, please call me Beth.</p>
+<p>我是贝丝·卡特赖特，请叫我贝丝。</p>
+<p><button class="play-button sentence" id="s-00-01-08-000" data-start="00:01:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-01-09-000" data-start="00:01:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now as this is your first tutorial since you started on the Scandinavian studies course, I'd like to find out something about you.</p>
+<p>既然这是你开始北欧研究课程后的第一次辅导课，我想了解一下你的情况。</p>
+<p><button class="play-button sentence" id="s-00-01-17-575" data-start="00:01:17,575" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why did you decide to take this course?</p>
+<p>你为什么决定选这门课？</p>
+<p><button class="play-button sentence" id="s-00-01-20-000" data-start="00:01:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well my mother is Danish and although we always lived in England, she used to talk about her home a lot and that made me want to visit Denmark.</p>
+<p>我母亲是丹麦人，尽管我们一直住在英格兰，但她经常谈论她的家乡，这让我想去丹麦看看。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959910" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-30-000" data-start="00:01:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We hardly ever did though.</p>
+<p>但我们几乎没去过。</p>
+<p><button class="play-button sentence" id="s-00-01-32-200" data-start="00:01:32,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My mother usually went on her own.</p>
+<p>我母亲通常独自去。</p>
+<p><button class="play-button sentence" id="s-00-01-35-000" data-start="00:01:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But whenever her relations or friends were in England, they always came to see us.</p>
+<p>但每当她的亲戚或朋友来英格兰时，他们总会来看我们。</p>
+<p><button class="play-button sentence" id="s-00-01-40-000" data-start="00:01:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I see.</p>
+<p>我明白了。</p>
+<p><button class="play-button sentence" id="s-00-01-40-428" data-start="00:01:40,428" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I assume you already speak Danish, one of the languages you'll be studying?</p>
+<p>所以我猜你已经会说丹麦语了，这是你将学习的语言之一？</p>
+<p><button class="play-button sentence" id="s-00-01-46-000" data-start="00:01:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can get by when I talk to people, though I'm not terribly accurate.</p>
+<p>我和人交流时能应付，但不是很准确。</p>
+<p><button class="play-button sentence" id="s-00-01-52-000" data-start="00:01:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now you probably know that you'll spend the third year of the course abroad.</p>
+<p>你可能知道，你将在国外度过课程的第三年。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959883" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you had any thoughts about that?</p>
+<p>你有什么想法吗？</p>
+<p><button class="play-button sentence" id="s-00-01-59-000" data-start="00:01:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm really looking forward to it.</p>
+<p>我非常期待。</p>
+<p><button class="play-button sentence" id="s-00-02-01-000" data-start="00:02:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And although Denmark seems the obvious place to go because of my family connections, I'd love to spend the time in Iceland.</p>
+<p>尽管由于家庭关系，丹麦似乎是显而易见的选择，但我更想去冰岛度过这段时间。</p>
+<p><button class="play-button sentence" id="s-00-02-09-000" data-start="00:02:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh I'm sure it can be arranged.</p>
+<p>哦，我相信可以安排。</p>
+<p><button class="play-button sentence" id="s-00-02-12-000" data-start="00:02:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you have any plans for when you graduate?</p>
+<p>你毕业后有什么计划吗？</p>
+<p><button class="play-button sentence" id="s-00-02-14-842" data-start="00:02:14,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of students go on to take a master's degree.</p>
+<p>很多学生会继续攻读硕士学位。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959862" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-18-000" data-start="00:02:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the four years of the undergraduate course will be enough for me.</p>
+<p>我觉得本科四年的课程对我来说足够了。</p>
+<p><button class="play-button sentence" id="s-00-02-23-000" data-start="00:02:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm interested in journalism and I quite like the idea of moving to Scandinavia and writing for magazines.</p>
+<p>我对新闻感兴趣，也很喜欢搬到北欧为杂志撰稿的想法。</p>
+<p><button class="play-button sentence" id="s-00-02-30-000" data-start="00:02:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd find that more creative than translating, which I suppose most graduates do.</p>
+<p>我觉得这比翻译更有创意，我想大多数毕业生都会选择翻译。</p>
+<p><button class="play-button sentence" id="s-00-02-36-000" data-start="00:02:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-02-36-416" data-start="00:02:36,416" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now how are you finding the courses you're taking this term James?</p>
+<p>詹姆斯，你这学期选的课程感觉如何？</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959839" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-41-000" data-start="00:02:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well I'm really enjoying the one on Swedish cinema.</p>
+<p>我很喜欢关于瑞典电影的那门课。</p>
+<p><button class="play-button sentence" id="s-00-02-45-000" data-start="00:02:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll just have to settle continue next term.</p>
+<p>我下学期还得继续坚持。</p>
+<p><button class="play-button sentence" id="s-00-02-48-000" data-start="00:02:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the one on Scandinavian literature that's running at the moment will be replaced by more specialized courses.</p>
+<p>但目前开设的北欧文学课将被更专业的课程取代。</p>
+<p><button class="play-button sentence" id="s-00-02-54-000" data-start="00:02:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh and by the way, if you're interested in watching Danish television programs, there's going to be a course on that the term after next.</p>
+<p>对了，如果你对看丹麦电视节目感兴趣，下下学期会有一门相关课程。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-03-000" data-start="00:03:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That sounds good.</p>
+<p>听起来不错。</p>
+<p><button class="play-button sentence" id="s-00-03-05-000" data-start="00:03:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you started thinking about the literature paper that you have to write in the next few weeks?</p>
+<p>你有没有开始考虑接下来几周要写的文学论文？</p>
+<p><button class="play-button sentence" id="s-00-03-09-000" data-start="00:03:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, my first choice would be to do something on the Icelandic sagas.</p>
+<p>有，我的首选是写关于冰岛传奇的内容。</p>
+<p><button class="play-button sentence" id="s-00-03-14-000" data-start="00:03:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The trouble with that is that a lot of people choose that topic and it can be difficult to get hold of the books you'll need.</p>
+<p>问题是很多人选这个主题，而且很难找到需要的书。</p>
+<p><button class="play-button sentence" id="s-00-03-22-000" data-start="00:03:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why not leave that for another time?</p>
+<p>为什么不留到以后呢？</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959795" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-24-500" data-start="00:03:24,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right.</p>
+<p>好吧。</p>
+<p><button class="play-button sentence" id="s-00-03-25-000" data-start="00:03:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You might find modern novels or 19th century playwrights interesting.</p>
+<p>你可能会觉得现代小说或19世纪剧作家的作品很有趣。</p>
+<p><button class="play-button sentence" id="s-00-03-29-000" data-start="00:03:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've read or seen several plays in translation so that would be a good idea.</p>
+<p>我读过或看过几部翻译的戏剧，所以这是个好主意。</p>
+<p><button class="play-button sentence" id="s-00-03-35-000" data-start="00:03:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fine. I'll put you down for that topic.</p>
+<p>好的，我会记下你选这个主题。</p>
+<p><button class="play-button sentence" id="s-00-03-38-000" data-start="00:03:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. So what would you advise me to aim at in the paper?</p>
+<p>那么，你建议我在论文中关注什么？</p>
+<p><button class="play-button sentence" id="s-00-03-42-000" data-start="00:03:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, I suggest you avoid taking one writer and going into a great deal of detail.</p>
+<p>首先，我建议你不要只选一位作家并深入细节。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959773" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-47-000" data-start="00:03:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That approach certainly has its place, but I think you first need to get an understanding of the literature in the context of the society in which it was produced.</p>
+<p>这种方法当然有其价值，但我认为你首先需要理解文学在其产生的社会背景下的意义。</p>
+<p><button class="play-button sentence" id="s-00-03-57-000" data-start="00:03:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who it was written for, how it was published and so on.</p>
+<p>它是为谁写的，如何出版的等等。</p>
+<p><button class="play-button sentence" id="s-00-04-00-000" data-start="00:04:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I also think that's more fruitful than placing it within the history of the genre.</p>
+<p>我也认为这比将其置于类型史中更有成果。</p>
+<p><button class="play-button sentence" id="s-00-04-05-000" data-start="00:04:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. That sounds reasonable.</p>
+<p>好的，听起来有道理。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959752" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-08-000" data-start="00:04:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before you hear the rest of the discussion, you have some time to look at questions 26 to 30.</p>
+<p>在听接下来的讨论之前，你有时间看一下第26至30题。</p>
+<p><button class="play-button sentence" id="s-00-04-39-000" data-start="00:04:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now listen and answer questions 26 to 30.</p>
+<p>现在请听并回答第26至30题。</p>
+<p><button class="play-button sentence" id="s-00-04-49-000" data-start="00:04:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could I ask for some advice about writing the paper I'm working on about the Vikings?</p>
+<p>我能请教一下关于我正在写的维京人论文的建议吗？</p>
+<p><button class="play-button sentence" id="s-00-04-54-000" data-start="00:04:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have to do that this week and I'm a bit stuck.</p>
+<p>我这周必须完成，但有点卡住了。</p>
+<p><button class="play-button sentence" id="s-00-04-58-000" data-start="00:04:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course. Have you decided yet what to write about?</p>
+<p>当然。你决定写什么了吗？</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-000" data-start="00:05:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, I haven't. There's so much that seems interesting.</p>
+<p>还没有。有很多内容看起来很有趣。</p>
+<p><button class="play-button sentence" id="s-00-05-05-000" data-start="00:05:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vikings settlement in other countries, trade, mythology.</p>
+<p>维京人在其他国家的定居、贸易、神话。</p>
+<p><button class="play-button sentence" id="s-00-05-09-000" data-start="00:05:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, what I suggest is that you read an assignment a student wrote last year, which is kept in the library.</p>
+<p>我建议你读一下去年一位学生写的作业，图书馆里有存档。</p>
+<p><button class="play-button sentence" id="s-00-05-16-000" data-start="00:05:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's short and well-focused and I'm sure you'll find it helpful.</p>
+<p>它简短且重点突出，我相信你会觉得有帮助。</p>
+<p><button class="play-button sentence" id="s-00-05-20-000" data-start="00:05:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll give you the details in a moment.</p>
+<p>我稍后给你详细信息。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-23-000" data-start="00:05:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Textbooks usually cover so many topics. It can be very difficult to choose just one.</p>
+<p>教科书通常涵盖很多主题，很难只选一个。</p>
+<p><button class="play-button sentence" id="s-00-05-28-000" data-start="00:05:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. I've got a DVD of the film about the Vikings that came out earlier this year. Should I watch that again?</p>
+<p>好的。我有今年早些时候上映的关于维京人的电影的DVD，我应该再看一遍吗？</p>
+<p><button class="play-button sentence" id="s-00-05-36-000" data-start="00:05:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If it's the one I am thinking of, I'd ignore it. It's more fantasy than reality.</p>
+<p>如果是我想到的那部，我会忽略它。它更像是幻想而非现实。</p>
+<p><button class="play-button sentence" id="s-00-05-43-000" data-start="00:05:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I've got a recording of a documentary that you should watch.</p>
+<p>但我有一部纪录片的录像，你应该看看。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959654" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-46-000" data-start="00:05:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It makes some interesting and provocative points, which I think will help you to focus your topic.</p>
+<p>它提出了一些有趣且有争议的观点，我认为会帮助你聚焦主题。</p>
+<p><button class="play-button sentence" id="s-00-05-52-000" data-start="00:05:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right. So then should I work out an outline?</p>
+<p>好的。那么我应该先列个提纲吗？</p>
+<p><button class="play-button sentence" id="s-00-05-56-000" data-start="00:05:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes. Just headings for different sections at this stage.</p>
+<p>是的。现阶段只需列出不同部分的标题。</p>
+<p><button class="play-button sentence" id="s-00-06-00-000" data-start="00:06:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then you should start looking for suitable articles and books to draw on.</p>
+<p>然后你应该开始寻找合适的文章和书籍作为参考。</p>
+<p><button class="play-button sentence" id="s-00-06-04-000" data-start="00:06:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And take notes which you organize according to those headings.</p>
+<p>并根据这些标题整理笔记。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12wbJz9EGe/?p=3?t=-2208959632" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-08-000" data-start="00:06:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I see. Then put short phrases and sentences as bullet points under each heading.</p>
+<p>明白了。然后在每个标题下用短句或短语作为要点。</p>
+<p><button class="play-button sentence" id="s-00-06-13-000" data-start="00:06:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Make sure that this skeleton makes sense and flows properly before writing up the paper in full.</p>
+<p>在完整撰写论文之前，确保这个框架合理且流畅。</p>
+<p><button class="play-button sentence" id="s-00-06-19-000" data-start="00:06:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. Thanks. That's very helpful.</p>
+<p>好的。谢谢。这非常有帮助。</p>
+<p><button class="play-button sentence" id="s-00-06-25-000" data-start="00:06:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is the end of section three. You now have half a minute to check your answers.</p>
+<p>第三部分结束。你现在有半分钟时间检查答案。</p>
+<p><button class="play-button sentence" id="s-00-06-58-000" data-start="00:06:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now turn to section four.</p>
+<p>现在请翻到第四部分。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
