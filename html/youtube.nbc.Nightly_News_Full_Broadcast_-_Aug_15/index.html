@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Trump and Putin Hold Historic Summit in Alaska</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="President Donald Trump and Russian leader Vladimir Putin met face-to-face in a historic summit in Alaska, discussing potential peace efforts for Ukraine. Despite claims of "great progress," no ceasefire agreement was reached. Meanwhile, Hurricane Aaron strengthens, and DC faces a federal-local power struggle.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Trump and Putin Hold Historic Summit in Alaska</h1>
+<p>【美国新闻 NBC News 20250816 美俄峰会：特朗普与普京阿拉斯加密谈3小时 | 乌克兰战火未停 | 全球聚焦】</p>
+<p>Summary:
+President Donald Trump and Russian leader Vladimir Putin met face-to-face in a historic summit in Alaska, discussing potential peace efforts for Ukraine. Despite claims of "great progress," no ceasefire agreement was reached. Meanwhile, Hurricane Aaron strengthens, and DC faces a federal-local power struggle.</p>
+<p>摘要：
+美国总统特朗普与俄罗斯总统普京在阿拉斯加举行历史性会晤，就乌克兰和平问题进行磋商。尽管双方称取得"重大进展"，但未达成停火协议。与此同时，飓风亚伦持续增强，华盛顿特区爆发联邦与地方权力之争。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 32 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959998" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-760" data-start="00:00:01,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, President Donald Trump and Vladimir Putin meeting face to face.</p>
+<p>今晚，唐纳德·特朗普总统和弗拉基米尔·普京面对面会晤。</p>
+<p><button class="play-button sentence" id="s-00-00-06-150" data-start="00:00:06,150" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what has been accomplished at their historic summit?</p>
+<p>但他们的历史性峰会取得了什么成果？</p>
+<p><button class="play-button sentence" id="s-00-00-09-150" data-start="00:00:09,150" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two world leaders descending from their jets, shaking hands, then riding to the high-stakes summit together.</p>
+<p>两位世界领导人从各自的飞机上下来，握手，然后一起乘车前往这场高风险峰会。</p>
+<p><button class="play-button sentence" id="s-00-00-15-841" data-start="00:00:15,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The stunning image of Vladimir Putin smiling inside Trump's armored car.</p>
+<p>弗拉基米尔·普京在特朗普的装甲车内微笑的惊人画面。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959979" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-20-716" data-start="00:00:20,716" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Did the Russian leader go off script?</p>
+<p>这位俄罗斯领导人是否偏离了剧本？</p>
+<p><button class="play-button sentence" id="s-00-00-23-100" data-start="00:00:23,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two leaders meeting for hours behind closed doors before changing plans again, coming out together.</p>
+<p>两位领导人在闭门会议数小时后再次改变计划，一起走出来。</p>
+<p><button class="play-button sentence" id="s-00-00-29-713" data-start="00:00:29,713" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Russian leader calling their meeting quote constructive and President Trump hailing great progress.</p>
+<p>俄罗斯领导人称他们的会晤“富有建设性”，特朗普总统则称赞取得了巨大进展。</p>
+<p><button class="play-button sentence" id="s-00-00-35-920" data-start="00:00:35,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two leaders though not taking questions, leaving the state of their conversations unclear.</p>
+<p>但两位领导人没有接受提问，使得他们的谈话内容仍不明确。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959958" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-41-257" data-start="00:00:41,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The words behind the two leaders pursuing peace, setting the stage for the crucial meeting about a bloody war that has already cost hundreds of thousands of lives.</p>
+<p>两位领导人身后写着“追求和平”，为这场关于已夺走数十万人生命的血腥战争的关键会议奠定基调。</p>
+<p><button class="play-button sentence" id="s-00-00-51-147" data-start="00:00:51,147" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard Angel joins us on the ground in Ukraine as the invasion rages on.</p>
+<p>理查德·安吉尔在乌克兰前线加入我们，而入侵仍在激烈进行。</p>
+<p><button class="play-button sentence" id="s-00-00-55-484" data-start="00:00:55,484" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also tonight, Hurricane Aaron getting stronger by the hour on track to be a category 3 by tomorrow night.</p>
+<p>同样在今晚，飓风亚伦每小时都在增强，预计明晚将达到三级强度。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959937" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-02-546" data-start="00:01:02,546" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's its track could mean for the east coast?</p>
+<p>它的路径对东海岸可能意味着什么？</p>
+<p><button class="play-button sentence" id="s-00-01-05-489" data-start="00:01:05,489" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Military vehicles on the streets of the nation's capital.</p>
+<p>军事车辆出现在国家首都的街道上。</p>
+<p><button class="play-button sentence" id="s-00-01-08-515" data-start="00:01:08,515" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> DC's growing power struggle as the attorney general tries to take over the police department.</p>
+<p>华盛顿的权力斗争加剧，司法部长试图接管警察部门。</p>
+<p><button class="play-button sentence" id="s-00-01-14-054" data-start="00:01:14,054" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What city she says could be next?</p>
+<p>她说下一个可能是哪个城市？</p>
+<p><button class="play-button sentence" id="s-00-01-15-914" data-start="00:01:15,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Breaking tonight, the mayor of New Orleans indicted.</p>
+<p>突发新闻，新奥尔良市长被起诉。</p>
+<p><button class="play-button sentence" id="s-00-01-19-568" data-start="00:01:19,568" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The long-running investigation leading to federal fraud charges, all stemming from an alleged romantic affair with a city police officer.</p>
+<p>长期的调查导致联邦欺诈指控，全部源于与一名城市警察的所谓婚外情。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-700" data-start="00:01:27,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The stunning survival story, a man saved after being trapped behind a waterfall for 2 days.</p>
+<p>惊人的生存故事，一名男子被困在瀑布后两天后获救。</p>
+<p><button class="play-button sentence" id="s-00-01-33-548" data-start="00:01:33,548" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The extensive search and our conversation with the rescuer who saved his life.</p>
+<p>大规模的搜救行动，以及我们与救了他一命的救援人员的对话。</p>
+<p><button class="play-button sentence" id="s-00-01-38-478" data-start="00:01:38,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, the marriage proposal months in the making.</p>
+<p>此外，筹备数月的求婚。</p>
+<p><button class="play-button sentence" id="s-00-01-41-493" data-start="00:01:41,493" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The big question carved into a big cornfield.</p>
+<p>巨大的问题刻在一片大玉米地里。</p>
+<p><button class="play-button sentence" id="s-00-01-44-549" data-start="00:01:44,549" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How he pulled it off and did she say yes.</p>
+<p>他是如何做到的，以及她是否答应了。</p>
+<p><button class="play-button sentence" id="s-00-01-47-427" data-start="00:01:47,427" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nightly News starts right now.</p>
+<p>《夜间新闻》现在开始。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959889" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-50-306" data-start="00:01:50,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is NBC Nightly News, the Trump-Putin Summit.</p>
+<p>这里是NBC《夜间新闻》，特朗普-普京峰会特别报道。</p>
+<p><button class="play-button sentence" id="s-00-01-55-437" data-start="00:01:55,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reporting from Anchorage, Alaska. Here is Tom Yamas.</p>
+<p>来自阿拉斯加安克雷奇的报道，我是汤姆·亚马什。</p>
+<p><button class="play-button sentence" id="s-00-02-02-239" data-start="00:02:02,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And good evening.</p>
+<p>晚上好。</p>
+<p><button class="play-button sentence" id="s-00-02-03-060" data-start="00:02:03,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, the eyes of the world are on Alaska and the summit happening just a few miles from where we are broadcasting right now.</p>
+<p>今晚，全世界的目光都集中在阿拉斯加，以及距离我们直播地点仅几英里的峰会上。</p>
+<p><button class="play-button sentence" id="s-00-02-10-130" data-start="00:02:10,130" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But little clarity on any progress in the pursuit of peace after neither leader took questions from the gathered press.</p>
+<p>但由于两位领导人均未接受在场媒体的提问，和平进程的进展仍不明确。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959863" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-16-856" data-start="00:02:16,856" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just moments ago, President Trump and the Russian leader Vladimir Putin walking out to address the world side by side after a closed-door meeting running about three hours.</p>
+<p>就在几分钟前，特朗普总统和俄罗斯领导人弗拉基米尔·普京在进行了约三小时的闭门会议后，并肩走出来向世界发表讲话。</p>
+<p><button class="play-button sentence" id="s-00-02-26-506" data-start="00:02:26,506" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump stopping short of announcing any type of deal, but saying they made quote great progress, hailing what he called their great relationship.</p>
+<p>特朗普总统没有宣布任何协议，但表示他们取得了“巨大进展”，并称赞了他所谓的“伟大关系”。</p>
+<p><button class="play-button sentence" id="s-00-02-35-142" data-start="00:02:35,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also referred to the investigation into the 2016 Russia election interference, calling it once again a hoax.</p>
+<p>他还提到对2016年俄罗斯选举干预的调查，再次称其为骗局。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959838" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-41-204" data-start="00:02:41,204" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before their meeting today, Trump announced his goal, a ceasefire to the bloodshed in Ukraine, a war instigated and prolonged by Vladimir Putin.</p>
+<p>在今天的会晤前，特朗普宣布了他的目标——在乌克兰实现停火，这场由普京挑起并延长的战争。</p>
+<p><button class="play-button sentence" id="s-00-02-50-070" data-start="00:02:50,070" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To get Russia to the negotiating table, President Trump rolled out the red carpet today, greeting Russia's leader warmly, at one point, even riding together, sitting inches apart in the president's official vehicle.</p>
+<p>为了让俄罗斯回到谈判桌，特朗普总统今天铺开红毯，热情迎接俄罗斯领导人，甚至一度同乘总统专车，相距仅几英寸。</p>
+<p><button class="play-button sentence" id="s-00-03-02-672" data-start="00:03:02,672" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putin seen smiling as they departed for the critical meeting.</p>
+<p>在前往这场关键会议时，普京被拍到面带微笑。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-06-061" data-start="00:03:06,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukrainian President Vladimir Zelensky sidelined but telling President Trump not to fall for Putin's deception.</p>
+<p>乌克兰总统弗拉基米尔·泽连斯基被排除在外，但他告诉特朗普总统不要被普京的欺骗所迷惑。</p>
+<p><button class="play-button sentence" id="s-00-03-12-146" data-start="00:03:12,146" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hundreds of thousands have died.</p>
+<p>数十万人已经死亡。</p>
+<p><button class="play-button sentence" id="s-00-03-13-985" data-start="00:03:13,985" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than a million casualties.</p>
+<p>超过一百万人伤亡。</p>
+<p><button class="play-button sentence" id="s-00-03-16-080" data-start="00:03:16,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But will the end of Europe's bloodiest conflict since World War II begin with negotiations happening here in Alaska tonight.</p>
+<p>但欧洲自二战以来最血腥的冲突是否会以今晚在阿拉斯加举行的谈判为终结的开端？</p>
+<p><button class="play-button sentence" id="s-00-03-24-657" data-start="00:03:24,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first step towards peace came in a split-screen moment.</p>
+<p>迈向和平的第一步出现在一个分屏画面中。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959791" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-28-157" data-start="00:03:28,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump coming down Air Force One and Russian leader Vladimir Putin deplaning onto a red carpet.</p>
+<p>特朗普总统走下空军一号，俄罗斯领导人弗拉基米尔·普京踏上红毯。</p>
+<p><button class="play-button sentence" id="s-00-03-35-039" data-start="00:03:35,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two leaders meeting, joining hands, smiling, even chatting before walking on a stage titled Alaska 2025.</p>
+<p>两位领导人会面，握手、微笑，甚至闲聊，然后走上标有“阿拉斯加2025”的舞台。</p>
+<p><button class="play-button sentence" id="s-00-03-43-648" data-start="00:03:43,648" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reporters quick to ask questions.</p>
+<p>记者们迅速提问。</p>
+<p><button class="play-button sentence" id="s-00-03-46-103" data-start="00:03:46,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Putin, will you stop killing civilians?</p>
+<p>普京总统，你会停止杀害平民吗？</p>
+<p><button class="play-button sentence" id="s-00-03-48-906" data-start="00:03:48,906" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putin signaling he can't hear them.</p>
+<p>普京示意他听不见。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-51-627" data-start="00:03:51,627" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then this stunning moment.</p>
+<p>然后是这一惊人时刻。</p>
+<p><button class="play-button sentence" id="s-00-03-53-464" data-start="00:03:53,464" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putin walking towards the president's retrofitted Cadillac.</p>
+<p>普京走向总统的改装凯迪拉克。</p>
+<p><button class="play-button sentence" id="s-00-03-56-996" data-start="00:03:56,996" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The beast getting in even though reports his own vehicle was on the tarmac.</p>
+<p>“野兽”上了车，尽管有报道称他自己的车就在停机坪上。</p>
+<p><button class="play-button sentence" id="s-00-04-01-891" data-start="00:04:01,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two leaders seen in the back seat chatting though Putin is not fluent in English.</p>
+<p>两位领导人被看到在后座交谈，尽管普京英语并不流利。</p>
+<p><button class="play-button sentence" id="s-00-04-07-434" data-start="00:04:07,434" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then this, the leader of Russia, a man seen by Ukraine as a warmonger responsible for killing tens of thousands.</p>
+<p>接着，这位被乌克兰视为应对数万人死亡负责的好战者——俄罗斯领导人。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-14-799" data-start="00:04:14,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Seen smiling and waving from the president's official vehicle as the motorcade drove off.</p>
+<p>在车队驶离时，被看到从总统专车中微笑挥手。</p>
+<p><button class="play-button sentence" id="s-00-04-20-442" data-start="00:04:20,442" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This remarkable and striking arrival as the war in Ukraine is still raging on after nearly three and a half years.</p>
+<p>这一引人注目且惊人的抵达，而乌克兰战争在持续近三年半后仍在激烈进行。</p>
+<p><button class="play-button sentence" id="s-00-04-28-204" data-start="00:04:28,204" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The cost of war, so many dead and nearly a million and a half casualties on both sides.</p>
+<p>战争的代价，如此多的死亡，双方近150万人伤亡。</p>
+<p><button class="play-button sentence" id="s-00-04-34-237" data-start="00:04:34,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Inside the summit, the first image of the bilateral meeting along with the two world leaders, Secretary of State Marco Rubio and special envoy Steve Whit for the US.</p>
+<p>峰会内部，双边会议的第一张画面，两位世界领导人、美国国务卿马可·卢比奥和特使史蒂夫·惠特在场。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959714" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-45-405" data-start="00:04:45,405" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vladimir Putin flanked by his foreign minister Sergey Lavrov.</p>
+<p>弗拉基米尔·普京身旁是他的外交部长谢尔盖·拉夫罗夫。</p>
+<p><button class="play-button sentence" id="s-00-04-49-933" data-start="00:04:49,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The words pursuing peace seen behind them.</p>
+<p>他们身后写着“追求和平”。</p>
+<p><button class="play-button sentence" id="s-00-04-53-434" data-start="00:04:53,434" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Will you agree to a ceasefire?</p>
+<p>你们会同意停火吗？</p>
+<p><button class="play-button sentence" id="s-00-04-56-160" data-start="00:04:56,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Again, reporters trying, but the leaders staying quiet for now until the press was ushered out and the two sides started to negotiate.</p>
+<p>记者们再次尝试，但领导人暂时保持沉默，直到媒体被请出，双方开始谈判。</p>
+<p><button class="play-button sentence" id="s-00-05-04-787" data-start="00:05:04,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier, speaking on Air Force One, President Trump saying in an interview he would want a ceasefire.</p>
+<p>早些时候，特朗普总统在空军一号上接受采访时表示，他希望停火。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959688" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-11-232" data-start="00:05:11,232" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd like to see a ceasefire.</p>
+<p>我希望看到停火。</p>
+<p><button class="play-button sentence" id="s-00-05-13-884" data-start="00:05:13,884" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh I wouldn't be thrilled if I didn't get it, but everyone says you're not going to get the ceasefire.</p>
+<p>呃，如果没达成停火，我不会高兴，但大家都说你不会得到停火。</p>
+<p><button class="play-button sentence" id="s-00-05-18-913" data-start="00:05:18,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It'll take place on the second meeting.</p>
+<p>这将在第二次会晤时发生。</p>
+<p><button class="play-button sentence" id="s-00-05-20-804" data-start="00:05:20,804" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is really setting the table today.</p>
+<p>今天真的是在奠定基础。</p>
+<p><button class="play-button sentence" id="s-00-05-22-859" data-start="00:05:22,859" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh we're going to have another meeting if things work out, which will be very soon.</p>
+<p>呃，如果一切顺利，我们将很快再次会晤。</p>
+<p><button class="play-button sentence" id="s-00-05-28-000" data-start="00:05:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president also hinting Ukrainian territory could be on the bargaining table, a critical concern for Ukraine.</p>
+<p>总统还暗示乌克兰领土可能被摆上谈判桌，这对乌克兰至关重要。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959665" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-34-959" data-start="00:05:34,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He'll be discussed, but I've got to let Ukraine make that decision and I think they'll make a proper decision.</p>
+<p>这会讨论，但我得让乌克兰做决定，我认为他们会做出正确的决定。</p>
+<p><button class="play-button sentence" id="s-00-05-41-220" data-start="00:05:41,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I'm not here to negotiate for Ukraine.</p>
+<p>但我不是来为乌克兰谈判的。</p>
+<p><button class="play-button sentence" id="s-00-05-43-990" data-start="00:05:43,990" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm here to get him at a table.</p>
+<p>我是来让他坐到谈判桌前的。</p>
+<p><button class="play-button sentence" id="s-00-05-45-700" data-start="00:05:45,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president has said he hopes today's summit leads to another meeting that would include Ukrainian President Vladimir Zelensky.</p>
+<p>总统表示，他希望今天的峰会能促成另一场包括乌克兰总统弗拉基米尔·泽连斯基在内的会议。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959646" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-53-656" data-start="00:05:53,656" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zelensky earlier saying Ukraine is ready to work as productively as possible to end the war and we hope for a strong position from the US.</p>
+<p>泽连斯基早些时候表示，乌克兰已准备好尽最大努力结束战争，并希望美国采取坚定立场。</p>
+<p><button class="play-button sentence" id="s-00-06-02-641" data-start="00:06:02,641" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But today, Russia launched several deadly attacks across Ukraine.</p>
+<p>但今天，俄罗斯在乌克兰多地发动了数次致命袭击。</p>
+<p><button class="play-button sentence" id="s-00-06-06-413" data-start="00:06:06,413" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they're trying to negotiate.</p>
+<p>我认为他们试图谈判。</p>
+<p><button class="play-button sentence" id="s-00-06-08-959" data-start="00:06:08,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's trying to set a stage.</p>
+<p>他试图搭建舞台。</p>
+<p><button class="play-button sentence" id="s-00-06-10-653" data-start="00:06:10,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, in his mind, that helps him make a better deal.</p>
+<p>我是说，在他看来，这有助于达成更好的协议。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959626" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-13-864" data-start="00:06:13,864" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It actually hurts him.</p>
+<p>实际上这对他不利。</p>
+<p><button class="play-button sentence" id="s-00-06-15-476" data-start="00:06:15,476" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh but in his mind that helps them make a better deal if they can continue the killing.</p>
+<p>呃，但在他看来，如果能继续杀戮，这有助于达成更好的协议。</p>
+<p><button class="play-button sentence" id="s-00-06-20-399" data-start="00:06:20,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine also striking an apartment building on the border with Russia.</p>
+<p>乌克兰也袭击了俄乌边境的一栋公寓楼。</p>
+<p><button class="play-button sentence" id="s-00-06-24-507" data-start="00:06:24,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two leaders behind closed doors for hours, emerging then at a news conference.</p>
+<p>两位领导人闭门会谈数小时，然后在新闻发布会上露面。</p>
+<p><button class="play-button sentence" id="s-00-06-29-936" data-start="00:06:29,936" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I expect that today's agreements will be the starting point.</p>
+<p>我预计今天的协议将是起点。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959605" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-34-399" data-start="00:06:34,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I believe we had a very productive meeting.</p>
+<p>我认为我们进行了非常富有成效的会晤。</p>
+<p><button class="play-button sentence" id="s-00-06-36-288" data-start="00:06:36,288" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were many many points that we agreed on.</p>
+<p>我们在许多许多问题上达成一致。</p>
+<p><button class="play-button sentence" id="s-00-06-38-780" data-start="00:06:38,780" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of them.</p>
+<p>大多数问题上。</p>
+<p><button class="play-button sentence" id="s-00-06-39-821" data-start="00:06:39,821" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would say a couple of big ones that we haven't quite gotten there, but we've made some headway.</p>
+<p>我想说有几个重大问题尚未完全解决，但我们取得了一些进展。</p>
+<p><button class="play-button sentence" id="s-00-06-46-544" data-start="00:06:46,544" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, uh there's no deal until there's a deal.</p>
+<p>所以，呃，在达成协议之前就没有协议。</p>
+<p><button class="play-button sentence" id="s-00-06-50-163" data-start="00:06:50,163" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will call up NATO in a little while.</p>
+<p>我稍后会打电话给北约。</p>
+<p><button class="play-button sentence" id="s-00-06-53-589" data-start="00:06:53,589" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will call up uh the various people that I think are appropriate and I'll of course call up President Zelensky and tell them about today's meeting.</p>
+<p>我会打电话给我认为合适的各方，当然也会打电话给泽连斯基总统，告诉他们今天的会晤情况。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959578" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-01-893" data-start="00:07:01,893" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's ultimately up to them.</p>
+<p>最终取决于他们。</p>
+<p><button class="play-button sentence" id="s-00-07-04-160" data-start="00:07:04,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll speak to you very soon and probably see you again very soon.</p>
+<p>我们很快会再谈，很可能很快再见。</p>
+<p><button class="play-button sentence" id="s-00-07-07-819" data-start="00:07:07,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much, Vladimir.</p>
+<p>非常感谢，弗拉基米尔。</p>
+<p><button class="play-button sentence" id="s-00-07-09-841" data-start="00:07:09,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And next time in Moscow.</p>
+<p>下次在莫斯科。</p>
+<p><button class="play-button sentence" id="s-00-07-12-560" data-start="00:07:12,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, that's an interesting one.</p>
+<p>哦，这很有趣。</p>
+<p><button class="play-button sentence" id="s-00-07-14-111" data-start="00:07:14,111" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know.</p>
+<p>我不知道。</p>
+<p><button class="play-button sentence" id="s-00-07-14-697" data-start="00:07:14,697" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll get a little heat on that one, but I uh I could see it possibly happening.</p>
+<p>这会让我有点压力，但我呃，我认为有可能发生。</p>
+<p><button class="play-button sentence" id="s-00-07-19-357" data-start="00:07:19,357" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A historic meeting wrapping up, but the future in Ukraine still unclear.</p>
+<p>一场历史性会议结束，但乌克兰的未来仍不明朗。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959554" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-25-680" data-start="00:07:25,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have more breaking news at this hour.</p>
+<p>此刻我们有更多突发新闻。</p>
+<p><button class="play-button sentence" id="s-00-07-27-360" data-start="00:07:27,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We want to go live right now to Kharkiv in Ukraine.</p>
+<p>我们现在要连线乌克兰哈尔科夫。</p>
+<p><button class="play-button sentence" id="s-00-07-29-689" data-start="00:07:29,689" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's where our Richard Angel is reporting.</p>
+<p>我们的理查德·安吉尔正在那里报道。</p>
+<p><button class="play-button sentence" id="s-00-07-31-563" data-start="00:07:31,563" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard, you and your team, I hope, are safe.</p>
+<p>理查德，希望你和你的团队安全。</p>
+<p><button class="play-button sentence" id="s-00-07-33-802" data-start="00:07:33,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air raid sirens are going off right now just moments after this summit about peace has just wrapped up here in Alaska.</p>
+<p>就在这场关于和平的峰会刚刚在阿拉斯加结束的时刻，空袭警报正在响起。</p>
+<p><button class="play-button sentence" id="s-00-07-43-279" data-start="00:07:43,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, as you were talking in that last package right now, we were hearing air raid sirens here in uh in Kharkiv as if on cue.</p>
+<p>所以，就在你刚才报道时，我们听到了哈尔科夫的空袭警报，仿佛在呼应。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959530" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-49-981" data-start="00:07:49,981" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh there was no ceasefire agreement today.</p>
+<p>呃，今天没有达成停火协议。</p>
+<p><button class="play-button sentence" id="s-00-07-52-754" data-start="00:07:52,754" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was no clear agreement on anything.</p>
+<p>没有任何明确协议。</p>
+<p><button class="play-button sentence" id="s-00-07-55-254" data-start="00:07:55,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then we heard the air raid sirens, which is something we've been hearing every night out here in eastern Ukraine, often several times a night.</p>
+<p>然后我们听到了空袭警报，这是我们在乌克兰东部每晚都会听到的，通常一晚多次。</p>
+<p><button class="play-button sentence" id="s-00-08-02-700" data-start="00:08:02,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And generally, these are drone attacks.</p>
+<p>通常，这些是无人机袭击。</p>
+<p><button class="play-button sentence" id="s-00-08-05-229" data-start="00:08:05,229" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are drone attacks by Russia launched at civilian cities.</p>
+<p>这些是俄罗斯对平民城市发动的无人机袭击。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959511" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-08-891" data-start="00:08:08,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there are also uh missile attacks.</p>
+<p>但也有呃导弹袭击。</p>
+<p><button class="play-button sentence" id="s-00-08-11-022" data-start="00:08:11,022" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are also uh glide bomb attacks.</p>
+<p>还有呃滑翔炸弹袭击。</p>
+<p><button class="play-button sentence" id="s-00-08-14-276" data-start="00:08:14,276" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia is on the offensive out here.</p>
+<p>俄罗斯在这里处于攻势。</p>
+<p><button class="play-button sentence" id="s-00-08-17-305" data-start="00:08:17,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And many Ukrainians were deeply skeptical, deeply nervous about this meeting.</p>
+<p>许多乌克兰人对这次会晤深感怀疑和紧张。</p>
+<p><button class="play-button sentence" id="s-00-08-21-475" data-start="00:08:21,475" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obviously, they want these air raids uh sirens to stop.</p>
+<p>显然，他们希望这些空袭警报停止。</p>
+<p><button class="play-button sentence" id="s-00-08-24-413" data-start="00:08:24,413" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They want the raids to stop.</p>
+<p>他们希望袭击停止。</p>
+<p><button class="play-button sentence" id="s-00-08-25-949" data-start="00:08:25,949" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Ukrainians were nervous that President Trump and Vladimir Putin today were going to announce a deal unilaterally without Ukraine's participation.</p>
+<p>但乌克兰人担心特朗普总统和弗拉基米尔·普京今天会单方面宣布协议，没有乌克兰参与。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959485" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-34-344" data-start="00:08:34,344" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, in a sense, even though it means the war is back on, and the war is back on right now, we are we are listening to it.</p>
+<p>所以，在某种意义上，尽管这意味着战争重新开始，而战争此刻确实重新开始了，我们正在见证。</p>
+<p><button class="play-button sentence" id="s-00-08-41-894" data-start="00:08:41,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, no deal is perhaps better than a bad deal that could set uh that could set this country up for more war and and more failure.</p>
+<p>呃，没有协议或许比糟糕的协议更好，后者可能让这个国家陷入更多战争和失败。</p>
+<p><button class="play-button sentence" id="s-00-08-50-791" data-start="00:08:50,791" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard Angel for us tonight live.</p>
+<p>今晚为我们现场报道的理查德·安吉尔。</p>
+<p><button class="play-button sentence" id="s-00-08-53-679" data-start="00:08:53,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard, again, you and your team, please stay safe out there as the bombing continues apparently in Ukraine.</p>
+<p>理查德，再次提醒，你和你的团队请保持安全，显然乌克兰的轰炸仍在继续。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959461" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-58-080" data-start="00:08:58,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett Hake joins us now live here in Alaska.</p>
+<p>加勒特·哈克现在在阿拉斯加加入我们。</p>
+<p><button class="play-button sentence" id="s-00-09-00-112" data-start="00:09:00,112" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett, we we got to be very clear with our viewers.</p>
+<p>加勒特，我们必须向观众明确说明。</p>
+<p><button class="play-button sentence" id="s-00-09-02-821" data-start="00:09:02,821" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is unclear what if any deal was made here and what was accomplished.</p>
+<p>目前不清楚是否达成了任何协议或取得了什么成果。</p>
+<p><button class="play-button sentence" id="s-00-09-06-622" data-start="00:09:06,622" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-09-06-817" data-start="00:09:06,817" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Richard's reporting about these air raid sirens only makes the situation more uncertain about what was accomplished here.</p>
+<p>而理查德关于空袭警报的报道，只会让这里的成果更加不确定。</p>
+<p><button class="play-button sentence" id="s-00-09-12-311" data-start="00:09:12,311" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh it's worth pointing out President Trump's own metrics for this meeting where his best case scenario was to try to achieve a ceasefire.</p>
+<p>呃，值得指出的是，特朗普总统自己对这次会晤的预期，最佳情况是试图达成停火。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959441" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-18-936" data-start="00:09:18,936" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But his primary goal was to see if there could be another meeting between Vladimir Putin, President Zelensky, and himself.</p>
+<p>但他的主要目标是看看是否能举行另一场普京、泽连斯基总统和他自己的会晤。</p>
+<p><button class="play-button sentence" id="s-00-09-25-379" data-start="00:09:25,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that was not mentioned at all at this brief statement after the summit concluded at which President Putin talked for more than twice as long as did President Trump.</p>
+<p>这在峰会结束后的简短声明中完全没有提到，而普京总统的讲话时间是特朗普总统的两倍多。</p>
+<p><button class="play-button sentence" id="s-00-09-34-399" data-start="00:09:34,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putin talking about an agreement suggesting he was concerned the European leaders or that Ukrainian officials could throw a monkey wrench into it.</p>
+<p>普京谈到协议时暗示，他担心欧洲领导人或乌克兰官员可能破坏它。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959418" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-41-120" data-start="00:09:41,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump mentioning no such deal and saying he has to talk to those European leaders next.</p>
+<p>特朗普总统没有提到任何协议，并表示他接下来必须与那些欧洲领导人交谈。</p>
+<p><button class="play-button sentence" id="s-00-09-45-324" data-start="00:09:45,324" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Huh?</p>
+<p>嗯？</p>
+<p><button class="play-button sentence" id="s-00-09-45-519" data-start="00:09:45,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we'll wait and see.</p>
+<p>我们将拭目以待。</p>
+<p><button class="play-button sentence" id="s-00-09-46-218" data-start="00:09:46,218" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Garrett, great to have you here.</p>
+<p>好的，加勒特，很高兴你在这里。</p>
+<p><button class="play-button sentence" id="s-00-09-47-846" data-start="00:09:47,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I do want to bring in the moderator of Meet the Press now, Kristen Welker.</p>
+<p>我现在想请来《会见新闻界》的主持人克里斯汀·韦尔克。</p>
+<p><button class="play-button sentence" id="s-00-09-50-819" data-start="00:09:50,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kristen, I know you've been working that phone and talking to your sources.</p>
+<p>克里斯汀，我知道你一直在打电话和联系消息人士。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959406" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-53-754" data-start="00:09:53,754" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are you hearing about the reaction about what we just witnessed here in Alaska?</p>
+<p>关于我们刚刚在阿拉斯加目睹的事情，你听到了什么反应？</p>
+<p><button class="play-button sentence" id="s-00-09-58-399" data-start="00:09:58,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Tom, I'm getting a flood of reaction in tonight.</p>
+<p>嗯，汤姆，今晚我收到了大量反应。</p>
+<p><button class="play-button sentence" id="s-00-10-01-707" data-start="00:10:01,707" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One Democratic lawmaker saying, "We have no idea what was accomplished.</p>
+<p>一位民主党议员表示：“我们不知道达成了什么成果。</p>
+<p><button class="play-button sentence" id="s-00-10-06-514" data-start="00:10:06,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we do know is he still has not stopped the war."</p>
+<p>我们所知道的是，他仍未停止战争。”</p>
+<p><button class="play-button sentence" id="s-00-10-09-766" data-start="00:10:09,766" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can anticipate hearing that line from some Democrats, an ally of President Trump, saying this person was encouraged by the fact that the door was left open to a second meeting, but saying if President Putin does not reach a deal with the president, President Trump will have to quote crush him.</p>
+<p>可以预见一些民主党人会这样说，而特朗普总统的一位盟友表示，此人对第二次会晤的可能性持开放态度感到鼓舞，但也表示如果普京总统未能与总统达成协议，特朗普将不得不“粉碎他”。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959372" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-27-151" data-start="00:10:27,151" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You heard President Trump say that there would be consequences if Putin does not comply.</p>
+<p>你听到特朗普总统说，如果普京不配合，将会产生后果。</p>
+<p><button class="play-button sentence" id="s-00-10-33-360" data-start="00:10:33,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> European allies, as Richard was saying, saying that no deal is better than a bad deal.</p>
+<p>正如理查德所说，欧洲盟友表示，没有协议比糟糕的协议更好。</p>
+<p><button class="play-button sentence" id="s-00-10-38-660" data-start="00:10:38,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the political pressure ramping up on him to end this war, which he vowed he could end within the first 24 hours of taking office.</p>
+<p>但政治压力正在加大，要求他结束这场战争，他曾誓言上任后24小时内就能结束战争。</p>
+<p><button class="play-button sentence" id="s-00-10-46-954" data-start="00:10:46,954" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom Kristen, welcome for us.</p>
+<p>汤姆·克里斯滕，欢迎加入我们。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959351" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-48-436" data-start="00:10:48,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kristen, we thank you.</p>
+<p>克里斯滕，我们感谢你。</p>
+<p><button class="play-button sentence" id="s-00-10-49-348" data-start="00:10:49,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And please make sure to watch Meet the Press this weekend when Kristen is joined by Secretary of State Marco Rubio.</p>
+<p>请务必在本周末收看《会见媒体》，克里斯滕将与国务卿马可·鲁比奥一同亮相。</p>
+<p><button class="play-button sentence" id="s-00-10-55-293" data-start="00:10:55,293" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So much to ask him.</p>
+<p>有很多问题要问他。</p>
+<p><button class="play-button sentence" id="s-00-10-56-528" data-start="00:10:56,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, now to the tropics and Hurricane Aaron powering up to become the first hurricane of the season.</p>
+<p>好的，现在转向热带地区，飓风亚伦正在增强，成为本季首个飓风。</p>
+<p><button class="play-button sentence" id="s-00-11-02-419" data-start="00:11:02,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bill Karens joins our coverage now.</p>
+<p>比尔·卡伦斯现在加入我们的报道。</p>
+<p><button class="play-button sentence" id="s-00-11-04-277" data-start="00:11:04,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> on Bill.</p>
+<p>比尔。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959335" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-04-654" data-start="00:11:04,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This could be a category 4, but the big question, will this hit the US or come anywhere close?</p>
+<p>这可能是一场四级飓风，但关键问题是，它会袭击美国或接近美国吗？</p>
+<p><button class="play-button sentence" id="s-00-11-09-933" data-start="00:11:09,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, Aaron is already a large storm and this weekend it's going to get powerful.</p>
+<p>是的，亚伦已经是一场大型风暴，本周末它将变得更加强大。</p>
+<p><button class="play-button sentence" id="s-00-11-14-240" data-start="00:11:14,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's in the process of what was eventually going to be some, you know, rapid intensification.</p>
+<p>它正处于即将快速增强的过程中。</p>
+<p><button class="play-button sentence" id="s-00-11-18-619" data-start="00:11:18,619" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right now, it's approaching the islands.</p>
+<p>目前，它正在接近岛屿。</p>
+<p><button class="play-button sentence" id="s-00-11-20-260" data-start="00:11:20,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's going to go north, the core of it.</p>
+<p>它的核心将向北移动。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959318" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-21-761" data-start="00:11:21,761" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Puerto Rico and all the islands here are just going to get brushed with wind and rip currents and big waves.</p>
+<p>因此，波多黎各和这里的所有岛屿将受到风、激流和大浪的影响。</p>
+<p><button class="play-button sentence" id="s-00-11-27-693" data-start="00:11:27,693" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The hurricane center still has it in between the Outer Banks and Bermuda.</p>
+<p>飓风中心仍将其定位在外滩群岛和百慕大之间。</p>
+<p><button class="play-button sentence" id="s-00-11-31-673" data-start="00:11:31,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the direct impacts missing everyone by only about 400 miles.</p>
+<p>直接影响距离所有人仅约400英里。</p>
+<p><button class="play-button sentence" id="s-00-11-35-918" data-start="00:11:35,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's why we still have to watch it closely this weekend, especially for eastern North Carolina.</p>
+<p>这就是为什么我们本周末仍需密切关注，尤其是北卡罗来纳州东部。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959300" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-40-000" data-start="00:11:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The waves are going to be huge.</p>
+<p>海浪将非常大。</p>
+<p><button class="play-button sentence" id="s-00-11-41-191" data-start="00:11:41,191" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to have problems with rip currents at all the high tide cycles.</p>
+<p>我们将在所有高潮周期面临激流问题。</p>
+<p><button class="play-button sentence" id="s-00-11-43-796" data-start="00:11:43,796" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to have beach erosion.</p>
+<p>我们将面临海滩侵蚀。</p>
+<p><button class="play-button sentence" id="s-00-11-45-459" data-start="00:11:45,459" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Tom, so far no changes to the track.</p>
+<p>但汤姆，目前路径没有变化。</p>
+<p><button class="play-button sentence" id="s-00-11-49-120" data-start="00:11:49,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Bill Karens, we appreciate that.</p>
+<p>好的，比尔·卡伦斯，我们感谢你的报道。</p>
+<p><button class="play-button sentence" id="s-00-11-51-074" data-start="00:11:51,074" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll keep an eye on it all weekend.</p>
+<p>我们将在整个周末密切关注。</p>
+<p><button class="play-button sentence" id="s-00-11-52-836" data-start="00:11:52,836" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to a remarkable clash in Washington between local and federal officials.</p>
+<p>现在转向华盛顿当地和联邦官员之间的显著冲突。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959282" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-57-195" data-start="00:11:57,195" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> DC suing the Trump administration after what it calls a hostile takeover.</p>
+<p>华盛顿特区起诉特朗普政府，称其为“敌对接管”。</p>
+<p><button class="play-button sentence" id="s-00-12-01-305" data-start="00:12:01,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And tonight, a new development in the battle over who's in charge of the police department.</p>
+<p>今晚，关于谁负责警察部门的斗争有了新进展。</p>
+<p><button class="play-button sentence" id="s-00-12-05-161" data-start="00:12:05,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gabe Gutierrez reports.</p>
+<p>加布·古铁雷斯报道。</p>
+<p><button class="play-button sentence" id="s-00-12-07-986" data-start="00:12:07,986" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Free DC.</p>
+<p>自由华盛顿。</p>
+<p><button class="play-button sentence" id="s-00-12-09-068" data-start="00:12:09,068" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Free DC.</p>
+<p>自由华盛顿。</p>
+<p><button class="play-button sentence" id="s-00-12-10-159" data-start="00:12:10,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight in the nation's capital, an escalating standoff between the White House and city hall.</p>
+<p>今晚在首都，白宫和市政厅之间的对峙升级。</p>
+<p><button class="play-button sentence" id="s-00-12-15-654" data-start="00:12:15,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> DC's attorney general suing the Trump administration after US Attorney General Pam Bondi installed DEA Administrator Terry Cole as emergency police commissioner.</p>
+<p>华盛顿特区总检察长起诉特朗普政府，此前美国司法部长帕姆·邦迪任命缉毒局局长特里·科尔为紧急警察专员。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959253" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-26-605" data-start="00:12:26,605" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> DC will not remain a sanctuary city actively shielding criminal aliens will not happen.</p>
+<p>华盛顿特区不会成为庇护城市，积极庇护犯罪外国人的情况不会发生。</p>
+<p><button class="play-button sentence" id="s-00-12-33-213" data-start="00:12:33,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Under Donald Trump's directive, DC will become safe again.</p>
+<p>在唐纳德·特朗普的指示下，华盛顿特区将再次变得安全。</p>
+<p><button class="play-button sentence" id="s-00-12-37-519" data-start="00:12:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Following the Trump administration's takeover of the police department and deployment of hundreds of National Guard troops, late today, DC officials said their police chief was back in charge after closed door discussions with the Justice Department to avoid a judge's ruling.</p>
+<p>在特朗普政府接管警察部门并部署数百名国民警卫队士兵后，今天晚些时候，华盛顿特区官员表示，他们的警察局长在与司法部闭门讨论后重新掌权，以避免法官的裁决。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959228" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-51-934" data-start="00:12:51,934" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't need a hostile takeover from the federal government to do what we do every day.</p>
+<p>我们不需要联邦政府的敌对接管来完成我们每天的工作。</p>
+<p><button class="play-button sentence" id="s-00-12-57-039" data-start="00:12:57,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He argues the Trump administration was violating the 1973 Home Rule Act, which allows DC residents to elect a mayor and city council while Congress oversees the district's budget and the president appoints its judges.</p>
+<p>他认为特朗普政府违反了1973年的《自治法案》，该法案允许华盛顿特区居民选举市长和市议会，而国会监督该地区的预算，总统任命其法官。</p>
+<p><button class="play-button sentence" id="s-00-13-10-227" data-start="00:13:10,227" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While some locals welcome the crackdown on crime around here, especially in this neighborhood in Shaw, the streets seem a lot quieter, others, streets, our streets are protesting the federal intervention.</p>
+<p>虽然一些当地人欢迎对犯罪的打击，尤其是在肖的这个社区，街道似乎安静了许多，但其他人，我们的街道，正在抗议联邦干预。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959197" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-22-320" data-start="00:13:22,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it is terrifying to have a federal presence in DC that is taking away our local autonomy.</p>
+<p>我认为联邦在华盛顿特区的存在剥夺了我们的地方自治权，这很可怕。</p>
+<p><button class="play-button sentence" id="s-00-13-28-958" data-start="00:13:28,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today in court, the Justice Department said if Congress does not extend this, the federal takeover will end after 30 days.</p>
+<p>今天在法庭上，司法部表示，如果国会不延长这一期限，联邦接管将在30天后结束。</p>
+<p><button class="play-button sentence" id="s-00-13-35-923" data-start="00:13:35,923" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom Gabe Gutier is for us tonight.</p>
+<p>汤姆·加布·古铁雷斯今晚为我们报道。</p>
+<p><button class="play-button sentence" id="s-00-13-39-535" data-start="00:13:39,535" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to a stunning rescue in California of a man who got trapped for two days after attempting to repel down a waterfall.</p>
+<p>现在转向加利福尼亚的一场惊人救援，一名男子在试图从瀑布下降后被困两天。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959173" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-46-399" data-start="00:13:46,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Liz Crod spoke to the deputy who saved him.</p>
+<p>利兹·克罗德采访了救他的副警长。</p>
+<p><button class="play-button sentence" id="s-00-13-48-638" data-start="00:13:48,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This incredible rescue tonight caught on video showing first responders safely rescuing a man who got stuck for 2 days behind a dangerous waterfall in California's Sequoia National Forest.</p>
+<p>今晚这段令人难以置信的救援视频显示，急救人员安全救出了一名男子，他在加利福尼亚红杉国家森林一处危险瀑布后被困两天。</p>
+<p><button class="play-button sentence" id="s-00-14-00-720" data-start="00:14:00,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities say 46-year-old Ryan Wardwell was attempting to repel the Seven Teacups waterfalls when the conditions got too rough, trapping him right here behind the rapidly rushing water.</p>
+<p>当局表示，46岁的瑞安·沃德韦尔试图从七茶杯瀑布下降时，条件变得过于恶劣，将他困在快速流动的水流后面。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959148" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-11-510" data-start="00:14:11,510" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What was his condition like when you found him?</p>
+<p>你找到他时他的状况如何？</p>
+<p><button class="play-button sentence" id="s-00-14-14-159" data-start="00:14:14,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh, he was hypothermic.</p>
+<p>呃，他体温过低。</p>
+<p><button class="play-button sentence" id="s-00-14-16-238" data-start="00:14:16,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He did have food and water.</p>
+<p>他确实有食物和水。</p>
+<p><button class="play-button sentence" id="s-00-14-18-224" data-start="00:14:18,224" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, he was just pretty much extremely cold.</p>
+<p>嗯，他基本上非常冷。</p>
+<p><button class="play-button sentence" id="s-00-14-20-648" data-start="00:14:20,648" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To County Sheriff's Deputy Craig Douglas made the daring rescue.</p>
+<p>图县副警长克雷格·道格拉斯进行了这次大胆的救援。</p>
+<p><button class="play-button sentence" id="s-00-14-24-223" data-start="00:14:24,223" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were able to lower me perfectly uh right next to him and I was able to get him in the recovery suit, hook him up, get him back into the helicopter.</p>
+<p>他们能够完美地将我降到他旁边，我能够让他穿上恢复服，将他固定，带回直升机。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959124" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-35-600" data-start="00:14:35,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> According to authorities, Wwell's family reported him missing Monday after he didn't return Sunday night.</p>
+<p>据当局称，沃德韦尔的家人周一报告他失踪，因为他周日晚上没有回来。</p>
+<p><button class="play-button sentence" id="s-00-14-40-887" data-start="00:14:40,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First responders began an extensive search, deploying a plane with camera and infrared technology which spotted his robes.</p>
+<p>急救人员开始广泛搜索，部署了一架配备摄像头和红外技术的飞机，发现了他的绳索。</p>
+<p><button class="play-button sentence" id="s-00-14-47-699" data-start="00:14:47,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it wasn't until Tuesday they were able to send in a drone to check behind the waterfall where they finally found him alive.</p>
+<p>但直到周二，他们才派出无人机检查瀑布后面，最终发现他还活着。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959105" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-54-639" data-start="00:14:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was very excited that we were there to get him out.</p>
+<p>他对我们在那里救他出来感到非常兴奋。</p>
+<p><button class="play-button sentence" id="s-00-14-58-251" data-start="00:14:58,251" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was very thankful.</p>
+<p>他非常感激。</p>
+<p><button class="play-button sentence" id="s-00-14-59-360" data-start="00:14:59,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And authorities say Wardwell had experience repelling this waterfall before, but it is known to be very dangerous.</p>
+<p>当局表示，沃德韦尔之前有从该瀑布下降的经验，但众所周知这非常危险。</p>
+<p><button class="play-button sentence" id="s-00-15-05-305" data-start="00:15:05,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last year, three people died in that same area.</p>
+<p>去年，同一地区有三人死亡。</p>
+<p><button class="play-button sentence" id="s-00-15-09-644" data-start="00:15:09,644" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom Liz Cro, our thanks to you.</p>
+<p>汤姆·利兹·克罗，我们感谢你。</p>
+<p><button class="play-button sentence" id="s-00-15-11-709" data-start="00:15:11,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're back in a moment with the breaking investigation.</p>
+<p>我们稍后将带来突发调查。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959085" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-14-616" data-start="00:15:14,616" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mayor of New Orleans just indicted.</p>
+<p>新奥尔良市长刚刚被起诉。</p>
+<p><button class="play-button sentence" id="s-00-15-16-913" data-start="00:15:16,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What?</p>
+<p>什么？</p>
+<p><button class="play-button sentence" id="s-00-15-17-233" data-start="00:15:17,233" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Federal prosecutors alleged she did.</p>
+<p>联邦检察官指控她的行为。</p>
+<p><button class="play-button sentence" id="s-00-15-25-440" data-start="00:15:25,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome back.</p>
+<p>欢迎回来。</p>
+<p><button class="play-button sentence" id="s-00-15-26-108" data-start="00:15:26,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> New Orleans's mayor, Latoya Cantrell, has been indicted on federal charges.</p>
+<p>新奥尔良市长拉托娅·坎特雷尔因联邦指控被起诉。</p>
+<p><button class="play-button sentence" id="s-00-15-30-787" data-start="00:15:30,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A grand jury indicting her on fraud and other obstruction charges stemming from an alleged romantic relationship with a city police officer.</p>
+<p>大陪审团以欺诈和其他妨碍司法指控起诉她，这些指控源于她与一名城市警察的所谓恋爱关系。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959061" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-38-598" data-start="00:15:38,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's accused of filing false payroll records.</p>
+<p>她被指控提交虚假工资记录。</p>
+<p><button class="play-button sentence" id="s-00-15-41-463" data-start="00:15:41,463" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cantrell's office and attorney have not yet commented.</p>
+<p>坎特雷尔的办公室和律师尚未发表评论。</p>
+<p><button class="play-button sentence" id="s-00-15-44-747" data-start="00:15:44,747" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aller Shawn Kingston was sentenced to three and a half years in federal prison after a jury found him and his mother were guilty of wire fraud.</p>
+<p>阿勒·肖恩·金斯顿被判处三年半联邦监禁，此前陪审团裁定他和他的母亲犯有电信欺诈罪。</p>
+<p><button class="play-button sentence" id="s-00-15-52-633" data-start="00:15:52,633" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His lawyer attributed the crimes to a 2011 jet ski accident that left him severely injured.</p>
+<p>他的律师将这些罪行归因于2011年的一次水上摩托事故，那次事故使他严重受伤。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959041" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-58-159" data-start="00:15:58,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The prosecution said he was a quote thief through and through.</p>
+<p>检方称他是一个“彻头彻尾的小偷”。</p>
+<p><button class="play-button sentence" id="s-00-16-02-771" data-start="00:16:02,771" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the first World Humanoid robot games began today in Beijing.</p>
+<p>首届世界人形机器人运动会今天在北京开幕。</p>
+<p><button class="play-button sentence" id="s-00-16-06-769" data-start="00:16:06,769" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take a look at this.</p>
+<p>看看这个。</p>
+<p><button class="play-button sentence" id="s-00-16-07-873" data-start="00:16:07,873" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With more than 500 robots on 280 teams from 16 countries, including the US, competing, the events were soccer, running, and boxing.</p>
+<p>来自16个国家的280支队伍、500多台机器人参赛，比赛项目包括足球、跑步和拳击。</p>
+<p><button class="play-button sentence" id="s-00-16-17-909" data-start="00:16:17,909" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The games are meant to show how far robotics have come as China's government tries to close the AI gap with the US.</p>
+<p>这些运动会旨在展示机器人技术的进步，中国政府正试图缩小与美国的人工智能差距。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208959015" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-24-733" data-start="00:16:24,733" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, when we come back, love is in the air.</p>
+<p>好的，当我们回来时，爱在空气中。</p>
+<p><button class="play-button sentence" id="s-00-16-27-992" data-start="00:16:27,992" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why this farmer let a corn field do the talking when he wasn't sure how to propose to his girlfriend.</p>
+<p>为什么这位农民让玉米地替他说话，当他不知道如何向女友求婚时。</p>
+<p><button class="play-button sentence" id="s-00-16-33-529" data-start="00:16:33,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we return, what she said on Nightly News.</p>
+<p>当我们回来时，她在《晚间新闻》上说了什么。</p>
+<p><button class="play-button sentence" id="s-00-16-37-940" data-start="00:16:37,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> [Music]</p>
+<p>[音乐]</p>
+<p><button class="play-button sentence" id="s-00-16-38-908" data-start="00:16:38,908" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally, there's good news tonight about a newly engaged couple and the wedding proposal that sent their love skyhigh.</p>
+<p>最后，今晚有一个好消息，关于一对新订婚的夫妇和让他们的爱高飞的求婚。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208958991" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-48-320" data-start="00:16:48,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Jesse Kersh.</p>
+<p>杰西·克什报道。</p>
+<p><button class="play-button sentence" id="s-00-16-51-278" data-start="00:16:51,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tim Sullivan wanted to ask his girlfriend Caroline Liot a very important question and he did it without saying a word.</p>
+<p>蒂姆·沙利文想问他女友卡罗琳·利奥特一个非常重要的问题，而他一句话也没说。</p>
+<p><button class="play-button sentence" id="s-00-16-58-113" data-start="00:16:58,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of that thanks to this in the fields below.</p>
+<p>这一切都归功于下面田地里的一切。</p>
+<p><button class="play-button sentence" id="s-00-17-01-905" data-start="00:17:01,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> a 13 acre corn maze outside Columbus, Ohio, spelling out, "Will you marry me, Caroline?"</p>
+<p>俄亥俄州哥伦布市外一处13英亩的玉米迷宫，拼出“卡罗琳，你愿意嫁给我吗？”</p>
+<p><button class="play-button sentence" id="s-00-17-07-507" data-start="00:17:07,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think I was just show so shocked.</p>
+<p>我想我只是太震惊了。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208958970" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-09-759" data-start="00:17:09,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Caroline and Tim, who both work in agriculture, have known for months they wanted to spend their lives together, but Tim wasn't sure how to ask.</p>
+<p>卡罗琳和蒂姆都在农业领域工作，几个月来他们都知道想共度一生，但蒂姆不确定如何求婚。</p>
+<p><button class="play-button sentence" id="s-00-17-18-000" data-start="00:17:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We both really like corn a lot, not to be corny.</p>
+<p>我们俩都非常喜欢玉米，不是老套的。</p>
+<p><button class="play-button sentence" id="s-00-17-20-797" data-start="00:17:20,797" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wanted to do something that we would both be able to remember for the rest of our lives.</p>
+<p>我想做一些我们都能记住一辈子的事情。</p>
+<p><button class="play-button sentence" id="s-00-17-24-160" data-start="00:17:24,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The idea hit him in late April.</p>
+<p>这个想法在四月底击中了他。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208958953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-26-216" data-start="00:17:26,216" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pop the question with his family farm's annual corn maze.</p>
+<p>用他家庭农场的年度玉米迷宫求婚。</p>
+<p><button class="play-button sentence" id="s-00-17-29-123" data-start="00:17:29,123" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With help from computers and consultants, Tim designed and planted the maze.</p>
+<p>在电脑和顾问的帮助下，蒂姆设计并种植了迷宫。</p>
+<p><button class="play-button sentence" id="s-00-17-33-370" data-start="00:17:33,370" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then he had to wait for the message to grow.</p>
+<p>然后他不得不等待信息生长。</p>
+<p><button class="play-button sentence" id="s-00-17-35-846" data-start="00:17:35,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are you starting to lose patience?</p>
+<p>你开始失去耐心了吗？</p>
+<p><button class="play-button sentence" id="s-00-17-37-636" data-start="00:17:37,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You told this guy in April, "You want to marry him?"</p>
+<p>你在四月告诉这个家伙，“你想嫁给他？”</p>
+<p><button class="play-button sentence" id="s-00-17-40-000" data-start="00:17:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tim is quite the planner, so I knew it was going to be something quite elaborate.</p>
+<p>蒂姆是个计划者，所以我知道这将是非常精心设计的。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208958935" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-44-209" data-start="00:17:44,209" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, so I had quite a bit of patience.</p>
+<p>嗯，所以我很有耐心。</p>
+<p><button class="play-button sentence" id="s-00-17-46-637" data-start="00:17:46,637" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then earlier this month, they flew over the farm.</p>
+<p>然后在本月初，他们飞越了农场。</p>
+<p><button class="play-button sentence" id="s-00-17-49-786" data-start="00:17:49,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I looked back at her and she's looking out the other side of the plane.</p>
+<p>我回头看她，她正看着飞机的另一侧。</p>
+<p><button class="play-button sentence" id="s-00-17-53-440" data-start="00:17:53,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they circled around and finally, love was in the air.</p>
+<p>所以他们绕了一圈，最终，爱在空气中。</p>
+<p><button class="play-button sentence" id="s-00-17-56-868" data-start="00:17:56,868" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and I've never seen her face light up as much as she did.</p>
+<p>我从未见过她的脸像那样亮起来。</p>
+<p><button class="play-button sentence" id="s-00-17-59-870" data-start="00:17:59,870" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it was definitely one of the coolest experiences that we'll be able to tell for a lifetime going forward.</p>
+<p>这绝对是我们能够讲述一辈子的最酷经历之一。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208958915" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-04-880" data-start="00:18:04,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And back on land, Tim still got down on one knee to complete a proposal that was unquestionably amazing.</p>
+<p>回到地面，蒂姆仍然单膝跪地，完成了一个毫无疑问令人惊叹的求婚。</p>
+<p><button class="play-button sentence" id="s-00-18-13-083" data-start="00:18:13,083" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jesse Kersh, NBC News.</p>
+<p>杰西·克什，NBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-18-16-240" data-start="00:18:16,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A great way to end the week.</p>
+<p>结束一周的好方式。</p>
+<p><button class="play-button sentence" id="s-00-18-17-426" data-start="00:18:17,426" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Nightly News for this Friday.</p>
+<p>这是本周五的《晚间新闻》。</p>
+<p><button class="play-button sentence" id="s-00-18-19-235" data-start="00:18:19,235" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Tom Yamos reporting live from Anchorage, Alaska.</p>
+<p>我是汤姆·亚莫斯，从阿拉斯加安克雷奇现场报道。</p>
+<p><button class="play-button sentence" id="s-00-18-22-092" data-start="00:18:22,092" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We thank you so much for watching tonight and always.</p>
+<p>我们非常感谢你今晚和一直以来的观看。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11WYez6ECQ/?t=-2208958894" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-25-197" data-start="00:18:25,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're here for you.</p>
+<p>我们在这里为你服务。</p>
+<p><button class="play-button sentence" id="s-00-18-27-219" data-start="00:18:27,219" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good night.</p>
+<p>晚安。</p>
+<p><button class="play-button sentence" id="s-00-18-29-200" data-start="00:18:29,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> [Music]</p>
+<p>[音乐]</p>
+<p><button class="play-button sentence" id="s-00-18-29-926" data-start="00:18:29,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We thank you for watching and remember, stay updated on breaking news and top stories on the NBC News app or watch live on our YouTube channel.</p>
+<p>我们感谢你的观看，并记住，通过NBC新闻应用或我们的YouTube频道直播，随时了解突发新闻和头条新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
