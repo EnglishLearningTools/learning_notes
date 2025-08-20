@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoarding was a way to protect myself from the world</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A mental health professional's simplistic advice to "stop buying newspapers" fails to address the complex trauma underlying hoarding behaviors. This firsthand account reveals how the loss of two children triggered decades of compulsive accumulation, isolating the narrator from family and endangering her living conditions. Despite well-intentioned interventions, forced cleanups exacerbated shame until specialized support enabled breakthrough. With 1.4 million affected in the UK alone, the piece highlights hoarding's links to OCD/PTSD and advocates for trauma-informed approaches that prioritize agency over stigma.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Hoarding was a way to protect myself from the world</h1>
+<p>【BBC Ideas 囤积背后的创伤：一位女性从失去、挣扎到重生的真实自白 | 心理创伤与强迫症 | 社会偏见与救助困境】</p>
+<p>Summary:
+A mental health professional's simplistic advice to "stop buying newspapers" fails to address the complex trauma underlying hoarding behaviors. This firsthand account reveals how the loss of two children triggered decades of compulsive accumulation, isolating the narrator from family and endangering her living conditions. Despite well-intentioned interventions, forced cleanups exacerbated shame until specialized support enabled breakthrough. With 1.4 million affected in the UK alone, the piece highlights hoarding's links to OCD/PTSD and advocates for trauma-informed approaches that prioritize agency over stigma.</p>
+<p>摘要：
+心理健康专家"停止买报纸"的简单建议无法解决囤积行为背后的复杂创伤。亲历者叙述失去两个孩子的痛苦如何引发数十年强迫性囤积，导致家庭关系破裂与居住安全隐患。尽管干预措施出于善意，强制清理反而加剧了当事人的羞耻感，直至专业支持带来转机。英国约有140万人受此影响，本文揭示囤积行为与强迫症/创伤后应激障碍的关联，倡导用创伤知情方法取代污名化标签，尊重患者自主权。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 8 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A mental health professional once said to me, just stop buying two newspapers a day, as if that simple advice was going to be a solution to my decades-long problem.</p>
+<div class="zh">一位心理健康专家曾对我说，就不要再每天买两份报纸了，仿佛这个简单的建议就能解决我长达数十年的问题。</div>
+
+<p><button class="play-button sentence" id="s-00-00-10-000" data-start="00:00:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am a person with hoarding behaviour and I feel the urge to buy and keep newspapers.</p>
+<div class="zh">我是一个有囤积行为的人，我有一种购买和保存报纸的冲动。</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-000" data-start="00:00:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hording is a huge problem in our society, affecting around 1.4 million people in the UK alone.</p>
+<div class="zh">囤积是我们社会的一个巨大问题，仅在英国就影响了大约140万人。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959977" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-23-000" data-start="00:00:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet it's largely hidden from view and, as in my case, it can ruin lives, relationships, and your sense of self.</p>
+<div class="zh">然而，它在很大程度上是隐藏的，而且，就像我的情况一样，它可以摧毁生活、人际关系和你的自我意识。</div>
+
+<p><button class="play-button sentence" id="s-00-00-31-000" data-start="00:00:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My life stopped in 1999 when I lost two children, one child in a miscarriage and another to a cot death.</p>
+<div class="zh">我的生活在1999年停止了，当时我失去了两个孩子，一个孩子流产，另一个孩子死于婴儿猝死。</div>
+
+<p><button class="play-button sentence" id="s-00-00-44-000" data-start="00:00:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I blamed myself.</p>
+<div class="zh">我责怪我自己。</div>
+
+<p><button class="play-button sentence" id="s-00-00-46-000" data-start="00:00:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These unimaginable losses compounded by an earlier traumatic experience suddenly made it impossible to function.</p>
+<div class="zh">这些难以想象的损失，加上早先的创伤经历，突然让我无法正常生活。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959946" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-54-000" data-start="00:00:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At first, I could not let go of my children's clothes, milk bottles, everything they had touched.</p>
+<div class="zh">起初，我无法放下我孩子们的衣服、奶瓶，他们碰过的一切东西。</div>
+
+<p><button class="play-button sentence" id="s-00-01-01-000" data-start="00:01:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then, I began to buy newspapers and magazines, obsessively searching for articles about babies who had passed away, trying to understand why these bad things happened and to accept that I was not immune.</p>
+<div class="zh">然后，我开始购买报纸和杂志，痴迷地搜索关于去世婴儿的文章，试图理解为什么这些坏事会发生，并接受我自己也无法幸免。</div>
+
+<p><button class="play-button sentence" id="s-00-01-15-000" data-start="00:01:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eventually, my world got smaller and smaller.</p>
+<div class="zh">最终，我的世界变得越来越小。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-19-000" data-start="00:01:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although it felt like a safe nest, I was confined to a square of space in my house, surrounded mainly by stacks of newspapers and magazines, and for all the feeling of safety that hoarding gave me, it took away so much more.</p>
+<div class="zh">虽然它感觉像一个安全的巢穴，但我被限制在房子里的一小块空间里，主要被成堆的报纸和杂志包围着，尽管囤积给了我安全感，但它夺走的东西要多得多。</div>
+
+<p><button class="play-button sentence" id="s-00-01-34-000" data-start="00:01:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I isolated myself from those close to me, my husband, my other children and friends.</p>
+<div class="zh">我把自己和那些亲近的人隔离开来，我的丈夫，我其他的孩子和朋友。</div>
+
+<p><button class="play-button sentence" id="s-00-01-40-000" data-start="00:01:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I stopped inviting people over, always making excuses.</p>
+<div class="zh">我不再邀请别人来，总是找借口。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-44-000" data-start="00:01:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of my house was inaccessible.</p>
+<div class="zh">我的房子大部分地方都无法进入。</div>
+
+<p><button class="play-button sentence" id="s-00-01-46-000" data-start="00:01:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I lived off sandwich meal deals and canned drinks.</p>
+<div class="zh">我靠三明治套餐和罐装饮料生活。</div>
+
+<p><button class="play-button sentence" id="s-00-01-50-000" data-start="00:01:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My house had also become a fire hazard, endangering not only me, but potentially my neighbours.</p>
+<div class="zh">我的房子也变成了火灾隐患，不仅危及我自己，还可能危及我的邻居。</div>
+
+<p><button class="play-button sentence" id="s-00-01-56-000" data-start="00:01:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The thing to remember is that no one wants to live like this.</p>
+<div class="zh">要记住的是，没有人想这样生活。</div>
+
+<p><button class="play-button sentence" id="s-00-02-00-000" data-start="00:02:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I tried to seek help, but most professionals didn't have enough awareness or experience with this behaviour.</p>
+<div class="zh">我试图寻求帮助，但大多数专业人士对这种行为没有足够的认识或经验。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959873" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-07-000" data-start="00:02:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Housing authorities regularly sent officers over to help clear up my house, but as well intentioned as these interventions often were, they only magnified my shame.</p>
+<div class="zh">住房当局定期派官员来帮我清理房子，但尽管这些干预往往是善意的，它们只是放大了我的羞耻感。</div>
+
+<p><button class="play-button sentence" id="s-00-02-18-000" data-start="00:02:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As soon as I touched some of the items I felt the need to retell my story which was incredibly painful.</p>
+<div class="zh">我一碰到某些物品，就觉得有必要重述我的故事，这非常痛苦。</div>
+
+<p><button class="play-button sentence" id="s-00-02-24-000" data-start="00:02:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It wasn't until I finally received the right support that I came to realise that all this stuff is my trauma, and I understood why clear ups were so triggering and why they're not a solution to the hoarding problem.</p>
+<div class="zh">直到我终于得到了正确的支持，我才开始意识到所有这些东西都是我的创伤，我也明白了为什么清理工作会如此触发我，以及为什么它们不是解决囤积问题的方法。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959843" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-37-000" data-start="00:02:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only about 5% of people with hoarding behaviour ask for help, often because of shame.</p>
+<div class="zh">只有大约5%有囤积行为的人会寻求帮助，通常是因为羞耻。</div>
+
+<p><button class="play-button sentence" id="s-00-02-43-000" data-start="00:02:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Other times people simply don't realise they have a problem or lose sight of just how negatively this impacts their lives.</p>
+<div class="zh">其他时候，人们根本没有意识到自己有问题，或者忽视了这对他们生活的负面影响有多大。</div>
+
+<p><button class="play-button sentence" id="s-00-02-51-000" data-start="00:02:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For many years I felt too vulnerable and ashamed to seek help again, until I faced eviction.</p>
+<div class="zh">多年来，我感到太脆弱和羞愧，不敢再次寻求帮助，直到我面临被驱逐。</div>
+
+<p><button class="play-button sentence" id="s-00-02-57-000" data-start="00:02:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And at that time I thought it was the worst thing that could have happened, but it turned out to be a blessing in disguise.</p>
+<div class="zh">当时我以为这是可能发生的最糟糕的事情，但结果却是因祸得福。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-03-000" data-start="00:03:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I met a wonderful team of people who worked tirelessly to understand this behaviour and raise awareness about it.</p>
+<div class="zh">我遇到了一个优秀的团队，他们孜孜不倦地努力理解这种行为并提高人们对它的认识。</div>
+
+<p><button class="play-button sentence" id="s-00-03-10-000" data-start="00:03:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the first time in my life, I felt like someone was on my side.</p>
+<div class="zh">这是我生命中第一次感觉到有人站在我这边。</div>
+
+<p><button class="play-button sentence" id="s-00-03-15-000" data-start="00:03:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I started to attend group support sessions where I realised that I wasn't the only person in the world who hoarded.</p>
+<div class="zh">我开始参加团体支持会议，在那里我意识到我不是世界上唯一一个囤积东西的人。</div>
+
+<p><button class="play-button sentence" id="s-00-03-21-000" data-start="00:03:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of the shame I carried had been lifted.</p>
+<div class="zh">我背负的一些羞耻感被消除了。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959796" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-24-000" data-start="00:03:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And with time, I was able to start letting go of some of the things I held on to for so long.</p>
+<div class="zh">随着时间的推移，我开始能够放下一些我坚持了这么久的东西。</div>
+
+<p><button class="play-button sentence" id="s-00-03-30-000" data-start="00:03:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I threw a lot away and kept some in storage.</p>
+<div class="zh">我扔掉了许多，并把一些存放在仓库里。</div>
+
+<p><button class="play-button sentence" id="s-00-03-34-000" data-start="00:03:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Small steps.</p>
+<div class="zh">小步前进。</div>
+
+<p><button class="play-button sentence" id="s-00-03-36-000" data-start="00:03:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Simple pleasures mean so much to me now, a hot cup of tea with buttery toast in the morning.</p>
+<div class="zh">简单的快乐现在对我来说意义重大，比如早上喝一杯热茶配上黄油吐司。</div>
+
+<p><button class="play-button sentence" id="s-00-03-42-000" data-start="00:03:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Being able to keep my favourite ice cream in my freezer which I can now access.</p>
+<div class="zh">能够把我最喜欢的冰淇淋放在我现在可以接触到的冰箱里。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959772" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-48-000" data-start="00:03:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hording is often associated with older people, but in truth it doesn't discriminate.</p>
+<div class="zh">囤积通常与老年人有关，但事实上它并不区分对象。</div>
+
+<p><button class="play-button sentence" id="s-00-03-52-000" data-start="00:03:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It can affect anyone.</p>
+<div class="zh">它可以影响任何人。</div>
+
+<p><button class="play-button sentence" id="s-00-03-54-000" data-start="00:03:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over 90% of people who hoard have at least one other condition, such as obsessive-compulsive disorder or bipolar disorder.</p>
+<div class="zh">超过90%的囤积者至少患有另一种疾病，如强迫症或躁郁症。</div>
+
+<p><button class="play-button sentence" id="s-00-04-03-000" data-start="00:04:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have been diagnosed with OCD and post-traumatic stress disorder.</p>
+<div class="zh">我被诊断出患有强迫症和创伤后应激障碍。</div>
+
+<p><button class="play-button sentence" id="s-00-04-07-000" data-start="00:04:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're worried about your own behaviour, there are support groups that can help.</p>
+<div class="zh">如果你担心自己的行为，有一些支持小组可以提供帮助。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959748" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-12-000" data-start="00:04:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For me, it was starting small, working on sorting and throwing things away 15 minutes at a time.</p>
+<div class="zh">对我来说，就是从小事做起，一次花15分钟整理和扔掉东西。</div>
+
+<p><button class="play-button sentence" id="s-00-04-19-000" data-start="00:04:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Otherwise, it was too overwhelming.</p>
+<div class="zh">否则，就太让人难以承受了。</div>
+
+<p><button class="play-button sentence" id="s-00-04-22-000" data-start="00:04:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A mat and stacks of newspapers that you need to comb through, it's hard to know where to start.</p>
+<div class="zh">一张垫子和几堆需要仔细翻阅的报纸，很难知道从哪里开始。</div>
+
+<p><button class="play-button sentence" id="s-00-04-27-000" data-start="00:04:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're wondering how to broach the subject with someone you're concerned about, you can use a hoarding clutter scale, designed to compare someone's home with a series of images to help start the conversation.</p>
+<div class="zh">如果你想知道如何与你关心的人提起这个话题，你可以使用囤积杂乱量表，它旨在将某人的家与一系列图像进行比较，以帮助开始对话。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959722" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-38-000" data-start="00:04:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Always include a person in every decision and offer a choice, so change doesn't feel like something that is done to them.</p>
+<div class="zh">始终让当事人参与每一个决定并提供选择，这样改变就不会感觉像是强加给他们的。</div>
+
+<p><button class="play-button sentence" id="s-00-04-45-000" data-start="00:04:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How we talk about hoarding matters hugely.</p>
+<div class="zh">我们如何谈论囤积问题至关重要。</div>
+
+<p><button class="play-button sentence" id="s-00-04-48-000" data-start="00:04:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't say, I'm a hoarder.</p>
+<div class="zh">我不会说，我是一个囤积者。</div>
+
+<p><button class="play-button sentence" id="s-00-04-50-000" data-start="00:04:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This can be a very stigmatising word.</p>
+<div class="zh">这可能是一个非常有污名化的词。</div>
+
+<p><button class="play-button sentence" id="s-00-04-53-000" data-start="00:04:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When in fact, hoarding is not something that defines me.</p>
+<div class="zh">事实上，囤积并不能定义我。</div>
+
+<p><button class="play-button sentence" id="s-00-04-56-000" data-start="00:04:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What it actually is, is a coping mechanism, and need to protect myself from the world.</p>
+<div class="zh">它实际上是一种应对机制，一种保护自己免受世界伤害的需要。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1eeY2zHEGY/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-02-000" data-start="00:05:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hope that one day everyone will be able to see past the behaviour and understand that people who hoard are not lazy or dirty, but rather deeply wounded human beings who need support and understanding.</p>
+<div class="zh">我希望有一天，每个人都能看透这种行为，并理解囤积者不是懒惰或肮脏的，而是深受创伤、需要支持和理解的人。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
