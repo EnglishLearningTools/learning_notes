@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Science Behind Online Dating: How Algorithms Shape Your Love Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Online dating relies on sophisticated algorithms rather than mere chance. Apps like Hinge use Nobel Prize-winning algorithms to create stable matches, while collaborative filtering narrows down potential partners based on similar users' preferences. The placebo effect influences how highly we rate algorithm-suggested matches, and profile photos feed data into the system. Understanding these mechanisms helps users make informed decisions, though face-to-face meetings remain crucial for assessing true compatibility.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Science Behind Online Dating: How Algorithms Shape Your Love Life</h1>
+<p>【BBC Ideas 网络寻爱秘籍：算法匹配×心理效应×个人资料优化——三招让你告别无效社交】</p>
+<p>Summary:
+Online dating relies on sophisticated algorithms rather than mere chance. Apps like Hinge use Nobel Prize-winning algorithms to create stable matches, while collaborative filtering narrows down potential partners based on similar users' preferences. The placebo effect influences how highly we rate algorithm-suggested matches, and profile photos feed data into the system. Understanding these mechanisms helps users make informed decisions, though face-to-face meetings remain crucial for assessing true compatibility.</p>
+<p>摘要：
+在线约会并非依赖运气，而是由复杂算法驱动。约会应用采用诺贝尔奖获奖算法追求稳定匹配，协同过滤系统则根据相似用户偏好推荐对象。算法暗示会触发安慰剂效应，使用户高估匹配度，个人照片也会成为算法分类依据。了解这些机制有助于优化交友策略，但线下见面仍是检验真实契合度的关键。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 8 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're looking for love romance or even a friend with benefits online, you're not alone.</p>
+<div class="zh">如果你在网上寻找爱情、浪漫，甚至是一段炮友关系，你并不孤单。</div>
+
+<p><button class="play-button sentence" id="s-00-00-07-000" data-start="00:00:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are more than 11 million online data in the UK with millions more globally, but have you ever wondered what's really going on behind those glossy pics and witty bios?</p>
+<div class="zh">英国有超过1100万在线数据，全球范围内还有数百万，但你是否曾想过，在那些光鲜的照片和诙谐的个人简介背后，到底发生了什么？</div>
+
+<p><button class="play-button sentence" id="s-00-00-18-719" data-start="00:00:18,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And how can you make sure that your profile stands out amidst the endless choice?</p>
+<div class="zh">在无尽的选择中，你如何确保自己的个人资料脱颖而出？</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959977" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-23-000" data-start="00:00:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's a short guide to making sure those love algorithms are working in your favour, and her data science could help you find your next match.</p>
+<div class="zh">这里有一份简短的指南，可以确保那些爱情算法为你所用，而她的数据科学可以帮助你找到下一个匹配对象。</div>
+
+<p><button class="play-button sentence" id="s-00-00-34-000" data-start="00:00:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Online dating isn't just about luck or fate.</p>
+<div class="zh">在线约会不仅仅是运气或命运。</div>
+
+<p><button class="play-button sentence" id="s-00-00-37-237" data-start="00:00:37,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a sophisticated dance of data and algorithms.</p>
+<div class="zh">它是数据与算法之间一场复杂的共舞。</div>
+
+<p><button class="play-button sentence" id="s-00-00-41-000" data-start="00:00:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These apps are constantly harvesting our information, our likes, our dislikes, even what's in our pictures.</p>
+<div class="zh">这些应用程序不断收集我们的信息、我们的喜好、我们的厌恶，甚至是我们照片中的内容。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-48-000" data-start="00:00:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's worst, online dating can seem frustrating, addictive, expensive and even detrimental to your mental health.</p>
+<div class="zh">最糟糕的是，在线约会可能看起来令人沮丧、使人上瘾、价格昂贵，甚至对你的心理健康有害。</div>
+
+<p><button class="play-button sentence" id="s-00-00-55-000" data-start="00:00:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet millions of us still put our faith into the hands of these digital cupits, but in reality their intricate systems designed to analyse and predict human behaviour.</p>
+<div class="zh">然而，我们数百万人仍然将我们的信任交到这些数字丘比特手中，但实际上，它们是旨在分析和预测人类行为的复杂系统。</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-000" data-start="00:01:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An algorithm used in many dating apps, including hinge, is the Nobel Prize winning Gail Shaqli algorithm.</p>
+<div class="zh">许多约会应用（包括Hinge）使用的一种算法是获得诺贝尔奖的盖尔·沙普利算法。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959925" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-15-000" data-start="00:01:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Think of it like a big group of swipers.</p>
+<div class="zh">把它想象成一大群滑动用户。</div>
+
+<p><button class="play-button sentence" id="s-00-01-18-000" data-start="00:01:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Based on who's like who, the algorithm wants to find matches where no one can leave their current match to successfully trade up with someone else.</p>
+<div class="zh">根据谁喜欢谁，该算法希望找到一种匹配，使得没有人可以离开他们当前的匹配对象去成功地与其他人进行交换。</div>
+
+<p><button class="play-button sentence" id="s-00-01-26-000" data-start="00:01:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's all about keeping things stable, no one jumping ship, so your algorithm-approved match might not be your dream fantasy crush, but they could be a really stable match.</p>
+<div class="zh">这一切都是为了保持稳定，没有人会跳船，所以你经算法批准的匹配对象可能不是你梦想中的迷恋对象，但他们可能是一个非常稳定的匹配对象。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959902" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-38-000" data-start="00:01:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's worth keeping an open mind and don't let Mr or Merz Wright slip away with a hasty swipe.</p>
+<div class="zh">所以，值得保持开放的心态，不要因为仓促的左滑而让“对先生”或“对小姐”溜走。</div>
+
+<p><button class="play-button sentence" id="s-00-01-45-000" data-start="00:01:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ever get that feeling where you're sure there's more out there, but it keeps recommending the same types of profiles.</p>
+<div class="zh">是否有过这种感觉：你确信还有更多选择，但它却不断推荐相同类型的个人资料。</div>
+
+<p><button class="play-button sentence" id="s-00-01-55-000" data-start="00:01:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's collaborative filtering at work.</p>
+<div class="zh">这就是协同过滤在起作用。</div>
+
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It makes assumptions about your preferences based on what others with similar tastes have chosen before you.</p>
+<div class="zh">它根据之前与你有相似品味的人所选择的内容来假设你的偏好。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959877" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example, if someone before you chooses a lion and rejects a tiger, then when you also choose a lion, you might not see a tiger appear in your next choices.</p>
+<div class="zh">例如，如果你之前的某人选择了狮子而拒绝了老虎，那么当你也选择了狮子时，你可能就不会在你的下一个选择中看到老虎出现。</div>
+
+<p><button class="play-button sentence" id="s-00-02-12-000" data-start="00:02:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So while you think you're seeing everyone, you're really only being shown the matches that the app thinks you like based on your previous swipes and what others have chosen before you.</p>
+<div class="zh">所以，虽然你以为你看到了所有人，但实际上你看到的只是应用程序根据你之前的滑动记录以及其他人之前的选择而认为你会喜欢的匹配对象。</div>
+
+<p><button class="play-button sentence" id="s-00-02-22-000" data-start="00:02:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you continue to swipe, the dating pool further narrows.</p>
+<div class="zh">随着你不断滑动，约会池会进一步缩小。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959854" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-26-000" data-start="00:02:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're feeling stuck in a mismatched loop, you might have unwittingly been lumped in with a group who have a specific set of tastes that you don't share.</p>
+<div class="zh">如果你感觉自己陷入了一个错配的循环，你可能在不知不觉中被归入了一个拥有特定品味而你并不具备的群体。</div>
+
+<p><button class="play-button sentence" id="s-00-02-36-000" data-start="00:02:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Time for a digital makeover.</p>
+<div class="zh">是时候进行一次数字形象改造了。</div>
+
+<p><button class="play-button sentence" id="s-00-02-38-000" data-start="00:02:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no reset button on the algorithm, but you could start a fresh profile and see if that leads you in a new direction.</p>
+<div class="zh">算法上没有重置按钮，但你可以创建一个新的个人资料，看看这是否会引导你走向一个新的方向。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959832" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-48-000" data-start="00:02:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's not just who you see when you swipe matters too.</p>
+<div class="zh">但重要的不仅仅是你滑动时看到的人。</div>
+
+<p><button class="play-button sentence" id="s-00-02-52-000" data-start="00:02:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some dating sites purposefully prioritize profiles that are active and match you with profiles active at the same time as you.</p>
+<div class="zh">一些约会网站会有意优先推荐活跃的个人资料，并将你与在你同时段活跃的个人资料进行匹配。</div>
+
+<p><button class="play-button sentence" id="s-00-02-59-000" data-start="00:02:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Different dating apps have different peak times.</p>
+<div class="zh">不同的约会应用有不同的高峰时间。</div>
+
+<p><button class="play-button sentence" id="s-00-03-03-000" data-start="00:03:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Catching people at these peak times can boost your visibility and improve your chances of making a match.</p>
+<div class="zh">在这些高峰时间抓住用户可以提高你的可见度，并增加你成功匹配的机会。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959811" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-09-000" data-start="00:03:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Think of it like fishing while the fish are biting.</p>
+<div class="zh">可以把它想象成在鱼咬钩的时候去钓鱼。</div>
+
+<p><button class="play-button sentence" id="s-00-03-16-000" data-start="00:03:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's say you do get matched.</p>
+<div class="zh">假设你真的匹配成功了。</div>
+
+<p><button class="play-button sentence" id="s-00-03-18-000" data-start="00:03:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's it right.</p>
+<div class="zh">就这样了，对吧。</div>
+
+<p><button class="play-button sentence" id="s-00-03-19-000" data-start="00:03:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You found the one.</p>
+<div class="zh">你找到了那个人。</div>
+
+<p><button class="play-button sentence" id="s-00-03-21-000" data-start="00:03:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, not exactly.</p>
+<div class="zh">嗯，不完全是。</div>
+
+<p><button class="play-button sentence" id="s-00-03-23-000" data-start="00:03:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is where the placebo effect comes into play.</p>
+<div class="zh">这就是安慰剂效应发挥作用的地方。</div>
+
+<p><button class="play-button sentence" id="s-00-03-27-000" data-start="00:03:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Studies have shown that when you believe an algorithm has matched you, you tend to rate that person more highly, even if the algorithm didn't actually do much.</p>
+<div class="zh">研究表明，当你相信算法为你匹配了对象时，你往往会给那个人更高的评价，即使算法实际上并没有做太多。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959785" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-35-000" data-start="00:03:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mere suggestion that you're a good match can influence your perception and behaviour.</p>
+<div class="zh">仅仅是“你们很般配”的暗示就能影响你的看法和行为。</div>
+
+<p><button class="play-button sentence" id="s-00-03-40-000" data-start="00:03:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For instance, dating sites OKCupid ran an experiment where they told people who were mathematically bad matches that they were great matches.</p>
+<div class="zh">例如，约会网站OKCupid进行了一项实验，他们告诉那些在数学上匹配度很差的人，说他们是绝配。</div>
+
+<p><button class="play-button sentence" id="s-00-03-49-000" data-start="00:03:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They found that the simple suggestion of compatibility caused people to like each other more.</p>
+<div class="zh">他们发现，仅仅是兼容性的简单暗示就导致人们更加喜欢对方。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-58-000" data-start="00:03:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of people believe that uploading the perfect profile picture will increase their chances of finding the best match.</p>
+<div class="zh">很多人认为上传完美的个人资料照片会增加他们找到最佳匹配的机会。</div>
+
+<p><button class="play-button sentence" id="s-00-04-06-000" data-start="00:04:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it will, but not how you might think.</p>
+<div class="zh">它确实会，但方式可能和你想的不一样。</div>
+
+<p><button class="play-button sentence" id="s-00-04-09-000" data-start="00:04:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Apps like Tinder can take information from your photos and feed that into the algorithm.</p>
+<div class="zh">像Tinder这样的应用可以从你的照片中提取信息，并将其输入算法。</div>
+
+<p><button class="play-button sentence" id="s-00-04-14-000" data-start="00:04:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It recognizes themes like outdoors, pets being on a beach or at a party and classifies you with similar profile photos.</p>
+<div class="zh">它能识别出诸如户外、宠物、在海滩上或在派对上等主题，并将你与具有类似个人资料照片的人归为一类。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959737" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-23-000" data-start="00:04:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So think twice about posting that fancy dress photo.</p>
+<div class="zh">所以要三思而后行，再发布那些化装舞会的照片。</div>
+
+<p><button class="play-button sentence" id="s-00-04-26-000" data-start="00:04:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It could be the making or breaking of a future match.</p>
+<div class="zh">它可能成就也可能毁掉一段未来的匹配。</div>
+
+<p><button class="play-button sentence" id="s-00-04-31-000" data-start="00:04:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In an effort to win at online dating, data journalist Amy Webb analysed the performance of hundreds of dating profiles and looked at what made some profiles more successful than others.</p>
+<div class="zh">为了在网上约会中获胜，数据记者艾米·韦伯分析了数百个约会资料的表现，并研究了是什么让一些资料比其他的更成功。</div>
+
+<p><button class="play-button sentence" id="s-00-04-42-000" data-start="00:04:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amy's analysis showed that shorter, well-written profiles using positive language and avoiding niche references were more approachable and increased engagement.</p>
+<div class="zh">艾米的分析表明，更简短、写得好、使用积极语言并避免小众引用的个人资料更平易近人，并能增加互动。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959708" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-52-000" data-start="00:04:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Knowledge is power, especially in the world of online dating.</p>
+<div class="zh">知识就是力量，尤其是在网络约会的世界里。</div>
+
+<p><button class="play-button sentence" id="s-00-04-57-000" data-start="00:04:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Understanding how these algorithms work can help you understand why you're seeing certain profiles and not others and help you put things in perspective.</p>
+<div class="zh">了解这些算法的工作原理可以帮助你理解为什么你会看到某些个人资料而不是其他，并帮助你正确看待事物。</div>
+
+<p><button class="play-button sentence" id="s-00-05-06-000" data-start="00:05:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Making more informed decisions about your online presence will optimize your chances of finding a compatible partner.</p>
+<div class="zh">对你的在线形象做出更明智的决定将优化你找到合适伴侣的机会。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV12beYz3Ewj/?t=-2208959686" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-14-000" data-start="00:05:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember, while algorithms can help meeting someone face to face, it's probably the only way you'll truly be able to see if you're compatible.</p>
+<div class="zh">请记住，虽然算法可以提供帮助，但面对面地见面可能是你真正能判断彼此是否合适的唯一方式。</div>
+
+<p><button class="play-button sentence" id="s-00-05-27-000" data-start="00:05:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Happy dating!</p>
+<div class="zh">约会快乐！</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
