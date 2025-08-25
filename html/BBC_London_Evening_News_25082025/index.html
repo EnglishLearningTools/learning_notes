@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>London News Bulletin: Rat Infestation, Pedicab Crash, Carnival Joy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="London's BBC News covers multiple stories: East London residents endure a prolonged rat infestation causing significant distress; a serious collision in Soho involving a pedicab and a bus leaves three men injured, two critically; the Notting Hill Carnival brings vibrant celebrations to West London with massive attendance; additionally, a grass fire in Woolwich Common required substantial firefighting efforts, and the weather forecast indicates a shift to cooler, unsettled conditions with potential thunderstorms by midweek.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>London News Bulletin: Rat Infestation, Pedicab Crash, Carnival Joy</h1>
+<p>【BBC本地新闻 20250826 伦敦鼠患噩梦持续一年，居民夜不能寐｜索霍区三轮车与巴士相撞致三人重伤｜诺丁山狂欢节盛大回归，两百万人共庆欧洲最大街头派对】</p>
+<p>Summary:
+London's BBC News covers multiple stories: East London residents endure a prolonged rat infestation causing significant distress; a serious collision in Soho involving a pedicab and a bus leaves three men injured, two critically; the Notting Hill Carnival brings vibrant celebrations to West London with massive attendance; additionally, a grass fire in Woolwich Common required substantial firefighting efforts, and the weather forecast indicates a shift to cooler, unsettled conditions with potential thunderstorms by midweek.</p>
+<p>摘要：
+BBC伦敦新闻多事件报道：东伦敦居民楼遭长期鼠患困扰，居民承受巨大心理压力；索霍区发生三轮车与巴士相撞事故，三名男子受伤其中两人伤势严重；诺丁山狂欢节盛大举行，预计三天吸引两百万人参与，气氛热烈；此外，伍利奇公发生草地火灾，约四公顷草场受损，65名消防员参与扑救；天气预报显示银行假日温暖晴朗，但本周中期将转凉并有雷雨风险。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 12 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-16-000" data-start="00:00:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good evening and welcome to BBC London.</p>
+<div class="zh">晚上好，欢迎收看 BBC 伦敦新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-00-18-538" data-start="00:00:18,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Victoria Hollins.</p>
+<div class="zh">我是维多利亚·霍林斯。</div>
+
+<p><button class="play-button sentence" id="s-00-00-20-000" data-start="00:00:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents say a month's long rat infestation at an East London apartment block has left them stressed,</p>
+<div class="zh">居民们表示，东伦敦一栋公寓楼里持续数月的#鼠#患让他们压力山大，</div>
+
+<p><button class="play-button sentence" id="s-00-00-26-142" data-start="00:00:26,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> terrified and unable to sleep.</p>
+<div class="zh">恐惧不安，甚至无法入睡。</div>
+
+<p><button class="play-button sentence" id="s-00-00-28-000" data-start="00:00:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People living at Crystal Court apartments in Hackney took photographs and videos of the rodents plaguing the bin store.</p>
+<div class="zh">住在#哈克尼#的#水晶#苑公寓的居民拍下了这些啮齿动物肆虐垃圾房的照片和视频。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959965" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-35-000" data-start="00:00:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The residents say they made several complaints to Notting Hill Genesis, which manages the building.</p>
+<div class="zh">居民们表示，他们多次向负责管理该楼的诺丁山#创世#公司投诉。</div>
+
+<p><button class="play-button sentence" id="s-00-00-40-000" data-start="00:00:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here said it was tackling the ongoing pest issues and has apologised for the impact on residents.</p>
+<div class="zh">该公司称正在处理这一#持续#的#害虫#问题，并就对居民造成的影响表示歉意。</div>
+
+<p><button class="play-button sentence" id="s-00-00-46-479" data-start="00:00:46,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Lakshmi Gopal.</p>
+<div class="zh">以下是拉克什米·戈帕尔的报道。</div>
+
+<p><button class="play-button sentence" id="s-00-00-50-000" data-start="00:00:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Stuff of Nightmares</p>
+<div class="zh">这就是噩梦的写照。</div>
+
+<p><button class="play-button sentence" id="s-00-00-52-000" data-start="00:00:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A reality for residents in this building in Hackney.</p>
+<div class="zh">这却是#哈克尼#这栋楼居民的现实。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959941" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-59-000" data-start="00:00:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rats scurrying and scratching and generally making themselves at home at Crystal Court apartments.</p>
+<div class="zh">老鼠在#水晶#苑公寓里乱窜、抓挠，仿佛把这里当成了自己的家。</div>
+
+<p><button class="play-button sentence" id="s-00-01-09-000" data-start="00:01:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tint of 15 rats scurrying up the walls.</p>
+<div class="zh">多达15只老鼠沿着墙壁乱窜。</div>
+
+<p><button class="play-button sentence" id="s-00-01-12-710" data-start="00:01:12,710" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can't believe it.</p>
+<div class="zh">我简直不敢相信。</div>
+
+<p><button class="play-button sentence" id="s-00-01-14-565" data-start="00:01:14,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I thought it was shocked.</p>
+<div class="zh">我当时感到非常震惊。</div>
+
+<p><button class="play-button sentence" id="s-00-01-17-000" data-start="00:01:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Marlon remembers his first encounter with the rodents in the bin store.</p>
+<div class="zh">马龙回忆起他第一次在垃圾房遇到老鼠的情景。</div>
+
+<p><button class="play-button sentence" id="s-00-01-21-000" data-start="00:01:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was quite a lot of them running up walls into a hole in the roof there.</p>
+<div class="zh">当时有很多老鼠沿着墙跑进屋顶的洞里。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959914" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-26-000" data-start="00:01:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was just startled.</p>
+<div class="zh">我被吓了一跳。</div>
+
+<p><button class="play-button sentence" id="s-00-01-27-821" data-start="00:01:27,821" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just threw my rubbish into the bin and got out.</p>
+<div class="zh">我只是把垃圾丢进桶里，然后立刻离开。</div>
+
+<p><button class="play-button sentence" id="s-00-01-32-000" data-start="00:01:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents capturing the footage say it's been going on for around a year with sounds of the creatures coming through the walls.</p>
+<div class="zh">拍下这些画面的居民说，这种情况已经持续大约一年了，老鼠的声音甚至透过墙壁传进来。</div>
+
+<p><button class="play-button sentence" id="s-00-01-40-000" data-start="00:01:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can hear them scratching away.</p>
+<div class="zh">我们能听到它们不停地抓挠。</div>
+
+<p><button class="play-button sentence" id="s-00-01-41-866" data-start="00:01:41,866" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We complain quite a few times already, especially because we have a child.</p>
+<div class="zh">我们已经投诉过很多次了，尤其是因为我们家里有小孩。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959894" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-46-000" data-start="00:01:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's not a good environment and we're kind of scared to go downstairs to be honest.</p>
+<div class="zh">所以环境很差，说实话我们都害怕下楼。</div>
+
+<p><button class="play-button sentence" id="s-00-01-50-000" data-start="00:01:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How does it feel having seen those rats?</p>
+<div class="zh">看到那些老鼠时感觉如何？</div>
+
+<p><button class="play-button sentence" id="s-00-01-53-164" data-start="00:01:53,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I feel scared because they have other rats here.</p>
+<div class="zh">我感到害怕，因为这里还有更多老鼠。</div>
+
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they're scared for here because only night they are like making noise in our flats.</p>
+<div class="zh">他们在这里制造恐惧，因为到了晚上，它们就在我们公寓里发出噪音。</div>
+
+<p><button class="play-button sentence" id="s-00-02-04-698" data-start="00:02:04,698" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's scary.</p>
+<div class="zh">真的很#吓人#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-06-000" data-start="00:02:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is where the bin store is.</p>
+<div class="zh">这就是垃圾房的位置。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959872" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-07-657" data-start="00:02:07,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been signs put up by some of the residents on the door asking people not to leave their rubbish,</p>
+<div class="zh">一些居民在门上贴了告示，要求大家不要乱放垃圾，</div>
+
+<p><button class="play-button sentence" id="s-00-02-13-000" data-start="00:02:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but there is some rubbish here.</p>
+<div class="zh">但这里仍然有垃圾。</div>
+
+<p><button class="play-button sentence" id="s-00-02-14-801" data-start="00:02:14,801" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But if I lean over this is the bin store where the rats have been found and it's locked today.</p>
+<div class="zh">如果我探头看，这是发现老鼠的垃圾房，今天它被锁上了。</div>
+
+<p><button class="play-button sentence" id="s-00-02-20-000" data-start="00:02:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's a sign up saying trapping is taking place.</p>
+<div class="zh">门口的标志写着正在进行捕捉。</div>
+
+<p><button class="play-button sentence" id="s-00-02-24-000" data-start="00:02:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Notting Hill Genesis, which manages the building,</p>
+<div class="zh">管理这栋楼的诺丁山#创世#公司，</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959853" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-26-504" data-start="00:02:26,504" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> has apologised for how the ongoing pest issues have affected residents</p>
+<div class="zh">为这一#持续#的#害虫#问题给居民带来的影响道歉，</div>
+
+<p><button class="play-button sentence" id="s-00-02-30-000" data-start="00:02:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and says cleaning has taken place and will continue in the bin store.</p>
+<div class="zh">并表示垃圾房已经清理过，并将继续清理。</div>
+
+<p><button class="play-button sentence" id="s-00-02-34-000" data-start="00:02:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says household waste left in communal areas has now been cleared</p>
+<div class="zh">公司称，堆放在#公共#区域的生活垃圾已经清理干净，</div>
+
+<p><button class="play-button sentence" id="s-00-02-37-959" data-start="00:02:37,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and we've carried out pest control and prevention.</p>
+<div class="zh">并且已经进行了#害虫#控制和#预防#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-41-000" data-start="00:02:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It adds we've advised residents to take additional care when disposing of waste to prevent these issues from reoccurring.</p>
+<div class="zh">公司补充道，他们已建议居民在处理垃圾时要格外小心，以防这些问题再次发生。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959829" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-51-000" data-start="00:02:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Residents look forward to no longer having to run the gauntlet when taking out the bins after months of living with these unwelcome neighbours.</p>
+<div class="zh">居民们期盼着，几个月来与这些不速之客为伴后，终于能不再提心吊胆地去倒垃圾。</div>
+
+<p><button class="play-button sentence" id="s-00-02-59-000" data-start="00:02:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Luxembourg, BBC London.</p>
+<div class="zh">卢森堡，BBC伦敦。</div>
+
+<p><button class="play-button sentence" id="s-00-03-02-000" data-start="00:03:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three men were injured to seriously in a crash involving a bus and a pedicab.</p>
+<div class="zh">三名男子在一起涉及公交车和人力三轮车的事故中受伤，其中两人伤势严重。</div>
+
+<p><button class="play-button sentence" id="s-00-03-07-000" data-start="00:03:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happened in Soho early this morning, Matt Graveling has more.</p>
+<div class="zh">事故发生在今天凌晨的苏荷区，以下是马特·格拉夫林的报道。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959809" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-11-000" data-start="00:03:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was around 1 o'clock in the morning that emergency services were called to the west end</p>
+<div class="zh">大约凌晨1点，急救人员接到通知前往伦敦西区，</div>
+
+<p><button class="play-button sentence" id="s-00-03-15-752" data-start="00:03:15,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> following a collision between this rich, door style bike and the end 19 bus.</p>
+<div class="zh">原因是一辆装饰华丽的三轮#车祸#与19路公交车相撞。</div>
+
+<p><button class="play-button sentence" id="s-00-03-21-000" data-start="00:03:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three men were injured and treated at the scene.</p>
+<div class="zh">三名男子受伤并在现场接受了救治。</div>
+
+<p><button class="play-button sentence" id="s-00-03-23-000" data-start="00:03:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two were taken to local hospitals and one to a major trauma centre.</p>
+<div class="zh">其中两人被送往当地医院，一人被送往大型#创伤#中心。</div>
+
+<p><button class="play-button sentence" id="s-00-03-27-000" data-start="00:03:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One man has since been discharged but the two others, A23 and 25 remain in hospital.</p>
+<div class="zh">一名男子已出院，但另外两名23岁和25岁的男子仍在住院。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959787" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-33-000" data-start="00:03:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rich or style bikes or pedicabs are often carefully decorated and playing loud music.</p>
+<div class="zh">这种装饰精美并播放大声音乐的人力三轮车很常见。</div>
+
+<p><button class="play-button sentence" id="s-00-03-38-000" data-start="00:03:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've become a common sight around the capital but they have proved controversial.</p>
+<div class="zh">它们已成为首都街头的常见景象，但也引发了#争议#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-43-000" data-start="00:03:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In June, Transport for London said they are still the only unregulated public transport in the city</p>
+<div class="zh">今年6月，伦敦交通局表示，它们仍然是城里唯一未#监管#的公共交通工具，</div>
+
+<p><button class="play-button sentence" id="s-00-03-48-422" data-start="00:03:48,422" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and following a consultation that had an overwhelming response</p>
+<div class="zh">在一次收到#压倒性#回应的#咨询#之后，</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959768" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-51-949" data-start="00:03:51,949" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> from respondents welcoming them bringing in new rules such as licensing.</p>
+<div class="zh">大多数受访者欢迎出台诸如许可制度等新规。</div>
+
+<p><button class="play-button sentence" id="s-00-03-56-000" data-start="00:03:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Which they hope to bring in in the spring.</p>
+<div class="zh">这些规定预计将在明年春天实施。</div>
+
+<p><button class="play-button sentence" id="s-00-03-58-000" data-start="00:03:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's important to add that it's still unknown what happened on this spot last night that led to two men being seriously hurt.</p>
+<div class="zh">但需要指出的是，目前仍不清楚昨晚究竟发生了什么，导致两人重伤。</div>
+
+<p><button class="play-button sentence" id="s-00-04-06-000" data-start="00:04:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But TFL say their thoughts are with everyone involved</p>
+<div class="zh">不过伦敦交通局表示，他们对所有受影响的人表示关心，</div>
+
+<p><button class="play-button sentence" id="s-00-04-08-736" data-start="00:04:08,736" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and they're working with the Metropolitan Police who are investigating the incident and say no arrests have yet been made.</p>
+<div class="zh">并正与#伦敦警察厅#合作调查此事，警方称尚未有人被捕。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-15-000" data-start="00:04:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around 65 firefighters tackled a grass fire on Woodwich Common this afternoon.</p>
+<div class="zh">今天下午，大约65名消防员在伍尔维奇公园扑灭了一场草地火灾。</div>
+
+<p><button class="play-button sentence" id="s-00-04-20-000" data-start="00:04:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around four hectares of grassland were damaged by the fire, crews from East Greenwich,</p>
+<div class="zh">大约四公顷草地被烧毁，来自东格林威治、</div>
+
+<p><button class="play-button sentence" id="s-00-04-25-615" data-start="00:04:25,615" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plumstead and Alphan Fire Station extinguished it but stayed to damp down the area.</p>
+<div class="zh">普拉姆斯特德和阿尔芬消防站的人员扑灭了大火，但仍留守现场继续降温。</div>
+
+<p><button class="play-button sentence" id="s-00-04-32-000" data-start="00:04:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the Notting Hill Carnival in West London is in full swing known as the biggest street party in Europe.</p>
+<div class="zh">如今，西伦敦的诺丁山狂欢节正如火如荼地进行，它被称为欧洲最大的街头派对。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959722" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-38-000" data-start="00:04:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around two million people are expected to attend over its three days and our reporter,</p>
+<div class="zh">预计三天内将有约两百万人参加，我们的记者</div>
+
+<p><button class="play-button sentence" id="s-00-04-43-433" data-start="00:04:43,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Briani Williams, has been #amongst# them.</p>
+<div class="zh">布里亚尼·威廉姆斯也#身在#其中。</div>
+
+<p><button class="play-button sentence" id="s-00-04-49-000" data-start="00:04:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The main #parade# at Notting Hill Carnival.</p>
+<div class="zh">诺丁山狂欢节的主要#游行#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-53-200" data-start="00:04:53,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The performance.</p>
+<div class="zh">这是表演。</div>
+
+<p><button class="play-button sentence" id="s-00-04-56-000" data-start="00:04:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm coming to the first time on my life.</p>
+<div class="zh">这是我人生中第一次来这里。</div>
+
+<p><button class="play-button sentence" id="s-00-04-59-368" data-start="00:04:59,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you didn't come to the hospital in 2025, follow me.</p>
+<div class="zh">如果你2025年没来这里，那就跟随我的脚步吧。</div>
+
+<p><button class="play-button sentence" id="s-00-05-04-000" data-start="00:05:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just love it so much.</p>
+<div class="zh">我真的太喜欢这里了。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959694" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-05-227" data-start="00:05:05,227" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It feels so amazing being on the road and I'm with a great band adding sun on the horse.</p>
+<div class="zh">能在街上和一支优秀的乐队一起游行，感觉太棒了。</div>
+
+<p><button class="play-button sentence" id="s-00-05-10-000" data-start="00:05:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just been so lovely, there's so much noise.</p>
+<div class="zh">真的很热闹，到处都是声音。</div>
+
+<p><button class="play-button sentence" id="s-00-05-12-264" data-start="00:05:12,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a really, really good thing to look forward to the day before the tour.</p>
+<div class="zh">这是值得提前一天就期待的盛事。</div>
+
+<p><button class="play-button sentence" id="s-00-05-16-000" data-start="00:05:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are happy anyway.</p>
+<div class="zh">无论如何，我们都很开心。</div>
+
+<p><button class="play-button sentence" id="s-00-05-17-721" data-start="00:05:17,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sweetheart, metronomes, carnival road champs all the time.</p>
+<div class="zh">亲爱的，节拍器，狂欢节路上的冠军们。</div>
+
+<p><button class="play-button sentence" id="s-00-05-22-886" data-start="00:05:22,886" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Take me home.</p>
+<div class="zh">带我回家吧。</div>
+
+<p><button class="play-button sentence" id="s-00-05-26-000" data-start="00:05:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the audience.</p>
+<div class="zh">还有观众们。</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959668" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-32-000" data-start="00:05:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's amazing, honestly.</p>
+<div class="zh">真的太棒了。</div>
+
+<p><button class="play-button sentence" id="s-00-05-33-135" data-start="00:05:33,135" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I started to come early, it's your #parade#.</p>
+<div class="zh">我一大早就来了，这就是你的#游行#。</div>
+
+<p><button class="play-button sentence" id="s-00-05-35-027" data-start="00:05:35,027" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been excellent.</p>
+<div class="zh">真是太精彩了。</div>
+
+<p><button class="play-button sentence" id="s-00-05-36-000" data-start="00:05:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm so glad to be here.</p>
+<div class="zh">我很高兴能来这里。</div>
+
+<p><button class="play-button sentence" id="s-00-05-37-565" data-start="00:05:37,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I haven't been here for two years.</p>
+<div class="zh">我已经两年没来了。</div>
+
+<p><button class="play-button sentence" id="s-00-05-40-000" data-start="00:05:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm back today.</p>
+<div class="zh">所以今天我回来了。</div>
+
+<p><button class="play-button sentence" id="s-00-05-41-304" data-start="00:05:41,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Enjoy it.</p>
+<div class="zh">好好享受吧。</div>
+
+<p><button class="play-button sentence" id="s-00-05-42-000" data-start="00:05:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I like the music.</p>
+<div class="zh">我喜欢音乐。</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959656" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-43-555" data-start="00:05:43,555" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I like the jumping and the mingling.</p>
+<div class="zh">我喜欢跳舞和与人交流。</div>
+
+<p><button class="play-button sentence" id="s-00-05-46-888" data-start="00:05:46,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I like to get together.</p>
+<div class="zh">我喜欢大家聚在一起。</div>
+
+<p><button class="play-button sentence" id="s-00-05-50-000" data-start="00:05:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And all the love people are showing.</p>
+<div class="zh">以及人们展现的爱意。</div>
+
+<p><button class="play-button sentence" id="s-00-05-52-000" data-start="00:05:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as part of the tradition, the judging panel giving out points for each group that's involved.</p>
+<div class="zh">按照传统，评审团会为每个参与的团队打分。</div>
+
+<p><button class="play-button sentence" id="s-00-05-58-000" data-start="00:05:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have a score in Strock, there that we use.</p>
+<div class="zh">我们有一套评分体系来使用。</div>
+
+<p><button class="play-button sentence" id="s-00-06-01-056" data-start="00:06:01,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In terms of the #costume# bands, we are looking at #creativity#, we are looking at theme,</p>
+<div class="zh">在#服装#团队方面，我们考察#创意#、主题、</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959633" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-07-000" data-start="00:06:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we are looking at the #originality# presentation, audience response.</p>
+<div class="zh">还考察#原创性#表现和观众反应。</div>
+
+<p><button class="play-button sentence" id="s-00-06-12-000" data-start="00:06:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Carnival just brings out, I believe, the best in everybody.</p>
+<div class="zh">我相信，狂欢节能激发出每个人最好的一面。</div>
+
+<p><button class="play-button sentence" id="s-00-06-16-140" data-start="00:06:16,140" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because when you #enforce# the tune, it's like you bring out that hidden part,</p>
+<div class="zh">因为当你#演奏#音乐时，就像是把人们心中隐藏的那一部分释放出来，</div>
+
+<p><button class="play-button sentence" id="s-00-06-21-356" data-start="00:06:21,356" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that bakanal part, that that freeness, that giving.</p>
+<div class="zh">那种狂欢、自由和分享的精神。</div>
+
+<p><button class="play-button sentence" id="s-00-06-29-000" data-start="00:06:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The performance went down, he's come out and talked into Cheezay.</p>
+<div class="zh">表演继续进行，人们边唱边跳，气氛热烈。</div>
+
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959607" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-33-000" data-start="00:06:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So much time and effort is going into preparing the costumes, the music, the dance, and the puffins.</p>
+<div class="zh">为了准备服装、音乐、舞蹈和道具，人们付出了大量时间和精力。</div>
+
+<p><button class="play-button sentence" id="s-00-06-40-000" data-start="00:06:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> #Manipulate# the arms above the head.</p>
+<div class="zh">表演者需要把双臂高举过头来#操控#。</div>
+
+<p><button class="play-button sentence" id="s-00-06-42-399" data-start="00:06:42,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It takes a lot of core muscles, supportive back #brace#.</p>
+<div class="zh">这需要大量核心肌肉力量，还要靠背部#支架#支撑。</div>
+
+<p><button class="play-button sentence" id="s-00-06-46-000" data-start="00:06:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That takes the #spine# of the #puppet# and you have to balance, take all the weight on your hips, get a bit of dancing in.</p>
+<div class="zh">那就是木偶的#脊柱#，你必须保持平衡，把所有重量放在臀部，还要加入舞蹈动作。</div>
+
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959584" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-56-000" data-start="00:06:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The magic of Carnival fills the streets for a few days.</p>
+<div class="zh">狂欢节的魔力充满街头，持续几天。</div>
+
+<p><button class="play-button sentence" id="s-00-06-59-082" data-start="00:06:59,082" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the memories last a #lifetime#.</p>
+<div class="zh">但回忆将伴随#一生#。</div>
+
+<p><button class="play-button sentence" id="s-00-07-01-000" data-start="00:07:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Briny Williams, BBC London.</p>
+<div class="zh">布里亚尼·威廉姆斯，BBC伦敦。</div>
+
+<p><button class="play-button sentence" id="s-00-07-04-000" data-start="00:07:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sonny at Carnival, the rest of the weather with Alex.</p>
+<div class="zh">在狂欢节阳光下，现在请看亚历克斯带来的天气预报。</div>
+
+<p><button class="play-button sentence" id="s-00-07-07-000" data-start="00:07:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, it's been a warm and sunny bank holiday Monday,</p>
+<div class="zh">大家好，今天是一个温暖而阳光明媚的银行假日周一，</div>
+
+<p><button class="play-button sentence" id="s-00-07-09-763" data-start="00:07:09,763" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> something cooler and more unsettled on the way by midweek with the risk of thunder.</p>
+<div class="zh">到周中天气会更凉爽、更#不稳定#，并有#雷暴#风险。</div>
+
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959566" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-14-000" data-start="00:07:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have got an approaching weather front from the west that could bring a spot of rain through the day tomorrow.</p>
+<div class="zh">一股来自西方的锋面正在逼近，明天可能会带来一些小雨。</div>
+
+<p><button class="play-button sentence" id="s-00-07-19-000" data-start="00:07:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But tonight it stays dry, some clear sky out there and quite a warm one, temperatures in the mid teens.</p>
+<div class="zh">但今晚仍将保持干燥，有些晴朗，气温在十几度。</div>
+
+<p><button class="play-button sentence" id="s-00-07-25-000" data-start="00:07:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the weather front crosses the country tomorrow, weakening it as it does so.</p>
+<div class="zh">明天这股锋面将横穿全国，强度在减弱。</div>
+
+<p><button class="play-button sentence" id="s-00-07-28-774" data-start="00:07:28,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So increasing amounts of cloud during the morning, possibly the odd spot of rain, but nothing significant.</p>
+<div class="zh">早晨云量会增加，可能有零星小雨，但不大。</div>
+
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959546" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-34-000" data-start="00:07:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not quite as warm as today, temperatures could still make it to 25 or 26 degrees</p>
+<div class="zh">不会像今天这么热，但气温仍可能达到25到26度，</div>
+
+<p><button class="play-button sentence" id="s-00-07-38-252" data-start="00:07:38,252" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and noticeable south-westernly when picking up.</p>
+<div class="zh">西南风会明显增强。</div>
+
+<p><button class="play-button sentence" id="s-00-07-41-000" data-start="00:07:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that will be a feature of the weather.</p>
+<div class="zh">这将是天气的一大特点。</div>
+
+<p><button class="play-button sentence" id="s-00-07-42-734" data-start="00:07:42,734" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From midweek onwards it's looking cooler, there will be some sunshine, yes.</p>
+<div class="zh">从周中开始天气会更凉爽，当然也会有一些阳光。</div>
+
+<p><button class="play-button sentence" id="s-00-07-46-000" data-start="00:07:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also some showers, some could be on the heavy side.</p>
+<div class="zh">同时会有阵雨，有些可能较大。</div>
+
+<p><button class="play-button sentence" id="s-00-07-48-876" data-start="00:07:48,876" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's also the risk of thunder.</p>
+<div class="zh">并且还存在#雷暴#的风险。</div>
+
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gtvFzoEo5/?t=-2208959529" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-51-000" data-start="00:07:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, that's it.</p>
+<div class="zh">好了，就这些。</div>
+
+<p><button class="play-button sentence" id="s-00-07-51-988" data-start="00:07:51,988" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Head to our website to see more pictures of Carnival and we're back later.</p>
+<div class="zh">请前往我们的网站查看更多狂欢节的图片，我们稍后再见。</div>
+
+<p><button class="play-button sentence" id="s-00-07-56-294" data-start="00:07:56,294" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye for now.</p>
+<div class="zh">再见。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
