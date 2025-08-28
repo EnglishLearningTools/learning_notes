@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Could you cope with just a handful of sugar and one egg a week?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="During World War II, Britain faced potential food shortages due to German U-boat attacks on imports. Nutritionists Elsie Widdowson and Robert McCance designed a minimal diet using only UK-produced foods to test if health could be maintained under strict rationing. Their experiment, involving rigorous physical activity, proved that the limited diet—though bland—could sustain fitness. Their findings influenced government policy, including bread fortification with calcium to prevent deficiencies. Rationing lasted until 1954, but their legacy continues in nutrition science and support for female researchers.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Could you cope with just a handful of sugar and one egg a week?</h1>
+<p>【BBC精选：英国二战饮食实验：每周1个鸡蛋、限量糖，竟比现代人更健康？】</p>
+<p>Summary:
+During World War II, Britain faced potential food shortages due to German U-boat attacks on imports. Nutritionists Elsie Widdowson and Robert McCance designed a minimal diet using only UK-produced foods to test if health could be maintained under strict rationing. Their experiment, involving rigorous physical activity, proved that the limited diet—though bland—could sustain fitness. Their findings influenced government policy, including bread fortification with calcium to prevent deficiencies. Rationing lasted until 1954, but their legacy continues in nutrition science and support for female researchers.</p>
+<p>摘要：
+二战期间，德国潜艇威胁英国食品进口，导致物资短缺。营养学家埃尔西·威多森和罗伯特·麦坎斯设计了一项仅使用英国本土食物的极简饮食实验，测试严格配给制度下的健康维持情况。他们通过高强度体力活动证明，这种单调但均衡的饮食能够维持健康。其研究结果影响了政府决策，包括在面包中添加碳酸钙以预防营养不良。食品配给制持续至1954年，但他们的科学遗产仍持续影响着现代营养学研究和女性科学家支持计划。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 9 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're watching this whilst tucking into a lunchtime sandwich</p>
+<div class="zh">如果你正在#同时#吃着一份午餐三明治来看这个节目</div>
+
+<p><button class="play-button sentence" id="s-00-00-03-701" data-start="00:00:03,701" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> made with avocados from Peru and prawns from Thailand,</p>
+<div class="zh">三明治里夹着秘鲁牛油果和泰国虾仁，</div>
+
+<p><button class="play-button sentence" id="s-00-00-06-709" data-start="00:00:06,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> it's probably hard to imagine a scenario where Britain could only eat food grown in the country.</p>
+<div class="zh">你大概很难想象一种#情景#：英国只能吃自己种的食物。</div>
+
+<p><button class="play-button sentence" id="s-00-00-12-261" data-start="00:00:12,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On top of that, you were limited to one egg a week and just a handful of sugar.</p>
+<div class="zh">除此之外，你每周只能吃一个鸡蛋，只有一#把#糖。</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-990" data-start="00:00:16,990" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that's the diet that was tested by two nutritionists in a unique experiment.</p>
+<div class="zh">但这就是两位营养学家在一项独特实验中测试的饮食。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959978" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-21-815" data-start="00:00:21,815" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This experiment was devised during the early days of the Second World War.</p>
+<div class="zh">这个实验是在二战初期设计的。</div>
+
+<p><button class="play-button sentence" id="s-00-00-26-688" data-start="00:00:26,688" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and arguably it was healthier than the average diet today.</p>
+<div class="zh">可以说，它比我们今天的平均饮食更健康。</div>
+
+<p><button class="play-button sentence" id="s-00-00-30-299" data-start="00:00:30,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the late 1930s Britain imported 70% of its food from overseas.</p>
+<div class="zh">在20世纪30年代末，英国70%的食物依赖#海外#进口。</div>
+
+<p><button class="play-button sentence" id="s-00-00-35-200" data-start="00:00:35,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It often relied on shipping routes, vulnerable to German U-boat attack.</p>
+<div class="zh">这些运输航线常常#脆弱#地暴露在德国潜艇的攻击下。</div>
+
+<p><button class="play-button sentence" id="s-00-00-39-759" data-start="00:00:39,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By January 1940, supplies were so scarce that food rationing was introduced.</p>
+<div class="zh">到1940年1月，供应如此#稀缺#，以至于政府不得不推行食物配给制。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-43-786" data-start="00:00:43,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the government was fearful that the country would be completely cut off by the U-boats.</p>
+<div class="zh">但政府#担心#全国会被潜艇完全切断供应。</div>
+
+<p><button class="play-button sentence" id="s-00-00-48-378" data-start="00:00:48,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They would have to keep its population fed and healthy.</p>
+<div class="zh">他们必须让全国人民有饭吃，还能保持健康。</div>
+
+<p><button class="play-button sentence" id="s-00-00-51-502" data-start="00:00:51,502" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They would use only food produced in the UK.</p>
+<div class="zh">他们设想只使用英国本土生产的食物。</div>
+
+<p><button class="play-button sentence" id="s-00-00-54-257" data-start="00:00:54,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before the war, nutritionists, Elsie Widerson and Robert MacKance had developed a set of food tables.</p>
+<div class="zh">战前，营养学家埃尔西·威德森和罗伯特·麦肯斯制定了一套食物表格。</div>
+
+<p><button class="play-button sentence" id="s-00-01-00-253" data-start="00:01:00,253" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These tables looked at the nutritional value of meat, fish, fruit, bread, sweets and dairy.</p>
+<div class="zh">这些表格分析了肉类、鱼类、水果、面包、糖果和#乳制品#的营养价值。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-07-248" data-start="00:01:07,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were no strangers to self-experimentation, even going so far as injection themselves with iron and strontium lactate,</p>
+<div class="zh">他们对自我#实验#并不陌生。他们甚至给自己#注射#铁和#锶#乳酸盐。</div>
+
+<p><button class="play-button sentence" id="s-00-01-15-120" data-start="00:01:15,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> to test how they were processed by the body.</p>
+<div class="zh">他们这样做是为了测试这些物质在体内如何代谢。</div>
+
+<p><button class="play-button sentence" id="s-00-01-17-573" data-start="00:01:17,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These acts left them rolling around the floor in misery.</p>
+<div class="zh">结果让他们痛苦得在地板上#惨叫翻滚#。</div>
+
+<p><button class="play-button sentence" id="s-00-01-20-998" data-start="00:01:20,998" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Together, they calculated the amount of food that would be available.</p>
+<div class="zh">他们一起#计算#了如果德国切断英国港口时可获得的食物量。</div>
+
+<p><button class="play-button sentence" id="s-00-01-23-639" data-start="00:01:23,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This would be if Germany was able to cut off British ports.</p>
+<div class="zh">这是在德国能封锁英国港口的情况下。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-168" data-start="00:01:27,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They then devised it into a weekly allowance.</p>
+<div class="zh">然后他们把这些食物设计成每周的#配额#。</div>
+
+<p><button class="play-button sentence" id="s-00-01-29-785" data-start="00:01:29,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The rations were meager to say the least.</p>
+<div class="zh">说句实话，这些口粮相当#微薄#。</div>
+
+<p><button class="play-button sentence" id="s-00-01-31-778" data-start="00:01:31,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As well as that solitary egg and 140 grams of sugar a week,</p>
+<div class="zh">除了那一个#孤零零#的鸡蛋和每周140克糖，</div>
+
+<p><button class="play-button sentence" id="s-00-01-35-435" data-start="00:01:35,435" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> you could only have 450 grams of meat and fish combined.</p>
+<div class="zh">你每周的肉和鱼加起来也只有450克。</div>
+
+<p><button class="play-button sentence" id="s-00-01-39-167" data-start="00:01:39,167" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 113 grams of fats, the same with cheese, 170 grams of fruit,</p>
+<div class="zh">113克脂肪、同样重量的奶酪，170克水果，</div>
+
+<p><button class="play-button sentence" id="s-00-01-43-723" data-start="00:01:43,723" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that's around two apples and a quarter of a pint of milk a day.</p>
+<div class="zh">大约相当于两个苹果和每天四分之一品脱牛奶。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-47-746" data-start="00:01:47,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> British Pro Vegetables and Bread weren't restricted.</p>
+<div class="zh">英国自产的蔬菜和面包没有被限制。</div>
+
+<p><button class="play-button sentence" id="s-00-01-51-200" data-start="00:01:51,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the rationed foods represented less than half</p>
+<div class="zh">但被配给的食物不到平常的一半，</div>
+
+<p><button class="play-button sentence" id="s-00-01-54-150" data-start="00:01:54,150" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and in some cases less than a third of the average weekly consumption.</p>
+<div class="zh">有时甚至不到平常每周#消耗#量的三分之一。</div>
+
+<p><button class="play-button sentence" id="s-00-01-58-684" data-start="00:01:58,684" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was before the war began.</p>
+<div class="zh">这还是战争开始之前。</div>
+
+<p><button class="play-button sentence" id="s-00-02-00-210" data-start="00:02:00,210" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was enough to survive but would it be enough to maintain fitness in the long term?</p>
+<div class="zh">它足够维持生存，但能否长期保持#健康#呢？</div>
+
+<p><button class="play-button sentence" id="s-00-02-05-782" data-start="00:02:05,782" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Widerson and MacKance put their bodies on the line to find out.</p>
+<div class="zh">威德森和麦肯斯用自己的身体去验证答案。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959870" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-09-598" data-start="00:02:09,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In January 1940, they headed to the late districts.</p>
+<div class="zh">1940年1月，他们去了湖区。</div>
+
+<p><button class="play-button sentence" id="s-00-02-12-419" data-start="00:02:12,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There they tested the diet whilst on a rigorous regime of cycling and mountain climbing.</p>
+<div class="zh">他们在严格的骑行和登山#计划#中#同时#测试了这种饮食。</div>
+
+<p><button class="play-button sentence" id="s-00-02-17-312" data-start="00:02:17,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On their return, they delivered a report to the government.</p>
+<div class="zh">回去后，他们向政府提交了一份报告。</div>
+
+<p><button class="play-button sentence" id="s-00-02-20-560" data-start="00:02:20,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The report confirmed that health and fitness could be maintained under this severe diet.</p>
+<div class="zh">报告确认，在这种严格饮食下，人的健康和#体能#可以维持。</div>
+
+<p><button class="play-button sentence" id="s-00-02-25-007" data-start="00:02:25,007" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They did, however, note a remarkable increase in flutchments.</p>
+<div class="zh">不过，他们确实注意到胀气的显著增加。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959850" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-29-036" data-start="00:02:29,036" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The extreme diet, Widerson and MacKance tested wasn't actually needed in the end.</p>
+<div class="zh">最终，威德森和麦肯斯测试的极端饮食并没有真正用上。</div>
+
+<p><button class="play-button sentence" id="s-00-02-33-810" data-start="00:02:33,810" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is because sufficient imports from the US managed to get to Britain throughout the war.</p>
+<div class="zh">因为整个战争期间，来自美国的进口供应仍能到达英国。</div>
+
+<p><button class="play-button sentence" id="s-00-02-38-184" data-start="00:02:38,184" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it proved that the population would be able to manage on it.</p>
+<div class="zh">但这证明了全国人民是可以靠它勉强度日的。</div>
+
+<p><button class="play-button sentence" id="s-00-02-41-513" data-start="00:02:41,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their findings were a key influence behind the government's decision.</p>
+<div class="zh">他们的研究结果对政府的决定产生了关键影响。</div>
+
+<p><button class="play-button sentence" id="s-00-02-45-431" data-start="00:02:45,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The decision was to leave bread and vegetables unrashing.</p>
+<div class="zh">决定是不对面包和蔬菜实行配给。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959831" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-48-312" data-start="00:02:48,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Happy days if you liked potato sandwiches.</p>
+<div class="zh">如果你喜欢土豆三明治，那真是快乐时光。</div>
+
+<p><button class="play-button sentence" id="s-00-02-50-159" data-start="00:02:50,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The rationing that was introduced to lived around 3,000 calories a person a day.</p>
+<div class="zh">实行的配给制大约能提供每人每天3000卡路里。</div>
+
+<p><button class="play-button sentence" id="s-00-02-54-796" data-start="00:02:54,796" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some manual labourers received extra.</p>
+<div class="zh">一些#体力#劳动者还会得到额外补充。</div>
+
+<p><button class="play-button sentence" id="s-00-02-57-613" data-start="00:02:57,613" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nevertheless, the diet was often bland.</p>
+<div class="zh">然而，这种饮食通常相当#寡淡#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-00-343" data-start="00:03:00,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks to the Ministry of Food,</p>
+<div class="zh">多亏了食品部，</div>
+
+<p><button class="play-button sentence" id="s-00-03-02-291" data-start="00:03:02,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> households were inspired to create such culinary delights as a walton pie.</p>
+<div class="zh">人们被鼓励创造出诸如沃尔顿#馅饼#之类的#烹饪#创意。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-07-118" data-start="00:03:07,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was a mix of sweet, turnip and cauliflower covered with short-crust pastry or mashed potato.</p>
+<div class="zh">它是由甜菜、萝卜和花椰菜混合，再盖上#酥皮#或土豆泥制成的。</div>
+
+<p><button class="play-button sentence" id="s-00-03-13-532" data-start="00:03:13,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's fair to say it wasn't much loved.</p>
+<div class="zh">可以坦率地说，它并不受欢迎。</div>
+
+<p><button class="play-button sentence" id="s-00-03-16-399" data-start="00:03:16,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Blandness wasn't the only issue.</p>
+<div class="zh">平淡无味不是唯一的问题。</div>
+
+<p><button class="play-button sentence" id="s-00-03-18-311" data-start="00:03:18,311" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In further studies, Widerson and MacKance realised that people wouldn't get as much calcium as they needed.</p>
+<div class="zh">在进一步研究中，威德森和麦肯斯发现人们摄入的#钙#远远不足。</div>
+
+<p><button class="play-button sentence" id="s-00-03-24-349" data-start="00:03:24,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This would be if milk and cheese were to be severely rationed.</p>
+<div class="zh">这是因为牛奶和奶酪被严格配给。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959792" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-27-598" data-start="00:03:27,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This might prove disastrous.</p>
+<div class="zh">这可能会导致#灾难性#的结果。</div>
+
+<p><button class="play-button sentence" id="s-00-03-28-807" data-start="00:03:28,807" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lack of calcium can lead to the bone disease, wickets.</p>
+<div class="zh">缺乏#钙#会导致骨病——佝偻病。</div>
+
+<p><button class="play-button sentence" id="s-00-03-32-560" data-start="00:03:32,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 1941, based on their advice, the government brought in the fortification of bread with calcium.</p>
+<div class="zh">1941年，根据他们的建议，政府开始给面包添加#钙#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-37-993" data-start="00:03:37,993" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was in the form of powdered chalk.</p>
+<div class="zh">这是通过粉状#石灰粉#来实现的。</div>
+
+<p><button class="play-button sentence" id="s-00-03-40-024" data-start="00:03:40,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This ensured people got enough of the mineral in their diet.</p>
+<div class="zh">这保证了人们在饮食中摄入足够的这种矿物质。</div>
+
+<p><button class="play-button sentence" id="s-00-03-43-162" data-start="00:03:43,162" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was despite the restrictions on dairy.</p>
+<div class="zh">尽管对#乳制品#有限制。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959773" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-46-245" data-start="00:03:46,245" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Food rationing lasted until 1954.</p>
+<div class="zh">食物配给一直持续到1954年。</div>
+
+<p><button class="play-button sentence" id="s-00-03-48-511" data-start="00:03:48,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But even after ended, bread continued to be fortified with calcium.</p>
+<div class="zh">但即使在结束后，面包仍然被添加#钙#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-52-888" data-start="00:03:52,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's still the case in the UK today.</p>
+<div class="zh">在英国至今依然如此。</div>
+
+<p><button class="play-button sentence" id="s-00-03-54-935" data-start="00:03:54,935" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're wondering who to thank for your healthy bones.</p>
+<div class="zh">如果你想知道要感谢谁才能让你有健康的骨骼，</div>
+
+<p><button class="play-button sentence" id="s-00-03-57-891" data-start="00:03:57,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whilst rationing wasn't easy for Britain, it got the nation through a wartime crisis in pretty good shape.</p>
+<div class="zh">虽然配给制对英国并不轻松，但它让全国在战时危机中保持了相当好的状态。</div>
+
+<p><button class="play-button sentence" id="s-00-04-03-885" data-start="00:04:03,885" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and arguably even MacKance's and Widerson's extreme diet was healthier than our average diet today.</p>
+<div class="zh">甚至可以说，麦肯斯和威德森的极端饮食比我们今天的平均饮食还要健康。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959749" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-10-183" data-start="00:04:10,183" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our diet is so dominated by high fat, high sugar and high salt foods.</p>
+<div class="zh">我们现在的饮食过于依赖高脂肪、高糖和高盐的食物。</div>
+
+<p><button class="play-button sentence" id="s-00-04-14-142" data-start="00:04:14,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pair continued to demonstrate that they were prepared to go the extra mile in the name of science.</p>
+<div class="zh">这两位继续证明，他们愿意为了科学付出额外的努力。</div>
+
+<p><button class="play-button sentence" id="s-00-04-20-311" data-start="00:04:20,311" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Widerson famously found a dead baby seal on a beach in Scotland.</p>
+<div class="zh">威德森曾经著名地在苏格兰的海滩上发现了一只死去的小海豹。</div>
+
+<p><button class="play-button sentence" id="s-00-04-23-919" data-start="00:04:23,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She drove it back to Cambridge in the boot of her car.</p>
+<div class="zh">她把它#开车#带回了剑桥，放在汽车后备箱里。</div>
+
+<p><button class="play-button sentence" id="s-00-04-26-415" data-start="00:04:26,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She did this in order to further her research into body fat composition.</p>
+<div class="zh">她这样做是为了进一步研究身体脂肪的#组成#。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11zhDz2EF1/?t=-2208959729" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-30-674" data-start="00:04:30,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Widersons and MacKance's legacies live on.</p>
+<div class="zh">威德森和麦肯斯的遗产至今犹存。</div>
+
+<p><button class="play-button sentence" id="s-00-04-32-730" data-start="00:04:32,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not just in terms of nutrition.</p>
+<div class="zh">这不仅仅体现在#营养学#方面。</div>
+
+<p><button class="play-button sentence" id="s-00-04-34-915" data-start="00:04:34,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When she died, Widerson left money to enable female scientists to bounce their research with family life.</p>
+<div class="zh">当她去世时，她留下资金，帮助女性科学家在科研与家庭生活之间#兼顾#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-40-839" data-start="00:04:40,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This supports the next generation of pioneering women.</p>
+<div class="zh">这支持了新一代开拓性的女性学者。</div>
+
+<p><button class="play-button sentence" id="s-00-04-44-007" data-start="00:04:44,007" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will help solve our complex scientific problems today.</p>
+<div class="zh">她们将帮助解决当今复杂的科学问题。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
