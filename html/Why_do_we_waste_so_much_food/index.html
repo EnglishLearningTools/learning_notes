@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Why do we waste so much food?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Globally, one-third of all food produced is wasted daily, with significant economic and environmental consequences. In the UK alone, households discard millions of potatoes and bread slices daily, costing families £1000 annually. Food waste contributes massively to greenhouse gas emissions, ranking as the third largest emitter if it were a country. Solutions include better meal planning, understanding food labels, and proper storage. Technological innovations and local food systems are also crucial for long-term change.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Why do we waste so much food?</h1>
+<p>【BBC精选：全球每年生产的食物有三分之一被浪费掉】</p>
+<p>Summary:
+Globally, one-third of all food produced is wasted daily, with significant economic and environmental consequences. In the UK alone, households discard millions of potatoes and bread slices daily, costing families £1000 annually. Food waste contributes massively to greenhouse gas emissions, ranking as the third largest emitter if it were a country. Solutions include better meal planning, understanding food labels, and proper storage. Technological innovations and local food systems are also crucial for long-term change.</p>
+<p>摘要：
+全球每年有三分之一的食物被浪费，造成严重的经济和环境后果。仅在英国，家庭每天就丢弃数百万个土豆和面包片，每年使每个家庭损失约1000英镑。食物浪费是温室气体的主要来源之一，其排放量堪比世界第三大经济体。减少浪费的方法包括合理规划饮食、正确理解食品标签和改善储存方式。科技手段和本地化食品系统也被视为解决这一问题的关键。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 9 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you ever thrown away a sprouty potato?</p>
+<div class="zh">你有没有扔掉过发芽的土豆？</div>
+
+<p><button class="play-button sentence" id="s-00-00-02-719" data-start="00:00:02,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It might not seem like a big deal, but that's just one of the 2.9 million potatoes we throw away every day in the UK.</p>
+<div class="zh">这看起来可能没什么，但这只是英国每天被丢掉的290万个土豆之一。</div>
+
+<p><button class="play-button sentence" id="s-00-00-11-119" data-start="00:00:11,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One third of the food produced globally every year goes to waste.</p>
+<div class="zh">全球每年生产的食物有三分之一被浪费掉。</div>
+
+<p><button class="play-button sentence" id="s-00-00-15-279" data-start="00:00:15,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Imagine that you go to the supermarket and you get three bags of groceries.</p>
+<div class="zh">想象一下，你去超市买了三袋食品。</div>
+
+<p><button class="play-button sentence" id="s-00-00-19-440" data-start="00:00:19,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of those bags is going directly to waste.</p>
+<div class="zh">其中一袋会直接被扔掉。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959977" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-22-318" data-start="00:00:22,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Between our busy lives and sometimes just simply not knowing what to cook, throwing away old food seems inevitable at times, but wasting less food would benefit both the planet and our wallets.</p>
+<div class="zh">在繁忙的生活中，有时只是因为不知道该做什么菜，我们似乎不得不扔掉旧食物，但减少食物浪费对地球和钱包都有好处。</div>
+
+<p><button class="play-button sentence" id="s-00-00-39-920" data-start="00:00:39,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Food waste has a massive economic impact with the average household of 4 people in the UK wasting around £1000 worth of food each year.</p>
+<div class="zh">食物浪费带来巨大的经济影响，英国一个四口之家平均每年会浪费约1000英镑的食物。</div>
+
+<p><button class="play-button sentence" id="s-00-00-50-079" data-start="00:00:50,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It can't be right in the world of the 21st century where 800 million people already struggled to get in our food.</p>
+<div class="zh">在21世纪的今天，全球已经有8亿人吃不饱，这种情况显然是不对的。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959943" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-56-320" data-start="00:00:56,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That a third of the food produced is lost or wasted and so many people are going hungry.</p>
+<div class="zh">竟然还有三分之一的食物被浪费，而那么多人在挨饿。</div>
+
+<p><button class="play-button sentence" id="s-00-01-01-439" data-start="00:01:01,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we can't ignore the impact on the environment.</p>
+<div class="zh">我们也不能忽视对环境的影响。</div>
+
+<p><button class="play-button sentence" id="s-00-01-04-959" data-start="00:01:04,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been estimated that if food waste were a country</p>
+<div class="zh">有研究估算，如果食物浪费是一个国家，</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-262" data-start="00:01:08,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> it would be the third largest greenhouse gas emitter after the US and China.</p>
+<div class="zh">它将成为仅次于美国和中国的第三大#温室#气体排放国。</div>
+
+<p><button class="play-button sentence" id="s-00-01-14-239" data-start="00:01:14,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You might think that supermarkets with the main culprits here, throwing away unsolved products, but in fact only around 2% of the food waste in the UK happens in supermarkets.</p>
+<div class="zh">你可能认为超市是主要罪魁，丢掉了没卖掉的产品，但实际上英国只有大约2%的食物浪费发生在超市。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-138" data-start="00:01:27,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vast majority around 60% is in our homes.</p>
+<div class="zh">绝大部分，大约60%，发生在我们的家中。</div>
+
+<p><button class="play-button sentence" id="s-00-01-30-400" data-start="00:01:30,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Luckily there are lots of things we can do to reduce food waste at home.</p>
+<div class="zh">幸运的是，我们在家里有很多方法可以减少食物浪费。</div>
+
+<p><button class="play-button sentence" id="s-00-01-37-920" data-start="00:01:37,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I far the most wasted foods in our homes are fresh fruit and veg.</p>
+<div class="zh">我们家中最浪费的食物是新鲜水果和蔬菜。</div>
+
+<p><button class="play-button sentence" id="s-00-01-42-560" data-start="00:01:42,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Planning meals can really help make sure that you're buying what you need and you're also thinking about how you can use up leftovers which can make a great lunch or a meal to put in the freezer for another day.</p>
+<div class="zh">计划餐食真的有帮助，这样你只买所需，还能考虑如何用掉剩菜——它们可以变成美味午餐，或者冷冻起来留到下次吃。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959886" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-53-579" data-start="00:01:53,579" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Understanding what the dates mean on our food packaging can make a big difference to how much food we waste.</p>
+<div class="zh">理解食品包装上的日期含义，对减少食物浪费大有帮助。</div>
+
+<p><button class="play-button sentence" id="s-00-01-59-405" data-start="00:01:59,405" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The best before dates are the ones that tell you that you can rely on your senses to judge if whatever you are consuming is okay for you.</p>
+<div class="zh">“最佳食用期”意味着你可以依靠感官来判断食物是否还能吃。</div>
+
+<p><button class="play-button sentence" id="s-00-02-07-358" data-start="00:02:07,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whereas a used by date means that that food has to be used or frozen by that date.</p>
+<div class="zh">而“食用截止日期”则意味着食物必须在该日期之前食用或冷冻。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-12-800" data-start="00:02:12,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Putting things in the right place can really help you use your food for longer, so storing apples and potatoes in the fridge.</p>
+<div class="zh">把东西放在正确的位置能延长食物寿命，比如把苹果和土豆放进冰箱。</div>
+
+<p><button class="play-button sentence" id="s-00-02-20-059" data-start="00:02:20,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example you'll get three months longer to use them.</p>
+<div class="zh">这样可以多保存三个月。</div>
+
+<p><button class="play-button sentence" id="s-00-02-23-038" data-start="00:02:23,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only fruit and veg that don't belong in the fridge are onions,</p>
+<div class="zh">唯一不该放冰箱的水果和蔬菜是洋葱、</div>
+
+<p><button class="play-button sentence" id="s-00-02-26-639" data-start="00:02:26,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> bananas and whole fresh pineapple.</p>
+<div class="zh">香蕉和完整的新鲜#菠萝#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-29-438" data-start="00:02:29,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We chuck away around 25 million slices of bread every day in the UK from our homes and bread is best stored in the cupboard or on the side and not in the fridge and that means it'll stay fresh of longer.</p>
+<div class="zh">英国每天在家庭中#丢掉#约2500万片面包，面包最好存放在橱柜或台面上，而不是冰箱里，这样能保持更长时间的新鲜。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959836" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-43-528" data-start="00:02:43,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also you can freeze bread and use it straight from the freezer for toast.</p>
+<div class="zh">你也可以把面包冷冻，直接用来做#吐司#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-47-519" data-start="00:02:47,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you've got a fridge with a temperature display it's worth checking that it's five degrees or lower.</p>
+<div class="zh">如果你的冰箱带温度显示，值得检查是否低于5℃。</div>
+
+<p><button class="play-button sentence" id="s-00-02-52-731" data-start="00:02:52,731" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most people in the UK have fridges that are slightly too warm and what that means is that food doesn't last as long.</p>
+<div class="zh">英国大多数人的冰箱温度稍微过高，这意味着食物保存不久。</div>
+
+<p><button class="play-button sentence" id="s-00-02-59-201" data-start="00:02:59,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we could learn a thing or two from ancient techniques.</p>
+<div class="zh">我们也能从古老的技术中学到一些东西。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-02-718" data-start="00:03:02,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Firmamentation allows us to turn yeast into beer and cabbage into kimchi.</p>
+<div class="zh">发酵让我们把#酵母#变成啤酒，把#卷心菜#变成泡菜。</div>
+
+<p><button class="play-button sentence" id="s-00-03-08-000" data-start="00:03:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pickling can also preserve food by using salt, vinegar and sometimes sugar to stop the bacteria that spoil it from growing.</p>
+<div class="zh">腌制也能保存食物，用盐、#醋#，有时还加糖，来抑制腐败细菌的生长。</div>
+
+<p><button class="play-button sentence" id="s-00-03-16-072" data-start="00:03:16,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whilst in richer countries like the UK there's a lot we can do to minimise food waste at home.</p>
+<div class="zh">#尽管#在英国这样的富裕国家，我们在家能做很多来减少浪费，</div>
+
+<p><button class="play-button sentence" id="s-00-03-21-979" data-start="00:03:21,979" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The situation is rather different in poorer countries where food is mainly wasted at the farming stage.</p>
+<div class="zh">但在贫困国家，情况却不同，食物浪费主要发生在种植阶段。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959791" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-28-508" data-start="00:03:28,508" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In India for example where 195 million people are undernourished, 67 million tonnes of food are wasted every year due to weather, lack of proper storage or pests.</p>
+<div class="zh">例如在印度，1.95亿人营养不良，却因为天气、储存不足或害虫，每年浪费6700万吨食物。</div>
+
+<p><button class="play-button sentence" id="s-00-03-41-280" data-start="00:03:41,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are some scientific developments that could help.</p>
+<div class="zh">一些科学进展可能会有所帮助。</div>
+
+<p><button class="play-button sentence" id="s-00-03-44-261" data-start="00:03:44,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bioactive packaging for example releases enzymes or antioxidants to change the surface of the food and increase its shelf life.</p>
+<div class="zh">例如生物活性包装会释放酶或抗氧化剂，改变食物表面，从而延长保质期。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959767" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-52-318" data-start="00:03:52,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's also GM or genetically modified feeds that have had their DNA altered to make them more nutritious or last longer.</p>
+<div class="zh">还有转基因饲料，其DNA被改变，使之更#有营养#或更耐存放。</div>
+
+<p><button class="play-button sentence" id="s-00-03-58-776" data-start="00:03:58,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although there is still some skepticism about it.</p>
+<div class="zh">尽管对此仍存在怀疑。</div>
+
+<p><button class="play-button sentence" id="s-00-04-01-363" data-start="00:04:01,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A number of years ago there was new ways of treating bread so that sliced life could last for 60 days.</p>
+<div class="zh">几年前有人开发新方法处理面包，使切片能保存60天。</div>
+
+<p><button class="play-button sentence" id="s-00-04-08-308" data-start="00:04:08,308" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was quite a lot of consumer skepticism because in some sense a loaf of bread that last 60 days something has happened to eat and it's no longer natural.</p>
+<div class="zh">但消费者质疑很多，因为从某种意义上说，一个能放60天的面包#面包条#一定发生了变化，不再天然。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959741" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-18-957" data-start="00:04:18,957" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The more that you get to things that people feel nervous about the more likely it is that</p>
+<div class="zh">人们越是感到不安，</div>
+
+<p><button class="play-button sentence" id="s-00-04-24-379" data-start="00:04:24,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> a technology solution will not necessarily receive widespread acceptance by citizens and consumers.</p>
+<div class="zh">技术方案就越不可能得到公众和消费者的#广泛# #接受#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-30-362" data-start="00:04:30,362" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tim Benton believes the global food system as a whole needs looking at.</p>
+<div class="zh">蒂姆·本顿认为，全球食品体系整体需要重新审视。</div>
+
+<p><button class="play-button sentence" id="s-00-04-35-838" data-start="00:04:35,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our current food system is highly dysfunctional and we have developed it around the notion</p>
+<div class="zh">我们当前的食品体系高度#失衡#，建立在这样一种#观念#之上：</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-40-931" data-start="00:04:40,931" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that the world needs ever more food and we need to make it ever cheaper.</p>
+<div class="zh">世界需要越来越多的食物，而且必须越来越便宜。</div>
+
+<p><button class="play-button sentence" id="s-00-04-45-136" data-start="00:04:45,136" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In many high income countries like the UK food is economically rational to waste</p>
+<div class="zh">在英国这样的高收入国家，浪费食物在#经济上#似乎是#合理#的，</div>
+
+<p><button class="play-button sentence" id="s-00-04-50-852" data-start="00:04:50,852" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> so our time is often more precious than the money that we have</p>
+<div class="zh">因为我们的时间往往比金钱更#宝贵#，</div>
+
+<p><button class="play-button sentence" id="s-00-04-55-213" data-start="00:04:55,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> so we buy food we shove it in the fridge you find a slimy bag let us weak later when we throw it away</p>
+<div class="zh">所以我们买了食物，#塞#进冰箱，几周后发现一袋#黏糊糊#的生菜，然后把它丢掉。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-00-505" data-start="00:05:00,505" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> if you respect food and you're less willing to throw it away then that is the big mind shift I think that is necessary.</p>
+<div class="zh">如果你尊重食物，不愿轻易丢弃，那就是一种重要的思维转变，我认为这是必须的。</div>
+
+<p><button class="play-button sentence" id="s-00-05-07-699" data-start="00:05:07,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rather than importing food from across the planet avocados from Peru and chicken from Thailand Tim Arguise we need to grow more food locally.</p>
+<div class="zh">蒂姆认为，与其从全球进口秘鲁牛油果、泰国鸡肉，不如在本地多种植。</div>
+
+<p><button class="play-button sentence" id="s-00-05-16-639" data-start="00:05:16,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there is an element that the more local you are the more it fosters respect for food</p>
+<div class="zh">我认为，食物越是本地化，就越能培养人们对它的尊重，</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-22-959" data-start="00:05:22,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and therefore indirectly you're less likely to want to waste it</p>
+<div class="zh">因此你也就不太可能去浪费它。</div>
+
+<p><button class="play-button sentence" id="s-00-05-26-569" data-start="00:05:26,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> so you can imagine a world where we reset the food system and where waste is no longer an issue</p>
+<div class="zh">你可以想象这样一个世界：我们重建食品体系，浪费不再是问题。</div>
+
+<p><button class="play-button sentence" id="s-00-05-33-174" data-start="00:05:33,174" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we would save more biodiversity</p>
+<div class="zh">我们会保护更多#生物多样性#，</div>
+
+<p><button class="play-button sentence" id="s-00-05-35-439" data-start="00:05:35,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we would reduce our greenhouse gases</p>
+<div class="zh">我们会减少#温室#气体排放，</div>
+
+<p><button class="play-button sentence" id="s-00-05-37-528" data-start="00:05:37,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we can reset the relationship between people and food</p>
+<div class="zh">我们可以重置人与食物的关系，</div>
+
+<p><button class="play-button sentence" id="s-00-05-40-879" data-start="00:05:40,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we can't tackle climate change if we don't fix the food system</p>
+<div class="zh">如果不解决食品体系，我们无法应对气候变化，</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yYaEzsELw/?t=-2208959655" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-44-645" data-start="00:05:44,645" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and we need to treat food like the precious resource that it is.</p>
+<div class="zh">我们必须把食物当作#宝贵#的资源来对待。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
