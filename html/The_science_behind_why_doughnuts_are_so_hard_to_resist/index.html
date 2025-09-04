@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Science of Food Cravings: How Our Brains Choose What We Eat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Why do we crave certain foods like burgers and cakes? This video explores the neurological processes behind food choices, focusing on the brain's reward system. MRI studies show that the orbital frontal cortex lights up when we consume foods high in fat and sugar. External factors like food labels and social influences significantly alter our perception of taste. Understanding these mechanisms can help design healthier foods and improve dietary choices.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Science of Food Cravings: How Our Brains Choose What We Eat</h1>
+<p>【BBC精选｜美食诱惑背后的科学：大脑如何选择食物？】</p>
+<p>Summary:
+Why do we crave certain foods like burgers and cakes? This video explores the neurological processes behind food choices, focusing on the brain's reward system. MRI studies show that the orbital frontal cortex lights up when we consume foods high in fat and sugar. External factors like food labels and social influences significantly alter our perception of taste. Understanding these mechanisms can help design healthier foods and improve dietary choices.</p>
+<p>摘要：
+为什么我们对汉堡和蛋糕等食物情有独钟？本期视频深入解析食物选择背后的神经机制。研究发现，大脑眶额皮层会对高糖高脂食物产生强烈反应，而标签暗示和社会因素会显著改变味觉体验。实验表明，相同的食物因名称不同可引发截然不同的神经反应。了解这些机制有助于设计更健康的食品，并帮助人们做出更明智的饮食决策。</p>
+<hr />
+<p>⏱️ Estimated Reading Time: 8 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why do we like some foods more than others?</p>
+<div class="zh">为什么我们偏爱某些食物胜过其他？</div>
+
+<p><button class="play-button sentence" id="s-00-00-02-799" data-start="00:00:02,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is it about burgers and cakes that we crave?</p>
+<div class="zh">汉堡和蛋糕究竟有何魅力让我们如此#渴望#？</div>
+
+<p><button class="play-button sentence" id="s-00-00-05-878" data-start="00:00:05,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what is happening in our brains when we choose what to eat?</p>
+<div class="zh">当我们选择食物时，大脑正经历着什么？</div>
+
+<p><button class="play-button sentence" id="s-00-00-08-919" data-start="00:00:08,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you hopped into an MRI machine and were offered a delicious chocolate milkshake,</p>
+<div class="zh">若你躺进磁共振仪并被递上一杯#美味#的巧克力奶昔，</div>
+
+<p><button class="play-button sentence" id="s-00-00-14-080" data-start="00:00:14,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> you would see your brain's reward system light up like a fun fare.</p>
+<div class="zh">会目睹大脑奖励系统如游乐场嘉年华般绚烂闪耀。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959981" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-18-320" data-start="00:00:18,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right above your eyes is your orbital frontal cortex.</p>
+<div class="zh">双眼正后方是您的#眶##额#皮层。</div>
+
+<p><button class="play-button sentence" id="s-00-00-22-000" data-start="00:00:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A part of the brain which is especially developed in humans and primates.</p>
+<div class="zh">这个脑区在人类和灵长类动物中尤为发达。</div>
+
+<p><button class="play-button sentence" id="s-00-00-26-518" data-start="00:00:26,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here, bundles of neurons respond to different sensations and nutrients.</p>
+<div class="zh">这里成束的神经元对不同感官刺激和营养成分产生反应。</div>
+
+<p><button class="play-button sentence" id="s-00-00-31-399" data-start="00:00:31,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Taste, smell, how smooth and rich the milkshake feels.</p>
+<div class="zh">味觉、嗅觉、奶昔的顺滑与醇厚质感。</div>
+
+<p><button class="play-button sentence" id="s-00-00-35-079" data-start="00:00:35,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the more your neurons light up, the more delicious the food seems.</p>
+<div class="zh">神经元激活越强烈，食物就显得越#美味#。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959961" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-39-000" data-start="00:00:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two things which particularly delight these reward neurons are fat and sugar.</p>
+<div class="zh">最令奖励神经元愉悦的当属脂肪与糖。</div>
+
+<p><button class="play-button sentence" id="s-00-00-43-479" data-start="00:00:43,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Combinations of fat and sugar can be even more delightful,</p>
+<div class="zh">脂肪与糖的结合尤显#诱人#，</div>
+
+<p><button class="play-button sentence" id="s-00-00-46-759" data-start="00:00:46,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> such as in that delicious milkshake or cakes or donuts.</p>
+<div class="zh">譬如那杯#香醇#奶昔，或是蛋糕与甜甜圈。</div>
+
+<p><button class="play-button sentence" id="s-00-00-51-158" data-start="00:00:51,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But your neurons don't just respond to these sensations.</p>
+<div class="zh">但神经元不仅回应感官刺激。</div>
+
+<p><button class="play-button sentence" id="s-00-00-54-439" data-start="00:00:54,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They also activate when you're planning what to eat,</p>
+<div class="zh">它们也会在你规划饮食时#激活#，</div>
+
+<p><button class="play-button sentence" id="s-00-00-57-238" data-start="00:00:57,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> in a contest with each other to get you to choose them.</p>
+<div class="zh">相互竞逐以左右你的选择。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959939" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-00-039" data-start="00:01:00,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pick me, says silky smooth mouthfeel.</p>
+<div class="zh">"选我"，丝滑口感轻声细语。</div>
+
+<p><button class="play-button sentence" id="s-00-01-03-560" data-start="00:01:03,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, me!</p>
+<div class="zh">"不，选我！"</div>
+
+<p><button class="play-button sentence" id="s-00-01-04-920" data-start="00:01:04,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shout sugary sweetness.</p>
+<div class="zh">糖分爆表的#甜腻感#高声叫嚷。</div>
+
+<p><button class="play-button sentence" id="s-00-01-07-078" data-start="00:01:07,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You never picked me.</p>
+<div class="zh">"你从不选我"。</div>
+
+<p><button class="play-button sentence" id="s-00-01-09-159" data-start="00:01:09,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Quietly mumbles a smell of broccoli.</p>
+<div class="zh">一缕#西兰花#的清香低声嘟囔。</div>
+
+<p><button class="play-button sentence" id="s-00-01-11-560" data-start="00:01:11,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And once you have chosen the same neurons track your progress.</p>
+<div class="zh">当你做出选择后，这群神经元会持续追踪进展。</div>
+
+<p><button class="play-button sentence" id="s-00-01-14-840" data-start="00:01:14,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as you eat, they get less and less active as you approach fullness.</p>
+<div class="zh">随着进食接近饱足，它们的活跃度逐渐降低。</div>
+
+<p><button class="play-button sentence" id="s-00-01-18-840" data-start="00:01:18,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're not entirely at the mercy of the demands of our orbital frontal cortex.</p>
+<div class="zh">但我们并非完全受#眶##额#皮层需求的摆布。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959916" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-23-480" data-start="00:01:23,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Having information about the food can make a big difference.</p>
+<div class="zh">掌握食物信息能带来显著改变。</div>
+
+<p><button class="play-button sentence" id="s-00-01-26-840" data-start="00:01:26,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hot back into that MRI machine and slurp down some soup.</p>
+<div class="zh">重回磁共振仪，啜饮几口汤羹。</div>
+
+<p><button class="play-button sentence" id="s-00-01-30-920" data-start="00:01:30,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are two types.</p>
+<div class="zh">汤有两种品类。</div>
+
+<p><button class="play-button sentence" id="s-00-01-32-280" data-start="00:01:32,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One is labeled rich and delicious flavor, and the other is labeled boiled vegetable water.</p>
+<div class="zh">一种标着"浓郁#鲜香#"，另一种写着"涮菜水"。</div>
+
+<p><button class="play-button sentence" id="s-00-01-37-718" data-start="00:01:37,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your neurons light up at the taste of rich and delicious, and less for boiled vegetable water.</p>
+<div class="zh">神经元对浓郁#鲜香#汤反应热烈，对涮菜水则兴致缺缺。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-44-120" data-start="00:01:44,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But wait a minute, you've been tricked.</p>
+<div class="zh">但稍等，你被蒙蔽了。</div>
+
+<p><button class="play-button sentence" id="s-00-01-46-438" data-start="00:01:46,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those were both the same soup.</p>
+<div class="zh">这两份本是同一种汤。</div>
+
+<p><button class="play-button sentence" id="s-00-01-48-438" data-start="00:01:48,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only difference was the name, and that was enough to completely change your experience of it.</p>
+<div class="zh">仅名称之差就足以彻底颠覆你的感官体验。</div>
+
+<p><button class="play-button sentence" id="s-00-01-53-319" data-start="00:01:53,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This experiment was also done with wine, telling people that the wine costs more made their neuro-necativity increase, and the wine tasted better.</p>
+<div class="zh">葡萄酒实验亦复如是：标价更高时，人们神经活跃度提升，酒味也显得更醇美。</div>
+
+<p><button class="play-button sentence" id="s-00-02-01-000" data-start="00:02:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another part of the brain involved in choosing food is the amygdala.</p>
+<div class="zh">参与食物选择的另一脑区是杏仁核。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-05-078" data-start="00:02:05,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The amygdala also has a role to play when you choose where to go out with another person.</p>
+<div class="zh">当你与他人相约外出就餐时，杏仁核同样发挥作用。</div>
+
+<p><button class="play-button sentence" id="s-00-02-09-959" data-start="00:02:09,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you've seen what they prefer in the past, your amygdala will have developed so-called simulation neurons.</p>
+<div class="zh">若你了解对方过往偏好，杏仁核会培育出所谓模拟神经元。</div>
+
+<p><button class="play-button sentence" id="s-00-02-15-479" data-start="00:02:15,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These predict the choice you think they will make, which you can then factor into your own suggestions of what to eat together.</p>
+<div class="zh">这些神经元预测对方可能的选择，进而影响你提出的共餐建议。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959858" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-21-400" data-start="00:02:21,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Differences in our genes are also a factor</p>
+<div class="zh">基因差异也决定了</div>
+
+<p><button class="play-button sentence" id="s-00-02-23-690" data-start="00:02:23,690" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> in how susceptible we are to the siren call of our reward neurons.</p>
+<div class="zh">我们对奖励神经元#蛊惑#召唤的#易感性#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-27-560" data-start="00:02:27,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With some people being naturally more responsive to the reward we feel from eating sugar and fat than others,</p>
+<div class="zh">有人天生对糖脂带来的奖励感更敏锐，</div>
+
+<p><button class="play-button sentence" id="s-00-02-33-318" data-start="00:02:33,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> scientific experiments give us clues about how our brains compute our choices of what to eat,</p>
+<div class="zh">科学实验揭示了大脑如何#运算#饮食选择，</div>
+
+<p><button class="play-button sentence" id="s-00-02-38-360" data-start="00:02:38,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> but the way we experience these choices in our lives and in society is also complex.</p>
+<div class="zh">但我们在生活与社会中实践这些选择的方式同样复杂。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959836" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-43-318" data-start="00:02:43,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr. Emily Kantoa, Assistant Professor of Media Studies, gives her take.</p>
+<div class="zh">媒体研究助理教授艾米丽·坎托亚博士阐述其见解：</div>
+
+<p><button class="play-button sentence" id="s-00-02-47-400" data-start="00:02:47,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We choose the food we eat for a lot of different reasons.</p>
+<div class="zh">我们选择食物基于诸多不同缘由。</div>
+
+<p><button class="play-button sentence" id="s-00-02-50-598" data-start="00:02:50,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's available at the grocery store?</p>
+<div class="zh">超市有哪些可选？</div>
+
+<p><button class="play-button sentence" id="s-00-02-52-359" data-start="00:02:52,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's convenient?</p>
+<div class="zh">什么更方便？</div>
+
+<p><button class="play-button sentence" id="s-00-02-53-479" data-start="00:02:53,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's affordable?</p>
+<div class="zh">什么更实惠？</div>
+
+<p><button class="play-button sentence" id="s-00-02-54-758" data-start="00:02:54,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do we have good memories about?</p>
+<div class="zh">哪些承载美好回忆？</div>
+
+<p><button class="play-button sentence" id="s-00-02-56-438" data-start="00:02:56,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What tastes good to us?</p>
+<div class="zh">什么合我们口味？</div>
+
+<p><button class="play-button sentence" id="s-00-02-58-120" data-start="00:02:58,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do we think is healthy?</p>
+<div class="zh">什么被我们认为健康？</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-59-718" data-start="00:02:59,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is our current health status?</p>
+<div class="zh">当前健康状况如何？</div>
+
+<p><button class="play-button sentence" id="s-00-03-01-639" data-start="00:03:01,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What defines our ideas about who we are?</p>
+<div class="zh">什么定义了自我认知？</div>
+
+<p><button class="play-button sentence" id="s-00-03-04-199" data-start="00:03:04,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So when we think about food in the digital age, one of the biggest things that's changed the way people eat and the kinds of foods that they're seeking out are social media platforms.</p>
+<div class="zh">故在数字时代思考饮食时，社交媒体平台已成为颠覆人类进食方式与食物选择的最大推手之一。</div>
+
+<p><button class="play-button sentence" id="s-00-03-12-598" data-start="00:03:12,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instagram and the desire for people to be able to take beautiful food photos has transformed the idea that you are what you eat into, you are what you post.</p>
+<div class="zh">Instagram与人们拍摄美食大片的渴望，将"人如其食"转变为"人如其帖"。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959797" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-22-280" data-start="00:03:22,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we seek a lot of different things from the food that we eat.</p>
+<div class="zh">因此我们从食物中寻求多种需求。</div>
+
+<p><button class="play-button sentence" id="s-00-03-25-318" data-start="00:03:25,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can seek comfort.</p>
+<div class="zh">或寻慰藉。</div>
+
+<p><button class="play-button sentence" id="s-00-03-26-679" data-start="00:03:26,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can seek a connection to history, to our families, to our heritage.</p>
+<div class="zh">或寻与历史、家族、#传统#的联结。</div>
+
+<p><button class="play-button sentence" id="s-00-03-30-598" data-start="00:03:30,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we can also seek in it a sense of control.</p>
+<div class="zh">但亦可从中寻求掌控感。</div>
+
+<p><button class="play-button sentence" id="s-00-03-33-318" data-start="00:03:33,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we live in moments that are full of economic, political, and social strife,</p>
+<div class="zh">当我们身处充满经济、政治与社会#纷争#的时代，</div>
+
+<p><button class="play-button sentence" id="s-00-03-39-079" data-start="00:03:39,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> sometimes we seek in food that sense of security and safety.</p>
+<div class="zh">有时会通过食物追寻安全感。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959776" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-43-560" data-start="00:03:43,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in those moments, we sometimes see people get really interested in ideas about naturalness, health,</p>
+<div class="zh">故此间常见人们对天然、健康、</div>
+
+<p><button class="play-button sentence" id="s-00-03-49-711" data-start="00:03:49,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and purity as a way to protect ourselves from contexts outside of our control.</p>
+<div class="zh">#纯净#等概念的热衷，以此抵御不可控的外部环境。</div>
+
+<p><button class="play-button sentence" id="s-00-03-54-840" data-start="00:03:54,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So food also tells stories about who we are, the full complexity of identity.</p>
+<div class="zh">食物亦诉说着我们身份认同的完整#复杂性#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-59-800" data-start="00:03:59,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we eat tells stories about our gender and our sexuality, our race and our ethnicity, our social class, or our aspirations about our social class, the region where we live, even whether we live in an urban or rural area.</p>
+<div class="zh">饮食叙事关乎性别与性取向、种族与民族、社会阶级或阶级向往、居住地域乃至城乡差异。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959746" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-13-080" data-start="00:04:13,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we eat tells these contradictory, complex stories about who we are.</p>
+<div class="zh">食物讲述着这些矛盾而复杂的自我故事。</div>
+
+<p><button class="play-button sentence" id="s-00-04-18-360" data-start="00:04:18,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the future, we can use our knowledge of what's happening in our brains to design foods that are low in calories and are still attractive but healthy.</p>
+<div class="zh">未来可借助大脑运作知识，设计低卡却诱人的健康食品。</div>
+
+<p><button class="play-button sentence" id="s-00-04-26-680" data-start="00:04:26,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we can help ourselves by understanding how our reward neurons plot to get what they want.</p>
+<div class="zh">理解奖励神经元如何谋取所求，亦能助我们做出更好决策。</div>
+
+<p><button class="play-button sentence" id="s-00-04-32-040" data-start="00:04:32,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can be aware of times that we tend to make poor choices, like when we choose a food because of some label which appeals to us rather than because of its taste.</p>
+<div class="zh">我们可警觉易做劣选的时刻，例如因吸引人的标签而非实际味道选择食物。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18ZaDztEgL/?t=-2208959719" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-40-038" data-start="00:04:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in the end, we are at least not fully at the mercy of our reward neurons.</p>
+<div class="zh">归根结底，我们至少不完全受奖励神经元的#支配#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-44-918" data-start="00:04:44,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can use our understanding to help design healthy foods and make healthy choices.</p>
+<div class="zh">可用认知成果助力设计健康食品，作出健康选择。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
