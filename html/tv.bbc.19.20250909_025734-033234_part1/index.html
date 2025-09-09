@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>BBC News Bulletin: Global Crises and Political Upheavals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Israeli Prime Minister vows retaliation after Hamas-linked gunmen kill six in Jerusalem bus stop attack. France's government collapses in no-confidence vote over debt crisis. Democrats release alleged Trump-Epstein letter as White House denies authenticity. Thailand's ex-PM faces potential imprisonment in court ruling.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>BBC News Bulletin: Global Crises and Political Upheavals</h1>
+<p>【BBC News Singapore 20250909 尼泊尔解除社交平台禁令，此前抗议活动导致19人死亡｜泰国前总理他信返国后面临监禁判决，最高法院即将裁定】</p>
+<p>Summary:
+Israeli Prime Minister vows retaliation after Hamas-linked gunmen kill six in Jerusalem bus stop attack. France's government collapses in no-confidence vote over debt crisis. Democrats release alleged Trump-Epstein letter as White House denies authenticity. Thailand's ex-PM faces potential imprisonment in court ruling.</p>
+<p>摘要：
+巴勒斯坦枪手在耶路撒冷公交站袭击造成6人死亡，以色列总理誓言报复。法国议会通过不信任动议，政府因债务危机垮台。美国民主党公开特朗普涉嫌给性犯罪者爱泼斯坦的生日信，白宫坚决否认。泰国前总理他信返国后面临监禁判决，最高法院即将裁定。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 37 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959985" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-15-000" data-start="00:00:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Live from Singapore, this is BBC News.</p>
+<div class="zh">BBC新闻新加坡现场报道。</div>
+
+<p><button class="play-button sentence" id="s-00-00-18-559" data-start="00:00:18,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli Prime Minister vows retaliation after Palestinian gunmen open fire at a bus stop in Jerusalem, killing six people.</p>
+<div class="zh">以色列总理誓言报复巴勒斯坦枪手在耶路撒冷公交站开枪事件，该事件导致六人遇难。</div>
+
+<p><button class="play-button sentence" id="s-00-00-27-110" data-start="00:00:27,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> France and Congress released a suggestive letter allegedly sent by Donald Trump to the late sex offender Jeffrey Epstein.</p>
+<div class="zh">法国国会公布了一封#据称#是特朗普寄给已故性犯罪者爱泼斯坦的暗示性信件。</div>
+
+<p><button class="play-button sentence" id="s-00-00-32-600" data-start="00:00:32,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The President has denied writing it.</p>
+<div class="zh">总统已否认撰写该信件。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959965" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-34-960" data-start="00:00:34,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bus, France plunges into political crisis after the parliament votes to oust the Prime Minister.</p>
+<div class="zh">法国议会投票#罢免#总理后，该国陷入政治危机。</div>
+
+<p><button class="play-button sentence" id="s-00-00-41-479" data-start="00:00:41,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're coming up on business today.</p>
+<div class="zh">今日商业资讯即将播报。</div>
+
+<p><button class="play-button sentence" id="s-00-00-43-240" data-start="00:00:43,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The long-running dispute over Hults' succeed Rupert Murdoch at the helm of his Mead or Empire has been settled.</p>
+<div class="zh">关于赫尔特斯接替鲁珀特·默多克#执掌#其媒体帝国的长期#争议#已尘埃落定。</div>
+
+<p><button class="play-button sentence" id="s-00-01-06-799" data-start="00:01:06,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome to Newsday.</p>
+<div class="zh">欢迎收看《新闻日报》。</div>
+
+<p><button class="play-button sentence" id="s-00-01-07-799" data-start="00:01:07,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We begin in the Middle East, where Israel's military has delivered what it called a final warning to Hamas.</p>
+<div class="zh">首先关注中东局势：以色列军方已向哈马斯发出所谓最后通牒。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959926" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-13-438" data-start="00:01:13,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The threatens the total destruction of Gaza, if the militant group does not release the last hostages, it is holding, disarm and surrender.</p>
+<div class="zh">以方威胁称，若该#武装#组织不释放最后扣押的人质、不#解除武装#并#投降，将彻底摧毁加沙。</div>
+
+<p><button class="play-button sentence" id="s-00-01-20-879" data-start="00:01:20,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The warning comes after two Palestinian gunmen opened fire at a bus stop in Jerusalem during rush hour, killing at least six people.</p>
+<div class="zh">此前两名巴勒斯坦枪手在耶路撒冷早高峰时段向公交站扫射，造成至少六人死亡。</div>
+
+<p><button class="play-button sentence" id="s-00-01-27-920" data-start="00:01:27,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In one of the deadliest attacks there in recent years, Hamas has praised the attack but has not said it was responsible for the shootings.</p>
+<div class="zh">这是该地区近年来最致命的袭击事件之一，哈马斯虽赞扬此次袭击但未宣称对枪击事件负责。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959905" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-34-519" data-start="00:01:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm at least correspondent Lucy Williamson as this report.</p>
+<div class="zh">我是BBC#驻站记者#露西·威廉姆森。</div>
+
+<p><button class="play-button sentence" id="s-00-01-42-560" data-start="00:01:42,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From the dashboard camera of a nearby car, the sound of Israel's fragile security shattered.</p>
+<div class="zh">附近车辆行车记录仪显示：以色列#脆弱#的安全防线瞬间崩塌。</div>
+
+<p><button class="play-button sentence" id="s-00-01-51-480" data-start="00:01:51,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Morning commuters sprayed with bullets as they surge in panic down the road.</p>
+<div class="zh">通勤民众在晨间遭子弹扫射，惊恐#奔逃#中#慌乱#涌向街道。</div>
+
+<p><button class="play-button sentence" id="s-00-01-56-959" data-start="00:01:56,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A taxi司机, dazed in the chaos, helps his passenger out as a bullet whizzes inches from his head, hitting the vehicle behind him.</p>
+<div class="zh">一名出租车司机在#混乱#中踉跄着协助乘客下车，此时子弹擦着他头皮飞过击中后方车辆。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959869" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-10-878" data-start="00:02:10,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Among the six people killed this morning were two rabbis and a newly married man.</p>
+<div class="zh">今晨遇难的六人中包括两位拉比和一名新婚男子。</div>
+
+<p><button class="play-button sentence" id="s-00-02-18-280" data-start="00:02:18,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emergency teams found the dead and wounded scattered on the ground, along with the bodies of the two gunmen, shot dead by armed bystanders.</p>
+<div class="zh">急救人员发现死伤者#散落#在地，两名枪手尸体亦在现场——他们被持枪旁观者击毙。</div>
+
+<p><button class="play-button sentence" id="s-00-02-27-400" data-start="00:02:27,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Daniel Katzenstein said one of the injured he treated on arrival was a bus driver called Muhammad.</p>
+<div class="zh">丹尼尔·卡岑斯坦表示首批救治的伤者中包括公车司机穆罕默德。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959846" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-33-520" data-start="00:02:33,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also ran to help.</p>
+<div class="zh">这位司机也曾奔跑着参与救援。</div>
+
+<p><button class="play-button sentence" id="s-00-02-38-158" data-start="00:02:38,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not a battle of Islam versus Judaism.</p>
+<div class="zh">这不是#伊斯兰#教#对抗#犹太教的战争。</div>
+
+<p><button class="play-button sentence" id="s-00-02-43-199" data-start="00:02:43,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a battle between the people who wish to do harm and the people who want to live life.</p>
+<div class="zh">这是意图施害者与渴望生活者之间的斗争。</div>
+
+<p><button class="play-button sentence" id="s-00-02-51-240" data-start="00:02:51,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel's prime minister Benjamin Netanyahu said security forces were searching the occupied West Bank for accomplices.</p>
+<div class="zh">以色列总理内塔尼亚胡称安全部队正在约旦河西岸搜捕同谋。</div>
+
+<p><button class="play-button sentence" id="s-00-03-00-120" data-start="00:03:00,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would like to state as clearly as possible.</p>
+<div class="zh">我要尽可能明确声明：</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-02-878" data-start="00:03:02,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These murders and attacks in all sectors will not weaken us.</p>
+<div class="zh">这些谋杀和袭击绝不会#削弱#我们。</div>
+
+<p><button class="play-button sentence" id="s-00-03-06-799" data-start="00:03:06,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will only increase our determination to complete the mission we have taken upon ourselves in Gaza, Judea and Samaria and everywhere.</p>
+<div class="zh">只会增强我们在加沙、犹地亚、撒马利亚及所有地区完成使命的决心。</div>
+
+<p><button class="play-button sentence" id="s-00-03-15-479" data-start="00:03:15,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Benjamin Netanyahu has made Israel's security the main justification for continuing the war in Gaza and expanding Israel's military occupation of the West Bank.</p>
+<div class="zh">内塔尼亚胡始终以以色列安全为由，#辩解#持续加沙战争并扩大西岸军事#占领#的正当性。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959793" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-26-199" data-start="00:03:26,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His supporters will see this as proof he needs to go further.</p>
+<div class="zh">支持者视此事为需采取更激进措施的佐证。</div>
+
+<p><button class="play-button sentence" id="s-00-03-30-800" data-start="00:03:30,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His critics will ask whether his actions are keeping Israel safe at all.</p>
+<div class="zh">批评者则质疑其行动是否真能保障以色列安全。</div>
+
+<p><button class="play-button sentence" id="s-00-03-36-400" data-start="00:03:36,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hamas expressed support for today's attack, describing it as a natural response to the crimes of the occupation and the genocide Israel was waging.</p>
+<div class="zh">哈马斯对今日袭击表示支持，称其是对以色列#占领#罪行及种族灭绝的自然回应。</div>
+
+<p><button class="play-button sentence" id="s-00-03-46-560" data-start="00:03:46,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Palestinian Authority quickly condemned the shooting of civilians.</p>
+<div class="zh">巴勒斯坦权力机构迅速谴责针对平民的枪击事件。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959767" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-52-560" data-start="00:03:52,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On a hill above the attack site, 18-year-old Piny from Tottenham in London was watching the scene with his Yashiva teacher, Pincas.</p>
+<div class="zh">袭击现场附近山丘上，18岁伦敦托特纳姆青年皮尼与经学院老师平卡斯一同目睹了现场。</div>
+
+<p><button class="play-button sentence" id="s-00-04-01-000" data-start="00:04:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a bust that a lot of us take on a regular basis.</p>
+<div class="zh">这是我们很多人经常乘坐的#公交线路#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-03-199" data-start="00:04:03,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It goes central to Jerusalem, shall I?</p>
+<div class="zh">它通往耶路撒冷市中心对吧？</div>
+
+<p><button class="play-button sentence" id="s-00-04-05-400" data-start="00:04:05,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it's very upsetting.</p>
+<div class="zh">是的，这令人非常不安。</div>
+
+<p><button class="play-button sentence" id="s-00-04-07-199" data-start="00:04:07,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's something that we used to it and we know that in a couple of hours the world is going to forget about this and be shouting on us why we are doing stuff to keep us safe in Gaza or Lebanon or in all different places.</p>
+<div class="zh">我们已对此习以为常，也知道几小时后世界就会遗忘此事，转而质问我们为何在加沙、黎巴嫩等地采取自卫行动。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959737" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-22-720" data-start="00:04:22,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 50 miles south, Israeli forces are preparing to conquer Gaza's city as Gaza's hospitals report another 40 people killed.</p>
+<div class="zh">向南50英里处，以军正准备#攻占#加沙城——当地医院报告又有40人遇难。</div>
+
+<p><button class="play-button sentence" id="s-00-04-34-079" data-start="00:04:34,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This war has demolished Gaza and changed the Middle East, but left the conflict between Israelis and Palestinians intact.</p>
+<div class="zh">这场战争摧毁了加沙、改变了中东，却让巴以冲突#原封不动#地持续。</div>
+
+<p><button class="play-button sentence" id="s-00-04-43-279" data-start="00:04:43,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lucy Williamson, BBC News, Jerusalem.</p>
+<div class="zh">BBC新闻露西·威廉姆森于耶路撒冷报道。</div>
+
+<p><button class="play-button sentence" id="s-00-04-47-879" data-start="00:04:47,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile in London, British Prime Minister Sikya Stama has met with the President of the Palestinian Authority, Mahmoud Abbas, to discuss the war in Gaza.</p>
+<div class="zh">与此同时，英国首相斯塔默在伦敦会晤巴勒斯坦权力机构主席阿巴斯，商讨加沙战事。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959704" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-55-560" data-start="00:04:55,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a statement, Mr Abbas welcomed the UK's pledge to recognize a Palestinian state ahead of the UN General Assembly meeting later this month unless Israel changes its course.</p>
+<div class="zh">阿巴斯发表声明欢迎英国承诺：若以色列不改变路线，将在本月联大会议前承认巴勒斯坦国。</div>
+
+<p><button class="play-button sentence" id="s-00-05-06-000" data-start="00:05:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All this as mediators continue there efforts to broker a ceasefire between Israel and Hamas.</p>
+<div class="zh">各方调解人正持续努力#斡旋#以色列与哈马斯之间的停火协议。</div>
+
+<p><button class="play-button sentence" id="s-00-05-11-079" data-start="00:05:11,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Qatar's Prime Minister has oppressed Hamas to respond positively to the latest proposal and forward by the US over the weekend.</p>
+<div class="zh">卡塔尔首相已施压哈马斯对美方上周末提出的最新方案作出#积极#回应。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-18-160" data-start="00:05:18,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our correspondent, Weirud Davis, has more on the latest diplomatic efforts to stop the war in Gaza.</p>
+<div class="zh">本台#记者#威尔鲁德·戴维斯将带来加沙停火最新#外交#努力的详细报道。</div>
+
+<p><button class="play-button sentence" id="s-00-05-23-399" data-start="00:05:23,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the backdrop to today's attacks in Jerusalem in which six people were killed is of course the ongoing conflict in Gaza.</p>
+<div class="zh">今日耶路撒冷造成六人死亡的袭击事件，#背景#正是加沙持续#不断#的冲突。</div>
+
+<p><button class="play-button sentence" id="s-00-05-31-920" data-start="00:05:31,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli government has been intensifying its operations, particularly in and around the largest innovation in Gaza city.</p>
+<div class="zh">以色列政府正加强军事行动，尤其针对加沙城最大的#创新#中心及周边区域。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959660" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-39-600" data-start="00:05:39,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli Defence Minister Israel Katz today said on social media that a tornado was about to happen above Gaza.</p>
+<div class="zh">以色列国防部长卡茨今日在社交媒体表示，#龙卷风#即将席卷加沙上空。</div>
+
+<p><button class="play-button sentence" id="s-00-05-46-838" data-start="00:05:46,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was referring of course to that military campaign in which now four consecutive high-rise buildings have been destroyed in Gaza city.</p>
+<div class="zh">他所指的军事行动已摧毁加沙城内四栋#连续#的高层建筑。</div>
+
+<p><button class="play-button sentence" id="s-00-05-56-720" data-start="00:05:56,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel accuses Hamas of using these buildings.</p>
+<div class="zh">以色列指控哈马斯使用这些建筑——</div>
+
+<p><button class="play-button sentence" id="s-00-05-59-680" data-start="00:05:59,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many of them residential buildings as intelligence centres, as command and control centres, often without providing too much proof of what is going on in there.</p>
+<div class="zh">多数住宅楼被用作情报中心及指挥控制站，但以军往往未充分提供楼内活动的证据。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959630" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-09-160" data-start="00:06:09,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It denies accusations of collective punishment and warnings do go out to the residents of these buildings before they are blown up, as was the case with the latest building.</p>
+<div class="zh">以方否认集体惩罚的指控，并强调在炸毁最新目标建筑前确已向居民发出警告。</div>
+
+<p><button class="play-button sentence" id="s-00-06-18-639" data-start="00:06:18,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thousands of people are encouraged by the IDF to head towards the so-called safe zone of Al-Mawasi in southern Gaza.</p>
+<div class="zh">以军正驱使数千民众前往加沙南部所谓安全区阿尔马瓦西。</div>
+
+<p><button class="play-button sentence" id="s-00-06-26-038" data-start="00:06:26,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In reality, nowhere in Gaza can be considered safe at the moment.</p>
+<div class="zh">现实是加沙目前无任何绝对安全之地。</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959609" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-30-838" data-start="00:06:30,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Al-Mawasi itself has been attacked many times in recent months and people have been killed there.</p>
+<div class="zh">阿尔马瓦西近月屡遭袭击并造成人员伤亡。</div>
+
+<p><button class="play-button sentence" id="s-00-06-36-120" data-start="00:06:36,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the Israeli military operation is continuing, perhaps leading up to some sort of full-scale grounding cushion.</p>
+<div class="zh">但以军行动仍在继续，或预示将开展某种全面#地面##缓冲#行动。</div>
+
+<p><button class="play-button sentence" id="s-00-06-42-759" data-start="00:06:42,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The one thing that might stop that would be a ceasefire agreement.</p>
+<div class="zh">唯一能阻止局势升级的或许是停火协议。</div>
+
+<p><button class="play-button sentence" id="s-00-06-46-478" data-start="00:06:46,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there is this tantalisingly brief and with very little detail piece proposal from Donald Trump on the table, which does apparently allude to the release of all of the hostages being held in Gaza at once with a ceasefire that might lead to a formal end of the war.</p>
+<div class="zh">特朗普提出的方案虽诱人却过于简略，仅模糊提及立即释放所有加沙人质并实现停火，或可能促成战争正式结束。</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959574" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-05-439" data-start="00:07:05,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now according to sources in Israel, including the Israeli foreign minister Gideon Tsar, Israel has accepted a plan like that that would lead to the immediate release of all the hostages.</p>
+<div class="zh">据以色列外长吉迪恩·察尔等消息源称，以方已接受此类能立即释放所有人质的方案。</div>
+
+<p><button class="play-button sentence" id="s-00-07-16-918" data-start="00:07:16,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's unlikely that that would be acceptable or practical for Hamas, because in crude terms, Hamas doesn't want to give up all of its bargaining chips, the hostages in one go.</p>
+<div class="zh">但对哈马斯而言该方案既难接受也不可行——简言之，哈马斯不愿一次性放弃所有人质这张谈判王牌。</div>
+
+<p><button class="play-button sentence" id="s-00-07-27-079" data-start="00:07:27,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If there isn't a firm commitment to an Israeli troop withdrawal in Gaza and of course a long-term peace agreement.</p>
+<div class="zh">除非以方明确承诺从加沙#撤军#并达成长期和平协议。</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959545" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-34-439" data-start="00:07:34,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So even though Donald Trump himself has been talking up the prospects of his so-called peace deal achieving something on the ground, the war in Gaza continues.</p>
+<div class="zh">故尽管特朗普鼓吹其所谓和平协议有望取得实质进展，加沙战事仍在持续。</div>
+
+<p><button class="play-button sentence" id="s-00-07-45-720" data-start="00:07:45,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thailand's Supreme Court is set to decide whether former Premier Taxi in Shinawatt should serve prison time that he skipped while in hospital detention.</p>
+<div class="zh">泰国最高法院将裁定前总理他信·西那瓦是否应补足住院羁押期间未服的刑期。</div>
+
+<p><button class="play-button sentence" id="s-00-07-54-439" data-start="00:07:54,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the scene live outside the court at the moment, where the hearing will begin shortly.</p>
+<div class="zh">这是法院外的实时画面，庭审即将开始。</div>
+
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959520" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-59-399" data-start="00:07:59,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Taxi returned to the country on Monday and is expected to be in court today.</p>
+<div class="zh">他信于周一回国并将出席今日庭审。</div>
+
+<p><button class="play-button sentence" id="s-00-08-05-959" data-start="00:08:05,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As a look at how the court looks, I quite quiet on the outside with a few security personnel.</p>
+<div class="zh">目前法院外围较为安静，仅有少量安保人员值守。</div>
+
+<p><button class="play-button sentence" id="s-00-08-11-560" data-start="00:08:11,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now I correspond to Jake Kwan as in Bangkok and he joins us now for more on this.</p>
+<div class="zh">现本台曼谷#记者#杰克·关将带来详细报道。</div>
+
+<p><button class="play-button sentence" id="s-00-08-16-120" data-start="00:08:16,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jake, what can we expect from the court ruling today?</p>
+<div class="zh">杰克，今日法院#裁决#可能有何结果？</div>
+
+<p><button class="play-button sentence" id="s-00-08-21-560" data-start="00:08:21,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the question here that the court is trying to answer was whether there was a deception when he was sent to the VIP wing of a hospital to serve his jail sentence.</p>
+<div class="zh">法院需裁定当初将其送往医院VIP病房服刑是否存在#欺诈#行为。</div>
+
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959489" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-30-759" data-start="00:08:30,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the big question is will Mr. Taxi go to jail?</p>
+<div class="zh">核心问题是他信是否会入狱？</div>
+
+<p><button class="play-button sentence" id="s-00-08-34-918" data-start="00:08:34,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's never spent a full day of jail in his life and just to backtrack here a little bit, he was given eight years of prison sentence for abusing his power during his premiership.</p>
+<div class="zh">他一生未曾完整服刑一日——回溯其因总理任内滥用职权被判八年监禁。</div>
+
+<p><button class="play-button sentence" id="s-00-08-46-918" data-start="00:08:46,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that eight-year sentence was commuted to one year by the Royal Pardon and after spending only hours at the jail, he was sent to the VIP wing of a hospital saying there's a medical necessity and then after spending six months in this VIP wing, he was paroled and he left the hospital.</p>
+<div class="zh">经御准减刑至一年后，他仅在监狱待了数小时即以医疗需要为由转入医院VIP病房，六个月后获假释离院。</div>
+
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959453" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-06-443" data-start="00:09:06,443" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the court is trying to decide whether there was a deception and it can go multiple ways.</p>
+<div class="zh">故法院正裁决是否存在#欺骗#行为，结果存在多种可能。</div>
+
+<p><button class="play-button sentence" id="s-00-09-11-044" data-start="00:09:11,044" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The best case scenario for Taxi is of course saying that there was indeed a medical necessity and that he gets off scot free or the worst case scenario is of course he has to now go back to the go back to the jail to spend six months or the year after the Royal Pardon or the worst case very highly unlikely is that he has to spend the original eight years of sentence.</p>
+<div class="zh">最佳情况是法院认定确属医疗需要且其免于追责；最坏情况是需回狱服完御减后剩余的六个月或一年刑期；极小概率需补足原始八年刑期。</div>
+
+<p><button class="play-button sentence" id="s-00-09-34-759" data-start="00:09:34,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now we will hear in about an hour or two with the verdict.</p>
+<div class="zh">预计一至两小时后将宣布#判决#。</div>
+
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959422" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-37-973" data-start="00:09:37,973" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're expected to see Mr. Taxi at the courthouse so we'll be watching very closely.</p>
+<div class="zh">他信预计将现身法院，我们将密切关注。</div>
+
+<p><button class="play-button sentence" id="s-00-09-44-759" data-start="00:09:44,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah and Jake this is the latest in a succession of tests for Taxi and then the Shinwata called Dynasty.</p>
+<div class="zh">此事是他信及西那瓦#家族#面临的又一系列考验。</div>
+
+<p><button class="play-button sentence" id="s-00-09-49-769" data-start="00:09:49,769" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does this tell us about the state of politics and Thailand at the moment?</p>
+<div class="zh">这反映出泰国当前何种政治态势？</div>
+
+<p><button class="play-button sentence" id="s-00-09-56-759" data-start="00:09:56,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well Taxi had been entangled with the law for many many years after he was ousted in a military coup in 2006.</p>
+<div class="zh">他信自2006年军事#政变#下台后长期深陷法律纠纷。</div>
+
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959396" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-03-633" data-start="00:10:03,633" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had a self-imposed exile of 15 years and when he returned to Thailand</p>
+<div class="zh">他曾自我#流放#十五年直至近期回国。</div>
+
+<p><button class="play-button sentence" id="s-00-10-08-120" data-start="00:10:08,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2023 it was widely believed that he had shaken hands with the establishment here, the royalty as well as the military.</p>
+<div class="zh">2023年人们普遍认为他已与当地的#当权派#、#王室#以及军方达成合作。</div>
+
+<p><button class="play-button sentence" id="s-00-10-16-679" data-start="00:10:16,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean previously he was once seen as an anti-establishment politician.</p>
+<div class="zh">我的意思是此前他曾被视为反#体制#的政治人物。</div>
+
+<p><button class="play-button sentence" id="s-00-10-22-090" data-start="00:10:22,090" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That he is going to shake up the the very entrenched elite here.</p>
+<div class="zh">认为他将撼动这里根深蒂固的#精英#阶层。</div>
+
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959373" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-26-424" data-start="00:10:26,424" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But after that shaking hands that was widely believed even though he denied it.</p>
+<div class="zh">但在他虽否认却广被认为达成合作之后。</div>
+
+<p><button class="play-button sentence" id="s-00-10-31-054" data-start="00:10:31,054" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was no longer seen as anti-establishment.</p>
+<div class="zh">他不再被视为反#体制#者。</div>
+
+<p><button class="play-button sentence" id="s-00-10-33-480" data-start="00:10:33,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That he had indeed joined the establishment.</p>
+<div class="zh">认为他确实已融入#权力体系#。</div>
+
+<p><button class="play-button sentence" id="s-00-10-35-972" data-start="00:10:35,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that he had joined to prevent the rise of the younger generation.</p>
+<div class="zh">而他加入是为阻止年轻一代崛起。</div>
+
+<p><button class="play-button sentence" id="s-00-10-40-031" data-start="00:10:40,031" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of the more progressive political faction.</p>
+<div class="zh">阻止更为#进步#的政治#派系#。</div>
+
+<p><button class="play-button sentence" id="s-00-10-43-147" data-start="00:10:43,147" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what we'll see today may signal to the health of that alliance.</p>
+<div class="zh">因此今日所见可能标志着该#联盟#的稳固程度。</div>
+
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959352" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-47-697" data-start="00:10:47,697" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Between Mr. Taxi and the establishment the royalty and the military here.</p>
+<div class="zh">即塔克西先生与此地#当权派#、#王室#及军方的关系。</div>
+
+<p><button class="play-button sentence" id="s-00-10-53-061" data-start="00:10:53,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jake thanks for getting across those details Jake won in Bangkok.</p>
+<div class="zh">杰克感谢你传达这些细节，杰克在曼谷报道。</div>
+
+<p><button class="play-button sentence" id="s-00-10-59-720" data-start="00:10:59,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Nepal has lifted a widespread social media ban.</p>
+<div class="zh">尼泊尔已解除#大规模#社交媒体禁令。</div>
+
+<p><button class="play-button sentence" id="s-00-11-02-520" data-start="00:11:02,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After protests against the law resulted in the deaths of 19 people.</p>
+<div class="zh">此前反对该法律的抗议活动已导致19人死亡。</div>
+
+<p><button class="play-button sentence" id="s-00-11-06-067" data-start="00:11:06,067" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Protesters gathered in the parliament building in Kathmandu on Monday.</p>
+<div class="zh">周一抗议者聚集在加德满都议会大楼前。</div>
+
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959330" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-09-511" data-start="00:11:09,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where police used tear gas and water cannon against those who tried to enter the building.</p>
+<div class="zh">警方对试图闯入大楼者使用催泪瓦斯和#水炮#车。</div>
+
+<p><button class="play-button sentence" id="s-00-11-14-016" data-start="00:11:14,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 100 protesters were injured in the clashes.</p>
+<div class="zh">冲突中超过100名抗议者受伤。</div>
+
+<p><button class="play-button sentence" id="s-00-11-17-031" data-start="00:11:17,031" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The unrest has led to the resignation of Nepal's a home minister Ramesh Al-Akhak.</p>
+<div class="zh">此次#骚乱#导致尼泊尔内政部长拉梅什·阿尔·阿哈克#辞职#。</div>
+
+<p><button class="play-button sentence" id="s-00-11-21-784" data-start="00:11:21,784" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government's ban had included 26 social media platforms.</p>
+<div class="zh">政府禁令此前涵盖26个社交媒体平台。</div>
+
+<p><button class="play-button sentence" id="s-00-11-25-400" data-start="00:11:25,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Including Facebook, X and YouTube.</p>
+<div class="zh">包括脸书、X和油管。</div>
+
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959311" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-28-271" data-start="00:11:28,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the United States Democrats in Congress have released an image.</p>
+<div class="zh">美国国会民主党人公布了一张图片。</div>
+
+<p><button class="play-button sentence" id="s-00-11-34-120" data-start="00:11:34,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of a sexually suggestive birthday letter allegedly sent by Donald Trump.</p>
+<div class="zh">内容为#涉嫌#由特朗普寄送的含性暗示生日信件。</div>
+
+<p><button class="play-button sentence" id="s-00-11-38-042" data-start="00:11:38,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To the late sex offender Jeffrey Epstein.</p>
+<div class="zh">收件人是已故性犯罪者杰弗里·爱泼斯坦。</div>
+
+<p><button class="play-button sentence" id="s-00-11-40-209" data-start="00:11:40,209" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House strongly denied that it has the president's signature.</p>
+<div class="zh">白宫坚决否认落款处有总统签名。</div>
+
+<p><button class="play-button sentence" id="s-00-11-43-879" data-start="00:11:43,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Press secretary Caroline Levit posted on X.</p>
+<div class="zh">新闻秘书卡洛琳·莱维特在X上发文称。</div>
+
+<p><button class="play-button sentence" id="s-00-11-46-804" data-start="00:11:46,804" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This entire birthday card story is false.</p>
+<div class="zh">整个生日卡事件纯属捏造。</div>
+
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959290" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-49-570" data-start="00:11:49,570" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As I have said all along it is very clear President Trump did not draw this picture.</p>
+<div class="zh">正如我一直强调的——特朗普总统显然未绘制此画。</div>
+
+<p><button class="play-button sentence" id="s-00-11-54-072" data-start="00:11:54,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he did not sign it.</p>
+<div class="zh">也未曾签名。</div>
+
+<p><button class="play-button sentence" id="s-00-11-55-240" data-start="00:11:55,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump's legal team will continue to aggressively pursue litigation.</p>
+<div class="zh">特朗普总统的法律团队将继续积极寻求#诉讼#途径。</div>
+
+<p><button class="play-button sentence" id="s-00-11-59-419" data-start="00:11:59,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She went on to say this is fake news.</p>
+<div class="zh">她进一步表示这是假新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-12-01-180" data-start="00:12:01,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To perpetuate the Democrat Epstein hoax.</p>
+<div class="zh">旨在#延续#民主党炮制的爱泼斯坦#骗局#。</div>
+
+<p><button class="play-button sentence" id="s-00-12-03-434" data-start="00:12:03,434" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An author America correspondent Peter Boes told me more about the release of this image.</p>
+<div class="zh">本台美国#记者#彼得·博斯向我详细说明了图片公布细节。</div>
+
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959271" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-08-159" data-start="00:12:08,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the first time that we're actually seeing this image.</p>
+<div class="zh">这是我们首次实际看到该图像。</div>
+
+<p><button class="play-button sentence" id="s-00-12-11-510" data-start="00:12:11,510" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Portedly the work of Donald Trump.</p>
+<div class="zh">据称出自特朗普之手。</div>
+
+<p><button class="play-button sentence" id="s-00-12-13-690" data-start="00:12:13,690" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He as we've just heard strongly, denies it.</p>
+<div class="zh">如我们刚才所闻他坚决否认。</div>
+
+<p><button class="play-button sentence" id="s-00-12-16-324" data-start="00:12:16,324" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He did when the Wall Street Journal first reported this back in July.</p>
+<div class="zh">七月《华尔街日报》首次报道时他就已否认。</div>
+
+<p><button class="play-button sentence" id="s-00-12-20-084" data-start="00:12:20,084" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this relates to a birthday book that was compiled apparently for Jeffrey Epstein.</p>
+<div class="zh">此事与显然为杰弗里·爱泼斯坦制作的生日纪念册有关。</div>
+
+<p><button class="play-button sentence" id="s-00-12-25-930" data-start="00:12:25,930" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His 50th birthday back in 2003.</p>
+<div class="zh">用于2003年他50岁生日。</div>
+
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959251" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-28-098" data-start="00:12:28,098" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what has been released initially by the Democrats on X.</p>
+<div class="zh">民主党最初在X平台公布了部分内容。</div>
+
+<p><button class="play-button sentence" id="s-00-12-32-636" data-start="00:12:32,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But actually subsequently by the entire committee.</p>
+<div class="zh">但#随后#整个委员会公布了更多资料。</div>
+
+<p><button class="play-button sentence" id="s-00-12-36-403" data-start="00:12:36,403" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Including a few more documents from this book.</p>
+<div class="zh">包括纪念册中更多文件。</div>
+
+<p><button class="play-button sentence" id="s-00-12-39-365" data-start="00:12:39,365" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this one specifically is the image of a woman's body.</p>
+<div class="zh">而本次特别引发关注的是女性身体画像。</div>
+
+<p><button class="play-button sentence" id="s-00-12-43-024" data-start="00:12:43,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the words on it that the Democrats have highlighted.</p>
+<div class="zh">以及民主党重点标注的文字内容。</div>
+
+<p><button class="play-button sentence" id="s-00-12-46-752" data-start="00:12:46,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they include lines like we have certain things in common.</p>
+<div class="zh">包含"我们有些共同点"等句子。</div>
+
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959228" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-51-205" data-start="00:12:51,205" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeffrey happy birthday may every day be another wonderful secret.</p>
+<div class="zh">"杰弗里生日快乐，愿每一天都成为绝妙秘密"。</div>
+
+<p><button class="play-button sentence" id="s-00-12-55-851" data-start="00:12:55,851" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's the line that the Democrats specifically highlighted.</p>
+<div class="zh">这句被民主党特别标注的话后还附注。</div>
+
+<p><button class="play-button sentence" id="s-00-12-59-978" data-start="00:12:59,978" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With the question what is he hiding.</p>
+<div class="zh">"他究竟在隐藏什么"。</div>
+
+<p><button class="play-button sentence" id="s-00-13-02-425" data-start="00:13:02,425" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they insist again that the documents must be released the files.</p>
+<div class="zh">他们再次坚持必须公开全部档案文件。</div>
+
+<p><button class="play-button sentence" id="s-00-13-09-879" data-start="00:13:09,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah so getting quite the reaction isn't it Peter.</p>
+<div class="zh">确实引发强烈反响了是吧彼得。</div>
+
+<p><button class="play-button sentence" id="s-00-13-11-996" data-start="00:13:11,996" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House is calling in fake news though.</p>
+<div class="zh">不过白宫称此为假新闻。</div>
+
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959206" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-13-960" data-start="00:13:13,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us about President Trump's legal team.</p>
+<div class="zh">请说明特朗普法律团队的情况。</div>
+
+<p><button class="play-button sentence" id="s-00-13-16-770" data-start="00:13:16,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the actions that they're taking to pursue litigation against and the release of this.</p>
+<div class="zh">以及他们为阻止文件公开采取的法律行动。</div>
+
+<p><button class="play-button sentence" id="s-00-13-22-863" data-start="00:13:22,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes well they've already sued the Wall Street Journal.</p>
+<div class="zh">他们已对《华尔街日报》提起诉讼。</div>
+
+<p><button class="play-button sentence" id="s-00-13-26-636" data-start="00:13:26,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the White House repeating again today that they will aggressively pursue litigation.</p>
+<div class="zh">白宫今日再次强调将积极采取#法律诉讼#。</div>
+
+<p><button class="play-button sentence" id="s-00-13-32-915" data-start="00:13:32,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They strongly believe that at least from their perspective that they want to get the word out.</p>
+<div class="zh">他们坚信至少需明确传达。</div>
+
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959180" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-39-189" data-start="00:13:39,189" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That this was not the work of the president.</p>
+<div class="zh">此事绝非总统所为。</div>
+
+<p><button class="play-button sentence" id="s-00-13-41-438" data-start="00:13:41,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Donald Trump himself at the time of the Wall Street Journal story said I don't do drawings.</p>
+<div class="zh">特朗普本人在《华尔街日报》报道时就说过"我从不画画"。</div>
+
+<p><button class="play-button sentence" id="s-00-13-46-802" data-start="00:13:46,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He denied that the signature was his.</p>
+<div class="zh">他否认签名属实。</div>
+
+<p><button class="play-button sentence" id="s-00-13-48-850" data-start="00:13:48,850" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's interesting that the White House at least one senior member of the White House.</p>
+<div class="zh">有趣的是白宫至少有一位高层人员。</div>
+
+<p><button class="play-button sentence" id="s-00-13-53-661" data-start="00:13:53,661" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Has been publishing examples of Donald Trump's signature.</p>
+<div class="zh">一直在发布特朗普签名样本。</div>
+
+<p><button class="play-button sentence" id="s-00-13-57-079" data-start="00:13:57,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And saying that the one that purportedly on this item is nothing like how the president signs his name.</p>
+<div class="zh">称所谓文件上的签名与总统笔迹完全不符。</div>
+
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959155" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-04-299" data-start="00:14:04,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Others have been releasing copies of the president's signature from about 20 years ago.</p>
+<div class="zh">其他人则公布了约20年前的总统签名副本。</div>
+
+<p><button class="play-button sentence" id="s-00-14-09-274" data-start="00:14:09,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And suggesting that there is a likeness.</p>
+<div class="zh">认为存在#相似性#。</div>
+
+<p><button class="play-button sentence" id="s-00-14-11-477" data-start="00:14:11,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's two very different aspects.</p>
+<div class="zh">因此出现两种截然不同的说法。</div>
+
+<p><button class="play-button sentence" id="s-00-14-13-551" data-start="00:14:13,551" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And two very different versions of this story.</p>
+<div class="zh">形成两个完全不同的版本。</div>
+
+<p><button class="play-button sentence" id="s-00-14-16-380" data-start="00:14:16,380" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the White House insisting that it will turn to the law.</p>
+<div class="zh">但白宫坚持将通过法律途径。</div>
+
+<p><button class="play-button sentence" id="s-00-14-20-039" data-start="00:14:20,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To try to prove its case around the world and across the UK this is BBC News.</p>
+<div class="zh">试图证明自身立场。全球及英国各地观众，这里是BBC新闻。</div>
+
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959084" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-15-159" data-start="00:15:15,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're alive with BBC News.</p>
+<div class="zh">您正在收听的是BBC新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-15-38-360" data-start="00:15:38,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And France's government has collapsed following a vote of no confidence in Prime Minister Francois Mr Beirut had called the vote to shock lawmakers into agreeing on a way to tackle the country's living debt crisis but his move back fired a European attack catcher Adler as the details.</p>
+<div class="zh">法国政府因对弗朗索瓦·贝鲁特总理的不信任投票而垮台。贝鲁特发起此次投票本欲促使议员们就解决国家生活债务危机达成共识，但此举适得其反——欧洲问题专家阿德勒详细解读。</div>
+
+<p><button class="play-button sentence" id="s-00-15-57-158" data-start="00:15:57,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MPs voted massively against France's Prime Minister and his call for a debt-slashing budget this evening.</p>
+<div class="zh">今晚议员们以压倒性票数否决了法国总理及其提出的削减债务预算方案。</div>
+
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959034" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-05-079" data-start="00:16:05,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A huge slap in the face for Ponceaua Bayou.</p>
+<div class="zh">这对庞索瓦·巴尤而言是一记响亮的#耳光#。</div>
+
+<p><button class="play-button sentence" id="s-00-16-09-279" data-start="00:16:09,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now he's out of a job and his country is in crisis strengthening political extremes.</p>
+<div class="zh">如今他黯然下台，国家陷入危机，政治极端势力趁机壮大。</div>
+
+<p><button class="play-button sentence" id="s-00-16-17-700" data-start="00:16:17,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dear lawmakers you have the power to make this government fall but you can't get rid of reality.</p>
+<div class="zh">尊敬的议员们，你们有权让政府垮台，却无法摆脱现实。</div>
+
+<p><button class="play-button sentence" id="s-00-16-24-943" data-start="00:16:24,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> States pending will continue to rise and the debt burden that's already unbearable will become more and more costly for France.</p>
+<div class="zh">国家#待付#款项将持续增加，本就#难以承受#的债务#负担#将使法国付出越来越#高昂#的代价。</div>
+
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208959005" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-34-038" data-start="00:16:34,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite its sleek chic image home to some of the most successful luxury brands worldwide France's economy is gasping.</p>
+<div class="zh">尽管法国以#光鲜##时尚#的形象著称，拥有众多全球最成功的#奢侈#品牌，其经济却举步维艰。</div>
+
+<p><button class="play-button sentence" id="s-00-16-44-027" data-start="00:16:44,027" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Inequality here is on the rise the welfare state bloated.</p>
+<div class="zh">不平等现象日益加剧，#福利#制度臃肿不堪。</div>
+
+<p><button class="play-button sentence" id="s-00-16-49-558" data-start="00:16:49,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Government debt is spiraling servicing it cost more than France spends on defence and pretty much on education too.</p>
+<div class="zh">政府债务螺旋式上升，其偿债成本已超过国防支出，也几乎与教育支出相当。</div>
+
+<p><button class="play-button sentence" id="s-00-16-57-079" data-start="00:16:57,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Disagreement over how to deal with that is what caused the defeat of this latest French government.</p>
+<div class="zh">如何应对债务的分歧导致了本届法国政府的垮台。</div>
+
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-04-954" data-start="00:17:04,954" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Macron favoured cutting costs for business in an efforts to boost growth.</p>
+<div class="zh">马克龙总统主张削减企业成本以#刺激#增长。</div>
+
+<p><button class="play-button sentence" id="s-00-17-10-670" data-start="00:17:10,670" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The left and France insist now its time to tax the rich.</p>
+<div class="zh">左翼和法国国内势力坚持认为当前应向富人征税。</div>
+
+<p><button class="play-button sentence" id="s-00-17-15-878" data-start="00:17:15,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You might think there's an easy answer here.</p>
+<div class="zh">或许有人认为存在简单解决方案。</div>
+
+<p><button class="play-button sentence" id="s-00-17-18-377" data-start="00:17:18,377" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The French government has fallen.</p>
+<div class="zh">法国政府已垮台。</div>
+
+<p><button class="play-button sentence" id="s-00-17-20-336" data-start="00:17:20,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MPs in there, they're unhappy, voters are unhappy, call new elections.</p>
+<div class="zh">议员们不满，选民也不满，可举行新选举。</div>
+
+<p><button class="play-button sentence" id="s-00-17-25-155" data-start="00:17:25,155" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this country is so divided.</p>
+<div class="zh">但这个国家分裂严重。</div>
+
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-27-318" data-start="00:17:27,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Opinion polls suggest you just get another hung parliament which is what you have now.</p>
+<div class="zh">民调显示只会产生又一个悬峙议会——与现状无异。</div>
+
+<p><button class="play-button sentence" id="s-00-17-32-759" data-start="00:17:32,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And President Macron, well he's increasingly unpopular but he's refusing to stand down and this is distracting France on the world stage at the time of wars in Ukraine and the Middle East while at home the people of France say they've lost trust in their politicians.</p>
+<div class="zh">马克龙总统声望日衰却拒绝下台，这使法国在乌克兰和中东战事期间的国际舞台分心，而法国民众则表示对政客已失去信任。</div>
+
+<p><button class="play-button sentence" id="s-00-17-48-680" data-start="00:17:48,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kilnotra, Papua, our politicians don't work for the people.</p>
+<div class="zh">基尔诺特拉、巴布亚，我们的政客不为人民服务。</div>
+
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-51-980" data-start="00:17:51,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They feel far away from our everyday worries.</p>
+<div class="zh">他们远离我们#日常#的忧虑。</div>
+
+<p><button class="play-button sentence" id="s-00-17-55-078" data-start="00:17:55,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The budget was on M78 years old and I've never seen France like this.</p>
+<div class="zh">我78岁了，从未见过法国如此境况。</div>
+
+<p><button class="play-button sentence" id="s-00-17-59-022" data-start="00:17:59,022" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are really worried.</p>
+<div class="zh">我们深感忧虑。</div>
+
+<p><button class="play-button sentence" id="s-00-18-00-359" data-start="00:18:00,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you believe the politicians can improve France's situation?</p>
+<div class="zh">您相信政客能改善法国现状吗？</div>
+
+<p><button class="play-button sentence" id="s-00-18-04-519" data-start="00:18:04,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not anymore.</p>
+<div class="zh">不再相信。</div>
+
+<p><button class="play-button sentence" id="s-00-18-08-119" data-start="00:18:08,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were small celebrations across France this evening at the government's defeat, mainly by those preparing strike action in the coming days.</p>
+<div class="zh">今晚法国多地出现小规模庆祝政府垮台的活动，参与者多为准备近日罢工的人员。</div>
+
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958902" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-17-318" data-start="00:18:17,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Macron says he'll quickly choose a new prime minister, but path ahead won't be easy for them.</p>
+<div class="zh">马克龙总统表示将迅速任命新总理，但前路艰难。</div>
+
+<p><button class="play-button sentence" id="s-00-18-28-519" data-start="00:18:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To know right now where the centre left a Labour party of the Prime Minister, UNICE Gastore, has won the general election.</p>
+<div class="zh">现在插播：中左翼工党领袖尤尼斯·加斯托尔已赢得大选。</div>
+
+<p><button class="play-button sentence" id="s-00-18-35-479" data-start="00:18:35,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With the count almost complete it's taken 28% of the vote.</p>
+<div class="zh">计票接近完成时该党获得28%选票。</div>
+
+<p><button class="play-button sentence" id="s-00-18-39-361" data-start="00:18:39,361" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Gastore is expected to serve another term with the support of other left-wing parties.</p>
+<div class="zh">加斯托尔预计将在其他左翼政党支持下连任。</div>
+
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-45-078" data-start="00:18:45,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The right-wing anti-immigrant progress party came in second overall.</p>
+<div class="zh">右翼反#移民#的进步党总体得票第二。</div>
+
+<p><button class="play-button sentence" id="s-00-18-48-516" data-start="00:18:48,516" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The campaign was unusually polarized.</p>
+<div class="zh">本次选战异常两极分化。</div>
+
+<p><button class="play-button sentence" id="s-00-18-50-574" data-start="00:18:50,574" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dominant themes included the cost of living and the wars in Ukraine and Gaza.</p>
+<div class="zh">#主要#议题包括生活成本及乌克兰与加沙战争。</div>
+
+<p><button class="play-button sentence" id="s-00-18-55-960" data-start="00:18:55,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ceasefire between Thailand and Cambodia has been in force for more than a month, but their border dispute remains unresolved, with each country trading accusations against the other.</p>
+<div class="zh">泰柬停火协议生效已逾一月，但边境争端仍未解决，双方持续相互指责。</div>
+
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958853" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-06-598" data-start="00:19:06,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 40 people were killed in tens of thousands displaced when skirmishes between troops escalated in late July into five days of artillery exchanges and air strikes.</p>
+<div class="zh">七月下旬双方军队冲突升级为为期五天的炮战与空袭，造成40余人丧生，数万人流离失所。</div>
+
+<p><button class="play-button sentence" id="s-00-19-15-839" data-start="00:19:15,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cambodia, which is smaller and militarily weaker than Thailand, is seeking international sympathy and invited our South East Asia correspondent Jonathan Head to visit their border regions.</p>
+<div class="zh">柬埔寨在国土面积和军事实力上弱于泰国，正寻求国际社会同情，并邀请本台东南亚记者乔纳森·海德探访其边境地区。</div>
+
+<p><button class="play-button sentence" id="s-00-19-27-398" data-start="00:19:27,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The guns along the border are now silent, but this conflict is still being felt here in Northern Cambodia by thousands of displaced families.</p>
+<div class="zh">边境枪声虽已沉寂，但柬埔寨北部数千流离失所的家庭仍能感受到冲突的影响。</div>
+
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958822" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-37-571" data-start="00:19:37,571" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Conditions in this camp are grim.</p>
+<div class="zh">难民营条件#恶劣#。</div>
+
+<p><button class="play-button sentence" id="s-00-19-40-567" data-start="00:19:40,567" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a sea of mud in the rainy season and there are only the most rudimentary shelters.</p>
+<div class="zh">#雨季#时这里泥泞成海，只有最#简陋#的栖身之所。</div>
+
+<p><button class="play-button sentence" id="s-00-19-46-422" data-start="00:19:46,422" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet despite a month-long ceasefire, none of these people felt safe enough to go home.</p>
+<div class="zh">尽管停火已一月，这些民众仍觉归家无望。</div>
+
+<p><button class="play-button sentence" id="s-00-19-54-440" data-start="00:19:54,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities tell us the situation is not good yet, said this woman.</p>
+<div class="zh">这位妇女表示："当局告诉我们局势尚未好转"。</div>
+
+<p><button class="play-button sentence" id="s-00-19-58-415" data-start="00:19:58,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I live so close to the border, I don't dare go back.</p>
+<div class="zh">我住得离边境太近，不敢回去。</div>
+
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958798" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-01-636" data-start="00:20:01,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not just people who've been affected by the fighting.</p>
+<div class="zh">受战事影响的不仅是民众。</div>
+
+<p><button class="play-button sentence" id="s-00-20-07-318" data-start="00:20:07,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we've now been brought up here to this stunning 1,000-year-old temple of Praviha.</p>
+<div class="zh">现在我们来到这座令人惊叹的千年普拉维哈#寺庙#。</div>
+
+<p><button class="play-button sentence" id="s-00-20-12-920" data-start="00:20:12,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kaupravihaan is what the Thais call it, which sits at the very heart of the conflict between the two countries.</p>
+<div class="zh">泰国人称之为考普拉威汉寺，它正位于两国冲突的核心地带。</div>
+
+<p><button class="play-button sentence" id="s-00-20-19-154" data-start="00:20:19,154" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's important to the historical narratives each tells about itself.</p>
+<div class="zh">它对两国各自的历史叙事都至关重要。</div>
+
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958776" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-23-558" data-start="00:20:23,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It makes it very difficult for these two countries to settle their differences.</p>
+<div class="zh">这使得两国难以化解分歧。</div>
+
+<p><button class="play-button sentence" id="s-00-20-27-346" data-start="00:20:27,346" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now, the temple itself has suffered significant damage.</p>
+<div class="zh">如今，这座#寺庙#本身已遭受严重破坏。</div>
+
+<p><button class="play-button sentence" id="s-00-20-32-257" data-start="00:20:32,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were shown ancient steps shattered by shells.</p>
+<div class="zh">我们看到了被炮弹炸毁的古老台阶。</div>
+
+<p><button class="play-button sentence" id="s-00-20-37-559" data-start="00:20:37,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The foundation is broken.</p>
+<div class="zh">地基已断裂。</div>
+
+<p><button class="play-button sentence" id="s-00-20-39-787" data-start="00:20:39,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So walls pockmarked by shrapnel and plenty of rain-filled craters.</p>
+<div class="zh">墙体布满弹片凹痕，还有众多积满雨水的弹坑。</div>
+
+<p><button class="play-button sentence" id="s-00-20-46-920" data-start="00:20:46,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The temple sits right on the disputed border.</p>
+<div class="zh">这座#寺庙#正位于争议边境线上。</div>
+
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958750" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-49-849" data-start="00:20:49,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thai military positions were clearly visible.</p>
+<div class="zh">泰国军事阵地清晰可见。</div>
+
+<p><button class="play-button sentence" id="s-00-20-52-920" data-start="00:20:52,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thais still deny targeting it.</p>
+<div class="zh">泰国方面仍否认以寺庙为攻击目标。</div>
+
+<p><button class="play-button sentence" id="s-00-20-54-910" data-start="00:20:54,910" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Though they do say Cambodian troops and weapons were positioned here during the battles.</p>
+<div class="zh">但他们确实表示战斗期间柬埔寨军队和武器曾部署于此。</div>
+
+<p><button class="play-button sentence" id="s-00-21-00-519" data-start="00:21:00,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the blast?</p>
+<div class="zh">那场#爆炸#呢？</div>
+
+<p><button class="play-button sentence" id="s-00-21-01-558" data-start="00:21:01,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Got up this way.</p>
+<div class="zh">是从这个方向袭来的。</div>
+
+<p><button class="play-button sentence" id="s-00-21-02-940" data-start="00:21:02,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's one of many incidents that have stirred up old resentments.</p>
+<div class="zh">这是激起历史积怨的众多事件之一。</div>
+
+<p><button class="play-button sentence" id="s-00-21-08-680" data-start="00:21:08,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With Cambodia, the smaller and poorer neighbour, often feeling patronised by Thailand.</p>
+<div class="zh">作为更弱小贫困的邻国，柬埔寨常感到被泰国居高临下地对待。</div>
+
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958726" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-13-798" data-start="00:21:13,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trust is important.</p>
+<div class="zh">信任至关重要。</div>
+
+<p><button class="play-button sentence" id="s-00-21-15-461" data-start="00:21:15,461" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Co-existent must be accepted.</p>
+<div class="zh">必须接受共存。</div>
+
+<p><button class="play-button sentence" id="s-00-21-18-003" data-start="00:21:18,003" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't go back to the first century.</p>
+<div class="zh">不要倒退到公元一世纪。</div>
+
+<p><button class="play-button sentence" id="s-00-21-20-838" data-start="00:21:20,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are living in a 21 century.</p>
+<div class="zh">我们生活在21世纪。</div>
+
+<p><button class="play-button sentence" id="s-00-21-22-759" data-start="00:21:22,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's live together with this.</p>
+<div class="zh">让我们学会共同相处。</div>
+
+<p><button class="play-button sentence" id="s-00-21-24-999" data-start="00:21:24,999" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what we have now inherited from the colonisation era, so accept that.</p>
+<div class="zh">我们如今从殖民时代继承的现状，必须接受它。</div>
+
+<p><button class="play-button sentence" id="s-00-21-29-722" data-start="00:21:29,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You think the Thais don't accept that?</p>
+<div class="zh">你认为泰国人不接受吗？</div>
+
+<p><button class="play-button sentence" id="s-00-21-32-038" data-start="00:21:32,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't accept that.</p>
+<div class="zh">他们确实不接受。</div>
+
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958706" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-33-555" data-start="00:21:33,555" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because supremacy is always given more arrogant to accept the fact.</p>
+<div class="zh">因为#霸权#总是让人更#傲慢#地拒绝接受事实。</div>
+
+<p><button class="play-button sentence" id="s-00-21-39-240" data-start="00:21:39,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But attitudes have hardened and so have borders.</p>
+<div class="zh">但态度已变得强硬，边境也是如此。</div>
+
+<p><button class="play-button sentence" id="s-00-21-42-982" data-start="00:21:42,982" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here the Thai army has rolled out razor wire.</p>
+<div class="zh">这里泰国军队铺设了# razor#铁丝网。</div>
+
+<p><button class="play-button sentence" id="s-00-21-46-358" data-start="00:21:46,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cutting communities in half.</p>
+<div class="zh">将社区一分为二。</div>
+
+<p><button class="play-button sentence" id="s-00-21-49-034" data-start="00:21:49,034" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The governor of the province told me Cambodian families who'd been living on the other side of the wire for decades have been pushed out.</p>
+<div class="zh">该省省长告诉我，数十年来生活在铁丝网另一侧的柬埔寨家庭已被驱逐。</div>
+
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958680" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-59-215" data-start="00:21:59,215" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Thais insist they're only securing the historically agreed borderline.</p>
+<div class="zh">泰国坚称他们只是在保卫历史上划定的边界线。</div>
+
+<p><button class="play-button sentence" id="s-00-22-04-226" data-start="00:22:04,226" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But their actions are seen here as just another kind of bullying.</p>
+<div class="zh">但他们的行为在此被视为另一种霸凌。</div>
+
+<p><button class="play-button sentence" id="s-00-22-08-187" data-start="00:22:08,187" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there has been resistance.</p>
+<div class="zh">于是出现了抵抗。</div>
+
+<p><button class="play-button sentence" id="s-00-22-14-519" data-start="00:22:14,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This crowd managed to tear down part of the barrier.</p>
+<div class="zh">这群人成功拆除了部分屏障。</div>
+
+<p><button class="play-button sentence" id="s-00-22-17-494" data-start="00:22:17,494" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite the presence of Thai troops.</p>
+<div class="zh">尽管有泰国军队在场。</div>
+
+<p><button class="play-button sentence" id="s-00-22-20-599" data-start="00:22:20,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But today they're still blocked from crossing over as they used to.</p>
+<div class="zh">但如今他们仍被阻挡无法像过去那样#穿越#边境。</div>
+
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958652" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-27-720" data-start="00:22:27,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're suffering, but we don't know what to do.</p>
+<div class="zh">我们在受苦，却不知如何应对。</div>
+
+<p><button class="play-button sentence" id="s-00-22-30-174" data-start="00:22:30,174" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So one of the women who challenged the Thai army.</p>
+<div class="zh">这位曾对抗泰国军队的妇女说道。</div>
+
+<p><button class="play-button sentence" id="s-00-22-32-759" data-start="00:22:32,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't have anything to fight back with except our hands.</p>
+<div class="zh">我们除了双手之外没有任何反击的武器。</div>
+
+<p><button class="play-button sentence" id="s-00-22-37-160" data-start="00:22:37,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With feelings so raw on both sides, compromise is going to be difficult.</p>
+<div class="zh">双方情绪如此尖锐，#妥协#将变得困难。</div>
+
+<p><button class="play-button sentence" id="s-00-22-42-223" data-start="00:22:42,223" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But without it, the open borders and economic links that brought so much prosperity to this region will be lost.</p>
+<div class="zh">但若没有妥协，曾给该地区带来巨大#繁荣#的开放边境与经济联系将不复存在。</div>
+
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958629" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-50-055" data-start="00:22:50,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jonathan Head BBC News on the Thai Cambodian border.</p>
+<div class="zh">BBC新闻乔纳森·海德于泰柬边境报道。</div>
+
+<p><button class="play-button sentence" id="s-00-22-57-000" data-start="00:22:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prince Harry is back in the UK for a series of charity engagements.</p>
+<div class="zh">哈里王子重返英国开展一系列慈善活动。</div>
+
+<p><button class="play-button sentence" id="s-00-23-00-427" data-start="00:23:00,427" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He arrived Monday morning and went straight to Windsor Castle to lay a wreath at the grave of his grandmother.</p>
+<div class="zh">他于周一早晨抵达后，直接前往温莎城堡在祖母的#坟墓#前敬献#花圈#。</div>
+
+<p><button class="play-button sentence" id="s-00-23-05-731" data-start="00:23:05,731" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Queen Elizabeth, on what is the third anniversary of her death.</p>
+<div class="zh">这天正是伊丽莎白女王逝世三周年纪念日。</div>
+
+<p><button class="play-button sentence" id="s-00-23-09-348" data-start="00:23:09,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prince Harry was last in the UK in April for court hearings involving his security arrangements while in the UK.</p>
+<div class="zh">哈里王子上次在英国是四月，为涉及其在英安保安排的法庭听证而来。</div>
+
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958604" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-15-801" data-start="00:23:15,801" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No details have been given as to whether the prince will meet his father, the king or other members of the royal family.</p>
+<div class="zh">关于王子是否会会见其父亲国王或其他王室成员，尚未透露任何细节。</div>
+
+<p><button class="play-button sentence" id="s-00-23-21-719" data-start="00:23:21,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's to Neilaroth.</p>
+<div class="zh">这里是内拉罗特。</div>
+
+<p><button class="play-button sentence" id="s-00-23-24-519" data-start="00:23:24,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Duke of Sussex back on UK soil.</p>
+<div class="zh">苏塞克斯#公爵#重返英国领土。</div>
+
+<p><button class="play-button sentence" id="s-00-23-26-929" data-start="00:23:26,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After a private visit to his grandmother's grave in Windsor, he faced the cameras in London.</p>
+<div class="zh">在温莎私下祭拜祖母#坟墓#后，他在伦敦面对媒体镜头。</div>
+
+<p><button class="play-button sentence" id="s-00-23-33-370" data-start="00:23:33,370" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the start of a week focused on his charity work and the chances of a family reunion.</p>
+<div class="zh">这周伊始他将专注于慈善工作，并可能迎来家庭#团聚#。</div>
+
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958580" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-39-021" data-start="00:23:39,021" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prince Harry is currently at the WellChild awards.</p>
+<div class="zh">哈里王子目前正出席韦尔儿童奖颁奖礼。</div>
+
+<p><button class="play-button sentence" id="s-00-23-42-745" data-start="00:23:42,745" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Which celebrate the courage of seriously ill children and their families.</p>
+<div class="zh">该奖项表彰重病儿童及其家庭的勇气。</div>
+
+<p><button class="play-button sentence" id="s-00-23-47-310" data-start="00:23:47,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even with a move to America, he's always tried to get back for this event.</p>
+<div class="zh">即使移居美国，他也始终努力赶回参与此活动。</div>
+
+<p><button class="play-button sentence" id="s-00-23-52-410" data-start="00:23:52,410" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But will this week hold any hope for a thaw in family tension?</p>
+<div class="zh">但本周会为家庭紧张关系的缓和带来希望吗？</div>
+
+<p><button class="play-button sentence" id="s-00-23-56-867" data-start="00:23:56,867" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The prince and princess of Wales visited the Women's Institute in Berkshire today.</p>
+<div class="zh">威尔士亲王和王妃今日访问了伯克郡的女性协会。</div>
+
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958558" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-01-855" data-start="00:24:01,855" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An engagement designed to honour the memory of Queen Elizabeth II on the third anniversary of her death.</p>
+<div class="zh">这场#公开活动#旨在纪念伊丽莎白二世女王逝世三周年。</div>
+
+<p><button class="play-button sentence" id="s-00-24-08-437" data-start="00:24:08,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A meeting between Harry and William is not in the diary.</p>
+<div class="zh">哈里与威廉的会面未列入日程。</div>
+
+<p><button class="play-button sentence" id="s-00-24-13-240" data-start="00:24:13,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Things may be different with the king.</p>
+<div class="zh">与国王的情况可能有所不同。</div>
+
+<p><button class="play-button sentence" id="s-00-24-15-325" data-start="00:24:15,325" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's currently in Scotland.</p>
+<div class="zh">国王目前正在苏格兰。</div>
+
+<p><button class="play-button sentence" id="s-00-24-16-889" data-start="00:24:16,889" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was at the Braemar Highland Games at the weekend.</p>
+<div class="zh">他周末出席了布雷马#高地#运动会。</div>
+
+<p><button class="play-button sentence" id="s-00-24-20-015" data-start="00:24:20,015" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Father and son have not seen each other in person since February 2024.</p>
+<div class="zh">父子自2024年2月以来未曾见面。</div>
+
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958534" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-25-638" data-start="00:24:25,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is still mistrust on both sides.</p>
+<div class="zh">双方仍然存在不信任。</div>
+
+<p><button class="play-button sentence" id="s-00-24-28-375" data-start="00:24:28,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in his BBC interview in May, Prince Harry said he wanted things to change.</p>
+<div class="zh">但在五月接受BBC采访时，哈里王子表示希望改变现状。</div>
+
+<p><button class="play-button sentence" id="s-00-24-32-689" data-start="00:24:32,689" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some members of my family will never forgive me for writing a book.</p>
+<div class="zh">部分家庭成员永远不会原谅我出书的行为。</div>
+
+<p><button class="play-button sentence" id="s-00-24-36-492" data-start="00:24:36,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course they will never forgive me for lots of things.</p>
+<div class="zh">当然他们也不会原谅我做的许多事。</div>
+
+<p><button class="play-button sentence" id="s-00-24-41-774" data-start="00:24:41,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you know, there is...</p>
+<div class="zh">但你知道，其实...</div>
+
+<p><button class="play-button sentence" id="s-00-24-44-910" data-start="00:24:44,910" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would love reconciliation with my family.</p>
+<div class="zh">我渴望与家人#和解#。</div>
+
+<p><button class="play-button sentence" id="s-00-24-50-647" data-start="00:24:50,647" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no point in continuing to fight anymore.</p>
+<div class="zh">继续争斗已毫无意义。</div>
+
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958503" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-56-034" data-start="00:24:56,034" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As is life is precious.</p>
+<div class="zh">因为生命是#珍贵#的。</div>
+
+<p><button class="play-button sentence" id="s-00-24-57-752" data-start="00:24:57,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reaching any kind of family peace hasn't been easy.</p>
+<div class="zh">达成任何形式的家庭和睦都并非易事。</div>
+
+<p><button class="play-button sentence" id="s-00-25-01-638" data-start="00:25:01,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Neither Buckingham Palace nor Prince Harry's representatives will be drawn on any meeting with the king.</p>
+<div class="zh">白金汉宫和哈里王子的代表均未透露是否会与国王会面。</div>
+
+<p><button class="play-button sentence" id="s-00-25-07-757" data-start="00:25:07,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there is just a sense that this time around, both sides would like to find a way forward.</p>
+<div class="zh">但外界普遍感觉，此次双方都希望找到前进的道路。</div>
+
+<p><button class="play-button sentence" id="s-00-25-15-880" data-start="00:25:15,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tomorrow Prince Harry will be in Nottingham, the city where he took his new fiancé Meghan on their first joint Royal duty eight years ago.</p>
+<div class="zh">明天哈里王子将前往诺丁汉——八年前他曾带着新婚未婚妻梅根在此执行首次联合王室公务。</div>
+
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958475" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-24-277" data-start="00:25:24,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This time he'll be on his own, visiting a youth project where he'll also announce a significant personal donation to the BBC's Children in Need.</p>
+<div class="zh">此次他将独自造访青年项目，并宣布向BBC"儿童救助计划"提供个人重大捐赠。</div>
+
+<p><button class="play-button sentence" id="s-00-25-34-032" data-start="00:25:34,032" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Daniela Ralph, BBC News.</p>
+<div class="zh">BBC新闻，丹妮拉·拉尔夫报道。</div>
+
+<p><button class="play-button sentence" id="s-00-25-38-358" data-start="00:25:38,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, it's been more than a year and a half since Harry has met a King Charles face-to-face from see-thousand, does materialise.</p>
+<div class="zh">确实，自从哈里上次面对面见到查尔斯国王已过去一年半时间，且看此次会晤能否成真。</div>
+
+<p><button class="play-button sentence" id="s-00-25-45-768" data-start="00:25:45,768" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the meantime, let me get you up to speed with what we're keeping an eye on here on News Day.</p>
+<div class="zh">在此期间meantime，为您同步News Day节目正在关注的要闻。</div>
+
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958449" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-50-364" data-start="00:25:50,364" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's a bank car where Tyler and Supreme Court is set to decide whether former Premier Taxing, you know what, should serve prison time that he skipped while in hospital detention.</p>
+<div class="zh">焦点是一辆银行押运车，泰国最高法院将裁定前总理他信·西那瓦是否应补服监禁刑期——此前其在医院拘留期间并未实际服刑。</div>
+
+<p><button class="play-button sentence" id="s-00-25-59-962" data-start="00:25:59,962" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The case tracks back to 2023 when his taxing returned to Thailand after 15 years of self-imposed exile.</p>
+<div class="zh">案件可追溯至2023年，当时他信结束十五年自我exile流亡后返回泰国。</div>
+
+<p><button class="play-button sentence" id="s-00-26-05-958" data-start="00:26:05,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More on that when it develops.</p>
+<div class="zh">进展后将带来更多报道。</div>
+
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1GXYwzhExe/?t=-2208958432" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-07-877" data-start="00:26:07,877" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us here on News Day.</p>
+<div class="zh">请持续锁定News Day新闻节目。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
