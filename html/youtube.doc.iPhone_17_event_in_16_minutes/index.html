@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Apple Unveils New AirPods Pro, Apple Watch Series, and iPhone Lineup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apple introduced major updates across its product lines at a special event held at Apple Park. The new AirPods Pro 3 feature enhanced noise cancellation and live translation capabilities. Apple Watch Series 11 and SE 3 bring health advancements like blood pressure monitoring and SleepScore. The all-new iPhone 17 series includes a standard model, a ultra-thin iPhone Air, and the powerful iPhone 17 Pro with improved thermal management and camera systems. All products will be available for pre-order soon and launch on September 19th.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Apple Unveils New AirPods Pro, Apple Watch Series, and iPhone Lineup</h1>
+<p>【快速看完苹果2025秋季发布会：AirPods Pro 3降噪升级、Apple Watch血压监测、iPhone 17系列颠覆设计】</p>
+<p>Summary:
+Apple introduced major updates across its product lines at a special event held at Apple Park. The new AirPods Pro 3 feature enhanced noise cancellation and live translation capabilities. Apple Watch Series 11 and SE 3 bring health advancements like blood pressure monitoring and SleepScore. The all-new iPhone 17 series includes a standard model, a ultra-thin iPhone Air, and the powerful iPhone 17 Pro with improved thermal management and camera systems. All products will be available for pre-order soon and launch on September 19th.</p>
+<p>摘要：
+苹果在Apple Park举行的特别活动中发布了全线产品重大更新。新款AirPods Pro 3具备增强的主动降噪和实时翻译功能。Apple Watch Series 11和SE 3带来了血压监测和睡眠评分等健康功能。全新iPhone 17系列包括标准版、超薄iPhone Air以及搭载改进散热系统和摄像头的iPhone 17 Pro。所有产品即将开启预售，9月19日正式上市。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 27 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning.</p>
+<div class="zh">早上好。</div>
+
+<p><button class="play-button sentence" id="s-00-00-01-161" data-start="00:00:01,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome to Apple Park.</p>
+<div class="zh">欢迎来到Apple Park。</div>
+
+<p><button class="play-button sentence" id="s-00-00-03-000" data-start="00:00:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An Apple design has always been fundamental to who we are and what we do.</p>
+<div class="zh">苹果设计始终是我们身份与行动的核心根基。</div>
+
+<p><button class="play-button sentence" id="s-00-00-07-000" data-start="00:00:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's start with AirPods.</p>
+<div class="zh">让我们从AirPods开始。</div>
+
+<p><button class="play-button sentence" id="s-00-00-12-000" data-start="00:00:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We designed a custom multi-port acoustic architecture, which precisely controls the airflow that carries sound into the ear.</p>
+<div class="zh">我们设计了定制的多孔#声学# #架构#，精准控制将声音传入耳内的气流。</div>
+
+<p><button class="play-button sentence" id="s-00-00-19-000" data-start="00:00:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This transforms the bass response.</p>
+<div class="zh">这彻底改变了低音响应。</div>
+
+<p><button class="play-button sentence" id="s-00-00-21-000" data-start="00:00:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It widens the sound stage so you hear every instrument and brings vocals into stunning focus across music, shows and calls.</p>
+<div class="zh">它拓宽声场让每件乐器清晰可辨，并在音乐、节目和通话中使人声聚焦惊艳呈现。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-29-000" data-start="00:00:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it gets even better with phenomenal active noise cancellation.</p>
+<div class="zh">结合#非凡#的主动降噪功能，体验更臻完美。</div>
+
+<p><button class="play-button sentence" id="s-00-00-33-000" data-start="00:00:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultra low noise microphones and advanced computational audio, combined with new foam-infused ear tips, breathing greater noise isolation.</p>
+<div class="zh">超低噪麦克风与先进计算#音频#技术，搭配全新注入式#泡棉#耳塞，实现更强噪音#隔绝#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-41-000" data-start="00:00:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This significantly improved performance, delivering twice the ANC compared to the previous generation, which were already amazing.</p>
+<div class="zh">此举显著提升性能，主动降噪效果达到已属卓越的上代产品的两倍。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-48-000" data-start="00:00:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're bringing the magic of AirPods to the way you communicate across languages.</p>
+<div class="zh">我们正将AirPods的魔力赋能跨语言沟通。</div>
+
+<p><button class="play-button sentence" id="s-00-00-51-000" data-start="00:00:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With live translation powered by Apple Intelligence now, when you are together with someone who speaks a different language.</p>
+<div class="zh">如今通过Apple Intelligence驱动的实时翻译，当你与使用不同语言者相处时——</div>
+
+<p><button class="play-button sentence" id="s-00-00-57-000" data-start="00:00:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like exploring a market abroad, AirPods Pro will help you understand them in your preferred language.</p>
+<div class="zh">例如在异国市场探索时，AirPods Pro能以你偏好的语言助你理解对方。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959937" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-03-000" data-start="00:01:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Using a new simple gesture, live translation begins.</p>
+<div class="zh">通过简单新#手势#即可启动实时翻译。</div>
+
+<p><button class="play-button sentence" id="s-00-01-06-000" data-start="00:01:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Translating Spanish, while ANC lowers the volume of the person speaking and to make them fit more securely in your ear, we shake the design to match the natural geometry of the ear canal.</p>
+<div class="zh">翻译西班牙语时，主动降噪会降低说话者音量；为提升入耳稳固度，我们重塑设计以契合耳道自然曲线。</div>
+
+<p><button class="play-button sentence" id="s-00-01-16-000" data-start="00:01:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With entirely new ear tips, now in five sizes, all together, these are the most stable and best fitting AirPods ever.</p>
+<div class="zh">搭配全新五尺寸耳塞，共同造就史上最稳定、佩戴#贴合度#最佳的AirPods。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959916" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-24-000" data-start="00:01:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're also really excited to add heart rate sensing during workouts with AirPods Pro 3.</p>
+<div class="zh">我们更激动的是为AirPods Pro 3新增运动时心率监测功能。</div>
+
+<p><button class="play-button sentence" id="s-00-01-29-000" data-start="00:01:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, when you go to the fitness app on iPhone, you'll see a new workout experience.</p>
+<div class="zh">现在当你打开iPhone上的#健身#应用，将看到全新运动体验。</div>
+
+<p><button class="play-button sentence" id="s-00-01-32-000" data-start="00:01:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where with just AirPods Pro, you can track up to 50 different workout types.</p>
+<div class="zh">仅凭AirPods Pro即可追踪多达50种运动类型。</div>
+
+<p><button class="play-button sentence" id="s-00-01-36-000" data-start="00:01:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can track heart rate and calories burned using a new AirPods Pro.</p>
+<div class="zh">通过新款AirPods Pro可监测心率与卡路里消耗。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959901" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-39-000" data-start="00:01:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are moving from six hours on a single charge to eight hours, taking you through that transatlantic flight, while listening to music with active noise cancellation.</p>
+<div class="zh">单次续航从6小时延长至8小时，足以支撑横跨大西洋的航班，全程享受主动降噪音乐。</div>
+
+<p><button class="play-button sentence" id="s-00-01-47-000" data-start="00:01:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To help our hearing aid users, we are thrilled to provide 10 hours on a single charge in transparency.</p>
+<div class="zh">为助听器用户惊喜提供通透模式下10小时单次续航。</div>
+
+<p><button class="play-button sentence" id="s-00-01-52-000" data-start="00:01:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's AirPods Pro 3, delivering since sensational audio performance.</p>
+<div class="zh">这就是AirPods Pro 3，带来一如既往#震撼#的#音频#表现。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959884" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-56-000" data-start="00:01:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will still be available for $249, and they will be available September 19.</p>
+<div class="zh">售价保持249美元，将于9月19日正式发售。</div>
+
+<p><button class="play-button sentence" id="s-00-02-00-000" data-start="00:02:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's turn to Apple Watch.</p>
+<div class="zh">现在聚焦Apple Watch。</div>
+
+<p><button class="play-button sentence" id="s-00-02-01-000" data-start="00:02:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, we're making the best watch in the world even better.</p>
+<div class="zh">今日我们让这款全球最佳手表再臻新境。</div>
+
+<p><button class="play-button sentence" id="s-00-02-05-000" data-start="00:02:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Introducing Apple Watch Series 11.</p>
+<div class="zh">隆重推出Apple Watch Series 11。</div>
+
+<p><button class="play-button sentence" id="s-00-02-07-000" data-start="00:02:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's our thinnest and most comfortable watch, and it's even more durable.</p>
+<div class="zh">这是我们最纤薄舒适的手表，且更显#耐用#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-11-000" data-start="00:02:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's two times more scratch-resistant.</p>
+<div class="zh">抗刮擦性能提升两倍。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959866" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-14-000" data-start="00:02:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Series 11 now includes the latest cellular technology, 5G.</p>
+<div class="zh">Series 11现支持最新蜂窝技术5G。</div>
+
+<p><button class="play-button sentence" id="s-00-02-19-000" data-start="00:02:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The new Watch Face Flow uses liquid-glass new rules to beautifully refract swirls of color.</p>
+<div class="zh">新表盘"流彩"运用液态玻璃新法则，绚丽折射斑斓旋涡。</div>
+
+<p><button class="play-button sentence" id="s-00-02-24-000" data-start="00:02:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year we're thrilled to share our next advancement focused on a problem of massive proportions.</p>
+<div class="zh">今年我们激动地分享针对重大健康问题的全新#突破#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-30-000" data-start="00:02:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> High blood pressure.</p>
+<div class="zh">高血压。</div>
+
+<p><button class="play-button sentence" id="s-00-02-31-000" data-start="00:02:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To help, we've developed a groundbreaking feature that can alert you to possible hypertension, just by wearing your Apple Watch.</p>
+<div class="zh">我们开发突破性功能，仅需佩戴Apple Watch即可#预警#潜在#高血压#风险。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959841" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-39-000" data-start="00:02:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We expect clearance from the FDA and other regulators soon, with availability in 150 countries and regions this month, including the UFs in Europe.</p>
+<div class="zh">预计很快获得FDA等监管机构#批准#，本月将在150个国家和地区推出（含欧洲国家），包括美国。</div>
+
+<p><button class="play-button sentence" id="s-00-02-47-000" data-start="00:02:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, we'll help you understand the quality of your sleep and how to make it more restorative with SleepScore.</p>
+<div class="zh">现在，我们将通过SleepScore助你解读睡眠质量并提升恢复效益。</div>
+
+<p><button class="play-button sentence" id="s-00-02-53-000" data-start="00:02:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The quality of your sleep is interlens by several factors, such as sleep duration, bedtime consistency, how often you wake up, and the time spent in each sleep stage.</p>
+<div class="zh">你的睡眠质量受多个因素影响，例如睡眠时长、就寝一致性、夜间醒来的次数以及在每个睡眠阶段停留的时间。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-03-000" data-start="00:03:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> SleepScore analyzes these factors each night and provides a classification plus a score.</p>
+<div class="zh">SleepScore 每晚都会分析这些因素，并提供一个#分类#和分数。</div>
+
+<p><button class="play-button sentence" id="s-00-03-08-000" data-start="00:03:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also re-engineered the battery.</p>
+<div class="zh">我们还重新设计了电池。</div>
+
+<p><button class="play-button sentence" id="s-00-03-11-000" data-start="00:03:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Series 11 now gets up to 24 hours of battery life, so you can wear it all day and all night.</p>
+<div class="zh">Series 11 现在可提供长达 24 小时的续航，因此你可以全天候佩戴。</div>
+
+<p><button class="play-button sentence" id="s-00-03-17-000" data-start="00:03:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Series 11 comes in jet black, silver, rose gold, and a beautiful new space gray, all made from 100% recycled aluminum.</p>
+<div class="zh">Series 11 提供#亮黑#、银色、玫瑰金和全新的太空#灰#，全部采用 100% 回收的#铝#制造。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-26-000" data-start="00:03:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are also gorgeous polish cases made from 100% recycled titanium, in natural, gold, and slate.</p>
+<div class="zh">还有#华丽#的抛光表壳，采用 100% 回收的钛金属制成，提供原色、金色和板岩色。</div>
+
+<p><button class="play-button sentence" id="s-00-03-32-000" data-start="00:03:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's Apple Watch Series 11.</p>
+<div class="zh">这就是 Apple Watch Series 11。</div>
+
+<p><button class="play-button sentence" id="s-00-03-35-000" data-start="00:03:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year we are delighted to introduce Apple Watch S3.</p>
+<div class="zh">今年我们很高兴推出 Apple Watch S3。</div>
+
+<p><button class="play-button sentence" id="s-00-03-39-000" data-start="00:03:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, it gets our most powerful Apple Watch chip, S10, which enables even more features.</p>
+<div class="zh">首先，它配备了我们最强大的 Apple Watch 芯片 S10，带来更多功能。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-46-000" data-start="00:03:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It brings an always on display to SE for the first time.</p>
+<div class="zh">它首次为 SE 带来了常亮显示。</div>
+
+<p><button class="play-button sentence" id="s-00-03-50-000" data-start="00:03:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With S10, SE also supports gestures, like double tap and wrist flick, so you can easily control your watch with just one hand.</p>
+<div class="zh">借助 S10，SE 还支持手势操作，例如双击和抖腕，因此你可以单手轻松控制手表。</div>
+
+<p><button class="play-button sentence" id="s-00-03-59-000" data-start="00:03:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> SE already has important features like heart rate notifications, fall detection, and crash detection.</p>
+<div class="zh">SE 已经具备心率通知、跌倒#检测#和车祸#检测#等重要功能。</div>
+
+<p><button class="play-button sentence" id="s-00-04-07-000" data-start="00:04:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For those moments when you don't have your AirPods handy, you'll be able to play media like music or podcasts directly through the speaker.</p>
+<div class="zh">当你没有随身携带 AirPods 时，你可以直接通过扬声器播放音乐或播客等媒体。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959745" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-15-000" data-start="00:04:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And for the first time, SE supports fast charging, making it easy to quickly top off the battery.</p>
+<div class="zh">SE 首次支持快速充电，可以轻松快速补充电量。</div>
+
+<p><button class="play-button sentence" id="s-00-04-22-000" data-start="00:04:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now charges up to two times faster than the previous model, made with 100% recycled aluminum.</p>
+<div class="zh">充电速度比上一代快一倍，并采用 100% 回收的#铝#制成。</div>
+
+<p><button class="play-button sentence" id="s-00-04-30-000" data-start="00:04:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Apple Watch SE 3, featuring a new always on display, 5G, temperature sensing, sleep app notifications, and sleep score.</p>
+<div class="zh">这就是 Apple Watch SE 3，配备全新常亮显示、5G、温度感应、睡眠应用通知和睡眠评分。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959720" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-40-000" data-start="00:04:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Apple Watch Ultra is the ultimate sports and adventure watch.</p>
+<div class="zh">Apple Watch Ultra 是终极运动和探险手表。</div>
+
+<p><button class="play-button sentence" id="s-00-04-44-000" data-start="00:04:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year we're taking it further with Apple Watch Ultra 3.</p>
+<div class="zh">今年我们更进一步，推出 Apple Watch Ultra 3。</div>
+
+<p><button class="play-button sentence" id="s-00-04-50-000" data-start="00:04:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The display is now brighter when viewed at an angle.</p>
+<div class="zh">在倾斜角度观看时，显示屏亮度更高。</div>
+
+<p><button class="play-button sentence" id="s-00-04-53-000" data-start="00:04:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And theater borders allow us to grow the screen area without changing the case size.</p>
+<div class="zh">而#剧院#边框设计让我们在不改变表壳尺寸的情况下扩大屏幕面积。</div>
+
+<p><button class="play-button sentence" id="s-00-04-58-000" data-start="00:04:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The result is the largest display ever in an Apple Watch.</p>
+<div class="zh">最终实现了 Apple Watch 有史以来最大的显示屏。</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-02-000" data-start="00:05:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Ultra keeps you connected no matter where you are, with 5G cellular, for more coverage and a faster, stronger connection.</p>
+<div class="zh">Ultra 无论你身在何处，都通过 5G 蜂窝保持连接，提供更广覆盖和更快更强的连接。</div>
+
+<p><button class="play-button sentence" id="s-00-05-09-000" data-start="00:05:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now when you journey off the grid, you can stay safe even touch with loved ones, using satellite and available countries and regions.</p>
+<div class="zh">现在，当你进入#离网#地区时，你仍然可以通过#卫星#在支持的国家和地区保持安全并与亲人联系。</div>
+
+<p><button class="play-button sentence" id="s-00-05-17-000" data-start="00:05:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just a few tabs gather critical information, you can get you their emergency help you need.</p>
+<div class="zh">只需轻点几下即可收集关键信息，获得所需的紧急帮助。</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959678" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-22-000" data-start="00:05:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can also send messages, and share your location with fine line.</p>
+<div class="zh">你还可以发送信息，并共享你的精确位置。</div>
+
+<p><button class="play-button sentence" id="s-00-05-26-000" data-start="00:05:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultra 3 also includes a larger battery, and now gets up to 42 hours of battery life.</p>
+<div class="zh">Ultra 3 还配备更大的电池，现在可实现长达 42 小时的续航。</div>
+
+<p><button class="play-button sentence" id="s-00-05-31-000" data-start="00:05:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultra will be available in black and natural titanium.</p>
+<div class="zh">Ultra 将提供黑色和自然钛金属版本。</div>
+
+<p><button class="play-button sentence" id="s-00-05-35-000" data-start="00:05:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Apple Watch Ultra 3, now featuring the largest display and the longest battery life of any Apple Watch.</p>
+<div class="zh">这就是 Apple Watch Ultra 3，拥有史上最大的显示屏和最长的电池续航。</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959658" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-42-000" data-start="00:05:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Apple Watch SE 3 starts at just 249.</p>
+<div class="zh">Apple Watch SE 3 起售价仅为 249 美元。</div>
+
+<p><button class="play-button sentence" id="s-00-05-45-000" data-start="00:05:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Apple Watch Series 11 starts at 399.</p>
+<div class="zh">Apple Watch Series 11 起售价为 399 美元。</div>
+
+<p><button class="play-button sentence" id="s-00-05-48-000" data-start="00:05:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Apple Watch Ultra 3 starts at 799.</p>
+<div class="zh">Apple Watch Ultra 3 起售价为 799 美元。</div>
+
+<p><button class="play-button sentence" id="s-00-05-52-000" data-start="00:05:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can pre-order all the new models today, and they will be available starting September 19th.</p>
+<div class="zh">今天即可预订所有新款机型，9月19日起正式发售。</div>
+
+<p><button class="play-button sentence" id="s-00-05-57-000" data-start="00:05:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, we're raising the bar once again with an all new iPhone lineup that's unlike anything we've ever created.</p>
+<div class="zh">如今我们再次突破界限，带来了前所未有的全新iPhone系列。</div>
+
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959636" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-04-000" data-start="00:06:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone 17 has a beautiful, more durable design, and comes in five gorgeous colors.</p>
+<div class="zh">iPhone 17采用精美更#耐用#的设计，提供五款#惊艳#配色。</div>
+
+<p><button class="play-button sentence" id="s-00-06-10-000" data-start="00:06:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lavender, Miss Blue, Black, White, and Sage.</p>
+<div class="zh">淡紫色、浅雾蓝、黑色、白色与#鼠尾草绿#。</div>
+
+<p><button class="play-button sentence" id="s-00-06-16-000" data-start="00:06:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The new design has a larger 6.3-inch display with thinner borders, so you can see more and do more.</p>
+<div class="zh">全新设计配备更大的6.3英寸显示屏与更窄边框，助您看得更多、做得更多。</div>
+
+<p><button class="play-button sentence" id="s-00-06-24-000" data-start="00:06:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the display of iPhone 17 features pro-motion, just like our pro-models, with an adaptive refresh rate up to 120 hertz.</p>
+<div class="zh">iPhone 17的显示屏还配备与专业机型相同的ProMotion自适应#刷新#率技术，最高可达120赫兹。</div>
+
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959606" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-34-000" data-start="00:06:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When outside, iPhone 17 is more readable, with 3,000 nits peak outdoor brightness, or highest ever on iPhone.</p>
+<div class="zh">在户外环境下，iPhone 17具备更佳可读性，峰值户外#亮度#达3000尼特，创iPhone历史新高。</div>
+
+<p><button class="play-button sentence" id="s-00-06-44-000" data-start="00:06:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This makes a display on iPhone 17 our best yet.</p>
+<div class="zh">这使得iPhone 17的显示屏成为我们迄今最出色的屏幕。</div>
+
+<p><button class="play-button sentence" id="s-00-06-48-000" data-start="00:06:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone 17 introduces Ceramic Shield 2.</p>
+<div class="zh">iPhone 17搭载#超瓷晶#玻璃2代。</div>
+
+<p><button class="play-button sentence" id="s-00-06-52-000" data-start="00:06:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, it has three times better scratch resistance.</p>
+<div class="zh">现在其抗刮擦性能提升至三倍。</div>
+
+<p><button class="play-button sentence" id="s-00-06-56-000" data-start="00:06:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Powering iPhone 17 is the latest generation of Apple Silicon, A19.</p>
+<div class="zh">为iPhone 17提供动力的是新一代Apple#芯片#A19。</div>
+
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959578" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-02-000" data-start="00:07:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Built with the most advanced 3 nanometer technology, A19 is faster and more efficient.</p>
+<div class="zh">基于最先进的3纳米工艺打造，A19速度更快、能效更高。</div>
+
+<p><button class="play-button sentence" id="s-00-07-10-000" data-start="00:07:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has an updated display engine to power pro-motion and the always on display.</p>
+<div class="zh">其搭载新版显示引擎，为ProMotion和全天候显示功能提供支持。</div>
+
+<p><button class="play-button sentence" id="s-00-07-16-000" data-start="00:07:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has an improved neural engine, tailored to power, incredible on-device performance for Apple Intelligence.</p>
+<div class="zh">配备增强型#神经网络#引擎，专为驱动Apple Intelligence的卓越设备端性能而优化。</div>
+
+<p><button class="play-button sentence" id="s-00-07-23-000" data-start="00:07:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A19 has a 6-core CPU for our latest performance and efficiency cores to make iPhone 17 responsive while enabling great battery life.</p>
+<div class="zh">A19采用6核CPU，包含最新性能核心与#能效#核心，令iPhone 17反应#灵敏#的同时实现优异续航。</div>
+
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959546" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-34-000" data-start="00:07:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The next generation 5-core GPU provides a big step up for graphics intensive tasks.</p>
+<div class="zh">新一代5核GPU为图形#密集型#任务带来巨大提升。</div>
+
+<p><button class="play-button sentence" id="s-00-07-41-000" data-start="00:07:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're upgrading from an older iPhone, you'll experience a huge boost in speed.</p>
+<div class="zh">若从旧款iPhone升级，您将体验到速度的巨大#飞跃#。</div>
+
+<p><button class="play-button sentence" id="s-00-07-47-000" data-start="00:07:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The efficiency of Apple Silicon contributes to all day battery life on iPhone 17.</p>
+<div class="zh">Apple#芯片#的#能效#为iPhone 17带来全天候续航表现。</div>
+
+<p><button class="play-button sentence" id="s-00-07-53-000" data-start="00:07:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And with pro-motion, iPhone 17 gets up to 8 more hours of video playback compared to iPhone 16.</p>
+<div class="zh">在ProMotion技术加持下，iPhone 17的视频播放时间较iPhone 16最长增加8小时。</div>
+
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-01-000" data-start="00:08:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our fusion technology combines the capabilities of two cameras in one.</p>
+<div class="zh">我们的#融合#技术将双摄像头功能集于一体。</div>
+
+<p><button class="play-button sentence" id="s-00-08-06-000" data-start="00:08:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With a main camera and an optical quality 2x telephoto, each with dedicated image pipelines.</p>
+<div class="zh">配备主摄像头和具备#光学#品质的2倍长焦镜头，每个镜头均配有独立图像处理通道。</div>
+
+<p><button class="play-button sentence" id="s-00-08-13-000" data-start="00:08:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now, iPhone 17 gets a new 48 megapixel fusion ultra wide camera.</p>
+<div class="zh">现在，iPhone 17还新增了4800万像素的#融合#超广角摄像头。</div>
+
+<p><button class="play-button sentence" id="s-00-08-18-000" data-start="00:08:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has four times the resolution compared to iPhone 16.</p>
+<div class="zh">其分辨率相比iPhone 16提升至四倍。</div>
+
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959498" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-22-000" data-start="00:08:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're going to love how easy it is to take amazing photos and videos.</p>
+<div class="zh">您定会爱上这种轻松拍摄精彩照片与视频的体验。</div>
+
+<p><button class="play-button sentence" id="s-00-08-26-000" data-start="00:08:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this year, we are thrilled to introduce our phenomenal new center stage front camera.</p>
+<div class="zh">为此我们今年激动地推出#非凡#的新款居中舞台前置摄像头。</div>
+
+<p><button class="play-button sentence" id="s-00-08-33-000" data-start="00:08:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This new front camera has our widest feel to view.</p>
+<div class="zh">这款新前置摄像头具备我们最宽广的视角。</div>
+
+<p><button class="play-button sentence" id="s-00-08-37-000" data-start="00:08:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's enabled by our largest front camera sensor, almost twice the size of our previous front camera.</p>
+<div class="zh">这得益于我们最大的前置摄像头#传感器#，其尺寸近乎前代的两倍。</div>
+
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959477" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-43-000" data-start="00:08:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The center stage camera's unique shape and larger size allow for high resolution photos and videos in any orientation.</p>
+<div class="zh">居中舞台摄像头独特的形状与更大尺寸，支持任何#方向#的高分辨率照片和视频拍摄。</div>
+
+<p><button class="play-button sentence" id="s-00-08-52-000" data-start="00:08:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The extra pixels in the square sensor level up video too.</p>
+<div class="zh">方形#传感器#中的额外像素也提升了视频质量。</div>
+
+<p><button class="play-button sentence" id="s-00-08-55-000" data-start="00:08:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All you're on the move selfie videos will be ultra stabilized using some of the same technology that enables action mode on the rear cameras.</p>
+<div class="zh">你所有移动中的自拍视频都将通过与后置摄像头动作模式相同的技术实现超强防抖。</div>
+
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959456" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-04-000" data-start="00:09:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that completes the fantastic iPhone 17.</p>
+<div class="zh">这就是出色的 iPhone 17。</div>
+
+<p><button class="play-button sentence" id="s-00-09-08-000" data-start="00:09:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Introducing the newest member of the iPhone family.</p>
+<div class="zh">现在介绍 iPhone 家族的最新成员。</div>
+
+<p><button class="play-button sentence" id="s-00-09-11-000" data-start="00:09:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is iPhone N.</p>
+<div class="zh">这就是 iPhone N。</div>
+
+<p><button class="play-button sentence" id="s-00-09-15-000" data-start="00:09:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thrilled to introduce the impossibly thin iPhone Air.</p>
+<div class="zh">我们非常激动地介绍这款薄得不可思议的 iPhone Air。</div>
+
+<p><button class="play-button sentence" id="s-00-09-19-000" data-start="00:09:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At 5.6mm, it's the thinnest iPhone we've ever made.</p>
+<div class="zh">厚度仅 5.6 毫米，这是我们有史以来最薄的 iPhone。</div>
+
+<p><button class="play-button sentence" id="s-00-09-24-000" data-start="00:09:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The gorgeous 6.5 inch display is our best featuring pro motion up to 120 hertz, always on and 3,000 nits of peak brightness.</p>
+<div class="zh">这块#华丽#的 6.5 英寸显示屏是我们最好的屏幕，支持最高 120Hz ProMotion、自适应常亮和高达 3000 尼特的峰值#亮度#。</div>
+
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959426" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-34-000" data-start="00:09:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And is protected by the new ceramic shield too.</p>
+<div class="zh">并且由全新的#陶瓷# #盾#保护。</div>
+
+<p><button class="play-button sentence" id="s-00-09-37-000" data-start="00:09:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's four times more resistant to cracks than our previous back glass.</p>
+<div class="zh">它的抗裂性能比之前的背玻璃强#四倍#。</div>
+
+<p><button class="play-button sentence" id="s-00-09-42-000" data-start="00:09:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also protects the new plateau that now houses major internal components at the top of iPhone.</p>
+<div class="zh">它还保护着新的#平台#，那里安置了 iPhone 顶部的主要内部组件。</div>
+
+<p><button class="play-button sentence" id="s-00-09-48-000" data-start="00:09:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The frame of iPhone Air is made of titanium.</p>
+<div class="zh">iPhone Air 的边框由钛金属制成。</div>
+
+<p><button class="play-button sentence" id="s-00-09-51-000" data-start="00:09:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is an essential material choice for such a thin design and enables it to exceed our stringent Ben strength requirements.</p>
+<div class="zh">这是如此纤薄设计的重要材质选择，使它能够#超越#我们#严格#的弯折强度要求。</div>
+
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959401" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-59-000" data-start="00:09:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are four stunning colors to choose from.</p>
+<div class="zh">共有四种令人惊艳的颜色可供选择。</div>
+
+<p><button class="play-button sentence" id="s-00-10-02-000" data-start="00:10:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Space black, cloud white, light gold, and sky blue.</p>
+<div class="zh">分别是太空黑、云白、浅金和天空蓝。</div>
+
+<p><button class="play-button sentence" id="s-00-10-07-000" data-start="00:10:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone Air demands the most efficient high performance chip we've ever built for iPhone.</p>
+<div class="zh">iPhone Air 需要我们为 iPhone 打造过的最高效高性能芯片。</div>
+
+<p><button class="play-button sentence" id="s-00-10-12-000" data-start="00:10:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is A19 Pro.</p>
+<div class="zh">那就是 A19 Pro。</div>
+
+<p><button class="play-button sentence" id="s-00-10-15-000" data-start="00:10:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our performance cores gain improvements to front and bandwidth and branch prediction, making A19 Pro the fastest CPU in any smartphone.</p>
+<div class="zh">我们的性能核心在前端、带宽和分支#预测#方面都有提升，使 A19 Pro 成为智能手机中最快的 CPU。</div>
+
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959376" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-24-000" data-start="00:10:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are introducing the second generation of our dynamic caching architecture.</p>
+<div class="zh">我们推出了第二代#动态#缓存#架构#。</div>
+
+<p><button class="play-button sentence" id="s-00-10-28-000" data-start="00:10:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We doubled our 16-bit floating point math rates and we built a new unified image compression.</p>
+<div class="zh">我们将 16 位浮点运算速率翻倍，并构建了全新的#统一#图像#压缩#。</div>
+
+<p><button class="play-button sentence" id="s-00-10-34-000" data-start="00:10:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are now taking a big step forward, building neural accelerators into each GPU core, delivering up to three times the peak GPU compute of A18 Pro.</p>
+<div class="zh">我们迈出了重要一步，将神经加速器嵌入每个 GPU 核心，提供高达 A18 Pro 三倍的峰值 GPU 性能。</div>
+
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959354" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-46-000" data-start="00:10:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is MacBook Pro levels of compute in an iPhone.</p>
+<div class="zh">这相当于在 iPhone 上实现了 MacBook Pro 级别的#计算#能力。</div>
+
+<p><button class="play-button sentence" id="s-00-10-51-000" data-start="00:10:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What might appear to be a single camera is actually our new powerful 48 megapixel fusion camera system, which works like multiple advanced cameras in one.</p>
+<div class="zh">看似单摄，其实是全新的 4800 万像素融合相机系统，相当于多颗先进镜头的组合。</div>
+
+<p><button class="play-button sentence" id="s-00-11-01-000" data-start="00:11:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The large sensor enables a second optical quality lens, the integrated 2x telephoto, delivering stunning photos and 4K videos.</p>
+<div class="zh">大尺寸#传感器#支持第二颗#光学#级别的#镜头#——内置 2 倍长焦，拍出惊艳的照片和 4K 视频。</div>
+
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959330" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-10-000" data-start="00:11:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there is so much more to these camera systems, like action mode, audio mix, 4K Dolby Vision, and all the features of camera control.</p>
+<div class="zh">这套相机系统还有更多功能，比如动作模式、音频混合、4K 杜比视界，以及完整的相机控制特性。</div>
+
+<p><button class="play-button sentence" id="s-00-11-19-000" data-start="00:11:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So now, let's talk about battery life.</p>
+<div class="zh">现在，让我们谈谈电池续航。</div>
+
+<p><button class="play-button sentence" id="s-00-11-22-000" data-start="00:11:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The internal design has been completely rethought to maximize battery space.</p>
+<div class="zh">内部设计被彻底重新构思，以最大化电池空间。</div>
+
+<p><button class="play-button sentence" id="s-00-11-26-000" data-start="00:11:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now despite being much thinner and lighter, iPhone Air still gets amazing all day battery life.</p>
+<div class="zh">尽管更薄更#轻#，iPhone Air 依然拥有令人惊叹的全天续航。</div>
+
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959306" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-34-000" data-start="00:11:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is incredible all day battery life in our thinnest iPhone ever.</p>
+<div class="zh">这是我们史上最薄 iPhone，却仍能实现难以置信的全天续航。</div>
+
+<p><button class="play-button sentence" id="s-00-11-39-000" data-start="00:11:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were able to create a new low profile mag safe battery that when attached feels great in your hand and is slim enough to drop right into your pocket.</p>
+<div class="zh">我们打造了全新的低矮 MagSafe 电池，连接后手感出色，并且足够纤薄，能直接放进口袋。</div>
+
+<p><button class="play-button sentence" id="s-00-11-48-000" data-start="00:11:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When using them together, iPhone Air has up to 40 hours of video playback.</p>
+<div class="zh">配合使用时，iPhone Air 可实现长达 40 小时的视频播放。</div>
+
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959288" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-52-000" data-start="00:11:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's enough to binge on all 40 episodes of For All Man Kind, making it a great accessory for long trips.</p>
+<div class="zh">这足够让你一口气刷完《为全人类》全部40集#狂看#，是长途旅行的绝佳#伴侣#。</div>
+
+<p><button class="play-button sentence" id="s-00-11-59-000" data-start="00:11:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also designed two custom cases for iPhone Air.</p>
+<div class="zh">我们还为iPhone Air设计了两款定制保护壳。</div>
+
+<p><button class="play-button sentence" id="s-00-12-02-000" data-start="00:12:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first is a translucent case with a back panel that is less than 1mm thin.</p>
+<div class="zh">第一款是背板厚度不足1毫米的#半透明#保护壳。</div>
+
+<p><button class="play-button sentence" id="s-00-12-07-000" data-start="00:12:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The second is a lightweight bumper made from a reinforced polycarbonate.</p>
+<div class="zh">第二款是由强化聚碳酸酯制成的轻质#边框#保护壳。</div>
+
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-12-000" data-start="00:12:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It perfectly frames iPhone Air and is available in four matching colors.</p>
+<div class="zh">它能完美包裹iPhone Air，并提供四种配色选择。</div>
+
+<p><button class="play-button sentence" id="s-00-12-18-000" data-start="00:12:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both options can be paired with the new cross body strap.</p>
+<div class="zh">两款保护壳均可搭配新款斜挎#背带#使用。</div>
+
+<p><button class="play-button sentence" id="s-00-12-21-000" data-start="00:12:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's lined with thin flexible magnets designed to hold the straps together and allow you to easily adjust the length.</p>
+<div class="zh">背带内置轻薄#柔性#磁条，既能固定带扣又可轻松调节长度。</div>
+
+<p><button class="play-button sentence" id="s-00-12-28-000" data-start="00:12:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's the incredibly advanced iPhone Air.</p>
+<div class="zh">这就是突破性创新的iPhone Air。</div>
+
+<p><button class="play-button sentence" id="s-00-12-31-000" data-start="00:12:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our thinnest iPhone ever with pro performance inside.</p>
+<div class="zh">史上最薄的iPhone机身，蕴藏专业级性能。</div>
+
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959245" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-35-000" data-start="00:12:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Introducing iPhone 17 Pro.</p>
+<div class="zh">现在为您呈现iPhone 17 Pro。</div>
+
+<p><button class="play-button sentence" id="s-00-12-39-000" data-start="00:12:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The new definition of Pro.</p>
+<div class="zh">重新定义专业级标准。</div>
+
+<p><button class="play-button sentence" id="s-00-12-42-000" data-start="00:12:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone 17 Pro.</p>
+<div class="zh">iPhone 17 Pro。</div>
+
+<p><button class="play-button sentence" id="s-00-12-45-000" data-start="00:12:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The iPhone 17 Pro design is more than just a fresh, bold new look.</p>
+<div class="zh">iPhone 17 Pro的设计不仅是焕然一新的#大胆#外观。</div>
+
+<p><button class="play-button sentence" id="s-00-12-50-000" data-start="00:12:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also delivers a dramatic leap in performance that makes this the most powerful iPhone ever.</p>
+<div class="zh">更实现了性能上的重大#飞跃#，成为迄今最强大的iPhone。</div>
+
+<p><button class="play-button sentence" id="s-00-12-56-000" data-start="00:12:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it starts with an entirely new approach to thermal management, which is critical to system performance.</p>
+<div class="zh">这一切始于全新的#散热#管理方案——这对系统性能至关重要。</div>
+
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959217" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-03-000" data-start="00:13:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the heart of the new thermal management system is an Apple design paper chamber.</p>
+<div class="zh">新#散热#系统的核心是苹果设计的纸质腔体。</div>
+
+<p><button class="play-button sentence" id="s-00-13-07-000" data-start="00:13:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> D.I. and I's water is sealed inside the paper chamber, which is laser welded into the aluminum chassis.</p>
+<div class="zh">去离子水密封在纸质腔体内，通过#激光#焊接技术嵌入#铝金属#机身。</div>
+
+<p><button class="play-button sentence" id="s-00-13-14-000" data-start="00:13:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This efficiently moves heat away from the components.</p>
+<div class="zh">能高效将热量从元件传导散去。</div>
+
+<p><button class="play-button sentence" id="s-00-13-18-000" data-start="00:13:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We used an Apple designed aerospace grade aluminum alloy, where it's superior thermal conductivity, which is 20 times greater than the titanium we previously used.</p>
+<div class="zh">我们采用苹果设计的航空航天级铝合金，其导热性远超此前使用的钛金属，提升达20倍之多。</div>
+
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959192" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-28-000" data-start="00:13:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the aluminum is anodized in three stunning finishes, a refined silver, an elegant deep blue, and the bold and eye catching cosmic orange.</p>
+<div class="zh">#铝金属#外壳通过阳极氧化呈现三种惊艳质感：#雅致#银、深邃蓝，以及#大胆#夺目的#宇宙#橙。</div>
+
+<p><button class="play-button sentence" id="s-00-13-41-000" data-start="00:13:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A key element of the design is the forged plateau, which efficiently dissipates heat and creates extra space for components, making room for a larger battery.</p>
+<div class="zh">设计关键要素是锻造平台，既能高效散热又为元件腾出空间，从而容纳更大电池。</div>
+
+<p><button class="play-button sentence" id="s-00-13-52-000" data-start="00:13:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The glass in the back is even better protected by the aluminum unibody design.</p>
+<div class="zh">背板玻璃在#铝金属#一体化机身的保护下更加安全。</div>
+
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959164" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-56-000" data-start="00:13:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, it's no longer glass at all.</p>
+<div class="zh">事实上这已不再是普通玻璃。</div>
+
+<p><button class="play-button sentence" id="s-00-13-59-000" data-start="00:13:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like iPhone Air, we're now using ceramic shield for the back.</p>
+<div class="zh">与iPhone Air一样，我们采用#陶瓷##护盾#作为背板材料。</div>
+
+<p><button class="play-button sentence" id="s-00-14-03-000" data-start="00:14:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of these design decisions made it possible to grow the battery significantly, resulting in iPhone 17 Pro Max achieving the best battery life ever in an iPhone.</p>
+<div class="zh">这些设计使电池容量大幅提升，让iPhone 17 Pro Max成就iPhone有史以来最持久的续航。</div>
+
+<p><button class="play-button sentence" id="s-00-14-13-000" data-start="00:14:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Enabling up to an astonishing 39 hours of video playback.</p>
+<div class="zh">可实现惊人的39小时视频播放。</div>
+
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959142" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-18-000" data-start="00:14:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next, let's talk about the Pro Camera System, which combines incredible hardware, with advanced computational photography, to capture beautiful photos and videos.</p>
+<div class="zh">接下来介绍Pro摄像系统：它融合卓越的#硬件#与先进计算摄影技术，能拍摄惊艳的照片与视频。</div>
+
+<p><button class="play-button sentence" id="s-00-14-28-000" data-start="00:14:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the front, we have the 18 megapixels center stage camera, our innovative new front camera system.</p>
+<div class="zh">前置摄像头采用1800万像素居中镜头，这是我们#创新#的全新前置摄像系统。</div>
+
+<p><button class="play-button sentence" id="s-00-14-35-000" data-start="00:14:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the rear, all three cameras are 48 megapixels for the very first time.</p>
+<div class="zh">后置三摄首次全部升级至4800万像素。</div>
+
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959120" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-40-000" data-start="00:14:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And not only are the sensors 48 megapixels, but all three are fusion cameras.</p>
+<div class="zh">不仅传感器达到4800万像素，三颗摄像头更全部支持#融合#成像技术。</div>
+
+<p><button class="play-button sentence" id="s-00-14-46-000" data-start="00:14:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone 17 Pro has our next generation, Tetra Prison Telephoto, with an improved 3D sensor shift image stabilization system.</p>
+<div class="zh">iPhone 17 Pro搭载了新一代Tetra Prison长焦镜头，配备升级的3D#传感器#位移式光学防抖系统。</div>
+
+<p><button class="play-button sentence" id="s-00-14-56-000" data-start="00:14:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're adding support for ProRes RAW Capture, which is the industry leading Apple Develop Video Codec that records all of the information captured by the camera sensor, provide unparalleled flexibility in post-production.</p>
+<div class="zh">我们新增支持ProRes RAW拍摄格式——这是行业领先的Apple研发视频编解码技术，能完整记录相机传感器捕捉的所有信息，为后期制作提供无与伦比的灵活性。</div>
+
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959090" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-10-000" data-start="00:15:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're also adding support for GenLoc, which enables super precise video synchronization.</p>
+<div class="zh">同时新增支持GenLoc功能，可实现超精准的视频同步。</div>
+
+<p><button class="play-button sentence" id="s-00-15-15-000" data-start="00:15:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's particularly useful for content creators and streamers.</p>
+<div class="zh">这对内容创作者和直播主尤为实用。</div>
+
+<p><button class="play-button sentence" id="s-00-15-18-655" data-start="00:15:18,655" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're introducing our tech woven case, with the new innovative materials.</p>
+<div class="zh">我们推出全新科技编织保护壳，采用#创新#材料打造。</div>
+
+<p><button class="play-button sentence" id="s-00-15-23-000" data-start="00:15:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also have clear cases, as well as a great selection of colors and silicone.</p>
+<div class="zh">另有透明保护壳，以及丰富多样的配色与硅胶材质可选。</div>
+
+<p><button class="play-button sentence" id="s-00-15-27-000" data-start="00:15:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a huge upgrade, featuring a stunning design, and powered by A19 Pro for our best performance ever.</p>
+<div class="zh">这是次重大#升级#，拥有惊艳的设计，并搭载A19 Pro芯片实现前所未有的巅峰性能。</div>
+
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959065" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-35-000" data-start="00:15:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is, without question, our best iPhone lineup ever.</p>
+<div class="zh">这无疑是我们迄今最出色的iPhone系列。</div>
+
+<p><button class="play-button sentence" id="s-00-15-39-000" data-start="00:15:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All the new models will start with 256GB of storage.</p>
+<div class="zh">所有新款机型均以256GB存储容量起步。</div>
+
+<p><button class="play-button sentence" id="s-00-15-43-397" data-start="00:15:43,397" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone 17 starts at 799, keeping the same great price.</p>
+<div class="zh">iPhone 17起售价799美元，保持一贯的优异定价。</div>
+
+<p><button class="play-button sentence" id="s-00-15-48-000" data-start="00:15:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> iPhone Air starts at 999.</p>
+<div class="zh">iPhone Air起售价999美元。</div>
+
+<p><button class="play-button sentence" id="s-00-15-50-000" data-start="00:15:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An iPhone 17 Pro starts at 1099.</p>
+<div class="zh">iPhone 17 Pro起售价1099美元。</div>
+
+<p><button class="play-button sentence" id="s-00-15-54-000" data-start="00:15:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The same great price is last year 256GB iPhone 16 Pro.</p>
+<div class="zh">与去年256GB版iPhone 16 Pro的卓越定价保持一致。</div>
+
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV18mH2zpEjD/?t=-2208959041" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-59-000" data-start="00:15:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And for the first time, a two terabyte configuration is available on iPhone 17 Pro Max.</p>
+<div class="zh">iPhone 17 Pro Max首次提供两 terabytes #配置#选项。</div>
+
+<p><button class="play-button sentence" id="s-00-16-05-000" data-start="00:16:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the iPhone lineup starts at just 599 with iPhone 16e.</p>
+<div class="zh">iPhone系列现以iPhone 16e的599美元超值起售价为开端。</div>
+
+<p><button class="play-button sentence" id="s-00-16-10-000" data-start="00:16:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Pre-orders for all new models start this Friday, and they will be available starting September 19th.</p>
+<div class="zh">所有新款机型将于本周五开始预购，并于9月19日起正式发售。</div>
+
+<p><button class="play-button sentence" id="s-00-16-15-000" data-start="00:16:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a great day!</p>
+<div class="zh">祝您有美好的一天！</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
