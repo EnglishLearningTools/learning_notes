@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Five surprisingly simple ways to optimise your diet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="When it comes to dietary advice, confusion is common due to overwhelming information. This video offers five evidence-based tips: controlling glucose spikes through food sequencing, understanding why calorie counting is misleading, nurturing gut microbiome diversity, limiting ultra-processed foods, and exploring personalized nutrition. The core message emphasizes choosing natural foods and meal timing over restrictive diets.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Five surprisingly simple ways to optimise your diet</h1>
+<p>【BBC科普精选：五种出乎意料却非常简单的饮食好习惯】</p>
+<p>Summary:
+When it comes to dietary advice, confusion is common due to overwhelming information. This video offers five evidence-based tips: controlling glucose spikes through food sequencing, understanding why calorie counting is misleading, nurturing gut microbiome diversity, limiting ultra-processed foods, and exploring personalized nutrition. The core message emphasizes choosing natural foods and meal timing over restrictive diets.</p>
+<p>摘要：
+面对海量饮食建议，人们常感到困惑。本视频提出五个科学验证的实用技巧：通过调整进食顺序控制血糖波动，揭示卡路里计算的局限性，培育多样化肠道菌群，减少超加工食品摄入，并展望个性化营养趋势。核心在于选择天然食材并重视进食时机，而非盲目节食。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-000" data-start="00:00:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When it comes to what you eat, there's no shortage of advice.</p>
+<div class="zh">关于该吃什么，建议从来不#缺#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-07-000" data-start="00:00:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tiktok is overflowing with it.</p>
+<div class="zh">Tiktok上更是充斥着各种饮食建议。</div>
+
+<p><button class="play-button sentence" id="s-00-00-09-946" data-start="00:00:09,946" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A low carb diet, raw food, cabbage soup, cucumber bagel diet and on and on.</p>
+<div class="zh">低碳水饮食、生食、#卷心菜#汤、#黄瓜#贝果饮食等等层出不穷。</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-577" data-start="00:00:16,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you confuse, it's no wonder.</p>
+<div class="zh">如果你感到困惑，那一点也不奇怪。</div>
+
+<p><button class="play-button sentence" id="s-00-00-19-033" data-start="00:00:19,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So here's five simple tips you can trust for healthy eating.</p>
+<div class="zh">以下是五个值得信赖的健康饮食简单建议。</div>
+
+<p><button class="play-button sentence" id="s-00-00-25-320" data-start="00:00:25,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> OK, this one's a bit of a game changer.</p>
+<div class="zh">好了，第一条可能颠覆你的认知。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-28-280" data-start="00:00:28,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not just what you eat, but when?</p>
+<div class="zh">不仅要关注吃什么，还要关注进食时间？</div>
+
+<p><button class="play-button sentence" id="s-00-00-31-678" data-start="00:00:31,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you eat a treat, say a slice of chocolate cake, it's much better to eat it after a meal than on its own.</p>
+<div class="zh">如果要吃零食（比如一块巧克力蛋糕），餐后食用远比空腹食用更好。</div>
+
+<p><button class="play-button sentence" id="s-00-00-39-280" data-start="00:00:39,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why?</p>
+<div class="zh">为什么？</div>
+
+<p><button class="play-button sentence" id="s-00-00-40-600" data-start="00:00:40,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's all about keeping glucose spikes under control.</p>
+<div class="zh">关键在于控制血糖峰值。</div>
+
+<p><button class="play-button sentence" id="s-00-00-44-238" data-start="00:00:44,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whenever you eat carbs or sweet things, the level of glucose in your blood rises.</p>
+<div class="zh">摄入碳水化合物或甜食时，血糖水平就会升高。</div>
+
+<p><button class="play-button sentence" id="s-00-00-49-200" data-start="00:00:49,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If it rises very quickly and sharply, it will be followed by a crash.</p>
+<div class="zh">若血糖急剧飙升，随后就会骤降。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959946" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-53-719" data-start="00:00:53,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that crash makes you feel tired, irritable and hungry again.</p>
+<div class="zh">这种骤降会让你感到疲倦、#易怒#并再次饥饿。</div>
+
+<p><button class="play-button sentence" id="s-00-00-58-359" data-start="00:00:58,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there are ways to keep these spikes under control.</p>
+<div class="zh">但确有方法能控制这些血糖峰值。</div>
+
+<p><button class="play-button sentence" id="s-00-01-01-960" data-start="00:01:01,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Exercising after you eat is one.</p>
+<div class="zh">餐后运动是其一。</div>
+
+<p><button class="play-button sentence" id="s-00-01-03-975" data-start="00:01:03,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Eating food higher in fibre, like vegetables or porridge oats is another.</p>
+<div class="zh">食用高#纤维#食物（如蔬菜或燕麦粥）是其二。</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-724" data-start="00:01:08,724" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the order you eat your food matters too.</p>
+<div class="zh">进食顺序也很重要。</div>
+
+<p><button class="play-button sentence" id="s-00-01-11-718" data-start="00:01:11,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're having some in carb heavy, like white rice or pasta, eating fat protein or vegetables before, flatensite glucose curve.</p>
+<div class="zh">若食用白米饭或#意大利面#等高碳水食物，先摄入脂肪蛋白或蔬菜能平缓血糖曲线。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959920" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-19-438" data-start="00:01:19,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A little bit of fish meat, broccoli and egg, anything like that would do.</p>
+<div class="zh">少量鱼肉、#西兰花#和鸡蛋等食物均可生效。</div>
+
+<p><button class="play-button sentence" id="s-00-01-23-760" data-start="00:01:23,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's because having something in a stomach first slows down how quickly the carbohydrates reach the small intestine for digestion.</p>
+<div class="zh">因为胃中先有食物会延缓碳水化合物进入小肠消化的速度。</div>
+
+<p><button class="play-button sentence" id="s-00-01-31-200" data-start="00:01:31,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's the same for that slice of chocolate cake.</p>
+<div class="zh">这个原则同样适用于那块巧克力蛋糕。</div>
+
+<p><button class="play-button sentence" id="s-00-01-35-040" data-start="00:01:35,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Calorie counting is not very useful.</p>
+<div class="zh">计算#卡路里#并不太实用。</div>
+
+<p><button class="play-button sentence" id="s-00-01-38-840" data-start="00:01:38,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why?</p>
+<div class="zh">为何？</div>
+
+<p><button class="play-button sentence" id="s-00-01-40-280" data-start="00:01:40,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, for a start, it's notoriously hard to do.</p>
+<div class="zh">首先，这种方法#众所周知#难以精确执行。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-43-358" data-start="00:01:43,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most people underestimate their calorie intake by about 25%.</p>
+<div class="zh">大多数人会#低估#约25%的#卡路里##摄入量#。</div>
+
+<p><button class="play-button sentence" id="s-00-01-48-319" data-start="00:01:48,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also because not all calories behave in the same way once inside your body.</p>
+<div class="zh">更因为不同卡路里在人体内的代谢方式并不相同。</div>
+
+<p><button class="play-button sentence" id="s-00-01-53-640" data-start="00:01:53,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Food in the natural state, like nuts, fruit, vegetables and fish, or anything that's not being processed, require more energy from the body to digest them.</p>
+<div class="zh">天然状态的食物（如坚果、水果、蔬菜和鱼类）或未经加工的食品，需要身体消耗更多能量进行消化。</div>
+
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is called the thermic effect of food.</p>
+<div class="zh">这被称为食物热效应。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-05-799" data-start="00:02:05,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it means that things like nuts which are high in calories can still be a healthy option, as the body uses so much energy digest in them.</p>
+<div class="zh">意味着像坚果这类高热量食物仍是健康选择，因为身体会消耗大量能量消化它们。</div>
+
+<p><button class="play-button sentence" id="s-00-02-14-598" data-start="00:02:14,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Give me a gut microbiome some love.</p>
+<div class="zh">关爱好你的#肠道#微生物组。</div>
+
+<p><button class="play-button sentence" id="s-00-02-19-479" data-start="00:02:19,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In recent years, scientists have begun to understand the importance of what's known as the gut microbiome.</p>
+<div class="zh">近年来，科学家逐渐认识到所谓#肠道#微生物组的重要性。</div>
+
+<p><button class="play-button sentence" id="s-00-02-25-598" data-start="00:02:25,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The gut microbiome is everything in the digestive tract.</p>
+<div class="zh">#肠道#微生物组是#消化##道#中的所有微生物集合。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959850" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-29-120" data-start="00:02:29,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a huge ecosystem that contains trillions of bacteria, fungi, viruses and cells, and it can weigh as much as two kilos.</p>
+<div class="zh">这是一个巨大的#生态系统#，包含数万亿细菌、真菌、病毒和细胞，总重量可达两公斤。</div>
+
+<p><button class="play-button sentence" id="s-00-02-38-598" data-start="00:02:38,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Research suggests the makeup of your gut microbiome could have really profound effects on your physical health and potentially on your mental health too.</p>
+<div class="zh">研究表明，肠道微生物组的#构成#可能对身体健康产生#深远#影响，甚至可能影响心理健康。</div>
+
+<p><button class="play-button sentence" id="s-00-02-46-199" data-start="00:02:46,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For a healthy microbiome and a healthy you, you should aim to eat a wide range of different foods, seeds, fruit, vegetables, the yogurt drink, kefir and other fermented foods are particularly gut friendly.</p>
+<div class="zh">为保持微生物组健康与自身健康，应广泛摄入不同食物：种子、水果、蔬菜、酸奶饮品、开菲尔等发酵食品尤其有益肠道。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-02-240" data-start="00:03:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Limit ultra-process foods.</p>
+<div class="zh">限制超加工食品摄入。</div>
+
+<p><button class="play-button sentence" id="s-00-03-04-718" data-start="00:03:04,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the UK, 57% of calories we eat come from ultra-process foods and this figure is even higher for children.</p>
+<div class="zh">在英国，我们摄入的57%卡路里来自超加工食品，儿童的这个比例更高。</div>
+
+<p><button class="play-button sentence" id="s-00-03-13-520" data-start="00:03:13,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultra-process foods include, as you might expect, things like pizza, red e-meals, biscuits, but also some quite surprising things which tend to be thought of as healthy, like most supermarket breads, many breakfast cereals, and many milk and meat substitutes.</p>
+<div class="zh">超加工食品不仅包含披萨、速食餐、饼干等预期中的食物，还包含多数超市面包、许多早餐麦片及奶肉替代品等常被认为健康却令人意外的食品。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959790" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-29-800" data-start="00:03:29,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> UPF are not labelled, but a good rule of thumb is to look for ingredients you don't recognise.</p>
+<div class="zh">超加工食品虽无明确标识，但可遵循简易原则：警惕配料表中无法#识别#的成分。</div>
+
+<p><button class="play-button sentence" id="s-00-03-36-919" data-start="00:03:36,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Things you'd never have in your own kitchen.</p>
+<div class="zh">那些绝不会出现在自家厨房的成分。</div>
+
+<p><button class="play-button sentence" id="s-00-03-39-800" data-start="00:03:39,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like a mulls of fires, sweeteners, colourings and preservatives.</p>
+<div class="zh">例如复合添加剂、甜味剂、色素和防腐剂。</div>
+
+<p><button class="play-button sentence" id="s-00-03-46-080" data-start="00:03:46,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Personalised nutrition could be the future.</p>
+<div class="zh">个性化#营养#可能是未来趋势。</div>
+
+<p><button class="play-button sentence" id="s-00-03-50-560" data-start="00:03:50,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another approach that's on the rise at the moment is that of personalised nutrition.</p>
+<div class="zh">当前另一种兴起的方法是个性化#营养#。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959765" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-54-120" data-start="00:03:54,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in 2014, two scientists, Erin Segal and Erin Elinath, found some really surprising results from an experiment.</p>
+<div class="zh">2014年，科学家埃兰·西格尔和埃兰·埃利纳特通过实验发现了惊人现象。</div>
+
+<p><button class="play-button sentence" id="s-00-04-03-360" data-start="00:04:03,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The blood glucose levels in their sample group varied widely after people ate the same food.</p>
+<div class="zh">摄入相同食物后，样本组的血糖水平存在显著差异。</div>
+
+<p><button class="play-button sentence" id="s-00-04-09-240" data-start="00:04:09,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The explanation?</p>
+<div class="zh">如何解释？</div>
+
+<p><button class="play-button sentence" id="s-00-04-10-240" data-start="00:04:10,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it could be back to the makeup of our unique gut microbiomes.</p>
+<div class="zh">这可能归结于每个人独特肠道微生物组的#构成#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-17-120" data-start="00:04:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dream of personalised nutrition is that people would be able to tailor their food choices to the specific needs of their bodies.</p>
+<div class="zh">个性化#营养#的愿景是让人们能根据身体特定需求#量身定制#饮食选择。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959735" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-24-639" data-start="00:04:24,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But nutritionists are keen to point out that some key messages still apply across the board.</p>
+<div class="zh">但营养学家强调，某些核心建议仍具有普适性。</div>
+
+<p><button class="play-button sentence" id="s-00-04-30-279" data-start="00:04:30,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for a healthy diet, aim for foods which are close to their natural state.</p>
+<div class="zh">因此健康饮食应选择接近天然状态的食物：</div>
+
+<p><button class="play-button sentence" id="s-00-04-34-519" data-start="00:04:34,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And orange instead of orange juice, brown rice instead of white rice, dark chocolate instead of milk chocolate.</p>
+<div class="zh">用完整橙子替代橙汁，用糙米替代白米，用黑巧克力替代牛奶巧克力。</div>
+
+<p><button class="play-button sentence" id="s-00-04-42-598" data-start="00:04:42,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aim for a wide variety of foods.</p>
+<div class="zh">追求饮食多样性。</div>
+
+<p><button class="play-button sentence" id="s-00-04-45-838" data-start="00:04:45,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Try not to eat too many ingredients who don't recognise.</p>
+<div class="zh">尽量少食用含不可识别成分的食品。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1gGHzzPEwi/?t=-2208959710" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-49-278" data-start="00:04:49,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And remember, you are what you eat, but when you eat matters too.</p>
+<div class="zh">请记住：人如其食，而进食时间同样重要。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
