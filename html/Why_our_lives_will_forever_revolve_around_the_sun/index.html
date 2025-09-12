@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Sun: Our Extraordinary Ordinary Star</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Sun, while an ordinary star in the vast galaxy, holds unparalleled significance for life on Earth. It not only enables life but deeply influences human biology, behavior, and modern technology. Our internal body clocks are synchronized by sunlight, and disruption to this rhythm can lead to serious health issues. The Sun also affects social behaviors like generosity and crime rates. Despite being a constant nuclear reactor, solar activities like storms pose potential risks to our technology-dependent civilization. Harnessing solar energy remains key to a sustainable future.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Sun: Our Extraordinary Ordinary Star</h1>
+<p>【【生词双高亮】BBC科普精选：太阳如何主宰地球命运】</p>
+<p>Summary:
+The Sun, while an ordinary star in the vast galaxy, holds unparalleled significance for life on Earth. It not only enables life but deeply influences human biology, behavior, and modern technology. Our internal body clocks are synchronized by sunlight, and disruption to this rhythm can lead to serious health issues. The Sun also affects social behaviors like generosity and crime rates. Despite being a constant nuclear reactor, solar activities like storms pose potential risks to our technology-dependent civilization. Harnessing solar energy remains key to a sustainable future.</p>
+<p>摘要：
+太阳虽是银河系中一颗普通恒星，却是地球生命存在的基石。它不仅赋予生命能量，更深刻影响着人类生理节律、行为模式乃至社会活动。阳光调控着人体生物钟，一旦失调可能引发肥胖、心脏病等健康危机。研究显示日照程度会影响消费意愿与犯罪率。这颗持续核聚变的恒星既蕴藏着满足全球能源需求的潜力，其爆发的太阳风暴也可能对现代科技文明造成毁灭性打击。开发利用太阳能已成为可持续发展的重要方向。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959992" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-08-000" data-start="00:00:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun is just one of hundreds of billions of stars in our galaxy.</p>
+<div class="zh">太阳只是我们#星系#中数千亿颗恒星之一。</div>
+
+<p><button class="play-button sentence" id="s-00-00-13-439" data-start="00:00:13,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a way, there's nothing very special about it.</p>
+<div class="zh">从某种角度来说，它并没有什么特别之处。</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-800" data-start="00:00:16,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a fairly ordinary star, not particularly large or bright by stellar standards, but it's very special to us.</p>
+<div class="zh">按#恒星#标准来看，它只是一颗相当普通的恒星，体积和亮度都不突出，但对我们却意义非凡。</div>
+
+<p><button class="play-button sentence" id="s-00-00-25-440" data-start="00:00:25,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun makes life on Earth possible.</p>
+<div class="zh">太阳让地球上的生命成为可能。</div>
+
+<p><button class="play-button sentence" id="s-00-00-28-559" data-start="00:00:28,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cultures across the world and throughout the ages worship the Sun.</p>
+<div class="zh">古今中外各种文化都崇拜太阳。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959967" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-32-280" data-start="00:00:32,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In some ways, modern life has cut us off from the Sun.</p>
+<div class="zh">现代生活在某些方面让我们与太阳隔绝。</div>
+
+<p><button class="play-button sentence" id="s-00-00-35-479" data-start="00:00:35,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the developed world, we spend 90% of our time indoors.</p>
+<div class="zh">在发达世界，我们90%的时间都在室内度过。</div>
+
+<p><button class="play-button sentence" id="s-00-00-39-560" data-start="00:00:39,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet, the Sun is still a powerful force underpinning our lives.</p>
+<div class="zh">然而太阳仍然是支撑我们生活的强大力量。</div>
+
+<p><button class="play-button sentence" id="s-00-00-44-759" data-start="00:00:44,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun affects our perception of beauty.</p>
+<div class="zh">太阳影响着我们对美的#感知#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-47-840" data-start="00:00:47,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When people talk of the golden hour, that time just before the Sun sets, it's a real thing.</p>
+<div class="zh">当人们谈论黄金时刻——即日落前的那一刻——这确实存在科学依据。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959945" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-54-359" data-start="00:00:54,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun isn't actually yellow or orange or even red.</p>
+<div class="zh">太阳实际上并非黄色、橙色甚至红色。</div>
+
+<p><button class="play-button sentence" id="s-00-00-58-518" data-start="00:00:58,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's all the colours mixed together.</p>
+<div class="zh">它是所有颜色的混合体。</div>
+
+<p><button class="play-button sentence" id="s-00-01-01-280" data-start="00:01:01,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When the Sun rises or sets in the sky, the shortwave colours, green, blue and violet, are scattered, leaving only the yellow and the red part of the spectrum, giving that amazing glow.</p>
+<div class="zh">当太阳升起或落下时，绿色、蓝色和紫色等短波色彩被散射，只留下光谱中的黄色和红色部分，形成那种绚丽的霞光。</div>
+
+<p><button class="play-button sentence" id="s-00-01-12-599" data-start="00:01:12,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When the Sun is high in the sky, its blue waves bounce around, which is why the sky looks blue.</p>
+<div class="zh">当太阳高悬时，其蓝色光波四处#弹射#，这就是天空呈现蓝色的原因。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959920" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-19-239" data-start="00:01:19,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when you see a rainbow, that's the light from the Sun separated into all its magnificent colours.</p>
+<div class="zh">当你看到#彩虹#时，那是太阳光分离成所有#绚烂#色彩的现象。</div>
+
+<p><button class="play-button sentence" id="s-00-01-26-400" data-start="00:01:26,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although we talk of the Sun rising in the East and setting in the West, that's not quite true.</p>
+<div class="zh">虽然我们常说太阳东升西落，但这并不完全准确。</div>
+
+<p><button class="play-button sentence" id="s-00-01-31-840" data-start="00:01:31,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It just seems that way to us.</p>
+<div class="zh">这只是我们视角中的表象。</div>
+
+<p><button class="play-button sentence" id="s-00-01-34-239" data-start="00:01:34,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun stays in the same place.</p>
+<div class="zh">太阳始终处于原位。</div>
+
+<p><button class="play-button sentence" id="s-00-01-36-280" data-start="00:01:36,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the Earth that rotates on its axis.</p>
+<div class="zh">是地球在绕着它的#轴#自转。</div>
+
+<p><button class="play-button sentence" id="s-00-01-39-640" data-start="00:01:39,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This movement of the Sun is deeply embedded in our biology.</p>
+<div class="zh">这种太阳运动规律深深烙印在我们的生物机制中。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-44-000" data-start="00:01:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When sunlight enters the eye, it sends signals to a master clock in our brain called the Supra-Ciasmatic Nucleus.</p>
+<div class="zh">当#太阳光#进入眼睛时，会向大脑中的主生物钟——视交叉上#核#发送信号。</div>
+
+<p><button class="play-button sentence" id="s-00-01-51-200" data-start="00:01:51,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This internal clock regulates everything, from when we sleep to how we digest a meal.</p>
+<div class="zh">这个内在时钟调节着从睡眠时间到食物#消化#方式的一切生理活动。</div>
+
+<p><button class="play-button sentence" id="s-00-01-57-200" data-start="00:01:57,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Messing with this finely tuned machine, when we work night shifts or fly across the world, can make us feel pretty rough.</p>
+<div class="zh">当我们上夜班或环球飞行时，打乱这个精密机制会让人倍感不适。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959875" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-04-519" data-start="00:02:04,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even the blueish light from a mobile phone late at night is enough to disrupt and confuse our internal body clock.</p>
+<div class="zh">深夜手机发出的蓝光也足以#扰乱#我们的内在生物钟。</div>
+
+<p><button class="play-button sentence" id="s-00-02-11-759" data-start="00:02:11,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Being out of step with the Sun affects our mood and our ability to think clearly, and there's evidence that this kind of disruption can lead to higher rates of obesity, heart disease, diabetes and even cancer.</p>
+<div class="zh">与太阳不同步会影响情绪和思维清晰度，有证据表明这种紊乱可能导致肥胖症、心脏病、糖尿病甚至癌症的发病率升高。</div>
+
+<p><button class="play-button sentence" id="s-00-02-25-878" data-start="00:02:25,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're living out of step with the Sun, and some scientists say this could be causing a public health crisis.</p>
+<div class="zh">我们正过着与太阳节律脱节的生活，有科学家称这可能引发公共健康危机。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959847" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-32-520" data-start="00:02:32,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When the Sun's shining, studies have shown that we tip more generously and are more likely to splash out on luxury goods.</p>
+<div class="zh">研究表明，阳光明媚时人们给小费更慷慨，更愿意#挥霍#购买#奢侈品#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-39-718" data-start="00:02:39,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And crime may go down too.</p>
+<div class="zh">犯罪率也可能下降。</div>
+
+<p><button class="play-button sentence" id="s-00-02-42-039" data-start="00:02:42,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One study in the US found that when the clocks go forward for daylight savings time, the number of robberies, rapes and murders went down around 50%.</p>
+<div class="zh">美国一项研究发现，夏令时时钟拨快后，抢劫、强奸和谋杀案发率下降约50%。</div>
+
+<p><button class="play-button sentence" id="s-00-02-52-280" data-start="00:02:52,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun is a hell of a force to be reckoned with.</p>
+<div class="zh">太阳确实是一股不容小觑的强大力量。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-55-438" data-start="00:02:55,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every hour, enough sunlight falls on the earth to power the world for a year.</p>
+<div class="zh">每小时照射到地球的#阳光#足以满足全球一整年的能源需求。</div>
+
+<p><button class="play-button sentence" id="s-00-03-00-199" data-start="00:03:00,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A year.</p>
+<div class="zh">整整一年。</div>
+
+<p><button class="play-button sentence" id="s-00-03-02-360" data-start="00:03:02,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Deep in its core, at around 15 million degrees Celsius, the Sun is constantly fusing hydrogen together to make helium.</p>
+<div class="zh">在1500万摄氏度的核心深处，太阳持续将#氢#聚变成#氦#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-10-599" data-start="00:03:10,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These nuclear reactions release vast amounts of energy in the form of sunlight.</p>
+<div class="zh">这些核反应以#太阳光#的形式释放巨大能量。</div>
+
+<p><button class="play-button sentence" id="s-00-03-15-520" data-start="00:03:15,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If only we could work out how to harness this.</p>
+<div class="zh">若能掌握#利用#这种能量的方法该多好。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959801" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-18-919" data-start="00:03:18,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we are getting there.</p>
+<div class="zh">但我们正在取得进展。</div>
+
+<p><button class="play-button sentence" id="s-00-03-20-800" data-start="00:03:20,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's estimated that by 2022, 30% of our energy could come from renewables, with solar growing faster than anything else.</p>
+<div class="zh">预计到2022年，30%的能源将来自可再生能源，其中太阳能增速最快。</div>
+
+<p><button class="play-button sentence" id="s-00-03-30-878" data-start="00:03:30,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun is vast, dynamic and sometimes violent.</p>
+<div class="zh">太阳浩瀚无边、#充满活力#，有时甚至很狂暴。</div>
+
+<p><button class="play-button sentence" id="s-00-03-35-400" data-start="00:03:35,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Viewed up close, the Sun's surface looks like a raging sea of fire, with huge eruptions rising hundreds of thousands of kilometers into space.</p>
+<div class="zh">近距离观察，太阳表面如同翻腾的火海，巨大的日珥喷发高达数十万公里。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959775" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-44-038" data-start="00:03:44,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are even earthquakes on the Sun, called Sunquakes.</p>
+<div class="zh">太阳上甚至还有被称为"日震"的地震现象。</div>
+
+<p><button class="play-button sentence" id="s-00-03-48-639" data-start="00:03:48,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what happens on the Sun can impact us.</p>
+<div class="zh">太阳的活动会影响我们。</div>
+
+<p><button class="play-button sentence" id="s-00-03-51-199" data-start="00:03:51,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Sun sporadically blasts huge clouds of charged particles towards the Earth, potentially wreaking havoc on the technology that we all rely on.</p>
+<div class="zh">太阳会间歇性向地球喷射大量带电粒子云，可能对我们依赖的技术造成#严重破坏#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-00-438" data-start="00:04:00,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But 97% of people have never heard of solar storms.</p>
+<div class="zh">但97%的人从未听说过太阳风暴。</div>
+
+<p><button class="play-button sentence" id="s-00-04-04-799" data-start="00:04:04,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 1859, a gigantic solar storm hit the Earth, creating auroras that covered the entire planet, knocking out the telegraph network and sending sparks flying from electrical equipment.</p>
+<div class="zh">1859年，一场巨型太阳风暴袭击地球，产生的极光笼罩全球，导致电报网络瘫痪，电气设备火花四溅。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1nZp5zJEF6/?t=-2208959742" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-17-439" data-start="00:04:17,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The solar storm of 1859 is still the largest on record.</p>
+<div class="zh">1859年太阳风暴仍是有记录以来最强烈的一次。</div>
+
+<p><button class="play-button sentence" id="s-00-04-21-800" data-start="00:04:21,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But if a similar storm were to hit the Earth today, the consequences for our way of life could be devastating.</p>
+<div class="zh">若类似风暴今日来袭，对我们生活方式的冲击将是毁灭性的。</div>
+
+<p><button class="play-button sentence" id="s-00-04-28-560" data-start="00:04:28,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Knocking out electricity grids, satellite navigation and communications, for days, weeks or even months.</p>
+<div class="zh">可能导致电网、#卫星##导航#和通信系统瘫痪数日、数周甚至数月。</div>
+
+<p><button class="play-button sentence" id="s-00-04-35-519" data-start="00:04:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No wonder people used to worship the Sun.</p>
+<div class="zh">难怪古人曾崇拜太阳。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
