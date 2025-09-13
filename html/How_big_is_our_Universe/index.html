@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Universe by Powers of Ten: From a Picnic to the Edge of Everything</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Powers of Ten: A Journey Through Scale and Time. This video pays homage to the iconic 1977 film by Charles and Ray Eames, taking viewers on an exponential voyage from a picnic in Sicily to the edge of the observable universe. It illustrates the scale of the cosmos, from human dimensions to interstellar space, highlighting key astronomical milestones. The journey showcases advancements in space exploration, such as the Voyager missions and the Hubble Telescope, and concludes with the cosmic microwave background radiation—the oldest light in the universe. The film invites reflection on how our understanding of the universe may evolve by 2077.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Universe by Powers of Ten: From a Picnic to the Edge of Everything</h1>
+<p>【【生词双高亮】BBC科普精选：宇宙到底有多大？｜从野餐毯到宇宙边缘】</p>
+<p>Summary:
+Powers of Ten: A Journey Through Scale and Time. This video pays homage to the iconic 1977 film by Charles and Ray Eames, taking viewers on an exponential voyage from a picnic in Sicily to the edge of the observable universe. It illustrates the scale of the cosmos, from human dimensions to interstellar space, highlighting key astronomical milestones. The journey showcases advancements in space exploration, such as the Voyager missions and the Hubble Telescope, and concludes with the cosmic microwave background radiation—the oldest light in the universe. The film invites reflection on how our understanding of the universe may evolve by 2077.</p>
+<p>摘要：
+《十的次方：穿越尺度和时间的旅程》。本视频致敬了1977年查尔斯和雷·伊姆斯的经典电影，带领观众从西西里岛的野餐地指数级飞跃到可观测宇宙的边缘。它展示了从人类尺度到星际空间的宇宙规模，并突出了关键的天文学里程碑。这段旅程呈现了太空探索的进展，如旅行者号任务和哈勃望远镜，并以宇宙微波背景辐射——宇宙中最古老的光——作为结尾。影片引发人们思考：到2077年，我们对宇宙的认知将如何演变。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 10 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trying to comprehend how big the universe is is one of those questions that astrophysicists grapple with all the time</p>
+<div class="zh">试图#理解#宇宙的浩瀚是天体物理学家们一直在#努力应对#的问题之一</div>
+
+<p><button class="play-button sentence" id="s-00-00-08-000" data-start="00:00:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trying to explain it in a way that's easy to understand</p>
+<div class="zh">尝试用通俗易懂的方式解释它</div>
+
+<p><button class="play-button sentence" id="s-00-00-11-880" data-start="00:00:11,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that's a whole other challenge</p>
+<div class="zh">这则完全是另一个挑战</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-079" data-start="00:00:16,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 1977, Charles and Ray Eames, hugely influential American designers, released one of the most elegant and creative pieces of science communication of modern times</p>
+<div class="zh">1977年，极具影响力的美国设计师查尔斯和雷·伊姆斯发布了当代最优雅且富有创意的科学传播作品之一</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959973" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-27-000" data-start="00:00:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Powers of ten.</p>
+<div class="zh">《十的次方》</div>
+
+<p><button class="play-button sentence" id="s-00-00-27-972" data-start="00:00:27,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It took the viewers on a journey from a picnic blanket near Lake Michigan to the edge of the known universe and back again</p>
+<div class="zh">它带领观众从密歇根湖边的#野餐#毯出发，直达已知宇宙的边缘再返回</div>
+
+<p><button class="play-button sentence" id="s-00-00-36-000" data-start="00:00:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over 40 years later as a humble homage to this groundbreaking film</p>
+<div class="zh">四十多年后，作为对这部开创性影片的#谦逊#致敬#</div>
+
+<p><button class="play-button sentence" id="s-00-00-41-000" data-start="00:00:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to take a similar journey through time and space and see how our understanding has changed along the way</p>
+<div class="zh">我们将展开类似的时空之旅，见证人类认知如何随时间演进</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959952" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-48-000" data-start="00:00:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As in 1977, we'll start with a picnic though this time we're on the island of Sicily in Italy rather than Lake Michigan</p>
+<div class="zh">如同1977年，我们将从#野餐#开始——不过这次是在意大利西西里岛而非密歇根湖畔</div>
+
+<p><button class="play-button sentence" id="s-00-00-56-000" data-start="00:00:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll start with a scene one metre wide viewed from one metre away and every ten seconds</p>
+<div class="zh">初始视野是一米见方的场景，观测距离为一米，之后每十秒</div>
+
+<p><button class="play-button sentence" id="s-00-01-02-000" data-start="00:01:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to move out to ten times further away so the scene will be ten times wider</p>
+<div class="zh">观测距离将扩大十倍，视野范围也随之扩大十倍</div>
+
+<p><button class="play-button sentence" id="s-00-01-10-000" data-start="00:01:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This square is ten metres wide and in ten seconds the next square will be ten times that</p>
+<div class="zh">这个方块宽十米，十秒后下一个方块将是其十倍</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959924" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-15-231" data-start="00:01:15,231" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the movement may seem linear</p>
+<div class="zh">这种移动看似#线性#</div>
+
+<p><button class="play-button sentence" id="s-00-01-17-000" data-start="00:01:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're actually accelerating exponentially into the distance</p>
+<div class="zh">但实际上我们正在呈指数级加速远离</div>
+
+<p><button class="play-button sentence" id="s-00-01-21-000" data-start="00:01:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This square is a hundred metres wide, the distance someone can run in ten seconds</p>
+<div class="zh">这个方块宽百米，相当于人类十秒内能奔跑的距离</div>
+
+<p><button class="play-button sentence" id="s-00-01-26-000" data-start="00:01:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, if they're running at 43 kilometres an hour just under the speed of your cat, one kilometre</p>
+<div class="zh">按时速43公里计算（略低于家猫的奔跑速度），可达一公里</div>
+
+<p><button class="play-button sentence" id="s-00-01-32-000" data-start="00:01:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Though our picnics are indistinguishable now, we can still clearly see the impact of human activity on the world</p>
+<div class="zh">虽然野餐场景已#难以辨认#，但仍能清晰看到人类活动对世界的影响</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959900" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-40-000" data-start="00:01:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ten thousand metres are ten to the four metres, this is the distance of supersonic plane travels in ten seconds</p>
+<div class="zh">万米即十的四次方米，这是#超音速#飞机十秒内飞行的距离</div>
+
+<p><button class="play-button sentence" id="s-00-01-47-000" data-start="00:01:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're now reaching the highest altitude flown by such a plane, ten to the five metres</p>
+<div class="zh">此时达到此类飞机的最高#飞行高度#——十的五次方米</div>
+
+<p><button class="play-button sentence" id="s-00-01-52-000" data-start="00:01:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the distance the International Space Station travels in ten seconds</p>
+<div class="zh">这是国际空间站十秒内航行的距离</div>
+
+<p><button class="play-button sentence" id="s-00-01-56-000" data-start="00:01:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There it goes, from here on, human activity will be lost to sight, we're at the scale of countries</p>
+<div class="zh">看，从这里开始，人类活动将消失于视野，我们进入国家尺度</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959877" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One million metres, or ten to the six metres, we've long left Earth's atmosphere</p>
+<div class="zh">百万米（十的六次方米），我们早已脱离地球大气层</div>
+
+<p><button class="play-button sentence" id="s-00-02-08-000" data-start="00:02:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And soon we'll see the whole planet, what a duel</p>
+<div class="zh">很快将看到整个星球，多么壮观的对决</div>
+
+<p><button class="play-button sentence" id="s-00-02-12-000" data-start="00:02:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ten million metres</p>
+<div class="zh">千万米量级</div>
+
+<p><button class="play-button sentence" id="s-00-02-14-000" data-start="00:02:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The invisible magnetosphere shields us from the dangerous ionising radiation of space</p>
+<div class="zh">#无形的#磁层保护我们免受太空危险电离#辐射#的侵害</div>
+
+<p><button class="play-button sentence" id="s-00-02-20-000" data-start="00:02:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ten to the eight metres, this line extends at the speed of light</p>
+<div class="zh">十的八次方米处，这条线以光速延伸</div>
+
+<p><button class="play-button sentence" id="s-00-02-25-000" data-start="00:02:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the time it takes for light to reach us from the Moon's orbit, the age of Moonlight</p>
+<div class="zh">这是月光从月球#轨道#抵达地球所需的时间——月光年龄</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-31-000" data-start="00:02:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Earth is now just a pale blue dot in the sky full of stars</p>
+<div class="zh">地球此刻只是繁星苍穹中一个淡蓝圆点</div>
+
+<p><button class="play-button sentence" id="s-00-02-35-000" data-start="00:02:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even as we accelerate away, the stars appear stationary because they're so much further away</p>
+<div class="zh">即便持续#加速#远离，恒星依然显得#静止#——因为它们遥远得多</div>
+
+<p><button class="play-button sentence" id="s-00-02-41-000" data-start="00:02:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So much empty space, let's illustrate the orbits of the planets in our solar system, otherwise this could get a bit dull</p>
+<div class="zh">如此多虚空，让我们标注太阳系行星轨道以免枯燥</div>
+
+<p><button class="play-button sentence" id="s-00-02-48-000" data-start="00:02:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here comes the orbit of Venus, N Mars, and now Mercury</p>
+<div class="zh">这是#金星#轨道、#火星#轨道，以及#水星#轨道</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959827" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-53-000" data-start="00:02:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since 2010 the NASA Solar Dynamics Observatory has been using an extreme ultraviolet filter to monitor the activity of our Sun</p>
+<div class="zh">自2010年起，NASA太阳#动力学#天文台一直使用极端#紫外#滤镜监测太阳活动</div>
+
+<p><button class="play-button sentence" id="s-00-03-02-000" data-start="00:03:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally, we reach the orbit of the outer planets, the gas giants, but just specks at this distance</p>
+<div class="zh">最终抵达外行星#轨道#——气态巨行星在此距离仅是微尘</div>
+
+<p><button class="play-button sentence" id="s-00-03-09-000" data-start="00:03:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's the orbit of Pluto, one of the dwarf planets of the Kuiper belt, ten to the thirteen metres, and we're moving out of the solar system</p>
+<div class="zh">这是柯伊伯带矮行星冥王星的轨道（十的十三次方米），我们正飞出太阳系</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959804" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-16-000" data-start="00:03:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2012 the Voyager One spacecraft became the first human artifact to make this journey, followed in 2018 by its twin of Voyager Two</p>
+<div class="zh">2012年旅行者一号#探测器#成为完成此旅程的首个人类#造物#，其姊妹探测器旅行者二号于2018年紧随其后</div>
+
+<p><button class="play-button sentence" id="s-00-03-25-000" data-start="00:03:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both were launched in 1977, the year the Eames were working on powers of ten</p>
+<div class="zh">两者均发射于1977年——正是伊姆斯夫妇创作《十的次方》之年</div>
+
+<p><button class="play-button sentence" id="s-00-03-31-000" data-start="00:03:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're heading into interstellar space, our Sun is just one of billions of stars, and still at this distance the night sky looks very similar to what we see at home</p>
+<div class="zh">我们正进入星际空间，太阳仅是数十亿恒星之一，而此距离的夜空与地球所见仍极为相似</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959779" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-41-000" data-start="00:03:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This square is ten to the sixteen metres, the distance light travels in one year, one light year</p>
+<div class="zh">这个方块宽十的十六次方米，即光一年传播的距离——一光年</div>
+
+<p><button class="play-button sentence" id="s-00-03-48-000" data-start="00:03:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's our closest neighbour Alpha Centauri, three stars for the price of one, with planets orbiting around them</p>
+<div class="zh">这是近邻比邻星——三合星系统附带环绕行星</div>
+
+<p><button class="play-button sentence" id="s-00-03-55-000" data-start="00:03:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd love to know what's going on there</p>
+<div class="zh">真想知道那里正在发生什么</div>
+
+<p><button class="play-button sentence" id="s-00-03-57-000" data-start="00:03:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks to data collected by the Gaya spacecraft, we're building a detailed 3D map of the Milky Way</p>
+<div class="zh">借助盖亚#探测器#收集的数据，我们正在绘制详细的#银河#系三维地图</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959757" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-03-000" data-start="00:04:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are between 100 and 400 billion stars in our galaxy alone, and clouds of dust and gas like these nebula, where new stars are born</p>
+<div class="zh">仅银河系就有1000亿到4000亿颗恒星，还有孕育新恒星的星云尘埃气体</div>
+
+<p><button class="play-button sentence" id="s-00-04-12-000" data-start="00:04:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Images sent from the Hubble Space Telescope have been blowing our minds for a generation</p>
+<div class="zh">哈勃太空#望远镜#传回的图像震撼了整整一代人</div>
+
+<p><button class="play-button sentence" id="s-00-04-17-000" data-start="00:04:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As we move away, we begin to see the great flat spiral of our galaxy</p>
+<div class="zh">继续远离时，我们开始看到银河系巨大的扁平#螺旋#结构</div>
+
+<p><button class="play-button sentence" id="s-00-04-21-000" data-start="00:04:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A few hundred billion stars rotating around a black hole, Sagittarius A star, 4.2 million times more massive than our Sun</p>
+<div class="zh">数千亿颗恒星环绕着比太阳重420万倍的黑洞——人马座A*运行</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959730" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-30-000" data-start="00:04:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We now think supermassive black holes reside at the centre of nearly all galaxies</p>
+<div class="zh">如今我们认为几乎所有星系中心都#存在#超大质量黑洞</div>
+
+<p><button class="play-button sentence" id="s-00-04-35-000" data-start="00:04:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These two dwarf galaxies are the Magellanic clouds, which together with at least 80 others, make up what's known as the local group of galaxies</p>
+<div class="zh">这两个矮星系是麦哲伦云，它们与至少80个其他星系共同组成了所谓的本星系群</div>
+
+<p><button class="play-button sentence" id="s-00-04-44-000" data-start="00:04:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ten to the 22, one million light years, soon we'll pass the super giant elliptical galaxy M87</p>
+<div class="zh">10的22次方米，一百万光年，我们将很快掠过超巨型#椭圆# #星系#M87</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959709" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-51-000" data-start="00:04:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if we switch to radio waves, we can glimpse the supermassive black hole at its centre</p>
+<div class="zh">若切换至无线电波，我们便能#窥见#其中心的超大质量黑洞</div>
+
+<p><button class="play-button sentence" id="s-00-04-57-000" data-start="00:04:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Switching back to visible light as we traverse the Virgo Supercluster, each tiny dot not a star, but a galaxy</p>
+<div class="zh">当我们#穿越#室女座超星系团时切回可见光，每个微小光点都不是恒星而是#星系#</div>
+
+<p><button class="play-button sentence" id="s-00-05-05-000" data-start="00:05:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Billions of stars floating in an ever-growing void, ten to the 24 metres, the limits of our vision in 1977</p>
+<div class="zh">数十亿恒星漂浮在日益膨胀的#虚空#中，10的24次方米是1977年人类的观测极限</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959687" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-13-000" data-start="00:05:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But over 40 years later, we can show a bit more</p>
+<div class="zh">但四十余年后的今天，我们的视野已更加深远</div>
+
+<p><button class="play-button sentence" id="s-00-05-16-000" data-start="00:05:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clusters of galaxies arranged along filaments, like the Pisces Cedar Supercluster Complex</p>
+<div class="zh">星系团沿纤维状结构排列，如双鱼-#鲸鱼#座超星系团复合体</div>
+
+<p><button class="play-button sentence" id="s-00-05-22-000" data-start="00:05:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At 10 to the 26 metres, we switch our view to microwave</p>
+<div class="zh">在10的26次方米尺度，我们将视野切换至#微波#</div>
+
+<p><button class="play-button sentence" id="s-00-05-26-000" data-start="00:05:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we can now see the current limit of our vision</p>
+<div class="zh">此刻映入眼帘的是当前的观测极限</div>
+
+<p><button class="play-button sentence" id="s-00-05-29-000" data-start="00:05:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This light forms a sort of wall all around us</p>
+<div class="zh">这道光芒在我们周围形成某种壁垒</div>
+
+<p><button class="play-button sentence" id="s-00-05-33-000" data-start="00:05:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The light and dark patches show differences in temperature by fractions of a degree</p>
+<div class="zh">明暗斑块显示着百分之几度的温度差异</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959662" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-38-000" data-start="00:05:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Revealing where matter was beginning to clump together to form the first galaxies, shortly after the Big Bang</p>
+<div class="zh">揭示了大爆炸#后不久物质开始#聚集#形成首批星系的区域</div>
+
+<p><button class="play-button sentence" id="s-00-05-44-000" data-start="00:05:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This light is known as the Cosmic Microwave Background Radiation</p>
+<div class="zh">这道光芒被称为#宇宙# #微波#背景#辐射#</div>
+
+<p><button class="play-button sentence" id="s-00-05-48-000" data-start="00:05:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ten to the 27 metres, one followed by 27 zeros</p>
+<div class="zh">10的27次方米，1后面跟着27个零</div>
+
+<p><button class="play-button sentence" id="s-00-05-53-000" data-start="00:05:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Beyond this point, the nature of the universe is truly uncharted and debated</p>
+<div class="zh">超越此界限后，宇宙的本质便真正进入未知且存在争议的领域</div>
+
+<p><button class="play-button sentence" id="s-00-05-59-000" data-start="00:05:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This light was emitted around 380,000 years after the Big Bang</p>
+<div class="zh">这道光是在大爆炸#后约38万年时发出的</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959636" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-04-000" data-start="00:06:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before this time, the universe was so hot that it was not transparent to light</p>
+<div class="zh">在此之前的宇宙温度极高，光线无法穿透</div>
+
+<p><button class="play-button sentence" id="s-00-06-09-000" data-start="00:06:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there simply more universe out there yet to be revealed?</p>
+<div class="zh">是否还存在更多尚未被发现的宇宙？</div>
+
+<p><button class="play-button sentence" id="s-00-06-13-000" data-start="00:06:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or is this region still expanding, generating more universe?</p>
+<div class="zh">或是这片区域仍在扩张，不断生成新宇宙？</div>
+
+<p><button class="play-button sentence" id="s-00-06-17-000" data-start="00:06:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or even other universes with different physical properties to our own?</p>
+<div class="zh">甚至存在物理特性与我们宇宙截然不同的其他宇宙？</div>
+
+<p><button class="play-button sentence" id="s-00-06-22-000" data-start="00:06:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How will our understanding of the universe have changed by 2077?</p>
+<div class="zh">到2077年，人类对宇宙的认知将发生怎样的变革？</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1w1pHzrEpQ/?t=-2208959613" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-27-000" data-start="00:06:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How many more powers of ten are out there?</p>
+<div class="zh">还有多少十次方尺度等待探索？</div>
+
+<p><button class="play-button sentence" id="s-00-06-30-000" data-start="00:06:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From a picnic blanket unscissly to the very edge of our understanding, I salute the eems</p>
+<div class="zh">从#野餐毯#的方寸之间到认知的最前沿，我#致敬#eems团队</div>
+
+<p><button class="play-button sentence" id="s-00-06-36-000" data-start="00:06:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the way they told this beautiful story, the story of the universe</p>
+<div class="zh">因他们讲述这个美丽故事——宇宙史诗的独特方式</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
