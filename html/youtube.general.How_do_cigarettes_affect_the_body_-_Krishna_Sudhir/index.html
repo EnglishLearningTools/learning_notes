@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Damaging Effects of Smoking – and How to Quit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Smoking introduces over 5,000 chemicals that damage teeth, impair smell, and harm lungs by destroying cilia. Carbon monoxide reduces oxygen in blood, while nicotine triggers addictive dopamine release. Long-term effects include cancer risks, vascular damage, and reproductive issues. Quitting brings immediate benefits: heart rate normalizes in 20 minutes, lung function improves within months, and cancer risks drop significantly over years. Support tools like nicotine therapy and counseling aid cessation.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Damaging Effects of Smoking – and How to Quit</h1>
+<p>【【生词双高亮】TED科普：烟如何侵蚀你的身体？】</p>
+<p>Summary:
+Smoking introduces over 5,000 chemicals that damage teeth, impair smell, and harm lungs by destroying cilia. Carbon monoxide reduces oxygen in blood, while nicotine triggers addictive dopamine release. Long-term effects include cancer risks, vascular damage, and reproductive issues. Quitting brings immediate benefits: heart rate normalizes in 20 minutes, lung function improves within months, and cancer risks drop significantly over years. Support tools like nicotine therapy and counseling aid cessation.</p>
+<p>摘要：
+吸烟时5000多种化学物质会侵蚀牙齿、损伤嗅觉并破坏肺部纤毛。一氧化碳降低血氧含量，尼古丁刺激多巴胺释放导致成瘾。长期吸烟可能引发癌症、血管病变和生育问题。戒烟后20分钟心率即恢复正常，数月后肺部功能改善，数年內癌症风险显著下降。尼古丁替代疗法和心理辅导等工具可有效辅助戒烟。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 7 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959993" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-06-897" data-start="00:00:06,897" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cigarettes aren’t good for us.</p>
+<div class="zh">香烟对我们没有好处。</div>
+
+<p><button class="play-button sentence" id="s-00-00-09-218" data-start="00:00:09,218" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That’s hardly news--we’ve known about the dangers of smoking for decades.</p>
+<div class="zh">这算不上新闻——几十年来我们一直清楚吸烟的危害。</div>
+
+<p><button class="play-button sentence" id="s-00-00-13-865" data-start="00:00:13,865" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But how exactly do cigarettes harm us?</p>
+<div class="zh">但香烟究竟如何伤害我们？</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-859" data-start="00:00:16,859" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let’s look at what happens as their ingredients make their way through our bodies, and how we benefit physically when we finally give up smoking.</p>
+<div class="zh">让我们看看当香烟成分在体内扩散时会发生什么，以及最终戒烟时身体如何受益。</div>
+
+<p><button class="play-button sentence" id="s-00-00-25-478" data-start="00:00:25,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With each inhalation, smoke brings its more than 5,000 chemical substances into contact with the body’s tissues.</p>
+<div class="zh">每次吸入时，烟雾中超过5000种化学物质都会与人体组织接触。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959966" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-33-765" data-start="00:00:33,765" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From the start, tar, a black, resinous material, begins to coat the teeth and gums, damaging tooth enamel, and eventually causing decay.</p>
+<div class="zh">一开始，#焦油#——一种黑色#树脂状#物质——就会覆盖牙齿和牙龈，破坏牙釉质并最终导致蛀牙。</div>
+
+<p><button class="play-button sentence" id="s-00-00-43-707" data-start="00:00:43,707" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over time, smoke also damages nerve-endings in the nose, causing loss of smell.</p>
+<div class="zh">随着时间的推移，烟雾还会损害鼻子里的神经末梢，导致嗅觉丧失。</div>
+
+<p><button class="play-button sentence" id="s-00-00-50-006" data-start="00:00:50,006" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Inside the airways and lungs, smoke increases the likelihood of infections, as well as chronic diseases like bronchitis and emphysema.</p>
+<div class="zh">在气道和肺部，烟雾会增加感染#可能性#以及支气管炎、肺气肿等#慢性#疾病风险。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959940" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-59-433" data-start="00:00:59,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It does this by damaging the cilia, tiny hairlike structures whose job it is to keep the airways clean.</p>
+<div class="zh">其原理是破坏纤毛——这些负责保持气道清洁的微小毛发状结构。</div>
+
+<p><button class="play-button sentence" id="s-00-01-07-731" data-start="00:01:07,731" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It then fills the alveoli, tiny air sacs that enable the exchange of oxygen and carbon dioxide between the lungs and blood.</p>
+<div class="zh">随后烟雾会填满肺泡——这些微小气囊负责实现肺部与血液间的#氧气#和二氧化碳#交换#。</div>
+
+<p><button class="play-button sentence" id="s-00-01-15-339" data-start="00:01:15,339" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A toxic gas called carbon monoxide crosses that membrane into the blood, binding to hemoglobin and displacing the oxygen it would usually have transported around the body.</p>
+<div class="zh">有毒的一氧化碳气体会穿过肺泡膜进入血液，与血红蛋白结合，取代通常由血红蛋白输送的氧气。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959913" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-26-771" data-start="00:01:26,771" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That’s one of the reasons smoking can lead to oxygen deprivation and shortness of breath.</p>
+<div class="zh">这就是吸烟可能导致#缺氧#和呼吸急促的原因之一。</div>
+
+<p><button class="play-button sentence" id="s-00-01-32-953" data-start="00:01:32,953" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Within about 10 seconds, the bloodstream carries a stimulant called nicotine to the brain, triggering the release of dopamine and other neurotransmitters including endorphins that create the pleasurable sensations which make smoking highly addictive.</p>
+<div class="zh">约10秒内，血液会将名为尼古丁的兴奋剂输送到大脑，触发多巴胺和内啡肽等神经递质的释放，产生愉悦感，这正是吸烟高度成瘾的原因。</div>
+
+<p><button class="play-button sentence" id="s-00-01-47-683" data-start="00:01:47,683" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nicotine and other chemicals from the cigarette simultaneously cause constriction of blood vessels and damage their delicate endothelial lining, restricting blood flow.</p>
+<div class="zh">#尼古丁#和香烟中的其他化学物质会#同时#导致血管收缩并破坏脆弱的内皮#内膜#，从而限制血流。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959882" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-57-674" data-start="00:01:57,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These vascular effects lead to thickening of blood vessel walls and enhance blood platelet stickiness, increasing the likelihood that clots will form and trigger heart attacks and strokes.</p>
+<div class="zh">这些血管效应会导致血管壁增厚、血小板黏性增强，增加形成血栓并引发心脏病和中风的风险。</div>
+
+<p><button class="play-button sentence" id="s-00-02-08-929" data-start="00:02:08,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many of the chemicals inside cigarettes can trigger dangerous mutations in the body’s DNA that make cancers form.</p>
+<div class="zh">香烟中的许多化学物质会#引发#人体DNA的危险突变，从而导致癌症形成。</div>
+
+<p><button class="play-button sentence" id="s-00-02-15-965" data-start="00:02:15,965" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Additionally, ingredients like arsenic and nickel may disrupt the process of DNA repair, thus compromising the body’s ability to fight many cancers.</p>
+<div class="zh">此外，砷和#镍#等成分可能#破坏#DNA修复过程，从而削弱身体对抗多种癌症的能力。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959854" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-25-443" data-start="00:02:25,443" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, about one of every three cancer deaths in the United States is caused by smoking.</p>
+<div class="zh">事实上，美国每三例癌症死亡中约有一例是由吸烟引起。</div>
+
+<p><button class="play-button sentence" id="s-00-02-31-217" data-start="00:02:31,217" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it’s not just lung cancer.</p>
+<div class="zh">而且不仅仅是肺癌。</div>
+
+<p><button class="play-button sentence" id="s-00-02-33-570" data-start="00:02:33,570" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Smoking can cause cancer in multiple tissues and organs, as well as damaged eyesight and weakened bones.</p>
+<div class="zh">吸烟会导致多种组织和器官的癌症，还会损害#视力#并削弱骨骼。</div>
+
+<p><button class="play-button sentence" id="s-00-02-40-901" data-start="00:02:40,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It makes it harder for women to get pregnant.</p>
+<div class="zh">它会使女性更难怀孕。</div>
+
+<p><button class="play-button sentence" id="s-00-02-43-110" data-start="00:02:43,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in men, it can cause erectile dysfunction.</p>
+<div class="zh">对男性而言，它可能导致勃起#功能障碍#。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959833" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-46-087" data-start="00:02:46,087" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for those who quit smoking, there’s a huge positive upside with almost immediate and long-lasting physical benefits.</p>
+<div class="zh">但对戒烟者而言，身体几乎能立即获得持久#的积极效益。</div>
+
+<p><button class="play-button sentence" id="s-00-02-53-328" data-start="00:02:53,328" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just 20 minutes after a smoker’s final cigarette, their heart rate and blood pressure begin to return to normal.</p>
+<div class="zh">吸烟者最后一支烟仅20分钟后，心率和血压就开始恢复正常。</div>
+
+<p><button class="play-button sentence" id="s-00-03-00-841" data-start="00:03:00,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After 12 hours, carbon monoxide levels stabilize, increasing the blood’s oxygen-carrying capacity.</p>
+<div class="zh">12小时后，一氧化碳水平#趋于稳定#，血液携#氧#能力提升。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-07-022" data-start="00:03:07,022" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A day after ceasing, heart attack risk begins to decrease as blood pressure and heart rates normalize.</p>
+<div class="zh">停止吸烟一天后，随着血压和心率正常化，心脏病发作风险开始下降。</div>
+
+<p><button class="play-button sentence" id="s-00-03-13-894" data-start="00:03:13,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After two days, the nerve endings responsible for smell and taste start to recover.</p>
+<div class="zh">两天后，负责嗅觉和味觉的神经末梢开始恢复。</div>
+
+<p><button class="play-button sentence" id="s-00-03-20-093" data-start="00:03:20,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lungs become healthier after about one month, with less coughing and shortness of breath.</p>
+<div class="zh">约一个月后肺部变得更健康，咳嗽和呼吸急促症状减轻。</div>
+
+<p><button class="play-button sentence" id="s-00-03-25-875" data-start="00:03:25,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The delicate hair-like cilia in the airways and lungs start recovering within weeks, and are restored after 9 months, improving resistance to infection.</p>
+<div class="zh">气道和肺部纤细的毛发状纤毛在数周内开始恢复，9个月后完全修复，从而增强抗感染能力。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959784" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-35-340" data-start="00:03:35,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By the one-year anniversary of quitting, heart disease risk plummets to half as blood vessel function improves.</p>
+<div class="zh">戒烟满一周年时，随着血#管#功能改善，心脏病风险骤降至一半。</div>
+
+<p><button class="play-button sentence" id="s-00-03-42-760" data-start="00:03:42,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Five years in, the chance of a clot forming dramatically declines, and the risk of stroke continues to reduce.</p>
+<div class="zh">五年后，形成#血栓#的几率显著下降，中风风险持续降低。</div>
+
+<p><button class="play-button sentence" id="s-00-03-49-751" data-start="00:03:49,751" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After ten years, the chances of developing fatal lung cancer go down by 50%, probably because the body’s ability to repair DNA is once again restored.</p>
+<div class="zh">十年后，致命肺癌的发病几率下降50%，这可能是因为人体修复DNA的能力再次恢复。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959759" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-00-169" data-start="00:04:00,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fifteen years in, the likelihood of developing coronary heart disease is essentially the same as that of a non-smoker.</p>
+<div class="zh">十五年后，患冠心病的#可能性#基本与不吸烟者持平。</div>
+
+<p><button class="play-button sentence" id="s-00-04-07-521" data-start="00:04:07,521" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There’s no point pretending this is all easy to achieve.</p>
+<div class="zh">没有必要假装这一切都很容易实现。</div>
+
+<p><button class="play-button sentence" id="s-00-04-10-818" data-start="00:04:10,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Quitting can lead to anxiety and depression, resulting from nicotine withdrawal.</p>
+<div class="zh">戒烟可能导致焦虑和抑郁，这是#尼古丁#戒断引起的。</div>
+
+<p><button class="play-button sentence" id="s-00-04-15-581" data-start="00:04:15,581" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But fortunately, such effects are usually temporary.</p>
+<div class="zh">但#幸运的是#，这些影响通常是暂时的。</div>
+
+<p><button class="play-button sentence" id="s-00-04-19-291" data-start="00:04:19,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And quitting is getting easier, thanks to a growing arsenal of tools.</p>
+<div class="zh">由于戒烟#手段#日益丰富，戒烟正变得越来越容易。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959736" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-23-980" data-start="00:04:23,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nicotine replacement therapy through gum, skin patches, lozenges, and sprays may help wean smokers off cigarettes.</p>
+<div class="zh">通过#口香糖#、皮肤贴片、含片和喷雾进行的#尼古丁##替代#疗法可以帮助#戒除#吸烟习惯。</div>
+
+<p><button class="play-button sentence" id="s-00-04-32-345" data-start="00:04:32,345" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They work by stimulating nicotine receptors in the brain and thus preventing withdrawal symptoms, without the addition of other harmful chemicals.</p>
+<div class="zh">其原理是刺激大脑中的#尼古丁#受体，从而避免戒断症状，且不添加其他有害化学物质。</div>
+
+<p><button class="play-button sentence" id="s-00-04-40-757" data-start="00:04:40,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Counselling and support groups, cognitive behavioral therapy, and moderate intensity exercise also help smokers stay cigarette-free.</p>
+<div class="zh">咨询辅导、互助小组、#认知#行为疗法和#中等##强度#锻炼也有助于吸烟者保持无烟状态。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wwpMzeE6U/?t=-2208959709" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-50-060" data-start="00:04:50,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That’s good news, since quitting puts you and your body on the path back to health.</p>
+<div class="zh">这是个好消息，因为戒烟能让你和你的身体重回健康之路。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
