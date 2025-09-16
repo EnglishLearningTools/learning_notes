@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>tv.bbc.14: London Time 2025-09-15 21:58 - 22:33 - Part 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="None">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>tv.bbc.14: London Time 2025-09-15 21:58 - 22:33 - Part 1</h1>
+<p>【None】</p>
+<p>Summary:
+None</p>
+<p>摘要：
+None</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 38 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3>00:00:18</h3>
+<p><button class="play-button sentence" id="s-00-00-18-000" data-start="00:00:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Katrina Perry in Washington, and this is BBC World News America.</p>
+<div class="zh">我是卡特里娜·佩里，在华盛顿为您带来BBC世界新闻美洲频道。</div>
+
+<p><button class="play-button sentence" id="s-00-00-23-559" data-start="00:00:23,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> US Secretary of State Marco Rubio visits Israel before Qatar in an attempt to ease tensions after last week's strike in Doha.</p>
+<div class="zh">美国国务卿马克·卢比奥先访以色列再赴卡塔尔，试图缓解上周多哈袭击事件后的紧张局势。</div>
+
+<p><button class="play-button sentence" id="s-00-00-33-280" data-start="00:00:33,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Trump administration says it's reached a framework deal with China to keep the social media platform TikTok operational in the US.</p>
+<div class="zh">特朗普政府宣称已与中国达成框架性协议，使社交媒体平台TikTok能在美国继续运营。</div>
+
+<p><a name="block-2"></a></p>
+<h3>00:00:42</h3>
+<p><button class="play-button sentence" id="s-00-00-42-598" data-start="00:00:42,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Afghanistan sees the sharpest surge in child malnutrition ever recorded.</p>
+<div class="zh">阿富汗正经历有记录以来最严重的儿童营养不良激增。</div>
+
+<p><button class="play-button sentence" id="s-00-00-48-240" data-start="00:00:48,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A special BBC report looks at the worsening humanitarian crisis on the ground.</p>
+<div class="zh">BBC特别报道关注当地日益恶化的人道主义危机。</div>
+
+<p><button class="play-button sentence" id="s-00-00-55-240" data-start="00:00:55,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, you're very welcome to the program.</p>
+<div class="zh">您好，热烈欢迎收看本期节目。</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-319" data-start="00:01:08,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> US Secretary of State Marco Rubio and Israel's Prime Minister Benjamin Netanyahu appeared broadly united to add a news conference into Jerusalem on Tuesday.</p>
+<div class="zh">美国国务卿马克·卢比奥与以色列总理本雅明·内塔尼亚胡周二在耶路撒冷联合记者会上展现出高度一致的立场。</div>
+
+<p><a name="block-3"></a></p>
+<h3>00:01:17</h3>
+<p><button class="play-button sentence" id="s-00-01-17-159" data-start="00:01:17,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mid-tensions over Israel's strike last week on Hamas negotiators in Qatar.</p>
+<div class="zh">此次访问正值以色列上周袭击卡塔尔境内哈马斯谈判人员引发紧张局势之际。</div>
+
+<p><button class="play-button sentence" id="s-00-01-22-599" data-start="00:01:22,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a joint news conference, Secretary Rubio said the US would encourage Qatar to continue its role in Gaza ceasefire talks.</p>
+<div class="zh">卢比奥国务卿在联合记者会上表示，美国将鼓励卡塔尔继续发挥在加沙停火谈判中的作用。</div>
+
+<p><button class="play-button sentence" id="s-00-01-30-438" data-start="00:01:30,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Netanyahu praised the US support while Secretary Rubio focused on the return of Israeli hostages and in defeating Hamas in Gaza.</p>
+<div class="zh">内塔尼亚胡赞扬了美国的支持，而卢比奥国务卿则聚焦于以色列人质的回归及在加沙击败哈马斯。</div>
+
+<p><a name="block-4"></a></p>
+<h3>00:01:40</h3>
+<p><button class="play-button sentence" id="s-00-01-40-078" data-start="00:01:40,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US has no better ally than Israel.</p>
+<div class="zh">美国最坚定的盟友非以色列莫属。</div>
+
+<p><button class="play-button sentence" id="s-00-01-43-480" data-start="00:01:43,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's obvious that Israel has no better ally than America.</p>
+<div class="zh">显然以色列最坚实的盟友也非美国莫属。</div>
+
+<p><button class="play-button sentence" id="s-00-01-46-718" data-start="00:01:46,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You've been a remarkable partner.</p>
+<div class="zh">贵国始终是卓越的合作伙伴。</div>
+
+<p><button class="play-button sentence" id="s-00-01-50-239" data-start="00:01:50,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What happened on October 7th was an act of unparalleled barbarism and what's happened since then have been repeated acts of unparalleled barbarism on the part of Hamas.</p>
+<div class="zh">10月7日的事件是前所未有的野蛮行径，而此后哈马斯持续实施了多起同样残暴的行为。</div>
+
+<p><button class="play-button sentence" id="s-00-01-58-959" data-start="00:01:58,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hamas needs to cease to exist as an armed element that can threaten the peace and security of the region.</p>
+<div class="zh">哈马斯必须作为威胁地区和平安全的武装力量被彻底清除。</div>
+
+<p><a name="block-5"></a></p>
+<h3>00:02:04</h3>
+<p><button class="play-button sentence" id="s-00-02-04-560" data-start="00:02:04,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the people of Gaza deserve a better future.</p>
+<div class="zh">加沙人民理应获得更美好的未来。</div>
+
+<p><button class="play-button sentence" id="s-00-02-06-480" data-start="00:02:06,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that better future cannot begin until Hamas is eliminated.</p>
+<div class="zh">唯有消灭哈马斯，这份美好未来才能真正开启。</div>
+
+<p><button class="play-button sentence" id="s-00-02-10-960" data-start="00:02:10,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Secretary Rubio's visit comes as the Israeli military presses ahead with the demolition of residential buildings in Gaza City.</p>
+<div class="zh">卢比奥到访之际，以色列军队正加紧拆除加沙城的住宅建筑。</div>
+
+<p><button class="play-button sentence" id="s-00-02-18-840" data-start="00:02:18,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli media reported an intense new wave of strikes in the last 50 hours with more than 50 deaths reported.</p>
+<div class="zh">以色列媒体报道过去50小时内爆发了激烈的新一轮空袭，据称造成逾50人死亡。</div>
+
+<p><a name="block-6"></a></p>
+<h3>00:02:25</h3>
+<p><button class="play-button sentence" id="s-00-02-25-878" data-start="00:02:25,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, Qatar has hosted an emergency meeting of Arab states in response to Israel's strike in Doha last week.</p>
+<div class="zh">与此同时，卡塔尔主办了阿拉伯国家紧急会议，回应以色列上周在多哈的袭击。</div>
+
+<p><button class="play-button sentence" id="s-00-02-33-120" data-start="00:02:33,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Qatar Emir, Al-Tani, called it a treacherous attack, while Egypt's president, El-Sisi, accused Israel of intentionally derailing peace efforts.</p>
+<div class="zh">卡塔尔埃米尔塔尼称此为背信弃义的攻击，埃及总统塞西则指责以色列蓄意破坏和平努力。</div>
+
+<p><button class="play-button sentence" id="s-00-02-42-560" data-start="00:02:42,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Qatar, thousands of miles away from where the attacking aircraft took off, is a mediating country that has been making strenuous efforts for two years to reach a settlement that would end the deadly and destructive war being waged against the Palestinian people in the Gaza strip, which has long since turned into a war of extermination and would secure the release of Israeli hostages.</p>
+<div class="zh">距袭击战机起飞地数千英里的卡塔尔作为调解国，两年来一直竭力推动达成协议，旨在结束针对加沙地带巴勒斯坦人民的致命毁灭性战争——这场早已演变为灭绝性战争的冲突，并确保以色列人质获释。</div>
+
+<p><a name="block-7"></a></p>
+<h3>00:03:06</h3>
+<p><button class="play-button sentence" id="s-00-03-06-080" data-start="00:03:06,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has become clear that the aggressive approach adopted by the Israeli side carries with it a premeditated intention to thwart all opportunities for achieving calm and reaching an agreement that guarantees a permanent ceasefire in the release of hostages and prisoners.</p>
+<div class="zh">显然以色列采取的激进策略带有预谋意图，旨在破坏所有实现平静的机会，阻挠达成保证永久停火及释放人质与囚犯的协议。</div>
+
+<p><button class="play-button sentence" id="s-00-03-22-400" data-start="00:03:22,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Secretary Rubio will visit Qatar on Tuesday to try and smooth over tensions one week after that strike by Israel in Doha.</p>
+<div class="zh">卢比奥国务卿将于周二访问卡塔尔，试图在以色列多哈袭击一周后缓和紧张局势。</div>
+
+<p><button class="play-button sentence" id="s-00-03-29-919" data-start="00:03:29,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's talk about the latest developments now with Aaron David Miller, senior fellow at the Carnegie Endowment for International Peace and a former State Department, Middle East and Egociator in both Democratic and Republican administrations.</p>
+<div class="zh">现在请卡内基国际和平基金会高级研究员、前国务院中东谈判专家阿伦·戴维·米勒（曾效力民主共和两党政府）为我们解析最新进展。</div>
+
+<p><a name="block-8"></a></p>
+<h3>00:03:42</h3>
+<p><button class="play-button sentence" id="s-00-03-42-079" data-start="00:03:42,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for joining us here on BBC News.</p>
+<div class="zh">非常感谢您做客BBC新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-03-45-718" data-start="00:03:45,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where does Secretary Rubio find himself at this point, standing shoulder to shoulder with one close ally, the Israeli Prime Minister today, and heading to Qatar tomorrow when the views of what happened last week couldn't be more different?</p>
+<div class="zh">卢比奥国务卿此刻处于何种境地？今日与亲密盟友以色列总理并肩而立，明日将赴卡塔尔，而双方对上周事件的看法截然不同？</div>
+
+<p><button class="play-button sentence" id="s-00-04-00-318" data-start="00:04:00,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I mean, I think the Secretary finds himself nowhere, frankly.</p>
+<div class="zh">嗯，坦率说，我认为国务卿此刻处境尴尬。</div>
+
+<p><a name="block-9"></a></p>
+<h3>00:04:04</h3>
+<p><button class="play-button sentence" id="s-00-04-04-120" data-start="00:04:04,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not the Secretary that's making decisions on this.</p>
+<div class="zh">此事并非由国务卿决策。</div>
+
+<p><button class="play-button sentence" id="s-00-04-08-199" data-start="00:04:08,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the Trump administration and the President.</p>
+<div class="zh">而是特朗普政府及总统本人。</div>
+
+<p><button class="play-button sentence" id="s-00-04-10-959" data-start="00:04:10,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's some harsh realities where, what, three weeks away?</p>
+<div class="zh">且存在某些残酷现实——距离什么？三周后？</div>
+
+<p><button class="play-button sentence" id="s-00-04-14-639" data-start="00:04:14,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you got the math right?</p>
+<div class="zh">您时间算对了吗？</div>
+
+<p><button class="play-button sentence" id="s-00-04-17-759" data-start="00:04:17,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From the beginning of the second year of October 7th.</p>
+<div class="zh">从10月7日事件进入第二周年算起。</div>
+
+<p><button class="play-button sentence" id="s-00-04-21-240" data-start="00:04:21,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the Prozifix for Ending this War on terms that normal humans could treat a UNI would consider to be really an end of the war.</p>
+<div class="zh">而以正常人乃至联合国认可的真正终战条件来看，结束这场战争的前景...</div>
+
+<p><a name="block-10"></a></p>
+<h3>00:04:29</h3>
+<p><button class="play-button sentence" id="s-00-04-29-399" data-start="00:04:29,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are no closer than they were six months ago or a year ago, partly because the mutual objectives of Hamas and this current Israeli government are simply mutually exclusive.</p>
+<div class="zh">与六个月或一年前相比毫无进展，部分原因在于哈马斯与当前以色列政府的根本目标完全相斥。</div>
+
+<p><button class="play-button sentence" id="s-00-04-41-680" data-start="00:04:41,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hamas needs wants to survive and isn't using the hostages as a bargaining chip to do that.</p>
+<div class="zh">哈马斯渴望生存，正将人质作为 bargaining chip 来实现此目标。</div>
+
+<p><button class="play-button sentence" id="s-00-04-50-000" data-start="00:04:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It wants an end of the war and with, for all of all, Israeli forces from Gaza.</p>
+<div class="zh">它要求结束战争，并要求以色列军队完全撤出加沙。</div>
+
+<p><a name="block-11"></a></p>
+<h3>00:04:53</h3>
+<p><button class="play-button sentence" id="s-00-04-53-959" data-start="00:04:53,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not going to happen.</p>
+<div class="zh">这不可能实现。</div>
+
+<p><button class="play-button sentence" id="s-00-04-55-839" data-start="00:04:55,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israeli government, on the other hand, is tethered to this notion of total victory.</p>
+<div class="zh">另一方面，以色列政府执着于"全面胜利"的理念。</div>
+
+<p><button class="play-button sentence" id="s-00-05-01-519" data-start="00:05:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You heard Michael Rubio.</p>
+<div class="zh">您听马克·卢比奥所言。</div>
+
+<p><button class="play-button sentence" id="s-00-05-03-240" data-start="00:05:03,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He all, but endorsed the, the Israeli government's view that forget howling out Hamas as a military organization.</p>
+<div class="zh">他几乎完全认同以色列政府观点——不仅要消灭哈马斯军事组织。</div>
+
+<p><button class="play-button sentence" id="s-00-05-15-079" data-start="00:05:15,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israelis and all the Americans want Hamas eliminated.</p>
+<div class="zh">以色列和所有美国人都希望消灭哈马斯。</div>
+
+<p><button class="play-button sentence" id="s-00-05-17-319" data-start="00:05:17,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, I would argue that's a fair position, but it's simply unachievable.</p>
+<div class="zh">我认为这个立场合理，但根本无法实现。</div>
+
+<p><a name="block-12"></a></p>
+<h3>00:05:24</h3>
+<p><button class="play-button sentence" id="s-00-05-24-040" data-start="00:05:24,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as a consequence, we find ourselves farther away from answering the three questions that nobody has the will or capacity to answer.</p>
+<div class="zh">因此，我们离解答这三个无人愿意或无力回答的问题越来越远：</div>
+
+<p><button class="play-button sentence" id="s-00-05-32-639" data-start="00:05:32,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who will what's going to govern Gaza?</p>
+<div class="zh">谁或什么来治理加沙？</div>
+
+<p><button class="play-button sentence" id="s-00-05-34-480" data-start="00:05:34,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who or what is going to provide security in law and order?</p>
+<div class="zh">谁或什么来提供法治与秩序保障？</div>
+
+<p><button class="play-button sentence" id="s-00-05-36-920" data-start="00:05:36,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And who or what is going to engage, not only in the risks of hostages, but in humanitarian assistance and the reconstruction of a place that is steeped in misery for the hostages or families and two million Palestinians who are suffering varying degrees of emotional and physical depredation?</p>
+<div class="zh">谁或什么将不仅承担人质风险，还要开展人道援助与重建工作——这片深陷苦难的土地关乎人质及其家庭，以及二百万遭受不同程度身心摧残的巴勒斯坦人？</div>
+
+<p><a name="block-13"></a></p>
+<h3>00:05:57</h3>
+<p><button class="play-button sentence" id="s-00-05-57-399" data-start="00:05:57,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen Israel become increasingly isolated on the international stage because of its position, everything that you've outlined there.</p>
+<div class="zh">如您所述，我们看到以色列因其立场在国际舞台上日益孤立。</div>
+
+<p><button class="play-button sentence" id="s-00-06-04-519" data-start="00:06:04,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is the U.S. now also becoming more and more isolated?</p>
+<div class="zh">美国是否也越来越孤立？</div>
+
+<p><button class="play-button sentence" id="s-00-06-08-560" data-start="00:06:08,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen so many allies announce their intention to acknowledge Palestine, the state of Palestine, at the UN General Assembly next week.</p>
+<div class="zh">我们看到众多盟友宣布将在下周联合国大会上承认巴勒斯坦国。</div>
+
+<p><button class="play-button sentence" id="s-00-06-17-000" data-start="00:06:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen the EU and many Arab states talking about an economic boycott of Israel, but yet the U.S. stands so firmly with them at this time.</p>
+<div class="zh">欧盟与多个阿拉伯国家讨论对以色列经济抵制，但美国此刻仍坚定支持以色列。</div>
+
+<p><a name="block-14"></a></p>
+<h3>00:06:26</h3>
+<p><button class="play-button sentence" id="s-00-06-26-600" data-start="00:06:26,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you're not, I think you put your finger on it.</p>
+<div class="zh">但您确实指出了关键。</div>
+
+<p><button class="play-button sentence" id="s-00-06-28-800" data-start="00:06:28,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's talking.</p>
+<div class="zh">目前仅停留在口头。</div>
+
+<p><button class="play-button sentence" id="s-00-06-30-800" data-start="00:06:30,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In two years, almost two years, the three countries that these early care most about in Europe, the Brits, the French and the Germans, have simply postured.</p>
+<div class="zh">近两年来，以色列在欧洲最重视的三大国——英法德——仅仅作姿态。</div>
+
+<p><button class="play-button sentence" id="s-00-06-41-319" data-start="00:06:41,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They haven't imposed significant or serious pressure.</p>
+<div class="zh">未施加重大实质性压力。</div>
+
+<p><button class="play-button sentence" id="s-00-06-44-838" data-start="00:06:44,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They haven't imposed cost or consequences on Israel, and not in the Netanyahu government, since the majority of the Israeli public wants the war to end and is prepared to accept something way short of total victory.</p>
+<div class="zh">未让以色列付出代价或承担后果（并非针对内塔尼亚胡政府，因为多数以色列民众希望结束战争，愿接受远非全面胜利的结果）。</div>
+
+<p><a name="block-15"></a></p>
+<h3>00:06:57</h3>
+<p><button class="play-button sentence" id="s-00-06-57-160" data-start="00:06:57,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And look at the Arab states.</p>
+<div class="zh">再看阿拉伯国家。</div>
+
+<p><button class="play-button sentence" id="s-00-06-58-639" data-start="00:06:58,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They just met in Doha.</p>
+<div class="zh">他们刚在多哈会晤。</div>
+
+<p><button class="play-button sentence" id="s-00-07-01-759" data-start="00:07:01,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've watched the exponential rise of Palestinian deaths and humanitarian catastrophe.</p>
+<div class="zh">目睹巴勒斯坦死亡人数指数级增长及人道主义灾难。</div>
+
+<p><button class="play-button sentence" id="s-00-07-06-519" data-start="00:07:06,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have failed to impose a single cost or consequence.</p>
+<div class="zh">却未能施加任何代价或后果。</div>
+
+<p><button class="play-button sentence" id="s-00-07-11-560" data-start="00:07:11,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel's treaty partners, Jordan and Egypt.</p>
+<div class="zh">以色列的条约伙伴约旦和埃及。</div>
+
+<p><button class="play-button sentence" id="s-00-07-14-040" data-start="00:07:14,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Abraham, according to countries, the ones with formal relations, the Emirates and the Bahrainis and the punitive Saudis at one point, they're either too scared of Donald Trump or too indebted to him or for any number of reasons they don't want a wrangle with the Israelis by imposing serious cost or consequences.</p>
+<div class="zh">亚伯拉罕协议国家（有正式关系的阿联酋、巴林及曾考虑制裁的沙特），要么过于畏惧特朗普，要么深受其恩惠，或因种种理由不愿通过对以施加重大代价来引发争执。</div>
+
+<p><a name="block-16"></a></p>
+<h3>00:07:33</h3>
+<p><button class="play-button sentence" id="s-00-07-33-480" data-start="00:07:33,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I understand all of it seems as if there's great pressure.</p>
+<div class="zh">我理解这一切看似压力巨大。</div>
+
+<p><button class="play-button sentence" id="s-00-07-38-199" data-start="00:07:38,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It seems as if Israel is isolated and certainly is.</p>
+<div class="zh">以色列看似孤立，也确实如此。</div>
+
+<p><button class="play-button sentence" id="s-00-07-42-040" data-start="00:07:42,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in terms of affecting Israeli government behavior, I don't see this isolation having any impact at all, partly because the United States is backing the Israelis, partly because of the nature of the current Israeli government.</p>
+<div class="zh">但就对以色列政府行为的影响而言，这种孤立毫无作用，部分因美国支持以色列，部分因当前以色列政府性质。</div>
+
+<p><a name="block-17"></a></p>
+<h3>00:07:55</h3>
+<p><button class="play-button sentence" id="s-00-07-55-879" data-start="00:07:55,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Aaron David Miller, former State Department Middle East negotiation.</p>
+<div class="zh">好的，感谢前国务院中东谈判专家阿伦·戴维·米勒。</div>
+
+<p><button class="play-button sentence" id="s-00-08-00-319" data-start="00:08:00,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for joining us with your thoughts here on BBC News.</p>
+<div class="zh">非常感谢您做客BBC新闻分享见解。</div>
+
+<p><button class="play-button sentence" id="s-00-08-03-160" data-start="00:08:03,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Love you, Secretariat, thanks for having me.</p>
+<div class="zh">荣幸之至，感谢邀请。</div>
+
+<p><button class="play-button sentence" id="s-00-08-07-160" data-start="00:08:07,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The long battle for ownership of TikTok's American operations may be coming to an end.</p>
+<div class="zh">关于TikTok美国业务所有权的长期争夺可能接近尾声。</div>
+
+<p><button class="play-button sentence" id="s-00-08-12-000" data-start="00:08:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Treasury Secretary Scott Besend said a framework deal to move its American operations to U.S.</p>
+<div class="zh">财政部长斯科特·贝森德称已达成框架协议，将其美国业务转移至美方实体。</div>
+
+<p><a name="block-18"></a></p>
+<h3>00:08:17</h3>
+<p><button class="play-button sentence" id="s-00-08-17-199" data-start="00:08:17,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Controlled ownership has been reached.</p>
+<div class="zh">已达成受控的所有权。</div>
+
+<p><button class="play-button sentence" id="s-00-08-20-199" data-start="00:08:20,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump also teased the deal on social media saying the big trade meeting in Europe between the United States of America and China has gone very well.</p>
+<div class="zh">特朗普总统还在社交媒体上调侃这笔交易，称美中两国在欧洲举行的大型贸易会议进展非常顺利。</div>
+
+<p><button class="play-button sentence" id="s-00-08-29-120" data-start="00:08:29,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He continued, a deal was also reached on a certain company that young people in our country very much wanted to save.</p>
+<div class="zh">他接着说，还就我国年轻人非常想拯救的某家公司达成了协议。</div>
+
+<p><button class="play-button sentence" id="s-00-08-36-558" data-start="00:08:36,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will be very happy, he says, teasing TikTok there.</p>
+<div class="zh">他说他们会非常高兴，并在那里调侃TikTok。</div>
+
+<p><a name="block-19"></a></p>
+<h3>00:08:39</h3>
+<p><button class="play-button sentence" id="s-00-08-39-840" data-start="00:08:39,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will be speaking to President Xi on Friday.</p>
+<div class="zh">我将在周五与习近平主席通话。</div>
+
+<p><button class="play-button sentence" id="s-00-08-43-840" data-start="00:08:43,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> TikTok of course faced a deadline for its Chinese owners to find a buyer or face a shutdown and ban here in the U.S.</p>
+<div class="zh">TikTok当然面临着最后期限，其中国所有者必须找到买家，否则将面临在美国的关闭和禁令。</div>
+
+<p><button class="play-button sentence" id="s-00-08-51-480" data-start="00:08:51,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The video sharing app owned by Bite Dance is used by more than 170 million users in the U.S.</p>
+<div class="zh">这款由字节跳动拥有的视频分享应用在美国拥有超过1.7亿用户。</div>
+
+<p><button class="play-button sentence" id="s-00-08-58-519" data-start="00:08:58,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's been given a respite from that ban a few times now by President Trump.</p>
+<div class="zh">特朗普总统现在已经好几次给了它禁令的喘息之机。</div>
+
+<p><a name="block-20"></a></p>
+<h3>00:09:02</h3>
+<p><button class="play-button sentence" id="s-00-09-02-840" data-start="00:09:02,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's talk about all the issues that are involved here with our North America technology correspondent Lily Jamali.</p>
+<div class="zh">因此，让我们与我们的北美科技记者莉莉·贾马利谈谈这里涉及的所有问题。</div>
+
+<p><button class="play-button sentence" id="s-00-09-08-639" data-start="00:09:08,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been a lot of talk about this, President Trump pushing out that deadline time and again.</p>
+<div class="zh">关于此事已有诸多讨论，即特朗普总统一次又一次地推迟那个最后期限。</div>
+
+<p><button class="play-button sentence" id="s-00-09-14-318" data-start="00:09:14,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are we any clearer about the details here?</p>
+<div class="zh">我们对这里的细节是否更清楚了一些？</div>
+
+<p><button class="play-button sentence" id="s-00-09-16-720" data-start="00:09:16,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who is going to buy TikTok under what terms?</p>
+<div class="zh">谁将在什么条款下收购TikTok？</div>
+
+<p><a name="block-21"></a></p>
+<h3>00:09:21</h3>
+<p><button class="play-button sentence" id="s-00-09-21-639" data-start="00:09:21,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can't say that the details are much clearer after today.</p>
+<div class="zh">我不能说在今天之后细节就清楚多了。</div>
+
+<p><button class="play-button sentence" id="s-00-09-25-438" data-start="00:09:25,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are so many unknowns into your point just now.</p>
+<div class="zh">正如你刚才指出的，存在太多未知数。</div>
+
+<p><button class="play-button sentence" id="s-00-09-28-759" data-start="00:09:28,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The big question that everyone wants the answer to is who will be buying TikTok?</p>
+<div class="zh">每个人都想得到答案的大问题是：谁将收购TikTok？</div>
+
+<p><button class="play-button sentence" id="s-00-09-33-318" data-start="00:09:33,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who is this American buyer that is going to be joling out?</p>
+<div class="zh">这位将要掏出（巨资）的美国买家是谁？</div>
+
+<p><button class="play-button sentence" id="s-00-09-37-320" data-start="00:09:37,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could be tens of billions of dollars to acquire this app from China's Bite Dance.</p>
+<div class="zh">可能需要花费数百亿美元从中国的字节跳动手中收购这款应用。</div>
+
+<p><a name="block-22"></a></p>
+<h3>00:09:43</h3>
+<p><button class="play-button sentence" id="s-00-09-43-919" data-start="00:09:43,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also don't know what happens to the algorithm.</p>
+<div class="zh">我们也不知道算法会如何处理。</div>
+
+<p><button class="play-button sentence" id="s-00-09-46-639" data-start="00:09:46,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This very valuable algorithm that pushes so much content to TikTok's 170 million American users does bite dance?</p>
+<div class="zh">这个非常有价值的算法向TikTok的1.7亿美国用户推送大量内容，字节跳动会（放弃它吗）？</div>
+
+<p><button class="play-button sentence" id="s-00-09-56-600" data-start="00:09:56,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Part with that algorithm is the new owner expected to build its own.</p>
+<div class="zh">新所有者是期望放弃那个算法并构建自己的算法吗？</div>
+
+<p><button class="play-button sentence" id="s-00-10-01-320" data-start="00:10:01,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just don't know the answer to that.</p>
+<div class="zh">我们就是不知道这个问题的答案。</div>
+
+<p><button class="play-button sentence" id="s-00-10-03-038" data-start="00:10:03,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there are a whole host of national security questions that loom.</p>
+<div class="zh">还有一大堆国家安全问题若隐若现。</div>
+
+<p><a name="block-23"></a></p>
+<h3>00:10:06</h3>
+<p><button class="play-button sentence" id="s-00-10-06-879" data-start="00:10:06,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've been talking to experts today.</p>
+<div class="zh">我今天一直在与专家们交谈。</div>
+
+<p><button class="play-button sentence" id="s-00-10-09-120" data-start="00:10:09,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have questions about what safeguards might be put in place as part of this deal with respect to protecting the data of American users.</p>
+<div class="zh">他们质疑，作为交易的一部分，可能会采取哪些保护措施来保护美国用户的数据。</div>
+
+<p><button class="play-button sentence" id="s-00-10-17-438" data-start="00:10:17,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But pretty much across the board, I would say there's some skepticism about this deal from outside because we have seen announcements of this by the administration before and it didn't pan out.</p>
+<div class="zh">但几乎在所有方面，我都会说外界对这笔交易存在一些怀疑，因为我们之前见过政府宣布此类消息，但最终都未能实现。</div>
+
+<p><a name="block-24"></a></p>
+<h3>00:10:31</h3>
+<p><button class="play-button sentence" id="s-00-10-31-158" data-start="00:10:31,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You will get more details presumably on Friday.</p>
+<div class="zh">预计周五你会得到更多细节。</div>
+
+<p><button class="play-button sentence" id="s-00-10-33-639" data-start="00:10:33,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's when, as you say, Donald Trump and President Xi are expected to speak by phone.</p>
+<div class="zh">那时，正如你所说，唐纳德·特朗普和习近平主席预计将进行电话交谈。</div>
+
+<p><button class="play-button sentence" id="s-00-10-38-879" data-start="00:10:38,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In many people waiting on that, not just young people who use it, but many people, of course, their entire livelihoods are based on TikTok.</p>
+<div class="zh">许多人在等待这个消息，不仅仅是使用它的年轻人，当然还有许多人，他们的全部生计都依赖于TikTok。</div>
+
+<p><button class="play-button sentence" id="s-00-10-46-278" data-start="00:10:46,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they'll be watching that closely.</p>
+<div class="zh">所以他们将密切关注此事。</div>
+
+<p><a name="block-25"></a></p>
+<h3>00:10:48</h3>
+<p><button class="play-button sentence" id="s-00-10-48-278" data-start="00:10:48,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lily Jamali, thank you very much for all of that detail.</p>
+<div class="zh">莉莉·贾马利，非常感谢你提供的所有这些细节。</div>
+
+<p><button class="play-button sentence" id="s-00-10-53-240" data-start="00:10:53,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the director of the FBI says DNA evidence retrieved from the Utah Valley University links the chief suspect to the gun used to shoot the right-wing activist Charlie Kirk.</p>
+<div class="zh">现在，联邦调查局局长表示，从犹他谷大学检索到的DNA证据将主要嫌疑人与用于枪击右翼活动人士查理·柯克的枪支联系起来。</div>
+
+<p><button class="play-button sentence" id="s-00-11-03-840" data-start="00:11:03,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> FBI director Cash Patel says a towel wrapped around the firearm is linked to the 22-year-old Tyler Robinson's DNA.</p>
+<div class="zh">联邦调查局局长卡什·帕特尔称，包裹枪支的毛巾与22岁的泰勒·罗宾逊的DNA有关联。</div>
+
+<p><a name="block-26"></a></p>
+<h3>00:11:11</h3>
+<p><button class="play-button sentence" id="s-00-11-11-519" data-start="00:11:11,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> US authorities say Robinson has not been cooperating with investigators and they're still trying to pin down a motive for the attack.</p>
+<div class="zh">美国当局表示，罗宾逊一直没有配合调查人员，他们仍在努力确定这次袭击的动机。</div>
+
+<p><button class="play-button sentence" id="s-00-11-19-399" data-start="00:11:19,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Robinson is expected to be charged in court tomorrow and is facing an aggravated murder charge, obstruction of justice, and the felony discharge of a firearm causing serious bodily injury.</p>
+<div class="zh">罗宾逊预计将于明天在法庭上被起诉，面临严重谋杀罪、妨碍司法公正和导致严重身体伤害的重罪开枪指控。</div>
+
+<p><button class="play-button sentence" id="s-00-11-30-879" data-start="00:11:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The killing of Charlie Kirk has sparked a major debate within US politics about growing political violence and extreme rhetoric.</p>
+<div class="zh">查理·柯克被杀事件在美国政界引发了一场关于日益增长的政治暴力和极端言论的重大辩论。</div>
+
+<p><a name="block-27"></a></p>
+<h3>00:11:38</h3>
+<p><button class="play-button sentence" id="s-00-11-38-399" data-start="00:11:38,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Trump administration blamed the US political left for demonizing right-wing figures like Kirk, and it said it's going to begin taking steps to dismantle progressive groups which they say encourage violence.</p>
+<div class="zh">特朗普政府指责美国政治左派妖魔化像柯克这样的右翼人物，并表示将开始采取措施解散他们所称的鼓励暴力的进步团体。</div>
+
+<p><button class="play-button sentence" id="s-00-11-51-678" data-start="00:11:51,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As President J.D. Vance struck a similar tone when he was honoring Kirk and hosting his radio show, he opened the show by thanking Charlie Kirk for his support of him personally and the example he had led as a father.</p>
+<div class="zh">而总统J.D.万斯在纪念柯克并主持他的广播节目时也表达了类似的基调，他开场感谢了查理·柯克对他个人的支持以及他作为父亲树立的榜样。</div>
+
+<p><button class="play-button sentence" id="s-00-12-04-599" data-start="00:12:04,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's have a listen to just what the Vice President said.</p>
+<div class="zh">让我们来听听副总统具体说了什么。</div>
+
+<p><a name="block-28"></a></p>
+<h3>00:12:08</h3>
+<p><button class="play-button sentence" id="s-00-12-08-158" data-start="00:12:08,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's important, and Erica asked me this, to make sure that his movement, the movement that Charlie started has to keep going.</p>
+<div class="zh">重要的是，埃里卡问过我这一点，要确保他的运动，查理发起的运动必须继续下去。</div>
+
+<p><button class="play-button sentence" id="s-00-12-15-078" data-start="00:12:15,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to build upon it, we have to add to it.</p>
+<div class="zh">我们必须在此基础上发展，必须为其增添内容。</div>
+
+<p><button class="play-button sentence" id="s-00-12-17-240" data-start="00:12:17,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have to make sure that the next generation of young people feels confident and courageous to speak their mind and to speak the truth.</p>
+<div class="zh">我们必须确保下一代年轻人有信心、有勇气说出自己的想法和真相。</div>
+
+<p><button class="play-button sentence" id="s-00-12-24-720" data-start="00:12:24,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to talk about that.</p>
+<div class="zh">我们将讨论这一点。</div>
+
+<p><a name="block-29"></a></p>
+<h3>00:12:26</h3>
+<p><button class="play-button sentence" id="s-00-12-26-559" data-start="00:12:26,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to talk about why do we do this?</p>
+<div class="zh">我们将讨论我们为什么这样做？</div>
+
+<p><button class="play-button sentence" id="s-00-12-28-158" data-start="00:12:28,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, we do this so that we can enact good public policy and take back our country.</p>
+<div class="zh">当然，我们这样做是为了能够制定良好的公共政策并收回我们的国家。</div>
+
+<p><button class="play-button sentence" id="s-00-12-32-559" data-start="00:12:32,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to talk with senior officials of the administration about what we're trying to do to honor Charlie's legacy in that way.</p>
+<div class="zh">我们将与政府高级官员讨论，我们正试图以这种方式来纪念查理的遗产。</div>
+
+<p><button class="play-button sentence" id="s-00-12-39-158" data-start="00:12:39,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, we have to make sure that the killer is brought to justice, and importantly, we have to talk about this incredibly destructive movement of left-wing extremism that has grown up over the last few years.</p>
+<div class="zh">当然，我们必须确保凶手被绳之以法，重要的是，我们必须讨论过去几年滋长起来的这种极具破坏性的左翼极端主义运动。</div>
+
+<p><a name="block-30"></a></p>
+<h3>00:12:53</h3>
+<p><button class="play-button sentence" id="s-00-12-53-360" data-start="00:12:53,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I believe as part of the reason why Charlie was killed by an assassins bullet, we're going to talk about how to dismantle that and how to bring real unity, real unity that can only come when we tell the truth, and everybody knows that they can speak their mind about the issues of the day without being cut down by a murderers gun.</p>
+<div class="zh">我相信这是查理被刺客子弹杀害的部分原因，我们将讨论如何瓦解这种运动，如何实现真正的团结，只有当我们说出真相，每个人都知道他们可以就当下问题畅所欲言而不被凶手的枪击倒时，真正的团结才会到来。</div>
+
+<p><button class="play-button sentence" id="s-00-13-13-840" data-start="00:13:13,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's talk about some more of the issues there raised by Vice President J.D. Vance rejoined now by former Democratic congressman from Minnesota, Dean Phillips.</p>
+<div class="zh">让我们再讨论一些副总统J.D.万斯在那里提出的问题，现在再次加入我们的是明尼苏达州前民主党国会议员迪恩·菲利普斯。</div>
+
+<p><button class="play-button sentence" id="s-00-13-22-278" data-start="00:13:22,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for being with us here on BBC News.</p>
+<div class="zh">感谢您来到BBC新闻与我们在一起。</div>
+
+<p><a name="block-31"></a></p>
+<h3>00:13:24</h3>
+<p><button class="play-button sentence" id="s-00-13-24-960" data-start="00:13:24,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been many calls to move beyond violent political rhetoric, but when you hear pledges from the Vice President and others in the administration to use every available resource as they put it, of the government, to stamp out what they call the radical left, how does that help that moving forward?</p>
+<div class="zh">已有许多呼吁要求超越暴力的政治言论，但当你听到副总统和政府其他人员承诺使用他们所说的政府的一切可用资源来消灭他们所谓的激进左派时，这如何有助于推动事情向前发展？</div>
+
+<p><button class="play-button sentence" id="s-00-13-43-960" data-start="00:13:43,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well clearly, Katrina, it doesn't serve the purpose that I think any thoughtful, common sense reasonable American or citizen of the world would expect.</p>
+<div class="zh">嗯，很明显，卡特里娜，这并不符合我认为任何深思熟虑的、有常识的、理性的美国人或世界公民所期望的目的。</div>
+
+<p><button class="play-button sentence" id="s-00-13-54-080" data-start="00:13:54,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not an issue unique to one side or the other.</p>
+<div class="zh">这不是任何一方独有的问题。</div>
+
+<p><a name="block-32"></a></p>
+<h3>00:13:57</h3>
+<p><button class="play-button sentence" id="s-00-13-57-399" data-start="00:13:57,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm saddened that the President and Vice President have neglected to recognize the same cancer that exists on the far right.</p>
+<div class="zh">令我感到悲哀的是，总统和副总统忽视了极右翼存在的同样毒瘤。</div>
+
+<p><button class="play-button sentence" id="s-00-14-07-200" data-start="00:14:07,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Katrina, we didn't leave the Stone Age because we ran out of rocks.</p>
+<div class="zh">卡特里娜，我们离开石器时代并不是因为用完了石头。</div>
+
+<p><button class="play-button sentence" id="s-00-14-11-519" data-start="00:14:11,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We matured as a civilization.</p>
+<div class="zh">我们是作为一个文明成熟起来的。</div>
+
+<p><button class="play-button sentence" id="s-00-14-14-360" data-start="00:14:14,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We litigate in democracies with words, not weapons.</p>
+<div class="zh">我们在民主国家用言辞而非武器进行辩论。</div>
+
+<p><button class="play-button sentence" id="s-00-14-17-919" data-start="00:14:17,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'm afraid this is a terrible step backwards if our President who represents not just the United States of America, but in many ways, the direction of the free world doesn't actually try to lead with compassion, reconciliation, and reunion.</p>
+<div class="zh">我担心这是一个可怕的倒退，如果我们的总统——他代表的不仅仅是美利坚合众国，而且在很多方面代表着自由世界的方向——不真正尝试以同情、和解与团结来领导。</div>
+
+<p><a name="block-33"></a></p>
+<h3>00:14:35</h3>
+<p><button class="play-button sentence" id="s-00-14-35-558" data-start="00:14:35,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because I think the consequences will be very dire.</p>
+<div class="zh">因为我认为后果将非常可怕。</div>
+
+<p><button class="play-button sentence" id="s-00-14-39-399" data-start="00:14:39,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think when you're talking there about not going backwards that the U.S. is getting more violent in a political sense?</p>
+<div class="zh">你认为，当你在那里谈论不要倒退时，美国在政治意义上是否正变得更具暴力性？</div>
+
+<p><button class="play-button sentence" id="s-00-14-46-000" data-start="00:14:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, there's this assassination, the attempts on President Trump himself, your own friend, Melissa Hortman in Minnesota.</p>
+<div class="zh">我的意思是，有这次暗杀，有针对特朗普总统本人的企图，还有你在明尼苏达的朋友梅丽莎·霍特曼。</div>
+
+<p><button class="play-button sentence" id="s-00-14-53-879" data-start="00:14:53,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, the sad truth is when you serve in public office, you do put your life at risk and both through the United States history, we've had sadly political assassinations of the President's and others in political office.</p>
+<div class="zh">你知道，可悲的事实是，当你担任公职时，你确实将生命置于危险之中，纵观美国历史，我们 sadly 发生过总统和其他政治人物的政治暗杀。</div>
+
+<p><a name="block-34"></a></p>
+<h3>00:15:08</h3>
+<p><button class="play-button sentence" id="s-00-15-08-360" data-start="00:15:08,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not new.</p>
+<div class="zh">这并不新鲜。</div>
+
+<p><button class="play-button sentence" id="s-00-15-10-360" data-start="00:15:10,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But social media has amplified the radicalization, especially of young people.</p>
+<div class="zh">但社交媒体放大了激进化，尤其是年轻人的激进化。</div>
+
+<p><button class="play-button sentence" id="s-00-15-17-720" data-start="00:15:17,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People are spending way too much time on screens and as governor Spencer Cox, a Republican from Utah who I admire greatly.</p>
+<div class="zh">人们在屏幕上花费了太多时间，正如我非常钦佩的犹他州共和党人斯宾塞·考克斯州长所说。</div>
+
+<p><button class="play-button sentence" id="s-00-15-24-720" data-start="00:15:24,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's encouraging people to get off the screens and go touch grass, get back into your neighborhoods, build your community, and start seeing the good and everybody.</p>
+<div class="zh">他鼓励人们离开屏幕，去接触现实（字面：触摸草地），回到你的邻里，建设你的社区，开始看到每个人身上的优点。</div>
+
+<p><a name="block-35"></a></p>
+<h3>00:15:33</h3>
+<p><button class="play-button sentence" id="s-00-15-33-360" data-start="00:15:33,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because that is the American way, it's the way of the free world.</p>
+<div class="zh">因为那是美国的方式，是自由世界的方式。</div>
+
+<p><button class="play-button sentence" id="s-00-15-37-519" data-start="00:15:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have to get to it.</p>
+<div class="zh">我们必须做到这一点。</div>
+
+<p><button class="play-button sentence" id="s-00-15-38-519" data-start="00:15:38,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If the President won't lead us there, I do have faith that Americans on the center right and center left will unify.</p>
+<div class="zh">如果总统不领导我们走向那里，我确实相信中右和中左的美国人会团结起来。</div>
+
+<p><button class="play-button sentence" id="s-00-15-45-799" data-start="00:15:45,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I will tell you, social media is making this even more difficult than ever because people have become indoctrinated in some bizarre theories, misinformation, and mistruth.</p>
+<div class="zh">但我要告诉你，社交媒体使这变得比以往任何时候都更加困难，因为人们已经被灌输了一些奇怪的理论、错误信息和谎言。</div>
+
+<p><a name="block-36"></a></p>
+<h3>00:15:57</h3>
+<p><button class="play-button sentence" id="s-00-15-57-240" data-start="00:15:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that maybe a starting point for finding that consensus and that unity that may be both sides on the hill could work together to pass legislation, their meaningful legislation, their free regulation, which they have failed to do thus far?</p>
+<div class="zh">这或许能成为寻找共识与团结的起点，让国会两党能够共同通过立法——通过他们迄今未能实现的有意义的立法和自由监管？</div>
+
+<p><button class="play-button sentence" id="s-00-16-11-159" data-start="00:16:11,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I'd have to say Katrina, I'm yet to see any country in the world, at least free countries in the world, manage social media and it's ill well.</p>
+<div class="zh">是的卡特里娜，我必须说，我尚未见过世界上有任何国家——至少自由世界国家——能妥善管理社交媒体及其弊病。</div>
+
+<p><button class="play-button sentence" id="s-00-16-22-399" data-start="00:16:22,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think it's a unique challenge for the world's democracies to balance that intersection between freedom, freedom of speech, but also security, personal safety and security.</p>
+<div class="zh">我认为对全球民主国家而言，平衡自由（包括言论自由）与安全及人身保障之间的交叉点是一项独特挑战。</div>
+
+<p><a name="block-37"></a></p>
+<h3>00:16:33</h3>
+<p><button class="play-button sentence" id="s-00-16-33-558" data-start="00:16:33,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'm not sure there's any legislation pending right now that would address that.</p>
+<div class="zh">我不确定目前是否有任何待审议立法能解决这个问题。</div>
+
+<p><button class="play-button sentence" id="s-00-16-37-000" data-start="00:16:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I happen to increasingly favor an age minimum for the use of social media accounts, just as we have, of course, for drivers, for consumption of alcohol for voting.</p>
+<div class="zh">我越来越倾向于设定社交媒体账户使用年龄下限，就像我们对驾驶、饮酒和投票设定的年龄限制一样。</div>
+
+<p><button class="play-button sentence" id="s-00-16-49-198" data-start="00:16:49,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that would be one step in the right direction.</p>
+<div class="zh">我认为这是迈向正确方向的一步。</div>
+
+<p><button class="play-button sentence" id="s-00-16-52-639" data-start="00:16:52,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we need ideas from wherever they come, not right or left, because this is affecting all citizens of the free world.</p>
+<div class="zh">但我们需要集思广益，不分左右派别，因为这正影响着自由世界所有公民。</div>
+
+<p><a name="block-38"></a></p>
+<h3>00:16:59</h3>
+<p><button class="play-button sentence" id="s-00-16-59-759" data-start="00:16:59,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think sadly our legislative bodies all around the world have failed to keep up with the rapidly changing tech culture.</p>
+<div class="zh">可悲的是，我认为全球立法机构都未能跟上快速变革的科技文化。</div>
+
+<p><button class="play-button sentence" id="s-00-17-07-960" data-start="00:17:07,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And therefore, many are operating in vacuums with impunity.</p>
+<div class="zh">因此许多机构在真空中运作却免受追责。</div>
+
+<p><button class="play-button sentence" id="s-00-17-12-440" data-start="00:17:12,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's high time that we stop fighting one another and fight for the policies that will keep people safe and secure and allow democracies to endure for generations to come.</p>
+<div class="zh">现在正是停止内斗、为保障人民安全与维护民主制度世代存续而奋斗的时候。</div>
+
+<p><a name="block-39"></a></p>
+<h3>00:17:22</h3>
+<p><button class="play-button sentence" id="s-00-17-22-278" data-start="00:17:22,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<div class="zh">好的。</div>
+
+<p><button class="play-button sentence" id="s-00-17-23-278" data-start="00:17:23,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dean Phillips, former Democratic Congressman from Minnesota, thank you for joining us here on BBC News.</p>
+<div class="zh">明尼苏达州前民主党国会议员迪恩·菲利普斯，感谢您接受BBC新闻采访。</div>
+
+<p><button class="play-button sentence" id="s-00-17-28-159" data-start="00:17:28,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you, Katrina.</p>
+<div class="zh">谢谢你，卡特里娜。</div>
+
+<p><button class="play-button sentence" id="s-00-17-30-679" data-start="00:17:30,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Donald Trump says the U.S. military has carried out a second strike on Venezuela and drug cartel vessel on its way to the United States.</p>
+<div class="zh">唐纳德·特朗普总统称美军对委内瑞拉贩毒集团前往美国的船只实施了第二次打击。</div>
+
+<p><button class="play-button sentence" id="s-00-17-39-240" data-start="00:17:39,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president said three men were killed in the strike, adding that it had occurred in international waters.</p>
+<div class="zh">总统表示此次行动造成三人死亡，并强调袭击发生在国际水域。</div>
+
+<p><a name="block-40"></a></p>
+<h3>00:17:45</h3>
+<p><button class="play-button sentence" id="s-00-17-45-400" data-start="00:17:45,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Trump broke the news himself on his true social platform, saying, this morning on my orders, U.S. military forces conducted a second kinetic strike against positively identified extraordinarily violent drug trafficking cartels and narco-terrests in the sadcom area of responsibility.</p>
+<div class="zh">特朗普在其真实社交平台亲自发布消息称："今晨根据我的命令，美军对责任区内已明确识别的极端暴力贩毒集团与毒品恐怖分子实施了第二次动能打击"。</div>
+
+<p><button class="play-button sentence" id="s-00-18-03-480" data-start="00:18:03,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These extremely violent drug trafficking cartels, he said, pose a threat to U.S. national security, foreign policy, and vital U.S. interests.</p>
+<div class="zh">他表示这些极端暴力的贩毒集团对美国国家安全、外交政策及重大利益构成威胁。</div>
+
+<p><button class="play-button sentence" id="s-00-18-13-400" data-start="00:18:13,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> British Prime Minister Sir Keir Starmer said he would never have appointed Lord Peter Mandelson to be his ambassador to the U.S. had he known the full details of his relationship with convicted pedophile Jeffrey Epstein.</p>
+<div class="zh">英国首相基尔·斯塔默爵士表示，若早知彼得·曼德尔森勋爵与定案恋童癖者杰弗里·爱泼斯坦关系的全部细节，绝不会任命其为驻美大使。</div>
+
+<p><a name="block-41"></a></p>
+<h3>00:18:27</h3>
+<p><button class="play-button sentence" id="s-00-18-27-240" data-start="00:18:27,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mandelson was fired after leaked emails showed that he'd sent support of messages to the convicted sex offender Jeffrey Epstein following his guilty plea.</p>
+<div class="zh">曼德尔森遭解职是因泄露邮件显示，其在爱泼斯坦认罪后仍向这名定案性犯罪者发送支持信息。</div>
+
+<p><button class="play-button sentence" id="s-00-18-37-039" data-start="00:18:37,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sir Keir acknowledged that he knew emails existed between Mandelson and Epstein, but maintains that he didn't know what was in them in his first comment since Mandelson's firing, secured detailed what he learned that led to his decision.</p>
+<div class="zh">斯塔默爵士承认知晓曼德尔森与爱泼斯坦存在邮件往来，但坚称不知具体内容。他在曼德尔森被解职后的首次声明中详细说明了获悉的信息如何促成其决定。</div>
+
+<p><button class="play-button sentence" id="s-00-18-51-759" data-start="00:18:51,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Had I known then what I know now, I'd never have appointed it.</p>
+<div class="zh">若当时知晓现在掌握的情况，我绝不会作出这项任命。</div>
+
+<p><a name="block-42"></a></p>
+<h3>00:18:57</h3>
+<p><button class="play-button sentence" id="s-00-18-57-558" data-start="00:18:57,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because what emerged last week were emails, Bloomberg emails, which showed that the nature and extent of the relationship that Peter Mandelson had with Epstein was far different to what I had understood to be the position when I appointed him.</p>
+<div class="zh">因为上周曝光的彭博社邮件显示，彼得·曼德尔森与爱泼斯坦关系的性质及程度，与我任命时认知的情况截然不同。</div>
+
+<p><button class="play-button sentence" id="s-00-19-15-680" data-start="00:19:15,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On top of that, what the emails showed was he was not only questioning, but wanting to challenge the conviction of Epstein at the time.</p>
+<div class="zh">更重要的是，邮件表明他当时不仅质疑爱泼斯坦的定罪，更意图挑战判决结果。</div>
+
+<p><button class="play-button sentence" id="s-00-19-28-720" data-start="00:19:28,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Afghanistan is seeing the sharpest surge in child malnutrition ever recorded.</p>
+<div class="zh">阿富汗正遭遇有记录以来最严重的儿童营养不良激增。</div>
+
+<p><a name="block-43"></a></p>
+<h3>00:19:33</h3>
+<p><button class="play-button sentence" id="s-00-19-33-519" data-start="00:19:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United Nations says 3.5 million children are suffering from it.</p>
+<div class="zh">联合国称有350万儿童正遭受营养不良折磨。</div>
+
+<p><button class="play-button sentence" id="s-00-19-37-838" data-start="00:19:37,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The past 4 years since the Taliban took over, the BBC has consistently documented that worsening situation.</p>
+<div class="zh">塔利班接管后的四年间，BBC持续记录了日益恶化的状况。</div>
+
+<p><button class="play-button sentence" id="s-00-19-45-318" data-start="00:19:45,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our correspondent, Yogy Talamoye and her team have traveled from Barakistan in the east to Harat in the west for this report.</p>
+<div class="zh">本台记者约吉·塔拉莫耶团队为此次报道从东部的巴拉基斯坦行进至西部的赫拉特。</div>
+
+<p><button class="play-button sentence" id="s-00-19-53-240" data-start="00:19:53,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just a warning, it does contain upsetting material, which includes young children in distress.</p>
+<div class="zh">需要提醒的是，报道包含令人不安的画面，包括痛苦中的幼童。</div>
+
+<p><a name="block-44"></a></p>
+<h3>00:20:02</h3>
+<p><button class="play-button sentence" id="s-00-20-02-118" data-start="00:20:02,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Anger and disease are ravaging Afghanistan's children on a scale never seen before.</p>
+<div class="zh">饥饿与疾病正以空前规模摧残着阿富汗儿童。</div>
+
+<p><button class="play-button sentence" id="s-00-20-09-278" data-start="00:20:09,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The evidence is everywhere.</p>
+<div class="zh">证据无处不在。</div>
+
+<p><button class="play-button sentence" id="s-00-20-12-038" data-start="00:20:12,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is Brother Qshan's regional hospital.</p>
+<div class="zh">这是兄弟库尚地区医院。</div>
+
+<p><button class="play-button sentence" id="s-00-20-16-479" data-start="00:20:16,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All around us, families who've spent whatever little they have to bring their babies here.</p>
+<div class="zh">我们周围尽是将微薄积蓄用于带孩子求医的家庭。</div>
+
+<p><button class="play-button sentence" id="s-00-20-24-318" data-start="00:20:24,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Muslehah is 5 months old, suffering from measles and malnutrition.</p>
+<div class="zh">五个月大的穆莱莎患有麻疹和营养不良。</div>
+
+<p><button class="play-button sentence" id="s-00-20-30-680" data-start="00:20:30,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her mother Karima told us she'd hardly opened her eyes in the past few days.</p>
+<div class="zh">其母卡里玛告诉我们，孩子过去几天几乎没睁开过眼睛。</div>
+
+<p><a name="block-45"></a></p>
+<h3>00:20:38</h3>
+<p><button class="play-button sentence" id="s-00-20-38-359" data-start="00:20:38,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's in pain and I don't know what to do.</p>
+<div class="zh">她很痛苦，我却无能为力。</div>
+
+<p><button class="play-button sentence" id="s-00-20-41-160" data-start="00:20:41,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are poor and don't have access to nutritious food.</p>
+<div class="zh">我们穷得吃不上有营养的食物。</div>
+
+<p><button class="play-button sentence" id="s-00-20-45-119" data-start="00:20:45,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some days we go hungry.</p>
+<div class="zh">有时甚至挨饿。</div>
+
+<p><button class="play-button sentence" id="s-00-20-47-480" data-start="00:20:47,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's why she is in this state.</p>
+<div class="zh">所以她才会这样。</div>
+
+<p><button class="play-button sentence" id="s-00-20-50-798" data-start="00:20:50,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A day after we visited the hospital, Muslehah died.</p>
+<div class="zh">我们到访医院一天后，穆莱莎离世。</div>
+
+<p><button class="play-button sentence" id="s-00-20-59-000" data-start="00:20:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zamira has already lost one baby.</p>
+<div class="zh">扎米拉已经失去过一个孩子。</div>
+
+<p><button class="play-button sentence" id="s-00-21-02-519" data-start="00:21:02,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her second child, Sana, has malnutrition, acute diarrhea and a cleft lip.</p>
+<div class="zh">她的第二个孩子萨娜患有营养不良、急性腹泻和唇腭裂。</div>
+
+<p><a name="block-46"></a></p>
+<h3>00:21:11</h3>
+<p><button class="play-button sentence" id="s-00-21-11-400" data-start="00:21:11,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At three months, Sana is the youngest baby here.</p>
+<div class="zh">三个月大的萨娜是这里最年幼的婴儿。</div>
+
+<p><button class="play-button sentence" id="s-00-21-17-400" data-start="00:21:17,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm afraid that this child might also die.</p>
+<div class="zh">我怕这个孩子也活不成。</div>
+
+<p><button class="play-button sentence" id="s-00-21-20-920" data-start="00:21:20,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm so tired of this life.</p>
+<div class="zh">我厌倦了这种生活。</div>
+
+<p><button class="play-button sentence" id="s-00-21-23-000" data-start="00:21:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not worth living.</p>
+<div class="zh">活着毫无意义。</div>
+
+<p><button class="play-button sentence" id="s-00-21-25-838" data-start="00:21:25,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zamira spoke Sana's hands and feet turned blue.</p>
+<div class="zh">扎米拉说着萨娜手脚发青的状况。</div>
+
+<p><button class="play-button sentence" id="s-00-21-30-159" data-start="00:21:30,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her tiny heart wasn't pumping enough blood.</p>
+<div class="zh">她弱小的心脏供血不足。</div>
+
+<p><button class="play-button sentence" id="s-00-21-33-358" data-start="00:21:33,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A nurse put her on oxygen.</p>
+<div class="zh">护士给她接上了氧气。</div>
+
+<p><button class="play-button sentence" id="s-00-21-38-000" data-start="00:21:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A week later, Sana also died.</p>
+<div class="zh">一周后，萨娜也夭折了。</div>
+
+<p><a name="block-47"></a></p>
+<h3>00:21:44</h3>
+<p><button class="play-button sentence" id="s-00-21-44-919" data-start="00:21:44,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sharing one bed with twins, Ma'Zian and Mutherra.</p>
+<div class="zh">双胞胎玛齐安与穆瑟拉共睡一张病床。</div>
+
+<p><button class="play-button sentence" id="s-00-21-49-759" data-start="00:21:49,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They had measles and malnutrition and were half the weight they should have been at for 18 months.</p>
+<div class="zh">他们患有麻疹和营养不良，体重仅达18个月大婴儿应有体重的一半。</div>
+
+<p><button class="play-button sentence" id="s-00-21-58-598" data-start="00:21:58,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the hours that followed our visit, Mutherra became critical and two days later, she died.</p>
+<div class="zh">我们离开数小时后穆瑟拉病危，两天后离世。</div>
+
+<p><button class="play-button sentence" id="s-00-22-07-598" data-start="00:22:07,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is in the first time we've documented child deaths from malnutrition.</p>
+<div class="zh">这是我们首次记录儿童营养不良死亡案例。</div>
+
+<p><a name="block-48"></a></p>
+<h3>00:22:12</h3>
+<p><button class="play-button sentence" id="s-00-22-12-038" data-start="00:22:12,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what we've seen this time is without precedent.</p>
+<div class="zh">但此次所见情形前所未有。</div>
+
+<p><button class="play-button sentence" id="s-00-22-16-159" data-start="00:22:16,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three children from one hospital room.</p>
+<div class="zh">同一病房的三名儿童。</div>
+
+<p><button class="play-button sentence" id="s-00-22-19-318" data-start="00:22:19,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mutherra, Muslehah, Sana.</p>
+<div class="zh">穆瑟拉、穆莱莎、萨娜。</div>
+
+<p><button class="play-button sentence" id="s-00-22-23-680" data-start="00:22:23,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The latest casualties of Afghanistan's crisis of hunger.</p>
+<div class="zh">阿富汗饥荒危机的最新牺牲品。</div>
+
+<p><button class="play-button sentence" id="s-00-22-28-680" data-start="00:22:28,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their deaths are registered.</p>
+<div class="zh">他们的死亡被登记在册。</div>
+
+<p><button class="play-button sentence" id="s-00-22-32-000" data-start="00:22:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But outside the walls of the hospital, the wave of mortality in gulfing the country's youngest is silent, unrequited.</p>
+<div class="zh">但在医院围墙外，吞噬这个国家最幼小生命的死亡浪潮却静默无声，得不到回应。</div>
+
+<p><a name="block-49"></a></p>
+<h3>00:22:41</h3>
+<p><button class="play-button sentence" id="s-00-22-41-200" data-start="00:22:41,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Got in a storm of eight cuts, severe drought, and a government whose intransigence on women's rights affects how much the world is willing to help.</p>
+<div class="zh">接连不断的灾害、严重干旱，以及政府在女性权利问题上的顽固态度影响国际援助意愿。</div>
+
+<p><button class="play-button sentence" id="s-00-22-53-318" data-start="00:22:53,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the western province of Harath, Glam Muheddin and his wife Nazou take us to the graves of the three babies they lost in the past two years.</p>
+<div class="zh">在西部赫拉特省，格拉姆·穆赫丁与妻子纳祖带我们看了他们过去两年失去的三个婴儿的坟墓。</div>
+
+<p><button class="play-button sentence" id="s-00-23-02-960" data-start="00:23:02,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The youngest just three months ago.</p>
+<div class="zh">最小的那个三个月前刚离世。</div>
+
+<p><a name="block-50"></a></p>
+<h3>00:23:06</h3>
+<p><button class="play-button sentence" id="s-00-23-06-358" data-start="00:23:06,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They break walnut shells for a living and have had no support from anyone, not their government, not NGOs.</p>
+<div class="zh">他们以砸核桃壳为生，未获得任何方面的支持——无论是政府还是非政府组织。</div>
+
+<p><button class="play-button sentence" id="s-00-23-16-078" data-start="00:23:16,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you imagine how painful it's been for me to lose three children?</p>
+<div class="zh">你能想象失去三个孩子有多痛苦吗？</div>
+
+<p><button class="play-button sentence" id="s-00-23-20-318" data-start="00:23:20,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One minute there's a baby in your arms.</p>
+<div class="zh">前一刻怀中还有婴儿。</div>
+
+<p><button class="play-button sentence" id="s-00-23-22-640" data-start="00:23:22,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One minute there's a baby in your arms.</p>
+<div class="zh">前一刻怀中还有婴儿。</div>
+
+<p><button class="play-button sentence" id="s-00-23-24-640" data-start="00:23:24,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would hope every day that angels would somehow put my babies back in our home.</p>
+<div class="zh">我每天都盼望天使能把我的孩子送回家里。</div>
+
+<p><a name="block-51"></a></p>
+<h3>00:23:32</h3>
+<p><button class="play-button sentence" id="s-00-23-32-839" data-start="00:23:32,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Watching helplessly as my children cried out of hunger, it felt like my body was erupting in flames.</p>
+<div class="zh">眼睁睁看着孩子们饿得哭喊，我感觉身体像被烈火灼烧。</div>
+
+<p><button class="play-button sentence" id="s-00-23-39-920" data-start="00:23:39,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It felt like someone was cutting me into half with a saw from my head to my feet.</p>
+<div class="zh">仿佛有人用锯子从我头顶到脚底将身体锯成两半。</div>
+
+<p><button class="play-button sentence" id="s-00-23-47-240" data-start="00:23:47,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I've literally gone all around this graveyard and I've counted the graves myself because there's no one here who's keeping any records and it's really a staggering sight.</p>
+<div class="zh">我亲自走遍整个墓地清点了坟墓数量，因为这里根本无人记录——眼前的景象令人震惊。</div>
+
+<p><a name="block-52"></a></p>
+<h3>00:23:58</h3>
+<p><button class="play-button sentence" id="s-00-23-58-920" data-start="00:23:58,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two out of every three graves are of children and we've been speaking to locals here.</p>
+<div class="zh">每三座坟墓中就有两座属于儿童，我们一直在与当地居民交谈。</div>
+
+<p><button class="play-button sentence" id="s-00-24-05-400" data-start="00:24:05,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've been telling us that this graveyard is only about two to three years old.</p>
+<div class="zh">他们告诉我们这片墓地形成仅约两到三年。</div>
+
+<p><button class="play-button sentence" id="s-00-24-08-880" data-start="00:24:08,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not a specific graveyard for children.</p>
+<div class="zh">这并非专门的儿童墓地。</div>
+
+<p><button class="play-button sentence" id="s-00-24-12-118" data-start="00:24:12,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've told us that the main cause of death they believe is hunger and manitrition.</p>
+<div class="zh">他们表示死亡主因是饥饿与营养不良。</div>
+
+<p><button class="play-button sentence" id="s-00-24-22-479" data-start="00:24:22,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in the settlement nearby, families want to show us the suffering inside their homes.</p>
+<div class="zh">附近聚居区的家庭想向我们展示家中的苦难景象。</div>
+
+<p><a name="block-53"></a></p>
+<h3>00:24:30</h3>
+<p><button class="play-button sentence" id="s-00-24-30-038" data-start="00:24:30,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One year old Ruffula cannot hold himself up.</p>
+<div class="zh">一岁的鲁夫拉甚至无法自己坐稳。</div>
+
+<p><button class="play-button sentence" id="s-00-24-33-479" data-start="00:24:33,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His mother Hanifa has no money to make the journey to a clinic to treat his manitrition.</p>
+<div class="zh">他的母亲哈尼法没钱带他去诊所治疗营养不良。</div>
+
+<p><button class="play-button sentence" id="s-00-24-40-160" data-start="00:24:40,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She says she feeds him bread soaked in water.</p>
+<div class="zh">她说只能喂他水泡面包充饥。</div>
+
+<p><button class="play-button sentence" id="s-00-24-44-000" data-start="00:24:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A man offered Hanifa a large sum of money as dowry for seven year old Sapara, but she turned him down.</p>
+<div class="zh">有人曾出高价要娶她七岁的女儿萨帕拉作彩礼，但被她拒绝了。</div>
+
+<p><button class="play-button sentence" id="s-00-24-52-200" data-start="00:24:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are many days when this family doesn't eat.</p>
+<div class="zh">这家人经常整天吃不上饭。</div>
+
+<p><a name="block-54"></a></p>
+<h3>00:24:56</h3>
+<p><button class="play-button sentence" id="s-00-24-56-440" data-start="00:24:56,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To sedate a hungry Ruffula so that he sleeps, Hanifa told us she gives him these medicines.</p>
+<div class="zh">为让饥饿的鲁夫拉镇静入睡，哈尼法告诉我们她给孩子服用这些药物。</div>
+
+<p><button class="play-button sentence" id="s-00-25-03-680" data-start="00:25:03,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So these are the tablets that she says she gives her youngest child three times a day, the one year old child.</p>
+<div class="zh">这些就是她每天给一岁幼子服用三次的药片。</div>
+
+<p><button class="play-button sentence" id="s-00-25-10-359" data-start="00:25:10,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're both anti-exity medicines, but they're available at the cost of one strip for, would be the same cost as one piece of bread.</p>
+<div class="zh">这其实是抗焦虑药物，但一板药片的售价仅相当于一片面包。</div>
+
+<p><a name="block-55"></a></p>
+<h3>00:25:22</h3>
+<p><button class="play-button sentence" id="s-00-25-22-798" data-start="00:25:22,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sarah, for them, I feel suffocated and like I should kill my children and myself.</p>
+<div class="zh">萨拉说："我感到窒息，甚至想带着孩子们结束生命"。</div>
+
+<p><button class="play-button sentence" id="s-00-25-30-920" data-start="00:25:30,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I feel so guilty that my children are going hungry and I can't do much.</p>
+<div class="zh">"看着孩子挨饿却无能为力，我充满负罪感"。</div>
+
+<p><button class="play-button sentence" id="s-00-25-41-278" data-start="00:25:41,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is one of millions of please for help in Afghanistan.</p>
+<div class="zh">这是阿富汗数百万求助呼声中的一例。</div>
+
+<p><button class="play-button sentence" id="s-00-25-45-720" data-start="00:25:45,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of them unseem, unheard.</p>
+<div class="zh">其中大多数不为人知，无人倾听。</div>
+
+<p><button class="play-button sentence" id="s-00-25-49-278" data-start="00:25:49,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you can learn more about Yogi Taz report on our website as well as all of today's news.</p>
+<div class="zh">您可以在我们网站查看Yogi Taz的完整报道及今日全部新闻。</div>
+
+<p><a name="block-56"></a></p>
+<h3>00:26:01</h3>
+<p><button class="play-button sentence" id="s-00-26-01-240" data-start="00:26:01,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'll find that at pbc.com-forod-slaeshnews.</p>
+<div class="zh">请访问pbc.com-forod-slaeshnews获取。</div>
+
+<p><button class="play-button sentence" id="s-00-26-05-558" data-start="00:26:05,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's it for World News America for today.</p>
+<div class="zh">以上就是今日《世界新闻·美洲版》的全部内容。</div>
+
+<p><button class="play-button sentence" id="s-00-26-07-318" data-start="00:26:07,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Katrina Perry.</p>
+<div class="zh">我是卡特里娜·佩里。</div>
+
+<p><button class="play-button sentence" id="s-00-26-08-318" data-start="00:26:08,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for watching and do take care.</p>
+<div class="zh">非常感谢您的收看，请多保重。</div>
+
+<p><button class="play-button sentence" id="s-00-26-10-720" data-start="00:26:10,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye.</p>
+<div class="zh">再见。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
