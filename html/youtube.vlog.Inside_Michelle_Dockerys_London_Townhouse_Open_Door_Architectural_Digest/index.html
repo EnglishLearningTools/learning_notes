@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Michelle Dockery's Home Tour with AD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A tour of Michelle Dockery's home reveals a blend of personal history and curated design. The actress worked with interior designer Emma Ainsko to transform the space, incorporating an extension for a spacious kitchen-living area. Personal touches abound, from heirlooms like her grandmother's silverware cabinet to Alfie-themed artworks and memorabilia from Downton Abbey. The home features a gallery hallway, custom-made furniture, and a cozy den with cinematic accents. Each room reflects Dockery's love for art, family, and her beloved lurcher.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Michelle Dockery's Home Tour with AD</h1>
+<p>【走进《唐顿庄园》女主米歇尔·道克瑞在伦敦的家】</p>
+<p>Summary:
+A tour of Michelle Dockery's home reveals a blend of personal history and curated design. The actress worked with interior designer Emma Ainsko to transform the space, incorporating an extension for a spacious kitchen-living area. Personal touches abound, from heirlooms like her grandmother's silverware cabinet to Alfie-themed artworks and memorabilia from Downton Abbey. The home features a gallery hallway, custom-made furniture, and a cozy den with cinematic accents. Each room reflects Dockery's love for art, family, and her beloved lurcher.</p>
+<p>摘要：
+米歇尔·道克瑞的住宅融合了历史传承与现代设计。她与设计师艾玛·安斯科合作，通过扩建打造出开阔的厨房起居空间。家中充满个人印记：从祖母传承的银器橱柜，到以爱犬阿尔菲为主题的艺术品，再到《唐顿庄园》的纪念道具。画廊式走廊、定制家具和影院风格休闲室相得益彰。每个房间都彰显着主人对艺术、家庭和猎犬的挚爱，呈现英伦优雅与私人记忆的完美结合。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 20 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hi AD, I'm Michelle Dockery, welcome to my home.</p>
+<div class="zh">你好AD，我是米歇尔·道克瑞，欢迎来我家做客。</div>
+
+<p><button class="play-button sentence" id="s-00-00-05-957" data-start="00:00:05,957" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Come in.</p>
+<div class="zh">请进。</div>
+
+<p><button class="play-button sentence" id="s-00-00-17-000" data-start="00:00:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is the boot room.</p>
+<div class="zh">这里是玄关储物区。</div>
+
+<p><button class="play-button sentence" id="s-00-00-18-562" data-start="00:00:18,562" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It feels like quite a luxury to have a dedicated space just for throwing your coats and shoes on the floor.</p>
+<div class="zh">能有个专门放置外套和鞋子的独立空间真是相当#奢侈#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-24-774" data-start="00:00:24,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's much tidier today thanks to AD than it usually does.</p>
+<div class="zh">今天多亏了AD整理，这里比平时整洁多了。</div>
+
+<p><button class="play-button sentence" id="s-00-00-28-239" data-start="00:00:28,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The previous zone is actually put in this partition wall as this was part of the room next door and created this boot room.</p>
+<div class="zh">原先这个区域其实是用这面#隔断#墙隔出来的——这里原本是隔壁房间的一部分，后来被改造成了玄关储物区。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959964" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-35-680" data-start="00:00:35,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is where we walk in when we've come in from muddy dog walks and actually Alfie, our five-year-old lurcher, has his own little dedicated hooks here from Rose Uniac, very expensive dog hooks for his lead.</p>
+<div class="zh">我们遛完狗满脚泥泞时会从这里进屋，我们家五岁的猎犬阿尔菲还有专属挂钩——来自Rose Uniac的昂贵牵引绳挂钩。</div>
+
+<p><button class="play-button sentence" id="s-00-00-52-000" data-start="00:00:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'll take you through to the hallway.</p>
+<div class="zh">现在带你们看看走廊。</div>
+
+<p><button class="play-button sentence" id="s-00-00-56-000" data-start="00:00:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I always wanted a gallery hallway so over the years I've collected lots of different pieces of artwork, some are from Etsy, some are from antique markets.</p>
+<div class="zh">我一直想要个艺廊式走廊，这些年来收集了各式艺术品，有些来自Etsy，有些来自古董市场。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-11-108" data-start="00:01:11,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You'll see lots of pictures of sight hounds around the house just like our dog Alfie.</p>
+<div class="zh">屋里随处可见灵缇犬的画作——就像我们家的阿尔菲。</div>
+
+<p><button class="play-button sentence" id="s-00-01-17-363" data-start="00:01:17,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go down to the kitchen.</p>
+<div class="zh">现在去厨房看看吧。</div>
+
+<p><button class="play-button sentence" id="s-00-01-26-000" data-start="00:01:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is our kitchen and living space.</p>
+<div class="zh">这里是厨房兼起居空间。</div>
+
+<p><button class="play-button sentence" id="s-00-01-30-569" data-start="00:01:30,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is where we spend most of our time.</p>
+<div class="zh">我们大部分时间都待在这里。</div>
+
+<p><button class="play-button sentence" id="s-00-01-35-000" data-start="00:01:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We worked with an incredible interior designer called Emma Ainsko on this house.</p>
+<div class="zh">我们与杰出室内设计师艾玛·安斯柯合作设计了这栋房子。</div>
+
+<p><button class="play-button sentence" id="s-00-01-40-000" data-start="00:01:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we first bought the house there were two walls separating this area.</p>
+<div class="zh">刚买下时这里有两堵隔墙。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-45-000" data-start="00:01:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was a very dark dining room and the kitchen was much smaller.</p>
+<div class="zh">当时有间昏暗的餐厅，厨房也比现在小得多。</div>
+
+<p><button class="play-button sentence" id="s-00-01-50-000" data-start="00:01:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we added an extension to make it one big space.</p>
+<div class="zh">我们做了扩建，打通成一个大空间。</div>
+
+<p><button class="play-button sentence" id="s-00-01-53-414" data-start="00:01:53,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We wanted to keep as much of the kitchen as possible because it was beautiful.</p>
+<div class="zh">原本的厨房很漂亮，我们尽可能保留了原有部分。</div>
+
+<p><button class="play-button sentence" id="s-00-01-58-491" data-start="00:01:58,491" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this was all here when we bought the house.</p>
+<div class="zh">现在看到的这些都是买房时就有的。</div>
+
+<p><button class="play-button sentence" id="s-00-02-01-000" data-start="00:02:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just extended the island and added a dining area so that we could then have a more family room area.</p>
+<div class="zh">只是延长了中岛台并增设用餐区，让这里更像个家庭活动室。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959871" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-09-000" data-start="00:02:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love this island for having a cooker in the middle because it's just really lovely for when you're entertaining and cooking and friends can sit here and you don't turn your back to them.</p>
+<div class="zh">我喜欢中岛台内置炉灶的设计，招待朋友时特别方便——可以边烹饪边和坐在旁边的朋友聊天，无需背对他们。</div>
+
+<p><button class="play-button sentence" id="s-00-02-18-896" data-start="00:02:18,896" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why are you cooking?</p>
+<div class="zh">（笑问镜头）你为什么要做饭？</div>
+
+<p><button class="play-button sentence" id="s-00-02-20-000" data-start="00:02:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The pistachio green doors were a feature that I completely fell in love with when we saw this house.</p>
+<div class="zh">这扇开心果绿色的门是当初看房时让我一见钟情的特色设计。</div>
+
+<p><button class="play-button sentence" id="s-00-02-26-000" data-start="00:02:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I really wanted to keep them.</p>
+<div class="zh">所以特别想保留它们。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959851" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-28-013" data-start="00:02:28,013" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we added the extension and just put them on the end and then added the other windows.</p>
+<div class="zh">扩建时我们把门移到尽头，并增开了其他窗户。</div>
+
+<p><button class="play-button sentence" id="s-00-02-32-818" data-start="00:02:32,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's just made the space feel so much brighter and area.</p>
+<div class="zh">这让整个空间明亮通透了许多。</div>
+
+<p><button class="play-button sentence" id="s-00-02-36-000" data-start="00:02:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This space is really lovely.</p>
+<div class="zh">这个区域非常温馨。</div>
+
+<p><button class="play-button sentence" id="s-00-02-37-600" data-start="00:02:37,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was also here when we walked the house.</p>
+<div class="zh">这个也是买房时就有的。</div>
+
+<p><button class="play-button sentence" id="s-00-02-40-000" data-start="00:02:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's like our pantry area.</p>
+<div class="zh">算是我们的#食品储藏室#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-42-222" data-start="00:02:42,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We added this breakfast snack and this is where we make our coffee and our tea in the mornings.</p>
+<div class="zh">我们加设了这个早餐#小吃台#，早上都在这里泡咖啡和茶。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959823" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-57-000" data-start="00:02:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is the dining area which is the New York Sension.</p>
+<div class="zh">这是用餐区，摆放的是纽约森尚品牌的家具。</div>
+
+<p><button class="play-button sentence" id="s-00-03-01-000" data-start="00:03:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some really great meals in here, Christmas birthdays, Easter.</p>
+<div class="zh">在这里享用过许多美好餐宴——圣诞宴、生日宴、#复活节#大餐。</div>
+
+<p><button class="play-button sentence" id="s-00-03-06-000" data-start="00:03:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love this dining table.</p>
+<div class="zh">我特别钟爱这张餐桌。</div>
+
+<p><button class="play-button sentence" id="s-00-03-07-389" data-start="00:03:07,389" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's from a brand called Konk.</p>
+<div class="zh">来自Konk品牌。</div>
+
+<p><button class="play-button sentence" id="s-00-03-09-044" data-start="00:03:09,044" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We wanted something that had sleeves so that you could make it a much bigger table for bigger dinner parties.</p>
+<div class="zh">我们需要可扩展的款式，这样举办大型晚宴时就能拼成更大的桌子。</div>
+
+<p><button class="play-button sentence" id="s-00-03-15-000" data-start="00:03:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We matched the Crittle windows, the match the Crittle.</p>
+<div class="zh">我们搭配了克里特风格的窗户，与整体风格呼应。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959801" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-18-319" data-start="00:03:18,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just kind of wanted to make the space feel really cohesive.</p>
+<div class="zh">主要是想让空间显得更#协调统一#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-22-000" data-start="00:03:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This cyborg was designed by our interior designer Emma Ainsko.</p>
+<div class="zh">这个边柜是室内设计师艾玛·安斯柯设计的。</div>
+
+<p><button class="play-button sentence" id="s-00-03-27-000" data-start="00:03:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was made like a lot of the furniture in this house by two carpenters from Syria who we've worked with a lot on this house.</p>
+<div class="zh">和屋里很多家具一样，由两位叙利亚木匠制作——我们装修期间经常与他们合作。</div>
+
+<p><button class="play-button sentence" id="s-00-03-35-000" data-start="00:03:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their brothers and they are so talented.</p>
+<div class="zh">他们是兄弟俩，手艺非凡。</div>
+
+<p><button class="play-button sentence" id="s-00-03-37-229" data-start="00:03:37,229" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as you can see it's the most beautiful piece and Emma found this incredible piece of marble to go on top.</p>
+<div class="zh">如您所见这是件极美的家具，艾玛还找到了这块绝美的#大理石#做台面。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959777" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-43-000" data-start="00:03:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So when we're having dinners this is where the food goes, the wine goes, if you're doing more of a buffet.</p>
+<div class="zh">举办晚宴时，如果是#自助餐#形式，这里就会摆放食物和酒水。</div>
+
+<p><button class="play-button sentence" id="s-00-03-50-000" data-start="00:03:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then above it is this photograph by Slim Arons, one of my favourite photographers.</p>
+<div class="zh">上方挂着我最喜欢的摄影师之一#斯利姆#·阿伦斯的摄影作品。</div>
+
+<p><button class="play-button sentence" id="s-00-03-55-433" data-start="00:03:55,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we absolutely love this photograph.</p>
+<div class="zh">我们无比珍爱这幅作品。</div>
+
+<p><button class="play-button sentence" id="s-00-03-58-000" data-start="00:03:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It really kind of shows family and food and entertaining.</p>
+<div class="zh">完美展现了家庭、美食与待客之乐的主题。</div>
+
+<p><button class="play-button sentence" id="s-00-04-01-157" data-start="00:04:01,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We could be perfect for this room.</p>
+<div class="zh">与这个空间相得益彰。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959757" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-03-000" data-start="00:04:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then also when we're entertaining in the summer, when the weather's good, we also like to entertain outside.</p>
+<div class="zh">夏季天气晴好时，我们也喜欢在户外招待客人。</div>
+
+<p><button class="play-button sentence" id="s-00-04-21-000" data-start="00:04:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is more of like the family room.</p>
+<div class="zh">这里更偏向家庭活动室的功能。</div>
+
+<p><button class="play-button sentence" id="s-00-04-23-109" data-start="00:04:23,109" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've spent quite a lot of time in here.</p>
+<div class="zh">我经常待在这个房间。</div>
+
+<p><button class="play-button sentence" id="s-00-04-25-153" data-start="00:04:25,153" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I spend quite a lot of time in here.</p>
+<div class="zh">在这里消磨很多时光。</div>
+
+<p><button class="play-button sentence" id="s-00-04-27-000" data-start="00:04:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is so further because it's really comfortable.</p>
+<div class="zh">这张沙发特别舒适。</div>
+
+<p><button class="play-button sentence" id="s-00-04-29-640" data-start="00:04:29,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's from Restoration Hardware and this is where I watch a lot of TV.</p>
+<div class="zh">来自Restoration Hardware品牌，我常在这里看电视。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959727" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-33-000" data-start="00:04:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is a chess board.</p>
+<div class="zh">那是#国际象棋#棋盘。</div>
+
+<p><button class="play-button sentence" id="s-00-04-34-313" data-start="00:04:34,313" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'm learning how to play chess.</p>
+<div class="zh">我正在学下#国际象棋#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-36-430" data-start="00:04:36,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was inspired by the Queen's Gambit, Scott Frank show, who I had the pleasure of working with many years ago.</p>
+<div class="zh">是受《后翼弃兵》的启发——很多年前我曾有幸与这部剧的编剧斯科特·弗兰克合作过。</div>
+
+<p><button class="play-button sentence" id="s-00-04-43-000" data-start="00:04:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I'm not very good.</p>
+<div class="zh">但我水平很一般。</div>
+
+<p><button class="play-button sentence" id="s-00-04-44-945" data-start="00:04:44,945" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm in a more practice.</p>
+<div class="zh">还需要多练习。</div>
+
+<p><button class="play-button sentence" id="s-00-04-47-000" data-start="00:04:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then this I really want to show you, which is family heirloom.</p>
+<div class="zh">接下来这件是我想重点展示的家族#传家宝#。</div>
+
+<p><button class="play-button sentence" id="s-00-04-50-552" data-start="00:04:50,552" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is my grandmother's.</p>
+<div class="zh">原属于我祖母。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959708" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-52-000" data-start="00:04:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's been handed down to me and my sisters and I have it at the moment.</p>
+<div class="zh">传给我和姐妹们，目前由我保管。</div>
+
+<p><button class="play-button sentence" id="s-00-04-56-000" data-start="00:04:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it is probably the most down-to-nabby thing that I own.</p>
+<div class="zh">可能是我最珍贵的藏品。</div>
+
+<p><button class="play-button sentence" id="s-00-05-01-000" data-start="00:05:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is filled with beautiful silverware, which we tend to use at Christmas and special occasions.</p>
+<div class="zh">里面装满精美银器，我们通常在圣诞节和其他特殊场合使用。</div>
+
+<p><button class="play-button sentence" id="s-00-05-12-000" data-start="00:05:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I am known to occasionally polish my silverware.</p>
+<div class="zh">大家都知道我偶尔会擦拭银器。</div>
+
+<p><button class="play-button sentence" id="s-00-05-18-000" data-start="00:05:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's lots of interior magazines here.</p>
+<div class="zh">这里有很多室内设计杂志。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959679" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-20-787" data-start="00:05:20,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lots of architectural digest.</p>
+<div class="zh">多是《建筑文摘》。</div>
+
+<p><button class="play-button sentence" id="s-00-05-22-858" data-start="00:05:22,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm a big fan.</p>
+<div class="zh">我是这本杂志的忠实读者。</div>
+
+<p><button class="play-button sentence" id="s-00-05-23-734" data-start="00:05:23,734" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of my favourites was Dakota Johnson's House.</p>
+<div class="zh">最喜欢达科塔·约翰逊宅邸特辑。</div>
+
+<p><button class="play-button sentence" id="s-00-05-27-000" data-start="00:05:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also got a record player down here.</p>
+<div class="zh">这里还有台唱片机。</div>
+
+<p><button class="play-button sentence" id="s-00-05-29-518" data-start="00:05:29,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was a wedding present from a friend.</p>
+<div class="zh">是朋友送的结婚礼物。</div>
+
+<p><button class="play-button sentence" id="s-00-05-32-037" data-start="00:05:32,037" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it actually has a little etching that my friend actually did for us of our dog.</p>
+<div class="zh">朋友还特意刻了我们爱犬的图案。</div>
+
+<p><button class="play-button sentence" id="s-00-05-37-000" data-start="00:05:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's all about the dog, really.</p>
+<div class="zh">说到底都是围着狗狗转呢。</div>
+
+<p><button class="play-button sentence" id="s-00-05-40-000" data-start="00:05:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I got this from eBay.</p>
+<div class="zh">这个是从易趣网淘来的。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959658" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-41-564" data-start="00:05:41,564" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I like collecting weird things like this.</p>
+<div class="zh">我喜欢收藏这类古怪物件。</div>
+
+<p><button class="play-button sentence" id="s-00-05-44-447" data-start="00:05:44,447" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's a lady just sitting in a pool.</p>
+<div class="zh">是位坐在泳池中的女士。</div>
+
+<p><button class="play-button sentence" id="s-00-05-47-000" data-start="00:05:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when you turn it over, I don't know if we can actually show it.</p>
+<div class="zh">但翻转之后——不知能否清晰展示——</div>
+
+<p><button class="play-button sentence" id="s-00-05-54-338" data-start="00:05:54,338" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's so weird.</p>
+<div class="zh">特别诡异：</div>
+
+<p><button class="play-button sentence" id="s-00-05-56-000" data-start="00:05:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just her barn with a sort of cat there.</p>
+<div class="zh">背面是她的#臀部#，还有只猫蹲在一旁。</div>
+
+<p><button class="play-button sentence" id="s-00-05-58-951" data-start="00:05:58,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, this is so bizarre.</p>
+<div class="zh">看吧，非常#怪诞#吧。</div>
+
+<p><button class="play-button sentence" id="s-00-06-00-722" data-start="00:06:00,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I thought I've got to have it.</p>
+<div class="zh">但我觉得必须收藏它。</div>
+
+<p><button class="play-button sentence" id="s-00-06-04-000" data-start="00:06:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is one of my favourite things in the house, the shelving unit.</p>
+<div class="zh">这是家里我最喜欢的物件之一——这个储物架。</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959631" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-08-177" data-start="00:06:08,177" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's from the Con-Rand shop.</p>
+<div class="zh">来自#康#-兰德商店。</div>
+
+<p><button class="play-button sentence" id="s-00-06-10-000" data-start="00:06:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I actually saw it in the store in the meeting room.</p>
+<div class="zh">其实是在他们会议室看到的。</div>
+
+<p><button class="play-button sentence" id="s-00-06-13-049" data-start="00:06:13,049" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it wasn't actually for sale.</p>
+<div class="zh">当时并不出售。</div>
+
+<p><button class="play-button sentence" id="s-00-06-14-983" data-start="00:06:14,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And fell in love with it and loved the colour.</p>
+<div class="zh">但我一见倾心，尤其喜欢这个颜色。</div>
+
+<p><button class="play-button sentence" id="s-00-06-17-735" data-start="00:06:17,735" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just loved the red.</p>
+<div class="zh">特别钟爱这款红色。</div>
+
+<p><button class="play-button sentence" id="s-00-06-19-000" data-start="00:06:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Emma, our interior designer, asked them to make one for us.</p>
+<div class="zh">于是我们的室内设计师艾玛请他们定制了这件。</div>
+
+<p><button class="play-button sentence" id="s-00-06-22-362" data-start="00:06:22,362" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's gorgeous.</p>
+<div class="zh">非常#华丽#。</div>
+
+<p><button class="play-button sentence" id="s-00-06-23-219" data-start="00:06:23,219" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's one of my favourite things.</p>
+<div class="zh">是我的心爱之物。</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959615" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-25-000" data-start="00:06:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love red, as you can see.</p>
+<div class="zh">如您所见我热爱红色。</div>
+
+<p><button class="play-button sentence" id="s-00-06-26-749" data-start="00:06:26,749" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lots of pop some red everywhere.</p>
+<div class="zh">屋里处处点缀着红色。</div>
+
+<p><button class="play-button sentence" id="s-00-06-29-000" data-start="00:06:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the Lou.</p>
+<div class="zh">这是洗手间。</div>
+
+<p><button class="play-button sentence" id="s-00-06-30-378" data-start="00:06:30,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just so people know what's behind here and where to find the Lou.</p>
+<div class="zh">方便大家了解这个房间的布局。</div>
+
+<p><button class="play-button sentence" id="s-00-06-36-000" data-start="00:06:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is just one of my favourite little rooms in the house.</p>
+<div class="zh">这是家里我最喜欢的小房间之一。</div>
+
+<p><button class="play-button sentence" id="s-00-06-40-528" data-start="00:06:40,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love a downstairs Lou.</p>
+<div class="zh">尤其钟情于楼下洗手间的设计。</div>
+
+<p><button class="play-button sentence" id="s-00-06-42-415" data-start="00:06:42,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this wallpaper is by Antoinette Poisson.</p>
+<div class="zh">墙纸是安托瓦内特·普瓦松的作品。</div>
+
+<p><button class="play-button sentence" id="s-00-06-46-000" data-start="00:06:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's really cute.</p>
+<div class="zh">非常别致。</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959592" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-47-636" data-start="00:06:47,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's such a tiny little sink.</p>
+<div class="zh">这个洗手池真是小巧。</div>
+
+<p><button class="play-button sentence" id="s-00-06-50-000" data-start="00:06:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is our den TV room.</p>
+<div class="zh">这是我们的电视休闲厅。</div>
+
+<p><button class="play-button sentence" id="s-00-06-53-775" data-start="00:06:53,775" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is where we tend to watch a lot of movies and chill out on these gorgeous sofas.</p>
+<div class="zh">常在这里看电影，躺在这些#华丽#的沙发上#放松#。</div>
+
+<p><button class="play-button sentence" id="s-00-07-06-000" data-start="00:07:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wanted to make it feel really cosy.</p>
+<div class="zh">我想营造特别#温馨#的氛围。</div>
+
+<p><button class="play-button sentence" id="s-00-07-08-500" data-start="00:07:08,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we put in these gorgeous curtains just to kind of make it really cosy at night.</p>
+<div class="zh">所以安装了这些#华丽#的窗帘，让夜晚更具#温馨#感。</div>
+
+<p><button class="play-button sentence" id="s-00-07-14-000" data-start="00:07:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And these little so her home lamps just make it kind of feel like a cinema when you're watching a film.</p>
+<div class="zh">这些小巧的家用灯具让人观影时有影院般的体验。</div>
+
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959560" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-20-000" data-start="00:07:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As a piece of art by David Austin, Smoketown, I've had that for many years.</p>
+<div class="zh">这幅大卫·奥斯汀的《烟镇》画作已珍藏多年。</div>
+
+<p><button class="play-button sentence" id="s-00-07-24-000" data-start="00:07:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Something I'll show you here, which is a collection of books that were gifted to me from Maggie Smith.</p>
+<div class="zh">想特别展示的是玛吉·史密斯赠送的藏书。</div>
+
+<p><button class="play-button sentence" id="s-00-07-30-000" data-start="00:07:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Laura Carmichael has the other half.</p>
+<div class="zh">劳拉·卡迈克尔拥有另一半藏书。</div>
+
+<p><button class="play-button sentence" id="s-00-07-33-065" data-start="00:07:33,065" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're these amazing vintage, paved, torreal books, which show costumes from many different periods.</p>
+<div class="zh">这些绝版的托雷尔时装画册展示了不同年代的服装设计。</div>
+
+<p><button class="play-button sentence" id="s-00-07-41-000" data-start="00:07:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's something I really cherish.</p>
+<div class="zh">是我非常#珍爱#的藏品。</div>
+
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959536" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-43-604" data-start="00:07:43,604" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This poster is my favourite poster from the movie The Gentleman.</p>
+<div class="zh">这张#海报#是我在《绅士们》电影中最爱的#海报#。</div>
+
+<p><button class="play-button sentence" id="s-00-07-48-000" data-start="00:07:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That little gun in the glass of whiskey is the one that I use in the film to shoot the two heavies.</p>
+<div class="zh">#威士忌#酒杯里的小枪正是我在片中用来射击两个打手的道具。</div>
+
+<p><button class="play-button sentence" id="s-00-07-54-000" data-start="00:07:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This picture is from the first series of Downton Abbey by Nick Briggs.</p>
+<div class="zh">这张照片是尼克·布里格斯为《唐顿庄园》第一季拍摄的。</div>
+
+<p><button class="play-button sentence" id="s-00-07-58-142" data-start="00:07:58,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's probably about the only image I have in the house of me as Lady Mary in Downton.</p>
+<div class="zh">这大概是我家里唯一一张自己饰演《唐顿庄园》中玛丽小姐的剧照。</div>
+
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959517" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-03-000" data-start="00:08:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's sort of slightly hidden sort of modest up there above the door.</p>
+<div class="zh">所以它算是有点隐蔽地#谦逊地#挂在门框上方。</div>
+
+<p><button class="play-button sentence" id="s-00-08-08-000" data-start="00:08:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I really want to show you this, which is a Saga Ward for Best on Sombor for Downton.</p>
+<div class="zh">我特别想给你们看这个——这是为《唐顿》获得的索姆伯最佳剧集奖颁发的#萨加#奖杯#。</div>
+
+<p><button class="play-button sentence" id="s-00-08-15-000" data-start="00:08:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got a few.</p>
+<div class="zh">我们拿过好几座。</div>
+
+<p><button class="play-button sentence" id="s-00-08-15-925" data-start="00:08:15,925" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this one has a miniature pair of pants on its head.</p>
+<div class="zh">这座奖杯头顶戴着一条#迷你#小裤子。</div>
+
+<p><button class="play-button sentence" id="s-00-08-20-000" data-start="00:08:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I did a play a few years ago and it was sort of an in-joke, but my dresser gave me a little tiny pair of Barbie pants.</p>
+<div class="zh">几年前我演话剧时有个内部玩笑——我的服装师送了条芭比娃娃的迷你裤子。</div>
+
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959493" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-27-000" data-start="00:08:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's nowhere they live.</p>
+<div class="zh">现在它们就放在这儿。</div>
+
+<p><button class="play-button sentence" id="s-00-08-30-000" data-start="00:08:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's another homage to Alfie up there, another sight-hound.</p>
+<div class="zh">墙上还有另一件向阿尔菲致敬的物品——另一只视觉#猎犬#的装饰。</div>
+
+<p><button class="play-button sentence" id="s-00-08-35-178" data-start="00:08:35,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That one's from TK Max.</p>
+<div class="zh">那个是在TK Maxx买的。</div>
+
+<p><button class="play-button sentence" id="s-00-08-38-000" data-start="00:08:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is the office.</p>
+<div class="zh">这就是我的办公室。</div>
+
+<p><button class="play-button sentence" id="s-00-08-41-937" data-start="00:08:41,937" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is actually one of my favourite rooms in the house.</p>
+<div class="zh">这其实是我家里最喜爱的房间之一。</div>
+
+<p><button class="play-button sentence" id="s-00-08-52-000" data-start="00:08:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's one of the brightest rooms and we chose a really bright white colour to kind of make it as bright as possible.</p>
+<div class="zh">这是最明亮的房间，我们特意选了特别亮白的涂料让空间尽可能明亮。</div>
+
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959461" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-59-000" data-start="00:08:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's where we work, it's where we read, it's where we listen to music.</p>
+<div class="zh">我们在这里工作、阅读、听音乐。</div>
+
+<p><button class="play-button sentence" id="s-00-09-03-000" data-start="00:09:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I tend to read scripts in this chair because it's a really gorgeous recliner chair.</p>
+<div class="zh">我常坐在这把椅子上读剧本，因为这是张非常#华丽#的躺椅。</div>
+
+<p><button class="play-button sentence" id="s-00-09-09-000" data-start="00:09:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've also got memorabilia I like to keep in this room.</p>
+<div class="zh">我也把值得珍藏的纪念品都放在这个房间。</div>
+
+<p><button class="play-button sentence" id="s-00-09-12-000" data-start="00:09:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one thing, in fact the only thing I got from Downton Abbey was this little dog, which some people will recognise from the train station scene when Mary gives us to Matthew before he goes off to war.</p>
+<div class="zh">其中唯一从《唐顿庄园》带回的纪念品是这只小狗——有人会认出这是火车站送别戏中玛丽在马修出征前赠予他的那只。</div>
+
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959436" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-24-000" data-start="00:09:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what's mad about this is this was a very long time ago.</p>
+<div class="zh">最神奇的是这已是多年前的事。</div>
+
+<p><button class="play-button sentence" id="s-00-09-27-000" data-start="00:09:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And little did I know that in the future I would get a dog that looks just like this dog.</p>
+<div class="zh">没想到后来我竟养了只和它一模一样的真狗。</div>
+
+<p><button class="play-button sentence" id="s-00-09-34-000" data-start="00:09:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is another homage to my dog.</p>
+<div class="zh">所以这算是对我家爱犬的又一次#致敬#。</div>
+
+<p><button class="play-button sentence" id="s-00-09-36-101" data-start="00:09:36,101" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There seems to be loads of them around the house.</p>
+<div class="zh">家里似乎到处都有它的影子。</div>
+
+<p><button class="play-button sentence" id="s-00-09-39-000" data-start="00:09:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is also a gift that was given to us all at the end of the series of Downton.</p>
+<div class="zh">这是《唐顿庄园》剧终时送给全体演员的礼物。</div>
+
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959417" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-43-000" data-start="00:09:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the season one first episode script and they bound it into this beautiful book.</p>
+<div class="zh">是第一季首集的#剧本#，被装订成这本精美的书。</div>
+
+<p><button class="play-button sentence" id="s-00-09-49-000" data-start="00:09:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Something else I'm also really proud of that I want to show you is this photograph of myself Laura Carmichael and Carl Richards.</p>
+<div class="zh">另一件我想展示的珍藏是与劳拉·卡迈克尔、卡尔·理查兹的合影。</div>
+
+<p><button class="play-button sentence" id="s-00-09-58-482" data-start="00:09:58,482" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was probably the most star-struck moment of my life.</p>
+<div class="zh">这大概是我人生中最激动的追星时刻。</div>
+
+<p><button class="play-button sentence" id="s-00-10-03-000" data-start="00:10:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am a housewife of Beverly Hills fan.</p>
+<div class="zh">我是《比弗利娇妻》的忠实粉丝。</div>
+
+<p><button class="play-button sentence" id="s-00-10-06-000" data-start="00:10:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we met her at the event and we insisted on going back onto the red carpet to have a photo of Carl Richards.</p>
+<div class="zh">我们在活动遇见她后，坚持重返红毯只为与卡尔·理查兹合影。</div>
+
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959388" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-12-000" data-start="00:10:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm very proud of that.</p>
+<div class="zh">为此我非常自豪。</div>
+
+<p><button class="play-button sentence" id="s-00-10-14-000" data-start="00:10:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The artwork is kind of like the central piece in this room.</p>
+<div class="zh">这幅艺术品算是房间的核心装饰。</div>
+
+<p><button class="play-button sentence" id="s-00-10-17-000" data-start="00:10:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had this piece commissioned by Annaco Mosterts, a really talented young South African artist.</p>
+<div class="zh">我们委托南非天才青年艺术家安娜科·莫斯特茨创作了这件作品。</div>
+
+<p><button class="play-button sentence" id="s-00-10-24-000" data-start="00:10:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And my brief to her was I wanted something that feels really calm and it's going to be in a room where we listen to music, where we read.</p>
+<div class="zh">我的要求是创作出宁静感的作品，放置在我们听音乐、阅读的空间。</div>
+
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959368" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-32-000" data-start="00:10:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's all I told her and this is what she did.</p>
+<div class="zh">这就是她根据简单要求创作的成果。</div>
+
+<p><button class="play-button sentence" id="s-00-10-35-000" data-start="00:10:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's so beautiful and I just think really based the room thing.</p>
+<div class="zh">作品美得不可思议，完美奠定了整个房间的基调。</div>
+
+<p><button class="play-button sentence" id="s-00-10-40-000" data-start="00:10:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This fireplace, when we moved into the house, it was really dark.</p>
+<div class="zh">这个#壁炉#在我们刚搬来时非常阴暗。</div>
+
+<p><button class="play-button sentence" id="s-00-10-44-000" data-start="00:10:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We decided to kind of lighten the whole thing.</p>
+<div class="zh">我们决定整体进行#提亮#处理。</div>
+
+<p><button class="play-button sentence" id="s-00-10-47-000" data-start="00:10:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And our interior designer Emma Ainsko told me about this amazing tile designer called Petro Palumbo.</p>
+<div class="zh">室内设计师艾玛·安斯科推荐了杰出的#瓷砖#设计师皮特罗·帕伦博。</div>
+
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959347" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-53-000" data-start="00:10:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He does these gorgeous little paintings on tiles and then they also do custom ones.</p>
+<div class="zh">他在瓷砖上绘制#精美#微型画作，也接受定制。</div>
+
+<p><button class="play-button sentence" id="s-00-10-59-000" data-start="00:10:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so we of course had to get a custom one made of our dog Alfie.</p>
+<div class="zh">我们当然定制了爱犬阿尔菲的瓷砖画。</div>
+
+<p><button class="play-button sentence" id="s-00-11-04-000" data-start="00:11:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This artwork you'll see, there's a few pieces around the house.</p>
+<div class="zh">这件艺术品在家中多处可见。</div>
+
+<p><button class="play-button sentence" id="s-00-11-08-000" data-start="00:11:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is another piece by David Austin, who is actually a very close friend of mine's dad.</p>
+<div class="zh">这是大卫·奥斯汀的作品——他其实是我挚友的父亲。</div>
+
+<p><button class="play-button sentence" id="s-00-11-14-000" data-start="00:11:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he is an incredible artist who I've known for a really long time.</p>
+<div class="zh">这位杰出的艺术家与我相识多年。</div>
+
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959322" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-18-000" data-start="00:11:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's really lovely having his artwork around the house.</p>
+<div class="zh">家里能陈列他的作品令人欣喜。</div>
+
+<p><button class="play-button sentence" id="s-00-11-22-000" data-start="00:11:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is the main bedroom.</p>
+<div class="zh">这是主卧室。</div>
+
+<p><button class="play-button sentence" id="s-00-11-31-000" data-start="00:11:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emma our designer has made this into a really calming, beautiful space.</p>
+<div class="zh">设计师艾玛将它打造成宁静优美的空间。</div>
+
+<p><button class="play-button sentence" id="s-00-11-36-000" data-start="00:11:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love the colours in here.</p>
+<div class="zh">我钟爱这里的色彩搭配。</div>
+
+<p><button class="play-button sentence" id="s-00-11-37-000" data-start="00:11:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And actually it kind of all started with this Egon shield print.</p>
+<div class="zh">其实一切源于这幅埃贡的盾形#版画#。</div>
+
+<p><button class="play-button sentence" id="s-00-11-41-000" data-start="00:11:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love the colours in it so she kind of brought out the colours from the picture.</p>
+<div class="zh">我喜爱画中的色彩，她便从中提取了配色灵感。</div>
+
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959296" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-44-000" data-start="00:11:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you can see the green on the bed.</p>
+<div class="zh">比如床品的绿色。</div>
+
+<p><button class="play-button sentence" id="s-00-11-46-000" data-start="00:11:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this lovely colour of these walled rows, which were also custom made by our really talented artist.</p>
+<div class="zh">这些护墙板的雅致色调也出自我们天才艺术家的定制之手。</div>
+
+<p><button class="play-button sentence" id="s-00-11-51-000" data-start="00:11:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it also has really beautiful iron mungry that Emma found.</p>
+<div class="zh">艾玛还找到了这些精美的铁艺构件。</div>
+
+<p><button class="play-button sentence" id="s-00-11-56-000" data-start="00:11:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The bedside tables I really love, these are from Susie Atkinson and also the lamps are from Susie Atkinson too.</p>
+<div class="zh">我特别钟爱这些苏茜·阿特金森品牌的床头柜，台灯也来自同品牌。</div>
+
+<p><button class="play-button sentence" id="s-00-12-02-000" data-start="00:12:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this lamp is actually from Sezan, a clothing brand that I really love.</p>
+<div class="zh">这盏灯实则来自我钟爱的服装品牌Sezan。</div>
+
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959274" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-06-000" data-start="00:12:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now they're doing homeware, which is really exciting.</p>
+<div class="zh">他们现在拓展了家居产品线，令人兴奋。</div>
+
+<p><button class="play-button sentence" id="s-00-12-08-000" data-start="00:12:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our love for post beds is always a bit of a dream to have one.</p>
+<div class="zh">我们一直梦想拥有四柱床。</div>
+
+<p><button class="play-button sentence" id="s-00-12-12-000" data-start="00:12:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have these lovely shears made just to kind of elevate it a bit.</p>
+<div class="zh">这些定制的美观床帏让床体更显#高雅#。</div>
+
+<p><button class="play-button sentence" id="s-00-12-16-000" data-start="00:12:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The artwork, the selection of antiques from Battersea Arts Fair, somewhere that I love going every year.</p>
+<div class="zh">艺术装饰品和古董摆件都来自我每年必去的巴特西艺术博览会。</div>
+
+<p><button class="play-button sentence" id="s-00-12-22-000" data-start="00:12:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then also the painting over there is also from Battersea Arts Fair, which is really gorgeous or calming painting for this room.</p>
+<div class="zh">那幅画作也购自巴特西艺博会，为房间增添#华美#宁静的气息。</div>
+
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959250" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-30-000" data-start="00:12:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll take you through to the ensuite.</p>
+<div class="zh">现在带你们看看配套浴室。</div>
+
+<p><button class="play-button sentence" id="s-00-12-38-000" data-start="00:12:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the colours blend really beautifully in here from the bedroom into the bathroom.</p>
+<div class="zh">色彩从卧室到浴室的#过渡#非常自然。</div>
+
+<p><button class="play-button sentence" id="s-00-12-42-000" data-start="00:12:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I love the marble in here.</p>
+<div class="zh">我喜爱这里的#大理石#材质。</div>
+
+<p><button class="play-button sentence" id="s-00-12-44-000" data-start="00:12:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Verde Launa, which is just felt really kind of unusual.</p>
+<div class="zh">韦尔黛绿岩材质显得别具一格。</div>
+
+<p><button class="play-button sentence" id="s-00-12-48-000" data-start="00:12:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This vanity again was made by our carpenters.</p>
+<div class="zh">这个#梳妆台#同样由我们的木匠定制。</div>
+
+<p><button class="play-button sentence" id="s-00-12-53-000" data-start="00:12:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This print is by a photographer called Tom Allport, but I've just discovered we wanted something that have real kind of like holiday vibes.</p>
+<div class="zh">这幅版画来自摄影师汤姆·奥尔波特，我们想要营造度假氛围感。</div>
+
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959215" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-05-000" data-start="00:13:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And through here is the dressing room.</p>
+<div class="zh">这里通向衣帽间。</div>
+
+<p><button class="play-button sentence" id="s-00-13-07-000" data-start="00:13:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The colours are really beautiful in there.</p>
+<div class="zh">内部配色十分悦目。</div>
+
+<p><button class="play-button sentence" id="s-00-13-09-000" data-start="00:13:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The walls are a fair and ball colour called Enchira Blue, which is one of my favourites.</p>
+<div class="zh">墙面采用我最爱的芬琳漆"恩希拉蓝"。</div>
+
+<p><button class="play-button sentence" id="s-00-13-15-000" data-start="00:13:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dressing table is from Trove.</p>
+<div class="zh">梳妆台来自Trove品牌。</div>
+
+<p><button class="play-button sentence" id="s-00-13-17-000" data-start="00:13:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My mum always had a dressing table growing up.</p>
+<div class="zh">我母亲从小到大都有梳妆台。</div>
+
+<p><button class="play-button sentence" id="s-00-13-19-000" data-start="00:13:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's always nice to be able to kind of sit somewhere and, you know, do your hair and make up.</p>
+<div class="zh">能坐在专属区域打理妆容总是令人愉悦。</div>
+
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1SqpvzWE3e/?t=-2208959187" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-33-000" data-start="00:13:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been lovely having you AD.</p>
+<div class="zh">很高兴能接受《建筑文摘》的采访。</div>
+
+<p><button class="play-button sentence" id="s-00-13-35-166" data-start="00:13:35,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks so much for coming.</p>
+<div class="zh">非常感谢您的到来。</div>
+
+<p><button class="play-button sentence" id="s-00-13-37-000" data-start="00:13:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bye!</p>
+<div class="zh">再见！</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
