@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The secrets of the deep ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The ocean covers over 70% of the planet but remains largely unexplored due to immense pressure and technological limitations. New technologies like submarine robots are revealing extraordinary creatures and underwater landscapes, including the deepest trench on Earth. Tragically, scientists discovered plastic inside a new crustacean species at 7,000 meters depth, highlighting severe human impact. The ocean produces half of Earth's oxygen and regulates climate, yet pollution and dead zones are increasing. Despite being vital to all life, ocean conservation efforts remain insufficient.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The secrets of the deep ocean</h1>
+<p>【BBC科普精选：未知的深海】</p>
+<p>Summary:
+The ocean covers over 70% of the planet but remains largely unexplored due to immense pressure and technological limitations. New technologies like submarine robots are revealing extraordinary creatures and underwater landscapes, including the deepest trench on Earth. Tragically, scientists discovered plastic inside a new crustacean species at 7,000 meters depth, highlighting severe human impact. The ocean produces half of Earth's oxygen and regulates climate, yet pollution and dead zones are increasing. Despite being vital to all life, ocean conservation efforts remain insufficient.</p>
+<p>摘要：
+海洋覆盖地球超70%面积，但其探索程度远低于太空，因水压巨大且技术受限。潜艇机器人等新技术正揭示奇特生物和海底地貌，包括地球最深的马里亚纳海沟。科学家在7000米深处新种甲壳动物体内发现塑料，印证人类污染已触及深海禁区。海洋产生地球一半氧气并调节气候，但污染与缺氧区持续扩大。尽管关乎所有生命存续，当前海洋保护力度仍如杯水车薪。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 6 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-000" data-start="00:00:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ocean covers over 70% of our planet and yet what we know about it barely scratches the surface.</p>
+<div class="zh">海洋覆盖了地球70%以上的面积，然而我们对它的了解仅触及表面。</div>
+
+<p><button class="play-button sentence" id="s-00-00-08-000" data-start="00:00:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Benefits swell is a largely unexplored universe until recently beyond the gaze of human eyes.</p>
+<div class="zh">海洋深处是一个大部分未被探索的宇宙，直到最近才进入人类的#视线#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-16-000" data-start="00:00:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So why do we know so little about the ocean?</p>
+<div class="zh">为何我们对海洋知之甚少？</div>
+
+<p><button class="play-button sentence" id="s-00-00-19-000" data-start="00:00:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For a start immense pressure presents huge challenges for divers and equipment alike.</p>
+<div class="zh">首先是#巨大#的压力给潜水员和设备#都#带来巨大挑战。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959976" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-24-000" data-start="00:00:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In many ways it's easier to send a mission to space.</p>
+<div class="zh">在许多方面，执行太空任务反而更容易。</div>
+
+<p><button class="play-button sentence" id="s-00-00-30-000" data-start="00:00:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But with new technology such as submarine robots this hidden realm is starting to reveal its secrets.</p>
+<div class="zh">但随着#潜水#机器人等新技术的出现，这个隐秘的#领域#正逐渐揭开其秘密。</div>
+
+<p><button class="play-button sentence" id="s-00-00-38-000" data-start="00:00:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what's down there?</p>
+<div class="zh">那么海底究竟有什么？</div>
+
+<p><button class="play-button sentence" id="s-00-00-40-000" data-start="00:00:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well there's water, lots of it.</p>
+<div class="zh">首先是水，大量的水。</div>
+
+<p><button class="play-button sentence" id="s-00-00-43-000" data-start="00:00:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 1,419,120,000 cubic kilometers to be about as precise as you can be.</p>
+<div class="zh">精确地说，总量约为1,419,120,000#立方#公里。</div>
+
+<p><button class="play-button sentence" id="s-00-00-51-000" data-start="00:00:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in that water there's fish, the main source of protein for around 3 billion people.</p>
+<div class="zh">水中生活着鱼类，这是约30亿人的主要蛋白质来源。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959942" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-58-000" data-start="00:00:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's a lot more than just fish down there.</p>
+<div class="zh">但海底远不止有鱼类。</div>
+
+<p><button class="play-button sentence" id="s-00-01-02-000" data-start="00:01:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Extraordinary otherworldly creatures dwell in the depths.</p>
+<div class="zh">非凡的异世界生物#栖息#在深海。</div>
+
+<p><button class="play-button sentence" id="s-00-01-06-000" data-start="00:01:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With new ones discovered all the time.</p>
+<div class="zh">新物种不断被发现。</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-000" data-start="00:01:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many are gelatinous, jellyfish that disintegrate if you try to catch them in a net.</p>
+<div class="zh">许多是凝胶状生物，比如用网捕捞就会#解体#的#水母#。</div>
+
+<p><button class="play-button sentence" id="s-00-01-14-000" data-start="00:01:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2020 scientists found the giant Saifonafor Apollemia, an organism made up of millions of interconnected clones.</p>
+<div class="zh">2020年科学家发现了巨型索芙娜管水母，这是由数百万相互连接的克隆体组成的#有机体#。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959919" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-21-000" data-start="00:01:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Its thin twisting body reminiscent of a long piece of string.</p>
+<div class="zh">它细长蜿蜒的身体#令人想起#一根长长的绳索。</div>
+
+<p><button class="play-button sentence" id="s-00-01-27-000" data-start="00:01:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the ocean flow is far from being the flat and featureless seabed you might imagine.</p>
+<div class="zh">海底远非人们想象中平坦无特色的海床。</div>
+
+<p><button class="play-button sentence" id="s-00-01-32-000" data-start="00:01:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you were to drain the ocean the landscape would emerge just as spectacular as anything on land, boasting some of the highest peaks, deepest canyons and longest river channels on the planet.</p>
+<div class="zh">若将海水抽干，呈现的地貌将如同陆地般壮观，拥有地球最高峰、最深峡谷和最长河道。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-45-000" data-start="00:01:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are even waterfalls under the sea, the largest being the Denmark Strait Cataract.</p>
+<div class="zh">海底甚至还有瀑布，最大的是丹麦#海峡#大瀑布。</div>
+
+<p><button class="play-button sentence" id="s-00-01-50-000" data-start="00:01:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here the cold waters of the Greenland Sea meet the warmer waters of the Irminga.</p>
+<div class="zh">这里格陵兰海的冷水流与伊尔明格的暖水流相遇。</div>
+
+<p><button class="play-button sentence" id="s-00-01-55-000" data-start="00:01:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the cooler water is forced down, it creates a giant 3.5 thousand meter drop, undetectable to anyone who might be bobbing about on the surface.</p>
+<div class="zh">较冷的水下沉时形成3500米的巨大落差，海面上漂浮的人完全无法察觉。</div>
+
+<p><button class="play-button sentence" id="s-00-02-04-000" data-start="00:02:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's nothing compared to the chilling 11,000 meter drop to the bottom of the Mariana Trench, the deepest place on earth.</p>
+<div class="zh">这与深达11000#米#的地球最深处马里亚纳#海沟#相比根本不值一提。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959869" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-11-000" data-start="00:02:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was here that in 2020 scientists made an alarming discovery.</p>
+<div class="zh">2020年科学家在此有了惊人发现。</div>
+
+<p><button class="play-button sentence" id="s-00-02-16-000" data-start="00:02:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At a depth of around 7,000 meters in one of the most remote and inaccessible crevices on earth, they came across a new species of crustacean, and it had plastic in its stomach.</p>
+<div class="zh">在地球最偏远难至的7000米深裂隙中，他们发现了一种甲壳类新物种，其胃部含有塑料。</div>
+
+<p><button class="play-button sentence" id="s-00-02-28-000" data-start="00:02:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They called it urethanease plasticus, a living reminder that even though we've barely begun to explore the ocean, our impact on it is already being keenly felt.</p>
+<div class="zh">他们将其命名为"塑料埃伦水蚤"，这个活生生的例证提醒我们：尽管刚开启海洋探索，人类影响已清晰可见。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959841" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-39-000" data-start="00:02:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, by 2050, it's estimated there could be more plastic in the sea than fish.</p>
+<div class="zh">事实上，预计到2050年海洋中塑料可能比鱼类还多。</div>
+
+<p><button class="play-button sentence" id="s-00-02-46-000" data-start="00:02:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's not just plastic that's a problem.</p>
+<div class="zh">但问题不止于塑料。</div>
+
+<p><button class="play-button sentence" id="s-00-02-50-000" data-start="00:02:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are also dead zones, areas with insufficient oxygen to support marine life.</p>
+<div class="zh">还存在死亡区——#氧气##不足#无法维持海洋生命的区域。</div>
+
+<p><button class="play-button sentence" id="s-00-02-55-000" data-start="00:02:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are becoming more common thanks to pollution.</p>
+<div class="zh">由于污染，这类区域正变得越来越常见。</div>
+
+<p><button class="play-button sentence" id="s-00-03-00-000" data-start="00:03:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The sad truth is when it comes to the ocean, the reach of human activity goes far beyond the reach of our knowledge.</p>
+<div class="zh">可悲的事实是：人类对海洋的活动影响已远超认知范围。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-08-000" data-start="00:03:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's easy to feel detached from the ocean, particularly if you live in land, and this might explain why we've treated it as a dumping ground.</p>
+<div class="zh">人们容易对海洋产生疏离感（尤其内陆居民），这或许解释了为何我们将其视作垃圾场。</div>
+
+<p><button class="play-button sentence" id="s-00-03-17-000" data-start="00:03:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the more we explore, the more we find it has to offer.</p>
+<div class="zh">但探索越深入，越能发现其价值。</div>
+
+<p><button class="play-button sentence" id="s-00-03-21-000" data-start="00:03:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example, the gene pool of deep ocean life, such as sponges and microorganisms, could hold the key to solving the urgent problem of antibiotic resistance.</p>
+<div class="zh">例如海绵和微生物等深海生物的基因库，可能蕴藏着解决抗生素耐药性迫切问题的关键。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959789" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-31-000" data-start="00:03:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More importantly, the ocean is key to almost all life on the planet.</p>
+<div class="zh">更重要的是，海洋关乎地球上几乎所有生命。</div>
+
+<p><button class="play-button sentence" id="s-00-03-35-000" data-start="00:03:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Half the oxygen we breathe comes from marine photosynthesizers, such as phytoplankton and sea meat.</p>
+<div class="zh">我们呼吸的#氧气#半数来自海洋光合作用生物（如浮游植物和海藻）。</div>
+
+<p><button class="play-button sentence" id="s-00-03-42-000" data-start="00:03:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ocean also regulates our climate, mediating temperature by distributing solar heat around the planet.</p>
+<div class="zh">海洋还通过分配太阳热量调节气候，稳定温度。</div>
+
+<p><button class="play-button sentence" id="s-00-03-49-000" data-start="00:03:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We may not feel it, but every one of us is affected every day by the role the ocean plays in our finely balanced Earth system.</p>
+<div class="zh">虽然难以察觉，但每个人日常都受海洋在精妙地球系统中作用的影响。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV165pvzgELU/?t=-2208959763" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-57-000" data-start="00:03:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet, the efforts we've made so far to protect and preserve this vital life source are well a drop in the ocean.</p>
+<div class="zh">然而，我们目前为保护这一生命源泉所做的努力，不过是沧海一粟。</div>
+
+<p><button class="play-button sentence" id="s-00-04-08-000" data-start="00:04:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's still so much we don't know, so many breathtaking canyons unseen, so many creatures undiscovered, but new technology is revealing more about our ocean than ever before.</p>
+<div class="zh">仍有太多未知、太多壮丽峡谷未见、太多生物未被发现，但新技术正以前所未有的方式揭示海洋奥秘。</div>
+
+<p><button class="play-button sentence" id="s-00-04-19-000" data-start="00:04:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Perhaps if we knew more of the ocean secrets, we might look after it better.</p>
+<div class="zh">或许深入了解海洋秘密后，我们会更好地守护它。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
