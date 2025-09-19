@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The Secret Life of Snowflakes: From Hexagons to Cosmic Laws</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Snowflakes form when water vapor crystallizes around dust particles in clouds, creating a hexagonal structure due to molecular angles. Their branching patterns are shaped by unique atmospheric conditions during descent, ensuring no two flakes are identical. Johannes Kepler’s 17th-century theory about hexagonal efficiency was proven centuries later through molecular science. Though often idealized as perfect stars, most snowflakes are irregularly shaped. Their apparent whiteness stems from light scattering through intricate ice structures, while their symmetry reflects universal physical laws governing everything from crystals to galaxies.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The Secret Life of Snowflakes: From Hexagons to Cosmic Laws</h1>
+<p>【BBC科普精选：雪花的秘密】</p>
+<p>Summary:
+Snowflakes form when water vapor crystallizes around dust particles in clouds, creating a hexagonal structure due to molecular angles. Their branching patterns are shaped by unique atmospheric conditions during descent, ensuring no two flakes are identical. Johannes Kepler’s 17th-century theory about hexagonal efficiency was proven centuries later through molecular science. Though often idealized as perfect stars, most snowflakes are irregularly shaped. Their apparent whiteness stems from light scattering through intricate ice structures, while their symmetry reflects universal physical laws governing everything from crystals to galaxies.</p>
+<p>摘要：
+雪花由水汽在云层中围绕尘埃凝结而成，其分子键角自然形成六边形核心结构。每片雪花下落过程中经历的温度与湿度差异塑造了独一无二的分支形态。开普勒于1611年提出的六边形空间效率猜想，四百年后才通过水分子结构得以验证。尽管常被理想化为对称星形，多数雪花实为不规则颗粒。其白色外观源自光线在冰晶间的散射效应，而对称性则揭示了从微观晶体到宏观星系皆适用的宇宙物理法则。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 5 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-000" data-start="00:00:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Snowflakes are intricate, beautiful, mysterious and totally captivating.</p>
+<div class="zh">雪花是#精妙复杂#、美丽、神秘且完全迷人的存在。</div>
+
+<p><button class="play-button sentence" id="s-00-00-06-000" data-start="00:00:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for all their complexity and endless variety, the structure of a snowflake can be explained by a few universal laws of nature.</p>
+<div class="zh">尽管雪花具有无限的#复杂性#和多样性，但其结构可以用几条普适的自然法则来解释。</div>
+
+<p><button class="play-button sentence" id="s-00-00-15-000" data-start="00:00:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Laws that explain everything, from snowflakes to galaxies.</p>
+<div class="zh">这些法则解释着从雪花到星系的一切事物。</div>
+
+<p><button class="play-button sentence" id="s-00-00-21-000" data-start="00:00:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's start at the beginning.</p>
+<div class="zh">让我们从头开始。</div>
+
+<p><button class="play-button sentence" id="s-00-00-23-000" data-start="00:00:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is a snowflake?</p>
+<div class="zh">什么是#雪花#？</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-25-000" data-start="00:00:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or to use its more technical name, a snow crystal?</p>
+<div class="zh">或者用更专业的术语来说——雪#晶#？</div>
+
+<p><button class="play-button sentence" id="s-00-00-30-000" data-start="00:00:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A snow crystal forms up in the clouds.</p>
+<div class="zh">雪#晶#在云层中形成。</div>
+
+<p><button class="play-button sentence" id="s-00-00-33-000" data-start="00:00:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When water vapor meets little specks of dust or pollen, this forms its tiny hexagonal heart.</p>
+<div class="zh">当水#蒸气#遇到微小的尘埃或#花粉#颗粒时，便会形成微小的六边形核心。</div>
+
+<p><button class="play-button sentence" id="s-00-00-40-000" data-start="00:00:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tips stick out in a rough.</p>
+<div class="zh">棱角初现粗糙雏形。</div>
+
+<p><button class="play-button sentence" id="s-00-00-42-000" data-start="00:00:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This attracts water molecules, and then more water molecules, and then more.</p>
+<div class="zh">这会吸引水分子，继而吸引更多水分子不断聚集。</div>
+
+<p><button class="play-button sentence" id="s-00-00-47-000" data-start="00:00:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These form the branches of our snowflake.</p>
+<div class="zh">这些形成了我们#雪花#的枝杈。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959950" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-50-000" data-start="00:00:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The size and shape of these branches depends on the exact temperature and humidity that the snowflake meets on its journey through the clouds.</p>
+<div class="zh">枝杈的大小和形状取决于#雪花#在云中穿梭时遇到的精确温度与#湿度#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-59-000" data-start="00:00:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hold down by the force of gravity.</p>
+<div class="zh">在#重力#作用下持续坠落。</div>
+
+<p><button class="play-button sentence" id="s-00-01-02-000" data-start="00:01:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Each one takes a very slightly different route, meaning no two snowflakes are quite the same.</p>
+<div class="zh">每片雪花的飘落轨迹都略有不同，这意味着没有两片完全相同的雪花。</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-000" data-start="00:01:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When a snowflake lands on your sleeve, it's been on its own totally unique journey to reach you, before melting away in a moment.</p>
+<div class="zh">当#雪花#落在你的衣袖上时，它已完成通往你的独特旅程，随后在瞬间#融化#消失。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959922" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-18-000" data-start="00:01:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Way back in 1611, on a bitterly cold January morning in Prague, a snowflake landed on the sleeve of mathematician Johannes Kepler, and it got him thinking, why do snowflakes have six sides?</p>
+<div class="zh">早在1611年，一个严寒的一月清晨，布拉格的数学家约翰内斯·开普勒的衣袖上落了一片雪花，这让他陷入思考：为什么雪花有六边？</div>
+
+<p><button class="play-button sentence" id="s-00-01-33-000" data-start="00:01:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kepler's breakthrough was his theory that this hexagonal pattern is the most efficient use of space, whether it's a honeycomb within a beehive, or piles of stacked cannonballs, or a delicate transient snowflake.</p>
+<div class="zh">开普勒的突破性理论是：六边形是最有效的空间利用形式——无论是蜂巢内的蜂房、堆积的炮弹堆，还是精致转瞬的雪花。</div>
+
+<p><button class="play-button sentence" id="s-00-01-49-000" data-start="00:01:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It took 400 years, 400 years for his theory to be proven.</p>
+<div class="zh">他的理论历经400年、整整400年才得到证实。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959883" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What Kepler didn't know at the time is that each molecule of water, or H2O, is made of a two hydrogen atoms and one oxygen atom.</p>
+<div class="zh">开普勒当时不知道的是，每个水分子（H2O）都由两个氢原子和一个氧原子构成。</div>
+
+<p><button class="play-button sentence" id="s-00-02-06-000" data-start="00:02:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the water molecules clustered together when they freeze, the angle between the hydrogen atoms is always approximately 105 degrees, and that gives us the six sides.</p>
+<div class="zh">当水分子冻结聚集时，氢原子间的夹角总是接近105度——这正是六边形的成因。</div>
+
+<p><button class="play-button sentence" id="s-00-02-19-000" data-start="00:02:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At its heart, a snowflake is always a hexagon, but it can grow into all sorts of weird and wonderful shapes.</p>
+<div class="zh">#雪花#的核心始终是六边形，但能生长成各种奇妙的形态。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959852" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-28-000" data-start="00:02:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Long and thin like a pencil, sharp like a needle, cylindrical like a bullet, or just occasionally triangular.</p>
+<div class="zh">细长如铅笔，尖锐如钢针，圆柱似子弹，或偶尔呈现#三角形#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-37-000" data-start="00:02:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The truth is, though, most snowflakes are kind of, well, blob-like.</p>
+<div class="zh">不过事实上，大多数雪花更接近#不规则#的团状。</div>
+
+<p><button class="play-button sentence" id="s-00-02-43-000" data-start="00:02:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you speak to a snowflake photographer, they're just a handful in the world.</p>
+<div class="zh">若你与#雪花#摄影师交谈，会发现全球仅存在#寥寥数位#。</div>
+
+<p><button class="play-button sentence" id="s-00-02-49-000" data-start="00:02:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They'll tell you it takes days and days out in the cold to get that money shot.</p>
+<div class="zh">他们会告诉你，需要在严寒中守候无数日夜才能捕捉到绝佳镜头。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959826" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-54-000" data-start="00:02:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the conditions have to be just right, between minus 50 and minus 13 degrees.</p>
+<div class="zh">环境条件必须恰到好处，温度需介于#零下#50度至#零下#13度之间。</div>
+
+<p><button class="play-button sentence" id="s-00-03-01-000" data-start="00:03:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But ever since Wilson Bentley, a farmer from the US state of Vermont, painstakingly took the first photos of stunning snowflakes in 1885, we've been hugs.</p>
+<div class="zh">但自从美国佛蒙特州农民威尔森·本特利于1885年艰辛拍下第一组惊艳的雪花照片后，人类便始终为之着迷。</div>
+
+<p><button class="play-button sentence" id="s-00-03-13-000" data-start="00:03:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Scientists have shown that symmetry is incredibly pleasing to the human brain.</p>
+<div class="zh">科学家发现#对称性#能极大取悦人类大脑。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959802" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-18-000" data-start="00:03:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Snowflakes are all radially symmetrical, which means you can cut them into identical slices like a cake.</p>
+<div class="zh">雪花全部具有径向#对称性#，这意味着你可以像切蛋糕那样将它们分成#完全相同的#切片。</div>
+
+<p><button class="play-button sentence" id="s-00-03-25-000" data-start="00:03:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shells, flowers, starfish, even spiral galaxies, like the Milky Way, share this type of symmetry, and nature has one last trick up its sleeve.</p>
+<div class="zh">贝壳、花朵、海星，甚至如#银河#般的#螺旋#星系都具有此类#对称性#——而自然还藏着最后一道玄机。</div>
+
+<p><button class="play-button sentence" id="s-00-03-38-000" data-start="00:03:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Snowflakes aren't actually white.</p>
+<div class="zh">雪花其实并非白色。</div>
+
+<p><button class="play-button sentence" id="s-00-03-41-000" data-start="00:03:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're clear, but they have lots of edges, and this scatzes the light, making them appear white.</p>
+<div class="zh">它们是透明的，但因众多棱角对光线的散射而呈现白色。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1xxWgzUEwr/?t=-2208959772" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-48-000" data-start="00:03:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Each snowflake is a microcosm at the laws of physics.</p>
+<div class="zh">每片#雪花#都是物理法则的微观缩影。</div>
+
+<p><button class="play-button sentence" id="s-00-03-52-000" data-start="00:03:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gravity makes it fall.</p>
+<div class="zh">#重力#令其坠落。</div>
+
+<p><button class="play-button sentence" id="s-00-03-55-000" data-start="00:03:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Electromagnetism dictates its shape, and you've got symmetry.</p>
+<div class="zh">电磁力塑造其形态，而#对称性#贯穿始终。</div>
+
+<p><button class="play-button sentence" id="s-00-04-01-000" data-start="00:04:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the same with the stars, and solar systems, and planets, and with us.</p>
+<div class="zh">星辰、星系、行星乃至人类自身皆同此理。</div>
+
+<p><button class="play-button sentence" id="s-00-04-06-000" data-start="00:04:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you look at a snowflake, you can read its history.</p>
+<div class="zh">当你凝视#雪花#，便能解读它的历史。</div>
+
+<p><button class="play-button sentence" id="s-00-04-10-000" data-start="00:04:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's own unique story.</p>
+<div class="zh">它独一无二的故事。</div>
+
+<p><button class="play-button sentence" id="s-00-04-12-000" data-start="00:04:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The experience is its encounters shape it into what it is, just like us really.</p>
+<div class="zh">它的经历与遭遇塑造了其最终形态——这恰如人类的成长真谛。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
