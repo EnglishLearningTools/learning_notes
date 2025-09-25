@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>The World Today with Marianne Machiri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UK to Introduce Compulsory Digital ID Scheme to Tackle Illegal Immigration">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>The World Today with Marianne Machiri</h1>
+<p>【BBC World Today 20250926 英国计划推数字身份证打击非法移民｜加沙危机被指世纪罪行｜幼儿园数据遭黑客勒索】</p>
+<p>Summary:
+UK to Introduce Compulsory Digital ID Scheme to Tackle Illegal Immigration</p>
+<p>摘要：
+英国政府计划推出强制性数字身份证计划，旨在打击非法移民和现代化治理。该提案引发对公民自由和隐私的担忧，反对党批评其实际效果有限。与此同时，巴勒斯坦权力机构主席在联合国谴责加沙局势为"历史性人道悲剧"。此外，黑客窃取幼儿园8000名儿童及家长敏感信息并勒索赎金，阿拉斯加"胖熊周"投票活动为沉重新闻带来轻松时刻。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 39 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-16-000" data-start="00:00:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Life from London, this is the world today with Marianne Machiri.</p>
+<div class="zh">来自伦敦的现场报道，这里是玛丽安·马奇里为您带来的《今日世界》。</div>
+
+<p><button class="play-button sentence" id="s-00-00-20-000" data-start="00:00:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kisdharma is planning to introduce a compulsory digital ID scheme for the UK with hopes it will crack down on illegal working and modernise the state.</p>
+<div class="zh">基斯 Dharma 计划在英国推行强制性数字身份证方案，希望借此打击非法务工并实现国家现代化。</div>
+
+<p><button class="play-button sentence" id="s-00-00-29-000" data-start="00:00:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The leader of the Palestinian Authority, Mamuda Bass, tells the UN General Assembly that what's happening in Gaza is one of the most horrific events in modern history.</p>
+<div class="zh">巴勒斯坦权力机构主席马穆达·巴斯在联合国大会上表示，加沙地带正在发生的事件是现代史上最恐怖的暴行之一。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959962" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-38-000" data-start="00:00:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Katrina Perry live in New York where the Israeli Prime Minister has just arrived ahead of his address to the UN General Assembly tomorrow saying an independent state of Palestine will not happen.</p>
+<div class="zh">我是卡特里娜·佩里，在纽约为您现场报道。以色列总理刚刚抵达，他将于明天在联合国大会发表演讲，声称巴勒斯坦独立建国绝无可能。</div>
+
+<p><button class="play-button sentence" id="s-00-00-51-000" data-start="00:00:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also coming up on the world today, hackers target a nursery chain.</p>
+<div class="zh">本期《今日世界》还将关注：黑客袭击一家#托儿所#连锁机构。</div>
+
+<p><button class="play-button sentence" id="s-00-00-56-000" data-start="00:00:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say they've stolen photos, names and addresses of 8,000 children and their parents.</p>
+<div class="zh">黑客声称已窃取8000名儿童及其父母的照片、姓名和住址。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959938" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-02-000" data-start="00:01:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we are live from Alaska as the bears of Katmai National Park go head to head in a public vote on which one is the fattest.</p>
+<div class="zh">现在我们连线阿拉斯加现场，卡特迈国家公园的棕熊正在通过公众投票角逐"最胖熊"称号。</div>
+
+<p><button class="play-button sentence" id="s-00-01-11-000" data-start="00:01:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MUSIC</p>
+<div class="zh">音乐</div>
+
+<p><button class="play-button sentence" id="s-00-01-21-000" data-start="00:01:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello and welcome to the world today on BBC News.</p>
+<div class="zh">大家好，欢迎收看BBC新闻《今日世界》。</div>
+
+<p><button class="play-button sentence" id="s-00-01-25-000" data-start="00:01:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every adult in Britain will need a new government issued digital ID card to prove they live and can work here under plans that are expected to be announced by the Prime Minister tomorrow.</p>
+<div class="zh">根据首相明日即将宣布的计划，英国每位成年人都需持有政府颁发的新型数字身份证，以证明其居住及工作资格。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959905" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-35-000" data-start="00:01:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The move is part of efforts to crack down on illegal migrants.</p>
+<div class="zh">此举是打击非法移民行动的一部分。</div>
+
+<p><button class="play-button sentence" id="s-00-01-39-000" data-start="00:01:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most European countries require their citizens to hold ID cards, but the UK has long resisted with concerns over civil rights and privacy issues.</p>
+<div class="zh">多数欧洲国家要求公民持有身份证，但英国长期对此抵制，主要出于对公民权利和#隐私#问题的担忧。</div>
+
+<p><button class="play-button sentence" id="s-00-01-48-000" data-start="00:01:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that looks set to change.</p>
+<div class="zh">但这一现状即将改变。</div>
+
+<p><button class="play-button sentence" id="s-00-01-49-846" data-start="00:01:49,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's our political correspondent Ian Watson.</p>
+<div class="zh">以下是我台政治#记者#伊恩·沃森的发回的报道。</div>
+
+<p><button class="play-button sentence" id="s-00-01-53-000" data-start="00:01:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> ID cards are not a new idea.</p>
+<div class="zh">身份证并非新概念。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959885" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-54-714" data-start="00:01:54,714" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were compulsory during the war and not abolished until 1952.</p>
+<div class="zh">二战期间曾实行#强制性#身份证制度，直至1952年才废除。</div>
+
+<p><button class="play-button sentence" id="s-00-01-59-000" data-start="00:01:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The idea was revived in 2005 by 20 bears government.</p>
+<div class="zh">2005年，20 bears政府重启该方案。</div>
+
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The then home secretary was seeing how these biometric cards would work.</p>
+<div class="zh">时任内政大臣曾研究这种生物识别卡的实施方式。</div>
+
+<p><button class="play-button sentence" id="s-00-02-07-000" data-start="00:02:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were supposed to tackle illegal working and establish entitlement to public services for the scheme faced technical challenges and political opposition and hadn't been implemented by the time of the 2010 election when the conservative Lib Dem coalition scrapped them.</p>
+<div class="zh">该计划本欲解决非法务工问题并确立公共服务资格，但因技术挑战和政治反对未能落地，直到2010年大选后保守党-自民党联盟将其废除。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959859" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-21-000" data-start="00:02:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now the idea has been revived under this Labour government.</p>
+<div class="zh">如今工党政府再次重启该构想。</div>
+
+<p><button class="play-button sentence" id="s-00-02-25-000" data-start="00:02:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ministers have been looking at a digital ID scheme in Estonia, in Eastern Europe, which is used to access public services.</p>
+<div class="zh">大臣们一直在研究东欧爱沙尼亚的数字身份证方案，该方案用于接入公共服务。</div>
+
+<p><button class="play-button sentence" id="s-00-02-31-344" data-start="00:02:31,344" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they believe that attitudes towards ID cards have softened as concerns about illegal immigration have risen.</p>
+<div class="zh">他们认为随着对非法#移民#问题的担忧加剧，公众对身份证的态度已有所缓和。</div>
+
+<p><button class="play-button sentence" id="s-00-02-39-000" data-start="00:02:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government's direction of travel has been clear for some time.</p>
+<div class="zh">政府的改革方向早已明确。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959838" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-42-000" data-start="00:02:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier this month, Kirstaarmour told the BBC why he thought they were a good idea.</p>
+<div class="zh">本月早些时候，基尔斯塔默向BBC解释了他认为此举有益的原因。</div>
+
+<p><button class="play-button sentence" id="s-00-02-47-000" data-start="00:02:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm determined to stop people making that crossing across the channel and to get people out of our hotels.</p>
+<div class="zh">我决心阻止英吉利海峡偷渡#过境#行为，并让非法移民搬离我们的酒店。</div>
+
+<p><button class="play-button sentence" id="s-00-02-55-000" data-start="00:02:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And therefore I am looking at ID cards, or ID, digital ID, because we do need to look at the poll factors.</p>
+<div class="zh">因此我正在研究身份证，即数字身份证，因为我们必须考虑#吸引#因素。</div>
+
+<p><button class="play-button sentence" id="s-00-03-02-000" data-start="00:03:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister believes this is an important weapon in his armoury to tackle illegal immigration.</p>
+<div class="zh">首相认为这是其应对非法#移民#的#武器库#中的重要武器。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-07-000" data-start="00:03:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But his idea is creating clear blue water between government and opposition.</p>
+<div class="zh">但该构想正在政府与反对党之间划出清晰界限。</div>
+
+<p><button class="play-button sentence" id="s-00-03-12-000" data-start="00:03:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kirstaarmour scrapped the Rwanda Removal's plan without having any other plan in place.</p>
+<div class="zh">基尔斯塔默在无替代方案的情况下废除了卢旺达遣送计划。</div>
+
+<p><button class="play-button sentence" id="s-00-03-17-000" data-start="00:03:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he was going to smash the gangs, he hasn't done that.</p>
+<div class="zh">他声称要粉碎犯罪团伙，但并未兑现。</div>
+
+<p><button class="play-button sentence" id="s-00-03-20-000" data-start="00:03:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Digital ID cards is not going to smash the gangs or stop the boots.</p>
+<div class="zh">数字身份证既无法粉碎犯罪集团，也不能阻止偷渡。</div>
+
+<p><button class="play-button sentence" id="s-00-03-23-000" data-start="00:03:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I fear this is a bit like what they tried to do before, whereas authoritarian, with centralised, controlled by the state and we should oppose that lightly did before.</p>
+<div class="zh">这恐怕与他们先前的尝试类似，带有威权主义色彩，强调中央集权和国家控制，我们应像过去那样坚决反对。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959787" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-33-000" data-start="00:03:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there are practical questions if digital ID requires a phone or computer.</p>
+<div class="zh">若数字身份证需手机或电脑支持，还存在现实问题。</div>
+
+<p><button class="play-button sentence" id="s-00-03-38-000" data-start="00:03:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What happens if you don't have one?</p>
+<div class="zh">没有这些设备的人该怎么办？</div>
+
+<p><button class="play-button sentence" id="s-00-03-40-000" data-start="00:03:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government says it will consult in the details, so don't expect to have to prove your identity online, just yet.</p>
+<div class="zh">政府表示将就细节进行磋商，因此暂时还无需在线验证身份。</div>
+
+<p><button class="play-button sentence" id="s-00-03-45-923" data-start="00:03:45,923" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In what's in BBC News?</p>
+<div class="zh">BBC新闻还有哪些消息？</div>
+
+<p><button class="play-button sentence" id="s-00-03-49-000" data-start="00:03:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, let's cross-life to Westminster and our political correspondent David Corner.</p>
+<div class="zh">现在连线 Westminster 现场的政治#记者#大卫·科纳。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-54-000" data-start="00:03:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> David, it's been a while now that Labour has pushed back against this idea, but now it looks like the government's going for it.</p>
+<div class="zh">大卫，工党抵制该构想已有一段时间，但现在政府似乎决心推行。</div>
+
+<p><button class="play-button sentence" id="s-00-04-00-529" data-start="00:04:00,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you think has changed?</p>
+<div class="zh">你认为转变的原因是什么？</div>
+
+<p><button class="play-button sentence" id="s-00-04-02-000" data-start="00:04:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Kirstaarmour has said that psychologically the world is in a different place from where it was 20 years ago that we all carry a lot more digital ID on our phones and people have fewer hang-ups, perhaps, about some of the civil liberties arguments.</p>
+<div class="zh">基尔斯塔默指出，从心理层面看，当今世界与20年前已大不相同——我们手机中携带更多数字身份信息，公众对公民自由论点的顾虑可能有所减少。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959740" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-20-000" data-start="00:04:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But undoubtedly, there's been concern over the rising numbers of people crossing on small boats this year.</p>
+<div class="zh">但#毫无疑问#，今年乘小船#过境#人数上升已引发担忧。</div>
+
+<p><button class="play-button sentence" id="s-00-04-27-000" data-start="00:04:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been concern that perhaps it's too easy to disappear into the economy here.</p>
+<div class="zh">有人担心非法移民可能过于容易潜入我国经济体系。</div>
+
+<p><button class="play-button sentence" id="s-00-04-33-000" data-start="00:04:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You heard the Prime Minister talk about pull factors that mean people are tempted to come to the UK, perhaps illegally and try to work illegally, and he thinks it's an important part, really, of his drive and commitment to end that trade and those small boats crossings.</p>
+<div class="zh">首相提到的吸引因素意味着有人被诱惑来英——可能是非法途径并试图非法工作，他认为这实际上是终结偷渡贸易和小船过境行动的重要环节。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959706" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-54-000" data-start="00:04:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some from the opposition parties like Kenny Baidenoch, like Reform UK, are saying these are not going to make any difference, that they won't make any difference to a legal immigration.</p>
+<div class="zh">肯尼·贝德诺克等反对党成员及英国改革党表示，这对合法移民毫无影响。</div>
+
+<p><button class="play-button sentence" id="s-00-05-06-000" data-start="00:05:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're the way they can do a different difference even to solving the problem of illegal working in the UK.</p>
+<div class="zh">即便解决英国非法务工问题，这种方式也效果有限。</div>
+
+<p><button class="play-button sentence" id="s-00-05-12-000" data-start="00:05:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that's the sort of opposition dividing line if you like.</p>
+<div class="zh">这可谓反对党的分界线。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959682" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-18-000" data-start="00:05:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There has been some evidence recently that people have been working for food delivery companies coming out of a Sama-Sylum hotels, and that's the sort of thing the government will hope that the ID cards and a greater burden of proof that you are able to work in this country will actually tackle, perhaps give political reassurance to voters that the government sees this as a big issue, and thinks that it can make a difference.</p>
+<div class="zh">近期有证据显示，部分难民酒店出来的人为外卖公司工作，政府希望身份证及更严格的工作资格举证责任能解决此类问题，或许还能向选民传递政治 reassurance——政府视此为重大议题并认为能有所作为。</div>
+
+<p><button class="play-button sentence" id="s-00-05-49-000" data-start="00:05:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still though, lots of practical questions about how they'll work.</p>
+<div class="zh">但具体操作仍存诸多实际问题。</div>
+
+<p><button class="play-button sentence" id="s-00-05-53-000" data-start="00:05:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Something like 8 million people in England and Wales don't have a passport.</p>
+<div class="zh">英格兰和威尔士约800万人没有护照。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959643" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-57-000" data-start="00:05:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are they going to want to sign up for a digital ID?</p>
+<div class="zh">他们是否愿意注册数字身份证？</div>
+
+<p><button class="play-button sentence" id="s-00-06-01-000" data-start="00:06:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of them may not have a smartphone.</p>
+<div class="zh">部分人可能没有智能手机。</div>
+
+<p><button class="play-button sentence" id="s-00-06-03-000" data-start="00:06:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lots of questions that the government hopes will be answered in the consultation that Kirsta Amas likely to launch tomorrow.</p>
+<div class="zh">政府希望基尔斯塔默明日可能启动的#磋商#能解答这些疑问。</div>
+
+<p><button class="play-button sentence" id="s-00-06-13-000" data-start="00:06:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, David, thank you very much indeed.</p>
+<div class="zh">好的，大卫，非常感谢。</div>
+
+<p><button class="play-button sentence" id="s-00-06-15-000" data-start="00:06:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, very briefly, if I can, let me just read you a tweet by the Reform Leader, Nigel Farage.</p>
+<div class="zh">请允许我简短宣读改革党领袖奈杰尔·法拉奇的一条推文。</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-21-000" data-start="00:06:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am firmly opposed to Kirsta Amas digital ID cards.</p>
+<div class="zh">我坚决反对基尔斯塔默的数字身份证计划。</div>
+
+<p><button class="play-button sentence" id="s-00-06-25-000" data-start="00:06:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It'll make no difference to legal immigration, but it will be used to control and penalise the rest of us.</p>
+<div class="zh">这对合法#移民#毫无作用，却将被用来控制和惩罚我们普通民众。</div>
+
+<p><button class="play-button sentence" id="s-00-06-29-000" data-start="00:06:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've never had this much power.</p>
+<div class="zh">我从未掌握如此大权。</div>
+
+<p><button class="play-button sentence" id="s-00-06-31-000" data-start="00:06:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Nigel Farage.</p>
+<div class="zh">以上是奈杰尔·法拉奇。</div>
+
+<p><button class="play-button sentence" id="s-00-06-31-972" data-start="00:06:31,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's cross-live now.</p>
+<div class="zh">现在切换现场信号。</div>
+
+<p><button class="play-button sentence" id="s-00-06-33-000" data-start="00:06:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I spoke to someone who has experience of ID cards.</p>
+<div class="zh">我采访了一位对身份证有切身经验的人士。</div>
+
+<p><button class="play-button sentence" id="s-00-06-37-000" data-start="00:06:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rao Kaitro is CEO of Rao Walter, which specialises in identity solutions for public and private sectors, and is based in Estonia, a country often described as having fully embraced the idea of digital ID cards.</p>
+<div class="zh">劳·凯特罗是劳沃尔特公司的CEO，该公司专攻公共和私营部门身份解决方案，总部位于爱沙尼亚——这个常被形容为全面拥抱数字身份证理念的国家。</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959590" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-50-000" data-start="00:06:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also a country I believe that a UK minister visited recently and talked about copying in many ways in terms of how you use ID cards.</p>
+<div class="zh">据悉一位英国大臣近期曾访问该国，并谈及在多方面借鉴其身份证使用经验。</div>
+
+<p><button class="play-button sentence" id="s-00-06-58-000" data-start="00:06:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you can explain to me how exactly ID cards work in Estonia.</p>
+<div class="zh">请详解爱沙尼亚身份证的具体运作方式。</div>
+
+<p><button class="play-button sentence" id="s-00-07-04-000" data-start="00:07:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, thank you for having me.</p>
+<div class="zh">感谢邀请。</div>
+
+<p><button class="play-button sentence" id="s-00-07-06-000" data-start="00:07:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Technical how it works is the ID card is kind of certificate of your identity in that sense.</p>
+<div class="zh">从技术层面讲，身份证本质上是身份凭证。</div>
+
+<p><button class="play-button sentence" id="s-00-07-15-000" data-start="00:07:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government registers your word, Perth, then your parents give you your name, you will end up in a registry and kind of the identity, the legal identity created will be transferred into a document, which is going to be an ID card form.</p>
+<div class="zh">政府登记你的出生信息，父母为你取名后，这些信息将录入登记系统，由此产生的合法身份会被转化为证件形式，即身份证。</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959545" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-35-000" data-start="00:07:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there is one and that one is mine and carries the unique identity ferry on top of it.</p>
+<div class="zh">这就是我的身份证，顶端印有唯一身份#标识符#。</div>
+
+<p><button class="play-button sentence" id="s-00-07-42-000" data-start="00:07:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is the document that allows me to do everything in Estonia without actually being anywhere present in Estonia.</p>
+<div class="zh">凭此证件我可办理爱沙尼亚所有事务，而无需亲身抵达该国。</div>
+
+<p><button class="play-button sentence" id="s-00-07-49-000" data-start="00:07:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's the difference, Raoul, between this and a passport?</p>
+<div class="zh">劳尔，这与护照有何区别？</div>
+
+<p><button class="play-button sentence" id="s-00-07-54-000" data-start="00:07:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The passport is a travel document.</p>
+<div class="zh">护照是旅行证件。</div>
+
+<p><button class="play-button sentence" id="s-00-07-56-000" data-start="00:07:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is mostly for getting, for traveling or getting abroad, going to a trip, whatever the reason.</p>
+<div class="zh">主要用于出国旅行等目的。</div>
+
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959515" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-05-000" data-start="00:08:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the passport does not carry the functionality of digital authentication and digital signature.</p>
+<div class="zh">但护照不具备数字认证和数字签名功能。</div>
+
+<p><button class="play-button sentence" id="s-00-08-15-000" data-start="00:08:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've been hearing from opposition leaders in the UK saying, you know, digital ID cards won't stop illegal migration.</p>
+<div class="zh">所以我们一直听到英国反对派领袖们表示，数字身份证无法阻止非法#移民潮#。</div>
+
+<p><button class="play-button sentence" id="s-00-08-24-000" data-start="00:08:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They won't even help with illegal working.</p>
+<div class="zh">它们甚至对打击非法务工也无济于事。</div>
+
+<p><button class="play-button sentence" id="s-00-08-27-000" data-start="00:08:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How have they worked in Estonia?</p>
+<div class="zh">爱沙尼亚是如何运作这套系统的呢？</div>
+
+<p><button class="play-button sentence" id="s-00-08-31-000" data-start="00:08:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is partly true.</p>
+<div class="zh">这种说法有一定道理。</div>
+
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959487" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-33-000" data-start="00:08:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Digital identity as such is not an immigration policy tool as such.</p>
+<div class="zh">数字身份本身并非#移民#政策工具。</div>
+
+<p><button class="play-button sentence" id="s-00-08-38-000" data-start="00:08:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is an infrastructure that makes policy enforceable.</p>
+<div class="zh">但它是让政策可执行的#基础设施#。</div>
+
+<p><button class="play-button sentence" id="s-00-08-43-000" data-start="00:08:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it kind of gives the government the ability to know who someone is.</p>
+<div class="zh">这相当于赋予政府识别个人身份的能力。</div>
+
+<p><button class="play-button sentence" id="s-00-08-49-000" data-start="00:08:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The claim of identity is the first question when they are being in contact with the person.</p>
+<div class="zh">当政府人员与个体接触时，身份声明是首要问题。</div>
+
+<p><button class="play-button sentence" id="s-00-08-56-000" data-start="00:08:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for example, in Estonia, in this case, I don't have to have technically any documents with me, even though I'm obliged to use it.</p>
+<div class="zh">例如在爱沙尼亚，虽然必须使用数字身份，但技术上我无需随身携带任何实体文件。</div>
+
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959455" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-05-000" data-start="00:09:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I still have my number, the unique number.</p>
+<div class="zh">我仍拥有自己的唯一识别号码。</div>
+
+<p><button class="play-button sentence" id="s-00-09-09-000" data-start="00:09:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if a policeman stops me on the road driving a car, if I give them the number, they already know that this car belongs to me and they have it exhibited to drive.</p>
+<div class="zh">如果警察在路上拦下我驾驶的车辆，只需提供号码，他们就能立即确认车辆归属和驾驶许可。</div>
+
+<p><button class="play-button sentence" id="s-00-09-19-000" data-start="00:09:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So therefore it is a kind of a tool how to verify the claim of identity, even without having the document itself in your hands.</p>
+<div class="zh">因此这是一种验证身份声明的工具，即便不手持实体证件也能实现。</div>
+
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959431" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-29-000" data-start="00:09:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's kind of like having a passport, a driver's license, an insurance ID, everything all wrapped up in one document, digital document.</p>
+<div class="zh">这就像将护照、驾照、保险证等所有功能整合进一份数字文件中。</div>
+
+<p><button class="play-button sentence" id="s-00-09-39-000" data-start="00:09:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not really wrapped up.</p>
+<div class="zh">并非真正物理整合。</div>
+
+<p><button class="play-button sentence" id="s-00-09-42-000" data-start="00:09:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is nothing on the card except my personal data.</p>
+<div class="zh">卡片上除个人数据外并无他物。</div>
+
+<p><button class="play-button sentence" id="s-00-09-46-052" data-start="00:09:46,052" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Everything is built outside the card.</p>
+<div class="zh">所有功能都构建在卡片之外。</div>
+
+<p><button class="play-button sentence" id="s-00-09-49-000" data-start="00:09:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right.</p>
+<div class="zh">没错。</div>
+
+<p><button class="play-button sentence" id="s-00-09-50-000" data-start="00:09:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's possible because of that unique identifier.</p>
+<div class="zh">这一切都得益于唯一标识符的存在。</div>
+
+<p><button class="play-button sentence" id="s-00-09-54-000" data-start="00:09:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in that sense, it's very important to kind of...</p>
+<div class="zh">从这个意义上说，非常重要的一点是...</div>
+
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959400" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-00-000" data-start="00:10:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are you surprised that UK doesn't use them already?</p>
+<div class="zh">你对英国尚未采用这套系统感到惊讶吗？</div>
+
+<p><button class="play-button sentence" id="s-00-10-03-000" data-start="00:10:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very much so.</p>
+<div class="zh">非常惊讶。</div>
+
+<p><button class="play-button sentence" id="s-00-10-04-692" data-start="00:10:04,692" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, absolutely.</p>
+<div class="zh">是的，完全如此。</div>
+
+<p><button class="play-button sentence" id="s-00-10-07-000" data-start="00:10:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been several attempts all over the place.</p>
+<div class="zh">各地曾有过多次尝试。</div>
+
+<p><button class="play-button sentence" id="s-00-10-11-000" data-start="00:10:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And for instance, Estonia has been using it by accident already since the early 1990s.</p>
+<div class="zh">比如爱沙尼亚自1990年代初就已偶然开始使用。</div>
+
+<p><button class="play-button sentence" id="s-00-10-18-000" data-start="00:10:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are many, many examples around the world who are using it.</p>
+<div class="zh">全球已有许多国家正在使用这套系统。</div>
+
+<p><button class="play-button sentence" id="s-00-10-23-000" data-start="00:10:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, the latest project that I'm working on currently is the Peruvian government, which is the same cards of cards to their population, including a chip, which enables the authentication and digital signature as well.</p>
+<div class="zh">我目前参与的最新项目是秘鲁政府推行的国民卡，同样内置芯片，支持身份认证和数字签名功能。</div>
+
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959364" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-36-000" data-start="00:10:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Rao, Kaitra, it's been so interesting to talk to you.</p>
+<div class="zh">好的，拉奥、凯特拉，与你们的对话十分精彩。</div>
+
+<p><button class="play-button sentence" id="s-00-10-39-288" data-start="00:10:39,288" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much indeed for joining us and explaining to us how ID cards work and how you guys use them.</p>
+<div class="zh">非常感谢你们做客节目，为我们解析身份证运作原理及实际应用。</div>
+
+<p><button class="play-button sentence" id="s-00-10-45-060" data-start="00:10:45,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So thanks again.</p>
+<div class="zh">再次感谢。</div>
+
+<p><button class="play-button sentence" id="s-00-10-46-000" data-start="00:10:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Happy to.</p>
+<div class="zh">乐意之至。</div>
+
+<p><button class="play-button sentence" id="s-00-10-46-941" data-start="00:10:46,941" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<div class="zh">谢谢。</div>
+
+<p><button class="play-button sentence" id="s-00-10-48-000" data-start="00:10:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Mayor of Greater Manchester and Ibernum has said it's up to Labour MPs to decide whether he should launch a leadership challenge against the Prime Minister.</p>
+<div class="zh">大曼彻斯特市市长安迪·伯纳姆表示，是否对首相发起领导权挑战应由工党议员决定。</div>
+
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959345" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-55-000" data-start="00:10:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he was just being honest when he told the newspaper he'd been asked by Labour MPs to make such a bid.</p>
+<div class="zh">他向报社坦言收到工党议员相关请求时，自称只是如实相告。</div>
+
+<p><button class="play-button sentence" id="s-00-11-01-000" data-start="00:11:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our political editor, Chris Mason, has this report.</p>
+<div class="zh">本台政治编辑克里斯·梅森带来以下报道。</div>
+
+<p><button class="play-button sentence" id="s-00-11-04-000" data-start="00:11:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The man who is Prime Minister and the man who wants to be, Andy Burnham.</p>
+<div class="zh">现任首相与觊觎首相之位者——安迪·伯纳姆。</div>
+
+<p><button class="play-button sentence" id="s-00-11-12-000" data-start="00:11:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Mayor of Manchester on Radio Manchester and his ambitions.</p>
+<div class="zh">曼彻斯特市长通过当地电台展露雄心。</div>
+
+<p><button class="play-button sentence" id="s-00-11-17-000" data-start="00:11:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it was bubbling.</p>
+<div class="zh">此前暗流涌动。</div>
+
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959321" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-18-333" data-start="00:11:18,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's now firmly on the stove.</p>
+<div class="zh">如今已摆上台面。</div>
+
+<p><button class="play-button sentence" id="s-00-11-20-017" data-start="00:11:20,017" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's with us now.</p>
+<div class="zh">他正在直播间。</div>
+
+<p><button class="play-button sentence" id="s-00-11-21-000" data-start="00:11:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joy's as live in the studio and a very good morning to you.</p>
+<div class="zh">乔伊丝在演播室现场，早上好。</div>
+
+<p><button class="play-button sentence" id="s-00-11-25-000" data-start="00:11:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning, Mike.</p>
+<div class="zh">早上好，迈克。</div>
+
+<p><button class="play-button sentence" id="s-00-11-26-062" data-start="00:11:26,062" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So quiet, though.</p>
+<div class="zh">不过真是平静啊。</div>
+
+<p><button class="play-button sentence" id="s-00-11-27-000" data-start="00:11:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That a reference to this.</p>
+<div class="zh">这指的是当前局势。</div>
+
+<p><button class="play-button sentence" id="s-00-11-30-000" data-start="00:11:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In an interview with the new Statesman magazine, he set out his own more left wing vision for Labour and for the country in which he suggested there'd be more borrowing.</p>
+<div class="zh">接受《新政治家》杂志专访时，他提出了更左倾的工党及国家愿景，主张增加借贷。</div>
+
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959300" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-40-000" data-start="00:11:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And having done one interview, he did another in the daily telegraph in which he said some Labour MPs want him to be Prime Minister.</p>
+<div class="zh">随后又在《每日电讯报》的另一次访谈中透露，部分工党议员希望他出任首相。</div>
+
+<p><button class="play-button sentence" id="s-00-11-48-000" data-start="00:11:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was asked a direct question by a journalist and I gave an honest answer.</p>
+<div class="zh">记者直接提问，我如实作答。</div>
+
+<p><button class="play-button sentence" id="s-00-11-55-000" data-start="00:11:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And obviously that's been been reported today.</p>
+<div class="zh">相关报道今日显然已经刊出。</div>
+
+<p><button class="play-button sentence" id="s-00-11-58-278" data-start="00:11:58,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MPs were in touch with me.</p>
+<div class="zh">确有议员与我联系。</div>
+
+<p><button class="play-button sentence" id="s-00-12-00-000" data-start="00:12:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also given honest explanation of what I said to those MPs.</p>
+<div class="zh">我也向这些议员坦诚说明了情况。</div>
+
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959276" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-03-870" data-start="00:12:03,870" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not up to me.</p>
+<div class="zh">决定权不在我。</div>
+
+<p><button class="play-button sentence" id="s-00-12-05-000" data-start="00:12:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's got to be about a plan, a proper plan for the country and a proper plan to be reform.</p>
+<div class="zh">关键是要有完善的国家方案和改革规划。</div>
+
+<p><button class="play-button sentence" id="s-00-12-11-000" data-start="00:12:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is this the start for you, though, of the biggest gamble, this whole process at the moment that you've ever taken in your political career?</p>
+<div class="zh">但这是你政治生涯中最大赌局的开始吗？</div>
+
+<p><button class="play-button sentence" id="s-00-12-21-000" data-start="00:12:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the thing is the reality has been in the 10 years that I've done this job.</p>
+<div class="zh">事实上，在我任职的十年间。</div>
+
+<p><button class="play-button sentence" id="s-00-12-27-000" data-start="00:12:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whenever Westminster has kind of gone into a moment, I've somehow been drawn into it.</p>
+<div class="zh">每当威斯敏斯特风云变幻，我总会被卷入其中。</div>
+
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959249" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-31-000" data-start="00:12:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His critic says, drawn himself into it.</p>
+<div class="zh">他的#批评者#称其是主动卷入。</div>
+
+<p><button class="play-button sentence" id="s-00-12-34-000" data-start="00:12:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister, so irritated by it all, is comparing Andy Burnham to Liz Truss.</p>
+<div class="zh">首相对此极为恼火，将安迪·伯纳姆比作利兹·特拉斯。</div>
+
+<p><button class="play-button sentence" id="s-00-12-39-000" data-start="00:12:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not going to get drawn into commenting on the personal ambitions of the mayor.</p>
+<div class="zh">我不愿评论市长的个人野心。</div>
+
+<p><button class="play-button sentence" id="s-00-12-44-000" data-start="00:12:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was three years this week ago that we had the Liz Truss experiment where she abandoned fiscal rules in her case for tax cuts.</p>
+<div class="zh">三年前的这个星期，利兹·特拉斯实验性地为减税抛弃财政规则。</div>
+
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959227" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-53-000" data-start="00:12:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the result was a disaster for working people.</p>
+<div class="zh">结果给劳动人民带来灾难。</div>
+
+<p><button class="play-button sentence" id="s-00-12-56-184" data-start="00:12:56,184" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The same would be true if you abandoned fiscal rules in favour of spending.</p>
+<div class="zh">若为增加支出放弃#财政#规则，后果将如出一辙。</div>
+
+<p><button class="play-button sentence" id="s-00-13-01-000" data-start="00:13:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For all the noise here today, it's not remotely easy for Andy Burnham to replace Kia Starma.</p>
+<div class="zh">尽管今日舆论喧哗，安迪·伯纳姆取代凯尔·斯塔默仍困难重重。</div>
+
+<p><button class="play-button sentence" id="s-00-13-07-000" data-start="00:13:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Firstly, he'd have to find the Westminster seats and win it, not easy with reform and others no doubt throwing everything at trying to beat him.</p>
+<div class="zh">首先他需在威斯敏斯特谋得议席并胜选——面对改革党等对手的全力阻击，这绝非易事。</div>
+
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959204" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-16-000" data-start="00:13:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And even if he made it back here, he'd then have Labour MPs to convince.</p>
+<div class="zh">即便重返议会，他还需争取工党议员支持。</div>
+
+<p><button class="play-button sentence" id="s-00-13-20-000" data-start="00:13:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, there's no doubt he does have his supporters.</p>
+<div class="zh">固然他确有支持者。</div>
+
+<p><button class="play-button sentence" id="s-00-13-23-345" data-start="00:13:23,345" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I tell you what, my phone today has been full of Labour MPs.</p>
+<div class="zh">但今日我收到大量工党议员信息。</div>
+
+<p><button class="play-button sentence" id="s-00-13-27-407" data-start="00:13:27,407" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just washing it shut up.</p>
+<div class="zh">都在要求他闭嘴。</div>
+
+<p><button class="play-button sentence" id="s-00-13-29-000" data-start="00:13:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every year we get this nonsense that Andy wants to be PM and doesn't want to be mayor Manchester.</p>
+<div class="zh">年年都有安迪想当首相不愿做曼彻斯特市长的无稽之谈。</div>
+
+<p><button class="play-button sentence" id="s-00-13-33-000" data-start="00:13:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think if I was a voter up there, I'd be sick to the back teeth of hearing that he doesn't want to be the leader of my city.</p>
+<div class="zh">若我是当地选民，早听腻了他不愿领导本市的言论。</div>
+
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959181" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-38-754" data-start="00:13:38,754" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He wants a different job.</p>
+<div class="zh">他心系他职。</div>
+
+<p><button class="play-button sentence" id="s-00-13-40-000" data-start="00:13:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Andy Burnham is no stranger to Westminster and advisor in his 20s and minister in his 30s.</p>
+<div class="zh">安迪·伯纳姆对威斯敏斯特并不陌生：二十岁任顾问，三十岁当部长。</div>
+
+<p><button class="play-button sentence" id="s-00-13-47-000" data-start="00:13:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By his mid 40s, he was on his second attempt to be Labour leader when I presented a series about the contest in 2015.</p>
+<div class="zh">四十五岁时，他第二次角逐工党领袖——当时我正主持2015年党魁竞选的系列报道。</div>
+
+<p><button class="play-button sentence" id="s-00-13-55-000" data-start="00:13:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you're having another crack at leadership?</p>
+<div class="zh">您再次冲击领导权？</div>
+
+<p><button class="play-button sentence" id="s-00-13-58-000" data-start="00:13:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll be doing it again.</p>
+<div class="zh">我会再次尝试。</div>
+
+<p><button class="play-button sentence" id="s-00-13-59-727" data-start="00:13:59,727" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For me, this is, you know, it's now or never.</p>
+<div class="zh">于我而言，此刻机不可失。</div>
+
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959157" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-03-000" data-start="00:14:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right.</p>
+<div class="zh">明白。</div>
+
+<p><button class="play-button sentence" id="s-00-14-03-580" data-start="00:14:03,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Funny how things turn out or might.</p>
+<div class="zh">命运转折总是耐人寻味。</div>
+
+<p><button class="play-button sentence" id="s-00-14-06-387" data-start="00:14:06,387" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's ambitious now and was then.</p>
+<div class="zh">他如今依旧#雄心勃勃#，当年亦是如此。</div>
+
+<p><button class="play-button sentence" id="s-00-14-09-000" data-start="00:14:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of this boils down to potentially being Prime Minister.</p>
+<div class="zh">这一切最终可能指向首相之位。</div>
+
+<p><button class="play-button sentence" id="s-00-14-12-000" data-start="00:14:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<div class="zh">是的。</div>
+
+<p><button class="play-button sentence" id="s-00-14-12-327" data-start="00:14:12,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess you're up for that.</p>
+<div class="zh">想必您已做好准备。</div>
+
+<p><button class="play-button sentence" id="s-00-14-13-770" data-start="00:14:13,770" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess that's what it has to boil down to.</p>
+<div class="zh">我认为这是必然归宿。</div>
+
+<p><button class="play-button sentence" id="s-00-14-16-000" data-start="00:14:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, I am.</p>
+<div class="zh">是的，正是。</div>
+
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959143" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-17-000" data-start="00:14:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The story of 2015, the story of 2025 and perhaps beyond.</p>
+<div class="zh">2015的故事，2025乃至更远未来的故事。</div>
+
+<p><button class="play-button sentence" id="s-00-14-25-000" data-start="00:14:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was our political editor, Chris Mason, there around the world and across the UK.</p>
+<div class="zh">以上是本台政治编辑克里斯·梅森发回的全球及英国本土报道。</div>
+
+<p><button class="play-button sentence" id="s-00-14-30-000" data-start="00:14:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the world today on BBC News.</p>
+<div class="zh">这里是BBC新闻今日世界。</div>
+
+<p><button class="play-button sentence" id="s-00-15-25-000" data-start="00:15:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, I'm Katrina Perry live in New York where the Palestinian president, Mark Murabas, has addressed world leaders on the third day of the United Nations General Assembly.</p>
+<div class="zh">大家好，我是卡特里娜·佩里，在纽约为您现场报道。联合国大会第三日，巴勒斯坦总统马哈茂德·阿巴斯向各国领导人发表讲话。</div>
+
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959049" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-51-000" data-start="00:15:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Abbas participated at this summit by video link because the Trump administration had denied him a visa to come here to the US to attend in person.</p>
+<div class="zh">因特朗普政府拒发签证，阿巴斯先生通过视频连线参会。</div>
+
+<p><button class="play-button sentence" id="s-00-15-59-000" data-start="00:15:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His address follows in the wake of several countries, including the UK and France, formally recognizing the state of Palestine.</p>
+<div class="zh">此次讲话前夕，英国、法国等多国已正式承认巴勒斯坦国。</div>
+
+<p><button class="play-button sentence" id="s-00-16-08-000" data-start="00:16:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's a little of some of what he had to say.</p>
+<div class="zh">以下是他发言的部分内容。</div>
+
+<p><button class="play-button sentence" id="s-00-16-11-000" data-start="00:16:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What Israel is carrying out is not merely an aggression.</p>
+<div class="zh">以色列所实施的不仅仅是一种#侵略行为#。</div>
+
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208959023" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-17-000" data-start="00:16:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a war crime and a crime against humanity that is both documented and monitored.</p>
+<div class="zh">这是一项有记录和监控的战争罪及反#人类#罪。</div>
+
+<p><button class="play-button sentence" id="s-00-16-25-000" data-start="00:16:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it will be recorded in history books and the pages of international conscious as one of the most horrific chapters of humanitarian tragedy in the 20th and 21st centuries.</p>
+<div class="zh">它将被载入史册和国际良知的书页，成为20世纪和21世纪最恐怖的人道悲剧篇章之一。</div>
+
+<p><button class="play-button sentence" id="s-00-16-41-000" data-start="00:16:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite all what our people have suffered, we reject what Hamas carried out on the 7th of October.</p>
+<div class="zh">尽管我们的人民遭受了所有苦难，我们仍反对哈马斯在10月7日的行动。</div>
+
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958990" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-50-000" data-start="00:16:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These actions that targeted Israeli civilians and took them hostages because these actions do not represent the Palestinian people, nor do they represent their just struggle for freedom and independence.</p>
+<div class="zh">这些针对以色列平民并挟持人质的行动不代表巴勒斯坦人民，也不代表他们争取自由和独立的正义斗争。</div>
+
+<p><button class="play-button sentence" id="s-00-17-08-000" data-start="00:17:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have affirmed that we will continue to affirm that the Gaza Strip is an integral part of the state of Palestine, and that we are ready to bear full responsibility for governance and security there.</p>
+<div class="zh">我们已声明并将继续声明加沙地带是巴勒斯坦国不可分割的一部分，我们愿意承担那里的治理和安全的全责。</div>
+
+<p><button class="play-button sentence" id="s-00-17-24-000" data-start="00:17:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hamas will not have a role to play in governance.</p>
+<div class="zh">哈马斯不会在治理中扮演角色。</div>
+
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958951" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-29-000" data-start="00:17:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm joined here at the United Nations by Maria Resta.</p>
+<div class="zh">我在联合国现场与玛丽亚·雷斯塔连线。</div>
+
+<p><button class="play-button sentence" id="s-00-17-32-093" data-start="00:17:32,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's the CEO of the Racker News Organization and a Nobel Peace Prize laureate and journalist Maria.</p>
+<div class="zh">她是Racker新闻组织的首席执行官、诺贝尔和平奖#得主#兼记者玛丽亚。</div>
+
+<p><button class="play-button sentence" id="s-00-17-38-000" data-start="00:17:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for joining us here.</p>
+<div class="zh">非常感谢您来到我们节目。</div>
+
+<p><button class="play-button sentence" id="s-00-17-39-941" data-start="00:17:39,941" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks for having me.</p>
+<div class="zh">谢谢邀请。</div>
+
+<p><button class="play-button sentence" id="s-00-17-41-000" data-start="00:17:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to ask you first of all, we were just listening to Mahmoud Abbas describing the situation in Gaza and his quest for independence for the people there.</p>
+<div class="zh">首先我想问，我们刚听到马哈茂德·阿巴斯描述加沙局势及他为当地人民争取独立的努力。</div>
+
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958929" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-51-000" data-start="00:17:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The situation in Gaza is incredibly dangerous for journalists right now.</p>
+<div class="zh">目前加沙对记者来说极其危险。</div>
+
+<p><button class="play-button sentence" id="s-00-17-55-170" data-start="00:17:55,170" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel does not permit independent access for international journalists occasionally at escorts them around, and it's now the most dangerous place for journalists in all recorded history.</p>
+<div class="zh">以色列不允许国际记者独立进入，偶尔在护送下采访，这里已成为有史以来对记者最危险的地方。</div>
+
+<p><button class="play-button sentence" id="s-00-18-06-000" data-start="00:18:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is exactly what I said at the opening of the UN General Assembly, more than 240 journalists killed in there.</p>
+<div class="zh">这正是我在联合国大会开幕时所说的，已有超过240名记者在那里丧生。</div>
+
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958907" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-12-584" data-start="00:18:12,584" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is unprecedented.</p>
+<div class="zh">这是#前所未有#的。</div>
+
+<p><button class="play-button sentence" id="s-00-18-14-000" data-start="00:18:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is more than the journalists killed in World War One, World War Two in Vietnam, and the former Yugoslavia combined.</p>
+<div class="zh">这比一战、二战、越南战争和前南斯拉夫地区丧生的记者总数还多。</div>
+
+<p><button class="play-button sentence" id="s-00-18-21-000" data-start="00:18:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Journalists are targeted and killed.</p>
+<div class="zh">记者被锁定为目标并遭杀害。</div>
+
+<p><button class="play-button sentence" id="s-00-18-24-310" data-start="00:18:24,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There must be accountability.</p>
+<div class="zh">必须追究责任。</div>
+
+<p><button class="play-button sentence" id="s-00-18-27-000" data-start="00:18:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Part of that is, do you think Israel not preventing journalist access is to control the information flow?</p>
+<div class="zh">其中一点是，您认为以色列不允许记者进入是为了控制信息流吗？</div>
+
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958885" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-35-000" data-start="00:18:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I heard you talking about that.</p>
+<div class="zh">我听过您相关论述。</div>
+
+<p><button class="play-button sentence" id="s-00-18-36-950" data-start="00:18:36,950" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who controls the information has power in modern day conflicts?</p>
+<div class="zh">现代冲突中控制信息者即掌握权力？</div>
+
+<p><button class="play-button sentence" id="s-00-18-41-000" data-start="00:18:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely, you have to ask, what is there to hide?</p>
+<div class="zh">绝对如此，你必须问：究竟想隐藏什么？</div>
+
+<p><button class="play-button sentence" id="s-00-18-44-862" data-start="00:18:44,862" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why not allow the journalists and why not make it safe?</p>
+<div class="zh">为何不允许记者进入？为何不保障安全？</div>
+
+<p><button class="play-button sentence" id="s-00-18-49-000" data-start="00:18:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is what we're seeing in the physical world, this is the same thing we're seeing in the virtual world.</p>
+<div class="zh">但这是我们在现实世界所见，也正是我们在#虚拟#世界所见。</div>
+
+<p><button class="play-button sentence" id="s-00-18-55-164" data-start="00:18:55,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You move forward at your own risk, and the risk is high as we've seen.</p>
+<div class="zh">你前进需自担风险，而如我们所见风险极高。</div>
+
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958861" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-59-000" data-start="00:18:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's the role for an international organization like the UN in making that situation be different?</p>
+<div class="zh">像联合国这样的国际组织在改变这种局面中应发挥什么作用？</div>
+
+<p><button class="play-button sentence" id="s-00-19-06-000" data-start="00:19:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think you've seen this watching on that Monday, you know, it's about 150 countries, have already said they recognize Palestine.</p>
+<div class="zh">我想您周一也看到了，约150个国家已承认巴勒斯坦国。</div>
+
+<p><button class="play-button sentence" id="s-00-19-14-000" data-start="00:19:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is a lot of nations that many of them have already called this a genocide while people are debating that.</p>
+<div class="zh">众多国家中许多已称之为种族灭绝，而人们仍在争论。</div>
+
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958838" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-21-005" data-start="00:19:21,005" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The debate is over.</p>
+<div class="zh">争论该结束了。</div>
+
+<p><button class="play-button sentence" id="s-00-19-22-251" data-start="00:19:22,251" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you're watching people get killed, this is, this hits our humanity.</p>
+<div class="zh">当你目睹人们被杀害时，这直击我们的#人性#。</div>
+
+<p><button class="play-button sentence" id="s-00-19-27-000" data-start="00:19:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do we sit and watch, or do we do something about it?</p>
+<div class="zh">我们是坐视不理，还是采取行动？</div>
+
+<p><button class="play-button sentence" id="s-00-19-29-963" data-start="00:19:29,963" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that's what's at stake at this UN right now.</p>
+<div class="zh">我认为这正是此刻联合国面临的#关键抉择#。</div>
+
+<p><button class="play-button sentence" id="s-00-19-33-000" data-start="00:19:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now you won your Nobel Peace Prize for defending freedom of expression, entitlement to information and so on.</p>
+<div class="zh">您因捍卫言论自由、信息获取权等获得诺贝尔和平奖。</div>
+
+<p><button class="play-button sentence" id="s-00-19-39-096" data-start="00:19:39,096" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you make of the debate that's raging in this country at the moment?</p>
+<div class="zh">您对当前该国激烈的辩论有何看法？</div>
+
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958816" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-43-138" data-start="00:19:43,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A bag just that?</p>
+<div class="zh">仅仅如此吗？</div>
+
+<p><button class="play-button sentence" id="s-00-19-44-000" data-start="00:19:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, I have both PTSD and deja vu.</p>
+<div class="zh">你知道，我既有创伤后应激障碍又有既视感。</div>
+
+<p><button class="play-button sentence" id="s-00-19-46-924" data-start="00:19:46,924" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have lived through this in the Philippines, and it makes freedom of speech a myth, right?</p>
+<div class="zh">我在菲律宾经历过这些，这让言论自由成了#神话#，对吧？</div>
+
+<p><button class="play-button sentence" id="s-00-19-54-000" data-start="00:19:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because you do it at your own risk, and what we're seeing is people, I'll use what I use the Philippines under the time of Ducerte, which is, you know, it isn't a chilling effect.</p>
+<div class="zh">因为你行动需自担风险，我们看到的是人们——我以杜特尔特时期的菲律宾为例——这不仅是寒蝉效应。</div>
+
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-05-082" data-start="00:20:05,082" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's Siberia.</p>
+<div class="zh">而是西伯利亚般的严寒。</div>
+
+<p><button class="play-button sentence" id="s-00-20-06-000" data-start="00:20:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You speak at your own risk, and here's the hard part.</p>
+<div class="zh">你发言需自担风险，而难点在于：</div>
+
+<p><button class="play-button sentence" id="s-00-20-09-831" data-start="00:20:09,831" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you have a president who constantly lies, he can change reality.</p>
+<div class="zh">当总统不断撒谎时，他能改变现实。</div>
+
+<p><button class="play-button sentence" id="s-00-20-15-000" data-start="00:20:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then the onus is on the journalist to call a spade a spade at great risk to themselves and their organization.</p>
+<div class="zh">于是记者就肩负起#直言不讳#的责任，这对其自身和组织都风险巨大。</div>
+
+<p><button class="play-button sentence" id="s-00-20-22-000" data-start="00:20:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen that happening a few occasions of that here in the US or ours.</p>
+<div class="zh">我们在美国这里已多次目睹此类事件。</div>
+
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-26-000" data-start="00:20:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where you're arrested.</p>
+<div class="zh">甚至遭到逮捕。</div>
+
+<p><button class="play-button sentence" id="s-00-20-27-052" data-start="00:20:27,052" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for joining us here on BBC News.</p>
+<div class="zh">非常感谢您做客BBC新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-20-29-157" data-start="00:20:29,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for that.</p>
+<div class="zh">谢谢。</div>
+
+<p><button class="play-button sentence" id="s-00-20-30-000" data-start="00:20:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll have lots more from the UN a little bit later on, but for now, back over to you, Mariam.</p>
+<div class="zh">稍后我们将带来更多联合国报道，现在交还给玛丽安。</div>
+
+<p><button class="play-button sentence" id="s-00-20-35-000" data-start="00:20:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Katrina, thank you very much indeed.</p>
+<div class="zh">卡特里娜，非常感谢。</div>
+
+<p><button class="play-button sentence" id="s-00-20-37-000" data-start="00:20:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here, cyber hackers claim they've stolen the names, addresses and pictures of around 8,000 children and their parents from the Kido Nursery chain.</p>
+<div class="zh">此处，网络黑客声称已从Kido#幼儿园#连锁机构窃取约8000名儿童及其父母的姓名、地址和照片。</div>
+
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958753" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-47-000" data-start="00:20:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A criminal group says it's using the highly sensitive information to demand a ransom from the company, which has 18 nurseries in the London area as well as summer broad.</p>
+<div class="zh">一犯罪团伙称正利用高度敏感信息向该公司勒索赎金，该企业在伦敦地区有18所幼儿园及暑期托管服务。</div>
+
+<p><button class="play-button sentence" id="s-00-20-56-000" data-start="00:20:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, this is what one parent had to say about the cyber attack.</p>
+<div class="zh">以下是一位家长对此次网络攻击的评论。</div>
+
+<p><button class="play-button sentence" id="s-00-21-00-000" data-start="00:21:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not super clear on what the risks associated with that are.</p>
+<div class="zh">相关风险尚不明确。</div>
+
+<p><button class="play-button sentence" id="s-00-21-04-000" data-start="00:21:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know that our bank details, it's making it our bank details, we're not stored in the Kido app, which is something.</p>
+<div class="zh">我知道我们的银行信息未存储在Kido应用中。</div>
+
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958730" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-10-000" data-start="00:21:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But trying to think about what damage can be done with the person in details, including health details of our children.</p>
+<div class="zh">但试想他人获取详细个人信息（包括孩子健康数据）可能造成的损害。</div>
+
+<p><button class="play-button sentence" id="s-00-21-18-000" data-start="00:21:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Health and safeguarding details.</p>
+<div class="zh">健康与安全细节。</div>
+
+<p><button class="play-button sentence" id="s-00-21-20-506" data-start="00:21:20,506" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Exactly.</p>
+<div class="zh">确实。</div>
+
+<p><button class="play-button sentence" id="s-00-21-21-197" data-start="00:21:21,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it's not super clear, but it's quite worrying.</p>
+<div class="zh">是的，虽不明确但相当令人担忧。</div>
+
+<p><button class="play-button sentence" id="s-00-21-25-000" data-start="00:21:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, with me here is our cyber correspondent, Joe Tidey.</p>
+<div class="zh">此刻我们连线网络#记者#乔·泰迪。</div>
+
+<p><button class="play-button sentence" id="s-00-21-27-962" data-start="00:21:27,962" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is just an awful story, really.</p>
+<div class="zh">这真是个可怕的事件。</div>
+
+<p><button class="play-button sentence" id="s-00-21-30-000" data-start="00:21:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has been described by more than one cyber expert today as a new low in cyber crime.</p>
+<div class="zh">今日多位网络专家称之为网络犯罪的新下限。</div>
+
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958705" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-34-928" data-start="00:21:34,928" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think I would agree with that.</p>
+<div class="zh">我深表同意。</div>
+
+<p><button class="play-button sentence" id="s-00-21-37-000" data-start="00:21:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The NCSC, the National Crime Agency, described as a parent and appalling.</p>
+<div class="zh">国家犯罪署将其描述为令人发指。</div>
+
+<p><button class="play-button sentence" id="s-00-21-43-000" data-start="00:21:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First of all, the hackers obviously targeted a nursery.</p>
+<div class="zh">首先，黑客明显针对了#幼儿园#。</div>
+
+<p><button class="play-button sentence" id="s-00-21-46-000" data-start="00:21:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They stole as much data as they could about as many pupils as they could about 8,000 of the kids in the UK nurseries.</p>
+<div class="zh">他们窃取了英国幼儿园约8000名儿童尽可能多的数据。</div>
+
+<p><button class="play-button sentence" id="s-00-21-52-000" data-start="00:21:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's things like names, pictures, dates of birth, addresses, phone numbers, parents and carers, details as well.</p>
+<div class="zh">包括姓名、照片、出生日期、地址、电话号码、父母及看护人详细信息。</div>
+
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958682" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-58-000" data-start="00:21:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's not just parents, but like grandparents as well and anyone that comes and picks up the kids.</p>
+<div class="zh">不仅涉及父母，还包括祖父母等接送孩子的所有人。</div>
+
+<p><button class="play-button sentence" id="s-00-22-03-000" data-start="00:22:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's also, they haven't released this yet, but they say they've got things like safe guarding notes and accident reports.</p>
+<div class="zh">此外他们虽未公开，但声称已获取安全记录和事故报告等资料。</div>
+
+<p><button class="play-button sentence" id="s-00-22-09-000" data-start="00:22:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have been threatening to release this data unless the nursery chain would pay them a ransom.</p>
+<div class="zh">他们威胁称若该#幼儿园#连锁机构不支付#赎金#就将公开数据。</div>
+
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958666" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-14-000" data-start="00:22:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They contacted me on Monday saying they were going to do that.</p>
+<div class="zh">他们周一联系我说会采取行动。</div>
+
+<p><button class="play-button sentence" id="s-00-22-16-451" data-start="00:22:16,451" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I've sort of been sitting on it waiting to see what happened.</p>
+<div class="zh">我一直在关注事态发展。</div>
+
+<p><button class="play-button sentence" id="s-00-22-19-000" data-start="00:22:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then today they went ahead with that threat and they published a sample on the darknet.</p>
+<div class="zh">今日他们果真实施威胁，在暗网发布了样本。</div>
+
+<p><button class="play-button sentence" id="s-00-22-24-000" data-start="00:22:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are they going to do with the information?</p>
+<div class="zh">他们打算如何利用这些信息？</div>
+
+<p><button class="play-button sentence" id="s-00-22-26-186" data-start="00:22:26,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why is it a useful thing to have names, addresses?</p>
+<div class="zh">掌握姓名地址有何用处？</div>
+
+<p><button class="play-button sentence" id="s-00-22-28-485" data-start="00:22:28,485" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are they threatening to do?</p>
+<div class="zh">他们威胁要做什么？</div>
+
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958650" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-30-000" data-start="00:22:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, at the moment, I suppose what they're hoping is the fear from the parents will prompt the company to pay a ransom.</p>
+<div class="zh">目前看来，他们希望家长的恐惧能促使公司支付#赎金#。</div>
+
+<p><button class="play-button sentence" id="s-00-22-37-000" data-start="00:22:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And if you go on the website, the darknet website, it is hideous.</p>
+<div class="zh">若你访问暗网那个网站，场面#骇人#。</div>
+
+<p><button class="play-button sentence" id="s-00-22-41-000" data-start="00:22:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've got 10 pictures of these kids and then you click on them and it's got all the data that they've got about each kid.</p>
+<div class="zh">有10张孩子照片，点击即可看到每个孩子的全部数据。</div>
+
+<p><button class="play-button sentence" id="s-00-22-47-000" data-start="00:22:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These innocent children out there.</p>
+<div class="zh">这些无辜的孩子们。</div>
+
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958631" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-48-807" data-start="00:22:48,807" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I've also been told by the hackers haven't had this confirmed that they have made phone calls to some of the parents in order to try and put the pressure on as well.</p>
+<div class="zh">黑客还告诉我（尚未证实）他们已致电部分家长施压。</div>
+
+<p><button class="play-button sentence" id="s-00-22-58-000" data-start="00:22:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It looks like the company isn't paying.</p>
+<div class="zh">看来公司未支付赎金。</div>
+
+<p><button class="play-button sentence" id="s-00-22-59-534" data-start="00:22:59,534" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kido's hasn't said anything about this cyber attack publicly.</p>
+<div class="zh">Kido未公开回应此次网络攻击。</div>
+
+<p><button class="play-button sentence" id="s-00-23-02-000" data-start="00:23:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've obviously informed parents and nurseries about this but they haven't replied to any of our requests for comments.</p>
+<div class="zh">他们已通知家长和幼儿园，但未回复我们的置评请求。</div>
+
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958612" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-08-000" data-start="00:23:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that kind of implies to me that they are not paying the ransom.</p>
+<div class="zh">这暗示他们不会支付#赎金#。</div>
+
+<p><button class="play-button sentence" id="s-00-23-10-279" data-start="00:23:10,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The advice is never to pay the ransom, of course.</p>
+<div class="zh">当然，建议始终是绝不支付#赎金#。</div>
+
+<p><button class="play-button sentence" id="s-00-23-12-000" data-start="00:23:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what will happen now?</p>
+<div class="zh">接下来会怎样？</div>
+
+<p><button class="play-button sentence" id="s-00-23-13-267" data-start="00:23:13,267" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What the hackers are saying is they are threatening to publish even more data on the darknet about these children.</p>
+<div class="zh">黑客威胁将在暗网公开更多这些儿童的数据。</div>
+
+<p><button class="play-button sentence" id="s-00-23-19-000" data-start="00:23:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then from that they will, I imagine, try to get another hacking group or another set of criminals to pay for that data.</p>
+<div class="zh">之后他们可能试图让其他黑客组织或犯罪团伙购买这些数据。</div>
+
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-27-000" data-start="00:23:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or they'll hope that that data might be used to carry out further attacks.</p>
+<div class="zh">或希望数据被用于进一步攻击。</div>
+
+<p><button class="play-button sentence" id="s-00-23-30-388" data-start="00:23:30,388" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't know what type of shape those attacks will take.</p>
+<div class="zh">我们不知攻击会以何种形式出现。</div>
+
+<p><button class="play-button sentence" id="s-00-23-33-000" data-start="00:23:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But any of this private information online on the internet is obviously not a good thing.</p>
+<div class="zh">但任何此类隐私信息出现在网上显然不是好事。</div>
+
+<p><button class="play-button sentence" id="s-00-23-38-000" data-start="00:23:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, you're in touch with them.</p>
+<div class="zh">您与他们保持联系。</div>
+
+<p><button class="play-button sentence" id="s-00-23-39-157" data-start="00:23:39,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what have they been saying to you, these hackers?</p>
+<div class="zh">这些黑客对您说了什么？</div>
+
+<p><button class="play-button sentence" id="s-00-23-41-000" data-start="00:23:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have said, like I said, I've been talking to them for the last few days.</p>
+<div class="zh">如我所言，过去几天我一直在与他们沟通。</div>
+
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958576" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-43-897" data-start="00:23:43,897" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They threatened to do this and they followed through.</p>
+<div class="zh">他们威胁要行动并确实实施了。</div>
+
+<p><button class="play-button sentence" id="s-00-23-46-000" data-start="00:23:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I put it to them.</p>
+<div class="zh">我向他们指出：</div>
+
+<p><button class="play-button sentence" id="s-00-23-46-833" data-start="00:23:46,833" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, this is a horrible cyber attack.</p>
+<div class="zh">这是场#恶劣的#网络攻击。</div>
+
+<p><button class="play-button sentence" id="s-00-23-49-076" data-start="00:23:49,076" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Surely you must feel bad about this.</p>
+<div class="zh">你们必定感到愧疚。</div>
+
+<p><button class="play-button sentence" id="s-00-23-51-000" data-start="00:23:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What did they say?</p>
+<div class="zh">他们如何回应？</div>
+
+<p><button class="play-button sentence" id="s-00-23-51-865" data-start="00:23:51,865" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They said not at all.</p>
+<div class="zh">他们说毫无愧疚。</div>
+
+<p><button class="play-button sentence" id="s-00-23-52-846" data-start="00:23:52,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is all about money.</p>
+<div class="zh">一切只为金钱。</div>
+
+<p><button class="play-button sentence" id="s-00-23-54-000" data-start="00:23:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As many things are.</p>
+<div class="zh">世事往往如此。</div>
+
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958564" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-55-207" data-start="00:23:55,207" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joe, thank you very much indeed.</p>
+<div class="zh">乔，非常感谢。</div>
+
+<p><button class="play-button sentence" id="s-00-23-57-245" data-start="00:23:57,245" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you tidy?</p>
+<div class="zh">您是乔·泰迪吗？</div>
+
+<p><button class="play-button sentence" id="s-00-24-01-000" data-start="00:24:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, let's talk to you a little bit about another story.</p>
+<div class="zh">现在我们来聊另一则报道。</div>
+
+<p><button class="play-button sentence" id="s-00-24-05-000" data-start="00:24:05,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is UK board officials.</p>
+<div class="zh">这是英国委员会官员们。</div>
+
+<p><button class="play-button sentence" id="s-00-24-07-039" data-start="00:24:07,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've been telling us that they've seized nearly $4 million worth of fake toys this year.</p>
+<div class="zh">他们告诉我们今年已查获价值近400万美元的假冒玩具。</div>
+
+<p><button class="play-button sentence" id="s-00-24-13-000" data-start="00:24:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And 90% of these toys were, believe it or not, copies of the highly popular LeBoubou dolls.</p>
+<div class="zh">信不信由你，这些玩具中90%是热门产品LeBoubou娃娃的仿制品。</div>
+
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958541" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-19-000" data-start="00:24:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, if you don't know already, LeBoubou is a quirky monster character created by an artist in Hong Kong.</p>
+<div class="zh">若你还不了解，LeBoubou是香港艺术家创作的古怪怪兽形象。</div>
+
+<p><button class="play-button sentence" id="s-00-24-24-000" data-start="00:24:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've searched in popularity since being spotted on the bags of celebrities like Rihanna and D'Olippa.</p>
+<div class="zh">自从在蕾哈娜和多莉帕等明星的手提包上出现后，它们的人气#急速攀升#。</div>
+
+<p><button class="play-button sentence" id="s-00-24-30-000" data-start="00:24:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> According to the intellectual property, obviously, three in four seized toys, like these ones, failed safety tests with the dangerous fakes being found with harmful chemicals or being found to have choking hazards, nearly half of the people who bought counterfeit toys, reported problems ranging from toys breaking to toxic smells and illness in children.</p>
+<div class="zh">根据知识产权方数据，显然被查获的玩具中有四分之三（如此类样品）未通过安全检测，危险仿品均被检出含危害化学物质或存在窒息风险，近半数购买过假冒玩具的消费者反馈存在玩具破损、有毒气味乃至导致儿童患病等问题。</div>
+
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958507" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-53-000" data-start="00:24:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, let's just take you to those bears.</p>
+<div class="zh">现在让我们把视线转向那些熊。</div>
+
+<p><button class="play-button sentence" id="s-00-24-56-173" data-start="00:24:56,173" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These bears have stayed with me all day because this is the fat bear contest in Alaska.</p>
+<div class="zh">这些熊让我惦记了一整天，因为这是阿拉斯加的胖熊争霸赛。</div>
+
+<p><button class="play-button sentence" id="s-00-25-03-000" data-start="00:25:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the contest that we all need right now given the horrendous new cycle that we're all living through.</p>
+<div class="zh">鉴于我们正经历的#令人发指#新闻周期，这正是当下我们都需要的一场竞赛。</div>
+
+<p><button class="play-button sentence" id="s-00-25-08-000" data-start="00:25:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These bears are back, they're big, they're fat, and they're ready for battle.</p>
+<div class="zh">胖熊们回归了，它们体型壮硕、膘肥体胖，已准备好一决高下。</div>
+
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958487" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-13-000" data-start="00:25:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the title that is the biggest title in the world.</p>
+<div class="zh">这是世界上最重大的头衔赛事。</div>
+
+<p><button class="play-button sentence" id="s-00-25-16-136" data-start="00:25:16,136" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Forget, you know, World Cups, forget Olympic medals, fat bear week competition, kicked off on the 20th of September in Alaska, in the Katmai National Park.</p>
+<div class="zh">忘掉世界杯吧，忘掉奥运奖牌，胖熊周竞赛于9月20日在阿拉斯加的卡特迈国家公园拉开帷幕。</div>
+
+<p><button class="play-button sentence" id="s-00-25-25-000" data-start="00:25:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are live pictures that you too can get to if you go onto the Katmai National Park website.</p>
+<div class="zh">这些实时画面您也可以通过访问卡特迈国家公园官网观看。</div>
+
+<p><button class="play-button sentence" id="s-00-25-32-000" data-start="00:25:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Organizers there are encouraging people to watch the pictures, take note of who the bears are, they each have a number, some people like to call them names as well.</p>
+<div class="zh">主办方鼓励人们观看直播画面，记住每只熊的编号（有些爱好者还给它们取了名字）。</div>
+
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958459" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-41-000" data-start="00:25:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And to vote on who they believe is the fatest.</p>
+<div class="zh">并为自己心目中最胖的熊投票。</div>
+
+<p><button class="play-button sentence" id="s-00-25-43-715" data-start="00:25:43,715" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, they are coming to this area to eat salmon, they love salmon, they love fish.</p>
+<div class="zh">当然，它们聚集于此是为了享用#鲑鱼#，它们热爱#鲑鱼#，热爱鱼类。</div>
+
+<p><button class="play-button sentence" id="s-00-25-49-000" data-start="00:25:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're being told that chunk and grazer to big residents are the favourites to take the title.</p>
+<div class="zh">我们获悉，#厚块头#和牧场主等著名胖熊是夺冠热门。</div>
+
+<p><button class="play-button sentence" id="s-00-25-56-000" data-start="00:25:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who will win, who will lose, who cares, we do, right?</p>
+<div class="zh">谁胜谁负谁在意？我们在意，对吧？</div>
+
+<p><button class="play-button sentence" id="s-00-26-01-189" data-start="00:26:01,189" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fat bear contest.</p>
+<div class="zh">胖熊争霸赛。</div>
+
+<p><button class="play-button sentence" id="s-00-26-03-000" data-start="00:26:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Brought to you exclusively by the world today on BBC News.</p>
+<div class="zh">由BBC News《今日世界》#独家#呈现。</div>
+
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17ZnazxELa/?t=-2208958433" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-06-840" data-start="00:26:06,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us and back in a minute.</p>
+<div class="zh">稍事休息，马上回来。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
