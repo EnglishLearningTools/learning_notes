@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>BBC World News America</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The medical charity Doctors Without Borders has suspended its work in Gaza City due to the relentless Israeli offensive. Israeli Prime Minister Benjamin Netanyahu defended Israel's actions at the UN General Assembly, receiving a mixed response. Meanwhile, UN sanctions on Iran are set to take effect after a bid to delay them failed. In other news, President Trump commented on the indictment of former FBI director James Comey, and Indonesia faces criticism over food poisoning incidents in its free school meals program.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>BBC World News America</h1>
+<p>【BBC News 20250927 内塔尼亚胡联合国大会发言，多国代表离场抗议｜联合国对伊朗制裁将生效，中俄延期动议未通过｜印尼免费学生午餐计划致大规模中毒】</p>
+<p>Summary:
+The medical charity Doctors Without Borders has suspended its work in Gaza City due to the relentless Israeli offensive. Israeli Prime Minister Benjamin Netanyahu defended Israel's actions at the UN General Assembly, receiving a mixed response. Meanwhile, UN sanctions on Iran are set to take effect after a bid to delay them failed. In other news, President Trump commented on the indictment of former FBI director James Comey, and Indonesia faces criticism over food poisoning incidents in its free school meals program.</p>
+<p>摘要：
+无国界医生组织因以军持续进攻宣布暂停在加沙城的救援工作。以色列总理内塔尼亚胡在联合国大会为以方行动辩护，现场反应不一。联合国对伊朗制裁将生效，延期动议未通过。特朗普就前FBI局长科米被起诉表态，印尼免费学生午餐计划致大规模中毒事件引关注。</p>
+<hr />
+<p><img src="thumbnail_with_tag.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 39 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button>
+<button id="toggle-zh" onclick="toggleZh()" title="显示或隐藏中文翻译">隐藏翻译（T）</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+#toggle-zh {
+  position: fixed;       /* float on top */
+  top: 20px;             /* distance from top */
+  right: 20px;           /* distance from right */
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;   /* pill shape */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-zh:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+#toggle-zh:active {
+  transform: scale(0.95);
+}
+
+/* Hidden state for Chinese lines */
+.zh.hidden {
+  display: none;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+
+// === Translation toggle ===
+function applyZhVisibility(hidden) {
+  const nodes = document.querySelectorAll('.zh');
+  nodes.forEach(n => {
+    if (hidden) n.classList.add('hidden');
+    else n.classList.remove('hidden');
+  });
+  const btn = document.getElementById('toggle-zh');
+  if (btn) btn.textContent = hidden ? '显示翻译（T）' : '隐藏翻译（T）';
+}
+
+// Read saved preference (default: show zh)
+const savedZhHidden = localStorage.getItem('zhHidden') === 'true';
+document.addEventListener('DOMContentLoaded', () => {
+  applyZhVisibility(savedZhHidden);
+});
+
+function toggleZh() {
+  const curr = localStorage.getItem('zhHidden') === 'true';
+  const next = !curr;
+  localStorage.setItem('zhHidden', String(next));
+  applyZhVisibility(next);
+}
+
+// Optional keyboard shortcut: T = toggle translations
+document.addEventListener('keydown', function (e) {
+  if (e.key.toLowerCase() === 't') toggleZh();
+});
+
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959994" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-06-000" data-start="00:00:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Claire Richardson in Washington.</p>
+<div class="zh">我是华盛顿的克莱尔·理查森。</div>
+
+<p><button class="play-button sentence" id="s-00-00-08-162" data-start="00:00:08,162" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is BBC World News America.</p>
+<div class="zh">这里是BBC世界新闻美洲频道。</div>
+
+<p><button class="play-button sentence" id="s-00-00-09-919" data-start="00:00:09,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The medical charity Doctors Without Borders has suspended its work in Gaza City, citing the relentless Israeli offensive there.</p>
+<div class="zh">医疗慈善机构无国界医生已暂停在加沙城的工作，称以色列在那里的攻势#毫不留情#。</div>
+
+<p><button class="play-button sentence" id="s-00-00-17-309" data-start="00:00:17,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli Prime Minister Benjamin Netanyahu tells the UN General Assembly Israel must finish the job in Gaza, receiving a mixed response from delegates and protesters.</p>
+<div class="zh">以色列总理本杰明·内塔尼亚胡告诉联合国大会以色列必须完成在加沙的任务，代表和抗议者的反应#褒贬不一#。</div>
+
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959972" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-27-606" data-start="00:00:27,606" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Iran criticizes Western powers after a bid to delay nuclear sanctions on Tehran fails at the U.S. Security Council.</p>
+<div class="zh">在美国安全理事会推迟对德黑兰核制裁的#努力#失败后，伊朗批评了西方列强。</div>
+
+<p><button class="play-button sentence" id="s-00-00-37-560" data-start="00:00:37,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump says he hopes more of his opponents will face criminal charges that after former FBI director James Comey is indicted.</p>
+<div class="zh">特朗普总统表示，他希望更多他的对手会面临刑事指控，此前前联邦调查局局长詹姆斯·科米被起诉。</div>
+
+<p><button class="play-button sentence" id="s-00-00-56-439" data-start="00:00:56,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The war in Gaza took center stage today at the United Nations.</p>
+<div class="zh">加沙战争今天在联合国成为焦点。</div>
+
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959940" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-59-962" data-start="00:00:59,962" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli Prime Minister Benjamin Netanyahu addressing world leaders as Israeli forces continue their ground offensive in Gaza City.</p>
+<div class="zh">以色列总理本杰明·内塔尼亚胡向世界领导人发表讲话，同时以色列军队继续在加沙城进行地面进攻。</div>
+
+<p><button class="play-button sentence" id="s-00-01-08-319" data-start="00:01:08,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Israeli troops pushed further into Gaza's biggest city, Doctors Without Borders announced its suspending its work there.</p>
+<div class="zh">随着以色列军队进一步深入加沙这座最大城市，无国界医生宣布暂停其在那里工作。</div>
+
+<p><button class="play-button sentence" id="s-00-01-14-598" data-start="00:01:14,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The medical charity saying their clinics are encircled by Israeli forces and that escalating attacks are creating an unacceptable level of risk for our staff, forcing us to suspend life-saving medical activities.</p>
+<div class="zh">该医疗慈善机构表示，他们的诊所被以色列军队包围，不断升级的袭击给我们的工作人员带来了不可接受的风险水平，迫使我们暂停救命的医疗活动。</div>
+
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-120" data-start="00:01:27,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hundreds of thousands of Palestinians are continuing to flee south as Israeli strikes killed at least 20 people in Gaza City.</p>
+<div class="zh">成千上万的巴勒斯坦人继续#逃离#南部，因为以色列的袭击在加沙城造成至少20人死亡。</div>
+
+<p><button class="play-button sentence" id="s-00-01-35-272" data-start="00:01:35,272" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's how residents of Al-Shati Camp west of Gaza City described those attacks.</p>
+<div class="zh">以下是加沙城西部的Al-Shati营地居民如何描述那些袭击。</div>
+
+<p><button class="play-button sentence" id="s-00-01-43-560" data-start="00:01:43,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Suddenly there was a fire, like a volcano with black smoke coming upon us.</p>
+<div class="zh">突然起了火，像一座#火山#，黑烟向我们袭来。</div>
+
+<p><button class="play-button sentence" id="s-00-01-48-373" data-start="00:01:48,373" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We didn't know what happened.</p>
+<div class="zh">我们不知道发生了什么。</div>
+
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959889" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-50-470" data-start="00:01:50,470" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People were screaming.</p>
+<div class="zh">人们在尖叫。</div>
+
+<p><button class="play-button sentence" id="s-00-01-52-243" data-start="00:01:52,243" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Women were crying.</p>
+<div class="zh">妇女在哭泣。</div>
+
+<p><button class="play-button sentence" id="s-00-01-53-660" data-start="00:01:53,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Children were shouting.</p>
+<div class="zh">孩子们在喊叫。</div>
+
+<p><button class="play-button sentence" id="s-00-01-55-521" data-start="00:01:55,521" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We weren't able to leave the house and they barely managed to evacuate the women and children.</p>
+<div class="zh">我们无法离开房子，他们勉强设法#疏散#了妇女和儿童。</div>
+
+<p><button class="play-button sentence" id="s-00-02-03-879" data-start="00:02:03,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I lost my sister and her children.</p>
+<div class="zh">我失去了我的姐姐和她的孩子们。</div>
+
+<p><button class="play-button sentence" id="s-00-02-06-399" data-start="00:02:06,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We lost all of them.</p>
+<div class="zh">我们失去了他们所有人。</div>
+
+<p><button class="play-button sentence" id="s-00-02-07-839" data-start="00:02:07,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were the dearest people to us.</p>
+<div class="zh">他们是我们最亲爱的人。</div>
+
+<p><button class="play-button sentence" id="s-00-02-10-506" data-start="00:02:10,506" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our beloved ones.</p>
+<div class="zh">我们#心爱#的人。</div>
+
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-12-025" data-start="00:02:12,025" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What can we do?</p>
+<div class="zh">我们能做什么？</div>
+
+<p><button class="play-button sentence" id="s-00-02-14-240" data-start="00:02:14,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The strike destroyed more than one residential block.</p>
+<div class="zh">这次袭击摧毁了不止一个#住宅#街区。</div>
+
+<p><button class="play-button sentence" id="s-00-02-17-824" data-start="00:02:17,824" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over 10 families were affected.</p>
+<div class="zh">超过10个家庭受到影响。</div>
+
+<p><button class="play-button sentence" id="s-00-02-19-928" data-start="00:02:19,928" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many are still under rubble.</p>
+<div class="zh">许多人仍然在#废墟#下。</div>
+
+<p><button class="play-button sentence" id="s-00-02-24-240" data-start="00:02:24,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the United Nations, the Israeli Prime Minister's address received a mixed reaction.</p>
+<div class="zh">在联合国，以色列总理的讲话收到了#褒贬不一#的反应。</div>
+
+<p><button class="play-button sentence" id="s-00-02-35-240" data-start="00:02:35,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you see there, Benjamin Netanyahu taking to the stage and many delegates filing out of the house in protest.</p>
+<div class="zh">正如你在那里看到的，本杰明·内塔尼亚胡走上讲台，许多代表鱼贯而出以示抗议。</div>
+
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959837" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-42-163" data-start="00:02:42,163" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some others applauded.</p>
+<div class="zh">其他一些人则鼓掌。</div>
+
+<p><button class="play-button sentence" id="s-00-02-44-727" data-start="00:02:44,727" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Netanyahu's speech was also broadcast into Gaza on loudspeakers and smartphones telling Israeli hostages that he would bring them home.</p>
+<div class="zh">内塔尼亚胡的演讲也通过扩音器和智能手机在加沙播放，告诉以色列人质他会带他们回家。</div>
+
+<p><button class="play-button sentence" id="s-00-02-56-240" data-start="00:02:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This week, the leaders of France, Britain, Australia, Canada and other countries unconditionally recognized Palestinian states.</p>
+<div class="zh">本周，法国、英国、澳大利亚、加拿大和其他国家的领导人无条件承认了巴勒斯坦国。</div>
+
+<p><button class="play-button sentence" id="s-00-03-07-240" data-start="00:03:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump said that a deal to end the war in Gaza and bring home Israeli hostages could be close, a claim that he has repeated in recent days.</p>
+<div class="zh">特朗普总统表示，结束加沙战争并带回以色列人质的协议可能即将达成，这是他最近几天重复的说法。</div>
+
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959804" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-15-421" data-start="00:03:15,421" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our correspondent John Sudworth has the perspective from Jerusalem.</p>
+<div class="zh">我们的#记者#约翰·萨德沃斯从耶路撒冷带来视角。</div>
+
+<p><button class="play-button sentence" id="s-00-03-20-240" data-start="00:03:20,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Perhaps more notable than the words of this speech.</p>
+<div class="zh">也许比这次演讲的言辞更#值得注意#。</div>
+
+<p><button class="play-button sentence" id="s-00-03-22-996" data-start="00:03:22,996" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For some of the symbolism surrounding it, first of all, as Benjamin Netanyahu walked up to the podium at the United Nations, the delegations of dozens of countries walked out of the hall.</p>
+<div class="zh">就围绕它的一些象征意义而言，首先，当本杰明·内塔尼亚胡走上联合国的讲台时，几十个国家的代表团走出了大厅。</div>
+
+<p><button class="play-button sentence" id="s-00-03-35-058" data-start="00:03:35,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this was a speech of defiance, Mr Netanyahu pushing back directly at that idea of Israel standing isolated on the world stage.</p>
+<div class="zh">但这是一次#挑衅性#的演讲，内塔尼亚胡先生直接反驳了以色列在世界舞台上#孤立#站立的观点。</div>
+
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959775" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-44-240" data-start="00:03:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He condemned the move by the UK, France, Canada, Australia and a number of other countries this week to formally recognize a state of Palestine saying that it sent a signal that murdering Jews pays off.</p>
+<div class="zh">他谴责英国、法国、加拿大、澳大利亚和一些其他国家本周正式承认巴勒斯坦国的举动，称这发出了一个信号，即谋杀犹太人是有回报的。</div>
+
+<p><button class="play-button sentence" id="s-00-03-58-773" data-start="00:03:58,773" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he listed what he saw as the achievements of Israel that have been delivered, he said, on behalf of the democratic world, degrading Hamas, the Houthis, Hezbollah, destroying Iran's nuclear capabilities, all of which he said wasn't just in Israel's benefit, but in the benefit of you all.</p>
+<div class="zh">他列举了他认为以色列取得的成就，他说，代表民主世界，削弱了哈马斯、胡塞武装、真主党，摧毁了伊朗的核能力，所有这些他说不仅符合以色列的利益，也符合你们所有人的利益。</div>
+
+<p><button class="play-button sentence" id="s-00-04-19-040" data-start="00:04:19,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said the shame wasn't on Israel, the shame was on those left in the hall as he was speaking, in forgetting the lessons of October the 7th.</p>
+<div class="zh">他说耻辱不在以色列，耻辱在于他讲话时留在大厅里的那些人，他们忘记了10月7日的教训。</div>
+
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959732" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-27-942" data-start="00:04:27,942" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was one other piece of symbolism, and that was the decision that we heard about just a few moments before he took to the stage to broadcast the speech from large sets of loudspeakers set up on Israel's border with Gaza, the haunting image of his words for this portion delivered in Hebrew, perhaps traveling across the wasteland of that war zone and reaching some of the remaining hostages.</p>
+<div class="zh">还有另一个象征意义，那就是我们在他上台前几分钟听到的决定，通过安装在以色列与加沙边境的大批扩音器广播演讲，他用希伯来语讲述这部分内容的话语萦绕心头，或许能穿越那片战区的荒芜之地，传到一些剩余人质耳中。</div>
+
+<p><button class="play-button sentence" id="s-00-04-54-906" data-start="00:04:54,906" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He told them if they were listening, that they would not be left behind.</p>
+<div class="zh">他告诉他们，如果他们正在听，他们不会被抛下。</div>
+
+<p><button class="play-button sentence" id="s-00-04-59-277" data-start="00:04:59,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It must be said, though, that the reaction to the speech from the family members of those hostages was one of despair and disdain.</p>
+<div class="zh">不过，必须说，那些人质家属对演讲的反应是#绝望#和#蔑视#。</div>
+
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959690" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-09-776" data-start="00:05:09,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They believe that this is a government that is acting by prosecuting this war continually to ensure its own political survival over the survival of those hostages.</p>
+<div class="zh">他们认为这是一个通过持续进行这场战争来确保自身政治生存而非那些人质生存的政府。</div>
+
+<p><button class="play-button sentence" id="s-00-05-21-323" data-start="00:05:21,323" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They believe the continued military action puts their lives at risk and they made that point again after Mr. Netanyahu spoke.</p>
+<div class="zh">他们认为持续的军事行动使他们的生命处于危险之中，并在内塔尼亚胡先生讲话后再次表明了这一点。</div>
+
+<p><button class="play-button sentence" id="s-00-05-30-240" data-start="00:05:30,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While sweeping UN sanctions on Iran are due to come into force from Saturday after the security council rejected a bid to postpone them for six months.</p>
+<div class="zh">而全面的联合国对伊朗制裁将于周六生效，此前安全理事会拒绝了将其推迟六个月的动议。</div>
+
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959662" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-37-348" data-start="00:05:37,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nine countries voted against the text, which was put forward by China and Russia.</p>
+<div class="zh">九个国家对由中国和俄罗斯提出的文本投了反对票。</div>
+
+<p><button class="play-button sentence" id="s-00-05-41-837" data-start="00:05:41,837" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The return of the sanctions was triggered by Britain, France, and Germany, who accused Tehran of breaching a 2015 deal aimed at preventing it from developing a nuclear weapon.</p>
+<div class="zh">制裁的恢复是由英国、法国和德国触发的，他们指责德黑兰违反了2015年旨在阻止其发展核武器的协议。</div>
+
+<p><button class="play-button sentence" id="s-00-05-52-047" data-start="00:05:52,047" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Iran has threatened to scrap an agreement allowing the UN watchdog to inspect its nuclear sites if sanctions are revived.</p>
+<div class="zh">伊朗威胁称，如果制裁恢复，将#废除#一项允许联合国监督机构#检查#其核设施的协议。</div>
+
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959640" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-59-540" data-start="00:05:59,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Iran's president, Masoud Pazashkian, told journalists on Friday that Iran had no intention to leave the non-proliferation treating.</p>
+<div class="zh">但伊朗总统马苏德·帕扎什基安周五告诉记者，伊朗无意退出不#扩散#条约。</div>
+
+<p><button class="play-button sentence" id="s-00-06-07-240" data-start="00:06:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Adding, quote, Iran will never seek nuclear weapons.</p>
+<div class="zh">并补充说，引述，伊朗将永远不会寻求核武器。</div>
+
+<p><button class="play-button sentence" id="s-00-06-12-240" data-start="00:06:12,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Iran's Foreign Minister Abbas Arakqi called the imminent re-imposition of UN sanctions on his country legally void and said Iran will never bow to pressure from the West over its nuclear program.</p>
+<div class="zh">伊朗外交部长阿巴斯·阿拉基称即将重新实施的联合国对其国家的制裁在法律上无效，并表示伊朗永远不会在核计划上屈服于西方的压力。</div>
+
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959615" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-24-240" data-start="00:06:24,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only solution is dialogue and diplomacy.</p>
+<div class="zh">唯一的解决方案是#对话#和#外交#。</div>
+
+<p><button class="play-button sentence" id="s-00-06-27-786" data-start="00:06:27,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The JCPOA proves this.</p>
+<div class="zh">《联合全面行动计划》证明了这一点。</div>
+
+<p><button class="play-button sentence" id="s-00-06-29-559" data-start="00:06:29,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Iran will never bow to pressure.</p>
+<div class="zh">伊朗永远不会向压力#低头#。</div>
+
+<p><button class="play-button sentence" id="s-00-06-32-127" data-start="00:06:32,127" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We respond only to respect.</p>
+<div class="zh">我们只回应尊重。</div>
+
+<p><button class="play-button sentence" id="s-00-06-34-394" data-start="00:06:34,394" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The choice is clear, escalation or diplomacy.</p>
+<div class="zh">选择是明确的，升级或#外交#。</div>
+
+<p><button class="play-button sentence" id="s-00-06-38-240" data-start="00:06:38,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Turning to Ukraine now and the Wall Street Journal is reporting that President Trump has told President Volodymyr Zelensky that he's open to providing Kiev with new, long-range weapons.</p>
+<div class="zh">现在转向乌克兰，《华尔街日报》报道称，特朗普总统已告诉弗拉基米尔·泽连斯基总统，他愿意向基辅提供新的远程武器。</div>
+
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959591" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-48-240" data-start="00:06:48,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the two met on the sidelines of the UN, where Trump reportedly signaled he could lift limits on Ukraine's striking inside Russia with American-made, long-range weapons.</p>
+<div class="zh">两人在联合国会议间隙会面，据报道特朗普表示他可能解除对乌克兰使用美国制造的远程武器打击俄罗斯境内目标的限制。</div>
+
+<p><button class="play-button sentence" id="s-00-06-58-240" data-start="00:06:58,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> James Waterhouse has the view from Kiev.</p>
+<div class="zh">詹姆斯·沃特豪斯从基辅带来视角。</div>
+
+<p><button class="play-button sentence" id="s-00-07-01-240" data-start="00:07:01,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We learned two big things this week, with President Zelensky's trip to New York.</p>
+<div class="zh">本周，随着泽连斯基总统的纽约之行，我们了解到两件大事。</div>
+
+<p><button class="play-button sentence" id="s-00-07-06-328" data-start="00:07:06,328" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Firstly, in an interview, soon after his meetings with Donald Trump, he said he was willing to call for elections once a ceasefire was agreed.</p>
+<div class="zh">首先，在一次采访中，在与唐纳德·特朗普会面后不久，他表示一旦停火协议达成，他愿意呼吁举行选举。</div>
+
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959565" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-14-845" data-start="00:07:14,845" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he told Donald Trump that that could provide enough security for them to take place.</p>
+<div class="zh">他说他告诉唐纳德·特朗普，这可以为选举的举行提供足够的安全保障。</div>
+
+<p><button class="play-button sentence" id="s-00-07-20-746" data-start="00:07:20,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it doesn't stop there.</p>
+<div class="zh">但这还不止。</div>
+
+<p><button class="play-button sentence" id="s-00-07-22-417" data-start="00:07:22,417" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said he wasn't interested in running again.</p>
+<div class="zh">他说他对再次参选不感兴趣。</div>
+
+<p><button class="play-button sentence" id="s-00-07-25-411" data-start="00:07:25,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His job as he sees it is taking Ukraine to the end of this war.</p>
+<div class="zh">他认为他的工作是带领乌克兰走到这场战争的终点。</div>
+
+<p><button class="play-button sentence" id="s-00-07-29-240" data-start="00:07:29,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is quite big, because he has come under growing pressure, not least from the Trump administration, to hold elections.</p>
+<div class="zh">这相当重大，因为他面临着越来越大的压力，尤其是来自特朗普政府，要求举行选举。</div>
+
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959543" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-36-377" data-start="00:07:36,377" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are legally postponed here in Ukraine, because the country is under martial law.</p>
+<div class="zh">在乌克兰，选举依法被推迟，因为该国处于#戒严#状态。</div>
+
+<p><button class="play-button sentence" id="s-00-07-41-486" data-start="00:07:41,486" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are a whole host of security and practical issues when you think of a country that is occupied by a fifth, by Russian forces.</p>
+<div class="zh">当你想到一个五分之一领土被俄罗斯军队占领的国家时，会有一大堆安全和实际问题。</div>
+
+<p><button class="play-button sentence" id="s-00-07-51-759" data-start="00:07:51,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nevertheless, he seems to have had to almost bow to this pressure.</p>
+<div class="zh">然而，他似乎几乎不得不向这种压力#低头#。</div>
+
+<p><button class="play-button sentence" id="s-00-07-57-070" data-start="00:07:57,070" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says if a ceasefire can be reached, they can be held.</p>
+<div class="zh">他说如果能达成停火，选举就可以举行。</div>
+
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-00-240" data-start="00:08:00,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the past, Donald Trump has said, I don't want a ceasefire.</p>
+<div class="zh">过去，唐纳德·特朗普曾表示，我不想要停火。</div>
+
+<p><button class="play-button sentence" id="s-00-08-04-349" data-start="00:08:04,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want a lasting peace deal, which Russia was happier with than Kiev certainly was.</p>
+<div class="zh">我想要一份#持久的#和平协议，俄罗斯对此肯定比基辅更满意。</div>
+
+<p><button class="play-button sentence" id="s-00-08-10-839" data-start="00:08:10,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it seems, perhaps in trying to secure America's ongoing support to try and get to a ceasefire, he said, look, I will stand down if that was to be achieved.</p>
+<div class="zh">但似乎，也许是为了确保美国持续支持以实现停火，他表示：听着，若能达成停火，我愿意退让。</div>
+
+<p><button class="play-button sentence" id="s-00-08-21-142" data-start="00:08:21,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has not given up on Donald Trump.</p>
+<div class="zh">他并未放弃唐纳德·特朗普。</div>
+
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959496" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-23-156" data-start="00:08:23,156" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's clear, and we did see a change in tone where the president said Ukraine could even win this invasion.</p>
+<div class="zh">很明显，我们确实看到总统语气转变，称乌克兰甚至可能赢得这场#入侵#。</div>
+
+<p><button class="play-button sentence" id="s-00-08-29-462" data-start="00:08:29,462" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is extremely unlikely.</p>
+<div class="zh">这可能性极低。</div>
+
+<p><button class="play-button sentence" id="s-00-08-31-240" data-start="00:08:31,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's about Ukraine not losing first, I think, at this stage.</p>
+<div class="zh">我认为现阶段的关键是乌克兰先避免战败。</div>
+
+<p><button class="play-button sentence" id="s-00-08-35-003" data-start="00:08:35,003" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has come under growing criticism domestically, not least for concentrating his power.</p>
+<div class="zh">他在国内面临越来越多批评，尤其是因其权力集中。</div>
+
+<p><button class="play-button sentence" id="s-00-08-41-091" data-start="00:08:41,091" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His critics say power lies within a small cohort of people with his close advisors.</p>
+<div class="zh">批评者称权力掌握在其亲密顾问组成的小圈子中。</div>
+
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959473" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-46-814" data-start="00:08:46,814" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He tried to minimize the influence of corruption regulators.</p>
+<div class="zh">他曾试图#最小化##腐败#监管机构的影响力。</div>
+
+<p><button class="play-button sentence" id="s-00-08-50-714" data-start="00:08:50,714" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had to you turn on that.</p>
+<div class="zh">他后来不得不转变态度。</div>
+
+<p><button class="play-button sentence" id="s-00-08-52-552" data-start="00:08:52,552" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think in the main history will look kindly on Volodymyr Zelensky.</p>
+<div class="zh">但我认为历史大体上会善待弗拉基米尔·泽连斯基。</div>
+
+<p><button class="play-button sentence" id="s-00-08-58-083" data-start="00:08:58,083" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is, after all, Ukraine's comedian turned wartime leader.</p>
+<div class="zh">他毕竟是乌克兰从喜剧演员转型的战时领袖。</div>
+
+<p><button class="play-button sentence" id="s-00-09-02-393" data-start="00:09:02,393" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was expected Russia would take his country in days.</p>
+<div class="zh">当初预计俄罗斯数日内便能占领他的国家。</div>
+
+<p><button class="play-button sentence" id="s-00-09-05-855" data-start="00:09:05,855" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had office to leave, and he stayed.</p>
+<div class="zh">他本可撤离办公室，却选择了坚守。</div>
+
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959451" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-08-356" data-start="00:09:08,356" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he clearly is having to make his long-term position clear in order to try and keep the U.S. engaged to the end of this war whenever that might be.</p>
+<div class="zh">但显然他必须明确长期立场，以试图让美国持续参与这场战争直至终局——无论何时到来。</div>
+
+<p><button class="play-button sentence" id="s-00-09-18-240" data-start="00:09:18,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, U.S. President Donald Trump is threatening, quote, there will be others, the day after the Justice Department indicted former FBI director James Comey.</p>
+<div class="zh">美国司法部起诉前联邦调查局局长詹姆斯·科米次日，总统唐纳德·特朗普威胁称“还会有其他人”。</div>
+
+<p><button class="play-button sentence" id="s-00-09-28-487" data-start="00:09:28,487" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Comey is facing two charges of obstruction and making false statements in relation to testimony he gave at a Senate committee hearing in 2020.</p>
+<div class="zh">科米因2020年在参议院委员会听证会所作证词面临妨碍司法和虚假陈述两项指控。</div>
+
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959422" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-37-240" data-start="00:09:37,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He denies any wrongdoing.</p>
+<div class="zh">他否认所有不当行为。</div>
+
+<p><button class="play-button sentence" id="s-00-09-39-214" data-start="00:09:39,214" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A president Trump on Friday called Mr. Comey sick and radical left, fueling questions about whether there was a political motivation behind the indictment.</p>
+<div class="zh">特朗普总统周五称科米是病态的#激进#左派，令人质疑#起诉#背后是否存在政治#动机#。</div>
+
+<p><button class="play-button sentence" id="s-00-09-49-240" data-start="00:09:49,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They weaponized the Justice Department like nobody in history, what they've done is terrible.</p>
+<div class="zh">他们前所未有地将司法部武器化，所作所为极其恶劣。</div>
+
+<p><button class="play-button sentence" id="s-00-09-56-240" data-start="00:09:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I hope there, frankly, I hope there are this, because you can't let this happen to a country.</p>
+<div class="zh">所以#坦率地说#，我希望有此举措，因为不能任由这种事发生在国家身上。</div>
+
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959397" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-02-240" data-start="00:10:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A North America correspondent, Namiya Ikbal, has more.</p>
+<div class="zh">北美#记者#纳米亚·伊克巴尔带来详细报道。</div>
+
+<p><button class="play-button sentence" id="s-00-10-06-240" data-start="00:10:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, and there's two days after becoming president for the first time, Donald Trump warmly embraced FBI director James Comey.</p>
+<div class="zh">哦，这是特朗普首次就任总统两天后热情拥抱联邦调查局局长詹姆斯·科米的画面。</div>
+
+<p><button class="play-button sentence" id="s-00-10-15-933" data-start="00:10:15,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A few months later, he fired him.</p>
+<div class="zh">几个月后，他解雇了科米。</div>
+
+<p><button class="play-button sentence" id="s-00-10-19-240" data-start="00:10:19,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Comey had started an investigation into Russia's alleged influence in the 2016 presidential election.</p>
+<div class="zh">科米当时已启动对俄罗斯涉嫌干预2016年总统大选的调查。</div>
+
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959374" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-25-240" data-start="00:10:25,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No criminal conspiracy was proven, but Donald Trump has never forgiven James Comey.</p>
+<div class="zh">虽未证实存在犯罪#共谋#，但唐纳德·特朗普始终未原谅詹姆斯·科米。</div>
+
+<p><button class="play-button sentence" id="s-00-10-31-240" data-start="00:10:31,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Truth, the whole truth, nothing but the truth, so help you God.</p>
+<div class="zh">“真相，全部真相，唯有真相，愿上帝助你。”</div>
+
+<p><button class="play-button sentence" id="s-00-10-34-240" data-start="00:10:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is him at a congressional committee nearly five years ago.</p>
+<div class="zh">这是近五年前他在国会委员会作证时。</div>
+
+<p><button class="play-button sentence" id="s-00-10-38-240" data-start="00:10:38,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He denied that he authorized leaking classified material about the investigation to the media.</p>
+<div class="zh">他否认曾授权向媒体泄露调查相关机密材料。</div>
+
+<p><button class="play-button sentence" id="s-00-10-44-240" data-start="00:10:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the indictment claims he did.</p>
+<div class="zh">但#起诉书#指控他确实如此。</div>
+
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959352" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-47-039" data-start="00:10:47,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His response was defiant.</p>
+<div class="zh">他的回应充满#挑衅#。</div>
+
+<p><button class="play-button sentence" id="s-00-10-49-240" data-start="00:10:49,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My family and I have known for years that there are costs to standing up to Donald Trump.</p>
+<div class="zh">我和家人多年來清楚对抗唐纳德·特朗普需付出代价。</div>
+
+<p><button class="play-button sentence" id="s-00-10-55-240" data-start="00:10:55,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we couldn't imagine ourselves living any other way.</p>
+<div class="zh">但我们无法想象以其他方式生存。</div>
+
+<p><button class="play-button sentence" id="s-00-10-59-211" data-start="00:10:59,211" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will not live on our knees.</p>
+<div class="zh">我们绝不屈膝求生。</div>
+
+<p><button class="play-button sentence" id="s-00-11-02-240" data-start="00:11:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To bring these charges, Donald Trump installed his former personal lawyer, Lindsay Halligan, pictured here in red.</p>
+<div class="zh">为推进诉讼，唐纳德·特朗普任命其前私人律师林赛·哈利根（图中红衣者）负责此案。</div>
+
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959331" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-08-240" data-start="00:11:08,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the president has found a lawyerless.</p>
+<div class="zh">如今总统找到了一位无律师资质者接手。</div>
+
+<p><button class="play-button sentence" id="s-00-11-10-467" data-start="00:11:10,467" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's never prosecuted a case before, but apparently she's willing to do Trump's bidding when other career prosecutors thought the facts and the law didn't support this.</p>
+<div class="zh">她从未起诉过案件，但当其他资深检察官认为事实与法律均不支持起诉时，她显然愿按特朗普意愿行事。</div>
+
+<p><button class="play-button sentence" id="s-00-11-20-240" data-start="00:11:20,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the sequence of events that has alarmed many legal experts.</p>
+<div class="zh">正是事件发展的#顺序#令众多法律专家警觉。</div>
+
+<p><button class="play-button sentence" id="s-00-11-25-240" data-start="00:11:25,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was only a few days ago that President Trump publicly pressured the Department of Justice to go after James Comey and others.</p>
+<div class="zh">就在几天前，特朗普总统还公开施压司法部追诉詹姆斯·科米等人。</div>
+
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959306" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-33-240" data-start="00:11:33,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Historically, it's the department that operates independently of the president.</p>
+<div class="zh">历史上该部门独立于总统运作。</div>
+
+<p><button class="play-button sentence" id="s-00-11-38-240" data-start="00:11:38,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As he headed to the Ryder Cup in New York, the president stood by his actions.</p>
+<div class="zh">前往纽约莱德杯之际，总统仍为其行为辩护。</div>
+
+<p><button class="play-button sentence" id="s-00-11-43-240" data-start="00:11:43,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's about justice, really.</p>
+<div class="zh">这关乎正义，真的。</div>
+
+<p><button class="play-button sentence" id="s-00-11-44-525" data-start="00:11:44,525" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not revenge, it's about justice.</p>
+<div class="zh">不是#报复#，而是关乎正义。</div>
+
+<p><button class="play-button sentence" id="s-00-11-46-240" data-start="00:11:46,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also about the fact that you can't let this go on.</p>
+<div class="zh">也因为不能让这种情况持续。</div>
+
+<p><button class="play-button sentence" id="s-00-11-50-333" data-start="00:11:50,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Comey was one of the people.</p>
+<div class="zh">科米是其中一员。</div>
+
+<p><button class="play-button sentence" id="s-00-11-52-472" data-start="00:11:52,472" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He wasn't the biggest.</p>
+<div class="zh">他并非最重要角色。</div>
+
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959285" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-54-240" data-start="00:11:54,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But he's a dirty cop.</p>
+<div class="zh">但他是名肮脏的#警察#。</div>
+
+<p><button class="play-button sentence" id="s-00-11-55-785" data-start="00:11:55,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> James Comey denies the charges.</p>
+<div class="zh">詹姆斯·科米否认指控。</div>
+
+<p><button class="play-button sentence" id="s-00-11-58-240" data-start="00:11:58,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump says there are more indictments to come.</p>
+<div class="zh">特朗普总统称后续将有更多起诉。</div>
+
+<p><button class="play-button sentence" id="s-00-12-01-260" data-start="00:12:01,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For his critics, this is not just about revenge, but an attempt to expand his presidential powers beyond the norm.</p>
+<div class="zh">批评者认为这不仅关乎#报复#，更是试图将总统权力扩张至超越#常规#。</div>
+
+<p><button class="play-button sentence" id="s-00-12-07-240" data-start="00:12:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nomi Ricbar, BBC News, Washington.</p>
+<div class="zh">BBC新闻诺米·里克巴华盛顿报道。</div>
+
+<p><button class="play-button sentence" id="s-00-12-10-240" data-start="00:12:10,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And joining me here in the studio, I'm very pleased to welcome Washington State Attorney General Nick Brown.</p>
+<div class="zh">现在欢迎来到演播室的华盛顿州总检察长尼克·布朗。</div>
+
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959264" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-15-240" data-start="00:12:15,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for being here.</p>
+<div class="zh">非常感谢您的到来。</div>
+
+<p><button class="play-button sentence" id="s-00-12-17-240" data-start="00:12:17,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for having me.</p>
+<div class="zh">谢谢邀请。</div>
+
+<p><button class="play-button sentence" id="s-00-12-17-846" data-start="00:12:17,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Appreciate it.</p>
+<div class="zh">很荣幸。</div>
+
+<p><button class="play-button sentence" id="s-00-12-18-240" data-start="00:12:18,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is about justice.</p>
+<div class="zh">这关乎正义。</div>
+
+<p><button class="play-button sentence" id="s-00-12-19-701" data-start="00:12:19,701" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says that Comey gave a false answer under oath and a quote, got caught lying.</p>
+<div class="zh">他称科米在#宣誓#下作出虚假回答，原话是“被抓到说谎”。</div>
+
+<p><button class="play-button sentence" id="s-00-12-24-701" data-start="00:12:24,701" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you make of this?</p>
+<div class="zh">您如何看待？</div>
+
+<p><button class="play-button sentence" id="s-00-12-26-240" data-start="00:12:26,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I don't believe many things that come out of the president's mouth these days, which is a really unfortunate thing to be saying.</p>
+<div class="zh">如今我不太相信总统的诸多言论，这么说实在令人遗憾。</div>
+
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959247" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-32-240" data-start="00:12:32,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, you know, I'm a former U.S. Attorney myself.</p>
+<div class="zh">但我曾担任美国联邦检察官。</div>
+
+<p><button class="play-button sentence" id="s-00-12-34-623" data-start="00:12:34,623" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I worked for the Department of Justice for many years.</p>
+<div class="zh">在司法部工作多年。</div>
+
+<p><button class="play-button sentence" id="s-00-12-37-240" data-start="00:12:37,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the destruction of the standards and policies and, I think, morality around the Department of Justice's actions are really saddening.</p>
+<div class="zh">司法部行动标准、政策乃至#道德#的崩坏令人痛心。</div>
+
+<p><button class="play-button sentence" id="s-00-12-45-240" data-start="00:12:45,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a very place for this country.</p>
+<div class="zh">这对国家而言非常危险。</div>
+
+<p><button class="play-button sentence" id="s-00-12-46-992" data-start="00:12:46,992" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we saw the president explicitly say from the beginning that he was going to go after some people that he did not like his political opponents, people that he believed had harmed him.</p>
+<div class="zh">我们目睹总统从一开始就明确表示将追诉他不喜欢的政治对手、他认为伤害过他的人。</div>
+
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959223" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-56-240" data-start="00:12:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now he's telling the Department of Justice exactly what to do, which is not the way it is ever operated.</p>
+<div class="zh">现在他直接指挥司法部行动，这完全违背其运作传统。</div>
+
+<p><button class="play-button sentence" id="s-00-13-00-240" data-start="00:13:00,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a pretty big change in standards, right?</p>
+<div class="zh">这是标准的重大转变对吧？</div>
+
+<p><button class="play-button sentence" id="s-00-13-02-906" data-start="00:13:02,906" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are you concerned that it could have a chilling effect on the president's political opponents?</p>
+<div class="zh">是否担心这对总统政敌产生寒蝉效应？</div>
+
+<p><button class="play-button sentence" id="s-00-13-08-240" data-start="00:13:08,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely.</p>
+<div class="zh">毫无疑问。</div>
+
+<p><button class="play-button sentence" id="s-00-13-08-842" data-start="00:13:08,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, from day one, our Attorney General United States, the most powerful law enforcement person in this country, if not the world, directed the Department of Justice attorneys that they were the president's lawyers and not the people's lawyers.</p>
+<div class="zh">司法部长——国内乃至全球最有权势的执法者——上任首日就指示司法部律师他们是总统的律师而非人民的律师。</div>
+
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959199" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-20-240" data-start="00:13:20,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so, in some ways, what we've seen this last week is very shocking, but they've been saying this from the beginning that the lawyers for the DOJ now worked for the president himself to do his bidding, to act in his behalf.</p>
+<div class="zh">某种程度上，上周所见虽令人震惊，但他们从一开始就宣称司法部律师现为总统本人服务，听其号令，代其行事。</div>
+
+<p><button class="play-button sentence" id="s-00-13-31-240" data-start="00:13:31,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's why we've seen so many career lawyers who have worked for all political parties, leave the Department of Justice because they've seen the politicization of that department.</p>
+<div class="zh">因此众多曾为两党服务的资深律师离开司法部，他们目睹了该部门的政治化。</div>
+
+<p><button class="play-button sentence" id="s-00-13-40-240" data-start="00:13:40,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when we see the president explicitly saying there's going to be more indictments, you know, and he's going to target not his friends, not his allies, not his person that took $50,000 in cash from undercover FBI agents, but people who have opposed him in the past.</p>
+<div class="zh">当总统明确表示将有更多起诉，且目标非其亲友盟友，非那名从FBI卧底处收取5万美元现金者，而是昔日反对过他的人。</div>
+
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959165" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-54-680" data-start="00:13:54,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's a very scary place for this country.</p>
+<div class="zh">这对国家而言非常#可怕#。</div>
+
+<p><button class="play-button sentence" id="s-00-13-57-240" data-start="00:13:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And perhaps you could just tell us a little bit more about what it looks like when you see this kind of prosecution.</p>
+<div class="zh">能否进一步描述此类起诉的实质？</div>
+
+<p><button class="play-button sentence" id="s-00-14-02-240" data-start="00:14:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because we've spoken to legal experts today saying it's quite possible that, you know, this case will be dismissed.</p>
+<div class="zh">今日咨询的法律专家称此案很可能被驳回。</div>
+
+<p><button class="play-button sentence" id="s-00-14-07-945" data-start="00:14:07,945" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nothing really happens to Komi.</p>
+<div class="zh">科米可能安然无恙。</div>
+
+<p><button class="play-button sentence" id="s-00-14-09-534" data-start="00:14:09,534" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it still comes at a cost, right?</p>
+<div class="zh">但仍需付出代价对吧？</div>
+
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959148" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-11-240" data-start="00:14:11,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, yeah, no, absolutely.</p>
+<div class="zh">当然绝对如此。</div>
+
+<p><button class="play-button sentence" id="s-00-14-12-650" data-start="00:14:12,650" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, you know, every day or every week across this country, prosecutors, federal prosecutors are bringing perjury charges.</p>
+<div class="zh">全国范围内联邦检察官几乎每日或每周都会提出#伪证#罪指控。</div>
+
+<p><button class="play-button sentence" id="s-00-14-19-509" data-start="00:14:19,509" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not a very uncommon charge.</p>
+<div class="zh">这并非罕见指控。</div>
+
+<p><button class="play-button sentence" id="s-00-14-21-240" data-start="00:14:21,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in this particular case, it seems based explicitly on the president's direct orders to target somebody, not to target a crime, but to target an opponent and then go look for a crime.</p>
+<div class="zh">但本案明显基于总统直接命令针对某人——非针对罪行，而是针对对手再罗织罪名。</div>
+
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959128" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-31-240" data-start="00:14:31,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the fact is, in this case, you had a career US attorney who had been appointed by the president himself, a lifelong Republican, and by all reports, who had explained the Department of Justice that he and his team did not find any evidence.</p>
+<div class="zh">事实上，本案原由总统任命的美联邦检察官（终身共和党人）负责，据称他向司法部汇报未发现任何证据。</div>
+
+<p><button class="play-button sentence" id="s-00-14-43-240" data-start="00:14:43,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then he fired him or forced him out and put into his place a lawyer who has never tried a criminal criminal case in her entire career.</p>
+<div class="zh">随后总统将其解职或逼退，替换为一名毫无刑事检控经验的律师。</div>
+
+<p><button class="play-button sentence" id="s-00-14-51-240" data-start="00:14:51,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's a very scary place to be when you have purely political indictments that are coming from the president.</p>
+<div class="zh">当起诉完全源于总统的政治动机时，局面非常#可怕#。</div>
+
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959103" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-56-240" data-start="00:14:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, I understand you've been challenging Trump quite often.</p>
+<div class="zh">据了解您常挑战特朗普。</div>
+
+<p><button class="play-button sentence" id="s-00-14-59-661" data-start="00:14:59,661" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Taking the administration to court with cases on things like birthright citizenship, unfreezing funding for school.</p>
+<div class="zh">就出生公民权、学校资金解冻等议题起诉政府。</div>
+
+<p><button class="play-button sentence" id="s-00-15-06-240" data-start="00:15:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could you just talk as into how you see this fitting into a bigger picture of the Trump administration testing guardrails in America?</p>
+<div class="zh">能否谈谈您如何看待此事#契合#特朗普政府试探美国制度底线的大图景？</div>
+
+<p><button class="play-button sentence" id="s-00-15-13-240" data-start="00:15:13,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, absolutely.</p>
+<div class="zh">当然。</div>
+
+<p><button class="play-button sentence" id="s-00-15-14-128" data-start="00:15:14,128" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, my job as the attorney general of my state and the job of my colleagues across this country is to defend our state laws and the federal constitution.</p>
+<div class="zh">我作为州总检察长与全国同僚的职责是捍卫州法律与联邦宪法。</div>
+
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959078" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-21-240" data-start="00:15:21,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I don't view this as taking on Trump.</p>
+<div class="zh">我不视此为对抗特朗普。</div>
+
+<p><button class="play-button sentence" id="s-00-15-23-778" data-start="00:15:23,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I view this as ensuring the rule of law.</p>
+<div class="zh">而是确保法治落实。</div>
+
+<p><button class="play-button sentence" id="s-00-15-26-240" data-start="00:15:26,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so time and time again, we've seen the president act illegally in violation of the Congress and violation of state sovereignty and violation of Supreme Court precedent.</p>
+<div class="zh">我们屡次见证总统违法行事，违反国会意志、侵犯州主权、违背最高法院判例。</div>
+
+<p><button class="play-button sentence" id="s-00-15-36-240" data-start="00:15:36,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so now in the state of Washington, we've filed 38 cases against the administration.</p>
+<div class="zh">如今华盛顿州已对政府提起38起诉讼。</div>
+
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959059" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-40-919" data-start="00:15:40,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think all told collectively me and my colleagues have filed 52 cases against the administration.</p>
+<div class="zh">我与同僚#共计#提起52起诉讼。</div>
+
+<p><button class="play-button sentence" id="s-00-15-46-240" data-start="00:15:46,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're doing so because the president has been breaking the law and we need to make sure that we're defending people's freedoms, their liberties, the democratic process, and all of the funding that we rely on as states that Congress has authorized.</p>
+<div class="zh">我们如此行动因总统持续违法，需确保捍卫人民自由、民主进程及国会授权各州的财政支持。</div>
+
+<p><button class="play-button sentence" id="s-00-15-58-240" data-start="00:15:58,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so when we see something that's illegal from the president, and we see that it's harming our states, it is our oath, our obligation to fight back, to enforce the rule of law and to take the president to court.</p>
+<div class="zh">因此，当我们看到总统的非法行为并对各州造成损害时，依据誓言我们有责任反击，维护法治并将总统诉至法庭。</div>
+
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959031" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-08-240" data-start="00:16:08,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when you look at the case of James Comey just in context, how much of a turning point do you think this could be?</p>
+<div class="zh">结合詹姆斯·科米案的背景来看，您认为这可能成为多大的转折点？</div>
+
+<p><button class="play-button sentence" id="s-00-16-15-105" data-start="00:16:15,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is this a really serious test of the independence of the judiciary?</p>
+<div class="zh">这是对司法独立性的严峻考验吗？</div>
+
+<p><button class="play-button sentence" id="s-00-16-19-240" data-start="00:16:19,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, yeah, absolutely.</p>
+<div class="zh">是的，毫无疑问。</div>
+
+<p><button class="play-button sentence" id="s-00-16-20-710" data-start="00:16:20,710" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, every DOJ lawyer that worked for the U.S. attorney level or the highest level of the Department of Justice, those are usually career people, but political point is as well.</p>
+<div class="zh">我的意思是，所有在联邦检察官层级或司法部高层工作的律师通常都是职业公务员，但也带有政治属性。</div>
+
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208959007" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-32-240" data-start="00:16:32,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that independence is so vital for our role.</p>
+<div class="zh">但这种独立性对我们的职能至关重要。</div>
+
+<p><button class="play-button sentence" id="s-00-16-34-929" data-start="00:16:34,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Once you get appointed, you don't do favors for the person that appointed you.</p>
+<div class="zh">一旦获得任命，就不能为任命者谋取私利。</div>
+
+<p><button class="play-button sentence" id="s-00-16-39-412" data-start="00:16:39,412" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You don't prosecute people based on their political beliefs or any other ideology.</p>
+<div class="zh">不能根据政治信仰或其他#意识形态#来#起诉#他人。</div>
+
+<p><button class="play-button sentence" id="s-00-16-44-240" data-start="00:16:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You look at the law, you look at the facts, and that's how you bring chargers to a grand jury and ultimately to the court.</p>
+<div class="zh">需要依据法律和事实向大陪审团提出指控，最终提交法庭。</div>
+
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958989" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-50-004" data-start="00:16:50,004" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when you see the president explicitly targeting his opponents and directing political indictments, that's a very scariest place for us to be.</p>
+<div class="zh">当看到总统#明确#针对政敌并主导政治起诉时，这种局面令人不寒而栗。</div>
+
+<p><button class="play-button sentence" id="s-00-16-57-240" data-start="00:16:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's why we've seen people resist, like the person that used to be the U.S. attorney in Virginia, and get fired or pushed out because the president didn't like him telling the truth and doing his job.</p>
+<div class="zh">因此我们看到有人反抗，比如弗吉尼亚州前联邦检察官因坚持说真话和履职遭总统厌恶而被解职或排挤。</div>
+
+<p><button class="play-button sentence" id="s-00-17-07-430" data-start="00:17:07,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's a very, very scary place.</p>
+<div class="zh">这种局面非常非常#可怕#。</div>
+
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958970" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-09-240" data-start="00:17:09,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, thank you so much for joining us today on BBC News.</p>
+<div class="zh">非常感谢您今天做客BBC新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-17-11-755" data-start="00:17:11,755" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been speaking with Washington State Attorney General, Nick Brown.</p>
+<div class="zh">我们刚才对话的是华盛顿州总检察长尼克·布朗。</div>
+
+<p><button class="play-button sentence" id="s-00-17-15-146" data-start="00:17:15,146" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for your time.</p>
+<div class="zh">感谢您接受采访。</div>
+
+<p><button class="play-button sentence" id="s-00-17-16-240" data-start="00:17:16,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<div class="zh">谢谢。</div>
+
+<p><button class="play-button sentence" id="s-00-17-17-240" data-start="00:17:17,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK, this is BBC News.</p>
+<div class="zh">这里是BBC新闻，为您带来全球及英国本土资讯。</div>
+
+<p><button class="play-button sentence" id="s-00-18-17-240" data-start="00:18:17,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your live with BBC News.</p>
+<div class="zh">您现在收看的是BBC新闻直播。</div>
+
+<p><button class="play-button sentence" id="s-00-18-31-240" data-start="00:18:31,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A Indonesian government agency running President Prabowo Suvianto's massive free meals program has apologized for outbreaks of food poisoning among hundreds of school children.</p>
+<div class="zh">印尼政府负责运营总统普拉博沃·苏比安托大规模免费餐计划的机构，就数百名学童食物中毒事件致歉。</div>
+
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958877" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-42-240" data-start="00:18:42,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 1200 students fell sick after eating school lunches in West Java province this week alone.</p>
+<div class="zh">仅本周西爪哇#省#就有超1200名学生食用校餐后不适。</div>
+
+<p><button class="play-button sentence" id="s-00-18-48-240" data-start="00:18:48,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the free meals program that began in January has rapidly expanded and is now available to more than 20 million school children.</p>
+<div class="zh">今年1月启动的免费餐计划迅速扩展，现已覆盖超2000万学童。</div>
+
+<p><button class="play-button sentence" id="s-00-18-57-240" data-start="00:18:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And joining me to discuss more like welcome our global affairs correspondent, UnBursen, Etihadjan.</p>
+<div class="zh">欢迎我们的全球事务#记者#乌恩·伯森·埃蒂哈德詹加入讨论。</div>
+
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958857" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-02-117" data-start="00:19:02,117" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for speaking with us today.</p>
+<div class="zh">非常感谢您今天的分享。</div>
+
+<p><button class="play-button sentence" id="s-00-19-04-240" data-start="00:19:04,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us more about what we know of this case.</p>
+<div class="zh">请详细介绍该事件的最新进展。</div>
+
+<p><button class="play-button sentence" id="s-00-19-12-240" data-start="00:19:12,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the officials are saying that more than 1000 school children suffered food poisoning after eating these free school lunches mainly in West Java province and also in Sulawesi.</p>
+<div class="zh">官方称超1000名学童因食用免费校餐中毒，主要发生在西爪哇省和苏拉威西地区。</div>
+
+<p><button class="play-button sentence" id="s-00-19-25-240" data-start="00:19:25,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, this is not the first time this is happening.</p>
+<div class="zh">这已非首次发生。</div>
+
+<p><button class="play-button sentence" id="s-00-19-28-519" data-start="00:19:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happened even last week about 800 students and altogether about 6000 students suffered because of food poisoning since this scheme was launched in January.</p>
+<div class="zh">上周就有约800名学生中毒，自1月计划启动以来累计约6000名学生受害。</div>
+
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-39-240" data-start="00:19:39,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, why this scheme is very unique offering school lunches to millions of students.</p>
+<div class="zh">该计划为何独特？因其为数百万学生提供校餐。</div>
+
+<p><button class="play-button sentence" id="s-00-19-44-240" data-start="00:19:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was a flagship campaign promised by President Prabowo Suvianto and then what he was saying was this will help to eradicate poverty, hunger.</p>
+<div class="zh">这是普拉博沃总统标志性竞选承诺，他称此举将助力#消除##贫困#与#饥饿#。</div>
+
+<p><button class="play-button sentence" id="s-00-19-56-240" data-start="00:19:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Indonesia itself is one in five children.</p>
+<div class="zh">印尼每五名儿童中就有一人营养不良。</div>
+
+<p><button class="play-button sentence" id="s-00-19-59-239" data-start="00:19:59,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are suffering because of malnutrition.</p>
+<div class="zh">因此该计划是总统的核心政绩之一，于1月启动。</div>
+
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958797" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-02-240" data-start="00:20:02,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this was one of the flagship programs of the president and he started this in January.</p>
+<div class="zh">最初覆盖约50万学生，后快速扩张。</div>
+
+<p><button class="play-button sentence" id="s-00-20-08-240" data-start="00:20:08,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, this was initially for about half a million students and then expanded very fast and probably because there was no oversight according to the senior official of the government agency.</p>
+<div class="zh">政府机构高级官员称可能因缺乏监管所致。</div>
+
+<p><button class="play-button sentence" id="s-00-20-19-240" data-start="00:20:19,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was saying due to lack of oversight and supervision mistakes have happened and that is why she apologized.</p>
+<div class="zh">该官员表示因#监管#和#监督#不足导致失误，故为此道歉。</div>
+
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958772" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-27-240" data-start="00:20:27,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also she said there will not be any more process to food and the kitchens which do not follow certain operating procedures will not be allowed to operate.</p>
+<div class="zh">同时承诺将加强食品流程管理，违规厨房将被停业。</div>
+
+<p><button class="play-button sentence" id="s-00-20-36-240" data-start="00:20:36,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they are already promising some changes there but with so many cases of food poisoning and as you say this being a signature policy of Prabowo Suvianto, do you think there might be further political consequences?</p>
+<div class="zh">尽管政府已承诺改进，但鉴于多起中毒事件且这是普拉博沃的标志性政策，您认为会引发政治后果吗？</div>
+
+<p><button class="play-button sentence" id="s-00-20-54-240" data-start="00:20:54,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even though many non-governmental organizations have been urging the government to suspend the program because see the Indonesia is again a huge country and then these kitchens are not very close to the schools.</p>
+<div class="zh">虽然多个非政府组织呼吁暂停计划，因为印尼幅员辽阔且厨房距学校较远。</div>
+
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958734" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-05-240" data-start="00:21:05,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In some places they are very far away from the school campuses which means they have to make the food the previous night and then transport it.</p>
+<div class="zh">部分地区需前夜备餐再运输，途中易变质。</div>
+
+<p><button class="play-button sentence" id="s-00-21-14-240" data-start="00:21:14,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So on the way there is a chance that it can get spoiled.</p>
+<div class="zh">其次，大规模计划需配套基础设施。</div>
+
+<p><button class="play-button sentence" id="s-00-21-17-240" data-start="00:21:17,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Second thing is when you are having a massive scheme you need the infrastructure and you want to expand it to more than 60 million children.</p>
+<div class="zh">若要覆盖超6000万儿童，需建设中央厨房、配备人员并严格质量控制。</div>
+
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958714" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-25-240" data-start="00:21:25,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You need more centralized kitchens, staff and most importantly the quality control because we are talking about children eating free lunches.</p>
+<div class="zh">毕竟这关乎学童用餐安全。</div>
+
+<p><button class="play-button sentence" id="s-00-21-35-240" data-start="00:21:35,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is why people are saying this needs proper management.</p>
+<div class="zh">因此舆论认为需要科学管理。</div>
+
+<p><button class="play-button sentence" id="s-00-21-39-240" data-start="00:21:39,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You cannot expand it very very fast and the last point is when you are involving billions of dollars.</p>
+<div class="zh">不宜过快扩张，最后涉及数十亿美元资金。</div>
+
+<p><button class="play-button sentence" id="s-00-21-44-240" data-start="00:21:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year alone it is likely to cost another 10 billion dollars for this program.</p>
+<div class="zh">仅今年该计划就可能耗资100亿美元。</div>
+
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958690" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-49-240" data-start="00:21:49,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a chance of corruption and of course many people are criticizing saying that this is expanding too fast and the government is getting money from somewhere else to fund this project even though the government argues that this will help boost children's health as well as literacy program and school attendance.</p>
+<div class="zh">可能存在腐败风险，批评者指扩张过快且资金来路不明，尽管政府称此举有益儿童健康、识字率及就学率。</div>
+
+<p><button class="play-button sentence" id="s-00-22-07-240" data-start="00:22:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well thank you so much for speaking with us.</p>
+<div class="zh">非常感谢您的分析。</div>
+
+<p><button class="play-button sentence" id="s-00-22-09-537" data-start="00:22:09,537" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have been talking to Anup Burton at Iraj and thank you for your time.</p>
+<div class="zh">我们刚才连线的是伊拉杰的安纳普·伯顿，感谢您。</div>
+
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958665" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-14-240" data-start="00:22:14,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We want to move on to some news.</p>
+<div class="zh">现在关注其他新闻。</div>
+
+<p><button class="play-button sentence" id="s-00-22-15-802" data-start="00:22:15,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The U.S. Supreme Court handing another win to President Donald Trump on Friday that allows his administration to withhold $4 billion in spending on foreign aid that aid appropriated by Congress leading a federal judge to previously order the administration to spend the aid.</p>
+<div class="zh">美国最高法院周五再度裁定特朗普总统胜诉，允许政府扣留国会批准的40亿美元外援资金，此前联邦法官曾下令拨付该款项。</div>
+
+<p><button class="play-button sentence" id="s-00-22-30-240" data-start="00:22:30,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The case centering on whether the president has the authority to rescind congressional funds.</p>
+<div class="zh">本案焦点在于总统是否有权撤销国会拨款的支出。</div>
+
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-35-240" data-start="00:22:35,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And British Prime Minister Kierstormer has set out his plans for a digital ID program that will be mandatory for people to work in the UK.</p>
+<div class="zh">英国首相基尔·斯塔默公布数字身份证计划，未来在英工作必须持有该证件。</div>
+
+<p><button class="play-button sentence" id="s-00-22-43-932" data-start="00:22:43,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here is Chris Mason.</p>
+<div class="zh">克里斯·梅森报道。</div>
+
+<p><button class="play-button sentence" id="s-00-22-45-240" data-start="00:22:45,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Central London this morning in the Prime Minister setting out his big new idea, a plan with the potential at least to be a landmark policy of his premiership.</p>
+<div class="zh">今晨首相在伦敦市中心宣布这项重大新倡议，可能成为其任期内的标志性政策。</div>
+
+<p><button class="play-button sentence" id="s-00-22-57-240" data-start="00:22:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This government will make a new free of charge digital ID mandatory for the right to work by the end of this parliament.</p>
+<div class="zh">本届政府将在议会任期结束前推行免费数字身份证作为工作许可的#强制性#要求。</div>
+
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958612" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-07-240" data-start="00:23:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We spell that out.</p>
+<div class="zh">我们明确宣布：</div>
+
+<p><button class="play-button sentence" id="s-00-23-08-923" data-start="00:23:08,923" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You will not be able to work in the United Kingdom if you do not have digital ID.</p>
+<div class="zh">无数字身份证者不得在英国工作。</div>
+
+<p><button class="play-button sentence" id="s-00-23-16-107" data-start="00:23:16,107" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's as simple as that.</p>
+<div class="zh">规定如此明确。</div>
+
+<p><button class="play-button sentence" id="s-00-23-18-240" data-start="00:23:18,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Much of the wider plan is rather less simple as it's yet to be worked out.</p>
+<div class="zh">但更多具体细节尚待制定。</div>
+
+<p><button class="play-button sentence" id="s-00-23-23-415" data-start="00:23:23,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What the Prime Minister has worked out is plenty Kierd deeply about illegal immigration and Labour has been slow to acknowledge that.</p>
+<div class="zh">首相明确意识到非法#移民#问题的严重性，而工党迟迟未能正视。</div>
+
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958586" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-33-240" data-start="00:23:33,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For too many years it's been too easy for people to come here, slip into the shadow economy and remain here illegally.</p>
+<div class="zh">多年来不少人轻易入境后潜入影子经济并非法滞留。</div>
+
+<p><button class="play-button sentence" id="s-00-23-41-240" data-start="00:23:41,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because frankly we have been squeamish about saying things that are clearly true.</p>
+<div class="zh">因为#坦率#说，我们一直对明显的事实#讳莫如深#。</div>
+
+<p><button class="play-button sentence" id="s-00-23-50-240" data-start="00:23:50,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the table at this conference of left-leaning leaders, the Prime Ministers of Iceland, Canada and Australia, alongside Kierstormer.</p>
+<div class="zh">在这张左翼领导人会议桌旁就座的有冰岛、加拿大和澳大利亚的总理，以及基尔斯特默。</div>
+
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958559" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-00-240" data-start="00:24:00,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a gathering of recent readers but it doesn't feel like that.</p>
+<div class="zh">这是一场新近读者的#聚会#，但氛围却截然不同。</div>
+
+<p><button class="play-button sentence" id="s-00-24-04-455" data-start="00:24:04,455" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They all in their own way feel under the cush.</p>
+<div class="zh">他们都以各自的方式感受到压力。</div>
+
+<p><button class="play-button sentence" id="s-00-24-07-240" data-start="00:24:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For Sikiers now he is now trying to really sharpen his arguments against reform UK.</p>
+<div class="zh">西基尔斯此刻正试图真正#磨砺#他反对英国改革派的论点。</div>
+
+<p><button class="play-button sentence" id="s-00-24-13-240" data-start="00:24:13,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's a battle for the soul of this country now as to what sort of country do we want to be.</p>
+<div class="zh">因此关于国家未来走向的灵魂之战正在上演——我们究竟要成为怎样的国家。</div>
+
+<p><button class="play-button sentence" id="s-00-24-19-240" data-start="00:24:19,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's why I think, certainly why I want this to be out as an open fight now between Labour and reform.</p>
+<div class="zh">这就是为何我认为——当然也是为何我希望工党与改革派之间能展开公开较量。</div>
+
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958532" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-27-240" data-start="00:24:27,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what do reform make of that?</p>
+<div class="zh">那么改革派对此作何回应？</div>
+
+<p><button class="play-button sentence" id="s-00-24-29-891" data-start="00:24:29,891" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there's soul of this country, is it stake?</p>
+<div class="zh">我认为这个国家的灵魂正面临#威胁#？</div>
+
+<p><button class="play-button sentence" id="s-00-24-34-240" data-start="00:24:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we've got in the present government and you see here, I mean the soul of Kierstormer is perfectly represented by this new suggestion to enforce digital identity cards on every citizen.</p>
+<div class="zh">现任政府的举措——比如强制推行全民数字身份证的新提案，恰恰体现了基尔斯特默的政治灵魂。</div>
+
+<p><button class="play-button sentence" id="s-00-24-44-240" data-start="00:24:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nigel Farrah stands for another idea, personal liberty, families, communities, countries, secure borders.</p>
+<div class="zh">奈杰尔·法拉则代表另一种理念：个人#自由#、家庭、社区、国家以及边境安全。</div>
+
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958508" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-51-240" data-start="00:24:51,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The potted recent history of ID in the UK looks like this, Tony Blair was keen nearly 20 years ago.</p>
+<div class="zh">英国身份证制度的近期简史如下：近20年前托尼·布莱尔曾大力推行。</div>
+
+<p><button class="play-button sentence" id="s-00-24-59-240" data-start="00:24:59,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they are an important and essential way of tackling illegal migration and crime in the early 21st century.</p>
+<div class="zh">我认为这是21世纪初应对非法#移民#与犯罪的重要且必要的手段。</div>
+
+<p><button class="play-button sentence" id="s-00-25-08-240" data-start="00:25:08,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the Conservatives and Liberal Democrat Coalition was not keen, they never happened.</p>
+<div class="zh">但保守党与自由#民主党#的#联合政府#并不热衷，最终未能实施。</div>
+
+<p><button class="play-button sentence" id="s-00-25-13-240" data-start="00:25:13,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Lib Dems still don't like the idea and neither do the Conservatives.</p>
+<div class="zh">自民党至今仍不赞同此提议，保守党亦然。</div>
+
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958481" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-18-240" data-start="00:25:18,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are opposed to mandatory digital ID cards.</p>
+<div class="zh">我们反对#强制性#数字身份证。</div>
+
+<p><button class="play-button sentence" id="s-00-25-21-993" data-start="00:25:21,993" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government has not talked about this until now.</p>
+<div class="zh">政府直至今日才提及此事。</div>
+
+<p><button class="play-button sentence" id="s-00-25-26-240" data-start="00:25:26,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say this is to stop the booth, it will do nothing to stop the booth.</p>
+<div class="zh">他们声称此举是为遏制#投票舞弊#，但实际上毫无作用。</div>
+
+<p><button class="play-button sentence" id="s-00-25-30-240" data-start="00:25:30,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's a gimmick that's going to be very bureaucratic, cost taxpayer a lot of money, not sold problems like small boats.</p>
+<div class="zh">我认为这是个#噱头#，只会助长官僚主义、耗费纳税人重金，却无法解决类似偷渡小船的现实问题。</div>
+
+<p><button class="play-button sentence" id="s-00-25-38-240" data-start="00:25:38,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister knows that in time will be key to how his plan is judged.</p>
+<div class="zh">首相明白时机将成其计划成败的关键。</div>
+
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV17xnLzVEz6/?t=-2208958454" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-45-240" data-start="00:25:45,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Chris Mason, BBC News, at Westminster.</p>
+<div class="zh">克里斯·梅森，BBC新闻，于威斯敏斯特报道。</div>
+
+<p><button class="play-button sentence" id="s-00-25-49-240" data-start="00:25:49,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us here on BBC News.</p>
+<div class="zh">请继续关注BBC新闻。</div>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
