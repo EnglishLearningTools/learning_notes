@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>NBC Nightly News Full Episode – July 28</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Breaking news covers an active shooter in Manhattan, a sailing camp tragedy in Miami, a Walmart stabbing spree, a double murder in Arkansas, aid drops in Gaza, and Trump's Epstein comments.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>NBC Nightly News Full Episode – July 28</h1>
+<p>【NBC News 20250729 纽约枪击案｜迈阿密帆船营悲剧｜沃尔玛持刀袭击｜阿肯色州双尸命案】</p>
+<p>Summary:
+Breaking news covers an active shooter in Manhattan, a sailing camp tragedy in Miami, a Walmart stabbing spree, a double murder in Arkansas, aid drops in Gaza, and Trump's Epstein comments.</p>
+<p>摘要：
+突发新闻包括曼哈顿的活跃枪手事件、迈阿密帆船营悲剧、沃尔玛持刀袭击、阿肯色州双尸命案、加沙空投援助物资以及特朗普对爱泼斯坦的回应。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 29 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959998" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-01-280" data-start="00:00:01,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Breaking news tonight, an active shooter reported in Midtown Manhattan.</p>
+<p>今晚突发新闻，曼哈顿中城报告一名活跃枪手。</p>
+<p><button class="play-button sentence" id="s-00-00-04-991" data-start="00:00:04,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The massive NYPD response to a skyscraper on Park Avenue.</p>
+<p>纽约警方大规模响应公园大道一栋摩天大楼的事件。</p>
+<p><button class="play-button sentence" id="s-00-00-08-984" data-start="00:00:08,984" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This chilling image of a man carrying a long gun outside.</p>
+<p>这张令人不寒而栗的照片显示一名男子在室外携带长枪。</p>
+<p><button class="play-button sentence" id="s-00-00-13-069" data-start="00:00:13,069" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> City officials telling us at least one officer and one civilian have been shot.</p>
+<p>市政府官员称至少一名警察和一名平民中枪。</p>
+<p><button class="play-button sentence" id="s-00-00-17-679" data-start="00:00:17,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The gunman now confirmed dead.</p>
+<p>枪手现已确认死亡。</p>
+<p><button class="play-button sentence" id="s-00-00-19-890" data-start="00:00:19,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also tonight, the sailing camp tragedy off the coast of Miami Beach.</p>
+<p>同样在今晚，迈阿密海滩沿岸发生帆船营悲剧。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959976" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-23-847" data-start="00:00:23,847" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Video exclusively obtained by NBC News shows the moment a barge crashes into a sailboat filled with young campers killing two kids.</p>
+<p>NBC新闻独家获得的视频显示，一艘驳船撞上载有年轻营员的帆船，导致两名儿童死亡。</p>
+<p><button class="play-button sentence" id="s-00-00-32-040" data-start="00:00:32,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Responders and rescue divers rushing to the scene trying to save those campers and their counselor.</p>
+<p>救援人员和潜水员赶往现场试图营救营员及其辅导员。</p>
+<p><button class="play-button sentence" id="s-00-00-37-920" data-start="00:00:37,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Walmart stabbing spree.</p>
+<p>沃尔玛持刀袭击事件。</p>
+<p><button class="play-button sentence" id="s-00-00-39-436" data-start="00:00:39,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The suspect now facing terrorism charges.</p>
+<p>嫌疑人目前面临恐怖主义指控。</p>
+<p><button class="play-button sentence" id="s-00-00-42-222" data-start="00:00:42,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our conversation with the man who used a shopping cart to stop the attacker before he stabbed more people.</p>
+<p>我们采访了用购物车阻止袭击者继续行凶的男子。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959951" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-48-110" data-start="00:00:48,110" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The hunt for a killer.</p>
+<p>追捕一名杀手。</p>
+<p><button class="play-button sentence" id="s-00-00-49-304" data-start="00:00:49,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An Arkansas couple murdered in Devil's Den State Park during a hike with their two young daughters.</p>
+<p>阿肯色州一对夫妇在魔鬼窝州立公园徒步时与两名幼女遭遇谋杀。</p>
+<p><button class="play-button sentence" id="s-00-00-55-303" data-start="00:00:55,303" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Palestinians rushing towards parachutes holding pallets of food dropped from the sky as Israel allows small amounts of additional aid into Gaza.</p>
+<p>巴勒斯坦人冲向空投食物的降落伞，以色列允许少量额外援助进入加沙。</p>
+<p><button class="play-button sentence" id="s-00-01-04-400" data-start="00:01:04,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump breaking with Israel, saying there is real starvation there.</p>
+<p>特朗普总统与以色列立场分歧，称当地存在真实饥荒。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959930" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-09-259" data-start="00:01:09,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The urgent new UN warning tonight.</p>
+<p>联合国今晚发布紧急警告。</p>
+<p><button class="play-button sentence" id="s-00-01-11-477" data-start="00:01:11,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus, the Epstein files.</p>
+<p>此外，爱泼斯坦文件事件。</p>
+<p><button class="play-button sentence" id="s-00-01-13-045" data-start="00:01:13,045" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president detailing how Jeffrey Epstein invited him to his private island but he refused to go and revealing the reason they had a falling out.</p>
+<p>总统详述杰弗里·爱泼斯坦曾邀请他前往私人岛屿但遭拒绝，并透露两人决裂原因。</p>
+<p><button class="play-button sentence" id="s-00-01-22-577" data-start="00:01:22,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is NBC Nightly News with Tom Yamz.</p>
+<p>这里是汤姆·亚马兹主持的NBC晚间新闻。</p>
+<p><button class="play-button sentence" id="s-00-01-29-369" data-start="00:01:29,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are coming on the air tonight with breaking news right here in New York City.</p>
+<p>今晚我们以纽约市的突发新闻开播。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959907" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-32-832" data-start="00:01:32,832" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police are responding to a reported active shooter at a building in Midtown Manhattan.</p>
+<p>警方正响应曼哈顿中城一栋大楼的活跃枪手报告。</p>
+<p><button class="play-button sentence" id="s-00-01-38-118" data-start="00:01:38,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Multiple people have been shot according to two senior New York City officials.</p>
+<p>两名纽约市高级官员称多人中枪。</p>
+<p><button class="play-button sentence" id="s-00-01-42-488" data-start="00:01:42,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this chilling image showing a man holding a long gun.</p>
+<p>这张令人不寒而栗的照片显示一名男子手持长枪。</p>
+<p><button class="play-button sentence" id="s-00-01-46-078" data-start="00:01:46,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three senior law enforcement sources say police are investigating his possible connection to the incident.</p>
+<p>三名执法部门高层消息人士称警方正调查他与事件的潜在关联。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959888" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-51-836" data-start="00:01:51,836" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Responders appearing to administer CPR on the scene as people rushed out of their buildings with their hands up.</p>
+<p>救援人员现场实施心肺复苏，民众举手逃出大楼。</p>
+<p><button class="play-button sentence" id="s-00-01-57-856" data-start="00:01:57,856" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Late tonight, the police commissioner confirming the lone gunman has been killed.</p>
+<p>深夜，警察局长确认独行枪手已被击毙。</p>
+<p><button class="play-button sentence" id="s-00-02-02-271" data-start="00:02:02,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Aram McLaclin is on the scene with this developing story.</p>
+<p>我们的阿拉姆·麦克拉克林在现场跟进事件进展。</p>
+<p><button class="play-button sentence" id="s-00-02-06-005" data-start="00:02:06,005" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a active shooter. We're getting multiple calls from 345 Park Avenue.</p>
+<p>这是活跃枪手事件。我们接到多个来自公园大道345号的报警电话。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959867" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-12-343" data-start="00:02:12,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, police swarming this skyscraper in Midtown Manhattan after at least two people were shot, one police officer, and one civilian, according to two senior law enforcement officers.</p>
+<p>今晚，警方包围曼哈顿中城这栋摩天大楼，两名执法官员称至少两人中枪，包括一名警察和一名平民。</p>
+<p><button class="play-button sentence" id="s-00-02-21-819" data-start="00:02:21,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Four senior New York City officials say the suspected gunman, Shane Devon Tamura of Las Vegas, is dead from a self-inflicted gunshot wound on the 33rd floor of the building.</p>
+<p>四名纽约市官员称，拉斯维加斯的嫌疑枪手谢恩·德文·田村在建筑33层自尽身亡。</p>
+<p><button class="play-button sentence" id="s-00-02-31-076" data-start="00:02:31,076" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier, than NYPD circulated this photo of a person with a long gun. they say they were searching for in connection with the shooting.</p>
+<p>此前，纽约警方发布这张持长枪男子的照片，称其与枪击案有关。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-37-981" data-start="00:02:37,981" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> According to three senior law enforcement sources, the building 345 Park Avenue is the headquarters of the NFL, Blackstone, and accounting firm KPMG.</p>
+<p>三名执法部门消息人士称，公园大道345号是NFL、黑石集团和毕马威会计事务所总部所在地。</p>
+<p><button class="play-button sentence" id="s-00-02-47-529" data-start="00:02:47,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is Blackstone headquarters, 345 Park Avenue. Approximately 100 people hiding.</p>
+<p>这里是黑石集团总部，公园大道345号。约100人正在躲避。</p>
+<p><button class="play-button sentence" id="s-00-02-53-565" data-start="00:02:53,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It all began around 6 p.m. as people were heading home for the day. Those inside told to shelter in place.</p>
+<p>事件始于下午6点人们下班时，楼内人员被告知就地避难。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-59-169" data-start="00:02:59,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see the section of Midtown Manhattan is completely cordoned off. a large police presence.</p>
+<p>可见曼哈顿中城该区域完全封锁，警力密集。</p>
+<p><button class="play-button sentence" id="s-00-03-05-367" data-start="00:03:05,367" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 345 Park Avenue is just down that way. I was just speaking to one man who did not want to appear on camera.</p>
+<p>公园大道345号就在那边。我刚与一名不愿露面的男子交谈。</p>
+<p><button class="play-button sentence" id="s-00-03-10-995" data-start="00:03:10,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He told me that his wife is inside the building. She's on the 23rd floor. She says she's okay, but he's waiting for her to get out.</p>
+<p>他称妻子在楼内23层，目前安全，但正等待她撤离。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959802" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-17-880" data-start="00:03:17,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, there is a massive police presence, but the NYPD says this scene is contained.</p>
+<p>今晚现场部署大量警力，但纽约警方称局势已受控。</p>
+<p><button class="play-button sentence" id="s-00-03-24-653" data-start="00:03:24,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aaron joins us now live from the scene. And Aaron, you're learning more about some of the chaos that unfolded inside the building.</p>
+<p>亚伦现从现场连线。亚伦，你了解到楼内更多混乱情况。</p>
+<p><button class="play-button sentence" id="s-00-03-30-424" data-start="00:03:30,424" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's right, Tom. We're hearing some harrowing stories of office workers inside the sky scraper at the time of this shooting grabbing anything they could.</p>
+<p>是的，汤姆。我们听到枪击发生时楼内员工抓取物品的骇人经历。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959777" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-42-120" data-start="00:03:42,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tables, couches, office chairs to create a barricade to stop the shooter from entering their place of work.</p>
+<p>他们用桌子、沙发、办公椅设置路障阻止枪手进入工作区。</p>
+<p><button class="play-button sentence" id="s-00-03-49-718" data-start="00:03:49,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're also hearing from the NYPD tonight say that they believe that this was the work of a lone gunman. Tom.</p>
+<p>纽约警方今晚表示相信这是独行枪手所为。汤姆。</p>
+<p><button class="play-button sentence" id="s-00-03-56-569" data-start="00:03:56,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Aaron McGloin with a lot of new reporting there. Erin, we thank you for that. Now to the moments off the coast of Miami Beach.</p>
+<p>好的，亚伦·麦格洛因带来大量新报道。艾琳，感谢连线。现在关注迈阿密海滩沿岸事件。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959757" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-02-029" data-start="00:04:02,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities say a barge struck a sailboat carrying kids and a counselor from a nearby sailing camp, killing two of the kids.</p>
+<p>当局称驳船撞击载有附近帆船营儿童及辅导员的帆船，致两名儿童死亡。</p>
+<p><button class="play-button sentence" id="s-00-04-09-353" data-start="00:04:09,353" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NBC's Jesse Kersh is at the scene. This is the moment a pictures day at a children's sailing camp turned to tragedy in South Florida.</p>
+<p>NBC的杰西·克什在现场。这是南佛罗里达儿童帆船营欢乐日变悲剧的时刻。</p>
+<p><button class="play-button sentence" id="s-00-04-18-260" data-start="00:04:18,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Part of a submerged sailboat uh with missing children.</p>
+<p>部分沉没的帆船...仍有儿童失踪。</p>
+<p><button class="play-button sentence" id="s-00-04-23-406" data-start="00:04:23,406" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities say a barge struck a sailboat carrying five children and an adult this morning in Miami's Biscane Bay. do have Miami Beach Fire Marine out as well.</p>
+<p>当局称今晨迈阿密比斯坎湾一艘载有五名儿童和一名成人的帆船遭驳船撞击。迈阿密海滩消防海事部门已出动。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959727" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-32-431" data-start="00:04:32,431" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It responded with fireball.</p>
+<p>现场出现火球。</p>
+<p><button class="play-button sentence" id="s-00-04-34-001" data-start="00:04:34,001" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Surveillance footage obtained exclusively by NBC News shows the barge toppling the much smaller vessel.</p>
+<p>NBC新闻独家获得的监控显示驳船撞翻小得多的帆船。</p>
+<p><button class="play-button sentence" id="s-00-04-40-093" data-start="00:04:40,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US Coast Guard says all six people were recovered, but a 7-year-old girl and a 13-year-old girl both died.</p>
+<p>美国海岸警卫队称六人全被找到，但一名7岁和13岁女童死亡。</p>
+<p><button class="play-button sentence" id="s-00-04-46-786" data-start="00:04:46,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I've never seen so many uh ambulances, dive rescue, I couldn't even like barely walk. It was so crowded.</p>
+<p>我从未见过这么多救护车和潜水救援，几乎无法行走，现场极其拥挤。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959706" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-53-406" data-start="00:04:53,406" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The horrific crash sparking a massive response. Divers and police boats swarming.</p>
+<p>可怕撞击引发大规模响应，潜水员和警船蜂拥而至。</p>
+<p><button class="play-button sentence" id="s-00-04-58-087" data-start="00:04:58,087" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The barge carrying a crane sitting in the water for hours.</p>
+<p>载有起重机的驳船在水中停留数小时。</p>
+<p><button class="play-button sentence" id="s-00-05-01-201" data-start="00:05:01,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, the Miami Yacht Club telling NBC News the sailboat was from its Youth Sailing Foundation Summer Camp, a program for children ages 7 to 15.</p>
+<p>迈阿密游艇俱乐部告知NBC新闻，帆船来自其7至15岁青少年帆船夏令营项目。</p>
+<p><button class="play-button sentence" id="s-00-05-09-009" data-start="00:05:09,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The club writing it's devastated by this terrible tragedy.</p>
+<p>俱乐部称对这起悲剧深感悲痛。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959687" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-12-437" data-start="00:05:12,437" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, authorities are investigating how this could have happened.</p>
+<p>当局正调查事件原因。</p>
+<p><button class="play-button sentence" id="s-00-05-16-752" data-start="00:05:16,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jesse joins us now live from the scene. And Jesse, the barge we see right there, that's the one that was involved in this crash.</p>
+<p>杰西现从现场连线。杰西，我们看到的驳船就是涉事船只。</p>
+<p><button class="play-button sentence" id="s-00-05-23-609" data-start="00:05:23,609" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's right, Tom. We've seen authorities around it throughout the day. It has been sitting in this area for hours.</p>
+<p>是的，汤姆。我们整天看到当局在附近调查，驳船已停留数小时。</p>
+<p><button class="play-button sentence" id="s-00-05-30-100" data-start="00:05:30,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And just a short time ago, the Coast Guard told us this update. The sailboat involved in this crash, Tom, we're told, is still right now underneath that barge.</p>
+<p>不久前海岸警卫队更新称，涉事帆船仍在驳船下方。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959660" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-39-631" data-start="00:05:39,631" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom, terrible incident there in the bay there. All right, Jesse, we thank you for that.</p>
+<p>汤姆，海湾发生的可怕事件。好的，杰西，感谢报道。</p>
+<p><button class="play-button sentence" id="s-00-05-43-219" data-start="00:05:43,219" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to the latest on that violent stabbing spree at a Walmart in Michigan.</p>
+<p>现在关注密歇根州沃尔玛持刀袭击案最新进展。</p>
+<p><button class="play-button sentence" id="s-00-05-47-255" data-start="00:05:47,255" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, we're hearing from one of the heroes who helped stop the attack. He says he rammed the suspect with a grocery cart to keep him from stabbing more.</p>
+<p>今晚我们采访到阻止袭击的英雄之一，他称用购物车撞击嫌疑人阻止其继续行凶。</p>
+<p><button class="play-button sentence" id="s-00-05-56-277" data-start="00:05:56,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Maggie Vespa tonight. One of the men who authorities say helped take down a suspect who stabbed 11 people at a Michigan Walmart.</p>
+<p>以下是玛吉·维斯帕的报道。这名男子协助制服在密歇根沃尔玛刺伤11人的嫌疑人。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959634" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-05-098" data-start="00:06:05,098" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got multiple victims.</p>
+<p>我们有多名受害者。</p>
+<p><button class="play-button sentence" id="s-00-06-06-705" data-start="00:06:06,705" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Describing how he sprung into action.</p>
+<p>他描述自己如何行动。</p>
+<p><button class="play-button sentence" id="s-00-06-09-115" data-start="00:06:09,115" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can see the knife in his hand. It's like we locked eyes. Me and him did. And I was like I just took off running after him.</p>
+<p>我看到他手中的刀，我们四目相对，我便追了上去。</p>
+<p><button class="play-button sentence" id="s-00-06-14-554" data-start="00:06:14,554" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Retired Marine Matthew Kolicowski says he saw the suspect stab a woman in the back</p>
+<p>退役海军陆战队员马修·科利科夫斯基称目睹嫌疑人刺中一名女子背部</p>
+<p><button class="play-button sentence" id="s-00-06-19-675" data-start="00:06:19,675" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> just as far as he could get the knife into her and then she went right down.</p>
+<p>他全力将刀刺入，女子随即倒下。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959615" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-24-319" data-start="00:06:24,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He kind of he shuffled the knife from hand to hand and he like spun and stopped like he was going to come back and get her again.</p>
+<p>他倒换持刀手，转身似要再次袭击。</p>
+<p><button class="play-button sentence" id="s-00-06-29-260" data-start="00:06:29,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hit him right in the rear just as hard as I could with the grocery carton.</p>
+<p>我用购物车全力撞击其后背。</p>
+<p><button class="play-button sentence" id="s-00-06-33-232" data-start="00:06:33,232" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kolicowski and others the sheriff confirms held down 42-year-old Bradford James Gilly until a deputy arrived.</p>
+<p>警长确认科利科夫斯基等人制服42岁的布拉德福德·詹姆斯·吉利，直至副警长抵达。</p>
+<p><button class="play-button sentence" id="s-00-06-40-047" data-start="00:06:40,047" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He yelled, "I'm a soldier and that everybody in Walmart were bad people and that they pretty much need to die."</p>
+<p>他大喊"我是士兵，沃尔玛里都是坏人，他们都得死"。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-46-887" data-start="00:06:46,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I was like, "Well, I'm a mother effing marine." And then his eyes got big and then that's when he stopped talking.</p>
+<p>我回应"老子是海军陆战队员"，他瞪大双眼不再说话。</p>
+<p><button class="play-button sentence" id="s-00-06-52-228" data-start="00:06:52,228" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> his brother-in-law, Chris O'Brien, the one filming.</p>
+<p>其姐夫克里斯·奥布莱恩拍摄了现场。</p>
+<p><button class="play-button sentence" id="s-00-06-55-255" data-start="00:06:55,255" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I seen a mother and uh two children crying um cuz their father was stabbed.</p>
+<p>我看到一名母亲和两名儿童因父亲被刺而哭泣。</p>
+<p><button class="play-button sentence" id="s-00-07-00-816" data-start="00:07:00,816" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dad got rolled out on a a stretcher and that and then Yeah, that that's hard.</p>
+<p>父亲被担架抬出，场面令人心碎。</p>
+<p><button class="play-button sentence" id="s-00-07-13-008" data-start="00:07:13,008" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gilly today pleading not guilty to assault and terrorism charges.</p>
+<p>吉利今日对袭击和恐怖主义指控拒不认罪。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959563" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-16-693" data-start="00:07:16,693" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Court documents show he has a long criminal record and history of mental health issues, including being involuntarily committed in 2017.</p>
+<p>法庭文件显示他有长期犯罪记录和精神问题史，2017年曾被强制收治。</p>
+<p><button class="play-button sentence" id="s-00-07-24-633" data-start="00:07:24,633" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The sheriff in another county 2 hours away, revealing on Friday they received a court order to arrest Gilly, deeming him a substantial risk to himself or others in the near future.</p>
+<p>两小时外另一县警长透露，周五他们收到逮捕令，认定吉利短期内对自身或他人构成重大威胁。</p>
+<p><button class="play-button sentence" id="s-00-07-35-744" data-start="00:07:35,744" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But deputies couldn't find Gilly, who was listed as homeless.</p>
+<p>但副警长未能找到被列为无家可归者的吉利。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959540" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-39-309" data-start="00:07:39,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Less than 24 hours later, investigators say he carried out the violent stabbing spree.</p>
+<p>不到24小时后，调查人员称他实施了持刀袭击。</p>
+<p><button class="play-button sentence" id="s-00-07-44-508" data-start="00:07:44,508" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maggie Vespa joins us tonight live outside that Michigan Walmart.</p>
+<p>玛吉·维斯帕现从密歇根沃尔玛外连线。</p>
+<p><button class="play-button sentence" id="s-00-07-48-453" data-start="00:07:48,453" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Maggie, the suspect's first court appearance was a bit unusual.</p>
+<p>玛吉，嫌疑人首次出庭有些异常。</p>
+<p><button class="play-button sentence" id="s-00-07-54-105" data-start="00:07:54,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, Tom, it was. He told the judge at one point, "I don't want to talk to you."</p>
+<p>是的，汤姆。他曾对法官说"不想和你说话"。</p>
+<p><button class="play-button sentence" id="s-00-07-58-024" data-start="00:07:58,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And later brought up psychedelic drug use. We're out to his attorney for comment. So far, no response.</p>
+<p>后提及致幻药物使用。我们联系其律师尚未获回应。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959517" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-02-518" data-start="00:08:02,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, new court documents detailing victim's injuries, including stab wounds to their sides, lungs, and eye.</p>
+<p>同时新法庭文件详述受害者伤势，包括侧腹、肺部和眼部的刺伤。</p>
+<p><button class="play-button sentence" id="s-00-08-09-068" data-start="00:08:09,068" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All 11 are expected to survive. Tom</p>
+<p>11人均有望生还。汤姆</p>
+<p><button class="play-button sentence" id="s-00-08-12-436" data-start="00:08:12,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maggie Vesa for us. Maggie, thank you. We want to turn out to a growing mystery in Arkansas.</p>
+<p>玛吉·维萨的报道。玛吉，谢谢。现在关注阿肯色州悬案。</p>
+<p><button class="play-button sentence" id="s-00-08-16-865" data-start="00:08:16,865" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> State police say a man attacked a couple and their two young daughters hiking in a park.</p>
+<p>州警方称一名男子袭击公园徒步的一对夫妇及其两名幼女。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959498" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-21-802" data-start="00:08:21,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The children managed to escape, but their parents were found dead on the trail.</p>
+<p>儿童成功逃脱，但父母被发现死于步道。</p>
+<p><button class="play-button sentence" id="s-00-08-25-559" data-start="00:08:25,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Aaron Gillest.</p>
+<p>以下是亚伦·吉勒斯特的报道。</p>
+<p><button class="play-button sentence" id="s-00-08-27-423" data-start="00:08:27,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Got two two bodies down here.</p>
+<p>这里发现两具尸体。</p>
+<p><button class="play-button sentence" id="s-00-08-29-944" data-start="00:08:29,944" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, an urgent manhunt is underway in Arkansas for the man who police say committed a horrific double murder, killing a couple hiking with their young daughters.</p>
+<p>阿肯色州正紧急搜捕涉嫌杀害带幼女徒步夫妇的双尸案凶手。</p>
+<p><button class="play-button sentence" id="s-00-08-38-381" data-start="00:08:38,381" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The man attacked the Brink family on a walking trail in Devil's Den State Park Saturday afternoon.</p>
+<p>周六下午，该男子在魔鬼窝州立公园步道袭击布林克一家。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959476" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-43-151" data-start="00:08:43,151" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> According to police, they say Clinton and Kristen Brinks seven and nine-year-old daughters managed to get away unharmed and find help.</p>
+<p>警方称7岁和9岁的克林顿与克里斯汀·布林克之女未受伤并成功求助。</p>
+<p><button class="play-button sentence" id="s-00-08-51-089" data-start="00:08:51,089" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two children are there. They advised that their parents were assaulted. One was possibly stabbed.</p>
+<p>两名儿童在场，称父母遭袭击，其中一人可能被刺。</p>
+<p><button class="play-button sentence" id="s-00-08-58-514" data-start="00:08:58,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At first, officers scouring the park thought they heard signs of life.</p>
+<p>起初搜查公园的警员以为听到生命迹象。</p>
+<p><button class="play-button sentence" id="s-00-09-02-728" data-start="00:09:02,728" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hear yell calling for help. We're hiking down.</p>
+<p>听到呼救声，我们正下山搜寻。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959453" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-06-186" data-start="00:09:06,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're hearing them, too. But then they say they made a grizzly discovery, finding Clinton and Kristen Brink dead on a trail.</p>
+<p>我们也听到了。但随后他们发现克林顿与克里斯汀·布林克死于步道。</p>
+<p><button class="play-button sentence" id="s-00-09-13-560" data-start="00:09:13,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police say the suspect is a white male who was seen driving toward a park exit in a black sedan.</p>
+<p>警方称嫌疑人为白人男性，被目睹驾驶黑色轿车驶向公园出口。</p>
+<p><button class="play-button sentence" id="s-00-09-18-877" data-start="00:09:18,877" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This park is thousands of acres of dense vegetation. They made it hard to search for both the victims and the suspect here.</p>
+<p>公园数千英亩植被茂密，增加搜救难度。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959435" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-24-646" data-start="00:09:24,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And while police don't believe he's in the park anymore, they've closed off all the trails until further notice.</p>
+<p>警方认为其已不在公园内，但仍关闭所有步道直至另行通知。</p>
+<p><button class="play-button sentence" id="s-00-09-30-674" data-start="00:09:30,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities now urging anyone at or near the park that day to check for footage or photos of the suspect.</p>
+<p>当局敦促当日公园附近民众提供嫌疑人影像资料。</p>
+<p><button class="play-button sentence" id="s-00-09-36-955" data-start="00:09:36,955" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you feel less safe here in the park knowing what happened here over the weekend?</p>
+<p>知道周末这里发生的事情后，你们在公园里是否感到更不安全？</p>
+<p><button class="play-button sentence" id="s-00-09-40-524" data-start="00:09:40,524" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I do. We just stayed in the car with the doors locked.</p>
+<p>是的。我们只是锁着车门待在车里。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959416" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-43-247" data-start="00:09:43,247" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, a relative telling NBC News the Brink family had just moved to the area 3 weeks ago.</p>
+<p>今晚，一位亲属告诉NBC新闻，布林克一家三周前刚搬到该地区。</p>
+<p><button class="play-button sentence" id="s-00-09-47-882" data-start="00:09:47,882" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their loved ones releasing a statement saying Clinton and Kristen died heroes protecting their little girls and they deserve justice.</p>
+<p>他们的亲人发布声明称，克林顿和克里斯滕为保护他们的小女儿而英勇牺牲，他们应得到正义。</p>
+<p><button class="play-button sentence" id="s-00-09-55-291" data-start="00:09:55,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They will forever live on in all of our hearts.</p>
+<p>他们将永远活在我们所有人的心中。</p>
+<p><button class="play-button sentence" id="s-00-09-58-030" data-start="00:09:58,030" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aaron Gilchrist, NBC News, West Fork, Arkansas.</p>
+<p>阿伦·吉尔克里斯特，NBC新闻，阿肯色州西福克报道。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959398" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-01-363" data-start="00:10:01,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, we turn to politics now and those new comments from President Trump, saying he turned down an invitation from Jeffrey Epstein to go to his private island amid the controversy over his administration's handling of the DOJ's Epstein files.</p>
+<p>好的，现在我们转向政治新闻，特朗普总统的新评论称，在司法部处理爱泼斯坦文件的争议中，他拒绝了杰弗里·爱泼斯坦邀请他去私人岛屿的提议。</p>
+<p><button class="play-button sentence" id="s-00-10-15-278" data-start="00:10:15,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Gabe Gutierrez.</p>
+<p>以下是加布·古铁雷斯的报道。</p>
+<p><button class="play-button sentence" id="s-00-10-20-078" data-start="00:10:20,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, President Trump revealing he turned down an invitation from notorious sex offender Jeffrey Epstein to visit Epstein's private island in the Caribbean while he says many others went.</p>
+<p>今晚，特朗普总统透露，他拒绝了臭名昭著的性犯罪者杰弗里·爱泼斯坦邀请他访问加勒比海私人岛屿的提议，而他表示许多其他人去了。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959369" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-30-306" data-start="00:10:30,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nobody ever talks about them.</p>
+<p>从没有人谈论他们。</p>
+<p><button class="play-button sentence" id="s-00-10-32-240" data-start="00:10:32,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've I never had the privilege of going to his island.</p>
+<p>我从没有去过他的岛屿的荣幸。</p>
+<p><button class="play-button sentence" id="s-00-10-35-223" data-start="00:10:35,223" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh and I did turn it down, but a lot of people in Palm Beach were invited to his island.</p>
+<p>呃，我确实拒绝了，但棕榈滩的许多人被邀请去了他的岛屿。</p>
+<p><button class="play-button sentence" id="s-00-10-40-478" data-start="00:10:40,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh in one of my very good moments, I turned it down.</p>
+<p>呃，在我非常清醒的时刻，我拒绝了。</p>
+<p><button class="play-button sentence" id="s-00-10-43-680" data-start="00:10:43,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I didn't want to go to his island.</p>
+<p>我不想去他的岛屿。</p>
+<p><button class="play-button sentence" id="s-00-10-45-563" data-start="00:10:45,563" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump also detailing what led to his falling out with Epstein more than 20 years ago.</p>
+<p>特朗普总统还详细说明了20多年前他与爱泼斯坦关系破裂的原因。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959349" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-50-430" data-start="00:10:50,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An argument over workers at his Mara Lago club.</p>
+<p>关于他在海湖庄园的工人的争执。</p>
+<p><button class="play-button sentence" id="s-00-10-53-721" data-start="00:10:53,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He stole people that work for me.</p>
+<p>他偷走了为我工作的人。</p>
+<p><button class="play-button sentence" id="s-00-10-56-448" data-start="00:10:56,448" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I said, "Don't ever do that again." and he did it again and I threw him out of the place.</p>
+<p>我说：“别再这样做了。”但他又做了，我就把他赶了出去。</p>
+<p><button class="play-button sentence" id="s-00-11-01-383" data-start="00:11:01,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Persona, I threw him out and that was it.</p>
+<p>说真的，我把他赶了出去，就这样。</p>
+<p><button class="play-button sentence" id="s-00-11-06-046" data-start="00:11:06,046" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a new bipartisan push to force the Justice Department to release all of its files related to Epstein, especially after the DOJ interviewed convicted Epstein accomplice Gain Maxwell last week.</p>
+<p>两党正推动一项新举措，迫使司法部发布所有与爱泼斯坦相关的文件，尤其是在司法部上周采访了被定罪的爱泼斯坦同伙吉恩·麦克斯韦之后。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959323" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-16-522" data-start="00:11:16,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, President Trump suggesting there was no damaging information about him in the DOJ's Epstein file, saying if there was, President Biden's Justice Department would have made it public.</p>
+<p>今晚，特朗普总统暗示司法部的爱泼斯坦文件中没有关于他的不利信息，并表示如果有，拜登总统的司法部早就公开了。</p>
+<p><button class="play-button sentence" id="s-00-11-26-639" data-start="00:11:26,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were run by uh Comey.</p>
+<p>他们由呃科米管理。</p>
+<p><button class="play-button sentence" id="s-00-11-29-100" data-start="00:11:29,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were run by Garland.</p>
+<p>他们由加兰管理。</p>
+<p><button class="play-button sentence" id="s-00-11-31-471" data-start="00:11:31,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were run by Biden.</p>
+<p>他们由拜登管理。</p>
+<p><button class="play-button sentence" id="s-00-11-33-519" data-start="00:11:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those files were run by these people.</p>
+<p>这些文件由这些人管理。</p>
+<p><button class="play-button sentence" id="s-00-11-35-600" data-start="00:11:35,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were run by my enemy.</p>
+<p>他们由我的敌人管理。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959301" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-38-399" data-start="00:11:38,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh if there was anything in there, they would have used them for the election.</p>
+<p>呃，如果里面有什么东西，他们早就用来影响选举了。</p>
+<p><button class="play-button sentence" id="s-00-11-43-786" data-start="00:11:43,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Epstein was arrested and prosecuted during the first Trump administration.</p>
+<p>爱泼斯坦在特朗普第一届政府期间被捕并被起诉。</p>
+<p><button class="play-button sentence" id="s-00-11-47-120" data-start="00:11:47,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also today, Maxwell's attorney once again asked the Supreme Court to overturn her conviction.</p>
+<p>同样在今天，麦克斯韦的律师再次请求最高法院推翻她的定罪。</p>
+<p><button class="play-button sentence" id="s-00-11-52-459" data-start="00:11:52,459" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom.</p>
+<p>汤姆。</p>
+<p><button class="play-button sentence" id="s-00-11-52-879" data-start="00:11:52,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Gabe Boutier is at the White House for us tonight.</p>
+<p>好的，今晚加布·布蒂尔在白宫为我们报道。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959285" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-54-969" data-start="00:11:54,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gabe, we thank you.</p>
+<p>加布，谢谢你。</p>
+<p><button class="play-button sentence" id="s-00-11-55-734" data-start="00:11:55,734" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump, as we know, overseas where he's issuing a stark warning to Russia's President Putin with a new deadline to end his war with Ukraine.</p>
+<p>众所周知，特朗普总统正在海外，他向俄罗斯总统普京发出严厉警告，设定了结束乌克兰战争的新期限。</p>
+<p><button class="play-button sentence" id="s-00-12-03-591" data-start="00:12:03,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Kelly O'Donnell.</p>
+<p>以下是凯利·奥唐奈的报道。</p>
+<p><button class="play-button sentence" id="s-00-12-05-782" data-start="00:12:05,782" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight in Scotland, President Trump showcased the power of his office and the assets of his wealth.</p>
+<p>今晚在苏格兰，特朗普总统展示了他的职位权力和财富资产。</p>
+<p><button class="play-button sentence" id="s-00-12-11-571" data-start="00:12:11,571" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump branded golf resorts to appear more host than guest.</p>
+<p>特朗普品牌的度假村让他更像是主人而非客人。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959264" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-15-573" data-start="00:12:15,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With Britain's Prime Minister Kier Starmer, President Trump changed his tactic toward Vladimir Putin.</p>
+<p>与英国首相基尔·斯塔默一起，特朗普总统改变了对普京的策略。</p>
+<p><button class="play-button sentence" id="s-00-12-21-787" data-start="00:12:21,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every time I think it's going to end, he he kills people.</p>
+<p>每次我以为战争要结束了，他就杀人。</p>
+<p><button class="play-button sentence" id="s-00-12-24-598" data-start="00:12:24,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia hitting a Kev high-rise overnight.</p>
+<p>俄罗斯一夜之间袭击了一栋基辅高层建筑。</p>
+<p><button class="play-button sentence" id="s-00-12-27-433" data-start="00:12:27,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A drone strike leaving residents, including a child, injured.</p>
+<p>无人机袭击导致居民受伤，包括一名儿童。</p>
+<p><button class="play-button sentence" id="s-00-12-31-296" data-start="00:12:31,296" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president shrinking his 50-day deadline for Putin to reach a ceasefire.</p>
+<p>总统将普京达成停火的50天期限缩短。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959243" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-36-908" data-start="00:12:36,908" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to make a new deadline of about 10 uh 10 or 12 days from today.</p>
+<p>我将设定一个新的期限，大约10呃10或12天后。</p>
+<p><button class="play-button sentence" id="s-00-12-43-919" data-start="00:12:43,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no reason in waiting.</p>
+<p>没有理由再等待。</p>
+<p><button class="play-button sentence" id="s-00-12-45-572" data-start="00:12:45,572" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If no ceasefire, Mr. Trump threatened to impose sanctions and secondary tariffs on Russia's trade partners, prompting this warning from a former Russian president.</p>
+<p>如果没有停火，特朗普威胁对俄罗斯的贸易伙伴实施制裁和次级关税，引发了一位俄罗斯前总统的警告。</p>
+<p><button class="play-button sentence" id="s-00-12-56-263" data-start="00:12:56,263" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Each new ultimatum is a threat and a step towards war, not between Russia and Ukraine, but with his own country.</p>
+<p>每一个新的最后通牒都是威胁，是走向战争的步骤，不是俄罗斯和乌克兰之间，而是与他自己的国家。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959216" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-03-034" data-start="00:13:03,034" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Ukraine's President Zalinski thanked President Trump for his focus on saving lives and stopping this horrible war.</p>
+<p>但乌克兰总统泽连斯基感谢特朗普总统关注拯救生命和停止这场可怕的战争。</p>
+<p><button class="play-button sentence" id="s-00-13-10-728" data-start="00:13:10,728" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also during this visit abroad, the president deescalated his tariff war with the European Union.</p>
+<p>同样在这次出访期间，总统缓和了与欧盟的关税战。</p>
+<p><button class="play-button sentence" id="s-00-13-18-091" data-start="00:13:18,091" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US set a broad 15% tariff down from a threatened 30% import tax on many EU goods, including European cars like BMWs and Mercedes.</p>
+<p>美国将对许多欧盟商品（包括宝马和奔驰等欧洲汽车）的进口税从威胁的30%降至15%。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959189" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-30-194" data-start="00:13:30,194" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While the EU reduced barriers on Americanmade cars sold there, they're still refining this deal over tariffs for certain kinds of goods from pharmaceuticals to agricultural products with the wine and spirits industry still hoping for a better rate.</p>
+<p>尽管欧盟降低了在当地销售的美产汽车的壁垒，但他们仍在完善从药品到农产品的某些商品的关税协议，葡萄酒和烈酒行业仍希望获得更好的税率。</p>
+<p><button class="play-button sentence" id="s-00-13-47-710" data-start="00:13:47,710" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom.</p>
+<p>汤姆。</p>
+<p><button class="play-button sentence" id="s-00-13-48-077" data-start="00:13:48,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Kelly, we thank you for that.</p>
+<p>好的，凯利，谢谢你。</p>
+<p><button class="play-button sentence" id="s-00-13-49-360" data-start="00:13:49,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to those dramatic images in the skies over Gaza, airdrops of desperately needed aid as President Trump describes some of the conditions there as real starvation.</p>
+<p>现在转向加沙上空的戏剧性画面，空投急需的援助物资，特朗普总统称那里的某些情况是真正的饥饿。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959160" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-59-778" data-start="00:13:59,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Matt Bradley.</p>
+<p>以下是马特·布拉德利的报道。</p>
+<p><button class="play-button sentence" id="s-00-14-02-033" data-start="00:14:02,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight. Facing fierce criticism, Israel allowing airdrops of aid into Gaza.</p>
+<p>今晚。面对激烈批评，以色列允许向加沙空投援助物资。</p>
+<p><button class="play-button sentence" id="s-00-14-06-320" data-start="00:14:06,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thousands of tons of aid dropped by United Arab Emirates military planes in partnership with Jordan.</p>
+<p>阿联酋军用飞机与约旦合作空投了数千吨援助物资。</p>
+<p><button class="play-button sentence" id="s-00-14-11-602" data-start="00:14:11,602" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And an Israeli aid drop overnight, met by droves of desperate Palestinians clamoring for food, carrying away sacks on their backs.</p>
+<p>以色列的一批援助物资在夜间空投，遭到成群绝望的巴勒斯坦人争抢食物，他们背着麻袋离开。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959138" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-21-434" data-start="00:14:21,434" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm going to die for flour so we can eat.</p>
+<p>我会为面粉而死，这样我们才能吃上饭。</p>
+<p><button class="play-button sentence" id="s-00-14-23-794" data-start="00:14:23,794" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 18-year-old Abdul says Israel paused its offensive against Hamas to allow more aid distribution, but the UN calling it a drop in the ocean compared to what's needed.</p>
+<p>18岁的阿卜杜勒说，以色列暂停了对哈马斯的进攻以允许更多援助分发，但联合国称这与所需相比是杯水车薪。</p>
+<p><button class="play-button sentence" id="s-00-14-33-120" data-start="00:14:33,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, President Trump saying there's starvation and the US will help.</p>
+<p>今晚，特朗普总统表示存在饥饿，美国将提供帮助。</p>
+<p><button class="play-button sentence" id="s-00-14-37-492" data-start="00:14:37,492" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of those kids are That's real starvation stuff.</p>
+<p>有些孩子是那是真正的饥饿。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959118" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-41-163" data-start="00:14:41,163" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I see it. And you can't fake that.</p>
+<p>我看到了。这是无法伪造的。</p>
+<p><button class="play-button sentence" id="s-00-14-43-502" data-start="00:14:43,502" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to set up food centers.</p>
+<p>我们将设立食品中心。</p>
+<p><button class="play-button sentence" id="s-00-14-45-373" data-start="00:14:45,373" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president at odds with Israeli Prime Minister Benjamin Netanyahu, who says reports of starvation are lies.</p>
+<p>总统与以色列总理内塔尼亚胡意见相左，后者称关于饥饿的报道是谎言。</p>
+<p><button class="play-button sentence" id="s-00-14-51-177" data-start="00:14:51,177" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is no policy of starvation in Gaza and there is no starvation in Gaza.</p>
+<p>加沙没有饥饿政策，加沙也没有饥饿。</p>
+<p><button class="play-button sentence" id="s-00-14-56-659" data-start="00:14:56,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Trump also saying he's working with Netanyahu to get the last hostages out.</p>
+<p>但特朗普也表示，他正与内塔尼亚胡合作解救最后的人质。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959099" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-00-720" data-start="00:15:00,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Saying Hamas refuses to release them.</p>
+<p>他说哈马斯拒绝释放他们。</p>
+<p><button class="play-button sentence" id="s-00-15-02-945" data-start="00:15:02,945" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't want to give up these last 20 because they think as long as we have them, they have them.</p>
+<p>他们不想放弃最后的20人，因为他们认为只要我们有人质，他们就有人质。</p>
+<p><button class="play-button sentence" id="s-00-15-08-016" data-start="00:15:08,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have protection.</p>
+<p>他们有保护。</p>
+<p><button class="play-button sentence" id="s-00-15-09-651" data-start="00:15:09,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, in Gaza, a doctor shows pictures of 13-year-old Hoda not so long ago, but now she's bedridden.</p>
+<p>与此同时，在加沙，一名医生展示了13岁的胡达不久前的照片，但现在她卧床不起。</p>
+<p><button class="play-button sentence" id="s-00-15-16-703" data-start="00:15:16,703" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The doctor saying hunger changed the color of her skin and hair.</p>
+<p>医生说饥饿改变了她的肤色和头发颜色。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959078" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-21-376" data-start="00:15:21,376" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Huda is one of the examples for severe severe protein deficiency.</p>
+<p>胡达是严重蛋白质缺乏的案例之一。</p>
+<p><button class="play-button sentence" id="s-00-15-28-575" data-start="00:15:28,575" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two human rights organizations became the first Israeli groups to accuse Israel of genocide in Gaza.</p>
+<p>两个人权组织成为首个指控以色列在加沙实施种族灭绝的以色列团体。</p>
+<p><button class="play-button sentence" id="s-00-15-34-023" data-start="00:15:34,023" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israelis responded by calling the accusations obscene and baseless and said Israel only targets Hamas.</p>
+<p>以色列回应称这些指控是荒谬且毫无根据的，并表示以色列只针对哈马斯。</p>
+<p><button class="play-button sentence" id="s-00-15-41-248" data-start="00:15:41,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US has said Israel isn't committing genocide.</p>
+<p>美国表示以色列没有实施种族灭绝。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959055" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-44-658" data-start="00:15:44,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom,</p>
+<p>汤姆，</p>
+<p><button class="play-button sentence" id="s-00-15-45-045" data-start="00:15:45,045" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matt Bradley with those devastating images out of Gaza.</p>
+<p>马特·布拉德利带来加沙的这些毁灭性画面。</p>
+<p><button class="play-button sentence" id="s-00-15-47-394" data-start="00:15:47,394" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Matt, when we come back, the terrifying moment an 18-wheeler exploded on a Mississippi interstate.</p>
+<p>好的，马特，稍后我们将报道密西西比州高速公路上18轮卡车爆炸的恐怖时刻。</p>
+<p><button class="play-button sentence" id="s-00-15-54-985" data-start="00:15:54,985" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we know next.</p>
+<p>接下来是我们了解的情况。</p>
+<p><button class="play-button sentence" id="s-00-15-57-759" data-start="00:15:57,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back now with some scary moments in Nevada.</p>
+<p>现在回到内华达州的一些恐怖时刻。</p>
+<p><button class="play-button sentence" id="s-00-15-59-758" data-start="00:15:59,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three people are dead, according to authorities, after a gunman opened fire outside of a resort and casino in Reno.</p>
+<p>据当局称，里诺一家度假村和赌场外发生枪击事件，三人死亡。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959033" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-06-213" data-start="00:16:06,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Six people were shot according to Reno police.</p>
+<p>里诺警方称六人中枪。</p>
+<p><button class="play-button sentence" id="s-00-16-09-108" data-start="00:16:09,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Officers rushed to the scene and say they located the suspect and an officer involved shooting occurred after that.</p>
+<p>警察迅速赶到现场，称他们找到了嫌疑人，随后发生了警察开枪事件。</p>
+<p><button class="play-button sentence" id="s-00-16-15-529" data-start="00:16:15,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The suspect is in custody tonight.</p>
+<p>嫌疑人今晚被拘留。</p>
+<p><button class="play-button sentence" id="s-00-16-17-343" data-start="00:16:17,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is no known motive at this time.</p>
+<p>目前动机不明。</p>
+<p><button class="play-button sentence" id="s-00-16-19-378" data-start="00:16:19,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Hattisburg, Mississippi, check this out.</p>
+<p>在密西西比州哈蒂斯堡，看看这个。</p>
+<p><button class="play-button sentence" id="s-00-16-21-686" data-start="00:16:21,686" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Highway cams capturing the moment an 18-wheeler exploded into a massive fireball on Sunday.</p>
+<p>高速公路摄像头捕捉到周日一辆18轮卡车爆炸成巨大火球的瞬间。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208959012" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-27-784" data-start="00:16:27,784" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NBC station WDAM reporting the truck had been involved in a multi-vehicle crash.</p>
+<p>NBC下属WDAM电视台报道称，这辆卡车卷入了多车相撞事故。</p>
+<p><button class="play-button sentence" id="s-00-16-33-335" data-start="00:16:33,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First responders were already on the scene when the truck suddenly went up in flames.</p>
+<p>急救人员已在现场时，卡车突然起火。</p>
+<p><button class="play-button sentence" id="s-00-16-37-728" data-start="00:16:37,728" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not yet clear what caused that fire.</p>
+<p>目前尚不清楚起火原因。</p>
+<p><button class="play-button sentence" id="s-00-16-40-255" data-start="00:16:40,255" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in South Florida, look at this.</p>
+<p>在南佛罗里达州，看看这个。</p>
+<p><button class="play-button sentence" id="s-00-16-41-892" data-start="00:16:41,892" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fire tore through three homes on the Mikasuki reservation Sunday night, gutting the houses and burning vehicles.</p>
+<p>周日晚上，大火烧毁了米卡苏基保留地的三所房屋，烧毁了房屋和车辆。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208958991" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-48-191" data-start="00:16:48,191" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 30 firefighting units had to respond, battling strong winds, which may have made the fires more intense.</p>
+<p>超过30个消防单位不得不应对，与强风搏斗，这可能加剧了火势。</p>
+<p><button class="play-button sentence" id="s-00-16-55-217" data-start="00:16:55,217" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A tribal spokesman says it appears to have started accidentally, but they're continuing to investigate.</p>
+<p>部落发言人称火灾似乎是意外引发，但他们仍在调查。</p>
+<p><button class="play-button sentence" id="s-00-17-00-726" data-start="00:17:00,726" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say no one was injured.</p>
+<p>他们说没有人受伤。</p>
+<p><button class="play-button sentence" id="s-00-17-02-047" data-start="00:17:02,047" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's good news.</p>
+<p>这是个好消息。</p>
+<p><button class="play-button sentence" id="s-00-17-02-879" data-start="00:17:02,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Nightly News for this Monday.</p>
+<p>这是本周一的晚间新闻。</p>
+<p><button class="play-button sentence" id="s-00-17-04-548" data-start="00:17:04,548" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Tom Yamos.</p>
+<p>我是汤姆·亚莫斯。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dv8XzPE6e/?t=-2208958974" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-05-306" data-start="00:17:05,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks so much for watching.</p>
+<p>非常感谢您的观看。</p>
+<p><button class="play-button sentence" id="s-00-17-06-880" data-start="00:17:06,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight and always, we're here for you.</p>
+<p>今晚和永远，我们为您服务。</p>
+<p><button class="play-button sentence" id="s-00-17-09-439" data-start="00:17:09,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good night.</p>
+<p>晚安。</p>
+<p><button class="play-button sentence" id="s-00-17-10-292" data-start="00:17:10,292" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We thank you for watching and remember, stay updated on breaking news and top stories on the NBC News app or watch live on our YouTube channel.</p>
+<p>感谢您的观看，请记住，通过NBC新闻应用获取突发新闻和头条新闻的最新信息，或在我们的YouTube频道观看直播。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

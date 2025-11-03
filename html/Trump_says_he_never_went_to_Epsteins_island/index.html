@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Trump says he never went to Epstein's island</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="President Trump insists he never visited Jeffrey Epstein's private island, while Epstein's longtime accomplice Ghislaine Maxwell attempts to overturn her conviction through a Supreme Court appeal and faces potential pardon or sentence reduction.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Trump says he never went to Epstein's island</h1>
+<p>【特朗普：我从未去过爱泼斯坦的私人岛屿｜CNN News 20250729】</p>
+<p>Summary:
+President Trump insists he never visited Jeffrey Epstein's private island, while Epstein's longtime accomplice Ghislaine Maxwell attempts to overturn her conviction through a Supreme Court appeal and faces potential pardon or sentence reduction.</p>
+<p>摘要：
+特朗普总统坚称自己从未去过杰弗里·爱泼斯坦的私人岛屿，而爱泼斯坦的长期同伙吉斯莱恩·马克斯韦尔正试图通过最高法院上诉推翻定罪，同时面临赦免或减刑的可能。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 18 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-066" data-start="00:00:00,066" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump says he never, never visited Jeffrey Epstein's private island.</p>
+<p>特朗普总统表示，他从未、从未去过杰弗里·爱泼斯坦的私人岛屿。</p>
+<p><button class="play-button sentence" id="s-00-00-06-038" data-start="00:00:06,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Listen, I never had the privilege of going to his island.</p>
+<p>听着，我从未有幸去过他的岛屿。</p>
+<p><button class="play-button sentence" id="s-00-00-10-776" data-start="00:00:10,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and I did turn it down.</p>
+<p>而且我确实拒绝了。</p>
+<p><button class="play-button sentence" id="s-00-00-12-077" data-start="00:00:12,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But a lot of people in Palm Beach were invited to his island.</p>
+<p>但棕榈滩的许多人曾被邀请去他的岛屿。</p>
+<p><button class="play-button sentence" id="s-00-00-15-849" data-start="00:00:15,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> in one of my very good moments, I turned it down.</p>
+<p>在我非常清醒的时刻，我拒绝了。</p>
+<p><button class="play-button sentence" id="s-00-00-18-518" data-start="00:00:18,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I didn't want to go to his island.</p>
+<p>我不想去他的岛屿。</p>
+<p><button class="play-button sentence" id="s-00-00-21-588" data-start="00:00:21,588" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those comments come as attorneys for the longtime Epstein accomplice, Elaine Maxwell, are expected to make their final pitch to the U.S. Supreme Court as they look to try to overturn her conviction.</p>
+<p>这些言论发表之际，爱泼斯坦的长期同伙伊莱恩·马克斯韦尔的律师预计将向美国最高法院提出最终上诉，试图推翻她的定罪。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959966" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-33-582" data-start="00:00:33,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's currently serving 20 years in prison.</p>
+<p>她目前正在服刑20年。</p>
+<p><button class="play-button sentence" id="s-00-00-36-603" data-start="00:00:36,603" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's discuss with CNN senior legal analyst and former state and federal prosecutor Elie Honig.</p>
+<p>让我们与CNN高级法律分析师、前州和联邦检察官埃利·霍尼格讨论。</p>
+<p><button class="play-button sentence" id="s-00-00-42-341" data-start="00:00:42,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Alex, thanks for joining us.</p>
+<p>亚历克斯，感谢加入我们。</p>
+<p><button class="play-button sentence" id="s-00-00-43-777" data-start="00:00:43,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Walk us through where things stand.</p>
+<p>带我们了解目前的情况。</p>
+<p><button class="play-button sentence" id="s-00-00-45-612" data-start="00:00:45,612" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With Maxwells expected Supreme Court appeal.</p>
+<p>关于马克斯韦尔预期的最高法院上诉。</p>
+<p><button class="play-button sentence" id="s-00-00-50-149" data-start="00:00:50,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Wolf, back in 2008, when Jeffrey Epstein was prosecuted by Justice Department prosecutors in the Southern District of Florida, he was given an outrage.</p>
+<p>沃尔夫，早在2008年，当杰弗里·爱泼斯坦被佛罗里达南区司法部检察官起诉时，他得到了一个令人愤慨的。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959940" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-59-893" data-start="00:00:59,893" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lenient plea deal.</p>
+<p>宽大的认罪协议。</p>
+<p><button class="play-button sentence" id="s-00-01-01-261" data-start="00:01:01,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in addition to all the sentencing benefits that Jeffrey Epstein was given, there was a really unusual provision in that deal which said that none of Jeffrey Epstein's coconspirators will be prosecuted in that district.</p>
+<p>除了杰弗里·爱泼斯坦获得的所有量刑好处外，该协议中还有一项非常不寻常的条款，规定杰弗里·爱泼斯坦的同谋者在该地区不会被起诉。</p>
+<p><button class="play-button sentence" id="s-00-01-13-072" data-start="00:01:13,072" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, fast forward to 2020.</p>
+<p>现在，快进到2020年。</p>
+<p><button class="play-button sentence" id="s-00-01-14-941" data-start="00:01:14,941" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ghislaine Maxwell gets indicted in the Southern District of New York, a different part of the Justice Department, and Maxwell has argued both at the trial court and the Court of Appeals, that that deal DOJ made back in 2008 benefits her.</p>
+<p>吉斯莱恩·马克斯韦尔在纽约南区被起诉，这是司法部的另一个部门，马克斯韦尔在初审法院和上诉法院都辩称，司法部2008年达成的协议对她有利。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-27-035" data-start="00:01:27,035" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says she can't be prosecuted if DOJ says she's one of the coconspirators.</p>
+<p>协议称，如果司法部说她是同谋者之一，她不能被起诉。</p>
+<p><button class="play-button sentence" id="s-00-01-31-257" data-start="00:01:31,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, DOJ's position up until now, including now, has been that that deal was only binding on the prosecutors in Florida, not on prosecutors in New York, and that that kind of deal releasing Coconspirators is basically invalid because it's so much against public interest.</p>
+<p>然而，司法部至今的立场，包括现在，一直是该协议仅对佛罗里达州的检察官有约束力，而不对纽约的检察官有约束力，而且这种释放同谋者的协议基本上是无效的，因为它严重违背公共利益。</p>
+<p><button class="play-button sentence" id="s-00-01-46-449" data-start="00:01:46,449" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So judges have ruled against Maxwell at the trial court level and at the federal Court of Appeals level.</p>
+<p>因此，法官在初审法院和联邦上诉法院层面都做出了不利于马克斯韦尔的裁决。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959888" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-51-578" data-start="00:01:51,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now Maxwell is down to her last hope, which is trying to get the U.S. Supreme Court to take up this issue.</p>
+<p>现在，马克斯韦尔只剩下最后的希望，即试图让美国最高法院受理此案。</p>
+<p><button class="play-button sentence" id="s-00-01-57-516" data-start="00:01:57,516" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what do you think?</p>
+<p>那么你怎么看？</p>
+<p><button class="play-button sentence" id="s-00-01-58-284" data-start="00:01:58,284" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How much of a hope does she have?</p>
+<p>她有多少希望？</p>
+<p><button class="play-button sentence" id="s-00-02-01-186" data-start="00:02:01,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the Supreme Court statistically takes only a very small proportion of all cases brought to it under 10%, usually under 5%, usually in the range of 2 or 3% recently.</p>
+<p>从统计数据来看，最高法院仅受理提交给它的所有案件中的很小一部分，不到10%，通常不到5%，最近通常在2%或3%的范围内。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959868" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-11-730" data-start="00:02:11,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the one hand, Wolf, there have been different interpretations of this issue in different circuits around the country, which is usually a factor that makes it more likely the Supreme Court will take the case.</p>
+<p>一方面，沃尔夫，全国各地的不同巡回法院对此问题有不同的解释，这通常是最高法院更有可能受理此案的一个因素。</p>
+<p><button class="play-button sentence" id="s-00-02-22-574" data-start="00:02:22,574" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the other hand, though, the Supreme Court was brought this same exact issue in a separate case a few years ago and declined to hear it then.</p>
+<p>但另一方面，最高法院几年前在另一起案件中遇到了完全相同的问题，但当时拒绝受理。</p>
+<p><button class="play-button sentence" id="s-00-02-29-883" data-start="00:02:29,883" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So maybe they've had a change of heart.</p>
+<p>所以也许他们改变了主意。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959848" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-31-950" data-start="00:02:31,950" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I would say overall it is unlikely, but not impossible, that the Supreme Court takes this case if this appeal fails.</p>
+<p>因此，总的来说，如果这次上诉失败，最高法院受理此案的可能性不大，但并非不可能。</p>
+<p><button class="play-button sentence" id="s-00-02-39-057" data-start="00:02:39,057" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What other legal avenues could Maxwell's team pursue?</p>
+<p>马克斯韦尔的团队还可以采取哪些法律途径？</p>
+<p><button class="play-button sentence" id="s-00-02-44-296" data-start="00:02:44,296" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's clear that Glenn Maxwell now is making a play for some sort of leniency.</p>
+<p>很明显，格伦·马克斯韦尔现在正在寻求某种宽大处理。</p>
+<p><button class="play-button sentence" id="s-00-02-48-100" data-start="00:02:48,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She got a 20 year sentence.</p>
+<p>她被判处20年徒刑。</p>
+<p><button class="play-button sentence" id="s-00-02-49-801" data-start="00:02:49,801" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's about five years into that sentence, and she's in her mid 60s.</p>
+<p>她已经服刑约五年，现在60多岁。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959826" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-53-806" data-start="00:02:53,806" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The other way she could get relief.</p>
+<p>她可以获得救济的另一种方式。</p>
+<p><button class="play-button sentence" id="s-00-02-55-508" data-start="00:02:55,508" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's really two main ways.</p>
+<p>主要有两种方式。</p>
+<p><button class="play-button sentence" id="s-00-02-56-709" data-start="00:02:56,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One is to hope for a pardon or a commutation.</p>
+<p>一种是希望获得赦免或减刑。</p>
+<p><button class="play-button sentence" id="s-00-02-59-711" data-start="00:02:59,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've seen various comments made by the president refusing to rule that out, saying he hasn't thought about it.</p>
+<p>我们已经看到总统发表了各种评论，拒绝排除这种可能性，并表示他还没有考虑过。</p>
+<p><button class="play-button sentence" id="s-00-03-05-217" data-start="00:03:05,217" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the other one is Maxwell can try to convince DOJ prosecutors.</p>
+<p>但另一种是马克斯韦尔可以尝试说服司法部检察官。</p>
+<p><button class="play-button sentence" id="s-00-03-09-421" data-start="00:03:09,421" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this may be what's part of behind the meeting that she had last week.</p>
+<p>这可能是她上周会面背后的部分原因。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959807" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-12-592" data-start="00:03:12,592" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She can try to convince the DOJ to write a letter, what we call the rule 35 letter to a court saying, yes, she has already been convicted and sentenced.</p>
+<p>她可以尝试说服司法部写一封信，我们称之为规则35信函，向法院表示，是的，她已经被定罪和判刑。</p>
+<p><button class="play-button sentence" id="s-00-03-20-134" data-start="00:03:20,134" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, she's been cooperative.</p>
+<p>然而，她一直很合作。</p>
+<p><button class="play-button sentence" id="s-00-03-21-700" data-start="00:03:21,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her cooperation was helpful and therefore a judge.</p>
+<p>她的合作是有帮助的，因此法官。</p>
+<p><button class="play-button sentence" id="s-00-03-23-969" data-start="00:03:23,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We ask you to re sentence her to something lower.</p>
+<p>我们要求你重新判处她较轻的刑罚。</p>
+<p><button class="play-button sentence" id="s-00-03-27-039" data-start="00:03:27,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, DOJ should be very careful about when they write those letters, especially in a case like this.</p>
+<p>现在，司法部在写这些信时应非常谨慎，尤其是在这样的案件中。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-31-711" data-start="00:03:31,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it is theoretically and procedurally possible.</p>
+<p>但这在理论上和程序上是可能的。</p>
+<p><button class="play-button sentence" id="s-00-03-34-813" data-start="00:03:34,813" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you know, early this morning, President Trump once again spoke about whether he could pardon Ghislaine Maxwell.</p>
+<p>如你所知，今天早些时候，特朗普总统再次谈到他是否可以赦免吉斯莱恩·马克斯韦尔。</p>
+<p><button class="play-button sentence" id="s-00-03-41-242" data-start="00:03:41,242" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want you to listen to what he said specifically.</p>
+<p>我想让你具体听听他说了什么。</p>
+<p><button class="play-button sentence" id="s-00-03-43-423" data-start="00:03:43,423" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Listen to this.</p>
+<p>听听这个。</p>
+<p><button class="play-button sentence" id="s-00-03-45-390" data-start="00:03:45,390" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I'm allowed to give her a pardon, but nobody's approached me with it.</p>
+<p>嗯，我有权赦免她，但没有人向我提出。</p>
+<p><button class="play-button sentence" id="s-00-03-49-695" data-start="00:03:49,695" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nobody's asked me about it.</p>
+<p>没有人问过我这件事。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959766" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-53-366" data-start="00:03:53,366" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> it's in the news about, that that aspect of it.</p>
+<p>新闻中提到了这方面的内容。</p>
+<p><button class="play-button sentence" id="s-00-03-58-746" data-start="00:03:58,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But, right now it would be inappropriate to talk about it.</p>
+<p>但是，现在谈论它是不合适的。</p>
+<p><button class="play-button sentence" id="s-00-04-03-233" data-start="00:04:03,233" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So.</p>
+<p>所以。</p>
+<p><button class="play-button sentence" id="s-00-04-03-610" data-start="00:04:03,610" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what stands out to you about those comments from Trump?</p>
+<p>那么，特朗普的这些评论中让你印象深刻的是什么？</p>
+<p><button class="play-button sentence" id="s-00-04-08-413" data-start="00:04:08,413" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know if this boggles my mind.</p>
+<p>我不知道这是否让我感到困惑。</p>
+<p><button class="play-button sentence" id="s-00-04-10-550" data-start="00:04:10,550" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the same response he's been giving.</p>
+<p>这是他一直在给出的相同回应。</p>
+<p><button class="play-button sentence" id="s-00-04-12-485" data-start="00:04:12,485" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Will you consider a pardon for a convicted child sex trafficker?</p>
+<p>你会考虑赦免一名被判有罪的儿童性交易者吗？</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959743" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-16-488" data-start="00:04:16,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, the easiest thing to say is just no, of course not.</p>
+<p>我的意思是，最简单的回答就是“不”，当然不会。</p>
+<p><button class="play-button sentence" id="s-00-04-19-291" data-start="00:04:19,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What president wouldn't say that?</p>
+<p>哪位总统不会这么说？</p>
+<p><button class="play-button sentence" id="s-00-04-20-826" data-start="00:04:20,826" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the fact that Trump keeps saying he has the power.</p>
+<p>而特朗普一直说他有权这样做。</p>
+<p><button class="play-button sentence" id="s-00-04-23-129" data-start="00:04:23,129" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And by the way, he's right.</p>
+<p>顺便说一句，他是对的。</p>
+<p><button class="play-button sentence" id="s-00-04-23-997" data-start="00:04:23,997" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He does have the power as unseemly as it might be, and then says, you know, I haven't thought about it.</p>
+<p>他确实有这个权力，尽管可能不太合适，然后说，你知道，我还没有考虑过。</p>
+<p><button class="play-button sentence" id="s-00-04-28-767" data-start="00:04:28,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, that's the same answer that Donald Trump has given many times in the past with other people who he did end up pardoning or commuting.</p>
+<p>我的意思是，这是唐纳德·特朗普过去多次对其他人给出的相同回答，而他最终确实赦免或减刑了这些人。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959724" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-35-641" data-start="00:04:35,641" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, look, obviously there will be a serious political cost to doing that.</p>
+<p>所以，显然这样做会付出严重的政治代价。</p>
+<p><button class="play-button sentence" id="s-00-04-39-112" data-start="00:04:39,112" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But but I think it's pretty telling that Donald Trump has said anything other than absolutely not.</p>
+<p>但我认为，唐纳德·特朗普说了“绝对不”以外的任何话，这很能说明问题。</p>
+<p><button class="play-button sentence" id="s-00-04-43-783" data-start="00:04:43,783" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How could Maxwell's, interview the other day with the Justice Department's deputy attorney general, factor into what we are seeing happening next?</p>
+<p>马克斯韦尔前几天与司法部副部长的访谈如何影响我们接下来看到的情况？</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959705" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-54-961" data-start="00:04:54,961" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I think the play we're going to see from Maxwell's team is obvious and the right play from any defense lawyers perspective, which is to make an argument to DOJ.</p>
+<p>嗯，我认为我们将从马克斯韦尔的团队看到的策略是显而易见的，也是任何辩护律师视角下的正确策略，即向司法部提出论点。</p>
+<p><button class="play-button sentence" id="s-00-05-03-636" data-start="00:05:03,636" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look, she has now come forward.</p>
+<p>看，她现在站出来了。</p>
+<p><button class="play-button sentence" id="s-00-05-05-204" data-start="00:05:05,204" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She has given you valuable, truthful information, whether that's true or not, I don't know, but that'll be what Maxwell's attorney says.</p>
+<p>她向你提供了有价值的、真实的信息，无论这是真是假，我不知道，但这将是马克斯韦尔的律师所说的。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959688" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-11-177" data-start="00:05:11,177" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And therefore, we want you to go to a court and ask for sentencing.</p>
+<p>因此，我们希望你去法庭并要求量刑。</p>
+<p><button class="play-button sentence" id="s-00-05-14-314" data-start="00:05:14,314" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Leniency from DOJ perspective, it's a little bit unclear what exactly they're doing.</p>
+<p>从司法部的角度来看，他们到底在做什么还不太清楚。</p>
+<p><button class="play-button sentence" id="s-00-05-19-384" data-start="00:05:19,384" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am skeptical that Glenn Maxwell is anywhere near credible enough to sign up as a cooperator, and to bring other indictments based on her information.</p>
+<p>我怀疑格伦·马克斯韦尔是否足够可信，可以作为合作者签署协议，并根据她的信息提出其他起诉。</p>
+<p><button class="play-button sentence" id="s-00-05-28-528" data-start="00:05:28,528" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I cannot envision myself ever having done that.</p>
+<p>我无法想象自己曾经这样做过。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959669" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-30-930" data-start="00:05:30,930" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It would shock me if DOJ did that.</p>
+<p>如果司法部这样做，我会感到震惊。</p>
+<p><button class="play-button sentence" id="s-00-05-32-964" data-start="00:05:32,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So maybe they're just trying to get her information.</p>
+<p>所以也许他们只是想获取她的信息。</p>
+<p><button class="play-button sentence" id="s-00-05-35-201" data-start="00:05:35,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe they have some interest in getting whatever she said out there to the public to try to appease critics.</p>
+<p>也许他们有兴趣将她所说的一切公之于众，以试图安抚批评者。</p>
+<p><button class="play-button sentence" id="s-00-05-40-339" data-start="00:05:40,339" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's an interesting sort of political and legal dance happening here between the parties.</p>
+<p>但双方之间正在进行一种有趣的政治和法律舞蹈。</p>
+<p><button class="play-button sentence" id="s-00-05-44-711" data-start="00:05:44,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to play some of what Republican Congressman Thomas Massie said about the possibility of subpoenaing Jeffrey Epstein's estate.</p>
+<p>我想播放共和党众议员托马斯·马西关于传唤杰弗里·爱泼斯坦遗产的一些言论。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-55-021" data-start="00:05:55,021" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think we should get a lot more than just the book.</p>
+<p>我认为我们应该得到的远不止这本书。</p>
+<p><button class="play-button sentence" id="s-00-05-57-490" data-start="00:05:57,490" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's get the financial records of the estate.</p>
+<p>让我们获取遗产的财务记录。</p>
+<p><button class="play-button sentence" id="s-00-06-00-392" data-start="00:06:00,392" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where's the to follow the money, as they say up here?</p>
+<p>正如他们在这里所说的，钱去了哪里？</p>
+<p><button class="play-button sentence" id="s-00-06-04-230" data-start="00:06:04,230" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> we should look at the plea bargain.</p>
+<p>我们应该看看认罪协议。</p>
+<p><button class="play-button sentence" id="s-00-06-05-898" data-start="00:06:05,898" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Open that up.</p>
+<p>公开它。</p>
+<p><button class="play-button sentence" id="s-00-06-07-800" data-start="00:06:07,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How big of a development, Lee, would this be?</p>
+<p>李，这将是一个多大的发展？</p>
+<p><button class="play-button sentence" id="s-00-06-10-670" data-start="00:06:10,670" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> what could lawmakers learn if that were to happen?</p>
+<p>如果发生这种情况，立法者可以了解到什么？</p>
+<p><button class="play-button sentence" id="s-00-06-15-274" data-start="00:06:15,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, it's an interesting idea by Representative Massie, and I know he has some bipartisan support.</p>
+<p>嗯，这是马西代表的一个有趣的想法，我知道他有一些两党的支持。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959620" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-19-276" data-start="00:06:19,276" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the one hand, the notion of let's subpoena the Epstein estate, they can do that.</p>
+<p>一方面，传唤爱泼斯坦遗产的想法，他们可以这样做。</p>
+<p><button class="play-button sentence" id="s-00-06-24-416" data-start="00:06:24,416" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Congress has broad subpoena power now.</p>
+<p>国会现在有广泛的传唤权。</p>
+<p><button class="play-button sentence" id="s-00-06-26-084" data-start="00:06:26,084" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The estate might well resist it, and it might well end up going to court.</p>
+<p>遗产可能会抵制，最终可能会上法庭。</p>
+<p><button class="play-button sentence" id="s-00-06-29-488" data-start="00:06:29,488" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think the representative Massey's right that that could shed some light on really the mystery around Epstein's finances.</p>
+<p>但我认为马西代表是对的，这可能会揭示爱泼斯坦财务的真正谜团。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959604" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-35-427" data-start="00:06:35,427" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's then a separate question about subpoena in DOJ.</p>
+<p>然后还有一个关于传唤司法部的单独问题。</p>
+<p><button class="play-button sentence" id="s-00-06-38-463" data-start="00:06:38,463" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, traditionally, Wolf, the Justice Department would resist that type of subpoena, would say, we don't open up our closed files to Congress.</p>
+<p>传统上，沃尔夫，司法部会抵制这种传唤，会说，我们不会向国会公开我们的封闭档案。</p>
+<p><button class="play-button sentence" id="s-00-06-45-690" data-start="00:06:45,690" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, if you think about the political reality now, I think it's pretty tough for Pam Bondi to say no, we want to legally resist a subpoena from Congress, especially if it comes with bipartisan support.</p>
+<p>然而，如果你考虑现在的政治现实，我认为帕姆·邦迪很难说不，我们想合法抵制国会的传唤，尤其是如果它得到两党的支持。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959583" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-56-249" data-start="00:06:56,249" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Allie Hoenig reporting for us.</p>
+<p>艾莉·霍尼格为我们报道。</p>
+<p><button class="play-button sentence" id="s-00-06-57-583" data-start="00:06:57,583" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very, very much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-06-59-651" data-start="00:06:59,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As President Trump looks to move on from the Jeffrey Epstein case during his trip abroad, Republican divisions here at home appear to be getting even deeper.</p>
+<p>当特朗普总统在国外旅行期间试图从杰弗里·爱泼斯坦案中抽身时，国内共和党的分歧似乎正在加深。</p>
+<p><button class="play-button sentence" id="s-00-07-09-028" data-start="00:07:09,028" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some members of his own Republican Party not only amping up calls to release the so-called Epstein files, but but but accusing his Trump administration of not delivering on its promises.</p>
+<p>他所在的共和党的一些成员不仅加大呼吁释放所谓的爱泼斯坦档案，而且指责特朗普政府没有兑现承诺。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959556" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-23-875" data-start="00:07:23,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We all thought that when Trump was elected, he would be the bull in a China shop and that he would break that up and bring transparency.</p>
+<p>我们都认为，当特朗普当选时，他会像瓷器店里的公牛一样，打破这一切并带来透明度。</p>
+<p><button class="play-button sentence" id="s-00-07-31-083" data-start="00:07:31,083" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Frankly, it wasn't until just recently that I realized that people who were allegedly working on this weren't sincere in their efforts.</p>
+<p>坦率地说，直到最近我才意识到，那些据称致力于此的人并不真诚。</p>
+<p><button class="play-button sentence" id="s-00-07-40-059" data-start="00:07:40,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Part of this problem is that there were some false expectations that are created, and that's that's a political mistake.</p>
+<p>这个问题的一部分是产生了一些错误的期望，这是一个政治错误。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959532" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-47-934" data-start="00:07:47,934" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that, you know, saying that you're going to be able to deliver when you when you haven't even looked at all of the files and what's what's available was probably a misstep.</p>
+<p>我认为，你知道，当甚至还没有查看所有文件和可用内容时就说你能够交付，可能是一个失误。</p>
+<p><button class="play-button sentence" id="s-00-07-58-444" data-start="00:07:58,444" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CNN congressional correspondent Laura Fox is here with me in the Situation Room, Laura, and walk us through where things stand now.</p>
+<p>CNN国会记者劳拉·福克斯和我一起在战情室，劳拉，带我们了解目前的情况。</p>
+<p><button class="play-button sentence" id="s-00-08-05-718" data-start="00:08:05,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, certainly lawmakers are on this five week recess at this point.</p>
+<p>是的，目前立法者正处于为期五周的休会期。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959510" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-09-288" data-start="00:08:09,288" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The speaker clearly wanted to move beyond this last week.</p>
+<p>议长显然希望在上周之后继续前进。</p>
+<p><button class="play-button sentence" id="s-00-08-13-391" data-start="00:08:13,391" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet, Republicans in the House are still talking about this.</p>
+<p>然而，众议院的共和党人仍在谈论此事。</p>
+<p><button class="play-button sentence" id="s-00-08-17-362" data-start="00:08:17,362" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You hear from Thomas Massie there.</p>
+<p>你听到托马斯·马西的发言。</p>
+<p><button class="play-button sentence" id="s-00-08-19-232" data-start="00:08:19,232" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You hear from Eric Burleson making clear that they feel like Donald Trump and the Trump administration perhaps has made a political miscalculation when it comes to the promises that were made related to the Epstein files and what they've been able to deliver up to this point.</p>
+<p>你听到埃里克·伯勒森的发言，明确表示他们认为唐纳德·特朗普和特朗普政府在有关爱泼斯坦档案的承诺以及他们迄今为止能够交付的内容方面可能犯了政治错误。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959485" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-34-980" data-start="00:08:34,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile you have the speaker of the House is carefully trying to make sure that he is in the right place with his conference and in the right place with the president.</p>
+<p>与此同时，众议院议长正在小心翼翼地确保他与他的会议和总统处于正确的位置。</p>
+<p><button class="play-button sentence" id="s-00-08-45-157" data-start="00:08:45,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you can guess that there is a lot of tension there between where he wants to be.</p>
+<p>你可以猜到，在他想要的位置之间存在很多紧张关系。</p>
+<p><button class="play-button sentence" id="s-00-08-49-662" data-start="00:08:49,662" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was asked over the weekend what he thought about potentially absolving Glenn Maxwell of her crimes.</p>
+<p>上周末，有人问他如何看待可能免除格伦·马克斯韦尔的罪行。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959462" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-57-336" data-start="00:08:57,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is what he said yesterday.</p>
+<p>这是他昨天说的。</p>
+<p><button class="play-button sentence" id="s-00-09-01-307" data-start="00:09:01,307" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you're asking my opinion, I think 20 years was a pittance.</p>
+<p>如果你问我的意见，我认为20年微不足道。</p>
+<p><button class="play-button sentence" id="s-00-09-04-543" data-start="00:09:04,543" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think she should have a life sentence at least.</p>
+<p>我认为她至少应该被判无期徒刑。</p>
+<p><button class="play-button sentence" id="s-00-09-07-475" data-start="00:09:07,475" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, think of all these unspeakable crimes.</p>
+<p>我的意思是，想想所有这些难以言喻的罪行。</p>
+<p><button class="play-button sentence" id="s-00-09-09-414" data-start="00:09:09,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as you noted earlier, probably a thousand victims.</p>
+<p>正如你之前提到的，可能有一千名受害者。</p>
+<p><button class="play-button sentence" id="s-00-09-13-753" data-start="00:09:13,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, this this is it's hard to put into words how evil this was.</p>
+<p>你知道，这很难用语言形容这有多邪恶。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959442" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-17-723" data-start="00:09:17,723" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That she orchestrated it and was a big part of it.</p>
+<p>她策划了这件事并起了很大作用。</p>
+<p><button class="play-button sentence" id="s-00-09-21-427" data-start="00:09:21,427" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At least under under the criminal sanction, I think is an unforgivable thing.</p>
+<p>至少在刑事制裁下，我认为这是不可原谅的事情。</p>
+<p><button class="play-button sentence" id="s-00-09-24-964" data-start="00:09:24,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So again, not my decision, but I have great pause about that.</p>
+<p>所以再说一次，这不是我的决定，但我对此非常犹豫。</p>
+<p><button class="play-button sentence" id="s-00-09-28-868" data-start="00:09:28,868" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As as any reasonable person would.</p>
+<p>就像任何理智的人都会那样。</p>
+<p><button class="play-button sentence" id="s-00-09-32-304" data-start="00:09:32,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the oversight subcommittee actually voted on a series of subpoenas last week.</p>
+<p>现在，监督小组委员会上周确实对一系列传票进行了投票。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Lf8Hz7EMZ/?t=-2208959422" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-37-314" data-start="00:09:37,314" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wolf, those subpoenas have not gone out yet.</p>
+<p>沃尔夫，这些传票还没有发出。</p>
+<p><button class="play-button sentence" id="s-00-09-39-445" data-start="00:09:39,445" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just checked with the source this morning.</p>
+<p>我今天早上刚刚与消息来源核实过。</p>
+<p><button class="play-button sentence" id="s-00-09-41-480" data-start="00:09:41,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's a lot of questions over how quickly that process could be moving.</p>
+<p>因此，关于这一进程能有多快推进，还有很多疑问。</p>
+<p><button class="play-button sentence" id="s-00-09-45-017" data-start="00:09:45,017" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even though there is this loud drumbeat in the House.</p>
+<p>尽管众议院对此呼声很高。</p>
+<p><button class="play-button sentence" id="s-00-09-47-973" data-start="00:09:47,973" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Conservatives no sense that this issue is going away by any means.</p>
+<p>保守派认为这个问题无论如何都不会消失。</p>
+<p><button class="play-button sentence" id="s-00-09-52-091" data-start="00:09:52,091" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right.</p>
+<p>好吧。</p>
+<p><button class="play-button sentence" id="s-00-09-52-640" data-start="00:09:52,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lauren Fox, thank you very, very much.</p>
+<p>劳伦·福克斯，非常感谢你。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

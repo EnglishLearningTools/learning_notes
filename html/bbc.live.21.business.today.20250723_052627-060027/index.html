@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>bbc.live.21.business.today: London Time 2025-07-23 05:26 - 06:00</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The video covers the latest global business news, including a major US-Japan trade deal, climate rulings by the International Court of Justice, and Formula One's progress toward carbon neutrality.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>bbc.live.21.business.today: London Time 2025-07-23 05:26 - 06:00</h1>
+<p>【BBC Business Today 20250723 美日重大贸易协议：日本商品关税将降至15%并向美国投资超5000亿美元｜国际法院气候裁决】</p>
+<p>Summary:
+The video covers the latest global business news, including a major US-Japan trade deal, climate rulings by the International Court of Justice, and Formula One's progress toward carbon neutrality.</p>
+<p>摘要：
+本期节目涵盖全球最新商业动态，包括美日重大贸易协议、国际法院气候裁决以及一级方程式赛车实现碳中和的进展。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 36 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959987" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-13-000" data-start="00:00:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You are on BBC news the latest business news from across the globe.</p>
+<p>全球观众现在可以收看最新商业新闻。</p>
+<p><button class="play-button sentence" id="s-00-00-18-579" data-start="00:00:18,579" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Business today.</p>
+<p>今日商业。</p>
+<p><button class="play-button sentence" id="s-00-00-28-000" data-start="00:00:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tariff relief for Japan shares of Toyota and its rival's saw as President Trump announces what he calls the biggest deal so far in his quest to reshape global trade.</p>
+<p>随着特朗普总统宣布他称之为重塑全球贸易进程中迄今最大规模的协议，丰田及其竞争对手的日本股票因关税减免而上涨。</p>
+<p><button class="play-button sentence" id="s-00-00-40-000" data-start="00:00:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just saw the largest trade deal in history.</p>
+<p>我刚见证了史上最大贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-00-43-197" data-start="00:00:43,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think maybe the largest deal in history with Japan.</p>
+<p>这可能是美国与日本之间史上最大协议。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-47-000" data-start="00:00:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was done with Japan.</p>
+<p>这是与日本达成的。</p>
+<p><button class="play-button sentence" id="s-00-00-49-514" data-start="00:00:49,514" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They had their top people here and we worked on it long and hard and it's a great deal for everybody.</p>
+<p>日方派出高层代表，双方经过漫长艰苦谈判，最终达成这项对各方都有利的协议。</p>
+<p><button class="play-button sentence" id="s-00-00-59-000" data-start="00:00:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also in the program climate verdict the international court of justice will decide if countries have a legal obligation to stop global warming and whether polluters should pay for the consequences.</p>
+<p>本期节目还将关注国际法院气候裁决——判定各国是否有法律义务阻止全球变暖，以及污染者是否应承担后果。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959929" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-11-000" data-start="00:01:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Climate campaigners are hoping this will be a defining moment in the battle for climate justice and even though it's only an advisory it comes with considerable legal and moral authority.</p>
+<p>气候活动家希望这将成为气候正义斗争的决定性时刻，尽管仅为咨询意见，但具有重大法律和道德权威。</p>
+<p><button class="play-button sentence" id="s-00-01-26-000" data-start="00:01:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plus racing to achieve net zero formula once says it's on track to become carbon neutral by 2030.</p>
+<p>此外，一级方程式赛车宣布正按计划在2030年前实现碳中和。</p>
+<p><button class="play-button sentence" id="s-00-01-33-761" data-start="00:01:33,761" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll be finding out how from the sports head of sustainability.</p>
+<p>我们将采访该赛事可持续发展负责人了解具体措施。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959898" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-42-000" data-start="00:01:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good to have you with us.</p>
+<p>感谢您的收看。</p>
+<p><button class="play-button sentence" id="s-00-01-43-599" data-start="00:01:43,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a busy program.</p>
+<p>本期内容非常丰富。</p>
+<p><button class="play-button sentence" id="s-00-01-44-959" data-start="00:01:44,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome to business today.</p>
+<p>欢迎收看《今日商业》。</p>
+<p><button class="play-button sentence" id="s-00-01-46-799" data-start="00:01:46,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Sally Bundock.</p>
+<p>我是莎莉·邦多克。</p>
+<p><button class="play-button sentence" id="s-00-01-48-079" data-start="00:01:48,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So as you heard it there.</p>
+<p>正如您刚才听到的。</p>
+<p><button class="play-button sentence" id="s-00-01-49-679" data-start="00:01:49,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump is calling it the largest trade deal in history.</p>
+<p>特朗普总统称这是史上最大贸易协议。</p>
+<p><button class="play-button sentence" id="s-00-01-54-000" data-start="00:01:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the agreement with Japan made in the last few hours after weeks of negotiations.</p>
+<p>这是美日双方经过数周谈判，在过去几小时达成的协议。</p>
+<p><button class="play-button sentence" id="s-00-02-00-206" data-start="00:02:00,206" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's the most significant deal so far to come ahead of an August first deadline set by the White House when countries who fail to agree new trade terms will face steep new taxes on their goods imported into the US.</p>
+<p>这是白宫设定的8月1日截止日期前最重要的协议，未达成新贸易条款的国家将对美出口商品面临高额新关税。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-15-000" data-start="00:02:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So President Trump says under the deal Japanese goods will face tariffs of 15% that's instead of the 25% tariff that was threatened.</p>
+<p>特朗普表示根据协议，日本商品关税将降至15%，而非此前威胁的25%。</p>
+<p><button class="play-button sentence" id="s-00-02-28-000" data-start="00:02:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also says Japan has agreed to invest at his direction over half a trillion dollars into the United States as well as opening up its market to US goods including cars and rice and other agricultural products.</p>
+<p>他还称日本同意按其指示向美国投资超5000亿美元，并向美国汽车、大米等农产品开放市场。</p>
+<p><button class="play-button sentence" id="s-00-02-45-000" data-start="00:02:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's get reaction from the financial industry to this Neil Newman is head of strategy at asterisk advisory Japan Neil good to see you.</p>
+<p>现在连线金融业人士——日本星号咨询公司战略主管尼尔·纽曼。尼尔，欢迎您。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-56-000" data-start="00:02:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the markets are up strongly.</p>
+<p>目前市场大幅上涨。</p>
+<p><button class="play-button sentence" id="s-00-02-58-666" data-start="00:02:58,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Nika up at Nika up over 3% Toyota shares up double digit as is Nissan and Honda.</p>
+<p>日经指数涨幅超3%，丰田、日产和本田股价均两位数上涨。</p>
+<p><button class="play-button sentence" id="s-00-03-05-538" data-start="00:03:05,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you make of this deal?</p>
+<p>您如何看待该协议？</p>
+<p><button class="play-button sentence" id="s-00-03-08-000" data-start="00:03:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Certainly we're seeing a very very nice relief rally in the auto stocks were broadly for the Nika index and the topics and what have you so it's very very strong actually in Geneva visiting some veteran investors in Japan who undoubtedly are going to be very pleased this morning to see this reaction.</p>
+<p>汽车股确实出现强劲反弹，带动日经指数整体上涨。我在日内瓦会见的一些日本资深投资者今早无疑会对此感到欣喜。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959792" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-28-000" data-start="00:03:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Certainly the deal has very large numbers being bounced around this is politically very important for both President Trump and Prime Minister it should finally come to an agreement between two countries.</p>
+<p>协议涉及巨额数字，对特朗普总统和日本首相都具有重要政治意义，标志着两国最终达成一致。</p>
+<p><button class="play-button sentence" id="s-00-03-40-000" data-start="00:03:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So basically now we can put this behind us and work out sort of where the markets will be going also seeing a little bit of a rally in the end which is very positive long the term because of course Japan being a major importer of raw materials energy food and the like.</p>
+<p>现在我们可以翻过这一页，研判市场走向。日元小幅升值长期来看非常积极，因为日本是原材料、能源和食品的主要进口国。</p>
+<p><button class="play-button sentence" id="s-00-03-57-000" data-start="00:03:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The purchasing power of the yen goes up so all in all directions very positive and I think this does underpin perhaps a new a new sort of three months or four months of a very positive sentiment in Japan as we work our way through this.</p>
+<p>日元购买力增强，整体而言非常积极。我认为这将支撑日本未来三四个月的市场乐观情绪。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959749" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-11-000" data-start="00:04:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the devil will be in the detail surely Neil and when you when you look at the numbers I mean Japan investing $550 billion into the US I mean is that sort of something that's happening to a degree already.</p>
+<p>但细节决定成败，尼尔。日本向美投资5500亿美元——这种规模的投资是否已在某种程度上进行？</p>
+<p><button class="play-button sentence" id="s-00-04-26-000" data-start="00:04:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean obviously we are aware of Japanese investment in the US in the steel sector in IT in technology and also cars.</p>
+<p>我们知道日本已在钢铁、IT、科技和汽车领域对美投资。</p>
+<p><button class="play-button sentence" id="s-00-04-36-000" data-start="00:04:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it a win win I mean is Japan really better off here than it perhaps would have been.</p>
+<p>这是双赢吗？日本是否真的因此获益更多？</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959717" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-43-000" data-start="00:04:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think where the next few years Japan certainly will benefit from the volatility being taken out of the rhetoric and the trade talks and now actually knowing sort of what the ground rules are then it's obviously the better for Japan because corporates can plan around this now.</p>
+<p>未来几年日本将因贸易谈判不确定性消除而受益。明确基本规则对企业规划更有利。</p>
+<p><button class="play-button sentence" id="s-00-05-03-000" data-start="00:05:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you said you know Japan has been a major investor in the US for many many years the all to industry making very large investments from the eighties and certainly manufacturing budget overseas for Japan is very very high ratio but certainly in the US it's very strong but these numbers you know we've been already talking about you several several hundred billion dollars of investment right from when President Trump was reelected so the numbers are big.</p>
+<p>如您所言，日本多年来一直是对美主要投资国，尤其汽车业自80年代起大规模投资。这些巨额投资数字自特朗普连任起就已开始讨论。</p>
+<p><button class="play-button sentence" id="s-00-05-32-000" data-start="00:05:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's generally been expected they would be big for the market and overall it does secure a very strong relationship going forward between Japan and the US so overall I think very positive and it puts Japan in a very strong position.</p>
+<p>市场普遍预期数字会很大。总体而言这将巩固美日强健关系，使日本处于有利地位。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959653" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-47-000" data-start="00:05:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And before we let you go near we must mention the Ursula von der Leyen European Commission President is in Japan she'll be holding talks as well today she's then headed to China and trade will be top of the agenda and no doubt Japan China and the EU they're all going to be in the US.</p>
+<p>欧盟委员会主席冯德莱恩正在日本访问，今日将举行会谈，随后前往中国。贸易无疑是核心议题，日、中、欧都在调整对美贸易依赖。</p>
+<p><button class="play-button sentence" id="s-00-06-01-000" data-start="00:06:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The EU they're all pivoting away from the US their reliance on the US as a trade partner is having to be reduced isn't it.</p>
+<p>各国都在降低对美贸易依赖。</p>
+<p><button class="play-button sentence" id="s-00-06-10-000" data-start="00:06:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well certainly yes I mean the EU Japan trade talks has been overshadowed by what's been going on with the US but certainly caught at the discussions will do be defense relationships.</p>
+<p>确实，美日贸易谈判 overshadowed 欧日谈判，但双方也将讨论防务关系。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959618" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-22-000" data-start="00:06:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Japan also has an inflation problem with food inflation problem European products are very popular in Japan but they are expensive and so any sort of agreements around improving a relationship between the EU and Japan will be positive for both parties.</p>
+<p>日本面临食品通胀问题，欧洲产品在日受欢迎但价格高昂，因此任何加强欧日关系的协议都对双方有利。</p>
+<p><button class="play-button sentence" id="s-00-06-38-000" data-start="00:06:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course the EU will have a very tough meeting so I think with China so to cement relationships with Japan at this moment and underpin those is again politically I think very important very positive for both sides so both Prime Minister Shiba and the EU delegation to secure something is positive.</p>
+<p>欧盟与中国的会谈将很艰难，此时巩固与日本关系具有重要政治意义。</p>
+<p><button class="play-button sentence" id="s-00-06-59-000" data-start="00:06:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So overall I think this is a very good week for trade.</p>
+<p>总体而言这是贸易领域的利好一周。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959578" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-02-000" data-start="00:07:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Neil good to talk to you and get your take on things it looks beautiful by Lake Geneva this morning the sun is coming up I hope you're you're in very important meetings go well today Neil Newman there who's normally based in Tokyo actually well let's now head to Asia business hub Surinjana Tawari is there following this story as well hello to you Surinjana so let's start with financial markets a big bounce in reaction to all of this.</p>
+<p>尼尔，感谢您的见解。日内瓦湖今晨阳光明媚，祝您会议顺利。现在连线亚洲商业中心的苏林贾纳·塔瓦里。苏林贾纳，首先请谈金融市场对此的强烈反应。</p>
+<p><button class="play-button sentence" id="s-00-07-28-000" data-start="00:07:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Investors in this region really liking the sound of that US Japan deal the Nike up more than 3% reaching its highest point since July of last year and obviously led by those automakers Toyota shares rising more than 13% Nissan and Honda were also up and we also saw some contagion in South Korea and they're obviously optimistic that they might be able to clinch a similar deal.</p>
+<p>亚洲投资者对美日协议反应积极，日经指数涨超3%创去年7月以来新高，丰田涨13%领涨，日产本田跟涨。韩国市场也受带动，投资者期待达成类似协议。</p>
+<p><button class="play-button sentence" id="s-00-07-56-000" data-start="00:07:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The trade negotiators on his way to Washington from Seoul and he said that he's going to be looking very closely at the US Japan deal of course South Korea and Japan are fierce competitors in this region and around the world in terms of auto but as you mentioned with your last guest Sally it's all going to the devil's going to be in the detail and those details are very slowly coming out we're getting some information from Trump in his truth social posts we're getting some information from leaders.</p>
+<p>韩国贸易谈判代表正赴华盛顿，表示将仔细研究美日协议。尽管韩日在汽车领域竞争激烈，但如您上一位嘉宾所言，细节决定成败。目前细节披露缓慢，信息来自特朗普社交媒体和领导人表态。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959495" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-25-000" data-start="00:08:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some leaders of countries who are negotiating those deals but still no deal signed and no real clarity on exactly what's going to happen on August 1st or beyond.</p>
+<p>目前尚未签署正式协议，8月1日后的具体安排仍不明确。</p>
+<p><button class="play-button sentence" id="s-00-08-37-000" data-start="00:08:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well I mean the UK we have learnt how these things roll a deal is done and announced but actually when it comes to it being implemented in the practicalities it can be weeks or months later.</p>
+<p>英国经验表明，协议宣布与实际执行可能间隔数周甚至数月。</p>
+<p><button class="play-button sentence" id="s-00-08-49-000" data-start="00:08:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now Surinjana let's talk about the Prime Minister of Japan because now that this deal is done and he's seen he's delivered on that let's talk that he may step down.</p>
+<p>现在谈谈日本首相。既然协议已达成，有消息称他可能辞职。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959460" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-00-000" data-start="00:09:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah Jeff Japanese media reporting that he might step down and it's really interesting timing he announced the deal in the morning he was talking about the details of the deal and then he sort of indicated that he may decide to step down.</p>
+<p>日本媒体报道他可能辞职，时机耐人寻味——上午刚宣布协议细节，随后就暗示可能辞职。</p>
+<p><button class="play-button sentence" id="s-00-09-14-000" data-start="00:09:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've not got a confirmation of when or whether it might actually happen but obviously his political capital has really reduced after those elections in Japan he lost control of his party lost control of the upper house and the lower house and that's going to make things like as you say implementing a trade deal very very difficult.</p>
+<p>虽未获证实，但选举失利后他失去对党派和议会的控制，政治资本锐减，这将使协议落实极为困难。</p>
+<p><button class="play-button sentence" id="s-00-09-34-000" data-start="00:09:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we get to get the details and we know exactly what's going to happen you then have to push it through and so yes he's got a win with his voters saying that yes we have a deal but they're still very unhappy and there are many challenges to the Japanese economy at the moment.</p>
+<p>即便协议细节明确，推动通过仍需努力。虽然向选民展示了政绩，但民众仍不满，且日本经济面临诸多挑战。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959408" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-52-000" data-start="00:09:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the inflation is rising and people are not having the wage growth in order to meet those price rises as well.</p>
+<p>通胀上升而工资增长未能跟上。</p>
+<p><button class="play-button sentence" id="s-00-10-03-000" data-start="00:10:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So tough times ahead for Japan even if there is a trade deal between the US and the world's fourth largest economy for now.</p>
+<p>即便美日达成协议，日本作为全球第四大经济体仍面临艰难时期。</p>
+<p><button class="play-button sentence" id="s-00-10-12-000" data-start="00:10:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much indeed Sir and John to worry in Singapore for us.</p>
+<p>感谢新加坡的苏林贾纳·塔瓦里。</p>
+<p><button class="play-button sentence" id="s-00-10-17-000" data-start="00:10:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now judges at the International Court of Justice the world's top court will rule later today on what countries must do to tackle climate change while their opinion won't be legally binding.</p>
+<p>国际法院今日将就各国应对气候变化的义务作出裁决，虽无法律约束力。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959371" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-29-000" data-start="00:10:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It could still set a powerful new standard for governments and businesses everywhere or correspondent in the hagg and a holligan has more.</p>
+<p>但可能为全球政府和企业设立新标准。本台驻海牙记者安娜·霍利根带来详细报道。</p>
+<p><button class="play-button sentence" id="s-00-10-38-000" data-start="00:10:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Climate campaigners are hoping this will be a defining moment in the battle for climate justice and even though it's only an advisory it comes with considerable legal and moral authority because of course it's being handed down by the UN's top judges.</p>
+<p>气候活动家希望这将成为气候正义斗争的决定性时刻，尽管仅为咨询意见，但因出自联合国最高法庭而具有重大法律和道德权威。</p>
+<p><button class="play-button sentence" id="s-00-10-54-000" data-start="00:10:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So essentially it's like a global guideline or a legal compass and the court will clarify what international law expects from countries when it comes to preventing dangerous climate change.</p>
+<p>本质上这是全球指南或法律罗盘，法院将阐明国际法对各国防止危险气候变化的要求。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959334" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-06-000" data-start="00:11:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This lawsuit has attracted unprecedented attention and also participation from countries and corporations.</p>
+<p>此案获得国家和企业前所未有的关注与参与。</p>
+<p><button class="play-button sentence" id="s-00-11-15-000" data-start="00:11:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was actually dreamt up by a group of students in a classroom as part of a classroom exercise in Vanuatu a small island nation which faces an existential threat of disappearing as a result of rising sea levels.</p>
+<p>这实际源自瓦努阿图学生课堂作业的构想——这个面临海平面上升存亡威胁的岛国。</p>
+<p><button class="play-button sentence" id="s-00-11-28-000" data-start="00:11:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of those students graduates will be in court today to witness what they hope will be an historic moment.</p>
+<p>部分参与该项目的毕业生今日将到庭见证这一历史性时刻。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959305" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-35-000" data-start="00:11:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Depending on what the judges say it's likely to create ripple effect in terms of more climate lawsuits tougher roles for pollutions and potentially greater support for those communities on the front line of the climate crisis.</p>
+<p>裁决内容可能引发连锁反应：更多气候诉讼、更严污染管制，以及对气候危机前线社区的更大支持。</p>
+<p><button class="play-button sentence" id="s-00-11-50-000" data-start="00:11:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not just about risks though also potentially opportunities.</p>
+<p>不仅涉及风险，也蕴含机遇。</p>
+<p><button class="play-button sentence" id="s-00-11-54-000" data-start="00:11:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This advisory opinion could be a catalyst for innovation green innovation as businesses adapt to a more predictable climate conscious legal landscape also lightly inevitably to influence the next international climate summit shaping policies on things like fossil fuels plastics and global trade.</p>
+<p>该意见可能推动绿色创新，帮助企业适应更可预测的气候法律环境，并影响下届国际气候峰会关于化石燃料、塑料和全球贸易的政策制定。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959262" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-18-000" data-start="00:12:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So even without direct legal force this is potentially a pivotal moment here at the UN's highest court often referred to as the world court in the Hague.</p>
+<p>因此即便没有直接法律效力，这在常被称为"世界法院"的联合国最高法庭仍可能是关键转折点。</p>
+<p><button class="play-button sentence" id="s-00-12-28-000" data-start="00:12:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It could push climate action from voluntary pledges to a new era of global responsibility with major consequences for businesses, individuals, governments and ultimately the future of our planet.</p>
+<p>或推动气候行动从自愿承诺进入全球责任新时代，对企业、个人、政府乃至地球未来产生重大影响。</p>
+<p><button class="play-button sentence" id="s-00-12-45-000" data-start="00:12:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as Anna was saying there the original push to get the ICJ to rule on climate changes come from the tiny island nation of Vanuatu.</p>
+<p>如安娜所述，推动国际法院作出气候裁决的最初力量来自小岛国瓦努阿图。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959228" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-52-000" data-start="00:12:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Its climate change minister is in the Hague for the ruling and says it could be a game changer.</p>
+<p>该国气候变化部长在海牙表示这可能改变游戏规则。</p>
+<p><button class="play-button sentence" id="s-00-12-58-000" data-start="00:12:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the advisory opinion will be very powerful within states to be used by people taking cases against their governments.</p>
+<p>该咨询意见在国内将非常有力，民众可据此起诉政府。</p>
+<p><button class="play-button sentence" id="s-00-13-07-000" data-start="00:13:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we already seen that all over the world as one of the main ways people are trying to get action on climate changes by going through the courts.</p>
+<p>这已成为全球民众通过司法途径推动气候行动的主要方式之一。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959207" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-13-000" data-start="00:13:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So every court this will be something that can use whether it's a municipal level court or state level court.</p>
+<p>因此各级法院——无论是市法院还是州法院——都可援引这一裁决。</p>
+<p><button class="play-button sentence" id="s-00-13-19-000" data-start="00:13:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That will be able to use this new ruling to force try to make governments be more accountable and do more.</p>
+<p>利用新裁决迫使政府承担更多责任并采取更多行动。</p>
+<p><button class="play-button sentence" id="s-00-13-27-000" data-start="00:13:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And ahead of the ruling the United Nations Secretary General Antonio Gaterrish has been weighing into this debate in a speech at the UN headquarters in New York.</p>
+<p>裁决前，联合国秘书长古特雷斯在纽约总部演讲中参与讨论。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959184" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-36-000" data-start="00:13:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He called on the world to supercharge a new era of renewable energy.</p>
+<p>他呼吁世界加速可再生能源新时代。</p>
+<p><button class="play-button sentence" id="s-00-13-41-000" data-start="00:13:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are on the cusp of a new era.</p>
+<p>我们正处新时代的开端。</p>
+<p><button class="play-button sentence" id="s-00-13-45-000" data-start="00:13:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fossil fuels are running out of roads and the sun is rising on a clean energy age.</p>
+<p>化石燃料日暮途穷，清洁能源时代曙光初现。</p>
+<p><button class="play-button sentence" id="s-00-13-53-000" data-start="00:13:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just follow the money.</p>
+<p>资金流向说明一切。</p>
+<p><button class="play-button sentence" id="s-00-13-55-000" data-start="00:13:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two trillion US dollars went into clean energy last year.</p>
+<p>去年2万亿美元投入清洁能源。</p>
+<p><button class="play-button sentence" id="s-00-13-59-000" data-start="00:13:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's 800 billion more than fossil fuels and up almost 70% in 10 years.</p>
+<p>比化石燃料多8000亿，十年增长近70%。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959153" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-07-000" data-start="00:14:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, let's discuss this with Jonathan Robinson, global power and energy research director at Frost and Sullivan here in London.</p>
+<p>让我们与伦敦弗若斯特沙利文公司的全球电力和能源研究总监乔纳森·罗宾逊一起讨论这个问题。</p>
+<p><button class="play-button sentence" id="s-00-14-14-000" data-start="00:14:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning to you, Jonathan.</p>
+<p>早上好，乔纳森。</p>
+<p><button class="play-button sentence" id="s-00-14-16-000" data-start="00:14:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is a global guideline.</p>
+<p>这是一项全球性指导方针。</p>
+<p><button class="play-button sentence" id="s-00-14-19-000" data-start="00:14:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not legally binding in your opinion.</p>
+<p>你认为它不具备法律约束力。</p>
+<p><button class="play-button sentence" id="s-00-14-22-000" data-start="00:14:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What difference will it make?</p>
+<p>它会产生什么影响？</p>
+<p><button class="play-button sentence" id="s-00-14-25-000" data-start="00:14:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I think it will set a clearer agenda for those activists that have been really pushing for a better framework for action.</p>
+<p>我认为它将为那些一直推动更好行动框架的活动人士制定更清晰的议程。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959124" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-36-000" data-start="00:14:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the big challenge of course is going to be not all countries are signed up to the international court.</p>
+<p>但最大的挑战当然是没有所有国家都签署国际法庭协议。</p>
+<p><button class="play-button sentence" id="s-00-14-44-000" data-start="00:14:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you have the biggest emitters China, the US, in the 50% of global emissions.</p>
+<p>因此，全球排放量占50%的最大排放国中国和美国。</p>
+<p><button class="play-button sentence" id="s-00-14-49-000" data-start="00:14:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're not party to this agreement.</p>
+<p>它们不是该协议的缔约方。</p>
+<p><button class="play-button sentence" id="s-00-14-51-000" data-start="00:14:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for them, they will not see that they have to take action on this.</p>
+<p>因此，它们不会认为自己必须对此采取行动。</p>
+<p><button class="play-button sentence" id="s-00-14-55-000" data-start="00:14:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's a big issue.</p>
+<p>这是一个大问题。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959103" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-56-225" data-start="00:14:56,225" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a huge issue that you just pointed out there.</p>
+<p>你刚才指出的这个问题非常严重。</p>
+<p><button class="play-button sentence" id="s-00-14-59-000" data-start="00:14:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when it comes to how businesses react to this.</p>
+<p>但当谈到企业对此的反应时。</p>
+<p><button class="play-button sentence" id="s-00-15-03-000" data-start="00:15:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Will it really put pressure on businesses do you think?</p>
+<p>你认为这真的会给企业带来压力吗？</p>
+<p><button class="play-button sentence" id="s-00-15-06-000" data-start="00:15:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, I do remember prior to the pandemic, there was a lot of pressure on companies to be very transparent about their environment and sustainability goals.</p>
+<p>我记得在疫情之前，企业面临着很大压力，要求它们对环境与可持续发展目标保持高度透明。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959081" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-19-000" data-start="00:15:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that has really changed a lot in recent years, hasn't it?</p>
+<p>但近年来这种情况确实发生了很大变化，不是吗？</p>
+<p><button class="play-button sentence" id="s-00-15-23-000" data-start="00:15:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's definitely eased.</p>
+<p>压力肯定减轻了。</p>
+<p><button class="play-button sentence" id="s-00-15-25-000" data-start="00:15:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Companies are still looking at sustainability as a long term objective.</p>
+<p>企业仍将可持续发展视为长期目标。</p>
+<p><button class="play-button sentence" id="s-00-15-28-000" data-start="00:15:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in the short term, the need to act has definitely diminished.</p>
+<p>但在短期内，采取行动的必要性确实减少了。</p>
+<p><button class="play-button sentence" id="s-00-15-32-000" data-start="00:15:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whatever you think of the climate crisis, the business environment has moved much more on to global competitiveness, security of supply chains, all of these issues.</p>
+<p>无论你对气候危机有何看法，商业环境已更多地转向全球竞争力、供应链安全等议题。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959058" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-42-000" data-start="00:15:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the environment I'm afraid has fallen down the agenda somewhat.</p>
+<p>恐怕环境问题在议程上的优先级有所下降。</p>
+<p><button class="play-button sentence" id="s-00-15-46-000" data-start="00:15:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So while business is not totally abandoning these things, this is not the sort of thing that's going to be keeping them awake at night, whatever the ruling is.</p>
+<p>因此，尽管企业并未完全放弃这些问题，但无论裁决如何，这都不是会让它们夜不能寐的事情。</p>
+<p><button class="play-button sentence" id="s-00-15-55-000" data-start="00:15:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what you're thinking is, whatever the ruling is today, as you say, it's not necessarily going to be the game changer that the Vanuatu are really hoping for.</p>
+<p>所以你的想法是，无论今天的裁决是什么，正如你所说，它不一定会成为瓦努阿图真正希望的游戏规则改变者。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959033" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-07-000" data-start="00:16:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm afraid I don't think it will be.</p>
+<p>恐怕我认为不会。</p>
+<p><button class="play-button sentence" id="s-00-16-09-000" data-start="00:16:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think as I say, it will be a step in the direction.</p>
+<p>我认为正如我所说，这将是在这个方向上迈出的一步。</p>
+<p><button class="play-button sentence" id="s-00-16-12-000" data-start="00:16:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It will give climate activists something to act on to guide lawsuits.</p>
+<p>它将为气候活动人士提供一些依据来指导诉讼。</p>
+<p><button class="play-button sentence" id="s-00-16-17-000" data-start="00:16:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But ultimately, there's a lot of other pressures on governments right now.</p>
+<p>但最终，政府目前面临许多其他压力。</p>
+<p><button class="play-button sentence" id="s-00-16-21-000" data-start="00:16:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not necessarily going to make it to the top of the list.</p>
+<p>这不一定能使其成为优先事项。</p>
+<p><button class="play-button sentence" id="s-00-16-24-000" data-start="00:16:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's still too easy to set longer term climate goals.</p>
+<p>设定更长期的气候目标仍然太容易了。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208959011" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-29-000" data-start="00:16:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the judgment will be positive, but I think the impact will ultimately be limited for some time.</p>
+<p>我认为判决将是积极的，但我认为其影响最终将在一段时间内有限。</p>
+<p><button class="play-button sentence" id="s-00-16-36-000" data-start="00:16:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what about Jonathan, the pressure from shareholders, from clients for change at businesses?</p>
+<p>那么乔纳森，股东和客户对企业变革的压力呢？</p>
+<p><button class="play-button sentence" id="s-00-16-44-000" data-start="00:16:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that still there as well?</p>
+<p>这种压力还存在吗？</p>
+<p><button class="play-button sentence" id="s-00-16-46-000" data-start="00:16:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because previously, you would have to show that you were hitting such sustainability targets in order to get the big investment in your company.</p>
+<p>因为以前，你必须证明自己达到了这些可持续发展目标，才能获得对公司的大笔投资。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958981" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-59-000" data-start="00:16:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we look really at a lot of the valuations of major corporations in the last 12 to 18 months, those companies that have indicated a strategy that still ties them to fossil fuels have generally done quite well.</p>
+<p>如果我们仔细看看过去12到18个月许多大公司的估值，那些表明仍依赖化石燃料战略的公司普遍表现相当不错。</p>
+<p><button class="play-button sentence" id="s-00-17-13-000" data-start="00:17:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think obviously they all and gas companies, but others as well.</p>
+<p>我认为显然包括所有石油和天然气公司，但还有其他公司。</p>
+<p><button class="play-button sentence" id="s-00-17-16-000" data-start="00:17:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shellers are focused more on immediate returns.</p>
+<p>壳牌等公司更关注即时回报。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958961" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-19-000" data-start="00:17:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't see the climate pressures as being as severe.</p>
+<p>它们不认为气候压力有那么严重。</p>
+<p><button class="play-button sentence" id="s-00-17-22-000" data-start="00:17:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obviously companies need to show that they are moving forward.</p>
+<p>显然，公司需要表明它们正在取得进展。</p>
+<p><button class="play-button sentence" id="s-00-17-26-000" data-start="00:17:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But generally, what investors want to see is something that it's an environmentally friendly policy, but also delivers a business return.</p>
+<p>但一般来说，投资者希望看到的是既环保又能带来商业回报的政策。</p>
+<p><button class="play-button sentence" id="s-00-17-33-000" data-start="00:17:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If it doesn't deliver at least a business return somehow, then they are generally moving against it.</p>
+<p>如果它不能以某种方式带来至少商业回报，那么它们通常会反对它。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958941" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-39-000" data-start="00:17:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you for your time today.</p>
+<p>感谢你今天抽出时间。</p>
+<p><button class="play-button sentence" id="s-00-17-41-717" data-start="00:17:41,717" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll see you again soon.</p>
+<p>我们很快会再见面。</p>
+<p><button class="play-button sentence" id="s-00-17-44-000" data-start="00:17:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-17-45-000" data-start="00:17:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK, this is BBC News.</p>
+<p>这里是BBC新闻，覆盖全球和英国各地。</p>
+<p><button class="play-button sentence" id="s-00-18-39-000" data-start="00:18:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're with business today.</p>
+<p>您正在收看的是《今日商业》。</p>
+<p><button class="play-button sentence" id="s-00-18-51-600" data-start="00:18:51,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Sally Bondock.</p>
+<p>我是莎莉·邦多克。</p>
+<p><button class="play-button sentence" id="s-00-19-00-000" data-start="00:19:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been to New York where the business community has been split by the meteoric rise of Suran Mamdani, the left wing firebrand won the Democratic Merrill nomination in June and is the clear frontrunner to win the election in November to be New York City's next mayor.</p>
+<p>我们去了纽约，商界因苏兰·曼达尼的迅速崛起而分裂，这位左翼激进分子在6月赢得了民主党初选提名，并成为11月选举中纽约市下一任市长的明显领跑者。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-18-000" data-start="00:19:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The prospect has been met with excitement by some and horror by others as Michelle Flurry has been finding out.</p>
+<p>米歇尔·弗洛里的调查发现，这一前景让一些人感到兴奋，而另一些人则感到恐惧。</p>
+<p><button class="play-button sentence" id="s-00-19-26-000" data-start="00:19:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> New York City is heading into a long-hot political summer.</p>
+<p>纽约市正迎来一个漫长而激烈的政治夏季。</p>
+<p><button class="play-button sentence" id="s-00-19-29-965" data-start="00:19:29,965" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The mayoral frontrunner Zoron Mamdani is a self-described socialist with sweeping plans to tax the rich, freeze rents and take on corporate power.</p>
+<p>市长领跑者佐伦·曼达尼自称社会主义者，计划对富人征税、冻结租金并挑战企业权力。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-40-000" data-start="00:19:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cued the panic from the city's moneyed class warning of an investor exodus and economic turmoil if Mamdani wins in November.</p>
+<p>这引发了城市富裕阶层的恐慌，他们警告说如果曼达尼在11月获胜，将导致投资者外流和经济动荡。</p>
+<p><button class="play-button sentence" id="s-00-19-49-000" data-start="00:19:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hedge fund billionaire Dan Loeb called it officially hot commie summer.</p>
+<p>对冲基金亿万富翁丹·勒布称这是“官方共产主义狂热之夏”。</p>
+<p><button class="play-button sentence" id="s-00-19-53-455" data-start="00:19:53,455" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Investment strategist Jim Bianco described it as suicide by mayor, while the owner of a local grocery chain threatened to pack up and leave.</p>
+<p>投资策略师吉姆·比安科称之为“市长自杀”，而一家当地杂货连锁店的老板威胁要收拾行李离开。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958798" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-02-000" data-start="00:20:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says, get rid of the billionaires.</p>
+<p>他说，摆脱亿万富翁。</p>
+<p><button class="play-button sentence" id="s-00-20-04-883" data-start="00:20:04,883" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, let me tell you something.</p>
+<p>那么，让我告诉你一些事情。</p>
+<p><button class="play-button sentence" id="s-00-20-07-395" data-start="00:20:07,395" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who provides the jobs in the city?</p>
+<p>谁为这座城市提供就业机会？</p>
+<p><button class="play-button sentence" id="s-00-20-10-000" data-start="00:20:10,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last week, some of Mamdani's fiercest critics got a chance to meet him face-to-face enclosed door meetings organized by the partnership for New York City, which represents the city's corporate and financial elite.</p>
+<p>上周，曼达尼的一些最严厉的批评者有机会在由代表纽约市企业和金融精英的“纽约市伙伴关系”组织的闭门会议上与他面对面会面。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958777" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-23-000" data-start="00:20:23,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Catherine Wilde is the group's chief executive.</p>
+<p>凯瑟琳·王尔德是该组织的首席执行官。</p>
+<p><button class="play-button sentence" id="s-00-20-26-000" data-start="00:20:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zoron has run as a democratic socialist, which really the business community, to them that sounds like anti-capitalist and tax the rich.</p>
+<p>佐伦以民主社会主义者的身份参选，对商界来说，这听起来像是反资本主义和对富人征税。</p>
+<p><button class="play-button sentence" id="s-00-20-38-000" data-start="00:20:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And all the things that are sort of one-liners that are a threat to the financial capital, the commercial capital of the US.</p>
+<p>所有这些听起来像是威胁美国金融和商业之都的口号。</p>
+<p><button class="play-button sentence" id="s-00-20-46-000" data-start="00:20:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But isn't the reality that Mamdani is quite limited by what he can do given that a lot of power rests at the state level?</p>
+<p>但现实情况是，曼达尼的能力相当有限，因为许多权力掌握在州一级，不是吗？</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958746" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-54-000" data-start="00:20:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many of the proposals that Mamdani has put forward as a candidate for mayor are things that he cannot achieve.</p>
+<p>曼达尼作为市长候选人提出的许多提议是他无法实现的。</p>
+<p><button class="play-button sentence" id="s-00-21-03-000" data-start="00:21:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are the province of the state government or some combination of federal and state government.</p>
+<p>它们属于州政府或联邦和州政府的联合管辖范围。</p>
+<p><button class="play-button sentence" id="s-00-21-09-000" data-start="00:21:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so he cannot raise taxes on corporations.</p>
+<p>因此，他不能提高企业税。</p>
+<p><button class="play-button sentence" id="s-00-21-12-009" data-start="00:21:12,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a state job.</p>
+<p>这是州政府的工作。</p>
+<p><button class="play-button sentence" id="s-00-21-13-277" data-start="00:21:13,277" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He can't raise taxes on individuals.</p>
+<p>他不能提高个人所得税。</p>
+<p><button class="play-button sentence" id="s-00-21-15-732" data-start="00:21:15,732" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a state job.</p>
+<p>这是州政府的工作。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958723" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-17-000" data-start="00:21:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have helped a range of meeting between Mamdani and the New York business community.</p>
+<p>你协助组织了曼达尼与纽约商界的一系列会议。</p>
+<p><button class="play-button sentence" id="s-00-21-23-083" data-start="00:21:23,083" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you tell us who attended?</p>
+<p>你能告诉我们谁参加了？</p>
+<p><button class="play-button sentence" id="s-00-21-25-083" data-start="00:21:25,083" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did it go?</p>
+<p>会议进行得如何？</p>
+<p><button class="play-button sentence" id="s-00-21-26-000" data-start="00:21:26,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we invited him in and he was very gracious and most willing to come and talk to the business community and listen to their concerns.</p>
+<p>我们邀请了他，他非常亲切，非常愿意来与商界交谈并倾听他们的担忧。</p>
+<p><button class="play-button sentence" id="s-00-21-36-000" data-start="00:21:36,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was heartening because he didn't resist.</p>
+<p>这令人鼓舞，因为他没有抗拒。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-40-468" data-start="00:21:40,468" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He didn't demonize.</p>
+<p>他没有妖魔化。</p>
+<p><button class="play-button sentence" id="s-00-21-42-276" data-start="00:21:42,276" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He hasn't said I won't work with business.</p>
+<p>他没有说过我不会与企业合作。</p>
+<p><button class="play-button sentence" id="s-00-21-46-000" data-start="00:21:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Quite the contrary, he said I want to be the mayor of the whole city and I realize the value of the business community.</p>
+<p>恰恰相反，他说我想成为整个城市的市长，我认识到商界的价值。</p>
+<p><button class="play-button sentence" id="s-00-21-53-000" data-start="00:21:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you get a sense from the business community, from the people you were speaking to that they're thinking okay, we can work with this person.</p>
+<p>你从商界、从与你交谈的人那里感觉到他们认为“好吧，我们可以与这个人合作”吗？</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958679" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-01-000" data-start="00:22:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We may not like him but we can work with him or do you get a sense of no, we're going to fight this right up until the lot of this community.</p>
+<p>我们可能不喜欢他，但我们可以与他合作，还是你觉得“不，我们将一直抗争到底”？</p>
+<p><button class="play-button sentence" id="s-00-22-07-000" data-start="00:22:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The business community is totally split.</p>
+<p>商界完全分裂了。</p>
+<p><button class="play-button sentence" id="s-00-22-09-789" data-start="00:22:09,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not unilateral.</p>
+<p>这不是单方面的。</p>
+<p><button class="play-button sentence" id="s-00-22-11-224" data-start="00:22:11,224" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think for those who met him, the young tech entrepreneurs were very excited to work with this person.</p>
+<p>我认为对于那些见过他的人来说，年轻的科技企业家非常兴奋能与这个人合作。</p>
+<p><button class="play-button sentence" id="s-00-22-18-000" data-start="00:22:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's a digital native.</p>
+<p>他是数字原生代。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958659" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-20-055" data-start="00:22:20,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's somebody that they related to.</p>
+<p>他是他们能产生共鸣的人。</p>
+<p><button class="play-button sentence" id="s-00-22-23-302" data-start="00:22:23,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the mature global business leaders, I think much less so that they really are concerned about his lack of management skills and whether or not, as some have said, whether or not he's really able to relate to them and consider their issues on an individual level.</p>
+<p>对于成熟的全球商业领袖来说，我认为他们更担心的是他缺乏管理技能，以及是否如一些人所说，他是否真的能够与他们产生共鸣并在个人层面上考虑他们的问题。</p>
+<p><button class="play-button sentence" id="s-00-22-47-000" data-start="00:22:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not going to change.</p>
+<p>这不会改变。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958627" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-53-000" data-start="00:22:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Really, really interesting and something we're keeping a close eye on in New York.</p>
+<p>真的非常有趣，也是我们在纽约密切关注的事情。</p>
+<p><button class="play-button sentence" id="s-00-22-59-000" data-start="00:22:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But now let's return to the climate theme before we wrap up because the motor racing has long been criticized for its environmental impact.</p>
+<p>但现在让我们在结束前回到气候主题，因为赛车运动长期以来因其对环境的影响而受到批评。</p>
+<p><button class="play-button sentence" id="s-00-23-07-000" data-start="00:23:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the most prestigious competition of all, Formula One, says it's on track to become carbon neutral in five years time.</p>
+<p>但最负盛名的比赛一级方程式表示，它有望在五年内实现碳中和。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958605" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-15-000" data-start="00:23:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> F1 set a goal of becoming net zero by 2030 and today it's announced it is in target to meet that goal despite having more races than ever on its calendar.</p>
+<p>F1设定了到2030年实现净零排放的目标，今天它宣布尽管赛历上的比赛比以往任何时候都多，但它仍在实现这一目标的轨道上。</p>
+<p><button class="play-button sentence" id="s-00-23-27-000" data-start="00:23:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In its annual sustainability report put my teeth in.</p>
+<p>在其年度可持续发展报告中。</p>
+<p><button class="play-button sentence" id="s-00-23-31-512" data-start="00:23:31,512" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Formula One says it has cut carbon emissions by 26% since 2018 when it's made the pledge.</p>
+<p>一级方程式表示，自2018年做出承诺以来，它已将碳排放量减少了26%。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958581" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-39-000" data-start="00:23:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we've got their head of sustainability.</p>
+<p>我们请到了一级方程式的可持续发展负责人。</p>
+<p><button class="play-button sentence" id="s-00-23-42-170" data-start="00:23:42,170" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's environment, social and governance ESG at Formula One.</p>
+<p>即一级方程式的环境、社会和治理（ESG）负责人。</p>
+<p><button class="play-button sentence" id="s-00-23-46-479" data-start="00:23:46,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ellen Jones, welcome to the program.</p>
+<p>艾伦·琼斯，欢迎来到节目。</p>
+<p><button class="play-button sentence" id="s-00-23-49-000" data-start="00:23:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-23-49-857" data-start="00:23:49,857" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good morning.</p>
+<p>早上好。</p>
+<p><button class="play-button sentence" id="s-00-23-51-000" data-start="00:23:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, this is great news.</p>
+<p>这是个好消息。</p>
+<p><button class="play-button sentence" id="s-00-23-52-826" data-start="00:23:52,826" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So tell us how are you doing it?</p>
+<p>那么告诉我们你们是如何做到的？</p>
+<p><button class="play-button sentence" id="s-00-23-55-000" data-start="00:23:55,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's fantastic news and it is the connection of all of the work across our sport from our race promoters who host our events to our F1 teams all the way through to our new regulation cycle.</p>
+<p>这是个极好的消息，这是我们整个运动所有工作的连接，从举办我们活动的赛事推广方到我们的F1车队，一直到我们的新规则周期。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958553" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-07-000" data-start="00:24:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what it looks like in practice is how we transition to renewable and alternative energy sources across our operations.</p>
+<p>实际看起来就是我们如何在所有运营中过渡到可再生能源和替代能源。</p>
+<p><button class="play-button sentence" id="s-00-24-15-000" data-start="00:24:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not just that though, is it?</p>
+<p>不仅如此，对吧？</p>
+<p><button class="play-button sentence" id="s-00-24-17-392" data-start="00:24:17,392" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also about how you do things and where, for example, are you are you looking at where the F1 events are and when, for example, to reduce traffic and travel?</p>
+<p>它还涉及你们如何做事以及在哪里做，例如，你们是否在考虑F1赛事的地点和时间，以减少交通和旅行？</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958531" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-29-000" data-start="00:24:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, just basic things like that.</p>
+<p>我指的是像这样的基本事情。</p>
+<p><button class="play-button sentence" id="s-00-24-31-000" data-start="00:24:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, so we get the best results when you mix operational change, behavior change with the latest technologies.</p>
+<p>是的，因此当我们将运营变化、行为变化与最新技术相结合时，我们获得了最佳结果。</p>
+<p><button class="play-button sentence" id="s-00-24-39-000" data-start="00:24:39,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so that's exactly where we started things like how do we travel less through remote broadcast where we have over 140 people who work every weekend, whether we're racing and Belgium this weekend or Las Vegas in the future, based in Kent.</p>
+<p>因此，这正是我们开始的地方，比如我们如何通过远程广播减少旅行，我们有超过140人每个周末工作，无论我们本周末在比利时比赛还是将来在拉斯维加斯比赛，他们都驻扎在肯特郡。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958504" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-56-000" data-start="00:24:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then equally we've done changes like our calendar so that we're just reducing the distance from point A to point B that our travel and kit needs to travel, which therefore reduces our carbon footprint.</p>
+<p>同样，我们还对赛历进行了更改，以减少我们的旅行和装备需要从A点到B点的距离，从而减少我们的碳足迹。</p>
+<p><button class="play-button sentence" id="s-00-25-08-000" data-start="00:25:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And talk us through the most painful radical changes you've had to make.</p>
+<p>并告诉我们你们不得不做出的最痛苦、最激进的改变。</p>
+<p><button class="play-button sentence" id="s-00-25-14-000" data-start="00:25:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the most painful radical change is actually the change that sustainability lives in every decision that we make.</p>
+<p>我认为最痛苦、最激进的改变实际上是可持续性存在于我们做出的每一个决定中。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958476" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-24-000" data-start="00:25:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not that it's painful because it is ambition and something that we are delivering again.</p>
+<p>这并不是说它痛苦，因为它是我们的雄心壮志，也是我们正在再次实现的目标。</p>
+<p><button class="play-button sentence" id="s-00-25-30-000" data-start="00:25:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just sustainability has to be delivered at the right time.</p>
+<p>只是可持续性必须在正确的时间实现。</p>
+<p><button class="play-button sentence" id="s-00-25-33-831" data-start="00:25:33,831" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has to come at the start of a strategic decision making process so that you can incorporate it into your new calendar for the next year.</p>
+<p>它必须在战略决策过程开始时出现，这样你才能将其纳入明年的新赛历中。</p>
+<p><button class="play-button sentence" id="s-00-25-42-000" data-start="00:25:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that you can incorporate it into the size of the shipping containers so that you can take the most efficient aircraft or be able to switch on to see freight.</p>
+<p>这样你才能将其纳入运输集装箱的尺寸中，从而选择最高效的飞机或能够切换到海运。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958449" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-51-000" data-start="00:25:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so it's that learning curve of making sure that sustainability is integral at the start.</p>
+<p>因此，这是确保可持续性从一开始就是不可或缺的学习曲线。</p>
+<p><button class="play-button sentence" id="s-00-25-56-000" data-start="00:25:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That means that you can get the best outcomes like we're seeing today with our 26% reduction.</p>
+<p>这意味着你可以获得最佳结果，就像我们今天看到的26%的减排量。</p>
+<p><button class="play-button sentence" id="s-00-26-01-000" data-start="00:26:01,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, well Ellen, good luck.</p>
+<p>好的，艾伦，祝你好运。</p>
+<p><button class="play-button sentence" id="s-00-26-03-064" data-start="00:26:03,064" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I hope you do as an organisation hit that goal of carbon neutral by 2030 all the best.</p>
+<p>我希望你们作为一个组织能够实现到2030年碳中和的目标，一切顺利。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1fxbZzQE1c/?t=-2208958431" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-09-000" data-start="00:26:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is all from business today.</p>
+<p>以上就是今天的《今日商业》全部内容。</p>
+<p><button class="play-button sentence" id="s-00-26-11-612" data-start="00:26:11,612" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a lovely day.</p>
+<p>祝您度过愉快的一天。</p>
+<p><button class="play-button sentence" id="s-00-26-13-064" data-start="00:26:13,064" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I will see you very soon.</p>
+<p>我们很快会再见面。</p>
+<p><button class="play-button sentence" id="s-00-26-31-000" data-start="00:26:31,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

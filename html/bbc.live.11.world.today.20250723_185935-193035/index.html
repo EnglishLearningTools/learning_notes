@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>bbc.live.11.world.today: London Time 2025-07-23 18:59 - 19:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The segment covers the worsening humanitarian crisis in Gaza, with over 100 aid agencies warning of mass starvation due to Israeli aid restrictions, while the ICJ allows climate-related lawsuits and England advances in the Euros.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>bbc.live.11.world.today: London Time 2025-07-23 18:59 - 19:30</h1>
+<p>【BBC World Today 20250724 美国英国分歧严重，加沙大规模饥荒蔓延｜英格兰队晋级欧洲杯决赛】</p>
+<p>Summary:
+The segment covers the worsening humanitarian crisis in Gaza, with over 100 aid agencies warning of mass starvation due to Israeli aid restrictions, while the ICJ allows climate-related lawsuits and England advances in the Euros.</p>
+<p>摘要：
+本期节目聚焦加沙日益恶化的人道主义危机，100多家援助机构警告以色列对援助的限制导致大规模饥荒蔓延，同时国际法院裁定允许气候相关诉讼，英格兰队晋级欧洲杯决赛。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 36 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959987" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-13-000" data-start="00:00:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's 7pm in London.</p>
+<p>现在是伦敦时间晚上7点。</p>
+<p><button class="play-button sentence" id="s-00-00-14-312" data-start="00:00:14,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the world today with Maryam Machiri.</p>
+<p>这里是玛丽安·马奇里为您带来的《今日世界》。</p>
+<p><button class="play-button sentence" id="s-00-00-17-347" data-start="00:00:17,347" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The World Health Organization says it's witnessing a surge in deaths caused by malnutrition in Gaza as over 100 aid agencies warned that mass starvation is spreading.</p>
+<p>世界卫生组织表示，加沙因营养不良导致的死亡激增，100多家援助机构警告大规模饥荒正在蔓延。</p>
+<p><button class="play-button sentence" id="s-00-00-28-120" data-start="00:00:28,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Formerly healthy adult men and women are frequently just skin and bones here.</p>
+<p>曾经健康的成年男女如今常常瘦得皮包骨。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959966" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-33-319" data-start="00:00:33,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our nurses don't have enough energy to stand up for the duration of their shift.</p>
+<p>我们的护士连值班时站立的力气都没有。</p>
+<p><button class="play-button sentence" id="s-00-00-39-560" data-start="00:00:39,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The world's top court clears the way for countries to sue each other over climate change.</p>
+<p>国际最高法庭为各国就气候变化相互起诉扫清道路。</p>
+<p><button class="play-button sentence" id="s-00-00-46-200" data-start="00:00:46,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also coming up on the world today.</p>
+<p>今日其他要闻：</p>
+<p><button class="play-button sentence" id="s-00-00-48-047" data-start="00:00:48,047" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> England reached their third successive major tournament final after beating Italy and the Euros.</p>
+<p>英格兰队击败意大利队后连续第三次闯入欧洲杯决赛。</p>
+<p><button class="play-button sentence" id="s-00-00-54-015" data-start="00:00:54,015" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll find out later if it will be Germany or Spain joining them.</p>
+<p>稍后将揭晓德国还是西班牙队与之会师决赛。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959930" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-09-280" data-start="00:01:09,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello and welcome to the world today on BBC News.</p>
+<p>大家好，欢迎收看BBC新闻《今日世界》。</p>
+<p><button class="play-button sentence" id="s-00-01-12-718" data-start="00:01:12,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mass starvation is spreading across Gaza, according to over 100 aid agencies who say Israeli restrictions on aid are causing chaos, starvation and death.</p>
+<p>100多家援助机构称，加沙大规模饥荒蔓延，以色列对援助的限制导致混乱、饥饿和死亡。</p>
+<p><button class="play-button sentence" id="s-00-01-24-280" data-start="00:01:24,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ten people have died from malnutrition in the last 24 hours alone, according to the health ministry in Gaza.</p>
+<p>加沙卫生部表示，仅过去24小时就有10人死于营养不良。</p>
+<p><button class="play-button sentence" id="s-00-01-30-696" data-start="00:01:30,696" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities also say 111 people have died due to starvation since the start of the war.</p>
+<p>当局称自战争爆发以来已有111人死于饥饿。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959902" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-37-199" data-start="00:01:37,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One doctor working at the NASA hospital in Gaza told us malnutrition is affecting everyone, including hospital staff.</p>
+<p>加沙NASA医院一名医生表示，营养不良影响所有人，包括医护人员。</p>
+<p><button class="play-button sentence" id="s-00-01-45-879" data-start="00:01:45,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On every parameter that I can perceive, the situation with food is completely dire and totally unacceptable by seeing babies who are starving, but it goes through all age ranges.</p>
+<p>从任何可观测指标看，食物状况都极度严峻，看到婴儿挨饿令人无法接受，但饥饿波及所有年龄段。</p>
+<p><button class="play-button sentence" id="s-00-02-02-959" data-start="00:02:02,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even young, healthy adult men and women, formerly healthy adult men and women are frequently just skin and bones here.</p>
+<p>即便是曾健康的青壮年，如今也常瘦得只剩骨架。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959869" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-10-428" data-start="00:02:10,428" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our nurses don't have enough energy to stand up for the duration of their shift.</p>
+<p>我们的护士连值班时站立的力气都没有。</p>
+<p><button class="play-button sentence" id="s-00-02-15-293" data-start="00:02:15,293" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have children begging in the halls of the hospital, not just for food, but they are begging for fresh water.</p>
+<p>医院走廊里孩子们不仅乞讨食物，更在乞求淡水。</p>
+<p><button class="play-button sentence" id="s-00-02-23-144" data-start="00:02:23,144" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So not even the very basic minimums of standards for human life are being... Well, the UN's Palestinian refugee agency has worn.</p>
+<p>连人类生存最基本标准都无法...联合国巴勒斯坦难民机构报告称。</p>
+<p><button class="play-button sentence" id="s-00-02-32-109" data-start="00:02:32,109" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are 1 million children in the region at risk of severe malnutrition.</p>
+<p>该地区100万儿童面临严重营养不良风险。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-37-120" data-start="00:02:37,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reset Rock is a 17-year-old student living near Khan Unis.</p>
+<p>17岁学生Reset Rock住在汗尤尼斯附近。</p>
+<p><button class="play-button sentence" id="s-00-02-40-929" data-start="00:02:40,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says he is struggling to remember things due to starvation.</p>
+<p>他表示因饥饿出现记忆衰退。</p>
+<p><button class="play-button sentence" id="s-00-02-45-718" data-start="00:02:45,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been a very hard day here in Gaza for us to... we couldn't find the food.</p>
+<p>加沙今天异常艰难...我们找不到食物。</p>
+<p><button class="play-button sentence" id="s-00-02-50-493" data-start="00:02:50,493" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm literally talking with you while I'm starving and I'm suffering from maybe a memory loss due to the lack of food and supplies.</p>
+<p>我此刻正挨饿接受采访，可能因缺粮导致记忆丧失。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959819" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-00-684" data-start="00:03:00,684" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think a very big problem and one of it is the education and the studies issues.</p>
+<p>教育中断是严峻问题之一。</p>
+<p><button class="play-button sentence" id="s-00-03-07-980" data-start="00:03:07,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I wasn't able to come with my education due to destroy the schools and the education centers.</p>
+<p>学校被毁使我无法继续学业。</p>
+<p><button class="play-button sentence" id="s-00-03-16-495" data-start="00:03:16,495" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I'm trying and doing my best to study online and taking all the courses and improving my English language as well.</p>
+<p>但我正尽力在线学习课程并提高英语。</p>
+<p><button class="play-button sentence" id="s-00-03-25-360" data-start="00:03:25,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, aid groups say their staff are also having to join aid cues as they face starvation too.</p>
+<p>援助机构称其工作人员因同样挨饿不得不排队领取救济。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-31-080" data-start="00:03:31,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The humanitarian director of Save the Children Gaza, Rachel Cummings, is in dear Albala and told us more about the situation on the ground.</p>
+<p>救助儿童会加沙负责人Rachel Cummings在代尔巴拉介绍实地情况。</p>
+<p><button class="play-button sentence" id="s-00-03-40-800" data-start="00:03:40,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the situation is catastrophic for children across the whole of Gaza.</p>
+<p>当前加沙儿童面临灾难性处境。</p>
+<p><button class="play-button sentence" id="s-00-03-45-095" data-start="00:03:45,095" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you said, you know, over 2 million people are literally on the brink of famine.</p>
+<p>如你所言，超200万人实际上处于饥荒边缘。</p>
+<p><button class="play-button sentence" id="s-00-03-49-767" data-start="00:03:49,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're seeing a doubling of children coming to our clinics who are malnourished, pregnant women, breastfeeding women.</p>
+<p>营养不良儿童、孕妇和哺乳妇女来诊所人数翻倍。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959763" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-56-438" data-start="00:03:56,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The situation is absolutely dire.</p>
+<p>情况绝对严峻。</p>
+<p><button class="play-button sentence" id="s-00-03-59-687" data-start="00:03:59,687" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, I have over 200 members of my team.</p>
+<p>我的200多名团队成员。</p>
+<p><button class="play-button sentence" id="s-00-04-03-718" data-start="00:04:03,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Each of them coming to work hungry.</p>
+<p>每个人都饿着肚子工作。</p>
+<p><button class="play-button sentence" id="s-00-04-06-204" data-start="00:04:06,204" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Each of them coming to work, wondering how to feed their children and their families.</p>
+<p>每个人都为如何养活家人发愁。</p>
+<p><button class="play-button sentence" id="s-00-04-12-157" data-start="00:04:12,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, we're at a tipping point in Gaza.</p>
+<p>加沙已到临界点。</p>
+<p><button class="play-button sentence" id="s-00-04-14-840" data-start="00:04:14,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's... I've never seen anything like this in my whole career.</p>
+<p>我职业生涯从未见此景象。</p>
+<p><button class="play-button sentence" id="s-00-04-18-534" data-start="00:04:18,534" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over 20 years working in this sector.</p>
+<p>在这个领域工作20多年。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959739" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-20-875" data-start="00:04:20,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Markets have no basic foods and traders say they can't get enough money to afford what little might be available.</p>
+<p>市场无基本食品，商贩称无力购买仅有的物资。</p>
+<p><button class="play-button sentence" id="s-00-04-29-973" data-start="00:04:29,973" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We sleep hungry.</p>
+<p>我们饿着肚子入睡。</p>
+<p><button class="play-button sentence" id="s-00-04-31-536" data-start="00:04:31,536" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll tell you something.</p>
+<p>告诉你：</p>
+<p><button class="play-button sentence" id="s-00-04-33-880" data-start="00:04:33,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 99% of gardens go to bed hungry.</p>
+<p>99%家庭饿着睡觉。</p>
+<p><button class="play-button sentence" id="s-00-04-36-195" data-start="00:04:36,195" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have an eaten flower for three days.</p>
+<p>我们三天只吃一朵花。</p>
+<p><button class="play-button sentence" id="s-00-04-38-871" data-start="00:04:38,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're not alive.</p>
+<p>我们不算活着。</p>
+<p><button class="play-button sentence" id="s-00-04-40-042" data-start="00:04:40,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're dead.</p>
+<p>我们已是行尸走肉。</p>
+<p><button class="play-button sentence" id="s-00-04-41-759" data-start="00:04:41,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're pleading with the whole world to intervene and save us.</p>
+<p>我们恳请世界干预拯救。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959714" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-45-360" data-start="00:04:45,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Desperate groups of people have been seen scrambling for aid that does make it into Gaza.</p>
+<p>绝望人群争抢进入加沙的有限援助。</p>
+<p><button class="play-button sentence" id="s-00-04-51-279" data-start="00:04:51,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Humanitarian agencies say there are an average of 28 aid trucks a day.</p>
+<p>人道机构称日均仅28辆援助卡车。</p>
+<p><button class="play-button sentence" id="s-00-04-55-297" data-start="00:04:55,297" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN previously suggested a minimum of 600 lorries a day.</p>
+<p>联合国曾建议每日至少600辆。</p>
+<p><button class="play-button sentence" id="s-00-04-58-734" data-start="00:04:58,734" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I needed to feed them more than 2 million people in Gaza.</p>
+<p>需养活加沙超200万人。</p>
+<p><button class="play-button sentence" id="s-00-05-02-800" data-start="00:05:02,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Israel, which controls all border crossings in Gaza, said yesterday.</p>
+<p>控制加沙所有边境的以色列昨日称。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959692" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-07-732" data-start="00:05:07,732" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were 950 trucks waiting in Gaza for organizations to pick up and distribute.</p>
+<p>950辆卡车等待机构领取分发。</p>
+<p><button class="play-button sentence" id="s-00-05-12-725" data-start="00:05:12,725" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The idea for at least these pictures from the Kerim Shalom crossing.</p>
+<p>至少凯雷姆沙洛姆过境点照片显示如此。</p>
+<p><button class="play-button sentence" id="s-00-05-16-659" data-start="00:05:16,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as ready spokesperson denied there's any famine caused by Israel, saying there's a man-made shortage engineered by Hamas.</p>
+<p>以色列发言人否认由其造成饥荒，称是哈马斯人为制造短缺。</p>
+<p><button class="play-button sentence" id="s-00-05-25-412" data-start="00:05:25,412" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the US and Israel backed Gaza Humanitarian Foundation took over as the main distributor of aid in Gaza two months ago.</p>
+<p>美以支持的加沙人道基金会两月前接管援助分发。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959667" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-32-942" data-start="00:05:32,942" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since then, there have been nearly daily killings of people seeking food with reports and more than 1,000 people have been killed by Israeli forces.</p>
+<p>此后几乎每日发生寻求食物者遇袭事件，超1000人被以军打死。</p>
+<p><button class="play-button sentence" id="s-00-05-42-399" data-start="00:05:42,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has disputed these figures.</p>
+<p>以色列质疑该数据。</p>
+<p><button class="play-button sentence" id="s-00-05-44-287" data-start="00:05:44,287" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Its military has responded to some reports, saying it fired warning shots at people.</p>
+<p>军方回应称对人群发射警告性射击。</p>
+<p><button class="play-button sentence" id="s-00-05-48-485" data-start="00:05:48,485" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were, if they say, opposing a threat to them.</p>
+<p>称对方构成威胁才开火。</p>
+<p><button class="play-button sentence" id="s-00-05-51-439" data-start="00:05:51,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Israel meanwhile continues its operations throughout the Gaza Strip.</p>
+<p>以军继续加沙地带军事行动。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-55-120" data-start="00:05:55,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The IDF says that they struck approximately 120 terror targets, those are their words, across the area.</p>
+<p>以军称打击约120个"恐怖目标"。</p>
+<p><button class="play-button sentence" id="s-00-06-02-911" data-start="00:06:02,911" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Hamas' run health ministry says at least 17 people were killed.</p>
+<p>哈马斯卫生部称至少17人死亡。</p>
+<p><button class="play-button sentence" id="s-00-06-06-879" data-start="00:06:06,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's growing alarm about the situation in the international community as well.</p>
+<p>国际社会日益担忧。</p>
+<p><button class="play-button sentence" id="s-00-06-10-879" data-start="00:06:10,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United Nations is holding a session on Gaza, and the Palestinian representative told the Security Council that people were being starved by Israel by design.</p>
+<p>联合国召开加沙会议，巴勒斯坦代表称以色列蓄意饿死民众。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-20-268" data-start="00:06:20,268" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Palestinians gunned down by design.</p>
+<p>并蓄意枪杀巴勒斯坦人。</p>
+<p><button class="play-button sentence" id="s-00-06-22-630" data-start="00:06:22,630" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel's ambassador blamed Hamas for what was happening and accused them of continuing with what he called depraved tactics.</p>
+<p>以色列大使归咎哈马斯，谴责其"堕落战术"。</p>
+<p><button class="play-button sentence" id="s-00-06-30-383" data-start="00:06:30,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the Palestinian ambassador to the UN called on the international community to act now.</p>
+<p>巴勒斯坦驻联合国大使呼吁国际社会立即行动。</p>
+<p><button class="play-button sentence" id="s-00-06-37-363" data-start="00:06:37,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are out of time, because every day we fail to act, children are killed, starved, orphaned, burned, disabled, and traumatized families are shattered life is destroyed.</p>
+<p>时间紧迫，每日拖延就有儿童被杀、挨饿、致残，家庭破碎。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959585" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-54-525" data-start="00:06:54,525" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Red lines are useless if they can be crossed over and over again without consequences.</p>
+<p>红线若可反复逾越则形同虚设。</p>
+<p><button class="play-button sentence" id="s-00-07-02-852" data-start="00:07:02,852" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rules are worthless, worthless if we are not willing to sanction their breach.</p>
+<p>规则被违反却不制裁则毫无价值。</p>
+<p><button class="play-button sentence" id="s-00-07-10-213" data-start="00:07:10,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Words are meaningless if they are not followed by action.</p>
+<p>言语无行动则无意义。</p>
+<p><button class="play-button sentence" id="s-00-07-18-399" data-start="00:07:18,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need you to act and act now.</p>
+<p>请立即行动。</p>
+<p><button class="play-button sentence" id="s-00-07-20-822" data-start="00:07:20,822" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the Israeli ambassador, Danny Danon, also addressed the UN Security Council defending Israel's actions.</p>
+<p>以色列大使Danny Danon为以方行动辩护。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959550" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-29-600" data-start="00:07:29,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel is making the Middle East safer for everyone who values peace and come.</p>
+<p>以色列让中东更安全。</p>
+<p><button class="play-button sentence" id="s-00-07-36-132" data-start="00:07:36,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In other words, we are doing the work of the United Nations.</p>
+<p>我们做着联合国的工作。</p>
+<p><button class="play-button sentence" id="s-00-07-43-839" data-start="00:07:43,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Israel dismantles terror networks and protects innocent lives.</p>
+<p>以色列瓦解恐怖网络保护无辜。</p>
+<p><button class="play-button sentence" id="s-00-07-49-029" data-start="00:07:49,029" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do the UN do?</p>
+<p>联合国做了什么？</p>
+<p><button class="play-button sentence" id="s-00-07-51-040" data-start="00:07:51,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It clings to its political agenda.</p>
+<p>固守政治议程。</p>
+<p><button class="play-button sentence" id="s-00-07-53-888" data-start="00:07:53,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It protects its bias.</p>
+<p>维护偏见。</p>
+<p><button class="play-button sentence" id="s-00-07-55-656" data-start="00:07:55,656" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It defends the agencies that have long abandoned neutrality.</p>
+<p>它为早已放弃中立立场的机构辩护。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-00-186" data-start="00:08:00,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> North America correspondent Nettao Fick has been following what's been happening at the UN.</p>
+<p>北美记者Nettao Fick一直在追踪联合国发生的事件。</p>
+<p><button class="play-button sentence" id="s-00-08-05-679" data-start="00:08:05,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She told me about the difference in speeches and the tone from the UK and the US.</p>
+<p>她向我讲述了英国和美国在演讲内容和语气上的差异。</p>
+<p><button class="play-button sentence" id="s-00-08-11-600" data-start="00:08:11,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was very striking, Mariam, to see just how far apart these two allies have come on this issue.</p>
+<p>Mariam，看到这两个盟友在这个问题上的分歧如此之大，非常引人注目。</p>
+<p><button class="play-button sentence" id="s-00-08-19-680" data-start="00:08:19,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United States ambassador Dorothy Shea in her comments made several remarks saying that the loss of civilian life was tragic, but that the responsibility lied with Hamas.</p>
+<p>美国大使Dorothy Shea在评论中多次表示，平民生命的损失是悲剧，但责任在于哈马斯。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959489" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-30-899" data-start="00:08:30,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She also said that Israel had taken numerous measures to limit harm to civilians and to address humanitarian needs and said it was unfortunate that the UN had turned down offers to assist the Gaza Humanitarian Foundation.</p>
+<p>她还表示，以色列已采取多项措施减少对平民的伤害并满足人道主义需求，并称联合国拒绝援助加沙人道主义基金会的提议令人遗憾。</p>
+<p><button class="play-button sentence" id="s-00-08-47-839" data-start="00:08:47,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember, that's the Israeli and US backed private aid hubs that have led now to the death of more than 1,000 Palestinians who were killed as they were desperately trying just to get any aid to survive.</p>
+<p>请记住，这是以色列和美国支持的私人援助中心，现已导致1000多名巴勒斯坦人死亡，他们当时拼命试图获取援助以求生存。</p>
+<p><button class="play-button sentence" id="s-00-09-01-477" data-start="00:09:01,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, compare that with the UK ambassador Barbara Woodward, who said that the Israeli aid system is inhumane, ineffective, dangerous, and fueling instability.</p>
+<p>现在，与英国大使Barbara Woodward的言论对比，她称以色列的援助系统不人道、无效、危险且助长不稳定。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959447" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-12-752" data-start="00:09:12,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she said reports of children dying from starvation were beyond horrific.</p>
+<p>她还表示，关于儿童因饥饿死亡的报道令人极度震惊。</p>
+<p><button class="play-button sentence" id="s-00-09-19-006" data-start="00:09:19,006" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she also emphasized, Mariam, which was interesting, that even though as the US and the West see the only kind of credible alternative to Hamas being the Palestinian Authority, she accused Israel of undermining the Palestinian Authority, which has led to economic collapse and the devastation of Palestinian institutions in the West Bank.</p>
+<p>她还强调，Mariam，这一点很有趣，尽管美国和西方认为巴勒斯坦权力机构是哈马斯唯一可信的替代者，但她指责以色列削弱巴勒斯坦权力机构，导致经济崩溃和西岸巴勒斯坦机构的毁灭。</p>
+<p><button class="play-button sentence" id="s-00-09-45-256" data-start="00:09:45,256" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So very much a different emphasis there from the US and the UK.</p>
+<p>因此，美国和英国的侧重点非常不同。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959410" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-49-831" data-start="00:09:49,831" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, as we know, on the Security Council, the reason they haven't been able to act is that US veto.</p>
+<p>当然，众所周知，在安理会上，他们无法采取行动的原因是美国的否决权。</p>
+<p><button class="play-button sentence" id="s-00-09-56-639" data-start="00:09:56,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But nevertheless, again, still striking to see these two allies with very different points in their speeches.</p>
+<p>尽管如此，看到这两个盟友在演讲中的观点如此不同仍然引人注目。</p>
+<p><button class="play-button sentence" id="s-00-10-02-860" data-start="00:10:02,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, let's just take you briefly if I can to the BBC's website because I want to just signpost this story.</p>
+<p>如果可以的话，让我带您快速浏览BBC网站，因为我想引导您关注这篇报道。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959390" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-09-577" data-start="00:10:09,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see there the very upsetting photograph of a mother at cradling her baby.</p>
+<p>您可以在那里看到一张令人心碎的照片，一位母亲抱着她的婴儿。</p>
+<p><button class="play-button sentence" id="s-00-10-15-615" data-start="00:10:15,615" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a piece by David Gritten, one of our reporters in Jerusalem.</p>
+<p>这是我们在耶路撒冷的记者David Gritten的一篇报道。</p>
+<p><button class="play-button sentence" id="s-00-10-20-583" data-start="00:10:20,583" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's just underlines exactly what those aid agencies have been saying.</p>
+<p>这恰恰印证了那些援助机构一直在说的话。</p>
+<p><button class="play-button sentence" id="s-00-10-26-132" data-start="00:10:26,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also carries quite a few quotes from doctors within hospitals inside Gaza and also aid agencies like MSF, like Save the Children, like Oxfam, who are all amongst the signatories of that joint statement and what they say exactly about the people in Gaza and the severity of the level of lack of food and in many cases starvation.</p>
+<p>还引用了加沙医院内医生以及无国界医生、拯救儿童、乐施会等援助机构的许多话，他们都是联合声明的签署者，他们准确描述了加沙人民的处境以及食物短缺甚至饥饿的严重程度。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959349" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-50-799" data-start="00:10:50,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's a really interesting read if you do want to step away from the TV and have a look at the website.</p>
+<p>因此，如果您想暂时离开电视，浏览网站，这是一篇非常有趣的阅读材料。</p>
+<p><button class="play-button sentence" id="s-00-10-56-566" data-start="00:10:56,566" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But here the BBC's chief international correspondent, Least You Set, spoke to me a short while ago.</p>
+<p>但不久前，BBC首席国际记者Least You Set与我进行了交谈。</p>
+<p><button class="play-button sentence" id="s-00-11-03-229" data-start="00:11:03,229" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We talked about if there were any closer to ending what is happening in Gaza.</p>
+<p>我们讨论了是否有可能结束加沙正在发生的事情。</p>
+<p><button class="play-button sentence" id="s-00-11-09-438" data-start="00:11:09,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's really, it's a terrible signal of our time, Samaryam, that at a time where the evidence is mounting, that more and more Palestinians in Gaza are facing a daily battle just to find food to eat.</p>
+<p>Samaryam，这确实是我们时代的可怕信号，在有越来越多的证据表明加沙越来越多的巴勒斯坦人每天都在为寻找食物而战时。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959315" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-24-291" data-start="00:11:24,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is an unseemly war of words or whether or not there is starvation in Gaza.</p>
+<p>关于加沙是否存在饥饿的言辞之争令人不快。</p>
+<p><button class="play-button sentence" id="s-00-11-30-960" data-start="00:11:30,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The only glimmer of hope is that at last in this 21th month of war that Gaza's humanitarian crisis is on the world's agenda like never before.</p>
+<p>唯一的一线希望是，在这场战争的第21个月，加沙的人道主义危机终于前所未有地登上了世界议程。</p>
+<p><button class="play-button sentence" id="s-00-11-42-136" data-start="00:11:42,136" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But both sides are now having to confront this deteriorating situation.</p>
+<p>但现在双方都不得不面对这种恶化的局势。</p>
+<p><button class="play-button sentence" id="s-00-11-48-849" data-start="00:11:48,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even inside Israel, it has to be said, Maryam, where much of the media coverage of the Gaza war has not been about the plight of Palestinians.</p>
+<p>Maryam，即使在以色列内部，也必须说，关于加沙战争的媒体报道大多没有涉及巴勒斯坦人的困境。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959282" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-57-752" data-start="00:11:57,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But even there, it's starting to break through.</p>
+<p>但即使在那里，这种情况也开始有所突破。</p>
+<p><button class="play-button sentence" id="s-00-12-00-382" data-start="00:12:00,382" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are small protests about starving children.</p>
+<p>有一些关于饥饿儿童的小规模抗议活动。</p>
+<p><button class="play-button sentence" id="s-00-12-03-278" data-start="00:12:03,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today in Haaretz, it is a left-wing paper, but in its lead editorial, it described the minister of foreign affairs of Israel as the minister of starvation for refusing to accept what it described as the UN's credible figures.</p>
+<p>今天，《国土报》——这是一份左翼报纸——在其社论中将以色列外交部长描述为“饥饿部长”，因为他拒绝接受联合国提供的可信数据。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959263" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-16-507" data-start="00:12:16,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you've been listening to that.</p>
+<p>您一直在听这些内容。</p>
+<p><button class="play-button sentence" id="s-00-12-18-305" data-start="00:12:18,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's happening at the slanging match going back and forth?</p>
+<p>这场来回的争吵是怎么回事？</p>
+<p><button class="play-button sentence" id="s-00-12-21-984" data-start="00:12:21,984" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are they starving? No, they're not starving.</p>
+<p>他们在挨饿吗？不，他们没有挨饿。</p>
+<p><button class="play-button sentence" id="s-00-12-24-025" data-start="00:12:24,025" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, there is food. No, there is not food.</p>
+<p>是的，有食物。不，没有食物。</p>
+<p><button class="play-button sentence" id="s-00-12-27-824" data-start="00:12:27,824" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who is to blame? It's, and there's no sign that there's any resolution in sight.</p>
+<p>谁该负责？而且，目前没有任何解决的迹象。</p>
+<p><button class="play-button sentence" id="s-00-12-34-943" data-start="00:12:34,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what is the answer? Where do we go from here?</p>
+<p>那么答案是什么？我们该何去何从？</p>
+<p><button class="play-button sentence" id="s-00-12-38-098" data-start="00:12:38,098" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the system is just not working.</p>
+<p>嗯，这个系统根本不起作用。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959239" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-40-585" data-start="00:12:40,585" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just heard from Nadatowfik, from Barbarudward, what they are now saying about the the new controversial aid system that Israel continues to defend, saying it is the only way to ensure that the aid is not diverted to Hamas.</p>
+<p>我们刚刚听到了Nadatowfik和Barbarudward的发言，他们现在对以色列继续捍卫的有争议的新援助系统发表了看法，称这是确保援助不被转移给哈马斯的唯一方法。</p>
+<p><button class="play-button sentence" id="s-00-12-54-601" data-start="00:12:54,601" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the UN, while it will say its aid system wasn't perfect, they have never said that there has been a mass diversion of food by Hamas.</p>
+<p>联合国虽然承认其援助系统并不完美，但他们从未说过哈马斯大规模转移食物。</p>
+<p><button class="play-button sentence" id="s-00-13-03-742" data-start="00:13:03,742" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, sometimes criminal networks take some of it.</p>
+<p>是的，有时犯罪网络会拿走一部分。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959213" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-06-924" data-start="00:13:06,924" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, there is chaos because people are so hungry that they besiege the convoys.</p>
+<p>是的，存在混乱，因为人们太饿了，他们会围攻车队。</p>
+<p><button class="play-button sentence" id="s-00-13-11-341" data-start="00:13:11,341" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then there, of course, there is the problems about the web of restrictions by Israel, which means that it's very difficult now to get the trucks through.</p>
+<p>当然，还有以色列的限制网络问题，这意味着现在很难让卡车通过。</p>
+<p><button class="play-button sentence" id="s-00-13-18-960" data-start="00:13:18,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, for example, we ask for the number of trucks.</p>
+<p>例如，今天我们询问了卡车的数量。</p>
+<p><button class="play-button sentence" id="s-00-13-23-355" data-start="00:13:23,355" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Israelis say that 1,100 trucks have been entering Gaza every day for the past several days, 1,100.</p>
+<p>以色列人说，过去几天每天有1100辆卡车进入加沙，1100辆。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959187" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-32-555" data-start="00:13:32,555" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN figures are 28.</p>
+<p>联合国的数字是28辆。</p>
+<p><button class="play-button sentence" id="s-00-13-34-559" data-start="00:13:34,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, how do you square that circle?</p>
+<p>那么，如何调和这种矛盾？</p>
+<p><button class="play-button sentence" id="s-00-13-36-944" data-start="00:13:36,944" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is where the narratives are so contradictory.</p>
+<p>这就是叙述如此矛盾的地方。</p>
+<p><button class="play-button sentence" id="s-00-13-40-480" data-start="00:13:40,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, what do we know about what aid is getting into Gaza as Lees was saying there, the narratives are so contradictory.</p>
+<p>那么，正如Lees所说，关于进入加沙的援助，我们知道什么？叙述如此矛盾。</p>
+<p><button class="play-button sentence" id="s-00-13-49-213" data-start="00:13:49,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our diplomatic correspondent Paul Adams explains.</p>
+<p>我们的外交记者Paul Adams解释道。</p>
+<p><button class="play-button sentence" id="s-00-13-52-639" data-start="00:13:52,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gaza's long nightmare still somehow manages to get worse.</p>
+<p>加沙的长期噩梦仍在以某种方式变得更糟。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959163" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-56-706" data-start="00:13:56,706" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vast majority of Gaza's 2 million people have been squeezed into smaller and smaller spaces.</p>
+<p>加沙200万人口中的绝大多数人被挤进越来越小的空间。</p>
+<p><button class="play-button sentence" id="s-00-14-03-523" data-start="00:14:03,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The areas in white here, just 18 square miles.</p>
+<p>这里的白色区域，只有18平方英里。</p>
+<p><button class="play-button sentence" id="s-00-14-06-732" data-start="00:14:06,732" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And since the last ceasefire collapsed in March, access to aid has become increasingly difficult and dangerous.</p>
+<p>自3月上次停火破裂以来，获得援助变得越来越困难和危险。</p>
+<p><button class="play-button sentence" id="s-00-14-14-433" data-start="00:14:14,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Gaza Humanitarian Foundation is a controversial new scheme promoted by Israel.</p>
+<p>加沙人道主义基金会是以色列推动的一项有争议的新计划。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959139" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-20-016" data-start="00:14:20,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has four distribution sites, three in the south and one further north.</p>
+<p>它有四个分发点，三个在南部，一个在更北部。</p>
+<p><button class="play-button sentence" id="s-00-14-24-960" data-start="00:14:24,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says it's distributed around 87 million meals since the end of May.</p>
+<p>它表示自5月底以来已分发了约8700万份餐食。</p>
+<p><button class="play-button sentence" id="s-00-14-30-798" data-start="00:14:30,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the world has watched in horror as chaos has erupted at its sites.</p>
+<p>但世界惊恐地看到，其分发点爆发了混乱。</p>
+<p><button class="play-button sentence" id="s-00-14-36-480" data-start="00:14:36,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And hundreds of people have been killed.</p>
+<p>数百人因此丧生。</p>
+<p><button class="play-button sentence" id="s-00-14-38-841" data-start="00:14:38,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Gaza today, there is no famine caused by Israel.</p>
+<p>今天在加沙，没有以色列造成的饥荒。</p>
+<p><button class="play-button sentence" id="s-00-14-41-759" data-start="00:14:41,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is, however, a man-made shortage engineered by Hamas.</p>
+<p>然而，存在哈马斯制造的人为短缺。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959112" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-47-679" data-start="00:14:47,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel says there's no lack of food releasing these pictures yesterday showing aid waiting to be collected.</p>
+<p>以色列表示并不缺乏食物，昨天发布的这些照片显示援助物资等待领取。</p>
+<p><button class="play-button sentence" id="s-00-14-53-889" data-start="00:14:53,889" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But who's to blame for the delay?</p>
+<p>但谁该为延误负责？</p>
+<p><button class="play-button sentence" id="s-00-14-56-320" data-start="00:14:56,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's Israel that's responsible for everything that gets into and out of the Gaza Strip.</p>
+<p>以色列负责进出加沙地带的一切事务。</p>
+<p><button class="play-button sentence" id="s-00-15-01-038" data-start="00:15:01,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aid organizations, including mine, we have months worth of supplies waiting outside to get in.</p>
+<p>包括我的组织在内的援助机构，我们有数月的物资等待进入。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959091" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-08-719" data-start="00:15:08,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despair and hunger will continue to haunt Gaza until a stable aid delivery system is back in place.</p>
+<p>绝望和饥饿将继续困扰加沙，直到稳定的援助交付系统恢复。</p>
+<p><button class="play-button sentence" id="s-00-15-15-599" data-start="00:15:15,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's something that can only happen when there's a ceasefire.</p>
+<p>而这只有在停火时才能实现。</p>
+<p><button class="play-button sentence" id="s-00-15-21-198" data-start="00:15:21,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's Paul Adams reporting there.</p>
+<p>这是Paul Adams的报道。</p>
+<p><button class="play-button sentence" id="s-00-15-23-065" data-start="00:15:23,065" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll still to come on the world today.</p>
+<p>我们稍后将继续关注今日世界。</p>
+<p><button class="play-button sentence" id="s-00-15-25-200" data-start="00:15:25,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia and Ukraine hold a new round of peace talks in Istanbul.</p>
+<p>俄罗斯和乌克兰在伊斯坦布尔举行新一轮和平谈判。</p>
+<p><button class="play-button sentence" id="s-00-15-29-679" data-start="00:15:29,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we'll also be looking at how Teethmarks on the leg bone of a 13 million-year-old terabird give scientists clues about the even bigger and more terrifying predator that may have killed it.</p>
+<p>我们还将探讨1300万年前的巨鸟腿骨上的牙印如何为科学家提供线索，揭示可能杀死它的更大更可怕的掠食者。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208959057" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-42-960" data-start="00:15:42,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK, this is the world today on BBC News.</p>
+<p>在世界各地和英国各地，这是BBC新闻的今日世界。</p>
+<p><button class="play-button sentence" id="s-00-16-55-600" data-start="00:16:55,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A landmark decision by the UN's top court has cleared the way for countries to sue each other over climate change, including over historical emissions of greenhouse gases.</p>
+<p>联合国最高法院的一项里程碑式决定为各国就气候变化（包括历史温室气体排放）相互起诉扫清了道路。</p>
+<p><button class="play-button sentence" id="s-00-17-05-839" data-start="00:17:05,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ruling is non-binding, but legal experts say it could have wide-ranging consequences.</p>
+<p>该裁决不具约束力，但法律专家表示它可能产生广泛影响。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958968" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-11-440" data-start="00:17:11,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's the court's president.</p>
+<p>以下是法院院长的发言。</p>
+<p><button class="play-button sentence" id="s-00-17-13-157" data-start="00:17:13,157" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With regard to the duty to prevent significant harm to the environment, the court considers that it also applies to the climate system, which is an integral and vitally important part of the environment, and which must be protected for present and future generations.</p>
+<p>关于防止对环境造成重大损害的义务，法院认为这也适用于气候系统，它是环境不可分割且至关重要的部分，必须为今世后代加以保护。</p>
+<p><button class="play-button sentence" id="s-00-17-35-519" data-start="00:17:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, Cynthia Huneh who is the president of the Pacific Islands students fighting climate change, the youth-led organisation that spearheaded this campaign back in 2019.</p>
+<p>Cynthia Huneh是太平洋岛屿学生抗击气候变化组织的主席，这个青年领导的组织在2019年发起了这项运动。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-45-119" data-start="00:17:45,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I asked her for her reaction to today's landmark ruling.</p>
+<p>我询问了她对今天这一里程碑式裁决的反应。</p>
+<p><button class="play-button sentence" id="s-00-17-48-799" data-start="00:17:48,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a lot of emotions, but mostly very, very happy and glad that the court listened to the wall's youth's voice, so very happy and want to celebrate.</p>
+<p>有很多情绪，但主要是非常非常高兴和欣慰法院听取了青年们的声音，所以非常高兴并想庆祝。</p>
+<p><button class="play-button sentence" id="s-00-18-02-079" data-start="00:18:02,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Talk us through the story of how you got here.</p>
+<p>请告诉我们你们是如何走到这一步的。</p>
+<p><button class="play-button sentence" id="s-00-18-04-416" data-start="00:18:04,416" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How did you know, you made one of many students, you spearheaded this campaign from the start.</p>
+<p>你们是如何知道的，作为众多学生之一，你们从一开始就领导了这场运动。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958910" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-09-400" data-start="00:18:09,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How have you got to the ICJ at this point in time?</p>
+<p>你们是如何在此时到达国际法院的？</p>
+<p><button class="play-button sentence" id="s-00-18-12-799" data-start="00:18:12,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, well, in the Pacific, our motivation has always been our islands, our homes, and this are the front line of the climate change adverse effects.</p>
+<p>是的，在太平洋地区，我们的动力一直是我们的岛屿、我们的家园，它们是气候变化不利影响的前线。</p>
+<p><button class="play-button sentence" id="s-00-18-22-306" data-start="00:18:22,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so, a student who wanted to use the law to explore what are other legal avenues that we can explore to accelerate climate action, especially ones that reflect the realities on the ground.</p>
+<p>因此，一名学生希望利用法律探索我们可以探索的其他法律途径以加速气候行动，尤其是反映实地现实的途径。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958882" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-37-326" data-start="00:18:37,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, we teamed up 27 law students, and we sent out letters to all our leaders in the Pacific Island and Von O'To, the government of Von O'To was the one country that really stood with us and helped us realise this goal.</p>
+<p>因此，我们联合了27名法律学生，并向太平洋岛屿和Von O'To的所有领导人发出了信件，Von O'To政府是真正支持我们并帮助我们实现这一目标的国家。</p>
+<p><button class="play-button sentence" id="s-00-18-52-798" data-start="00:18:52,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While we worked on the civil society front, which used around the world, the Von O'To government led on the political front and the state level as well.</p>
+<p>当我们在全球范围内的公民社会阵线工作时，Von O'To政府在政治和国家层面发挥了领导作用。</p>
+<p><button class="play-button sentence" id="s-00-19-02-427" data-start="00:19:02,427" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so, it is a really good model of when government and its civil society walk together, it's just really with young people.</p>
+<p>因此，这是一个政府与其公民社会携手合作的非常好的模式，尤其是与年轻人一起。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-10-078" data-start="00:19:10,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the impacts of climate change is the warming of oceans with devastating consequences.</p>
+<p>气候变化的影响之一是海洋变暖，带来毁灭性后果。</p>
+<p><button class="play-button sentence" id="s-00-19-15-519" data-start="00:19:15,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year, the Great Barrier Reef has seen huge areas of corals bleached by heat stress, and on the other side of Australia too, the NINGALOO reef, also a UNESCO World Heritage Site, has suffered major bleaching.</p>
+<p>今年，大堡礁大片珊瑚因热应力白化，澳大利亚另一侧的NINGALOO礁（也是联合国教科文组织世界遗产地）也遭受了严重白化。</p>
+<p><button class="play-button sentence" id="s-00-19-28-112" data-start="00:19:28,112" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Australia correspondent Katie Watson has been to NINGALOO to meet the scientists assessing the damage and trying to come to terms with the solutions.</p>
+<p>我们的澳大利亚记者Katie Watson前往NINGALOO会见评估损害并试图找到解决方案的科学家。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958822" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-37-119" data-start="00:19:37,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hugging the shores of Western Australia, this lush oceanic forest extends for hundreds of kilometres.</p>
+<p>紧贴西澳大利亚海岸，这片茂密的海洋森林延伸数百公里。</p>
+<p><button class="play-button sentence" id="s-00-19-44-079" data-start="00:19:44,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NINGALOO is the largest fringing reef in the world, but it's in danger.</p>
+<p>NINGALOO是世界上最大的岸礁，但它处于危险之中。</p>
+<p><button class="play-button sentence" id="s-00-19-50-000" data-start="00:19:50,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Scientists, Dr Kate Quigley, likened it to an underwater bushfire, a marine heat wave wiping out corals in its path.</p>
+<p>科学家Kate Quigley博士将其比作水下丛林大火，海洋热浪摧毁了沿途的珊瑚。</p>
+<p><button class="play-button sentence" id="s-00-19-57-499" data-start="00:19:57,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She showed us just how quickly the landscape's changing.</p>
+<p>她向我们展示了景观变化的速度有多快。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-11-038" data-start="00:20:11,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of these are hundreds of years old.</p>
+<p>其中一些已有数百年历史。</p>
+<p><button class="play-button sentence" id="s-00-20-13-749" data-start="00:20:13,749" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've survived extreme weather like cyclones, but the hotter water is too much.</p>
+<p>它们经历了飓风等极端天气，但更热的海水太过严重。</p>
+<p><button class="play-button sentence" id="s-00-20-19-281" data-start="00:20:19,281" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's making corals expel the algae that lives within their tissues and gives them their colour, and this is the result.</p>
+<p>它使珊瑚排出生活在组织内并赋予它们颜色的藻类，这就是结果。</p>
+<p><button class="play-button sentence" id="s-00-20-27-254" data-start="00:20:27,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While some corals may recover as the water's cool, many cannot.</p>
+<p>虽然一些珊瑚可能在水冷却后恢复，但许多无法恢复。</p>
+<p><button class="play-button sentence" id="s-00-20-31-834" data-start="00:20:31,834" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Parts of the reef have become a graveyard, just the skeletons remain, and it's happening across NINGALOO.</p>
+<p>部分礁石已成为墓地，只剩下骨架，这在整个NINGALOO都在发生。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958760" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-39-309" data-start="00:20:39,309" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We come down the coast, this part of the reef is really shallow, and we're meters from the shore.</p>
+<p>我们沿着海岸下来，这部分礁石非常浅，我们距离岸边只有几米。</p>
+<p><button class="play-button sentence" id="s-00-20-44-998" data-start="00:20:44,998" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You just need to stick your head in the water, and it's so easy to see all of the dead of Bleach Coral.</p>
+<p>你只需把头探入水中，就能轻易看到大片白化的死亡珊瑚。</p>
+<p><button class="play-button sentence" id="s-00-20-51-444" data-start="00:20:51,444" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year's hotter temperatures have lingered for longer, and a widespread.</p>
+<p>今年高温持续时间更长且范围更广。</p>
+<p><button class="play-button sentence" id="s-00-20-56-931" data-start="00:20:56,931" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's led to unprecedented damage right across the Great Barrier Reef, too.</p>
+<p>这也导致大堡礁遭受了前所未有的破坏。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-02-000" data-start="00:21:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we're really afraid of seeing, especially in the coming months, is really high levels of death.</p>
+<p>我们真正担心的是，未来几个月可能会出现极高的珊瑚死亡率。</p>
+<p><button class="play-button sentence" id="s-00-21-08-160" data-start="00:21:08,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've had months of warming.</p>
+<p>我们已经经历了数月的海水变暖。</p>
+<p><button class="play-button sentence" id="s-00-21-09-973" data-start="00:21:09,973" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The corals have been very stressed, so the corals can no longer hang on, so to speak, and so they're eventually dying.</p>
+<p>珊瑚承受了巨大压力，可以说它们再也无法支撑，最终走向死亡。</p>
+<p><button class="play-button sentence" id="s-00-21-17-625" data-start="00:21:17,625" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For residents like Sarah, a diver and conservationist, the fear is that tourists are put off by the damage.</p>
+<p>对于像潜水员兼环保人士莎拉这样的居民来说，他们担心游客会因为珊瑚受损而却步。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958715" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-24-753" data-start="00:21:24,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't want people to turn their back on NINGALOO.</p>
+<p>我们不希望人们放弃宁格鲁。</p>
+<p><button class="play-button sentence" id="s-00-21-27-704" data-start="00:21:27,704" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's still amazing parts of the reef here that are worth seeing.</p>
+<p>这里仍有珊瑚礁的壮观部分值得一看。</p>
+<p><button class="play-button sentence" id="s-00-21-31-132" data-start="00:21:31,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're still running dive tours every day, and I think it's also really important to witness what's happening in the effects of the marine heat waves that we've had.</p>
+<p>我们每天仍在组织潜水之旅，同时我认为亲眼见证海洋热浪的影响也非常重要。</p>
+<p><button class="play-button sentence" id="s-00-21-41-761" data-start="00:21:41,761" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While scientists are clear about the problem, rising carbon emissions are heating up the planet, including the oceans, they're also trying to come up with alternative ways to save the reef, growing coral, for example, that's more heat resistant.</p>
+<p>尽管科学家清楚问题所在——碳排放增加导致地球和海洋变暖，但他们也在尝试用替代方法拯救珊瑚礁，比如培育更耐热的珊瑚。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958683" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-56-237" data-start="00:21:56,237" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you look at the colors of the coral, and if they're bleached or not.</p>
+<p>因此你要观察珊瑚的颜色，看它们是否白化。</p>
+<p><button class="play-button sentence" id="s-00-21-59-839" data-start="00:21:59,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right now, scientists are also pouring over data coming out of the reef.</p>
+<p>目前，科学家们还在仔细分析珊瑚礁的数据。</p>
+<p><button class="play-button sentence" id="s-00-22-03-910" data-start="00:22:03,910" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These researchers are mapping NINGALOO by taking photos of the corals and linking them with drone images, that way they can track their health.</p>
+<p>研究人员通过拍摄珊瑚照片并与无人机图像结合来绘制宁格鲁地图，从而追踪珊瑚的健康状况。</p>
+<p><button class="play-button sentence" id="s-00-22-12-194" data-start="00:22:12,194" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what's also needed are more permanent solutions.</p>
+<p>但更需要的是永久性解决方案。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958664" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-15-333" data-start="00:22:15,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People ask me, what can we do?</p>
+<p>人们问我：我们能做什么？</p>
+<p><button class="play-button sentence" id="s-00-22-17-032" data-start="00:22:17,032" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a well-first thing you can do is choose politicians that have are considering reducing fossil fuels and are for renewable energies.</p>
+<p>首先，你可以选择支持减少化石燃料并发展可再生能源的政治人物。</p>
+<p><button class="play-button sentence" id="s-00-22-26-154" data-start="00:22:26,154" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you can also reduce by drive less, go with public transport.</p>
+<p>但也可以通过少开车、多乘公共交通来减少排放。</p>
+<p><button class="play-button sentence" id="s-00-22-30-274" data-start="00:22:30,274" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't have your air conditioning on all the time, and these are all things that can help reduce our footprint.</p>
+<p>不要一直开空调，这些都有助于减少我们的碳足迹。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958643" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-36-230" data-start="00:22:36,230" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NINGALOO makes this coastline unique.</p>
+<p>宁格鲁让这片海岸线独一无二。</p>
+<p><button class="play-button sentence" id="s-00-22-38-971" data-start="00:22:38,971" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just north of here though, sits some of Australia's biggest fossil fuel projects.</p>
+<p>然而就在北边，坐落着澳大利亚一些最大的化石燃料项目。</p>
+<p><button class="play-button sentence" id="s-00-22-43-995" data-start="00:22:43,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This country's among the world's worst polluters, struggling to balance the need for energy with saving places like this.</p>
+<p>该国是全球污染最严重的国家之一，正艰难平衡能源需求与保护此类地区的矛盾。</p>
+<p><button class="play-button sentence" id="s-00-22-51-635" data-start="00:22:51,635" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Katie Watson, BBC News in Western Australia.</p>
+<p>凯蒂·沃森，BBC新闻，西澳大利亚报道。</p>
+<p><button class="play-button sentence" id="s-00-22-55-033" data-start="00:22:55,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two former city traders who were jailed for manipulating interest rates have had their convictions quashed after a 10-year fight for justice.</p>
+<p>两名因操纵利率被判刑的前交易员经过十年抗争，终于推翻定罪。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958615" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-04-878" data-start="00:23:04,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom Hayes and Carlo Palombo were found guilty in 2015 and 2019, respectively.</p>
+<p>汤姆·海耶斯和卡洛·帕隆博分别于2015年和2019年被判有罪。</p>
+<p><button class="play-button sentence" id="s-00-23-11-199" data-start="00:23:11,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Supreme Court ruled their criminal trials were unsafe because the juries in each case have been given inaccurate and unfair directions and severity reports.</p>
+<p>最高法院裁定他们的刑事审判不公正，因为陪审团在每起案件中都收到了不准确且不公正的指示和严重性报告。</p>
+<p><button class="play-button sentence" id="s-00-23-21-440" data-start="00:23:21,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> ELETION after a 10-year battle for justice.</p>
+<p>经过十年正义斗争后的平反。</p>
+<p><button class="play-button sentence" id="s-00-23-25-645" data-start="00:23:25,645" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom Hayes, Carlo Palombo and their supporters have said for years that far from being criminals, they're victims of a whole series of miscarriages of justice and a cover-up by the financial establishment dating back 17 years.</p>
+<p>多年来，汤姆·海耶斯、卡洛·帕隆博及其支持者一直表示，他们绝非罪犯，而是17年来一系列司法不公和金融体系掩盖的受害者。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958579" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-40-318" data-start="00:23:40,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It feels very surreal, a little bit like my conviction, like it's not really happening to me.</p>
+<p>这感觉非常超现实，有点像我的定罪经历，仿佛不是真实发生在我身上。</p>
+<p><button class="play-button sentence" id="s-00-23-45-838" data-start="00:23:45,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the 2008 financial crisis and the recession caused by it, no banker was prosecuted.</p>
+<p>2008年金融危机及其引发的经济衰退中，没有银行家被起诉。</p>
+<p><button class="play-button sentence" id="s-00-23-51-199" data-start="00:23:51,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then in July 2012, when Barclays was fined £290 million for manipulating interest rates, this boss Bob Diamond had to resign and MPs demanded bankers be jailed.</p>
+<p>2012年7月，巴克莱银行因操纵利率被罚款2.9亿英镑，其老板鲍勃·戴蒙德被迫辞职，议员们要求监禁银行家。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958558" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-01-767" data-start="00:24:01,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then in August 2015, Tom Hayes became the first trader to be jailed for manipulating rates.</p>
+<p>2015年8月，汤姆·海耶斯成为首个因操纵利率入狱的交易员。</p>
+<p><button class="play-button sentence" id="s-00-24-06-960" data-start="00:24:06,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now it was a cruel and pernicious sentence from a judge who'd made his mind up about me long before he'd even seen a defense case.</p>
+<p>这是一位法官作出的残酷恶毒判决，他在甚至未看到辩护材料前就已对我下定论。</p>
+<p><button class="play-button sentence" id="s-00-24-16-581" data-start="00:24:16,581" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It destroyed my family, my son, I missed most of his childhood.</p>
+<p>这毁了我的家庭和儿子，我错过了他大部分的童年。</p>
+<p><button class="play-button sentence" id="s-00-24-22-333" data-start="00:24:22,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People do not realise what miscarriages of justice do, not just to the person who suffers them, but for all those who are surrounded by it.</p>
+<p>人们不明白司法不公的伤害，不仅对当事人，还包括所有相关人员。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958528" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-31-038" data-start="00:24:31,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the next four years, 19 traders were convicted and nine jailed, including Carlo Palumbo.</p>
+<p>随后四年间，19名交易员被定罪，其中9人入狱，包括卡洛·帕隆博。</p>
+<p><button class="play-button sentence" id="s-00-24-37-108" data-start="00:24:37,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then three years ago, a US appeal court threw convictions out.</p>
+<p>三年前，美国上诉法院推翻了定罪。</p>
+<p><button class="play-button sentence" id="s-00-24-41-031" data-start="00:24:41,031" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, the UK Supreme Court decided trials were unfair and quashed convictions.</p>
+<p>今天，英国最高法院裁定审判不公并撤销定罪。</p>
+<p><button class="play-button sentence" id="s-00-25-04-480" data-start="00:25:04,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> MPs, traders and their lawyers now want answers about the role of central banks and governments in LIBOR rigging and about how these miscarriages of justice happened.</p>
+<p>议员、交易员及其律师现在要求央行和政府在LIBOR操纵案中的角色以及司法不公如何发生给出解释。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958485" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-14-678" data-start="00:25:14,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Andy Verity, BBC News.</p>
+<p>安迪·维里蒂，BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-25-17-920" data-start="00:25:17,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Brian Coburger, the man who stabbed four University of Idaho students to death in 2022 during a home invasion, has been jailed for life without parole.</p>
+<p>2022年入室杀害四名爱达荷州大学生的布莱恩·科伯格被判终身监禁不得假释。</p>
+<p><button class="play-button sentence" id="s-00-25-27-711" data-start="00:25:27,711" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was sentenced to 10 years for burglary and four life sentences to be served consecutively.</p>
+<p>他因入室盗窃被判10年，外加连续执行的四个无期徒刑。</p>
+<p><button class="play-button sentence" id="s-00-25-32-738" data-start="00:25:32,738" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's the judge, Steven Hoppler.</p>
+<p>以下是法官史蒂文·霍普勒的陈述。</p>
+<p><button class="play-button sentence" id="s-00-25-35-439" data-start="00:25:35,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Truth be told, I'm on I'm able to come up with anything redeeming about Mr. Coburger because his grotesque acts of evil have buried and hidden anything that might have been good or intrinsically human about him.</p>
+<p>说实话，我无法找出科伯格先生任何可取之处，因为他 grotesque 的恶行已埋葬并隐藏了他可能拥有的任何善良或人性。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958452" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-47-808" data-start="00:25:47,808" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His actions have made him the worst of the worst.</p>
+<p>他的行为使他成为恶中之恶。</p>
+<p><button class="play-button sentence" id="s-00-25-51-605" data-start="00:25:51,605" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even in pleading guilty, he's giving nothing hinting of remorse or redemption, nothing suggesting, even a recognition or understanding let alone regret for the pain that he has caused.</p>
+<p>即使认罪，他也未表现出丝毫悔意或救赎，甚至没有对所造成的痛苦表示认知或理解，更不用说悔恨。</p>
+<p><button class="play-button sentence" id="s-00-26-05-372" data-start="00:26:05,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And therefore, I will not attempt to speak about him further other than to simply sentence him so that he is forever removed from civilized society.</p>
+<p>因此，除判处他永远脱离文明社会外，我不愿再对他多言。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1B78AzYE6G/?t=-2208958424" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-15-722" data-start="00:26:15,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there's a live page on the website running on the Idaho murders story.</p>
+<p>网站上有关于爱达荷州谋杀案的直播页面。</p>
+<p><button class="play-button sentence" id="s-00-26-21-222" data-start="00:26:21,222" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you want to really little bit more about that, I'm back up this short break.</p>
+<p>若想了解更多详情，请稍事休息后继续关注。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

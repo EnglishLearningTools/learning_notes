@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Today, 18/07/2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The video covers major financial and political developments, including US crypto legislation, US-Japan trade talks, Netflix's earnings surge, UK dairy farming struggles due to heatwaves, and global market updates.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Business Today, 18/07/2025</h1>
+<p>【BBC Business Today 20250719 美国加密货币立法｜美日贸易谈判｜Netflix盈利激增｜英国奶农因热浪陷入困境】</p>
+<p>Summary:
+The video covers major financial and political developments, including US crypto legislation, US-Japan trade talks, Netflix's earnings surge, UK dairy farming struggles due to heatwaves, and global market updates.</p>
+<p>摘要：
+本期节目涵盖重大金融与政治动态，包括美国加密货币立法、美日贸易谈判、Netflix盈利激增、英国奶农因热浪陷入困境以及全球市场最新进展。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 36 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959994" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-06-000" data-start="00:00:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The crypto capital of the world, America moves a step closer to realising President Trump's campaigned ledges as Congress passes landmark crypto legislation.</p>
+<p>随着国会通过里程碑式的加密货币立法，世界加密之都美国离实现特朗普竞选承诺更近一步。</p>
+<p><button class="play-button sentence" id="s-00-00-17-399" data-start="00:00:17,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Talking trade, the US Treasury Secretary Scott Bessent, is in Tokyo to meet the Prime Minister, as Japan looks to strike a deal ahead of August looming tariff deadline.</p>
+<p>贸易方面，美国财政部长斯科特·贝森特在东京会见日本首相，日本希望在8月关税截止日前达成协议。</p>
+<p><button class="play-button sentence" id="s-00-00-28-919" data-start="00:00:28,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also, Squid Game Bump Netflix profits surge as strong subscriber growth boost earnings.</p>
+<p>此外，《鱿鱼游戏》推动Netflix利润激增，强劲的订阅增长提振盈利。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959963" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-36-840" data-start="00:00:36,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And trouble down at the farm. Record hot weather leaves dairy farmers high and dry in the UK.</p>
+<p>英国农场陷入困境，创纪录高温天气使奶农陷入窘境。</p>
+<p><button class="play-button sentence" id="s-00-00-43-320" data-start="00:00:43,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Join us as we take a look at the financial impact. Hello and live from London. This is Bessess today.</p>
+<p>请随我们一同分析财务影响。大家好，这里是伦敦直播的《今日商业》。</p>
+<p><button class="play-button sentence" id="s-00-00-51-806" data-start="00:00:51,806" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Laquester Burek and we begin in the US, where the crypto industry has been given a big shot in the armours the House of Representatives has approved the first major cryptocurrency legislation in America.</p>
+<p>我是拉奎斯特·布雷克，我们从美国开始报道——众议院批准了美国首个重大加密货币法案，为该行业注入强心剂。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959935" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-04-694" data-start="00:01:04,694" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a significant win for the industry at the end of a big week dubbed Crypto Week, with a raft of digital asset bills being scrutinised by law makers.</p>
+<p>这是被称为"加密周"的重要一周结束时行业的重大胜利，多项数字资产法案正接受立法者审查。</p>
+<p><button class="play-button sentence" id="s-00-01-14-858" data-start="00:01:14,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is all part of President Trump's push to make America the crypto capital of the world, which has seen the world's leading cryptocurrency bitcoin hit record high valuations.</p>
+<p>这是特朗普推动美国成为世界加密之都的部分举措，全球领先加密货币比特币因此创下估值新高。</p>
+<p><button class="play-button sentence" id="s-00-01-26-719" data-start="00:01:26,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michelle Flurry has more. This is a major shake up in how Washington treats digital assets.</p>
+<p>米歇尔·弗勒里带来更多细节。这是华盛顿对待数字资产方式的重大变革。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959906" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-33-698" data-start="00:01:33,698" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The House just passed two key bills that could finally bring structure and credibility to the crypto industry.</p>
+<p>众议院刚通过两项关键法案，可能最终为加密行业带来结构与可信度。</p>
+<p><button class="play-button sentence" id="s-00-01-40-682" data-start="00:01:40,682" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First up, there was the Genius Act, which had already cleared the Senate.</p>
+<p>首先是已获参议院通过的《天才法案》。</p>
+<p><button class="play-button sentence" id="s-00-01-44-840" data-start="00:01:44,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It passed the House with big bipartisan support and is now headed to the President's desk to be signed into law.</p>
+<p>该法案以两党大力支持在众议院通过，现提交总统签署成为法律。</p>
+<p><button class="play-button sentence" id="s-00-01-50-978" data-start="00:01:50,978" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This measure will help recognise digital assets like Crypto currently as mainstream financial products, putting them closer to the same category as stocks or bonds.</p>
+<p>该措施将助力加密货币等数字资产被认可为主流金融产品，使其更接近股票或债券类别。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959877" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-02-358" data-start="00:02:02,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then a few hours later, the House passed a second bill, the so-called Clarity Act.</p>
+<p>几小时后，众议院通过第二项法案《清晰法案》。</p>
+<p><button class="play-button sentence" id="s-00-02-07-248" data-start="00:02:07,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is aimed at setting broader rules for how crypto markets and companies are regulated.</p>
+<p>该法案旨在为加密货币市场及公司监管制定更广泛规则。</p>
+<p><button class="play-button sentence" id="s-00-02-12-546" data-start="00:02:12,546" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now that one passed 294 to 134 votes with dozens of Democrats joining Republicans, the House also passed a third more partisan measure that would ban a central bank digital currency.</p>
+<p>该法案以294比134票通过，数十名民主党人加入共和党阵营，众议院还通过更具党派色彩的第三项措施——禁止央行数字货币。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959854" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-25-841" data-start="00:02:25,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the cryptocurrency industry, this is all a major win.</p>
+<p>对加密货币行业而言，这些都是重大胜利。</p>
+<p><button class="play-button sentence" id="s-00-02-29-368" data-start="00:02:29,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Companies have been pushing for federal legislation for years, spending millions backing pro-cryptocandidates, and now they're finally getting results.</p>
+<p>企业多年来推动联邦立法，花费数百万支持亲加密候选人，如今终获成果。</p>
+<p><button class="play-button sentence" id="s-00-02-39-960" data-start="00:02:39,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that was Michelle Flurry there. Joining me now is Martin Lineverber, who is the Director of Digital asset research at MarketVector indexes.</p>
+<p>以上是米歇尔·弗勒里的报道。现在连线MarketVector指数数字资产研究总监马丁·莱因韦伯。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959831" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-48-879" data-start="00:02:48,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Martin, lovely to have you with us on the program.</p>
+<p>马丁，欢迎来到节目。</p>
+<p><button class="play-button sentence" id="s-00-02-52-199" data-start="00:02:52,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, so first off, the pledge was the crypto capital of the world, but just a set to bit of context for us is this catch-up for America or leading?</p>
+<p>首先，"加密之都"承诺——请为我们厘清背景：美国是在追赶还是领先？</p>
+<p><button class="play-button sentence" id="s-00-03-03-080" data-start="00:03:03,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. It's funny that you asked that. Although the US had knocked the frontliest loss, I would say it's already leading when you look at flows and assets and the management, especially that's true since the beginning of the Bitcoin ETFs in the US.</p>
+<p>有趣的问题。尽管美国曾错失先机，但观察资金流、资产和管理，尤其自比特币ETF在美国推出以来，它已然领先。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959796" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-23-455" data-start="00:03:23,455" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So when you look at the volumes, when you look at flows, America is already leading, and also if you look at digital dollars, the stablecoins, 99.5% is in US dollar denominated.</p>
+<p>从交易量和资金流看，美国已处领先地位，且99.5%的稳定币以美元计价。</p>
+<p><button class="play-button sentence" id="s-00-03-37-963" data-start="00:03:37,963" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you can say that the whole crypto ecosystem is already dollarized, and now that you have this stablecoin bill, now the really big players can enter the realm, meaning banks like JP Morgan, Bank of America, Wells Fargo, and even some larger tech names can now enter in a secure way.</p>
+<p>可以说整个加密生态系统已美元化，随着稳定币法案出台，摩根大通、美国银行等大型机构能以更安全方式入场。</p>
+<p><button class="play-button sentence" id="s-00-03-58-739" data-start="00:03:58,739" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I guess that this dominance will even be larger going forward.</p>
+<p>因此这种主导地位未来或将进一步扩大。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-04-199" data-start="00:04:04,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Martin, what exactly is a stablecoin, and how does it differ, or does it include the likes of Bitcoin and other cryptocurrency?</p>
+<p>马丁，究竟什么是稳定币？它与比特币等其他加密货币有何区别？</p>
+<p><button class="play-button sentence" id="s-00-04-12-698" data-start="00:04:12,698" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are we talking about here? No, it's not.</p>
+<p>是否包含比特币等？不包含。</p>
+<p><button class="play-button sentence" id="s-00-04-15-947" data-start="00:04:15,947" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A stablecoin, you can say, is a digital form of PF money, thinking of a digital dollar or a digital euro.</p>
+<p>稳定币可视为数字形式的法定货币，如数字美元或数字欧元。</p>
+<p><button class="play-button sentence" id="s-00-04-24-577" data-start="00:04:24,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's a tokenized dollar or euro, or what have you, depends on your region.</p>
+<p>它是代币化的美元、欧元等，依地区而定。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959728" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-31-849" data-start="00:04:31,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's really like paying with your normal cash money in an electronic way.</p>
+<p>本质是以电子方式使用普通现金支付。</p>
+<p><button class="play-button sentence" id="s-00-04-37-420" data-start="00:04:37,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has nothing to do with Bitcoin or Ethereum or the other crypto token.</p>
+<p>与比特币、以太坊等其他加密代币无关。</p>
+<p><button class="play-button sentence" id="s-00-04-42-499" data-start="00:04:42,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's really a means of payments, and as you know, if you look at dollars, there are trillions of dollars transacted every day.</p>
+<p>它是支付工具，如您所知，美元日交易量达数万亿。</p>
+<p><button class="play-button sentence" id="s-00-04-52-799" data-start="00:04:52,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's very important when it comes to liquidity into the system.</p>
+<p>因此对系统流动性至关重要。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959702" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-57-141" data-start="00:04:57,141" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's for the everyday use, for the personal user, right? You can transact internationally.</p>
+<p>适用于日常个人使用对吗？可进行国际交易。</p>
+<p><button class="play-button sentence" id="s-00-05-03-261" data-start="00:05:03,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, that's very, very interesting, because you mentioned the crypto ecosystem.</p>
+<p>非常有趣，因您提到加密生态系统。</p>
+<p><button class="play-button sentence" id="s-00-05-07-863" data-start="00:05:07,863" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, who exactly is going to benefit from this change, or rather this wider oversight and regulation that the US have put into place, especially when it comes to transparency?</p>
+<p>当前美国实施的更广泛监管将令谁受益？特别是透明度方面？</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-18-040" data-start="00:05:18,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it going to be the likes of the crypto exchanges? Is it the investment companies?</p>
+<p>是加密交易所？投资公司？</p>
+<p><button class="play-button sentence" id="s-00-05-23-287" data-start="00:05:23,287" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because we'll come onto the 401k structure in the US in a minute.</p>
+<p>我们稍后会讨论美国401k计划。</p>
+<p><button class="play-button sentence" id="s-00-05-27-391" data-start="00:05:27,391" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But who are going to be the big winners out of all of this? Because many ordinary users wouldn't even know where to start.</p>
+<p>但谁是最大赢家？毕竟许多普通用户无从入手。</p>
+<p><button class="play-button sentence" id="s-00-05-35-399" data-start="00:05:35,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's, especially the traditional finance category is benefiting a lot also the everyday user, because I think of it now banks can enter the space that wasn't possible before.</p>
+<p>我认为传统金融领域和日常用户都将受益——银行现在能进入此前无法涉足的领域。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959648" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-51-452" data-start="00:05:51,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have clear guidelines, for example, for the state requirements, how they have to be collateralized, and to have a safe means of payments.</p>
+<p>明确指导方针出台，如国家抵押要求和安全支付手段规范。</p>
+<p><button class="play-button sentence" id="s-00-06-01-632" data-start="00:06:01,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also, of course, crypto exchanges, you can imagine that more liquidity enters the system.</p>
+<p>当然加密交易所也将因更多流动性涌入而获益。</p>
+<p><button class="play-button sentence" id="s-00-06-09-300" data-start="00:06:09,300" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There will also be more trading activities.</p>
+<p>交易活动也会增加。</p>
+<p><button class="play-button sentence" id="s-00-06-12-542" data-start="00:06:12,542" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's less for the pure decentralized protocols that still not regulated.</p>
+<p>对尚未受监管的纯去中心化协议益处较少。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959620" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-19-522" data-start="00:06:19,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you mentioned the 401k. In order to enter the large money into the system, banks, for these kind of guys, this bill is extremely important.</p>
+<p>但您提到401k——对希望引入大资金的银行而言，该法案极其重要。</p>
+<p><button class="play-button sentence" id="s-00-06-31-169" data-start="00:06:31,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so the whole adoption increases because institutional money can finally enter.</p>
+<p>机构资金终可入场，将推动整体采用率提升。</p>
+<p><button class="play-button sentence" id="s-00-06-36-665" data-start="00:06:36,665" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, thank you very much. A lot more to discuss on this, but for now, Martin, thank you very much. Thank you.</p>
+<p>非常感谢，还有更多可探讨，但先到此为止。谢谢马丁。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959595" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-44-511" data-start="00:06:44,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, staying in the US where it's been a bumper day for markets with fresh record highs on Wall Street, a week of upbeat corporate earnings and more positive company outlooks, seemingly helping to push both the SMP 500 and the tech heavy NASDAQ to new heights.</p>
+<p>继续关注美国——华尔街创历史新高，企业财报乐观推动标普500和纳斯达克攀升。</p>
+<p><button class="play-button sentence" id="s-00-07-02-040" data-start="00:07:02,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The dollar also recovered strongly after tensions between President Trump and the Fed Chair Jerome Powell.</p>
+<p>特朗普与美联储主席鲍威尔紧张关系缓和后，美元强劲反弹。</p>
+<p><button class="play-button sentence" id="s-00-07-08-208" data-start="00:07:08,208" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Once again, spooking investors. Let's unpack some of those issues there.</p>
+<p>再度引发投资者担忧。我们来深入分析。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959566" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-13-954" data-start="00:07:13,954" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fiona Chinkata from City and the Ex joins us now. Good morning to you, Fiona.</p>
+<p>连线City and the Ex的菲奥娜·钦卡塔。早上好菲奥娜。</p>
+<p><button class="play-button sentence" id="s-00-07-18-666" data-start="00:07:18,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's just start off with that why this happened?</p>
+<p>请先解释此次涨势原因？</p>
+<p><button class="play-button sentence" id="s-00-07-22-149" data-start="00:07:22,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, record highs. I mean, as you pointed out, we're earning season in the US that kicked off this week.</p>
+<p>是的，如您所言，本周美国进入财报季。</p>
+<p><button class="play-button sentence" id="s-00-07-29-715" data-start="00:07:29,715" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've had some solid numbers from corporate America, which is really just boosted the mood.</p>
+<p>美国企业交出扎实数据，提振市场情绪。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959543" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-36-113" data-start="00:07:36,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in addition to that yesterday, we also had some solid data.</p>
+<p>此外昨日公布的经济数据表现良好。</p>
+<p><button class="play-button sentence" id="s-00-07-40-913" data-start="00:07:40,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we saw that retail sales in the US were stronger than expected, showing the US consumer is still spending despite this sort of uncertainty in turmoil surrounding Trump's tariffs.</p>
+<p>零售销售超预期，显示尽管特朗普关税政策带来不确定性，消费者仍在支出。</p>
+<p><button class="play-button sentence" id="s-00-07-53-195" data-start="00:07:53,195" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we also saw jobless claims, which are a sort of a measure of people initially going for their first unemployment package payment was lower than expected.</p>
+<p>首次申领失业救济人数也低于预期。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959516" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-03-853" data-start="00:08:03,853" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're seeing that strength in the consumer. We're seeing solid resilience in the labor market and we're seeing strong earnings from the likes of PepsiCo, United Airlines and also TSMC, which is a big chip maker and really underlined how AI chip demand is still very strong.</p>
+<p>可见消费者韧性、劳动力市场稳固，百事、联合航空和台积电等企业盈利强劲，凸显AI芯片需求持续旺盛。</p>
+<p><button class="play-button sentence" id="s-00-08-26-493" data-start="00:08:26,493" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fiona, President Trump has made a number of comments. There was that letter earlier in the week about this threat to fire the Fed chair.</p>
+<p>菲奥娜，特朗普本周曾发信威胁解雇美联储主席。</p>
+<p><button class="play-button sentence" id="s-00-08-36-930" data-start="00:08:36,930" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can he afford to meddle in the Fed's business?</p>
+<p>他真能干预美联储事务吗？</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959479" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-40-737" data-start="00:08:40,737" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, I mean, the Federal Reserve was set up to be independent.</p>
+<p>不能。美联储本为独立机构设立。</p>
+<p><button class="play-button sentence" id="s-00-08-46-087" data-start="00:08:46,087" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've actually heard from several big names on Wall Street, including CEOs of the banks, Goldman Sachs, Bank of America.</p>
+<p>华尔街多位重量级人物包括高盛、美银CEO均已发声。</p>
+<p><button class="play-button sentence" id="s-00-08-56-471" data-start="00:08:56,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, Jamie Diamond, who is CEO of JP Morgan, who has a lot of sway, it fills with President Trump.</p>
+<p>与特朗普关系密切的摩根大通CEO杰米·戴蒙也表态。</p>
+<p><button class="play-button sentence" id="s-00-09-05-139" data-start="00:09:05,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they have all warned against Trump meddling with the Fed.</p>
+<p>他们均警告特朗普勿干预美联储。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959448" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-11-158" data-start="00:09:11,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It needs to be independent in order to maintain that credibility over monetary policy.</p>
+<p>独立性对货币政策可信度至关重要。</p>
+<p><button class="play-button sentence" id="s-00-09-18-612" data-start="00:09:18,612" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, you know, if we did see Trump firing and we have seen this as he sort of, you know, makes comments about sort of the Fed or potentials rumours to remove the Federal Reserve chair Jerome Powell.</p>
+<p>若特朗普真解雇鲍威尔——鉴于他常评论美联储且屡有撤换传闻...</p>
+<p><button class="play-button sentence" id="s-00-09-32-599" data-start="00:09:32,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen reactions in the market. The dollar has dropped quickly and been affected.</p>
+<p>市场已现反应——美元快速下跌受影响。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959422" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-37-685" data-start="00:09:37,685" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen stocks wobble. So, you know, there is definitely an impact.</p>
+<p>股市震荡，显然会产生影响。</p>
+<p><button class="play-button sentence" id="s-00-09-42-474" data-start="00:09:42,474" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If it did happen, it would impact the credibility. And there would be a sort of a big legal showcase afterwards as well.</p>
+<p>若发生将损害信誉，还可能引发法律纠纷。</p>
+<p><button class="play-button sentence" id="s-00-09-50-519" data-start="00:09:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay. For the energy and gotta, always very fascinating to watch these events in the US for now. Thank you.</p>
+<p>美国这些动态总是引人关注。谢谢菲奥娜。</p>
+<p><button class="play-button sentence" id="s-00-09-56-730" data-start="00:09:56,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, let's move to tariffs now. And Japan, where the US Treasury Secretary Scott Bessent is currently visiting, he's meeting with Japan's Prime Minister Shigaro Ishiba, as the two sides looked to hammer out a trade deal ahead of a looming deadline next month.</p>
+<p>转向关税议题——美国财长贝森特正访问日本，会见首相石波茂，试图在下月截止日前达成贸易协议。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959387" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-12-519" data-start="00:10:12,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Japan is facing a 25% levy on goods going on or rather towards the US on August the first.</p>
+<p>日本对美出口商品8月1日起或面临25%关税。</p>
+<p><button class="play-button sentence" id="s-00-10-20-440" data-start="00:10:20,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If a deal can't be reached, tensions are high as Japan's exports to the US fell for a second month in a row in June.</p>
+<p>若未达成协议，紧张局势将加剧——日本对美出口已连续两月下滑。</p>
+<p><button class="play-button sentence" id="s-00-10-27-479" data-start="00:10:27,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is all ahead of a key vote on Sunday that could see the ruling coalition lose its majority as voters battle inflation and soaring rice prices.</p>
+<p>周日关键投票前，执政联盟或因选民不满通胀和米价上涨失去多数席位。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959361" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-38-860" data-start="00:10:38,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Joining me now is Nabuko Kobayashi, who is the managing director and partner at Consultants, EY Parthenon in Tokyo. Hello, welcome to the program.</p>
+<p>现在连线东京EY-Parthenon咨询公司董事总经理纳布科·小林。欢迎加入节目。</p>
+<p><button class="play-button sentence" id="s-00-10-50-421" data-start="00:10:50,421" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It sounds like it's quite a tricky time actually for the Prime Minister and the Japanese economy.</p>
+<p>对首相和日本经济而言似乎处境艰难？</p>
+<p><button class="play-button sentence" id="s-00-10-56-814" data-start="00:10:56,814" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Indeed it is and it is a little bit quiet before the storm because two dates are in the short horizon.</p>
+<p>确实如此，暴风雨前的宁静——两个关键日期临近。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959336" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-03-745" data-start="00:11:03,745" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One is a upper-house reelection and the other one is that August first, the Terry's plan of step-up deadline.</p>
+<p>参议院改选和8月1日关税上调截止日。</p>
+<p><button class="play-button sentence" id="s-00-11-11-543" data-start="00:11:11,543" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does all, oh sorry, carry on, sorry.</p>
+<p>抱歉请继续。</p>
+<p><button class="play-button sentence" id="s-00-11-15-639" data-start="00:11:15,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in terms of the Terry negotiation, the current leadership of Japan is unable to make a drastic move, although it is keen to reach agreement and on the US side, they seem pretty comfortable to wait and let August first comment pass and then raise it to 25% of baseline tariff.</p>
+<p>关税谈判中，日本现任领导层难有 drastic 举措，尽管希望达成协议；而美方似乎乐于等待截止日过后将关税上调至25%。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959305" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-35-000" data-start="00:11:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How's the end doing at the moment?</p>
+<p>目前日元表现如何？</p>
+<p><button class="play-button sentence" id="s-00-11-36-519" data-start="00:11:36,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, it is an output of many functions, but the key to watch is where the dollar goes and also how VEOJ would navigate these uncertainties in terms of tariff and also the conditional prices.</p>
+<p>日元受多重因素影响，关键要看美元走势及日本央行如何应对关税和米价的不确定性。</p>
+<p><button class="play-button sentence" id="s-00-11-57-960" data-start="00:11:57,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is a result of the upper-house reelection as well.</p>
+<p>这也与参议院改选有关。</p>
+<p><button class="play-button sentence" id="s-00-12-03-240" data-start="00:12:03,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is what we're seeing in terms of the choreography and the optics of a Prime Minister meeting somebody at a lesser powerful status, if I can say that, he's the Treasury Secretary, he's not the leader of the US.</p>
+<p>首相会见财长（非元首）的外交安排传递何种信号？</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959259" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-20-283" data-start="00:12:20,283" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does this tell us about the relationship between the US and Japan?</p>
+<p>这反映美日关系如何？</p>
+<p><button class="play-button sentence" id="s-00-12-24-438" data-start="00:12:24,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I personally don't think that would be so negative.</p>
+<p>我个人认为不算负面。</p>
+<p><button class="play-button sentence" id="s-00-12-28-918" data-start="00:12:28,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the Secretary of the US is a very prominent figure and I don't think a lot of voters would mind the discrepancy in the hierarchy.</p>
+<p>美国财长地位显赫，选民应不介意级别差异。</p>
+<p><button class="play-button sentence" id="s-00-12-40-131" data-start="00:12:40,131" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, we'll leave it there for now. Thank you very much indeed. Thank you.</p>
+<p>暂时讨论到此，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-12-46-585" data-start="00:12:46,585" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let us turn our attention to Brazil where President Louise Inaceur Ludo de Silva has condemned President Trump's threat to impose harsh tariffs on his country as unacceptable blackmail.</p>
+<p>转向巴西——总统卢拉谴责特朗普威胁加征关税是"不可接受的勒索"。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959217" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-02-148" data-start="00:13:02,148" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Trump last week threatened Brazil with 50% tariffs and called for an end to the trial of his ally, the right-wing former president, Jair Bolsonaro.</p>
+<p>特朗普上周威胁对巴西征收50%关税，并要求终止其盟友博索纳罗的审判。</p>
+<p><button class="play-button sentence" id="s-00-13-11-480" data-start="00:13:11,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a televised address, President Lula said no foreigner was going to give him orders.</p>
+<p>卢拉在电视讲话中表示"不会有外国人能命令他"。</p>
+<p><button class="play-button sentence" id="s-00-13-17-318" data-start="00:13:17,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK, this is BBC News.</p>
+<p>BBC新闻为您报道全球动态。</p>
+<p><button class="play-button sentence" id="s-00-13-31-558" data-start="00:13:31,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The art of good conversation is to say the right thing at the right time and in the right way.</p>
+<p>优质对话的艺术在于在正确时间以恰当方式说合适的话。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959182" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-37-719" data-start="00:13:37,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have to be original, sympathetic, encouraging and also keep an open mind and you really do just need to sit back and listen.</p>
+<p>你必须保持原创、同理心、鼓励态度和开放心态，真正需要做的是坐下来倾听。</p>
+<p><button class="play-button sentence" id="s-00-13-49-197" data-start="00:13:49,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Catty K meets with visionaries of arts and culture to find out what sparks their creativity.</p>
+<p>Catty K采访艺术与文化领域的远见者，探索激发他们创造力的因素。</p>
+<p><button class="play-button sentence" id="s-00-13-55-901" data-start="00:13:55,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Influential with me, Catty K, watch on BBC Eyeplayer.</p>
+<p>影响力人物Catty K，尽在BBC Eyeplayer。</p>
+<p><button class="play-button sentence" id="s-00-14-00-278" data-start="00:14:00,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A year after the murders of Carol Hannah and Louise Hunt, BBC commentated John Hunt and his daughter Amy, speak to me about the attack, grief and how they want their loved ones to be remembered.</p>
+<p>Carol Hannah与Louise Hunt遇害一周年后，BBC特邀John Hunt及其女儿Amy讲述袭击事件、悲痛历程以及他们希望如何纪念亲人。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959145" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-14-759" data-start="00:14:14,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Standing strong, the John and Amy Hunt interview.</p>
+<p>坚强面对——John与Amy Hunt专访。</p>
+<p><button class="play-button sentence" id="s-00-14-18-498" data-start="00:14:18,498" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Watch on BBC Eyeplayer.</p>
+<p>BBC Eyeplayer独家播出。</p>
+<p><button class="play-button sentence" id="s-00-14-30-519" data-start="00:14:30,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The world's biggest streaming service, Netflix, has posted better than expected earnings from April to June.</p>
+<p>全球最大流媒体平台Netflix公布4月至6月超预期盈利。</p>
+<p><button class="play-button sentence" id="s-00-14-37-480" data-start="00:14:37,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Boosted by the blockbuster final squid game season, revenues grew by 16% with what the company called a healthy member growth over the period with some 122 million viewers tuning into the South Korean phenomenon.</p>
+<p>现象级韩剧《鱿鱼游戏》最终季推动收入增长16%，期间会员数健康增长，约1.22亿观众观看该剧。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959106" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-53-078" data-start="00:14:53,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Netflix share price has nearly doubled over the last year as the streamer limited password sharing and raised its prices.</p>
+<p>过去一年Netflix股价近乎翻倍，因其限制密码共享并提高订阅价格。</p>
+<p><button class="play-button sentence" id="s-00-15-01-519" data-start="00:15:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Melissa Otto is head of visible alpha research at S&amp;P Global Market Intelligence and joins us now.</p>
+<p>标普全球市场财智Visible Alpha研究主管Melissa Otto加入讨论。</p>
+<p><button class="play-button sentence" id="s-00-15-08-565" data-start="00:15:08,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lovely. Lovely to have you with us.</p>
+<p>欢迎您的到来。</p>
+<p><button class="play-button sentence" id="s-00-15-10-974" data-start="00:15:10,974" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Melissa, what's been driving those numbers up?</p>
+<p>Melissa，哪些因素推动数据增长？</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959084" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-15-132" data-start="00:15:15,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you. It's great to be here. Netflix put up a solid quarter.</p>
+<p>谢谢，很高兴参与。Netflix本季度表现稳健。</p>
+<p><button class="play-button sentence" id="s-00-15-21-639" data-start="00:15:21,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They beat on operating profit margin, leading to better than expected earnings growth.</p>
+<p>其营业利润率超预期，带动盈利增长。</p>
+<p><button class="play-button sentence" id="s-00-15-27-958" data-start="00:15:27,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think when we look to the outlook, it was a little more challenging in terms of where the expectations were shaking out.</p>
+<p>但展望未来，预期达成仍具挑战性。</p>
+<p><button class="play-button sentence" id="s-00-15-38-481" data-start="00:15:38,481" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In terms of diversifying, we see them move into covering events such as live sports events.</p>
+<p>多元化方面，Netflix正涉足体育赛事直播等领域。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959053" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-46-519" data-start="00:15:46,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How key is that for streamers?</p>
+<p>这对流媒体平台多关键？</p>
+<p><button class="play-button sentence" id="s-00-15-48-988" data-start="00:15:48,988" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's certainly an exciting dimension to their content.</p>
+<p>这为其内容生态注入活力。</p>
+<p><button class="play-button sentence" id="s-00-15-53-686" data-start="00:15:53,686" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It brings in users, it drives engagement, it can support monetization, is clearly part of their growth strategy.</p>
+<p>吸引用户、提升参与度、助力变现，是其增长战略的重要组成。</p>
+<p><button class="play-button sentence" id="s-00-16-05-681" data-start="00:16:05,681" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in terms of consumer costing paying for Netflix, that has an impact to the fact that they've put up the prices and they stopped the password sharing.</p>
+<p>涨价与限制密码共享直接影响用户支出。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208959023" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-16-223" data-start="00:16:16,223" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was a good move, by Netflix, it looks like.</p>
+<p>这似乎是Netflix的明智之举。</p>
+<p><button class="play-button sentence" id="s-00-16-19-458" data-start="00:16:19,458" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Indeed, it was something that supported the past quarter.</p>
+<p>确实支撑了上季度业绩。</p>
+<p><button class="play-button sentence" id="s-00-16-23-666" data-start="00:16:23,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not this current quarter that they just released, but the quarter before, I think we saw, it really created some stability in their numbers that was a catalyst.</p>
+<p>虽未体现在最新季度，但前期数据已显现稳定趋势。</p>
+<p><button class="play-button sentence" id="s-00-16-38-678" data-start="00:16:38,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think coming into this quarter, it demonstrated there was continued stability, but I think as we look to the outlook, there is some uncertainty about the second half of the year.</p>
+<p>本季度延续稳定，但下半年展望仍存不确定性。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958988" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-51-559" data-start="00:16:51,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the way that they guided their operating profit margin was a little bit light of where expectations currently are.</p>
+<p>其营业利润率指引略低于当前预期。</p>
+<p><button class="play-button sentence" id="s-00-17-01-254" data-start="00:17:01,254" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The company guided to 29.5%, and the consensus right now is at 29.6%.</p>
+<p>公司指引29.5%，市场共识为29.6%。</p>
+<p><button class="play-button sentence" id="s-00-17-08-118" data-start="00:17:08,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's the next big thing?</p>
+<p>下一个增长点是什么？</p>
+<p><button class="play-button sentence" id="s-00-17-09-960" data-start="00:17:09,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Netflix has admitted for the first time that they have used AI in some of their content.</p>
+<p>Netflix首次承认在部分内容中使用AI技术。</p>
+<p><button class="play-button sentence" id="s-00-17-16-701" data-start="00:17:16,701" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think they've been using AI for a while.</p>
+<p>其AI应用已有时日。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958957" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-22-578" data-start="00:17:22,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In several different areas of the way that they align content to user preferences and the way that potentially ads could be surfaced in their new ad tier, these are clear use cases for AI for Netflix.</p>
+<p>从内容个性化推荐到广告分层投放，AI应用场景明确。</p>
+<p><button class="play-button sentence" id="s-00-17-45-466" data-start="00:17:45,466" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One area that not many people are really talking about that is in beta for the company is games.</p>
+<p>较少被讨论的测试领域是游戏业务。</p>
+<p><button class="play-button sentence" id="s-00-17-53-131" data-start="00:17:53,131" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Games could be an interesting source of engagement.</p>
+<p>游戏可能成为用户参与度新来源。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958922" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-57-554" data-start="00:17:57,554" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They haven't really driven this too much in the past, and no one's really cracked this code.</p>
+<p>过去进展有限，尚未有平台突破该领域。</p>
+<p><button class="play-button sentence" id="s-00-18-05-888" data-start="00:18:05,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think if they have a couple of hit games, that could really be an interesting revenue stream for them.</p>
+<p>若推出爆款游戏，或开辟新收入渠道。</p>
+<p><button class="play-button sentence" id="s-00-18-12-745" data-start="00:18:12,745" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it would be interesting, isn't it, because they'd have to break the established gaming environment.</p>
+<p>需突破现有游戏行业格局，这颇具看点。</p>
+<p><button class="play-button sentence" id="s-00-18-17-607" data-start="00:18:17,607" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Melissa Otto, thank you very much.</p>
+<p>感谢Melissa Otto的分享。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958900" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-19-463" data-start="00:18:19,463" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you. Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button sentence" id="s-00-18-21-138" data-start="00:18:21,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, tech, Supremo, Mark Zuckerberg and a group of meta-bord members have settled a multi-billion dollar lawsuit brought by shareholders of the company, formerly known as Facebook.</p>
+<p>Meta首席执行官马克·扎克伯格与董事会成员就股东提起的数十亿美元诉讼达成和解。</p>
+<p><button class="play-button sentence" id="s-00-18-32-767" data-start="00:18:32,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They demanded eight billion dollars in compensation for fines paid out to deal with alleged privacy violations.</p>
+<p>股东要求80亿美元赔偿，以弥补公司因隐私违规支付的罚款。</p>
+<p><button class="play-button sentence" id="s-00-18-40-215" data-start="00:18:40,215" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our North America correspondent, technology correspondent, Lily Jamali, has more.</p>
+<p>北美科技记者Lily Jamali带来详细报道。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-45-960" data-start="00:18:45,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This settlement means that Mark Zuckerberg and other executives and members of the board of directors won't have to testify in this case.</p>
+<p>和解意味着扎克伯格等高管无需出庭作证。</p>
+<p><button class="play-button sentence" id="s-00-18-54-330" data-start="00:18:54,330" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And legal experts, I've been speaking to, lament the fact that that means we may never get a full accounting of what was being discussed inside of the company and inside of the boardroom specifically with respect to the Cambridge Analytica scandal.</p>
+<p>法律专家担忧此举可能使剑桥分析事件的公司内部讨论细节永远无法公开。</p>
+<p><button class="play-button sentence" id="s-00-19-10-842" data-start="00:19:10,842" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And with respect to user privacy and issues surrounding that more generally, one expert told me that this allows meta to reframe the Cambridge Analytica scandal as one that was really a case of a few bad apples at the company and not a business model that depended on monetizing user data.</p>
+<p>专家指出，Meta或借此将事件定性为个别员工行为，而非其用户数据货币化商业模式的系统问题。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958826" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-33-771" data-start="00:19:33,771" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the settlement amount isn't known.</p>
+<p>具体和解金额尚未披露。</p>
+<p><button class="play-button sentence" id="s-00-19-36-726" data-start="00:19:36,726" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shareholders had asked for eight billion dollars.</p>
+<p>股东最初索赔80亿美元。</p>
+<p><button class="play-button sentence" id="s-00-19-40-402" data-start="00:19:40,402" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's possible that the settlement amount is less than that.</p>
+<p>最终金额可能低于该数字。</p>
+<p><button class="play-button sentence" id="s-00-19-44-543" data-start="00:19:44,543" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It may even be covered by what's known as D&amp;O insurance that covers directors and officers in situations just like this one.</p>
+<p>或由董事及高管责任险（D&amp;O保险）承担。</p>
+<p><button class="play-button sentence" id="s-00-19-53-880" data-start="00:19:53,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will ultimately get the settlement amount probably in a couple of weeks according to what experts tell me because the judge in this case, Chancellor Kathleen McCormick and the Delaware Court of Chanceory, will have to sign off on this settlement.</p>
+<p>据专家预测，特拉华衡平法院Kathleen McCormick法官将在数周内批准和解协议。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958789" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-10-269" data-start="00:20:10,269" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was Lily Jamali there.</p>
+<p>Lily Jamali报道。</p>
+<p><button class="play-button sentence" id="s-00-20-13-240" data-start="00:20:13,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, across Europe, the big summer tourism season is well underway and so are the protests from local residents in some of the biggest travel hotspots.</p>
+<p>欧洲夏季旅游旺季来临，热门景点当地居民抗议活动同步涌现。</p>
+<p><button class="play-button sentence" id="s-00-20-21-777" data-start="00:20:21,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But many who live in the most popular destinations are complaining about the sheer numbers, the global tourism body.</p>
+<p>全球旅游机构称，居民主要抱怨游客数量激增。</p>
+<p><button class="play-button sentence" id="s-00-20-29-000" data-start="00:20:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The world travel and tourism council has just released its own framework for dealing with this issue.</p>
+<p>世界旅游理事会发布应对框架。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-37-318" data-start="00:20:37,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You need to have a table where all the stakeholders get around there and then that this is what's happening very well now in Barcelona.</p>
+<p>巴塞罗那正通过多方利益相关者协商机制有效解决问题。</p>
+<p><button class="play-button sentence" id="s-00-20-45-059" data-start="00:20:45,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know we've seen the demonstrations in Barcelona, but what they've done rather brilliantly is they sat down with the local people and said, what benefits do you want to see accruing from travel and tourism?</p>
+<p>当地政府与居民协商旅游收益分配方案。</p>
+<p><button class="play-button sentence" id="s-00-20-54-646" data-start="00:20:54,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And a lot of them have said they've got a fantastic music concert hall that they want to be at but they know that it kind of needs cross subsidies.</p>
+<p>居民希望旅游收入补贴音乐厅等文化设施。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-01-939" data-start="00:21:01,939" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They said, okay, well, if we're getting money from tourism, we will make sure that that concert hall has those subsidies.</p>
+<p>政府承诺将旅游收入反哺文化事业。</p>
+<p><button class="play-button sentence" id="s-00-21-07-979" data-start="00:21:07,979" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're very powerful believers in their own language.</p>
+<p>当地居民强烈维护加泰罗尼亚语传承。</p>
+<p><button class="play-button sentence" id="s-00-21-11-065" data-start="00:21:11,065" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Catalanas, we know very proud Catalan speakers, they want to ensure that some of the monies from tourism can actually support that cultural heritage that they've had.</p>
+<p>要求部分旅游收入用于支持语言文化遗产保护。</p>
+<p><button class="play-button sentence" id="s-00-21-20-053" data-start="00:21:20,053" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then if local people see that, that will be beneficial.</p>
+<p>此举有助于获得居民支持。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958716" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-23-765" data-start="00:21:23,765" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The other big thing is housing.</p>
+<p>另一焦点是住房问题。</p>
+<p><button class="play-button sentence" id="s-00-21-25-819" data-start="00:21:25,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes tourism gets blamed for lack of local housing.</p>
+<p>旅游业常被指导致住房短缺。</p>
+<p><button class="play-button sentence" id="s-00-21-30-433" data-start="00:21:30,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And generally, this is not correct because there's very many different reasons for pressure on housing, as we all know, it is complex.</p>
+<p>实则住房压力成因复杂多元。</p>
+<p><button class="play-button sentence" id="s-00-21-40-777" data-start="00:21:40,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But again, if you sit down with local residents and understand what is going on, then you can have that debate.</p>
+<p>需通过对话厘清问题本质。</p>
+<p><button class="play-button sentence" id="s-00-21-46-901" data-start="00:21:46,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I absolutely believe there is room for traditional hotels.</p>
+<p>传统酒店、房屋交换平台、</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958689" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-50-632" data-start="00:21:50,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is room for companies that run like house swaps.</p>
+<p>邮轮公司、</p>
+<p><button class="play-button sentence" id="s-00-21-54-847" data-start="00:21:54,847" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's room for cruise lines.</p>
+<p>Airbnb及私人租赁业态</p>
+<p><button class="play-button sentence" id="s-00-21-56-849" data-start="00:21:56,849" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's room for Airbnb and private rental.</p>
+<p>可共存发展。</p>
+<p><button class="play-button sentence" id="s-00-22-00-118" data-start="00:22:00,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you can see the full interview on talking business with Bentonms and this weekend right here on BBC News.</p>
+<p>完整访谈将于本周末BBC《商业对话》播出。</p>
+<p><button class="play-button sentence" id="s-00-22-05-917" data-start="00:22:05,917" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, farmers in the UK are dealing with the financial impact of a warming climate.</p>
+<p>英国农民正应对气候变暖的经济冲击。</p>
+<p><button class="play-button sentence" id="s-00-22-13-798" data-start="00:22:13,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many dairy farmers rely on grass as a major feedstock for their cows.</p>
+<p>多数奶农依赖牧草作为主要饲料。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958660" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-19-307" data-start="00:22:19,307" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this year's long dry spring, the warmest on record, has left the ground parched and dried out the grass.</p>
+<p>今年创纪录的干旱春季导致牧草枯竭。</p>
+<p><button class="play-button sentence" id="s-00-22-26-828" data-start="00:22:26,828" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Farmers have been forced to tap into food stocks, normally kept aside for the winter months.</p>
+<p>农民被迫动用冬季储备饲料。</p>
+<p><button class="play-button sentence" id="s-00-22-32-739" data-start="00:22:32,739" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stocks which will have to be replenished at cost.</p>
+<p>补货将增加额外成本。</p>
+<p><button class="play-button sentence" id="s-00-22-36-127" data-start="00:22:36,127" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> OK, join me now. It's Richard Cornock, a dairy farmer in Gloucestershire whose days away from running out of grass to feed his cows.</p>
+<p>连线格洛斯特郡奶农Richard Cornock，其牧场牧草即将耗尽。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958634" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-45-240" data-start="00:22:45,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, welcome to the program. Just just how bad is it for you, Richard?</p>
+<p>当前情况有多严峻？</p>
+<p><button class="play-button sentence" id="s-00-22-49-779" data-start="00:22:49,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, this is probably the worst drought I've experienced in my farming career.</p>
+<p>这是我从业以来最严重干旱。</p>
+<p><button class="play-button sentence" id="s-00-22-54-537" data-start="00:22:54,537" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've seen plenty of dry times before.</p>
+<p>往年也有干旱，</p>
+<p><button class="play-button sentence" id="s-00-22-56-742" data-start="00:22:56,742" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've never seen one that started so early in the spring and continued right through.</p>
+<p>但今年春季旱情来得早且持续至今。</p>
+<p><button class="play-button sentence" id="s-00-23-02-404" data-start="00:23:02,404" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what has it left me? I'm just wondering where it's left you now.</p>
+<p>您现在面临哪些具体困难？</p>
+<p><button class="play-button sentence" id="s-00-23-07-275" data-start="00:23:07,275" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are the options to hand for you?</p>
+<p>有哪些应对方案？</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958610" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-09-991" data-start="00:23:09,991" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, so I've actually just been sourcing some silage from around the area.</p>
+<p>正在周边采购青贮饲料。</p>
+<p><button class="play-button sentence" id="s-00-23-15-495" data-start="00:23:15,495" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've already started buying in feed to feed to the cows in the next couple of weeks.</p>
+<p>未来数周需购买精饲料喂养。</p>
+<p><button class="play-button sentence" id="s-00-23-20-336" data-start="00:23:20,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Normally, I'd graze through the entire summer right in the fields and then be plenty of grass.</p>
+<p>往年夏季可完全依赖牧场放牧。</p>
+<p><button class="play-button sentence" id="s-00-23-25-332" data-start="00:23:25,332" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But literally, I'm going to run out of grass on the farm within probably 10 days.</p>
+<p>如今牧场牧草仅够维持10天。</p>
+<p><button class="play-button sentence" id="s-00-23-29-261" data-start="00:23:29,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I'm going to have to feed the cows.</p>
+<p>必须转为舍饲喂养。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958588" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-31-384" data-start="00:23:31,384" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would never normally do that.</p>
+<p>这非常规操作。</p>
+<p><button class="play-button sentence" id="s-00-23-33-224" data-start="00:23:33,224" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's seriously expensive things to have to do.</p>
+<p>成本极其高昂。</p>
+<p><button class="play-button sentence" id="s-00-23-36-004" data-start="00:23:36,004" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And how does that cut into your margins, Richard?</p>
+<p>对利润影响多大？</p>
+<p><button class="play-button sentence" id="s-00-23-39-240" data-start="00:23:39,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, massive impact.</p>
+<p>冲击巨大。</p>
+<p><button class="play-button sentence" id="s-00-23-40-529" data-start="00:23:40,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The problem I've really got is that I can't increase the price of my milk.</p>
+<p>牛奶收购价由采购方决定，</p>
+<p><button class="play-button sentence" id="s-00-23-45-079" data-start="00:23:45,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I get told the price by the person who buys it or the company that buys it from me.</p>
+<p>我们无法自主提价。</p>
+<p><button class="play-button sentence" id="s-00-23-49-928" data-start="00:23:49,928" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I have to take this hit, regardless of how much I spend.</p>
+<p>成本压力完全由农场承担。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958565" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-54-653" data-start="00:23:54,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I understand.</p>
+<p>理解。</p>
+<p><button class="play-button sentence" id="s-00-23-55-933" data-start="00:23:55,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've just been reading into this.</p>
+<p>据了解，</p>
+<p><button class="play-button sentence" id="s-00-23-58-920" data-start="00:23:58,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your colleagues up in Scotland aren't doing too badly.</p>
+<p>苏格兰同行受影响较小？</p>
+<p><button class="play-button sentence" id="s-00-24-01-873" data-start="00:24:01,873" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What can you tell us about that compared to where you are in the UK?</p>
+<p>两地差异如何？</p>
+<p><button class="play-button sentence" id="s-00-24-05-677" data-start="00:24:05,677" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's unbelievable.</p>
+<p>差异惊人。</p>
+<p><button class="play-button sentence" id="s-00-24-07-071" data-start="00:24:07,071" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a massive divide between different parts of the country.</p>
+<p>英国各地旱情两极分化。</p>
+<p><button class="play-button sentence" id="s-00-24-11-700" data-start="00:24:11,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Down here in the southwest and other parts of this area, I've got really a big problem with drought.</p>
+<p>西南部等地遭遇严重干旱，</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958541" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-18-916" data-start="00:24:18,916" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yet you've got the absolute opposite up in Scotland and some other parts of the UK.</p>
+<p>而苏格兰等地降水充沛。</p>
+<p><button class="play-button sentence" id="s-00-24-23-159" data-start="00:24:23,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've had plenty of rain.</p>
+<p>牧草生长良好，</p>
+<p><button class="play-button sentence" id="s-00-24-24-432" data-start="00:24:24,432" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The grass has grown.</p>
+<p>堪称丰年。</p>
+<p><button class="play-button sentence" id="s-00-24-25-374" data-start="00:24:25,374" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're having a really great sort of season, if you like.</p>
+<p>他们正经历一个相当不错的季节，如果你愿意这么形容的话。</p>
+<p><button class="play-button sentence" id="s-00-24-28-575" data-start="00:24:28,575" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's just the vagaries of the UK climate, as we well know when we go on holidays.</p>
+<p>这只是英国气候的变幻无常，正如我们度假时熟知的那样。</p>
+<p><button class="play-button sentence" id="s-00-24-33-785" data-start="00:24:33,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Richard, if we know that the climate is warming and there are other parts of the world that also dairy farm, are there any lessons that you're now looking at to implement on your farm from other parts of the world?</p>
+<p>理查德，既然我们知道气候在变暖，而世界上其他地区也有乳业农场，你是否正在考虑从其他地区借鉴经验应用到你的农场？</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958512" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-47-058" data-start="00:24:47,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I'm not sure about other parts of the world, but it is very interesting.</p>
+<p>嗯，我不太确定其他地区的情况，但这很有趣。</p>
+<p><button class="play-button sentence" id="s-00-24-51-746" data-start="00:24:51,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the moment, I'm in a situation where last year was a bumper crop of grass this year, there's none.</p>
+<p>目前，我面临的情况是去年牧草丰收，而今年却颗粒无收。</p>
+<p><button class="play-button sentence" id="s-00-24-57-518" data-start="00:24:57,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's very difficult to plan when you get this change all the time.</p>
+<p>当这种变化持续发生时，制定计划非常困难。</p>
+<p><button class="play-button sentence" id="s-00-25-01-878" data-start="00:25:01,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we go into climate change and it's likely it's all the time, then I can certainly adapt how I farm.</p>
+<p>如果我们进入气候变化阶段，且这种变化可能持续，那我当然可以调整耕作方式。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958492" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-07-468" data-start="00:25:07,468" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For example, the Mays crop, I normally plant in May this year, the season for planting was probably April.</p>
+<p>例如，往年我在五月种植的玉米作物，今年适合种植的时间可能是四月。</p>
+<p><button class="play-button sentence" id="s-00-25-14-053" data-start="00:25:14,053" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so you plant earlier, so it gives a better chance for the plant to get established before the dry time comes.</p>
+<p>因此你提前种植，让作物在干旱期到来前更好地扎根。</p>
+<p><button class="play-button sentence" id="s-00-25-19-640" data-start="00:25:19,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But you can also, well, I've probably influenced by what goes on, maybe in the continent, is plant different types of grass or something that's more direct tolerance.</p>
+<p>但你也可以——嗯，我可能受到欧洲大陆做法的影响——种植不同品种的牧草或更具直接耐受性的作物。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958471" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-28-245" data-start="00:25:28,245" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So farming will adapt to it, because we're a very good and resilient change.</p>
+<p>农业会适应变化，因为我们非常擅长且适应力强。</p>
+<p><button class="play-button sentence" id="s-00-25-33-359" data-start="00:25:33,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We do change with what goes on.</p>
+<p>我们确实会随环境变化而调整。</p>
+<p><button class="play-button sentence" id="s-00-25-35-166" data-start="00:25:35,166" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's not the end of the world, but at the moment we're in a very flux situation where no one's really sure whether next year will be like this or whether we've backed up the loss of grass and be fine.</p>
+<p>所以这不是世界末日，但目前我们处于高度不确定的状态，没人能确定明年是否如此，或是我们能否弥补牧草损失并恢复正常。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958454" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-45-969" data-start="00:25:45,969" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You are masters of adaptation, so I'd love my cap to you.</p>
+<p>你们是适应大师，我向你们致敬。</p>
+<p><button class="play-button sentence" id="s-00-25-49-323" data-start="00:25:49,323" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for your time, Richard Cornwall.</p>
+<p>非常感谢您的时间，理查德·康沃尔。</p>
+<p><button class="play-button sentence" id="s-00-25-52-533" data-start="00:25:52,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stay with us.</p>
+<p>请继续关注我们。</p>
+<p><button class="play-button sentence" id="s-00-25-53-336" data-start="00:25:53,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is BBC News.</p>
+<p>这里是BBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-26-12-440" data-start="00:26:12,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello there.</p>
+<p>大家好。</p>
+<p><button class="play-button sentence" id="s-00-26-13-122" data-start="00:26:13,122" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trying to make plans for outdoor activities this weekend could be a little tricky, as the weather story is certainly on the change.</p>
+<p>本周末制定户外活动计划可能有些棘手，因为天气情况肯定会有变化。</p>
+<p><button class="play-button sentence" id="s-00-26-20-102" data-start="00:26:20,102" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a potential for some sharp and thundery downpours.</p>
+<p>可能会出现强雷暴雨。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958416" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-23-446" data-start="00:26:23,446" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not all of us will see them, but some could see some real torrential downpours over the next few days.</p>
+<p>并非所有地区都会遇到，但未来几天部分地区可能出现真正的倾盆大雨。</p>
+<p><button class="play-button sentence" id="s-00-26-29-092" data-start="00:26:29,092" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Low pressure now starting to dominate the story.</p>
+<p>低压现在开始主导天气形势。</p>
+<p><button class="play-button sentence" id="s-00-26-31-707" data-start="00:26:31,707" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ahead of it, we've been tapping into some very warm and humid air coming up from the south.</p>
+<p>在此之前，我们一直受来自南方的温暖潮湿空气影响。</p>
+<p><button class="play-button sentence" id="s-00-26-36-691" data-start="00:26:36,691" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're going to start off on Friday, not a right off by any means.</p>
+<p>因此周五开始时天气并非完全糟糕。</p>
+<p><button class="play-button sentence" id="s-00-26-40-198" data-start="00:26:40,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A few sharp showers moving through Wales, Northern England into Scotland and Northern Ireland.</p>
+<p>短暂强降雨将经过威尔士、英格兰北部进入苏格兰和北爱尔兰。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958394" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-45-012" data-start="00:26:45,012" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Possibly some thundery downpours across the East Midlands, Lincolnshire and parts of Yorkshire, but also some sunny spells and still another humid story, top temperatures of 29 degrees across Easton, England.</p>
+<p>东米德兰兹、林肯郡和约克郡部分地区可能出现雷暴雨，但也会有晴朗时段且保持潮湿，英格兰伊斯顿最高气温达29度。</p>
+<p><button class="play-button sentence" id="s-00-26-57-520" data-start="00:26:57,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now as we move out of Friday into the early hours of Saturday morning is when we're likely to see more torrential downpours developing, pushing in from the southeast again with that humidity, some of them could be quite heavy and thundery.</p>
+<p>从周五过渡到周六凌晨时，可能会出现更多倾盆大雨，伴随着潮湿空气再次从东南方向涌入，部分降雨可能相当猛烈并伴有雷电。</p>
+<p><button class="play-button sentence" id="s-00-27-11-178" data-start="00:27:11,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So into Saturday, that rain is going to spill its way steadily northwards throughout the day, gradually pushing its way up into South East Scotland, gradually improving behind notes that will be fresher for all 18 to 24 degrees the overall high.</p>
+<p>进入周六后，降雨将持续向北推进，逐渐蔓延至苏格兰东南部，之后天气逐渐好转，气温将更凉爽，整体最高气温在18至24度之间。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1BduDzJEXB/?t=-2208958353" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-26-668" data-start="00:27:26,668" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not much change either.</p>
+<p>周日到周一变化不大。</p>
+<p><button class="play-button sentence" id="s-00-27-28-358" data-start="00:27:28,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sunday into Monday, it stays fresher and more unsettled.</p>
+<p>天气保持凉爽且更不稳定。</p>
+<p><button class="play-button sentence" id="s-00-27-31-890" data-start="00:27:31,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For details in your area, don't forget to check out the BBC app.</p>
+<p>如需了解您所在地区的详细信息，别忘了查看BBC应用程序。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

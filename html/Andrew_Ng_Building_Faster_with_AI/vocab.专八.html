@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Andrew Ng: Building Faster with AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Ng shares insights on accelerating startup success through AI, emphasizing execution speed, concrete ideas, and leveraging AI tools like agentic workflows and coding assistance. He highlights the importance of the application layer for opportunities and rapid prototyping to validate ideas quickly.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>📚 专八生词表</h1>
+<ul>
+<li><a href="https://dict.eudic.net/dicts/en/accessible" target="_blank">accessible</a>  [əkˈsesəbl] adj. 易于得到(接近、达到的)</li>
+<li><a href="https://dict.eudic.net/dicts/en/broke" target="_blank">broke</a>  [brəʊk]   adj. 彻底破产的，身无分文的</li>
+<li><a href="https://dict.eudic.net/dicts/en/browser" target="_blank">browser</a>  [ˈbraʊzə] n. 浏览器</li>
+<li><a href="https://dict.eudic.net/dicts/en/converge" target="_blank">converge</a>  [kənˈvɜːdʒ] v. 聚集，集中一点，汇合</li>
+<li><a href="https://dict.eudic.net/dicts/en/critique" target="_blank">critique</a>  [krɪˈtiːk]  n. 评论性文章(书籍)，评论</li>
+<li><a href="https://dict.eudic.net/dicts/en/diode" target="_blank">diode</a>  [ˈdaɪəʊd] n. 二极管</li>
+<li><a href="https://dict.eudic.net/dicts/en/downstream" target="_blank">downstream</a>  [ˌdaʊnˈstriːm]  adv.&amp;adj. 在下游，顺流地，下游的</li>
+<li><a href="https://dict.eudic.net/dicts/en/dynamics" target="_blank">dynamics</a>  [daɪˈnæmɪks]    n. 力学，动力学</li>
+<li><a href="https://dict.eudic.net/dicts/en/empower" target="_blank">empower</a>  [ɪmˈpaʊə] v. 授权于</li>
+<li><a href="https://dict.eudic.net/dicts/en/ethical" target="_blank">ethical</a>  [ˈeθɪkəl] adj. 伦理的，道德的，合乎道德的</li>
+<li><a href="https://dict.eudic.net/dicts/en/exacerbate" target="_blank">exacerbate</a>  [ɪɡˈzæsəbeɪt]   v. 使加剧，使恶化</li>
+<li><a href="https://dict.eudic.net/dicts/en/falsify" target="_blank">falsify</a>  [ˈfɔːlsɪfaɪ]  v. 窜改，伪造</li>
+<li><a href="https://dict.eudic.net/dicts/en/flip" target="_blank">flip</a>  [flɪp]  v. 1. 把…抛向空中，捻，快速地翻转(猛然移动) 2. 大怒，强烈地反应 n. 轻弹(打、抛)</li>
+<li><a href="https://dict.eudic.net/dicts/en/generate" target="_blank">generate</a>  [ˈdʒenəreɪt]    v. 使发生，引起，生成</li>
+<li><a href="https://dict.eudic.net/dicts/en/hack" target="_blank">hack</a>  [hæk] n. 1. 整脚作家，雇佣文人 2. 供出租的马，骑用马 v. 1. 砍，乱劈 2. 私自存取(计算机化存储系统)</li>
+<li><a href="https://dict.eudic.net/dicts/en/haven" target="_blank">haven</a>  [ˈheɪvən] n. 安全之地，栖息处，避难所</li>
+<li><a href="https://dict.eudic.net/dicts/en/holding" target="_blank">holding</a>  [ˈhəʊldɪŋ]    n. 1. 佃户租种的土地 2. (pl)所有物，私有财产</li>
+<li><a href="https://dict.eudic.net/dicts/en/hype" target="_blank">hype</a>  [haɪp]  v. 言过其实地宣传 n. 天花乱坠的宣传报道</li>
+<li><a href="https://dict.eudic.net/dicts/en/hypothesis" target="_blank">hypothesis</a>  [haɪˈpɒθəsɪs]   n. 假设，假定，假说</li>
+<li><a href="https://dict.eudic.net/dicts/en/impart" target="_blank">impart</a>  [ɪmˈpɑːt]   v. 1. 传授，灌输，给予 2. 告知，通知</li>
+<li><a href="https://dict.eudic.net/dicts/en/infrastructure" target="_blank">infrastructure</a>  [ˈɪnfrəˌstrʌktʃə]   n. 基础结构，基本设施(如运输、动力、通讯等)</li>
+<li><a href="https://dict.eudic.net/dicts/en/literally" target="_blank">literally</a>  [ˈlɪtərəlɪ]   adv. 1. 逐字地，确实地 2. (用以加强语气)简直，毫不夸张地</li>
+<li><a href="https://dict.eudic.net/dicts/en/maze" target="_blank">maze</a>  [meɪz]  n. 1. 迷宫 2. 混乱，迷惑</li>
+<li><a href="https://dict.eudic.net/dicts/en/momentum" target="_blank">momentum</a>  [məʊˈmentəm]    n. 1. 动力，冲力，势头 2. 动量</li>
+<li><a href="https://dict.eudic.net/dicts/en/nonetheless" target="_blank">nonetheless</a>  [ˌnʌnðəˈles]  adv. 尽管如此，然而</li>
+<li><a href="https://dict.eudic.net/dicts/en/odds" target="_blank">odds</a>  [ɒdz]   n. 1. 可能性，机会 2. 差异 3. 投注赔率 || at odds意见不一致</li>
+<li><a href="https://dict.eudic.net/dicts/en/orchestrate" target="_blank">orchestrate</a>  [ˈɔːkɪstreɪt] v. 1. 为管弦乐团谱写(音乐) 2. 筹划，精心安排</li>
+<li><a href="https://dict.eudic.net/dicts/en/palette" target="_blank">palette</a>  [ˈpælət]  n. 调色板</li>
+<li><a href="https://dict.eudic.net/dicts/en/pivot" target="_blank">pivot</a>  [ˈpɪvət]  n. 1. 支点，枢轴 2. 中心或最重要的人或事物</li>
+<li><a href="https://dict.eudic.net/dicts/en/portfolio" target="_blank">portfolio</a>  [pɔːtˈfəʊlɪəʊ]    n. 1. 文件夹，公事包 2. 有价证券清单 3. 部长(大臣的)职位</li>
+<li><a href="https://dict.eudic.net/dicts/en/pro" target="_blank">pro</a>  [prəʊ] n. (pl)内行，职业选手 n. 赞成的论点或理由 || the pros and cons赞成和反对的两方面的意见</li>
+<li><a href="https://dict.eudic.net/dicts/en/prototype" target="_blank">prototype</a>  [ˈprəʊtətaɪp] n. 原型，典型</li>
+<li><a href="https://dict.eudic.net/dicts/en/quick" target="_blank">quick</a>  [kwɪk]    n. (指甲、趾甲下的)嫩肉</li>
+<li><a href="https://dict.eudic.net/dicts/en/rigorous" target="_blank">rigorous</a>  [ˈrɪɡərəs]  adj. 1. 严厉的，严格的 2. 精确的，严密的 3. (指天气等)严酷的</li>
+<li><a href="https://dict.eudic.net/dicts/en/schema" target="_blank">schema</a>  [ˈskiːmə]   n. 图解，略图，纲要</li>
+<li><a href="https://dict.eudic.net/dicts/en/slash" target="_blank">slash</a>  [slæʃ]    v. 1. 挥砍，劈刺 2. 大幅度裁减或削减(某物) 3. 在(衣服)上开长缝作装饰 4. 严厉批评 n. 1. 砍，抽 2. 长的切口或裂口 3. 衣服的叉</li>
+<li><a href="https://dict.eudic.net/dicts/en/terrestrial" target="_blank">terrestrial</a>  [təˈrestrɪəl] adj. 1. 陆地的，陆栖的 2. 地球的</li>
+<li><a href="https://dict.eudic.net/dicts/en/trying" target="_blank">trying</a>  [ˈtraɪɪŋ]   adj. 极为恼人的，令人难堪的</li>
+<li><a href="https://dict.eudic.net/dicts/en/validate" target="_blank">validate</a>  [ˈvælɪdeɪt] v. 使生效，证实</li>
+<li><a href="https://dict.eudic.net/dicts/en/weird" target="_blank">weird</a>  [wɪəd]    adj. 古怪的，奇异的，荒谬的</li>
+</ul>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Has the MAGA movement arrived in Japan?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The results show Japanese politics entering an unstable era, with the long-dominant LDP losing grip due to scandals and rising populism, while inflation and immigration emerge as key election issues.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Has the MAGA movement arrived in Japan?</h1>
+<p>【经济学人播客 20250722 MAGA浪潮席卷日本？】</p>
+<p>Summary:
+The results show Japanese politics entering an unstable era, with the long-dominant LDP losing grip due to scandals and rising populism, while inflation and immigration emerge as key election issues.</p>
+<p>摘要：
+结果显示日本政治进入不稳定时期，长期主导的自民党因丑闻和民粹主义崛起而失去掌控力，通胀和移民成为选举关键议题。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 9 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The results are emblematic of how Japanese politics is entering a very unstable era.</p>
+<p>这标志着日本政治正进入一个非常不稳定的时代。</p>
+<p><button class="play-button sentence" id="s-00-00-04-960" data-start="00:00:04,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you mentioned the ODP has been dominant in Japanese politics for seven decades.</p>
+<p>你提到自民党在日本政坛主导了七十年。</p>
+<p><button class="play-button sentence" id="s-00-00-09-439" data-start="00:00:09,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's gone wrong here?</p>
+<p>哪里出了问题？</p>
+<p><button class="play-button sentence" id="s-00-00-10-546" data-start="00:00:10,546" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How is it lost its grip?</p>
+<p>它是如何失去掌控的？</p>
+<p><button class="play-button sentence" id="s-00-00-11-599" data-start="00:00:11,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The rise of San Tezdo has got people in Japan wondering is this style of anti-immigration populism.</p>
+<p>三Tezdo党的崛起让日本人思考这种反移民民粹主义风格。</p>
+<p><button class="play-button sentence" id="s-00-00-17-901" data-start="00:00:17,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that here to stay in Japan as well?</p>
+<p>它是否也会在日本扎根？</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959979" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-20-160" data-start="00:00:20,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome to the Intelligence Podcast.</p>
+<p>欢迎来到《情报播客》。</p>
+<p><button class="play-button sentence" id="s-00-00-22-079" data-start="00:00:22,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm your host, Jason Palmer.</p>
+<p>我是主持人杰森·帕尔默。</p>
+<p><button class="play-button sentence" id="s-00-00-23-518" data-start="00:00:23,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Remember, if you want to listen to the whole episode, click the link in the description below.</p>
+<p>如果想收听完整节目，请点击下方描述中的链接。</p>
+<p><button class="play-button sentence" id="s-00-00-27-678" data-start="00:00:27,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell me about the election results from yesterday.</p>
+<p>谈谈昨天的选举结果。</p>
+<p><button class="play-button sentence" id="s-00-00-30-160" data-start="00:00:30,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Opera House elections in Japan usually don't generate that much excitement, but this one turned out to be a big story.</p>
+<p>日本参议院选举通常不会引起太大关注，但这次却成了大新闻。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959963" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-36-240" data-start="00:00:36,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ruling liberal democratic party and its junior partner lost its majority for the first time in over a decade.</p>
+<p>执政的自民党及其盟友十多年来首次失去多数席位。</p>
+<p><button class="play-button sentence" id="s-00-00-41-776" data-start="00:00:41,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a big blow for Prime Minister Ishibashi Gero, who came into office last October and saw his ruling coalition lose its majority in the lower house election as well last year.</p>
+<p>这对去年十月上任的岸田文雄首相是一大打击，他的执政联盟在去年众议院选举中也失去了多数席位。</p>
+<p><button class="play-button sentence" id="s-00-00-51-709" data-start="00:00:51,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the Prime Minister's party lost its majority in both houses now?</p>
+<p>所以首相的政党现在在两院都失去了多数席位？</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959944" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-55-374" data-start="00:00:55,374" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What does that mean for him and for politics in general?</p>
+<p>这对他和整体政治意味着什么？</p>
+<p><button class="play-button sentence" id="s-00-00-58-580" data-start="00:00:58,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So to be very clear, the LDP is still the largest political force in Japanese politics.</p>
+<p>需要明确的是，自民党仍是日本政坛最大的政治力量。</p>
+<p><button class="play-button sentence" id="s-00-01-03-868" data-start="00:01:03,868" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The centre left opposition is very weak and unable to pose a serious challenge.</p>
+<p>中左翼反对派非常弱小，无法构成严重挑战。</p>
+<p><button class="play-button sentence" id="s-00-01-08-707" data-start="00:01:08,707" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's not like the LDP has been unseated.</p>
+<p>所以自民党并未被推翻。</p>
+<p><button class="play-button sentence" id="s-00-01-11-016" data-start="00:01:11,016" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're still the ruling party, but the results have been pretty disastrous.</p>
+<p>他们仍是执政党，但选举结果相当糟糕。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959924" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-15-238" data-start="00:01:15,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The result are emblematic of how Japanese politics is entering a very unstable era.</p>
+<p>这标志着日本政治正进入一个非常不稳定的时代。</p>
+<p><button class="play-button sentence" id="s-00-01-19-989" data-start="00:01:19,989" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a country where the LDP has dominated for over seven decades, but we're starting to see the LDP's grip on power full.</p>
+<p>自民党在这个国家主导了七十多年，但我们开始看到其权力掌控力减弱。</p>
+<p><button class="play-button sentence" id="s-00-01-27-459" data-start="00:01:27,459" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another thing that the result signaled is this arrival of social media led populism in Japan.</p>
+<p>选举结果还预示着社交媒体驱动的民粹主义在日本的出现。</p>
+<p><button class="play-button sentence" id="s-00-01-33-519" data-start="00:01:33,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We saw this party called San Seto, or in English they go by the Do It Yourself party, who ran on a Japanese first platform, and clearly inspired by the Maga movement in Trump and America, gained significant number of seats as well.</p>
+<p>我们看到名为"三Seto党"（英文称DIY党）的政党以"日本优先"为纲领，明显受到特朗普和美国MAGA运动的启发，也获得了大量席位。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-47-284" data-start="00:01:47,284" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what was it that voters were actually voting on?</p>
+<p>选民实际投票关注的是什么？</p>
+<p><button class="play-button sentence" id="s-00-01-49-774" data-start="00:01:49,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What were the talking points of the election?</p>
+<p>选举的讨论焦点是什么？</p>
+<p><button class="play-button sentence" id="s-00-01-52-264" data-start="00:01:52,264" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So a big talking point of this election was inflation, and economic policy was at the centre of the debate.</p>
+<p>这次选举的一大焦点是通胀，经济政策是辩论的核心。</p>
+<p><button class="play-button sentence" id="s-00-01-59-327" data-start="00:01:59,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Japan's economy is going through a major transition.</p>
+<p>日本经济正经历重大转型。</p>
+<p><button class="play-button sentence" id="s-00-02-02-858" data-start="00:02:02,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Japan has been in a deflationary environment for decades, but now we start to see prices going up, and we also had this rice prices, on beginning last year as well, and these rising prices have been a huge shock to the general public.</p>
+<p>日本几十年来处于通缩环境，但现在开始看到价格上涨，去年初大米价格也上涨，这些涨价对公众造成巨大冲击。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-15-804" data-start="00:02:15,804" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what was also interesting about this campaign is we start seeing immigration be featured as a hot-button issue.</p>
+<p>这次竞选另一个有趣之处是移民开始成为热点议题。</p>
+<p><button class="play-button sentence" id="s-00-02-22-556" data-start="00:02:22,556" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I would say Japan's immigrant population is much smaller compared to Western countries like America or Europe, or but despite Japan's reputation as this kind of Intular closed-off island country, its foreign population is increasing steadily.</p>
+<p>日本的移民人口远少于欧美国家，但尽管日本以封闭岛国著称，其外国人口仍在稳步增长。</p>
+<p><button class="play-button sentence" id="s-00-02-39-039" data-start="00:02:39,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you mentioned the LDP has been dominant in Japanese politics for seven decades.</p>
+<p>你提到自民党在日本政坛主导了七十年。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959836" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-43-442" data-start="00:02:43,442" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's gone wrong here?</p>
+<p>哪里出了问题？</p>
+<p><button class="play-button sentence" id="s-00-02-44-730" data-start="00:02:44,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How is it lost its grip?</p>
+<p>它是如何失去掌控的？</p>
+<p><button class="play-button sentence" id="s-00-02-45-966" data-start="00:02:45,966" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of this began with the assassination of Abyssinzo, a former Prime Minister in the summer of 2022.</p>
+<p>这一切始于2022年夏天前首相安倍晋三遇刺。</p>
+<p><button class="play-button sentence" id="s-00-02-52-233" data-start="00:02:52,233" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the assassination revealed the LDP's ties to a group called the Unification Church, also known as the Moonies, which is a cult-like group.</p>
+<p>刺杀事件揭露了自民党与统一教会的关联，该组织类似邪教。</p>
+<p><button class="play-button sentence" id="s-00-03-00-400" data-start="00:03:00,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then soon after there was a political funds scandal that further tainted the party's image, and this was really disappointing for voters and gave people the impression that the LDP is corrupt and out of touch.</p>
+<p>随后又出现政治资金丑闻，进一步损害了党的形象，令选民失望，让人们觉得自民党腐败且脱离群众。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959807" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-12-799" data-start="00:03:12,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there are also structural changes that are influencing the LDP's grip on power.</p>
+<p>还有一些结构性变化影响着自民党的权力掌控。</p>
+<p><button class="play-button sentence" id="s-00-03-18-000" data-start="00:03:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the media landscape in Japan is changing a lot.</p>
+<p>日本媒体格局正在巨变。</p>
+<p><button class="play-button sentence" id="s-00-03-21-321" data-start="00:03:21,321" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in Japan legacy media like newspapers and broadcasters are still very influential.</p>
+<p>传统媒体如报纸和广播在日本仍很有影响力。</p>
+<p><button class="play-button sentence" id="s-00-03-26-769" data-start="00:03:26,769" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But nonetheless, younger people are drawn to online sources like YouTube and Instagram and TikTok.</p>
+<p>但年轻人更倾向于YouTube、Instagram和TikTok等网络平台。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959787" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-32-597" data-start="00:03:32,597" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is opening the door for younger political parties to speak directly to voters and appeal to them as an appealing alternative to establish mainstream parties.</p>
+<p>这为新兴政党打开了直接与选民沟通的大门，成为主流政党外的有吸引力选择。</p>
+<p><button class="play-button sentence" id="s-00-03-44-073" data-start="00:03:44,073" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this idea of modernizing or innovating campaign methods is something that the LDP has struggled to do.</p>
+<p>而自民党在竞选方式现代化或创新方面一直举步维艰。</p>
+<p><button class="play-button sentence" id="s-00-03-50-452" data-start="00:03:50,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Moika, we've spoken on the show before about the shifts in Japanese politics.</p>
+<p>Moika，我们之前节目讨论过日本政治的变化。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959765" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-54-752" data-start="00:03:54,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell me how the newer parties sort of figure into it.</p>
+<p>谈谈新兴政党如何融入其中。</p>
+<p><button class="play-button sentence" id="s-00-03-57-972" data-start="00:03:57,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, so we've seen this inkling of social media led populism in Japan, especially by these minor candidates who put themselves against the political establishment or the political elite.</p>
+<p>是的，我们看到日本出现社交媒体驱动的民粹主义苗头，尤其是一些反对政治建制派或精英的小候选人。</p>
+<p><button class="play-button sentence" id="s-00-04-09-955" data-start="00:04:09,955" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But previously we've seen this in smaller like local elections, but we're really starting to see this phenomenon manifest in national politics as well.</p>
+<p>之前这出现在地方选举中，但现在开始在全国政治中显现。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959742" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-17-776" data-start="00:04:17,776" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Sanseto, this hard right party I mentioned earlier.</p>
+<p>还有我之前提到的极右翼政党三Seto党。</p>
+<p><button class="play-button sentence" id="s-00-04-21-342" data-start="00:04:21,342" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I attended some campaign speeches and they were talking tough and immigration and talking about rising crime and how foreigners are harassing women and rich Chinese people are buying up land and so on, making all these kinds of dubious claims.</p>
+<p>我参加了几场竞选演讲，他们强硬谈论移民，声称犯罪率上升、外国人骚扰女性、富裕中国人收购土地等，提出各种可疑说法。</p>
+<p><button class="play-button sentence" id="s-00-04-36-040" data-start="00:04:36,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the audience was cheering.</p>
+<p>观众则在欢呼。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959722" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-37-736" data-start="00:04:37,736" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So while the momentum of Sanseto is very striking, there's still a minor force in the parliament.</p>
+<p>虽然三Seto党势头惊人，但在议会仍是小力量。</p>
+<p><button class="play-button sentence" id="s-00-04-43-980" data-start="00:04:43,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the rise of Sanseto has got people in Japan wondering is this style of anti-immigration populism, the kind of populism we see in Western countries is that here to stay in Japan as well.</p>
+<p>但三Seto党的崛起让日本人思考这种反移民民粹主义是否也会在日本扎根。</p>
+<p><button class="play-button sentence" id="s-00-04-55-192" data-start="00:04:55,192" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in the shorter term, right now the LDP is in a very sticky spot.</p>
+<p>但短期来看，自民党现在处境艰难。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959701" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-58-667" data-start="00:04:58,667" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's going to happen with it?</p>
+<p>它会怎样？</p>
+<p><button class="play-button sentence" id="s-00-05-00-325" data-start="00:05:00,325" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think so?</p>
+<p>你怎么看？</p>
+<p><button class="play-button sentence" id="s-00-05-01-154" data-start="00:05:01,154" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In terms of the leadership, Ishiba has said that he doesn't intend to step down, but they're already calls from within his party for him to resign.</p>
+<p>领导层方面，岸田表示不打算辞职，但党内已有要求他下台的呼声。</p>
+<p><button class="play-button sentence" id="s-00-05-09-325" data-start="00:05:09,325" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there might be an announcement in the upcoming days.</p>
+<p>未来几天可能会有声明。</p>
+<p><button class="play-button sentence" id="s-00-05-12-959" data-start="00:05:12,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would say again that his days in office are numbered.</p>
+<p>我认为他的任期已时日无多。</p>
+<p><button class="play-button sentence" id="s-00-05-15-838" data-start="00:05:15,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the meantime, the ruling LDP is going to try to bring it another party to expand its coalition.</p>
+<p>同时执政的自民党将尝试拉拢其他政党扩大联盟。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EbgJzhE3A/?t=-2208959678" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-21-586" data-start="00:05:21,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But so far, the leaders of the potential partners have rejected the idea.</p>
+<p>但潜在合作伙伴的领导人已拒绝这一想法。</p>
+<p><button class="play-button sentence" id="s-00-05-26-061" data-start="00:05:26,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's very unclear if this is going to happen either.</p>
+<p>所以这能否实现也很不明朗。</p>
+<p><button class="play-button sentence" id="s-00-05-29-838" data-start="00:05:29,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there are a lot of uncertainties about what's going to happen short-term, but what's very clear is that Japanese politics is entering a messier.</p>
+<p>短期发展有很多不确定性，但很清楚的是日本政治正变得更加混乱。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

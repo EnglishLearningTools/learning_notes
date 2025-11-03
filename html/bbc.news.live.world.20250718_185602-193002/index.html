@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>BBC Live News: London Time 2025-07-18 18:56 - 19:30</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The BBC covers global news including President Trump's demand to release Jeffrey Epstein court documents amid pressure from supporters, sectarian violence displacing 80,000 in Syria, and rising pollution in UK waterways.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>BBC Live News: London Time 2025-07-18 18:56 - 19:30</h1>
+<p>【BBC World Today 20250719 特朗普在支持者压力下要求公开爱泼斯坦法庭文件｜叙利亚宗派暴力致8万人流离失所｜英国水道污染加剧｜附文稿】</p>
+<p>Summary:
+The BBC covers global news including President Trump's demand to release Jeffrey Epstein court documents amid pressure from supporters, sectarian violence displacing 80,000 in Syria, and rising pollution in UK waterways.</p>
+<p>摘要：
+BBC报道全球新闻，包括特朗普总统在支持者压力下要求公开杰弗里·爱泼斯坦法庭文件、叙利亚宗派暴力致8万人流离失所以及英国水道污染加剧。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 33 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-16-000" data-start="00:00:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's 7pm here in London.</p>
+<p>现在是伦敦时间晚上7点。</p>
+<p><button class="play-button sentence" id="s-00-00-17-765" data-start="00:00:17,765" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the world today with me, Karin Genone.</p>
+<p>这里是《今日世界》，我是卡琳·杰农。</p>
+<p><button class="play-button sentence" id="s-00-00-21-120" data-start="00:00:21,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Trump asks for the release of court documents relating to Confect, victed sex offender Jeffrey Epstein, mid-pressure from his own supporters to share new information.</p>
+<p>特朗普总统在支持者施压下要求公开已定罪性犯罪者杰弗里·爱泼斯坦的相关法庭文件。</p>
+<p><button class="play-button sentence" id="s-00-00-32-478" data-start="00:00:32,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes as the Wall Street Journal publishes a lurid birthday message allegedly sent by Donald Trump to Epstein.</p>
+<p>此前《华尔街日报》刊登据称是特朗普发给爱泼斯坦的露骨生日贺卡。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959960" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-39-591" data-start="00:00:39,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president says it's false and is threatening to sue.</p>
+<p>总统称该报道失实并威胁提起诉讼。</p>
+<p><button class="play-button sentence" id="s-00-00-44-238" data-start="00:00:44,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> sectarian violence in southern Syria displaces nearly 80,000 people according to the United Nations.</p>
+<p>联合国称叙利亚南部的宗派暴力已导致近8万人流离失所。</p>
+<p><button class="play-button sentence" id="s-00-00-51-118" data-start="00:00:51,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A problem with Britain's waterways is serious pollution incidents rise.</p>
+<p>英国水道问题严峻，严重污染事件激增。</p>
+<p><button class="play-button sentence" id="s-00-00-56-399" data-start="00:00:56,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We speak to a member of the campaign group, Surface Against Sewage.</p>
+<p>我们采访了环保组织"冲浪者反对排污"的成员。</p>
+<p><button class="play-button sentence" id="s-00-01-01-840" data-start="00:01:01,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also coming up on the world today.</p>
+<p>今日其他新闻包括：</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959931" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-08-799" data-start="00:01:08,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After the death of Daredevil Felix Baumgartner in Italy, we'll hear from one of the crew who worked his supersonic skydive from the edge of space.</p>
+<p>意大利冒险家菲利克斯·鲍姆加特纳坠亡后，我们将采访其太空边缘超音速跳伞团队成员。</p>
+<p><button class="play-button sentence" id="s-00-01-21-599" data-start="00:01:21,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome to the world today, an hour of international news from the BBC.</p>
+<p>欢迎收看BBC国际新闻节目《今日世界》。</p>
+<p><button class="play-button sentence" id="s-00-01-34-000" data-start="00:01:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We start with Donald Trump and Jeffrey Epstein.</p>
+<p>首先关注特朗普与爱泼斯坦事件。</p>
+<p><button class="play-button sentence" id="s-00-01-37-114" data-start="00:01:37,114" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the US president threatens to sue media tycoon Rupert Murdoch after the Wall Street Journal reported allegations about a lurid birthday card the president's alleged have sent Epstein in 2003 before the financier was charged with sex crimes.</p>
+<p>特朗普威胁起诉传媒大亨默多克，因《华尔街日报》报道其2003年曾向尚未被控性犯罪的爱泼斯坦发送露骨生日卡。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959887" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-52-144" data-start="00:01:52,144" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> According to the paper, it contains a message framed by the outline of a naked woman which appears to be hand drawn with a heavy marker.</p>
+<p>报道称卡片印有手绘裸女轮廓，内附对话体贺词。</p>
+<p><button class="play-button sentence" id="s-00-02-00-823" data-start="00:02:00,823" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The typewritten note, styled as an imaginary conversation between Trump and Epstein, ends with the words, a pal is a wonderful thing, happy birthday and may every day be another wonderful secret.</p>
+<p>结尾写道"挚友难求，生日快乐，愿每日都有美妙秘密"。</p>
+<p><button class="play-button sentence" id="s-00-02-12-960" data-start="00:02:12,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well before that development Donald Trump posted this on his truth social platform.</p>
+<p>事态发酵前，特朗普曾在社交平台发文。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959861" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-18-158" data-start="00:02:18,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Based on the ridiculous amount of publicity given to Jeffrey Epstein, either asked Attorney General Pam Bondy to produce any and all pertinent grand jury testimony subject to court approval.</p>
+<p>他指示司法部长邦迪在法庭许可下公开爱泼斯坦大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-02-29-802" data-start="00:02:29,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> During his presidential campaign, Trump promised to release files relating to Epstein and has faced increased pressure from his own supporters to share new information.</p>
+<p>竞选期间特朗普承诺公开爱泼斯坦文件，现面临支持者施压。</p>
+<p><button class="play-button sentence" id="s-00-02-39-905" data-start="00:02:39,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His Attorney General Pam Bondy says they are ready to unseal grand jury transcripts on Friday but it could take some time for a judge to release the documents.</p>
+<p>司法部长称周五可解封文件，但法官审批需时。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959831" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-48-912" data-start="00:02:48,912" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not entirely clear what documents if any would be involved.</p>
+<p>具体公开内容尚不明确。</p>
+<p><button class="play-button sentence" id="s-00-02-53-199" data-start="00:02:53,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what do we know about how Donald Trump and Jeffrey Epstein knew each other?</p>
+<p>两人关系如何？</p>
+<p><button class="play-button sentence" id="s-00-02-58-042" data-start="00:02:58,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Trump's relationship with Epstein began in the late 80s and spanned two decades when they were frequently seen together at parties like this one at the president's home in Florida, Mar-a-Lago in 1992.</p>
+<p>交往始于1980年代末，1992年曾共赴海湖庄园派对。</p>
+<p><button class="play-button sentence" id="s-00-03-09-779" data-start="00:03:09,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the next few years, Mr. Trump flew on Epstein's private jet several times and in 2000 Virginia Dufre, one of Epstein's victims claimed she'd been recruited at Mar-a-Lago as a teenager.</p>
+<p>特朗普多次乘坐爱泼斯坦私人飞机，2000年有受害者称未成年时在海湖庄园被招募。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959797" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-22-445" data-start="00:03:22,445" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two years later, Donald Trump told New York magazine, I've known Jeff for 15 years to riff it guy.</p>
+<p>2002年特朗普向媒体称认识爱泼斯坦15年。</p>
+<p><button class="play-button sentence" id="s-00-03-28-907" data-start="00:03:28,907" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He likes beautiful women as much as I do, many of them on the younger side.</p>
+<p>称其"与我同样喜爱美女，且偏爱年轻女性"。</p>
+<p><button class="play-button sentence" id="s-00-03-34-155" data-start="00:03:34,155" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But in 2004, the pair fell out, competing over a Palm Beach mansion.</p>
+<p>2004年因房产竞购交恶。</p>
+<p><button class="play-button sentence" id="s-00-03-39-679" data-start="00:03:39,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Trump later claimed they never spoke again.</p>
+<p>特朗普称此后断绝往来。</p>
+<p><button class="play-button sentence" id="s-00-03-42-498" data-start="00:03:42,498" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My colleague, Sumi Somerskander, is in Washington.</p>
+<p>本台驻华盛顿记者苏米报道：</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-45-598" data-start="00:03:45,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She says the story is still getting a lot of attention.</p>
+<p>该事件持续引发关注。</p>
+<p><button class="play-button sentence" id="s-00-03-49-011" data-start="00:03:49,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is clear that the president is still not very happy with the continued attention that this story is getting.</p>
+<p>总统对舆论关注明显不悦。</p>
+<p><button class="play-button sentence" id="s-00-03-54-504" data-start="00:03:54,504" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You mentioned the comments that he made on truth social saying that he had directed as Attorney General Pam Bondy to release some of the files related to Jeffrey Epstein, grand jury testimony.</p>
+<p>其社交平台发文指示司法部长公开大陪审团文件。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959753" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-06-291" data-start="00:04:06,291" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he said, as you showed there in that post, that was based on the, quote, ridiculous amount of attention this case is getting.</p>
+<p>称该决定源于案件"荒谬的曝光度"。</p>
+<p><button class="play-button sentence" id="s-00-04-12-878" data-start="00:04:12,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, we've seen him post again on truth social.</p>
+<p>今日其再次发文：</p>
+<p><button class="play-button sentence" id="s-00-04-15-316" data-start="00:04:15,316" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll tell you what he said.</p>
+<p>内容如下：</p>
+<p><button class="play-button sentence" id="s-00-04-16-623" data-start="00:04:16,623" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said, if there was a smoking gun on Epstein, why didn't the Dems who controlled the files for four years and had Garland and Comey in charge use it because they had nothing?</p>
+<p>"若确凿证据存在，民主党掌控文件四年为何未利用？"</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959732" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-27-035" data-start="00:04:27,035" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's referring there to the former Attorney General, Marik Garland and the former FBI director James Comey.</p>
+<p>暗指前司法部长加兰和前FBI局长科米。</p>
+<p><button class="play-button sentence" id="s-00-04-34-056" data-start="00:04:34,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It just goes to show that the president really has not only showed his frustration, but changed his messaging of the last 10 days or so.</p>
+<p>显示总统调整了应对策略。</p>
+<p><button class="play-button sentence" id="s-00-04-40-938" data-start="00:04:40,938" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen the story dominate the headlines here in the U.S.</p>
+<p>该事件占据美媒头条。</p>
+<p><button class="play-button sentence" id="s-00-04-44-879" data-start="00:04:44,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, in the beginning, in the first few days, we saw President Trump say, this story is boring.</p>
+<p>特朗普最初称此事"无聊"。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959710" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-49-920" data-start="00:04:49,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not a story. Jeffrey Epstein, he said, was the man who never dies and he said it's time for his Republican supporters to move on.</p>
+<p>要求支持者停止关注。</p>
+<p><button class="play-button sentence" id="s-00-04-57-247" data-start="00:04:57,247" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We then saw that post over the past weekend where he said he no longer wanted some of those in his mega coalition to be his supporters because of their attention to the story, which, as I said, he says is a non-story.</p>
+<p>近期更因该事件与部分支持者割席。</p>
+<p><button class="play-button sentence" id="s-00-05-09-819" data-start="00:05:09,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then we saw him blame Democrats saying it's a Democrat hoax tying it to former President Obama.</p>
+<p>转而指责民主党与前总统奥巴马编造阴谋。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959684" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-15-639" data-start="00:05:15,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's tied it to Hillary Clinton and other figures.</p>
+<p>还将矛头指向希拉里等人。</p>
+<p><button class="play-button sentence" id="s-00-05-18-720" data-start="00:05:18,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, we should say there is no evidence of that.</p>
+<p>需强调相关指控无证据支持。</p>
+<p><button class="play-button sentence" id="s-00-05-21-306" data-start="00:05:21,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we come back to this moment where President Trump appears to be giving in a little bit to this pressure, saying that some files will be released.</p>
+<p>但特朗普现松口称将部分公开文件。</p>
+<p><button class="play-button sentence" id="s-00-05-28-879" data-start="00:05:28,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But important to say, Karen, these files are not those that many of the supporters and those who have been calling for these files to be released want to see.</p>
+<p>需注意这些并非支持者要求公开的核心文件。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959663" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-36-829" data-start="00:05:36,829" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And grand jury testimony could take quite some time to be released.</p>
+<p>大陪审团证词公开仍需时日。</p>
+<p><button class="play-button sentence" id="s-00-05-41-108" data-start="00:05:41,108" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, Sue me, some pretty strong threats by Donald Trump to the Wall Street Journal reporting this note.</p>
+<p>特朗普严厉威胁起诉《华尔街日报》。</p>
+<p><button class="play-button sentence" id="s-00-05-48-989" data-start="00:05:48,989" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's own a Rupert Murdoch.</p>
+<p>剑指默多克。</p>
+<p><button class="play-button sentence" id="s-00-05-51-271" data-start="00:05:51,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, indeed.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-05-52-367" data-start="00:05:52,367" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this was really interesting.</p>
+<p>值得关注的是：</p>
+<p><button class="play-button sentence" id="s-00-05-54-181" data-start="00:05:54,181" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I should say here in Washington, Karen, there was a lot of anticipation for this report from the Wall Street Journal reporters around the city waiting for this article to be published, especially as we heard, that the White House had contacted Rupert Murdoch to say they do not want this story published.</p>
+<p>白宫曾试图阻止该报道发布。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959630" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-09-777" data-start="00:06:09,777" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, President Trump saying it is false, malicious, and defamatory.</p>
+<p>特朗普称报道虚假恶意。</p>
+<p><button class="play-button sentence" id="s-00-06-13-626" data-start="00:06:13,626" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He called the Wall Street Journal and this story a pile of garbage and said he would see Rupert Murdoch in court essentially.</p>
+<p>扬言法庭相见。</p>
+<p><button class="play-button sentence" id="s-00-06-19-800" data-start="00:06:19,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the Wall Street Journal is standing behind its reporter, the reporters rather are standing behind their story.</p>
+<p>《华尔街日报》坚持报道真实性。</p>
+<p><button class="play-button sentence" id="s-00-06-25-824" data-start="00:06:25,824" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are saying that this information is true.</p>
+<p>坚称内容属实。</p>
+<p><button class="play-button sentence" id="s-00-06-28-559" data-start="00:06:28,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But on the other hand, you have seen both the president and his son, Donald Trump Jr., saying, look, this supposed letter that Donald Trump sent, Jeffrey Epstein, is not even his style, Donald Trump Jr. saying, my father doesn't speak that way.</p>
+<p>特朗普父子辩称信件文风不符。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959597" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-42-190" data-start="00:06:42,190" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump, the president, saying, I don't because this letter apparently included a drawn figure of a naked woman.</p>
+<p>总统否认绘制裸女图案。</p>
+<p><button class="play-button sentence" id="s-00-06-50-640" data-start="00:06:50,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of this is just continuing to raise attention and interest in the story, Karen, and it just goes to show again that it does not one that is easy for the Trump administration or the president to push out of the headlines.</p>
+<p>事件持续发酵，难以平息。</p>
+<p><button class="play-button sentence" id="s-00-07-02-477" data-start="00:07:02,477" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sue Meeson Mascanda in Washington, well, there's much more from Sue Mees on her podcast.</p>
+<p>更多分析请关注苏米播客。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959573" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-06-667" data-start="00:07:06,667" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president's path, you can scan the QR code on the side of your screen to get a link to that.</p>
+<p>屏幕二维码可获取链接。</p>
+<p><button class="play-button sentence" id="s-00-07-11-708" data-start="00:07:11,708" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's also on the BBC News Channel here at 2330 UK time, 1830 Eastern time, and Sue Meeson will be back in the next hour on the context with Ben Brown.</p>
+<p>BBC新闻频道将后续报道。</p>
+<p><button class="play-button sentence" id="s-00-07-21-340" data-start="00:07:21,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Katie Balls is Washington editor and columnist of the Times and the Sunday Times, and she wrote a piece called Why Won't Magger Let Trump Ignore His Epstein Problem.</p>
+<p>《泰晤士报》编辑凯蒂分析"MAGA阵营为何紧盯爱泼斯坦事件"。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959549" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-30-565" data-start="00:07:30,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's what she had to say on the answer to that.</p>
+<p>其观点如下：</p>
+<p><button class="play-button sentence" id="s-00-07-34-079" data-start="00:07:34,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think there's a few aspects to the answer, but effectively, the Epstein scandal runs deep in the Make America Great Again movement.</p>
+<p>该丑闻与MAGA运动深度绑定。</p>
+<p><button class="play-button sentence" id="s-00-07-43-509" data-start="00:07:43,509" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many of Trump's most loyal supporters have long seen Jeffrey Epstein as almost a case test in a lack of transparency into their issues with what they see as the deep state in Washington, a deep state that they often felt has been against Donald Trump and their movement.</p>
+<p>支持者视其为对抗"深层政府"的象征。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959518" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-01-569" data-start="00:08:01,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And therefore, they expected when Donald Trump returned to the White House, let's be a release of the files for let's be transparency.</p>
+<p>期待特朗普公开文件实现透明。</p>
+<p><button class="play-button sentence" id="s-00-08-08-347" data-start="00:08:08,347" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think there's a lot of anguish and disappointment that this hasn't happened.</p>
+<p>现状令其失望。</p>
+<p><button class="play-button sentence" id="s-00-08-12-705" data-start="00:08:12,705" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is what we have seen spilling out.</p>
+<p>矛盾由此爆发。</p>
+<p><button class="play-button sentence" id="s-00-08-14-959" data-start="00:08:14,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's also why, two weeks since the Department of Justice and the FBI said, effectively, there's nothing to see here.</p>
+<p>尽管司法部称无异常。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959497" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-22-995" data-start="00:08:22,995" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump cannot for love or money and get people to stop talking about Jeffrey Epstein.</p>
+<p>舆论仍持续热议。</p>
+<p><button class="play-button sentence" id="s-00-08-28-262" data-start="00:08:28,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says he's bored of it.</p>
+<p>特朗普称已厌倦。</p>
+<p><button class="play-button sentence" id="s-00-08-29-566" data-start="00:08:29,566" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His base are not.</p>
+<p>支持者却不然。</p>
+<p><button class="play-button sentence" id="s-00-08-30-480" data-start="00:08:30,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right, so telling people to stop talking about it has done anything but stop them talking about.</p>
+<p>禁令适得其反。</p>
+<p><button class="play-button sentence" id="s-00-08-35-840" data-start="00:08:35,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Katie, this was active for MAGA and Donald Trump supporters when President Biden was in the White House and it was in their interest to accuse the administration of carrying out a cover-up, but it's not working out quite so well now that Donald Trump is in control.</p>
+<p>现立场陷入矛盾。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959466" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-53-360" data-start="00:08:53,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Exactly, because you now have a situation where Donald Trump during the election campaign was asked about the Epstein files and suggested he was in favor of releasing more information, even further than that.</p>
+<p>竞选时承诺公开文件。</p>
+<p><button class="play-button sentence" id="s-00-09-05-099" data-start="00:09:05,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Several of his appointments cash per town to the FBI, his deputy.</p>
+<p>其任命官员曾推动相关调查。</p>
+<p><button class="play-button sentence" id="s-00-09-09-678" data-start="00:09:09,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have previously spoken about some of these Epstein conspiracy theories suggesting that something was off, that the authorities were not telling the truth.</p>
+<p>暗示当局隐瞒真相。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959441" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-18-481" data-start="00:09:18,481" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Pam Bondi, the attorney general, has gone on Fox News as a attorney general and suggested that there's so-called client list, which was one of the things that figures in MAGA talk a lot about.</p>
+<p>司法部长邦迪曾提及"客户名单"。</p>
+<p><button class="play-button sentence" id="s-00-09-29-020" data-start="00:09:29,020" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This idea that's been denied of a list of clients that Epstein kept was on her desk, only to lense, there's no client list.</p>
+<p>后改口否认存在。</p>
+<p><button class="play-button sentence" id="s-00-09-37-411" data-start="00:09:37,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So now this group is saying, well, you've always whipped up the base to be expecting these things, only to now have to turn around and try and quell the flames and say that there isn't actually anything after all.</p>
+<p>现需平息预期落差。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959411" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-48-674" data-start="00:09:48,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So lots of words and statements and actions are coming to back to haunt both Donald Trump and his key members of his team when it comes to the expectation amongst his core base.</p>
+<p>过往言论反成负担。</p>
+<p><button class="play-button sentence" id="s-00-09-59-532" data-start="00:09:59,532" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've heard Donald Trump so angry at his own side for this, how much of a headache I suppose that's not particularly strong term.</p>
+<p>特朗普对盟友发怒。</p>
+<p><button class="play-button sentence" id="s-00-10-10-153" data-start="00:10:10,153" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But much worse is this for Donald Trump and his administration?</p>
+<p>事态严峻程度？</p>
+<p><button class="play-button sentence" id="s-00-10-13-793" data-start="00:10:13,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is this being seen as the first visible sign of vulnerability in this second term?</p>
+<p>是否第二任期首现弱势？</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959382" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-17-847" data-start="00:10:17,847" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it is beginning to be seen as that because we have seen since Donald Trump has returned in a very powerful position.</p>
+<p>确有此迹象。</p>
+<p><button class="play-button sentence" id="s-00-10-24-817" data-start="00:10:24,817" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has managed to bend his party to his will on lots of issues that they are not naturally that comfortable with tariffs.</p>
+<p>虽在关税等问题掌控共和党。</p>
+<p><button class="play-button sentence" id="s-00-10-30-804" data-start="00:10:30,804" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been some kickback from traditional Republicans intervention in Iran.</p>
+<p>但在伊朗政策遭反弹。</p>
+<p><button class="play-button sentence" id="s-00-10-34-591" data-start="00:10:34,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's been a kickback from the MAGA movement.</p>
+<p>MAGA内部亦有分歧。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959362" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-37-164" data-start="00:10:37,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More support from Ukraine than some MAGA would like.</p>
+<p>对乌支持引发不满。</p>
+<p><button class="play-button sentence" id="s-00-10-40-590" data-start="00:10:40,590" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that has so far he has used his authority to do.</p>
+<p>此前尚能压制。</p>
+<p><button class="play-button sentence" id="s-00-10-43-752" data-start="00:10:43,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think this is one of the first issues where he has said, hey guys were moving on and the base has said no, we're not.</p>
+<p>本次基层直接反抗。</p>
+<p><button class="play-button sentence" id="s-00-10-50-521" data-start="00:10:50,521" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that suggests that he is having a bigger issue here I think than elsewhere.</p>
+<p>显示更大危机。</p>
+<p><button class="play-button sentence" id="s-00-10-54-936" data-start="00:10:54,936" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the question is how does Donald Trump now try and turn the page on it?</p>
+<p>关键在于如何翻篇。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959341" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-58-885" data-start="00:10:58,885" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know that he has had a change of tune overnight and saying that Pan Bonding is a turning general is going to see if a judge will release some of the information, some of the files.</p>
+<p>改口称将公开部分文件。</p>
+<p><button class="play-button sentence" id="s-00-11-08-581" data-start="00:11:08,581" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now lots of people say, oh that is coming if it doesn't, I think there's just going to be more and more pressure on Donald Trump to do something here.</p>
+<p>若未兑现压力更大。</p>
+<p><button class="play-button sentence" id="s-00-11-16-658" data-start="00:11:16,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it does make it more complicated that he did have this previous friendship with Jeffrey Epstein.</p>
+<p>与爱泼斯坦的过往交情加剧困境。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959318" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-21-718" data-start="00:11:21,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course he cut that off some time ago.</p>
+<p>虽已断交多年。</p>
+<p><button class="play-button sentence" id="s-00-11-23-784" data-start="00:11:23,784" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it makes it a bit harder to say he is a neutral actor here when nots his supporters suspect something has gone wrong in terms of transparency.</p>
+<p>难证立场中立。</p>
+<p><button class="play-button sentence" id="s-00-11-33-918" data-start="00:11:33,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Katie Bawles, Washington editor of The Times.</p>
+<p>《泰晤士报》凯蒂分析。</p>
+<p><button class="play-button sentence" id="s-00-11-36-965" data-start="00:11:36,965" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United Nations Human Rights Office has urged Syrias interim government to end the violence there with aid agencies also pleading for stability.</p>
+<p>联合国呼吁叙利亚临时政府制止暴力。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959294" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-45-563" data-start="00:11:45,563" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN estimates nearly 80,000 people have been displaced.</p>
+<p>约8万人流离失所。</p>
+<p><button class="play-button sentence" id="s-00-11-52-719" data-start="00:11:52,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes as sectarian clashes between Arab, Bedouin tribes and Drew's militia have renewed in Southern Syria.</p>
+<p>南部阿拉伯部落与德鲁兹民兵冲突再起。</p>
+<p><button class="play-button sentence" id="s-00-11-59-340" data-start="00:11:59,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Local people around Sir Wader have described bodies being strewn in the streets as well as summary executions.</p>
+<p>居民称街头遍布尸体与即决处决。</p>
+<p><button class="play-button sentence" id="s-00-12-06-778" data-start="00:12:06,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The clashes drew in Israel.</p>
+<p>以色列介入冲突。</p>
+<p><button class="play-button sentence" id="s-00-12-08-872" data-start="00:12:08,872" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It bombed both Damascus and Syrian forces in Swader.</p>
+<p>空袭大马士革与叙军。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959267" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-12-750" data-start="00:12:12,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel says it's acting to protect the minority Drew's community and its own national security.</p>
+<p>以方称保护德鲁兹少数族群及国家安全。</p>
+<p><button class="play-button sentence" id="s-00-12-18-738" data-start="00:12:18,738" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Almost 600 people have been killed since sectarian violence erupted on Sunday.</p>
+<p>周日以来近600人丧生。</p>
+<p><button class="play-button sentence" id="s-00-12-24-240" data-start="00:12:24,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Drew's religion is an offshoot of Shia Islam with its own unique identity and beliefs.</p>
+<p>德鲁兹教派是伊斯兰教什叶派的分支，拥有独特的身份和信仰。</p>
+<p><button class="play-button sentence" id="s-00-12-30-080" data-start="00:12:30,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I spoke to our correspondent in Damascus, Lena Sinjab, to get the latest on the violence in Swader.</p>
+<p>我采访了大马士革的记者莉娜·辛贾布，了解斯瓦德地区暴力的最新情况。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959243" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-36-480" data-start="00:12:36,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I've been talking to some people inside Swader and it's relatively calming down.</p>
+<p>我与斯瓦德当地的一些人交谈过，局势相对有所缓和。</p>
+<p><button class="play-button sentence" id="s-00-12-41-759" data-start="00:12:41,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are still the situation of the tribal fighters who are surrounding the city, sometimes advancing into one village at the time withdrawing from this village and they can see here lots of clashes happening at that front.</p>
+<p>部落武装分子仍包围着城市，时而攻入某个村庄，时而又撤退，前线冲突频发。</p>
+<p><button class="play-button sentence" id="s-00-12-55-964" data-start="00:12:55,964" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But so far there hasn't been any confirmation that they've managed to advance anywhere near the city center.</p>
+<p>但截至目前，尚未有他们逼近市中心的确认消息。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959216" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-03-370" data-start="00:13:03,370" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've heard also from the Israelis saying that they're given the Syrian security forces a 48-hour window to enter Swader so that they maintain stability and security.</p>
+<p>以色列方面表示，他们已给予叙利亚安全部队48小时进入斯瓦德以维持稳定的期限。</p>
+<p><button class="play-button sentence" id="s-00-13-15-778" data-start="00:13:15,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But until the moment we haven't heard anything from the Syrian government whether confirming they are going in or not.</p>
+<p>但叙利亚政府至今未表态是否将进入该地区。</p>
+<p><button class="play-button sentence" id="s-00-13-22-719" data-start="00:13:22,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although some journalists who are close to the government are saying that government forces are preparing to enter Swader again but we are waiting to see real movement on the ground.</p>
+<p>尽管亲政府记者称政府军正准备再次进入斯瓦德，但实际动向仍有待观察。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959185" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-34-319" data-start="00:13:34,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Lena, what is this violence doing to all those hopes that under its new leader Ahmed Al-Shara Syria would be turning a new page?</p>
+<p>莉娜，这场暴力如何影响人们对新领导人艾哈迈德·阿尔-沙拉领导下叙利亚开启新篇章的期望？</p>
+<p><button class="play-button sentence" id="s-00-13-46-960" data-start="00:13:46,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, these are leaving lots of disappointment and frustration among many, not only the Druves or the minority.</p>
+<p>这给许多人（不仅是德鲁兹人或少数群体）带来了失望与挫败感。</p>
+<p><button class="play-button sentence" id="s-00-13-55-604" data-start="00:13:55,604" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, this sectarian violence that's especially happened against the Druves.</p>
+<p>针对德鲁兹人的教派暴力尤为严重。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959159" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-00-704" data-start="00:14:00,704" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many of them are saying we've been we've revolted against Assad.</p>
+<p>许多人表示："我们曾反抗阿萨德政权。</p>
+<p><button class="play-button sentence" id="s-00-14-04-914" data-start="00:14:04,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We never held weapon against Syrian people.</p>
+<p>我们从未对叙利亚民众动武。</p>
+<p><button class="play-button sentence" id="s-00-14-07-798" data-start="00:14:07,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We didn't take part in any of in the war of Assad, you know, against all the opposition in the past 14 years.</p>
+<p>过去14年我们未参与阿萨德对抗反对派的任何战争。"</p>
+<p><button class="play-button sentence" id="s-00-14-14-513" data-start="00:14:14,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yet we're paying a price because of, you know, you know, hatred message that's coming mainly from some Islamist jihadists that are parts of the government who or the others like from the tribals of the Bedouins who have attacked them.</p>
+<p>如今我们却因仇恨言论付出代价——这些言论主要来自政府内部的伊斯兰圣战分子或贝都因部落武装。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959129" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-30-087" data-start="00:14:30,087" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Of course, there has been, you know, clashes between the two sides, the groups to attack support the, you know, Druves leader Al-Hezary that the government here accuses of supporting Israel and calling on Israel to interfere.</p>
+<p>双方爆发冲突：政府指控德鲁兹领袖阿尔-赫扎里支持以色列并呼吁其干预，而支持他的武装组织则与之对抗。</p>
+<p><button class="play-button sentence" id="s-00-14-45-030" data-start="00:14:45,030" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are the ones who are clashing with the rebel fighters, with the tribal fighters, but actually at the end, 600 have been killed.</p>
+<p>他们与叛军、部落武装交火，目前已造成600人死亡。</p>
+<p><button class="play-button sentence" id="s-00-14-53-039" data-start="00:14:53,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many women and children have been killed.</p>
+<p>许多妇女儿童遇害。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959104" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-55-454" data-start="00:14:55,454" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Innocent men who had nothing to do with the with the fighting have been killed.</p>
+<p>与冲突无关的无辜男性也遭杀害。</p>
+<p><button class="play-button sentence" id="s-00-14-59-678" data-start="00:14:59,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the trust with this government is broken and probably broken forever.</p>
+<p>民众对政府的信任已破裂，且可能永远无法修复。</p>
+<p><button class="play-button sentence" id="s-00-15-04-390" data-start="00:15:04,390" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many people I spoke to insights where they told me they don't want to have anything with this government anymore and they don't trust them at all.</p>
+<p>许多受访者表示不愿再与政府有任何瓜葛，彻底失去信任。</p>
+<p><button class="play-button sentence" id="s-00-15-12-499" data-start="00:15:12,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Lena Sinjab in Jamaskah, so why is Israel getting involved?</p>
+<p>莉娜·辛贾布在贾马斯卡报道，那么以色列为何介入？</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959083" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-16-798" data-start="00:15:16,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I spoke to Ibrahim Al-Assil from the Atlantic Council to get more context.</p>
+<p>我采访了大西洋理事会的易卜拉欣·阿尔-阿西尔以获取背景信息。</p>
+<p><button class="play-button sentence" id="s-00-15-22-078" data-start="00:15:22,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because Israel is a very important factor in what's happening in Syria.</p>
+<p>以色列是叙利亚局势的重要影响因素。</p>
+<p><button class="play-button sentence" id="s-00-15-27-171" data-start="00:15:27,171" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since the fall of the Assad regime on December 8 of last year, Israel started a massive aerial campaign against what was left of the Syrian army there.</p>
+<p>去年12月8日阿萨德政权倒台后，以色列对叙利亚残余军队发动大规模空袭。</p>
+<p><button class="play-button sentence" id="s-00-15-39-170" data-start="00:15:39,170" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The rationale of the Israelis was that they want to take things into their own hands and they don't want to trust any upcoming Syrian government about their own security.</p>
+<p>以色列的理由是希望掌控局势，不信任任何未来叙利亚政府能保障其安全。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959048" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-51-407" data-start="00:15:51,407" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that didn't stop there.</p>
+<p>但这并非全部。</p>
+<p><button class="play-button sentence" id="s-00-15-53-983" data-start="00:15:53,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Syria and Israel had a war in 1973 in 1974.</p>
+<p>叙利亚与以色列在1973至1974年间爆发战争。</p>
+<p><button class="play-button sentence" id="s-00-15-57-791" data-start="00:15:57,791" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was a disengagement agreement.</p>
+<p>双方曾达成脱离接触协议。</p>
+<p><button class="play-button sentence" id="s-00-16-00-618" data-start="00:16:00,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel violated this agreement, occupied the buffer zone, and then occupied even beyond the buffer zone and continued over 100 air strikes and artillery strikes on Syria.</p>
+<p>以色列违反该协议，占领缓冲区并进一步越界，对叙利亚发动超100次空袭和炮击。</p>
+<p><button class="play-button sentence" id="s-00-16-14-318" data-start="00:16:14,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, clearly, Israel sees a potential ally in the Druze, and that's one of the motivation behind their intervention in Syria.</p>
+<p>如今，以色列显然将德鲁兹人视为潜在盟友，这也是其干预叙利亚的动机之一。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208959015" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-24-011" data-start="00:16:24,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, you're in Washington.</p>
+<p>现在切换到华盛顿现场。</p>
+<p><button class="play-button sentence" id="s-00-16-26-335" data-start="00:16:26,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do we get a sense of what the Trump administration's stance is likely to be on this?</p>
+<p>能否了解特朗普政府对此事的可能立场？</p>
+<p><button class="play-button sentence" id="s-00-16-31-973" data-start="00:16:31,973" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there likely to be involvement by the U.S?</p>
+<p>美国会介入吗？</p>
+<p><button class="play-button sentence" id="s-00-16-34-720" data-start="00:16:34,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do we know what they think?</p>
+<p>我们是否知晓他们的态度？</p>
+<p><button class="play-button sentence" id="s-00-16-36-521" data-start="00:16:36,521" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's indeed a very important point because it's at odds with the Israeli perspective when we compare the American policy and the Israeli policy.</p>
+<p>这确实非常关键，因为对比美国与以色列政策时，双方立场存在分歧。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958993" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-46-235" data-start="00:16:46,235" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From the Israeli side, they want to keep Damascus weak and they want to keep Syria fragmented.</p>
+<p>以色列希望削弱大马士革并保持叙利亚分裂。</p>
+<p><button class="play-button sentence" id="s-00-16-52-342" data-start="00:16:52,342" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, from the American side and the stated policy and the policy that the U.S. administration has been pursuing is to give Syria a chance and to support the current Syrian government in unifying Syria and consolidating power.</p>
+<p>而美国公开及实际推行的政策是给予叙利亚机会，支持现政府统一国家并巩固权力。</p>
+<p><button class="play-button sentence" id="s-00-17-08-394" data-start="00:17:08,394" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, clearly, there is a divergence between the Israelis and the Americans, and there is a need for more channels of communications between them to work towards that because if Syria collapses, there is further instability inside Syria that there is a huge potential for that to spill over and destabilize the region further.</p>
+<p>当前以美分歧明显，需加强沟通渠道，因为若叙利亚崩溃，其内部动荡极可能外溢并加剧地区不稳定。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958949" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-30-591" data-start="00:17:30,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ibrahim Al-Assil from the Atlantic Council around the world and across the UK.</p>
+<p>来自大西洋理事会的易卜拉欣·阿西尔在全球及英国各地报道。</p>
+<p><button class="play-button sentence" id="s-00-17-38-270" data-start="00:17:38,270" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the world today on BBC News.</p>
+<p>这里是BBC新闻的《今日世界》。</p>
+<p><button class="play-button sentence" id="s-00-18-28-398" data-start="00:18:28,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There has been a systemic failure to tackle pollution in England's rivers with persistent underinvestment by some water and sewage companies.</p>
+<p>英格兰河流污染治理存在系统性失败，部分水务公司长期投资不足。</p>
+<p><button class="play-button sentence" id="s-00-18-54-767" data-start="00:18:54,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the damning verdict of the Environment Agency, which says serious pollution incidents have risen by 60 per cent in the last year alone and he say the regulator off what and the Environment Agency itself have failed to hold water companies to account.</p>
+<p>环境署严厉批评称，仅去年严重污染事件就增加60%，并指出监管机构Ofwat及环境署自身未能问责水务公司。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-10-598" data-start="00:19:10,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Joan Efficia.</p>
+<p>以下是琼·埃菲西亚的报道。</p>
+<p><button class="play-button sentence" id="s-00-19-12-127" data-start="00:19:12,127" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A serious pollution incident is one which has a significant or lasting impact on the natural environment.</p>
+<p>严重污染事件指对自然环境造成重大或持久影响的事故。</p>
+<p><button class="play-button sentence" id="s-00-19-19-890" data-start="00:19:19,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It could be harmful to humans or lead to a large number of fish dying, like in this incident in Cambridge last September.</p>
+<p>可能危害人类或导致大量鱼类死亡，如去年9月剑桥的事件。</p>
+<p><button class="play-button sentence" id="s-00-19-29-598" data-start="00:19:29,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Environment Agency report out today shows that in 2024 the number of serious incidents leapt by 60 per cent to 75 from 47.</p>
+<p>环境署今日报告显示，2024年严重事故从47起激增60%至75起。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958821" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-38-828" data-start="00:19:38,828" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Three water companies, Thames, Southern and Yorkshire, were responsible for the vast majority of them.</p>
+<p>泰晤士、南方和约克郡三家水务公司应对其中大部分事件负责。</p>
+<p><button class="play-button sentence" id="s-00-19-47-839" data-start="00:19:47,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The incidents which mostly involved raw sewage being discharged are according to the EA the result of years of underinvestment and are a systemic failure.</p>
+<p>环境署称，这些多为排放未经处理污水的事故，是多年投资不足导致的系统性失败。</p>
+<p><button class="play-button sentence" id="s-00-20-00-223" data-start="00:20:00,223" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the banks of the river Kenneth in Wiltshire they've been complaining about spills for more than a decade.</p>
+<p>威尔特郡肯尼思河沿岸居民投诉污水泄漏已超十年。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958791" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-08-037" data-start="00:20:08,037" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is an example of failing infrastructure.</p>
+<p>这是基础设施老化的典型案例。</p>
+<p><button class="play-button sentence" id="s-00-20-11-234" data-start="00:20:11,234" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This manhole here when it's wet so much sewage comes down this pipe that the manhole lid is forced off and we get untreated sewage spewing underneath the boardwalk across the bridge and into the river.</p>
+<p>雨天时，该井盖因管道污水过量被冲开，未经处理的污水从步道下喷涌至桥下河流。</p>
+<p><button class="play-button sentence" id="s-00-20-24-511" data-start="00:20:24,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So who do you blame for this mess?</p>
+<p>您认为谁该为此乱象负责？</p>
+<p><button class="play-button sentence" id="s-00-20-26-387" data-start="00:20:26,387" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the blame is equally government-offwater companies.</p>
+<p>责任应归咎于政府与水务公司双方。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958769" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-30-151" data-start="00:20:30,151" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it was a societal mess and we need to find ways of moving forward from it because at the moment we get in this endless loop where each party is blaming the other.</p>
+<p>这是社会性困局，需寻求突破，目前各方陷入相互指责的恶性循环。</p>
+<p><button class="play-button sentence" id="s-00-20-39-839" data-start="00:20:39,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The regulators are under mounting pressure to show they can make the private water companies act in the public interest.</p>
+<p>监管机构面临压力，需证明能迫使私营水务公司为公共利益行事。</p>
+<p><button class="play-button sentence" id="s-00-20-48-127" data-start="00:20:48,127" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now in this report the environment agency says it's inspected more than 4,000 water company assets in the last year and found that nearly a quarter of them were in breach of their permits.</p>
+<p>环境署报告称，去年检查超4000处水务设施，近四分之一违规。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-01-625" data-start="00:21:01,625" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's raw breaking, law breaking on a massive scale.</p>
+<p>这是大规模公然违法。</p>
+<p><button class="play-button sentence" id="s-00-21-05-703" data-start="00:21:05,703" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a complete disgrace what's happened and people have every right to be furious about it.</p>
+<p>事件极其可耻，民众完全有权愤怒。</p>
+<p><button class="play-button sentence" id="s-00-21-10-646" data-start="00:21:10,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm furious about what's happened and it is clear that regulation isn't working effectively.</p>
+<p>我对现状感到愤怒，显然监管未有效运作。</p>
+<p><button class="play-button sentence" id="s-00-21-16-473" data-start="00:21:16,473" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also managed to get 104 billion pounds of investment into the sector because fundamentally if we want to stop pollution we need to invest in improving the infrastructure which has been left and just fall apart over the last 14 years.</p>
+<p>我们已争取到1040亿英镑行业投资，因为要根治污染，必须投资改善过去14年荒废的基础设施。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958710" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-29-789" data-start="00:21:29,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Water UK which represents the water companies also blame the regulators and in particular off what for it says preventing them from investing more.</p>
+<p>代表水务公司的Water UK则指责监管机构，尤其是Ofwat限制其增加投资。</p>
+<p><button class="play-button sentence" id="s-00-21-41-200" data-start="00:21:41,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next week water and sewage will be center stage once more as a government-backed review of the industry's failings and recommendations of how to fix it is published.</p>
+<p>下周，政府支持的行业问题审查及整改建议将发布，水务议题将再成焦点。</p>
+<p><button class="play-button sentence" id="s-00-21-53-680" data-start="00:21:53,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well let's speak to Henry Swithenbank from the campaign group Surfers Against Sewage.</p>
+<p>现在连线环保组织"冲浪者反对污水"的亨利·斯威森班克。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-58-674" data-start="00:21:58,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Henry thank you for being with us.</p>
+<p>亨利，感谢参与。</p>
+<p><button class="play-button sentence" id="s-00-22-00-365" data-start="00:22:00,365" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I suppose based on your experiences in the past year seeing a massive increase in these figures isn't a huge surprise to you.</p>
+<p>鉴于您过去一年的经历，这些数据激增应不意外。</p>
+<p><button class="play-button sentence" id="s-00-22-07-319" data-start="00:22:07,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No it's not we're frankly not surprised at all by what water companies are now doing.</p>
+<p>确实，我们对水务公司的行为毫不惊讶。</p>
+<p><button class="play-button sentence" id="s-00-22-13-066" data-start="00:22:13,066" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a tale of as old as time and simply we're hearing that more and more pollution from this frankly broken system.</p>
+<p>这是老生常谈，破损系统正制造越来越多污染。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958659" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-20-233" data-start="00:22:20,233" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are the figures from last year it did rain an awful lot.</p>
+<p>去年降雨量确实很大。</p>
+<p><button class="play-button sentence" id="s-00-22-24-263" data-start="00:22:24,263" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It did but even the environment agency in their report have come out and said that the water companies can no longer blame this this weather this is a systemic failing caused by a water system that is fundamentally set up to deliver profit for the water companies and whilst that remains the case we will be stuck in this loop of pollution.</p>
+<p>但环境署报告明确指出，水务公司不能再归咎天气，这是以盈利为核心的水务系统导致的系统性失败，只要现状不变，污染循环将持续。</p>
+<p><button class="play-button sentence" id="s-00-22-47-654" data-start="00:22:47,654" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So what really you want to see from the commission next week and from the government is to completely re-plum this system so that the water system works for the public benefit not for private interest.</p>
+<p>因此您希望下周委员会和政府彻底改革该系统，使其服务于公共利益而非私利。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-00-960" data-start="00:23:00,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the problem at the moment is the structure the way that our waste water is processed when it rains heavily sewer gins up in rivers and ends up in the sea.</p>
+<p>当前问题是暴雨时污水直排河流入海的处理结构。</p>
+<p><button class="play-button sentence" id="s-00-23-13-332" data-start="00:23:13,332" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes so our Victorian infrastructure has been created so it combines rain water and sewage and it just hasn't been updated to connect to the amount of new houses being built but also from the increased rainfall.</p>
+<p>是的，维多利亚时代的基础设施将雨水与污水合并处理，但未随新建住房及降雨量增加而升级。</p>
+<p><button class="play-button sentence" id="s-00-23-30-798" data-start="00:23:30,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that can't still be an excuse actually what we've seen is just the an investment into dividends into debt rather than into infrastructure.</p>
+<p>但这不能成为借口，现实是资金流向分红和债务而非基建。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958579" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-40-186" data-start="00:23:40,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the water companies say things are going to get better because they're going to invest billions in infrastructure in new infrastructure now that they've been allowed to put up consumers bills.</p>
+<p>水务公司称将因获准提高水费而投资数十亿改善基建。</p>
+<p><button class="play-button sentence" id="s-00-23-52-835" data-start="00:23:52,835" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes but we think we've heard this before they keep on telling us we're going to invest and invest and the figures today actually showed but yes they have been investing but we're still getting the same result.</p>
+<p>但我们已多次听闻此类承诺，数据显示虽有投资，结果依旧。</p>
+<p><button class="play-button sentence" id="s-00-24-05-834" data-start="00:24:05,834" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we think from pouring this 104 billion into these same leaky pipes is just going to result in the same issues unless we remove that profit motive and restructure the water companies to work for public benefit.</p>
+<p>我们认为，除非消除利润动机并重组水务公司为公益服务，否则千亿投入仍将收效甚微。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958541" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-18-798" data-start="00:24:18,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right so you're talking about a complete restructure of the way the whole water systems run.</p>
+<p>您指的是水务系统的全面重构。</p>
+<p><button class="play-button sentence" id="s-00-24-22-960" data-start="00:24:22,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean we have seen six water companies banned last month from giving their bosses bonuses if they don't meet environmental standards etc but I just want to ask you about what people are facing because obviously the summer holidays just beginning and people are heading to rivers heading to the sea.</p>
+<p>上月六家水务公司因未达环保标准被禁发高管奖金，但当前暑假伊始，民众涌向河流海滩，您对他们有何建议？</p>
+<p><button class="play-button sentence" id="s-00-24-38-978" data-start="00:24:38,978" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is your advice to people to make sure they don't come into contact with disgusting stuff that's going to do us harm?</p>
+<p>如何避免接触有害污染物？</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958513" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-46-189" data-start="00:24:46,189" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we have the at surface against sewage have the safer seas and river service app which gives you live alerts for when sewage is being discharged so you can check that and see if it's safe to go in the water.</p>
+<p>我们推出"安全海域与河流"APP，实时推送污水排放警报，供查询水域安全状况。</p>
+<p><button class="play-button sentence" id="s-00-24-59-196" data-start="00:24:59,196" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We at surface against sewage are surfers we're water users we swimmer's we're paddleboarders we love being in the water and we want to be able to use that freely so we encourage people to go in the water but just to check that out to make sure you're not going to become sick when you do enter the water.</p>
+<p>作为冲浪者、游泳者等亲水人群，我们鼓励民众戏水前确认安全。</p>
+<p><button class="play-button sentence" id="s-00-25-16-070" data-start="00:25:16,070" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Henry thank you very much Henry's with and bank from surfers against sewage thank you.</p>
+<p>感谢亨利·斯威森班克的分享。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958477" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-22-312" data-start="00:25:22,312" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just at some of the day's other news now police say no further action will be taken against the Belfast rap ban kneecap over their performance at Glastonbury a senior detective had been looking into whether a criminal offense had taken place during their performance.</p>
+<p>其他新闻：警方宣布不对贝尔法斯特说唱组合Kneecap在格拉斯顿伯里音乐节的表演采取进一步行动，此前高级警探调查其是否构成刑事犯罪。</p>
+<p><button class="play-button sentence" id="s-00-25-37-400" data-start="00:25:37,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police have searched the home and the headquarters of the former Brazilian president Jaya Bostonaro.</p>
+<p>警方搜查巴西前总统雅伊尔·博索纳罗住所及总部。</p>
+<p><button class="play-button sentence" id="s-00-25-43-537" data-start="00:25:43,537" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Bostonaro has been ordered to wear an ankle bracelet to prevent him fleeing he's on trial accused of plotting a coup against his successor which he denies.</p>
+<p>博索纳罗被要求佩戴电子脚镣以防潜逃，他因涉嫌策划政变反对继任者受审，本人否认指控。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1aNuSzvEea/?t=-2208958446" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-53-987" data-start="00:25:53,987" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a lot more coming up here on the world today I'm Karen Genone here in London I'll be back with plenty of time see you soon.</p>
+<p>更多新闻即将播报，我是伦敦的凯伦·杰农，稍后回来。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

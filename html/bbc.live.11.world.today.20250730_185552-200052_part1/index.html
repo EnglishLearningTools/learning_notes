@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>UK Air Traffic Chaos: Flights Grounded, Passengers Stranded</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A technical failure in UK air traffic control caused widespread flight disruptions, grounding all outbound flights and stranding thousands of passengers. US Special Envoy Steve Wichoff heads to the Middle East amid growing concerns over starvation in Gaza. Meanwhile, one of the strongest earthquakes in history struck Russia’s Far East, triggering tsunami warnings as far as California.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>UK Air Traffic Chaos: Flights Grounded, Passengers Stranded</h1>
+<p>【BBC World Today 20250731 P1 英国空中交通大瘫痪：航班停飞旅客滞留 | 中东危机升级 | 俄罗斯远东强震引发海啸警报】</p>
+<p>Summary:
+A technical failure in UK air traffic control caused widespread flight disruptions, grounding all outbound flights and stranding thousands of passengers. US Special Envoy Steve Wichoff heads to the Middle East amid growing concerns over starvation in Gaza. Meanwhile, one of the strongest earthquakes in history struck Russia’s Far East, triggering tsunami warnings as far as California.</p>
+<p>摘要：
+英国空中交通控制系统突发技术故障，导致全国航班大面积停飞，数千名旅客滞留。美国中东特使史蒂夫·威科夫即将出访，加沙饥荒问题引发国际社会担忧。此外，俄罗斯远东地区发生史上最强地震之一，远至加州均发布海啸警报。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 37 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959989" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-11-000" data-start="00:00:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's 7pm in London.</p>
+<p>现在是伦敦时间晚上7点。</p>
+<p><button class="play-button sentence" id="s-00-00-12-201" data-start="00:00:12,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the world today with Marianne Machiri.</p>
+<p>这里是玛丽安·马奇里为您带来的《今日世界》。</p>
+<p><button class="play-button sentence" id="s-00-00-15-128" data-start="00:00:15,128" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All outbound flights from the UK have been disrupted by a technical issue with air traffic control.</p>
+<p>英国所有出境航班均因空中交通管制技术故障而中断。</p>
+<p><button class="play-button sentence" id="s-00-00-21-320" data-start="00:00:21,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Slights are back in the air again here at London's Heathrow, but the impact is expected to carry on for the rest of the evening as airports and airlines recover and get back and control.</p>
+<p>伦敦希思罗机场的航班已恢复飞行，但影响预计将持续至晚间，机场和航空公司正在逐步恢复运营。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959965" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-34-960" data-start="00:00:34,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> US Special Envoy Steve Wichoff is expected to travel to the Middle East on Thursday as international concern grows about starvation in Gaza.</p>
+<p>随着国际社会对加沙饥荒的担忧加剧，美国特使史蒂夫·维切夫预计将于周四前往中东。</p>
+<p><button class="play-button sentence" id="s-00-00-44-314" data-start="00:00:44,314" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the strongest earthquakes in history strikes rushes far east, sparking tsunami warnings as far away as California.</p>
+<p>史上最强地震之一袭击远东地区，引发远至加利福尼亚的海啸预警。</p>
+<p><button class="play-button sentence" id="s-00-00-53-719" data-start="00:00:53,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The weather is coming up on the world today.</p>
+<p>接下来是《今日世界》的天气预报。</p>
+<p><button class="play-button sentence" id="s-00-00-56-039" data-start="00:00:56,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Farewell to the Prince of Darkness, Osceos born's family, are among thousands paying tribute to his hometown of Birmingham.</p>
+<p>"黑暗王子"奥兹·奥斯本的家人与数千民众一同在其家乡伯明翰举行悼念活动。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-07-400" data-start="00:01:07,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello and welcome to the world today on BBC News.</p>
+<p>大家好，欢迎收看BBC新闻《今日世界》。</p>
+<p><button class="play-button sentence" id="s-00-01-15-399" data-start="00:01:15,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There has been major disruption at airports across the UK this evening after all departing flights were paused because of a technical issue at air traffic control.</p>
+<p>今晚英国全国机场因空中交通管制技术故障暂停所有离港航班，造成严重混乱。</p>
+<p><button class="play-button sentence" id="s-00-01-29-545" data-start="00:01:29,545" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All airports from London Heathrow to Gapwick to Manchester and Edinburgh have been affected.</p>
+<p>从伦敦希思罗到盖特威克、曼彻斯特和爱丁堡的所有机场均受影响。</p>
+<p><button class="play-button sentence" id="s-00-01-35-909" data-start="00:01:35,909" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This happened at around 3 o'clock this afternoon.</p>
+<p>故障发生于今日下午3时左右。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959900" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-39-024" data-start="00:01:39,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The National Air Traffic Control Service, NATS, says the issue has now been fixed, but the delays are continuing.</p>
+<p>英国国家空中交通服务局表示问题已解决，但延误仍在持续。</p>
+<p><button class="play-button sentence" id="s-00-01-45-558" data-start="00:01:45,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Passengers due to travel are being told to check with their airline.</p>
+<p>建议计划出行的旅客联系航空公司确认信息。</p>
+<p><button class="play-button sentence" id="s-00-01-49-280" data-start="00:01:49,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Boris Redfern is one of those passengers waiting at Heathrow for his flight to take off.</p>
+<p>鲍里斯·雷德芬是希思罗机场等待航班起飞的乘客之一。</p>
+<p><button class="play-button sentence" id="s-00-01-54-358" data-start="00:01:54,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were scheduled to fly at 3.35.</p>
+<p>我们原定3:35起飞。</p>
+<p><button class="play-button sentence" id="s-00-01-57-797" data-start="00:01:57,797" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've been on the plane for nearly two and a half hours.</p>
+<p>我已在机上等待近两个半小时。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959876" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-03-400" data-start="00:02:03,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we just heard over the the TANI system that it's going to be at least another 90 minutes before we get near.</p>
+<p>我们刚通过广播系统得知至少还需90分钟才能起飞。</p>
+<p><button class="play-button sentence" id="s-00-02-11-343" data-start="00:02:11,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was due to landing. He's at 6.30 and I'll be arriving at 10pm.</p>
+<p>原定6:30降落，现预计晚10点抵达。</p>
+<p><button class="play-button sentence" id="s-00-02-18-560" data-start="00:02:18,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We didn't really have any words for the first 16 minutes or so and then there was another hour long gap.</p>
+<p>最初16分钟没有任何通知，之后又间隔了一小时。</p>
+<p><button class="play-button sentence" id="s-00-02-25-920" data-start="00:02:25,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've had two or three kind of updates as to what's going on.</p>
+<p>期间仅收到两三次零散更新。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-30-858" data-start="00:02:30,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nobody seems to have any idea what has actually happened from the air traffic control perspective.</p>
+<p>似乎无人清楚空中交通管制方面究竟发生了什么。</p>
+<p><button class="play-button sentence" id="s-00-02-36-960" data-start="00:02:36,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've just gotten a bit of technical glitch.</p>
+<p>只说是技术故障。</p>
+<p><button class="play-button sentence" id="s-00-02-39-775" data-start="00:02:39,775" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Initially it was not doubt the whole of the south east of the UK, but then I've had other people say it's lost the whole country.</p>
+<p>起初说是英国东南部故障，后又有消息称全国系统瘫痪。</p>
+<p><button class="play-button sentence" id="s-00-02-47-718" data-start="00:02:47,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well Simon Gabriel from Newbury in Barkshire sent us this video from Barcelona Airport.</p>
+<p>伯克郡纽伯里的西蒙·加布里埃尔从巴塞罗那机场发来视频。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959826" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-53-680" data-start="00:02:53,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says his flight to the UK did a U-turn around 30 minutes in the air and returned to Barcelona.</p>
+<p>他表示飞往英国的航班在空中30分钟后折返巴塞罗那。</p>
+<p><button class="play-button sentence" id="s-00-03-00-120" data-start="00:03:00,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have a listen.</p>
+<p>请听报道。</p>
+<p><button class="play-button sentence" id="s-00-03-01-120" data-start="00:03:01,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've just landed back in Barcelona Airport.</p>
+<p>我们刚返回巴塞罗那机场。</p>
+<p><button class="play-button sentence" id="s-00-03-05-659" data-start="00:03:05,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All the UK flights, you take out flights and course haven't got into return due to the air traffic issues.</p>
+<p>所有英国航班因空管问题均未抵达即返航。</p>
+<p><button class="play-button sentence" id="s-00-03-14-639" data-start="00:03:14,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm at some form.</p>
+<p>我目前状态尚可。</p>
+<p><button class="play-button sentence" id="s-00-03-15-943" data-start="00:03:15,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The plane's just being refueled.</p>
+<p>飞机正在加油。</p>
+<p><button class="play-button sentence" id="s-00-03-18-551" data-start="00:03:18,551" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And shortly when we get on off, the activity will be taken off again and heading back to the UK.</p>
+<p>稍后我们将再次起飞前往英国。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-25-329" data-start="00:03:25,329" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So all in all, it can be a few hours of drive.</p>
+<p>整个过程可能还需数小时。</p>
+<p><button class="play-button sentence" id="s-00-03-29-097" data-start="00:03:29,097" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's cross live now to our transport correspondent Simon Browning, who is at Heathrow Airport and Simon.</p>
+<p>现在连线正在希思罗机场的交通记者西蒙·布朗宁。</p>
+<p><button class="play-button sentence" id="s-00-03-34-304" data-start="00:03:34,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bring us up to date with the very latest on the disruption.</p>
+<p>请介绍最新情况。</p>
+<p><button class="play-button sentence" id="s-00-03-37-639" data-start="00:03:37,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it's been a difficult day for the aviation and airline industry this afternoon.</p>
+<p>今日下午航空业经历了艰难时刻。</p>
+<p><button class="play-button sentence" id="s-00-03-43-519" data-start="00:03:43,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That temporary outage at the National Air Traffic Control Centre.</p>
+<p>国家空中交通管制中心短暂瘫痪。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959773" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-46-218" data-start="00:03:46,218" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was only for 20 minutes, but it causes major disruption.</p>
+<p>虽仅20分钟，却造成重大混乱。</p>
+<p><button class="play-button sentence" id="s-00-03-48-899" data-start="00:03:48,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the National Air Traffic Control Centre effectively manages the motorways of the sky.</p>
+<p>现在国家空中交通管制中心有效地管理着天空中的高速公路。</p>
+<p><button class="play-button sentence" id="s-00-03-53-890" data-start="00:03:53,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It manages where our flights go around the UK from airports arriving into the UK when we get on our planes and head outside the United Kingdom on our holidays and to other destinations right around the world.</p>
+<p>它管理着我们的航班在英国境内的航线，包括从机场起飞、抵达英国，以及当我们登上飞机前往英国境外度假或世界其他目的地的航班。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-04-130" data-start="00:04:04,130" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But when those systems goes down, it's a real compromise on safety because effectively those manage in the skies can't actually see properly and when technical problems happen, they need to make sure safety is paramount and planes needed to be grounded for the safety of all of us using the skies.</p>
+<p>但当这些系统出现故障时，安全就会受到严重影响，因为实际上那些管理天空的人无法正常观察，而当技术问题发生时，他们必须确保安全至上，飞机需要停飞以保障所有使用天空的人的安全。</p>
+<p><button class="play-button sentence" id="s-00-04-18-983" data-start="00:04:18,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's exactly what happened.</p>
+<p>而这正是发生的情况。</p>
+<p><button class="play-button sentence" id="s-00-04-20-503" data-start="00:04:20,503" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A tech outage needed to lead to a temporary grounding of flight only for 20 minutes.</p>
+<p>一次技术故障导致航班暂时停飞，仅持续了20分钟。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959735" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-24-759" data-start="00:04:24,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the systems came back online within 20 minutes, but the impact is substantial.</p>
+<p>现在，系统在20分钟内恢复了运行，但影响是巨大的。</p>
+<p><button class="play-button sentence" id="s-00-04-31-560" data-start="00:04:31,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The aviation sector and airlines operate on such tiny margins, planes land, they take off, planes land, they take off.</p>
+<p>航空业和航空公司的运营利润非常微薄，飞机降落、起飞，再降落、再起飞。</p>
+<p><button class="play-button sentence" id="s-00-04-38-887" data-start="00:04:38,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Any disruption or delays causes a serious knock-on.</p>
+<p>任何中断或延误都会引发严重的连锁反应。</p>
+<p><button class="play-button sentence" id="s-00-04-42-038" data-start="00:04:42,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when the whole system goes down, the knock-on is substantial and serious.</p>
+<p>而当整个系统崩溃时，连锁反应将是巨大而严重的。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959713" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-46-120" data-start="00:04:46,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's exactly what we're seeing now.</p>
+<p>而这正是我们现在看到的情况。</p>
+<p><button class="play-button sentence" id="s-00-04-48-446" data-start="00:04:48,446" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, 20 minutes after the outage happened, now it's got their systems back on and I'm at Heathrow.</p>
+<p>现在，故障发生20分钟后，系统已经恢复，我目前在希思罗机场。</p>
+<p><button class="play-button sentence" id="s-00-04-53-238" data-start="00:04:53,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Plains have started again.</p>
+<p>航班已重新开始起降。</p>
+<p><button class="play-button sentence" id="s-00-04-54-819" data-start="00:04:54,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know that Heathrow has only cancelled 16 flights here, Manchester airport has told me that it's cancelled six.</p>
+<p>我们知道希思罗机场仅取消了16个航班，曼彻斯特机场告诉我他们取消了6个航班。</p>
+<p><button class="play-button sentence" id="s-00-05-00-468" data-start="00:05:00,468" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that data and information is still coming through.</p>
+<p>但这些数据和信息仍在更新中。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959697" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-02-756" data-start="00:05:02,756" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as we heard from some of those clips from passengers, lots of passengers were heading inbound into the United Kingdom, but because those effectively motorists of the sky and the ability to read them had gone down, planes were diverted and sent back.</p>
+<p>从一些乘客的片段中我们听到，许多乘客正飞往英国，但由于那些天空中的“驾驶员”及其读取能力失效，飞机被改道或返航。</p>
+<p><button class="play-button sentence" id="s-00-05-14-278" data-start="00:05:14,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're going to have a situation now where planes are in the wrong place, passengers are in the wrong place and crews are in the wrong place.</p>
+<p>因此，我们现在将面临飞机、乘客和机组人员位置错乱的情况。</p>
+<p><button class="play-button sentence" id="s-00-05-20-519" data-start="00:05:20,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this comes at a time when it's the first of August tomorrow.</p>
+<p>而这一切发生在明天就是8月1日的时候。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959676" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-23-549" data-start="00:05:23,549" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is the globally the busiest time for travel and this is just not what the aviation and airline sector wants to have as its peak time happens.</p>
+<p>这是全球旅行最繁忙的时期，而这正是航空业最不希望在其高峰期发生的事情。</p>
+<p><button class="play-button sentence" id="s-00-05-31-177" data-start="00:05:31,177" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It wants its customers to have confidence that things won't go wrong.</p>
+<p>它希望客户对一切正常运行有信心。</p>
+<p><button class="play-button sentence" id="s-00-05-35-158" data-start="00:05:35,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And lots of investigations happened a couple of years ago when a similar outage happened with that, their systems went down 700,000 passengers were disrupted and it took about a week to recover that.</p>
+<p>几年前发生过一次类似的故障，当时系统崩溃导致70万乘客受到影响，恢复大约花了一周时间。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959653" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-46-094" data-start="00:05:46,094" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now as I say, lots of reviews happened to try and stop what's happened today and it's happened.</p>
+<p>正如我所说，进行了许多审查以试图阻止今天发生的事情，但它还是发生了。</p>
+<p><button class="play-button sentence" id="s-00-05-50-637" data-start="00:05:50,637" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the good news is it only happened 20 minutes, whether that was a beneficiary of the fact that those reviews had happened in systems were in place, but it still happened and there's going to be disruption.</p>
+<p>好消息是这次仅持续了20分钟，这可能得益于之前的审查和系统改进，但它仍然发生了，并将带来混乱。</p>
+<p><button class="play-button sentence" id="s-00-06-00-113" data-start="00:06:00,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I would imagine people who were heading away on their summer holes in the next couple of days are coming into the UK might be feeling a little bit nervous, but as I say, operations are trying to get back to normal that he throw in other UK efforts at the moment.</p>
+<p>我想那些未来几天准备去度假或来英国的人可能会感到有些紧张，但正如我所说，运营正在努力恢复正常，目前英国其他机场也在努力。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959628" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-11-687" data-start="00:06:11,687" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Simon, thank you very much indeed for that update or transport and travel expert Simon Calder spoke to me earlier and he said that aside from the economic loss, such disruptions cause significant emotional distress for passengers.</p>
+<p>西蒙，非常感谢你的更新，交通和旅行专家西蒙·卡尔德早些时候告诉我，除了经济损失外，此类中断还会给乘客带来严重的情感困扰。</p>
+<p><button class="play-button sentence" id="s-00-06-25-560" data-start="00:06:25,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The huge emotional cost of this everybody is looking at the economic cost or at least in the aviation industry and the shutdown of Heathrow on the 21st of March because of a fire at an electrical substation that costs the airlines £100 million.</p>
+<p>巨大的情感代价，每个人都在关注经济损失，至少航空业是如此，3月21日因变电站火灾导致希思罗机场关闭，给航空公司造成了1亿英镑的损失。</p>
+<p><button class="play-button sentence" id="s-00-06-41-666" data-start="00:06:41,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well it costs a couple of hundred thousand passengers their travel plans, desperately difficult times.</p>
+<p>而这还导致数十万乘客的旅行计划被打乱，这是极其艰难的时期。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959591" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-48-904" data-start="00:06:48,904" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Everyone is really emotionally invested in their travels and yeah we get used to the idea of a delay of an hour or two, but if you're told as for example passengers traveling from London City to Glasgow tonight have been told your flight is simply cancelled then you're not able easily to switch to another flight because they're simply aren't the seats available and while it's easy to say what people's rights are you've got to have an alternative flight as soon as possible and that can be on a different airline whatever is going to get you there fastest.</p>
+<p>每个人都对旅行投入了情感，我们习惯了延误一两个小时，但如果被告知航班取消，比如今晚从伦敦城市机场飞往格拉斯哥的乘客，你很难轻易改签其他航班，因为根本没有可用座位。虽然很容易说乘客的权利是什么，但你必须尽快找到替代航班，可以是其他航空公司，只要能最快到达目的地。</p>
+<p><button class="play-button sentence" id="s-00-07-27-381" data-start="00:07:27,381" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If there aren't any seats available, well that's just awful.</p>
+<p>如果没有可用座位，那就太糟糕了。</p>
+<p><button class="play-button sentence" id="s-00-07-30-939" data-start="00:07:30,939" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Airlines again having to put up passengers in hotels but there are going to be thousands and thousands of people stuck at various airports I fear overnight tonight and I'm not sure there will be enough room for them.</p>
+<p>航空公司不得不为乘客安排酒店住宿，但我担心今晚将有成千上万的人滞留在各个机场，我不确定是否有足够的空间容纳他们。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959535" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-44-248" data-start="00:07:44,248" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well as always you can get more information on the very latest on this disruption and the ongoing disruption at various airports in the UK on the BBC's website there's a live page there being updated minute by minute if you have time step away from the TV but for now let's move you on to the other top story of the day and that is what is happening in Gaza a US official says special envoy Steve Wichoff will travel to the Middle East on Thursday to discuss the next steps in addressing the desperate situation in Gaza.</p>
+<p>一如既往，你可以在BBC网站上获取关于此次中断及英国各机场持续中断的最新信息，有一个实时页面每分钟更新。如果你有时间离开电视，但现在让我们转向今天的另一则头条新闻，即加沙的情况。一位美国官员表示，特使史蒂夫·维科夫将于周四前往中东，讨论解决加沙严峻局势的下一步行动。</p>
+<p><button class="play-button sentence" id="s-00-08-14-422" data-start="00:08:14,422" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes as families of Israeli hostages being held by Hamas in Gaza say the plan by the UK and other European countries to recognise a Palestinian state validates terrorism.</p>
+<p>与此同时，被哈马斯扣押在加沙的以色列人质家属表示，英国和其他欧洲国家承认巴勒斯坦国的计划是对恐怖主义的认可。</p>
+<p><button class="play-button sentence" id="s-00-08-24-672" data-start="00:08:24,672" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well Sir Kirsta Amar announced yesterday that the UK would recognise a Palestinian state in September unless Israel meets certain conditions including a ceasefire in Gaza opposition parties have criticised Kirsta Amar's plan as a bargaining chip saying the state should have been recognised earlier.</p>
+<p>克里斯塔·阿马尔爵士昨天宣布，英国将在9月承认巴勒斯坦国，除非以色列满足某些条件，包括在加沙停火。反对党批评克里斯塔·阿马尔的计划是一种筹码，称巴勒斯坦国本应更早得到承认。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959478" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-41-378" data-start="00:08:41,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the government stress that part of the reason for the move now was to try to change the situation on the ground in Gaza.</p>
+<p>但政府强调，现在采取这一行动的部分原因是为了试图改变加沙的实地局势。</p>
+<p><button class="play-button sentence" id="s-00-08-48-519" data-start="00:08:48,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today the Gaza Health Ministry says seven more people have died of conditions linked to malnutrition over the last 24 hours that brings the reported number of hunger related deaths since the start of the Gaza War to 151 people, 89 of them children.</p>
+<p>今天，加沙卫生部表示，过去24小时内有7人死于与营养不良相关的疾病，这使得自加沙战争开始以来报告的饥饿相关死亡人数达到151人，其中89人是儿童。</p>
+<p><button class="play-button sentence" id="s-00-09-03-343" data-start="00:09:03,343" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well joining me now is our Middle East correspondent Hugo Bachega in Jerusalem and in Westminster our political correspondent Damon Grimaticus.</p>
+<p>现在与我连线的是我们在耶路撒冷的中东记者雨果·巴切加和在威斯敏斯特的政治记者达蒙·格里马提克斯。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959446" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-13-158" data-start="00:09:13,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hugo let me go to you first of all we've heard in the last hour or so that Steve Wichoff will travel to Israel to talk about Gaza what more are we hearing?</p>
+<p>雨果，首先让我问你，我们在过去一小时左右听说史蒂夫·维科夫将前往以色列讨论加沙问题，我们还听到了什么？</p>
+<p><button class="play-button sentence" id="s-00-09-22-918" data-start="00:09:22,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah so this is going to be the first known visit by Steve Wichoff to Israel since May and it comes amid stall negotiations for a ceasefire and hostage release deal between Israel and Hamas and I mean the catastrophic situation in Gaza with starvation across the territory.</p>
+<p>是的，这将是史蒂夫·维科夫自5月以来首次访问以色列，而此时以色列和哈马斯之间的停火和人质释放谈判陷入僵局，加沙的局势灾难性，整个地区都在挨饿。</p>
+<p><button class="play-button sentence" id="s-00-09-42-152" data-start="00:09:42,152" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think this shows that Gaza is again a priority for the Trump administration just days ago President Trump himself said there was starvation in Gaza which marked a rare public disagreement between the president and the Israeli Prime Minister Benjamin Netanyahu who has repeatedly denied that there is starvation happening Gaza despite reports of Palestinian starving to death also the images of emaciated children across the territory and reports by a number of aid organizations and also the United Nations.</p>
+<p>因此，我认为这表明加沙再次成为特朗普政府的优先事项。就在几天前，特朗普总统本人表示加沙存在饥饿，这标志着总统与以色列总理本杰明·内塔尼亚胡之间罕见的公开分歧，后者一再否认加沙存在饥饿，尽管有巴勒斯坦人饿死的报道，以及整个地区瘦弱儿童的照片，还有多个援助组织和联合国的报告。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959384" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-15-591" data-start="00:10:15,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now this visit happens amid international anger over what's happening there the you know dire humanitarian situation so a US official said Steve Wichoff will be having meetings with Israeli officials to address the situation in Gaza.</p>
+<p>这次访问发生在国际社会对加沙严峻人道主义局势的愤怒之际。一位美国官员表示，史蒂夫·维科夫将与以色列官员会面，讨论加沙局势。</p>
+<p><button class="play-button sentence" id="s-00-10-33-819" data-start="00:10:33,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have been reports suggesting that he will also visit Gaza and visit some of the sites run by the Gaza Humanitarian Foundation which is this controversial new mechanism that is supported by the Americans and also by the Israelis largely bypassing the United Nations and aid organizations which have decades of experiencing Gaza in the distribution of aid.</p>
+<p>有报道称，他还将访问加沙，并参观由加沙人道主义基金会运营的一些地点，这是一个有争议的新机制，得到美国和以色列的支持，很大程度上绕过了在加沙有几十年援助经验的联合国和援助组织。</p>
+<p><button class="play-button sentence" id="s-00-10-54-853" data-start="00:10:54,853" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a system that has been heavily criticized by virtually everyone who's not involved with it and has been blamed by aid organizations for being part of the problem in Gaza because of the very limited amount of aid being handed out to Palestinians in Gaza and I think for the families of the hostages this could be the hope to restart these negotiations for a possible ceasefire and hostage release deal between Israel and Hamas.</p>
+<p>这一系统几乎受到所有不参与其中的人的严厉批评，援助组织指责它是加沙问题的一部分，因为分发给加沙巴勒斯坦人的援助非常有限。我认为，对人质家属来说，这可能是重启以色列和哈马斯之间停火和人质释放谈判的希望。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959317" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-22-120" data-start="00:11:22,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hugo thank you very much let's speak now to Damien and Damien it's interesting isn't it because there's been a lot of pressure from the opposition parties the Lib Dems and the conservatives the Green Party excuse me against what Labour have done against what Kirstaama did they're saying that it's you know the conditions put on Israel shouldn't have happened in the first place that Palestinian statehood should just be recognized but then you have of course the families of the hostages complaining that this is rewarding terrorism so pressure on Kirstaama from all sides.</p>
+<p>雨果，非常感谢。现在让我们和达米安谈谈。达米安，这很有趣，因为反对党自由民主党、保守党和绿党对工党和克里斯塔·阿马尔的行动施加了很大压力，他们说对以色列施加的条件本就不应该存在，巴勒斯坦国应该直接得到承认。但当然还有人质家属抱怨这是在奖励恐怖主义，因此克里斯塔·阿马尔面临来自各方的压力。</p>
+<p><button class="play-button sentence" id="s-00-11-54-600" data-start="00:11:54,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes so on the sort of political pressure he has critical criticism I mean he has criticism from both sides of his decision to this decision say he will recognize Palestinian state in September if conditions are not met including ceasefire aid on the ground commitment to a peace process that's sort of thing.</p>
+<p>是的，他面临的政治压力是批评性的，我的意思是，他的决定受到双方的批评。他说如果某些条件未满足，他将在9月承认巴勒斯坦国，包括停火、实地援助和对和平进程的承诺等。</p>
+<p><button class="play-button sentence" id="s-00-12-16-759" data-start="00:12:16,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now on the one hand you have as you say for more on the left side you have the Liberal Democrats and the Greens who said well there should be no conditions attached to Palestinian statehood if you believe Palestinians have the right to a state well then that should be unconditional and it's not something that should rely on actions by Israel to grant that or not.</p>
+<p>一方面，正如你所说，左翼的自由民主党和绿党表示，巴勒斯坦建国不应附加任何条件，如果你认为巴勒斯坦人有建国的权利，那么这应该是无条件的，不应依赖以色列的行动来决定是否承认。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959239" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-40-224" data-start="00:12:40,224" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the other side you have criticism from the conservatives on the right saying that this is absolutely not the right time to recognize Palestinian statehood because it won't advance peace and it won't advance a ceasefire it won't advance getting rid of getting the hostages released by Hamas and they say that this is an issue of political management Kirstaama with his own party many of his MPs wanting this increasing numbers vocal and that he's dealing with that and then of course yes criticism from others who are watching this particularly families who have relatives held hostage or who were hostages who have described this as a moral failure said shame on you Kirstaama and saying that advancing or this decision does not advance peace it rewards the activities of Hamas and rewards terrorism by recognizing or saying you will recognize a state entity while Hamas is still on the ground while it's still carrying out its activities then that isn't something that is advancing peace it is doing the opposite it is rewarding violence Damien and Hugo thanks to both of you and let's now hear from Khaled El-Gindi he's a visting scholar at Georgetown University but he's also former negotiator for the Palestinian Authority he gave me his reaction to what the Hicca government has said I think given the extremely alarming conditions in Gaza were mass starvation you know Gaza's now entered officially a state of famine and we're seeing hunger-related deaths each and every single day so I think given this dire situation the UK and another major powers are desperately trying to impact Israel's decision-making and I think this is you know Kirstaarmers decision to announce that the UK would recognize Palestine by September if there weren't a ceasefire and major changes in the humanitarian situation is part of that attempted pressure on Israel I don't think it will I think it will have very limited impact because recognizing a state of Palestine certainly impacts the political realm that doesn't really directly affect realities on the ground those are being determined by Prime Minister Netanyahu in conjunction with decision-makers in Washington namely President Trump.</p>
+<p>另一方面，右翼的保守党批评说，现在绝对不是承认巴勒斯坦国的时候，因为这不会促进和平，不会促进停火，也不会促进哈马斯释放人质。他们说这是克里斯塔·阿马尔的政治管理问题，他所在的党内许多议员越来越强烈地要求承认巴勒斯坦国，而他正在处理这一问题。当然，还有其他人批评这一决定，特别是那些有亲属被扣押或曾经是人质的人，他们称这是道德失败，说“克里斯塔·阿马尔，你真可耻”，并表示这一决定不会促进和平，而是奖励哈马斯的活动和恐怖主义，因为在哈马斯仍在活动时承认或宣布将承认一个国家的实体，这不是促进和平，而是相反，是在奖励暴力。达米安和雨果，谢谢你们。现在让我们听听哈利德·埃尔-金迪的看法，他是乔治城大学的访问学者，也是巴勒斯坦权力机构的前谈判代表。他向我表达了对希卡政府声明的反应。我认为，考虑到加沙极其严峻的局势，大规模饥饿，加沙现在正式进入饥荒状态，我们每天都能看到与饥饿相关的死亡。因此，我认为在这种严峻的形势下，英国和其他大国正拼命试图影响以色列的决策。我认为克里斯塔·阿马尔宣布如果加沙没有停火和人道主义局势没有重大改善，英国将在9月承认巴勒斯坦国的决定，正是这种试图对以色列施压的一部分。我不认为这会有什么效果，我认为影响非常有限，因为承认巴勒斯坦国当然会影响政治领域，但这并不会直接影响实地局势，这些局势是由内塔尼亚胡总理与华盛顿的决策者即特朗普总统共同决定的。</p>
+<p><button class="play-button sentence" id="s-00-15-20-120" data-start="00:15:20,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here in the UK a high court judge has ruled that Palestine action can challenge the government's decision to ban it as a terror organization the group was outlawed after damage was caused to planes at RAF, Bryce Norton last month in protest against Israel's war in Gaza the UN has warned that banning the group under anti terrorism legislation is an unjustified labeling of a political protest movement.</p>
+<p>在英国，高等法院法官裁定，巴勒斯坦行动组织可以挑战政府将其列为恐怖组织的决定。该组织在上个月对英国皇家空军布莱斯诺顿基地的飞机造成破坏，以抗议以色列在加沙的战争。联合国警告称，根据反恐立法禁止该组织是对政治抗议运动的不公正标签。</p>
+<p><button class="play-button sentence" id="s-00-15-45-996" data-start="00:15:45,996" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still to come on the world today.</p>
+<p>今天的《世界》节目还有更多内容。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208959050" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-49-158" data-start="00:15:49,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sunami alerts have been scaled back across much of the northern Pacific following a powerful earthquake of Russia's Far East.</p>
+<p>俄罗斯远东地区发生强烈地震后，北太平洋大部分地区的海啸警报已降级。</p>
+<p><button class="play-button sentence" id="s-00-15-56-210" data-start="00:15:56,210" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tens of thousands of people have lined the streets of Birmingham to pay tribute to the black Sabbath frontman Ozios Bourne who died last week.</p>
+<p>数万人聚集在伯明翰街头，悼念上周去世的黑色安息日主唱奥兹·奥斯本。</p>
+<p><button class="play-button sentence" id="s-00-16-05-080" data-start="00:16:05,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK you're watching the world today on BBC News.</p>
+<p>全球及全英观众正在收看BBC新闻的《今日世界》节目。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958961" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-18-838" data-start="00:17:18,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> British brothers aged 11 and 13 have drowned off a beach on the east coast of Spain according to local authorities.</p>
+<p>当地政府称，一对11岁和13岁的英国兄弟在西班牙东海岸海滩溺水身亡。</p>
+<p><button class="play-button sentence" id="s-00-17-25-400" data-start="00:17:25,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happened on Tuesday evening after entering the water at Larger Beach and Salau Tarragona.</p>
+<p>事件发生在周二晚上，当时他们在塔拉戈纳的拉尔赫海滩下水。</p>
+<p><button class="play-button sentence" id="s-00-17-30-683" data-start="00:17:30,683" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police said sea conditions were rough and local media reported the beach had a yellow flag throughout the day meaning swimming is allowed but caution is advised.</p>
+<p>警方称海况恶劣，当地媒体报道该海滩全天悬挂黄旗，表示允许游泳但需谨慎。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958939" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-40-226" data-start="00:17:40,226" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their father who was also in the water was rescued by emergency workers.</p>
+<p>他们的父亲也在水中，后被救援人员救起。</p>
+<p><button class="play-button sentence" id="s-00-17-44-598" data-start="00:17:44,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A man has been found guilty of attacking two female police officers during a violent disturbance at Manchester Airport which went viral on social media.</p>
+<p>一名男子因在曼彻斯特机场的暴力骚乱中袭击两名女警而被判有罪，该事件在社交媒体上疯传。</p>
+<p><button class="play-button sentence" id="s-00-17-55-737" data-start="00:17:55,737" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mohammed Fahir Amaz, who's 20, was convicted at Liverpool Crown Court of assaulting PC Lydia Ward and PC Ellie Cook last July.</p>
+<p>20岁的穆罕默德·法希尔·阿马兹在利物浦刑事法庭被判去年7月袭击警员莉迪亚·沃德和艾莉·库克罪名成立。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958915" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-04-118" data-start="00:18:04,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The jury was unable to reach verdicts on allegations that Amaz and his brother, Mohammed Ahmed, assaulted PC Zachary Marston causing actual bodily harm.</p>
+<p>陪审团未能就阿马兹及其兄弟穆罕默德·艾哈迈德袭击警员扎卡里·马斯顿并造成实际身体伤害的指控达成裁决。</p>
+<p><button class="play-button sentence" id="s-00-18-13-558" data-start="00:18:13,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Roambridge reports and a warning his peace does contain distressing images from the staff.</p>
+<p>罗姆布里奇报道并警告称，其报道包含工作人员提供的令人不安的画面。</p>
+<p><button class="play-button sentence" id="s-00-18-19-159" data-start="00:18:19,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The police officer, shown with an injury in this report, has consented to the video being shown.</p>
+<p>报道中受伤的警员已同意视频公开。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958894" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-25-959" data-start="00:18:25,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An explosion of violence and chaos caught on camera.</p>
+<p>镜头捕捉到暴力和混乱的爆发。</p>
+<p><button class="play-button sentence" id="s-00-18-30-200" data-start="00:18:30,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mohammed Amaz here in blue and his brother punching police as they try to arrest him.</p>
+<p>身穿蓝色的穆罕默德·阿马兹及其兄弟在警方试图逮捕他时殴打警察。</p>
+<p><button class="play-button sentence" id="s-00-18-38-519" data-start="00:18:38,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amaz hits a female officer's nose so hard it's broken.</p>
+<p>阿马兹重击一名女警的鼻子致其骨折。</p>
+<p><button class="play-button sentence" id="s-00-18-45-559" data-start="00:18:45,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After being tazered, Amaz is kicked in the head by PC Zachary Marston.</p>
+<p>在被电击后，阿马兹被警员扎卡里·马斯顿踢中头部。</p>
+<p><button class="play-button sentence" id="s-00-18-51-160" data-start="00:18:51,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This part of the violence was caught on camera by onlookers until went viral on social media causing outrage.</p>
+<p>这部分暴力被旁观者拍下并在社交媒体疯传，引发愤怒。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958862" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-57-515" data-start="00:18:57,515" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it was published without showing what happened before.</p>
+<p>但发布时未显示此前发生的事。</p>
+<p><button class="play-button sentence" id="s-00-19-04-759" data-start="00:19:04,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the time, the brothers protested their innocence, appearing online complaining about their treatment.</p>
+<p>当时兄弟俩在网上抗议自己的清白，抱怨所受待遇。</p>
+<p><button class="play-button sentence" id="s-00-19-10-622" data-start="00:19:10,622" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The police officers that have assaulted both Fahir and Amaz.</p>
+<p>警方称袭击了法希尔和阿马兹。</p>
+<p><button class="play-button sentence" id="s-00-19-15-638" data-start="00:19:15,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In reality, it was Amaz who started the violence.</p>
+<p>事实上，是阿马兹先挑起暴力。</p>
+<p><button class="play-button sentence" id="s-00-19-18-484" data-start="00:19:18,484" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meeting his mother off a flight, she tells Amaz she's been racially abused by a passenger.</p>
+<p>接机时，其母告诉阿马兹她遭到一名乘客种族歧视。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958836" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-23-896" data-start="00:19:23,896" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He confronts the man in Starbucks and then headbutts him before throwing punches.</p>
+<p>他在星巴克与该男子对峙，随后用头撞击并挥拳殴打。</p>
+<p><button class="play-button sentence" id="s-00-19-29-079" data-start="00:19:29,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The brothers then punched the police as they come to arrest him.</p>
+<p>兄弟俩随后在警方逮捕他时殴打警察。</p>
+<p><button class="play-button sentence" id="s-00-19-33-335" data-start="00:19:33,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In court, they said they acted in self-defense.</p>
+<p>法庭上他们称是自卫。</p>
+<p><button class="play-button sentence" id="s-00-19-37-120" data-start="00:19:37,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Amaz was found guilty of assaulting a member of the public and two police officers.</p>
+<p>阿马兹被判袭击一名公众及两名警察罪名成立。</p>
+<p><button class="play-button sentence" id="s-00-19-42-299" data-start="00:19:42,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But a jury was unable to reach a verdict on whether he and his brother assaulted PC Marston.</p>
+<p>但陪审团未能就他和其兄弟是否袭击警员马斯顿达成裁决。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-47-275" data-start="00:19:47,275" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In court, the officer was described as an uncontrolled bully with a badge.</p>
+<p>法庭上该警员被描述为“佩戴警徽的失控恶霸”。</p>
+<p><button class="play-button sentence" id="s-00-19-52-092" data-start="00:19:52,092" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was accepted that PC Marston kicked Amaz in the face and stamped near his head, but he said he did so to stun Amaz and to get control of his radio, which was hanging loose.</p>
+<p>马斯顿承认踢中阿马兹面部并踩踏其头部附近，但称是为制服阿马兹并控制其松脱的对讲机。</p>
+<p><button class="play-button sentence" id="s-00-20-02-519" data-start="00:20:02,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This trial though was about the actions of the brothers and not the police.</p>
+<p>此次审判针对兄弟俩的行为而非警方。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958793" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-07-000" data-start="00:20:07,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're still the subjective and independent office for police conduct investigation who are looking at the actions of two police officers.</p>
+<p>警察行为调查独立办公室仍在调查两名警员的行动。</p>
+<p><button class="play-button sentence" id="s-00-20-14-599" data-start="00:20:14,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The chief constable of Greater Manchester Police welcomed the conviction of Amaz, saying his appalling conduct has now been exposed to legitimate public scrutiny.</p>
+<p>大曼彻斯特警察局长对阿马兹定罪表示欢迎，称其恶劣行径已接受公众正当监督。</p>
+<p><button class="play-button sentence" id="s-00-20-23-959" data-start="00:20:23,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our officers are decent people who routinely place themselves in harm's way to protect the public.</p>
+<p>我们的警员是正直的人，常置身危险以保护公众。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958770" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-29-638" data-start="00:20:29,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They deserve our respect and support.</p>
+<p>他们应得到尊重与支持。</p>
+<p><button class="play-button sentence" id="s-00-20-35-638" data-start="00:20:35,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This verdict marks the end of this trial, but it doesn't draw a line under the controversy surrounding what happened.</p>
+<p>判决标志审判结束，但争议未止。</p>
+<p><button class="play-button sentence" id="s-00-20-41-588" data-start="00:20:41,588" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The brothers now face a re-child on the final count the jury couldn't reach a verdict on.</p>
+<p>兄弟俩将就陪审团未裁决的最后一项指控接受重审。</p>
+<p><button class="play-button sentence" id="s-00-20-46-404" data-start="00:20:46,404" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rowan Bridge, BBC News, Liverpool Crown Court.</p>
+<p>BBC新闻罗恩·布里奇，利物浦刑事法庭报道。</p>
+<p><button class="play-button sentence" id="s-00-20-51-480" data-start="00:20:51,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tens of thousands of people have lined the streets of Birmingham to pay tribute to the Black Sabbath frontman Oziorsbourne as his coffin was driven through his home city ahead of his funeral.</p>
+<p>数万人沿伯明翰街道站立，悼念黑色安息日主唱奥兹·奥斯本，其灵柩在葬礼前驶过家乡。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-01-318" data-start="00:21:01,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 76-year-old who had Parkinson's disease died last week.</p>
+<p>这位76岁的帕金森病患者于上周去世。</p>
+<p><button class="play-button sentence" id="s-00-21-04-710" data-start="00:21:04,710" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Irones' payment correspondent Colin Patterson was there.</p>
+<p>BBC记者科林·帕特森在现场。</p>
+<p><button class="play-button sentence" id="s-00-21-09-582" data-start="00:21:09,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Birmingham saying goodbye.</p>
+<p>伯明翰的告别。</p>
+<p><button class="play-button sentence" id="s-00-21-15-558" data-start="00:21:15,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To a heavy metal hero.</p>
+<p>向重金属英雄告别。</p>
+<p><button class="play-button sentence" id="s-00-21-18-090" data-start="00:21:18,090" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A city coming together to support a grieving family.</p>
+<p>整座城市团结支持悲痛的家庭。</p>
+<p><button class="play-button sentence" id="s-00-21-27-960" data-start="00:21:27,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sharon Osborne flanked by her son Jack and Dr Kelly with their famously media shy elder sibling Amy, also there to honour her dad.</p>
+<p>莎伦·奥斯本由儿子杰克和凯利医生陪同，鲜少露面的长女艾米也在场致敬父亲。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958702" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-37-559" data-start="00:21:37,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oziorsbourne always said he wanted his funeral to be a celebration and not at moat fest.</p>
+<p>奥兹曾说希望葬礼是庆典而非哀悼会。</p>
+<p><button class="play-button sentence" id="s-00-21-46-759" data-start="00:21:46,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was certainly the case here.</p>
+<p>现场确实如此。</p>
+<p><button class="play-button sentence" id="s-00-21-49-319" data-start="00:21:49,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I've got a baton umbrella because we all know all she bites the head of bat.</p>
+<p>“我带了蝙蝠伞，因我们都知道她咬蝙蝠头。”</p>
+<p><button class="play-button sentence" id="s-00-21-53-640" data-start="00:21:53,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier fans of all ages had claimed their viewing spots from four in the morning.</p>
+<p>清晨4点起，各年龄段粉丝已占据观看位置。</p>
+<p><button class="play-button sentence" id="s-00-21-59-160" data-start="00:21:59,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm here to pay more respect to an absolute legend.</p>
+<p>“我来此致敬绝对传奇。”</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958671" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-08-039" data-start="00:22:08,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was actually going to go to the gig and not two weeks later, couldn't believe it.</p>
+<p>“本打算去看演出，不料两周后他离世，难以置信。”</p>
+<p><button class="play-button sentence" id="s-00-22-13-281" data-start="00:22:13,281" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was in the post-armist's thesis too.</p>
+<p>“我也在‘战后论文’中。”</p>
+<p><button class="play-button sentence" id="s-00-22-16-519" data-start="00:22:16,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was even a pooch of darkness called Doggy Osborne.</p>
+<p>甚至有一只名为“狗狗奥斯本”的黑暗风小狗。</p>
+<p><button class="play-button sentence" id="s-00-22-21-480" data-start="00:22:21,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While this fan, Cole Goose, had met Ozi just two weeks ago and got a special autograph.</p>
+<p>粉丝科尔·古斯两周前见过奥兹并获得签名。</p>
+<p><button class="play-button sentence" id="s-00-22-27-079" data-start="00:22:27,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had one hand on my arm just to steady and the other hand drew that signature.</p>
+<p>“他一手扶我手臂稳住，另一手签名。”</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958646" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-33-079" data-start="00:22:33,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I got it tattooed that day so the ink is in my skin.</p>
+<p>“我当天将其纹在身上，墨迹永存。”</p>
+<p><button class="play-button sentence" id="s-00-22-37-559" data-start="00:22:37,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ozi seemed so strong as strong as he possibly could be that day.</p>
+<p>“奥兹那天显得无比坚强。”</p>
+<p><button class="play-button sentence" id="s-00-22-43-319" data-start="00:22:43,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they're him to leave this so soon after.</p>
+<p>“他这么快离去令人难以承受。”</p>
+<p><button class="play-button sentence" id="s-00-22-47-960" data-start="00:22:47,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's just sick. It was so hard to bear.</p>
+<p>“他病得很重，太难接受了。”</p>
+<p><button class="play-button sentence" id="s-00-22-51-400" data-start="00:22:51,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kelly Osborne's sunglasses were appointed in the north to her dad's signature look.</p>
+<p>凯利·奥斯本的圆形墨镜致敬父亲的标志造型。</p>
+<p><button class="play-button sentence" id="s-00-22-57-240" data-start="00:22:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oshara Osborne found her own way of paying tribute.</p>
+<p>奥莎拉·奥斯本以自己方式致敬。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958611" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-08-359" data-start="00:23:08,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was tough. That was worse than the Queen. That was.</p>
+<p>“这很艰难，比女王去世更难受。”</p>
+<p><button class="play-button sentence" id="s-00-23-12-680" data-start="00:23:12,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shara looked so frail and I really hope that she was happily overwhelmed with what was here for a today because everyone was so so loving and caring and concerned.</p>
+<p>“莎拉看起来很虚弱，希望她被今日的爱与关怀感动。”</p>
+<p><button class="play-button sentence" id="s-00-23-29-240" data-start="00:23:29,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A private funeral for Ozi Osborne will take place tomorrow.</p>
+<p>奥兹的私人葬礼将于明日举行。</p>
+<p><button class="play-button sentence" id="s-00-23-33-078" data-start="00:23:33,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was a very public celebration of a man who will be deeply missed.</p>
+<p>这是对这位将被深切怀念之人的公开悼念。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958573" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-46-118" data-start="00:23:46,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well Colin told me more about the atmosphere in Birmingham.</p>
+<p>科林描述了伯明翰的氛围。</p>
+<p><button class="play-button sentence" id="s-00-23-49-720" data-start="00:23:49,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The atmosphere has been quite incredible today.</p>
+<p>“今日氛围难以置信。”</p>
+<p><button class="play-button sentence" id="s-00-23-52-787" data-start="00:23:52,787" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been so much joyous. It's also been emotional.</p>
+<p>“充满欢乐与感动。”</p>
+<p><button class="play-button sentence" id="s-00-23-55-958" data-start="00:23:55,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been lots of singing and chanting.</p>
+<p>“人们不断歌唱呼喊。”</p>
+<p><button class="play-button sentence" id="s-00-23-58-358" data-start="00:23:58,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that moment when the Osborne's got out of their vehicle, you can really feel the thousands of people lining Broad Street here right in the centre of Birmingham.</p>
+<p>“奥斯本一家下车时，你能感受到数千人聚集在伯明翰中心Broad街的深情。”</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958552" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-07-318" data-start="00:24:07,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can feel the people wanting to let the Osborne's know just how much Ozi Osborne meant to them.</p>
+<p>“人们想让奥斯本一家知道奥兹对他们的意义。”</p>
+<p><button class="play-button sentence" id="s-00-24-14-759" data-start="00:24:14,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when you look at the tributes, I've been looking through some of these.</p>
+<p>“这些悼念物品来自全球各地。”</p>
+<p><button class="play-button sentence" id="s-00-24-17-960" data-start="00:24:17,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It doesn't take long to just pick out places more around the world.</p>
+<p>“很快就能看到世界各地的留言。”</p>
+<p><button class="play-button sentence" id="s-00-24-20-599" data-start="00:24:20,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's one from the Buddha Pesh just behind me.</p>
+<p>“我身后有来自布达佩斯的。”</p>
+<p><button class="play-button sentence" id="s-00-24-23-798" data-start="00:24:23,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's one behind from that. RIP Ozi from Kazakhstan.</p>
+<p>“还有来自哈萨克斯坦的‘安息吧奥兹’。”</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958532" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-27-878" data-start="00:24:27,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That just gives you an idea of just what a worldwide story this has been.</p>
+<p>“可见此事影响之广。”</p>
+<p><button class="play-button sentence" id="s-00-24-33-558" data-start="00:24:33,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And just how many people it has affected.</p>
+<p>“以及触动人数之多。”</p>
+<p><button class="play-button sentence" id="s-00-24-36-440" data-start="00:24:36,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and you could see the family, you know, Sharon.</p>
+<p>“你能看到莎伦一家。”</p>
+<p><button class="play-button sentence" id="s-00-24-40-278" data-start="00:24:40,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was so upset. There was so emotional.</p>
+<p>“非常悲痛，情绪激动。”</p>
+<p><button class="play-button sentence" id="s-00-24-45-318" data-start="00:24:45,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, really, really emotional.</p>
+<p>“真的非常感人。”</p>
+<p><button class="play-button sentence" id="s-00-24-47-878" data-start="00:24:47,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sharon, a lot of people commenting on how Braille she looks when she was getting out of the vehicle.</p>
+<p>“许多人评论莎伦下车时的憔悴。”</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958507" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-52-278" data-start="00:24:52,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But she was flanked there by Jack and Kelly or Son and daughter.</p>
+<p>“但她有儿子杰克和女儿凯利陪伴。”</p>
+<p><button class="play-button sentence" id="s-00-24-56-838" data-start="00:24:56,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also Amy, their elder sibling who very, very seldom in the years in front of the cameras.</p>
+<p>“还有极少露面的长女艾米。”</p>
+<p><button class="play-button sentence" id="s-00-25-02-200" data-start="00:25:02,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was there wanting to pay tributes to her dad.</p>
+<p>“她来此致敬父亲。”</p>
+<p><button class="play-button sentence" id="s-00-25-05-240" data-start="00:25:05,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it was interesting to see the ways that they were all doing their own little nods to it.</p>
+<p>“他们各自致敬的方式很有趣。”</p>
+<p><button class="play-button sentence" id="s-00-25-09-960" data-start="00:25:09,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We believe that Sharon was actually wearing Ozi's wedding ring around her neck.</p>
+<p>“相信莎伦将奥兹的婚戒戴在脖子上。”</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958485" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-14-759" data-start="00:25:14,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So she's taken Ozi's wedding ring off Ozi and is now wearing that herself.</p>
+<p>“她取下奥兹的戒指自己佩戴。”</p>
+<p><button class="play-button sentence" id="s-00-25-19-160" data-start="00:25:19,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she also gave the peace sign as she headed back into the vehicle, which was a sign Ozi was very norm-worthy.</p>
+<p>“她回车时比出和平手势，这是奥兹的标志动作。”</p>
+<p><button class="play-button sentence" id="s-00-25-25-400" data-start="00:25:25,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Kelly wearing the round sunglasses that her dad was so synonymous with.</p>
+<p>“凯利戴着父亲标志的圆形墨镜。”</p>
+<p><button class="play-button sentence" id="s-00-25-31-318" data-start="00:25:31,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was what happened in Birmingham today.</p>
+<p>“这就是今日伯明翰的现场。”</p>
+<p><button class="play-button sentence" id="s-00-25-34-038" data-start="00:25:34,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, let's just take you briefly if we may to the BBC's website.</p>
+<p>“现在简要带您浏览BBC网站。”</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958462" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-37-318" data-start="00:25:37,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because our top story of course is that flight disruption at all these various airports in the UK.</p>
+<p>“头条是英国多座机场的航班中断。”</p>
+<p><button class="play-button sentence" id="s-00-25-42-759" data-start="00:25:42,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you want to read about the very latest who's been affected, which airports are still affected, do go to the BBC's website using the website all the app.</p>
+<p>“欲知受影响人群及机场最新情况，请访问BBC网站或应用。”</p>
+<p><button class="play-button sentence" id="s-00-25-51-318" data-start="00:25:51,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a live page there.</p>
+<p>“有实时更新页面。”</p>
+<p><button class="play-button sentence" id="s-00-25-52-685" data-start="00:25:52,685" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These live pages are updated minute by minute with all the latest information for you.</p>
+<p>“每分钟更新最新信息。”</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=1?t=-2208958442" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-57-436" data-start="00:25:57,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm back after a short break. Stay with us on the world today.</p>
+<p>“稍后回来，请继续收看《今日世界》。”</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

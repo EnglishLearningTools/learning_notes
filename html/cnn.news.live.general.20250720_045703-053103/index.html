@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>cnn.news.live.general: London Time 2025-07-20 04:57 - 05:31</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This CNN broadcast covers Israeli forces firing on civilians seeking food in Gaza, a tourist boat capsizing in Vietnam, the death of WWII veteran and TikTok star Jake Larson, and other global news.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>cnn.news.live.general: London Time 2025-07-20 04:57 - 05:31</h1>
+<p>【CNN News 20250720 以色列军队向加沙寻求食物的平民开火｜越南一艘游船倾覆｜二战老兵兼TikTok明星杰克·拉尔森去世】</p>
+<p>Summary:
+This CNN broadcast covers Israeli forces firing on civilians seeking food in Gaza, a tourist boat capsizing in Vietnam, the death of WWII veteran and TikTok star Jake Larson, and other global news.</p>
+<p>摘要：
+本期CNN节目报道了以色列军队向加沙寻求食物的平民开火、越南一艘游船倾覆、二战老兵兼TikTok明星杰克·拉尔森去世等全球新闻。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 35 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, wherever you are in the world, you are now in the CNN newsroom with me Ben Hunter Melanta and it is so good to have you with me coming up on the show.</p>
+<p>大家好，无论您身在何处，您现在与我本·亨特·梅兰塔一起在CNN新闻直播间，很高兴您能收看接下来的节目。</p>
+<p><button class="play-button sentence" id="s-00-00-09-320" data-start="00:00:09,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli forces accused once again of firing on people seeking food in Gaza.</p>
+<p>以色列军队再次被指控向加沙寻求食物的人群开火。</p>
+<p><button class="play-button sentence" id="s-00-00-14-160" data-start="00:00:14,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Witnesses on the ground describe the nightmare that played out.</p>
+<p>现场目击者描述了发生的噩梦般场景。</p>
+<p><button class="play-button sentence" id="s-00-00-17-518" data-start="00:00:17,518" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bad weather causes a tourist boat in Vietnam to tip over into the water, the latest on that death toll and remembering a hero.</p>
+<p>恶劣天气导致越南一艘游船倾覆，最新死亡人数更新，并纪念一位英雄。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959974" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-25-120" data-start="00:00:25,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jake Larson, a World War II veteran and later TikTok star leaves this world aged 100 and two.</p>
+<p>二战老兵、后成为TikTok明星的杰克·拉尔森去世，享年102岁。</p>
+<p><button class="play-button sentence" id="s-00-00-34-560" data-start="00:00:34,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Welcome.</p>
+<p>欢迎。</p>
+<p><button class="play-button sentence" id="s-00-00-44-719" data-start="00:00:44,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Health workers are once again warning about the devastating reality for people caught up in the war in Gaza, with one doctor calling the latest incident too difficult to even describe.</p>
+<p>医护人员再次警告加沙战争中被困民众的悲惨现实，一位医生称最新事件"难以用语言描述"。</p>
+<p><button class="play-button sentence" id="s-00-00-54-759" data-start="00:00:54,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No difficult in fact many of you may find those scenes disturbing, but it's been happening all too often to people who are desperate for food.</p>
+<p>事实上许多人可能觉得这些画面令人不安，但对于急需食物的人们来说这已是常态。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-05-200" data-start="00:01:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At 4.30am, gunfire erupted from soldiers and tanks as if they were in a battle with us.</p>
+<p>凌晨4:30，士兵和坦克突然开火，仿佛在与我们交战。</p>
+<p><button class="play-button sentence" id="s-00-01-11-078" data-start="00:01:11,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Half an hour of continuous shooting, a massive number of martyrs and wounded.</p>
+<p>持续半小时的射击造成大量死伤者。</p>
+<p><button class="play-button sentence" id="s-00-01-15-640" data-start="00:01:15,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People are still lying there, abandoned, no one can reach them.</p>
+<p>人们仍躺在那里被遗弃，无人能接近。</p>
+<p><button class="play-button sentence" id="s-00-01-18-920" data-start="00:01:18,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For half an hour, tank shells and soldiers kept firing as if it were a battle.</p>
+<p>半小时内坦克和士兵持续开火如同战场。</p>
+<p><button class="play-button sentence" id="s-00-01-23-040" data-start="00:01:23,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They went there because of hunger, no one goes unless they're starving.</p>
+<p>他们因饥饿前往，除非快饿死没人会去那里。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959907" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-32-640" data-start="00:01:32,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gaza's health ministry says at least 32 people died on Saturday, after Israeli troops fired on them while they were trying to get aid.</p>
+<p>加沙卫生部称周六至少32人死亡，当时他们正试图获取援助物资却遭以军射击。</p>
+<p><button class="play-button sentence" id="s-00-01-40-840" data-start="00:01:40,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Early this week, the UN said 875 people were killed in other incidents at aid sites since May.</p>
+<p>本周初联合国表示自五月以来已有875人在援助点其他事件中丧生。</p>
+<p><button class="play-button sentence" id="s-00-01-47-760" data-start="00:01:47,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 674 of them were killed in near the places run by the controversial Gaza Humanitarian Foundation.</p>
+<p>其中674人死于有争议的加沙人道主义基金会运营点附近。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959885" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-54-718" data-start="00:01:54,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A UN official said more than 200 others were killed while seeking food quote on the roots of aid convoys or near aid convoys run by the UN or UN partners.</p>
+<p>联合国官员称200多人死于"在联合国及其合作伙伴运营的援助车队路线或附近寻求食物时"。</p>
+<p><button class="play-button sentence" id="s-00-02-04-959" data-start="00:02:04,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More now from CNN's Barbie Latsinadou and again, viewers may find some images in her report disturbing.</p>
+<p>接下来是CNN芭比·拉齐纳杜的报道，再次提醒观众部分画面可能引起不适。</p>
+<p><button class="play-button sentence" id="s-00-02-11-919" data-start="00:02:11,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 30 people seeking food in the Gaza strip were killed early Saturday morning when Israeli troops opened fire on them.</p>
+<p>周六清晨超30名在加沙地带寻求食物者遭以军开火致死。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959861" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-18-318" data-start="00:02:18,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Palestinian health ministry said the Israeli military said they were approached by subjects in the Rafa area about 1 kilometer from a closed Gaza Humanitarian Foundation aid site.</p>
+<p>巴勒斯坦卫生部表示以军称在距关闭的加沙人道主义基金会援助点约1公里处遭遇拉法地区人员靠近。</p>
+<p><button class="play-button sentence" id="s-00-02-31-120" data-start="00:02:31,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The GHF is backed by the U.S. and Israel.</p>
+<p>该基金会由美国和以色列支持。</p>
+<p><button class="play-button sentence" id="s-00-02-34-680" data-start="00:02:34,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One witness described a half hour of continuous shooting from soldiers and tanks.</p>
+<p>一名目击者描述士兵和坦克持续射击半小时。</p>
+<p><button class="play-button sentence" id="s-00-02-39-919" data-start="00:02:39,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Although the GHF site was not open, people say that they have to line up for hours in advance sometimes if they hope to get any food at all in what has become an increasingly desperate situation in the embellished enclave.</p>
+<p>尽管该基金会站点未开放，但人们表示在日益绝望的飞地局势中，有时需提前数小时排队才可能获得食物。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959826" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-53-639" data-start="00:02:53,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Children were among the victims, including this man's young son, whose childhood had been marred by the ongoing war.</p>
+<p>受害者包括儿童，如这名男子的幼子——他的童年被持续战争摧毁。</p>
+<p><button class="play-button sentence" id="s-00-03-00-000" data-start="00:03:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His pain is difficult to watch.</p>
+<p>他的痛苦令人不忍直视。</p>
+<p><button class="play-button sentence" id="s-00-03-03-438" data-start="00:03:03,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What am I supposed to do?</p>
+<p>我该怎么办？</p>
+<p><button class="play-button sentence" id="s-00-03-06-199" data-start="00:03:06,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By God Almighty, I don't know.</p>
+<p>全能的上帝啊，我不知道。</p>
+<p><button class="play-button sentence" id="s-00-03-10-799" data-start="00:03:10,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This child just wanted to eat.</p>
+<p>这孩子只是想吃饭。</p>
+<p><button class="play-button sentence" id="s-00-03-13-038" data-start="00:03:13,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What could he do?</p>
+<p>他能做什么？</p>
+<p><button class="play-button sentence" id="s-00-03-15-639" data-start="00:03:15,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He wanted to bring food for his siblings, and he came back carried in people's arms.</p>
+<p>他想给兄弟姐妹带食物，回来时却被人抱在怀里。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959799" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-20-840" data-start="00:03:20,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The latest tragedy in an increasingly dire situation comes just days after Gaza's only Catholic church was hit in a failed attack, which prompted Pope Leo to call for an immediate ceasefire.</p>
+<p>这一最新悲剧发生前数日，加沙唯一天主教堂遭袭击未遂，促使教皇利奥呼吁立即停火。</p>
+<p><button class="play-button sentence" id="s-00-03-31-878" data-start="00:03:31,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But such a stop in hostilities has been hard to secure, with U.S. President Donald Trump saying Friday that another 10 hostages would be released soon.</p>
+<p>但停火难以实现，美国总统特朗普周五称将很快再释放10名人质。</p>
+<p><button class="play-button sentence" id="s-00-03-41-120" data-start="00:03:41,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No proof of such a deal has yet been given.</p>
+<p>目前尚未提供该协议的证据。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959774" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-45-680" data-start="00:03:45,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Barbie Lotton-Ado CNN Rome Families of the hostages held in Gaza are keeping up the pressure on Israel's government to bring their loved ones home.</p>
+<p>CNN罗马站芭比·洛顿-阿多报道，被扣加沙人质家属持续向以色列政府施压要求亲人回家。</p>
+<p><button class="play-button sentence" id="s-00-03-55-479" data-start="00:03:55,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They held a rally in Tel Aviv on Saturday, urging Prime Minister Benjamin Netanyahu not to let the ceasefire torts collapse.</p>
+<p>他们周六在特拉维夫集会，敦促总理内塔尼亚胡不要让停火谈判破裂。</p>
+<p><button class="play-button sentence" id="s-00-04-01-680" data-start="00:04:01,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A U.S.-backed truce proposal calls for the release of 10 living hostages and a return of remains of 18 deceased ones.</p>
+<p>美国支持的停火提案要求释放10名生还人质并归还18名遇难者遗体。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959750" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-09-240" data-start="00:04:09,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel and Hamas accused each other of foot-dragging at negotiations.</p>
+<p>以色列和哈马斯互相指责对方拖延谈判。</p>
+<p><button class="play-button sentence" id="s-00-04-13-639" data-start="00:04:13,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some protest accused Mr. Netanyahu of playing petty politics with the hostages, while others called on the U.S. President to get more involved.</p>
+<p>部分抗议者指责内塔尼亚胡用人质玩政治游戏，另一些人则呼吁美国总统更多介入。</p>
+<p><button class="play-button sentence" id="s-00-04-25-839" data-start="00:04:25,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An entire nation wants to bring back all 50 hostages and the female hostage, and to end of the war through a deal like the one proposed by the Egyptians.</p>
+<p>整个国家希望通过埃及提出的协议救回全部50名人质并结束战争。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959725" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-34-879" data-start="00:04:34,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Netanyahu is once again hesitating to sign the agreement.</p>
+<p>但内塔尼亚胡再次对签署协议犹豫不决。</p>
+<p><button class="play-button sentence" id="s-00-04-38-800" data-start="00:04:38,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We sir, President Sir, we are counting on you.</p>
+<p>总统先生，我们指望您了。</p>
+<p><button class="play-button sentence" id="s-00-04-43-319" data-start="00:04:43,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You brought back hostages before.</p>
+<p>您曾带回过人质。</p>
+<p><button class="play-button sentence" id="s-00-04-46-079" data-start="00:04:46,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please do it again.</p>
+<p>请再次行动。</p>
+<p><button class="play-button sentence" id="s-00-04-49-160" data-start="00:04:49,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need your strength.</p>
+<p>我们需要您的力量。</p>
+<p><button class="play-button sentence" id="s-00-04-50-879" data-start="00:04:50,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need your leadership.</p>
+<p>需要您的领导力。</p>
+<p><button class="play-button sentence" id="s-00-04-53-319" data-start="00:04:53,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are begging you.</p>
+<p>我们恳求您。</p>
+<p><button class="play-button sentence" id="s-00-04-55-319" data-start="00:04:55,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Help us bring our children home.</p>
+<p>帮我们把孩子带回家。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-360" data-start="00:05:01,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At least 38 people were killed when a tourist boat capsized in Vietnam, eight of them were children.</p>
+<p>越南一艘游船倾覆致至少38人遇难，含8名儿童。</p>
+<p><button class="play-button sentence" id="s-00-05-07-199" data-start="00:05:07,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was carrying 53 people when it tipped over in stormy weather in Ha Long Bay.</p>
+<p>该船在下龙湾暴风雨天气中倾覆时载有53人。</p>
+<p><button class="play-button sentence" id="s-00-05-11-800" data-start="00:05:11,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Strong winds and heavy rain were reported in the area at the time.</p>
+<p>当时该地区报告有强风暴雨。</p>
+<p><button class="play-button sentence" id="s-00-05-15-038" data-start="00:05:15,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Officials say rescue teams have found 11 survivors so far and have recovered 27 bodies, but more people are still missing.</p>
+<p>官员称救援队已找到11名幸存者并打捞27具遗体，但仍有更多人失踪。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-22-519" data-start="00:05:22,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have lost contact with my son, my husband, and my friend's whole family.</p>
+<p>我与儿子、丈夫和朋友的整个家庭失联。</p>
+<p><button class="play-button sentence" id="s-00-05-28-918" data-start="00:05:28,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What I am asking now is for everyone to speed up the rescue mission, to save all of them.</p>
+<p>我现在请求所有人加速救援行动拯救他们。</p>
+<p><button class="play-button sentence" id="s-00-05-33-199" data-start="00:05:33,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please don't let anyone behind on that boat.</p>
+<p>请不要落下船上任何人。</p>
+<p><button class="play-button sentence" id="s-00-05-35-000" data-start="00:05:35,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are so little airlift, there is a small transit arriving.</p>
+<p>他们获救机会渺茫，只有少量转运到达。</p>
+<p><button class="play-button sentence" id="s-00-05-39-720" data-start="00:05:39,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Syria sending security forces to the southern province of Swede, the site of deadly sectarian clashes between drool groups and the better wind tribes.</p>
+<p>叙利亚向南部斯威达省派遣安全部队，当地曾发生德鲁兹派与贝都因部落间致命教派冲突。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959651" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-48-199" data-start="00:05:48,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The violence continued on Saturday, with new reports of gunfire and shelling.</p>
+<p>暴力事件周六持续，有新交火和炮击报告。</p>
+<p><button class="play-button sentence" id="s-00-05-52-319" data-start="00:05:52,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Syria's interior ministry says hundreds of people have been killed in the past week of fighting.</p>
+<p>叙内政部称过去一周战斗已致数百人死亡。</p>
+<p><button class="play-button sentence" id="s-00-05-57-199" data-start="00:05:57,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The country's presidency has declared what it called an immediate and comprehensive cease fire.</p>
+<p>叙利亚总统宣布"立即全面停火"。</p>
+<p><button class="play-button sentence" id="s-00-06-02-199" data-start="00:06:02,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Ahmed Ashara saying the violence, quote, marked a dangerous turning point in Syria's security and political landscape.</p>
+<p>总统艾哈迈德·阿沙拉称暴力事件"标志着叙利亚安全与政治格局的危险转折"。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959630" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-09-278" data-start="00:06:09,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some better wind and cruise groups say they are ready to accept a cease fire and indicated they would stop fighting once government forces were deployed, but others insist they will keep fighting.</p>
+<p>部分贝都因和德鲁兹团体表示愿接受停火，称政府军部署后将停止战斗，但其他团体坚持继续作战。</p>
+<p><button class="play-button sentence" id="s-00-06-20-560" data-start="00:06:20,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This better wind leader say in his tribe is acting in its own defence.</p>
+<p>这位贝都因领袖称其部落是为自卫而战。</p>
+<p><button class="play-button sentence" id="s-00-06-27-920" data-start="00:06:27,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Syria the sons of the tribes, we are not bound by any order.</p>
+<p>叙利亚部落之子不受任何命令约束。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959608" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-31-279" data-start="00:06:31,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is a tribal issue.</p>
+<p>这是部落问题。</p>
+<p><button class="play-button sentence" id="s-00-06-32-839" data-start="00:06:32,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They attack the women, they slaughtered the children and the elderly.</p>
+<p>他们袭击妇女，屠杀儿童和老人。</p>
+<p><button class="play-button sentence" id="s-00-06-36-680" data-start="00:06:36,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We won't go back unless we take our rights.</p>
+<p>除非获得权利否则绝不撤退。</p>
+<p><button class="play-button sentence" id="s-00-06-38-920" data-start="00:06:38,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Blood for blood.</p>
+<p>血债血偿。</p>
+<p><button class="play-button sentence" id="s-00-06-39-920" data-start="00:06:39,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those who started are the aggressors.</p>
+<p>发起者才是侵略方。</p>
+<p><button class="play-button sentence" id="s-00-06-42-439" data-start="00:06:42,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> God is great.</p>
+<p>真主至大。</p>
+<p><button class="play-button sentence" id="s-00-06-44-920" data-start="00:06:44,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukrainian President Vladimir Zelensky is calling for peace talks of Russia next week as Ukraine continues to fend off deadly Russian attacks.</p>
+<p>乌克兰总统泽连斯基呼吁下周与俄罗斯和谈，同时乌军持续抵御俄方致命攻击。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959587" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-52-480" data-start="00:06:52,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A source close to Moscow's negotiating team confirmed they've received Kyiv's proposal for a meeting according to Russian state media.</p>
+<p>俄官方媒体称，接近莫斯科谈判团队的消息人士证实已收到基辅会晤提议。</p>
+<p><button class="play-button sentence" id="s-00-06-59-918" data-start="00:06:59,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This all comes after U.S. President Donald Trump gave Russia 50 days to agree to a cease fire deal or face new tariffs.</p>
+<p>此前美国总统特朗普给俄罗斯50天期限同意停火协议否则将面临新关税。</p>
+<p><button class="play-button sentence" id="s-00-07-06-959" data-start="00:07:06,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The two countries have held two rounds of talks in Istanbul in recent months but haven't made any breakthroughs just yet.</p>
+<p>近月两国在伊斯坦布尔举行两轮谈判但尚未突破。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959565" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-14-918" data-start="00:07:14,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kakush.</p>
+<p>卡库什。</p>
+<p><button class="play-button sentence" id="s-00-07-15-918" data-start="00:07:15,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> National Security and Defence Council Secretary Maraugh also reported that he has proposed the next meeting with the Russian side for next week.</p>
+<p>国安与国防委员会秘书马罗赫也表示已提议下周与俄方会晤。</p>
+<p><button class="play-button sentence" id="s-00-07-22-918" data-start="00:07:22,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Negotiations dynamics must increase.</p>
+<p>必须加强谈判势头。</p>
+<p><button class="play-button sentence" id="s-00-07-25-319" data-start="00:07:25,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine must be done to achieve a cease fire.</p>
+<p>乌克兰必须实现停火。</p>
+<p><button class="play-button sentence" id="s-00-07-27-360" data-start="00:07:27,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Russian side must stop avoiding decisions.</p>
+<p>俄方必须停止回避决定。</p>
+<p><button class="play-button sentence" id="s-00-07-30-000" data-start="00:07:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The exchange of prisoners, the return of children, the cessation of killings.</p>
+<p>交换战俘、遣返儿童、停止杀戮。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959546" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-33-639" data-start="00:07:33,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A meeting at the level of leaders is needed to truly ensure peace, a lasting peace.</p>
+<p>需要领导人级别会晤才能真正确保持久和平。</p>
+<p><button class="play-button sentence" id="s-00-07-38-120" data-start="00:07:38,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine is ready for such a meeting.</p>
+<p>乌克兰已准备好此类会晤。</p>
+<p><button class="play-button sentence" id="s-00-07-41-240" data-start="00:07:41,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukrainians are trying to pick up the pieces amid Russia's non-stop assault.</p>
+<p>在俄罗斯持续攻击下乌克兰人努力重整生活。</p>
+<p><button class="play-button sentence" id="s-00-07-45-639" data-start="00:07:45,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Video out of town near Danesk shows buildings and homes decimated by strikes.</p>
+<p>达涅斯克郊外视频显示建筑和住宅遭袭击摧毁。</p>
+<p><button class="play-button sentence" id="s-00-07-50-399" data-start="00:07:50,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This military says its forces captured Korokovar in early January after weeks of intense fighting.</p>
+<p>该军方称经数周激战后于一月初占领科罗科瓦尔。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959523" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-56-399" data-start="00:07:56,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some residents are now going back only to find their homes have been turned to rubble.</p>
+<p>部分居民返回后只见家园已成废墟。</p>
+<p><button class="play-button sentence" id="s-00-08-03-560" data-start="00:08:03,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From 2022 to 2023, it wasn't too loud here.</p>
+<p>2022到2023年这里还不算太糟。</p>
+<p><button class="play-button sentence" id="s-00-08-08-238" data-start="00:08:08,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We just heard about the military actions on the news.</p>
+<p>我们只是从新闻听说军事行动。</p>
+<p><button class="play-button sentence" id="s-00-08-11-000" data-start="00:08:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But otherwise, everything was mostly calm.</p>
+<p>但其他方面大体平静。</p>
+<p><button class="play-button sentence" id="s-00-08-13-560" data-start="00:08:13,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2023, if I'm not mistaken, a projectile hit into my school, right into my classroom.</p>
+<p>2023年，如果没记错，有炮弹击中我的学校，直入教室。</p>
+<p><button class="play-button sentence" id="s-00-08-20-199" data-start="00:08:20,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our class teacher even joked that we had an epic 9th grade graduation.</p>
+<p>班主任还开玩笑说我们经历了"史诗级"九年级毕业。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959495" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-24-240" data-start="00:08:24,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After that, there were more large-scale shellings, with both wounded and dead.</p>
+<p>之后发生更多大规模炮击，出现伤亡。</p>
+<p><button class="play-button sentence" id="s-00-08-28-519" data-start="00:08:28,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And gradually, everything began to get worse and worse.</p>
+<p>逐渐地，一切变得越来越糟。</p>
+<p><button class="play-button sentence" id="s-00-08-33-318" data-start="00:08:33,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was my apartment.</p>
+<p>这是我的公寓。</p>
+<p><button class="play-button sentence" id="s-00-08-34-798" data-start="00:08:34,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here was my living room.</p>
+<p>这里曾是客厅。</p>
+<p><button class="play-button sentence" id="s-00-08-36-080" data-start="00:08:36,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My bedroom was the furthest one down the corridor.</p>
+<p>我的卧室在走廊最尽头。</p>
+<p><button class="play-button sentence" id="s-00-08-38-438" data-start="00:08:38,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It all burned down.</p>
+<p>全部烧毁了。</p>
+<p><button class="play-button sentence" id="s-00-08-39-960" data-start="00:08:39,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here in this room, I collected all my things.</p>
+<p>我曾在这个房间整理所有物品。</p>
+<p><button class="play-button sentence" id="s-00-08-42-600" data-start="00:08:42,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were prepared in bags so that if anything happens, we could take them and leave.</p>
+<p>都打包好以便突发事件时能带走。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959473" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-47-000" data-start="00:08:47,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But they all burned down here because we ran away and that's it.</p>
+<p>但因为我们逃离时全烧毁了。</p>
+<p><button class="play-button sentence" id="s-00-08-52-320" data-start="00:08:52,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And why did everything burn down?</p>
+<p>为何一切烧毁？</p>
+<p><button class="play-button sentence" id="s-00-08-55-558" data-start="00:08:55,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because the Ukrainian armed forces were housing here, defending themselves.</p>
+<p>因为乌克兰武装部队曾在此驻防。</p>
+<p><button class="play-button sentence" id="s-00-09-01-080" data-start="00:09:01,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At least four people are dead and two are missing after torrential rains triggered flash flooding in Hapchon County, South Korea.</p>
+<p>韩国合川郡暴雨引发山洪致至少4死2失踪。</p>
+<p><button class="play-button sentence" id="s-00-09-08-360" data-start="00:09:08,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Video provided by the county showed floodwaters rushing down streets in a residential area.</p>
+<p>该郡提供视频显示洪水冲过居民区街道。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959446" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-13-320" data-start="00:09:13,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Saturday marked the fourth consecutive day that the rain continued to batter the region, preventing nearly 3,000 people from returning to their homes.</p>
+<p>周六是该地区连续第四天遭暴雨袭击，近3000人无法返家。</p>
+<p><button class="play-button sentence" id="s-00-09-22-000" data-start="00:09:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Officials in Kerr County, Texas have updated the number of missing after catastrophic flooding early this month.</p>
+<p>得克萨斯州克尔县官员更新本月初灾难性洪水后的失踪人数。</p>
+<p><button class="play-button sentence" id="s-00-09-28-000" data-start="00:09:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The New Talley is just three.</p>
+<p>最新统计仅3人。</p>
+<p><button class="play-button sentence" id="s-00-09-29-720" data-start="00:09:29,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's down from an initial count of 161.</p>
+<p>较最初161人大幅下降。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959427" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-32-919" data-start="00:09:32,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kerrville officials say many people initially reported missing have now been verified as safe.</p>
+<p>克尔维尔官员称许多最初报失踪者现已确认安全。</p>
+<p><button class="play-button sentence" id="s-00-09-38-399" data-start="00:09:38,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The historic flooding killed at least 135 people, including 37 children.</p>
+<p>这场历史性洪水造成至少135人死亡，含37名儿童。</p>
+<p><button class="play-button sentence" id="s-00-09-43-798" data-start="00:09:43,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most of the victims were in Kerr County.</p>
+<p>多数遇难者在克尔县。</p>
+<p><button class="play-button sentence" id="s-00-09-46-120" data-start="00:09:46,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Please say search and recovery efforts could last up to six more months.</p>
+<p>警方称搜救工作可能持续长达六个月。</p>
+<p><button class="play-button sentence" id="s-00-09-51-639" data-start="00:09:51,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many people in the United States are mourning the death of Jake Larson, the World War Two veteran fought in the D-Day invasion in 1944.</p>
+<p>美国许多人哀悼二战老兵杰克·拉尔森逝世，他曾参加1944年诺曼底登陆。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959400" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-59-038" data-start="00:09:59,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he gained fame in his later days, fascinating more than a million followers on TikTok with stories about his life and service.</p>
+<p>晚年他在TikTok讲述生平事迹吸引超百万粉丝。</p>
+<p><button class="play-button sentence" id="s-00-10-06-240" data-start="00:10:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CNN's Betsy Colline has this story.</p>
+<p>CNN贝琪·科林带来报道。</p>
+<p><button class="play-button sentence" id="s-00-10-09-759" data-start="00:10:09,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A member of the greatest generation has died.</p>
+<p>"最伟大一代"成员逝世。</p>
+<p><button class="play-button sentence" id="s-00-10-13-038" data-start="00:10:13,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have learned that Jake Larson, the World War Two veteran who propelled to social media stardom as Papa Jake, has passed away at 102 years old, according to his granddaughter, Michaela Larson.</p>
+<p>据其孙女米凯拉·拉尔森称，以"杰克爷爷"闻名社交媒体的二战老兵杰克·拉尔森去世，享年102岁。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959373" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-26-320" data-start="00:10:26,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now Larson was among the members of the greatest generation who stormed the beaches of Normandy at the D-Day invasion 81 years ago.</p>
+<p>81年前诺曼底登陆时，拉尔森是进攻海滩的"最伟大一代"成员。</p>
+<p><button class="play-button sentence" id="s-00-10-36-438" data-start="00:10:36,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He reflected on that moment in an interview with our own Christian Amin Por just last year.</p>
+<p>去年他接受本台克里斯蒂安·阿明·波尔采访时回忆那一刻。</p>
+<p><button class="play-button sentence" id="s-00-10-41-639" data-start="00:10:41,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You were old kids.</p>
+<p>你们当时还是孩子。</p>
+<p><button class="play-button sentence" id="s-00-10-43-399" data-start="00:10:43,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were all kids, yes.</p>
+<p>是的，我们都是孩子。</p>
+<p><button class="play-button sentence" id="s-00-10-45-278" data-start="00:10:45,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And did you know then what you were fighting for?</p>
+<p>当时知道为何而战吗？</p>
+<p><button class="play-button sentence" id="s-00-10-48-078" data-start="00:10:48,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, definitely.</p>
+<p>当然。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959349" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-50-678" data-start="00:10:50,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That we knew every one of us.</p>
+<p>我们每个人都清楚。</p>
+<p><button class="play-button sentence" id="s-00-10-53-639" data-start="00:10:53,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us.</p>
+<p>请讲述。</p>
+<p><button class="play-button sentence" id="s-00-10-54-639" data-start="00:10:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every one of us was prepared to give our life to kick out Lausanne of Europe.</p>
+<p>我们每个人都准备牺牲生命将洛桑赶出欧洲。</p>
+<p><button class="play-button sentence" id="s-00-11-04-080" data-start="00:11:04,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you did.</p>
+<p>你们做到了。</p>
+<p><button class="play-button sentence" id="s-00-11-05-080" data-start="00:11:05,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we did.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-11-07-080" data-start="00:11:07,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was just three weeks ago that Amin Por won an Emmy for that interview and she shared her statue with Larson.</p>
+<p>就在三周前，阿明·波尔因那次采访赢得艾美奖，并与拉尔森共享了奖杯。</p>
+<p><button class="play-button sentence" id="s-00-11-13-320" data-start="00:11:13,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He called it phenomenal and proof that there is a god.</p>
+<p>他称这堪称奇迹，是上帝存在的证明。</p>
+<p><button class="play-button sentence" id="s-00-11-17-480" data-start="00:11:17,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I caught up with his son, Carlisle Larson, a short while ago who told me that his father lived an epic, epic life and that that Emmy statue is proudly displayed at his home, something that will be shared amongst his grandchildren for years to come.</p>
+<p>不久前我联系到他儿子卡莱尔·拉尔森，他说父亲度过了传奇的一生，那座艾美奖杯被骄傲地陈列在家中，将成为子孙后代共同珍藏的纪念。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959308" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-31-960" data-start="00:11:31,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> May his memory be a blessing.</p>
+<p>愿他的记忆成为祝福。</p>
+<p><button class="play-button sentence" id="s-00-11-33-879" data-start="00:11:33,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Betsy Klein, CNN, The White House.</p>
+<p>CNN白宫记者贝琪·克莱因报道。</p>
+<p><button class="play-button sentence" id="s-00-11-38-039" data-start="00:11:38,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Donald Trump is slamming persistent interest in his relationship with Jeffrey Epstein.</p>
+<p>特朗普总统正猛烈抨击外界对其与杰弗里·爱泼斯坦关系的持续关注。</p>
+<p><button class="play-button sentence" id="s-00-11-43-159" data-start="00:11:43,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite his request for the release of some grand jury testimony from the case against a late sex offender, a recent Wall Street Journal report has added new scoots to need his relationship with Epstein and he's filed a liable lawsuit over the article.</p>
+<p>尽管他要求公开已故性犯罪者案件的部分大陪审团证词，《华尔街日报》最新报道仍对其与爱泼斯坦的关系提出新质疑，他已就该文章提起诽谤诉讼。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959283" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-56-240" data-start="00:11:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a social media post on Saturday, Mr. Trump declared, quote, nothing will be good enough for those he described as troublemakers and radical left lunatics.</p>
+<p>特朗普先生在周六的社媒发文中宣称："对那些麻烦制造者和激进左派疯子来说，永远没有满意的时候。"</p>
+<p><button class="play-button sentence" id="s-00-12-06-960" data-start="00:12:06,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Los Angeles, please have a man in custody after he drove a car into a crowd outside a nightclub injuring 30 people.</p>
+<p>洛杉矶警方拘留了一名驾车冲撞夜店外人群致30人受伤的男子。</p>
+<p><button class="play-button sentence" id="s-00-12-13-678" data-start="00:12:13,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll bring you the latest just after the break.</p>
+<p>广告后为您带来最新进展。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959264" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-15-639" data-start="00:12:15,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also, coming up, how to rise in stars in the K-pop world using their unique stories to sketch out their own dreams of superstar.</p>
+<p>稍后节目：K-pop新星如何用独特故事勾勒巨星梦想。</p>
+<p><button class="play-button sentence" id="s-00-12-32-519" data-start="00:12:32,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Having Saudi-Altilans is unique and the location of the cultural district, it's one of a kind.</p>
+<p>沙特阿尔蒂兰斯文化区的地理位置独一无二。</p>
+<p><button class="play-button sentence" id="s-00-12-41-519" data-start="00:12:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the future is there and it is the right moment for the curtain blue to open the Kulin and Isti to there.</p>
+<p>未来就在那里，此刻正是揭开库林和伊斯提帷幕的最佳时机。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959229" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-50-038" data-start="00:12:50,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think there's never been a better time.</p>
+<p>我认为没有比现在更合适的时机。</p>
+<p><button class="play-button sentence" id="s-00-12-53-360" data-start="00:12:53,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And being surrounded by all these contemporary museums and plays of arts, there is a pressure on us to be as innovative as we can be, to be as creative as we can be.</p>
+<p>置身于当代艺术博物馆与艺术剧场之间，我们承受着不断创新、极致创意的压力。</p>
+<p><button class="play-button sentence" id="s-00-13-06-639" data-start="00:13:06,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that's again, that's part of what we do.</p>
+<p>但这正是我们工作的一部分。</p>
+<p><button class="play-button sentence" id="s-00-13-09-158" data-start="00:13:09,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we do is based on the classic French Kulinary Heritage.</p>
+<p>我们的根基在于经典法式烹饪传统。</p>
+<p><button class="play-button sentence" id="s-00-13-13-600" data-start="00:13:13,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, throughout the years, we have adapted, we brought these to different parts of the world.</p>
+<p>然而多年来我们不断调整，将这些传统带到世界各地。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959201" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-18-158" data-start="00:13:18,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So learn ourself and embrace different Kulinary Heritage as well.</p>
+<p>因此我们也在学习拥抱不同的烹饪传统。</p>
+<p><button class="play-button sentence" id="s-00-13-48-158" data-start="00:13:48,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Africa today.</p>
+<p>今日非洲。</p>
+<p><button class="play-button sentence" id="s-00-13-49-158" data-start="00:13:49,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Esported to markets around the world.</p>
+<p>出口至全球市场。</p>
+<p><button class="play-button sentence" id="s-00-13-52-639" data-start="00:13:52,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The energy is amazing.</p>
+<p>这里能量惊人。</p>
+<p><button class="play-button sentence" id="s-00-13-54-438" data-start="00:13:54,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Feels so good to be here.</p>
+<p>置身此地感觉美妙。</p>
+<p><button class="play-button sentence" id="s-00-14-01-440" data-start="00:14:01,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There they come.</p>
+<p>他们来了。</p>
+<p><button class="play-button sentence" id="s-00-14-08-440" data-start="00:14:08,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Get your cameras ready.</p>
+<p>准备好相机。</p>
+<p><button class="play-button sentence" id="s-00-14-11-440" data-start="00:14:11,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There it is.</p>
+<p>就是它。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959147" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-12-440" data-start="00:14:12,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wow.</p>
+<p>哇哦。</p>
+<p><button class="play-button sentence" id="s-00-14-13-440" data-start="00:14:13,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a fabulous surprise.</p>
+<p>真是绝妙的惊喜。</p>
+<p><button class="play-button sentence" id="s-00-14-19-440" data-start="00:14:19,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every single species play a very bold and broad in the Holocaust system.</p>
+<p>每个物种都在大屠杀系统中扮演着重要角色。</p>
+<p><button class="play-button sentence" id="s-00-14-27-440" data-start="00:14:27,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wouldn't we want our children to fall in love with nature.</p>
+<p>我们难道不希望孩子们爱上大自然吗？</p>
+<p><button class="play-button sentence" id="s-00-14-31-440" data-start="00:14:31,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't have much years to make a difference.</p>
+<p>我们没剩多少年来改变现状了。</p>
+<p><button class="play-button sentence" id="s-00-14-34-440" data-start="00:14:34,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Later in poaching pollution, we need to fix that.</p>
+<p>盗猎污染问题亟待解决。</p>
+<p><button class="play-button sentence" id="s-00-14-39-440" data-start="00:14:39,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite the damage we've done, we still have a wonderful natural component.</p>
+<p>尽管造成破坏，我们仍拥有美好的自然遗产。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959113" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-46-440" data-start="00:14:46,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't give up.</p>
+<p>别放弃。</p>
+<p><button class="play-button sentence" id="s-00-14-49-440" data-start="00:14:49,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's do it.</p>
+<p>行动起来。</p>
+<p><button class="play-button sentence" id="s-00-14-50-440" data-start="00:14:50,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can make it.</p>
+<p>你能做到。</p>
+<p><button class="play-button sentence" id="s-00-14-52-440" data-start="00:14:52,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hold the people.</p>
+<p>团结民众。</p>
+<p><button class="play-button sentence" id="s-00-14-53-440" data-start="00:14:53,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Help and hope.</p>
+<p>互助与希望。</p>
+<p><button class="play-button sentence" id="s-00-14-58-440" data-start="00:14:58,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, Israel's ongoing conflict in Gaza is really born Holocaust scholar Omar Bartoff tells for read how he sees it.</p>
+<p>今日加沙持续冲突中，大屠杀学者奥马尔·巴托夫阐述见解。</p>
+<p><button class="play-button sentence" id="s-00-15-06-440" data-start="00:15:06,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Genocide does not justify and genocide.</p>
+<p>种族灭绝不能为另一场种族灭绝开脱。</p>
+<p><button class="play-button sentence" id="s-00-15-09-440" data-start="00:15:09,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For read Zakaria GPS today.</p>
+<p>今日法里德·扎卡里亚GPS节目。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959086" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-13-440" data-start="00:15:13,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Looking to recharge your body and soul, Taiwan is your next stop from world class cycling trails.</p>
+<p>想要身心充电？台湾是下一站：从世界级自行车道...</p>
+<p><button class="play-button sentence" id="s-00-15-21-440" data-start="00:15:21,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have to think this is one of the most beautiful places to bicycle.</p>
+<p>我必须说这是骑行最美的地方之一。</p>
+<p><button class="play-button sentence" id="s-00-15-24-440" data-start="00:15:24,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To the ancient art of Ulong T.</p>
+<p>到古老的乌龙茶艺。</p>
+<p><button class="play-button sentence" id="s-00-15-26-440" data-start="00:15:26,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I tried to kid our traditional king carry on to the Mr. Genocide.</p>
+<p>我试图将传统精髓延续至现代。</p>
+<p><button class="play-button sentence" id="s-00-15-31-440" data-start="00:15:31,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And an e-commerce travel platform for rejuvenating experiences.</p>
+<p>以及提供焕活体验的电商旅行平台。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959064" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-35-440" data-start="00:15:35,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We try to make Taiwan be the place for everybody.</p>
+<p>我们努力让台湾成为适合所有人的地方。</p>
+<p><button class="play-button sentence" id="s-00-15-39-440" data-start="00:15:39,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next stop, this weekend on CNN.</p>
+<p>下一站，本周末CNN播出。</p>
+<p><button class="play-button sentence" id="s-00-15-43-440" data-start="00:15:43,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The whole story with Anderson Cooper, Emmy winner for outstanding recorded news program two years in a row.</p>
+<p>《安德森·库珀全记录》连续两年获艾美奖杰出新闻节目。</p>
+<p><button class="play-button sentence" id="s-00-15-48-440" data-start="00:15:48,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CNN's best journalist shared deeply reported stories.</p>
+<p>CNN顶尖记者分享深度报道。</p>
+<p><button class="play-button sentence" id="s-00-15-52-440" data-start="00:15:52,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you ever get really depressed?</p>
+<p>你是否感到极度沮丧？</p>
+<p><button class="play-button sentence" id="s-00-15-53-440" data-start="00:15:53,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you look at the state of the world and state of the climate fight?</p>
+<p>面对世界现状与气候斗争形势时？</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959043" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-56-200" data-start="00:15:56,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some of music's biggest names show Bill Weir.</p>
+<p>音乐界大牌向比尔·威尔展示...</p>
+<p><button class="play-button sentence" id="s-00-15-58-720" data-start="00:15:58,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The way star power can help combat a crisis.</p>
+<p>明星力量如何助力对抗危机。</p>
+<p><button class="play-button sentence" id="s-00-16-01-440" data-start="00:16:01,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Revolutionary both fighting for involves new kinds of clean energy, less waste.</p>
+<p>革命性的斗争涉及新型清洁能源与减少浪费。</p>
+<p><button class="play-button sentence" id="s-00-16-07-039" data-start="00:16:07,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How do you convince a live music crowd that those things are cool?</p>
+<p>如何让现场音乐观众认同这些很酷？</p>
+<p><button class="play-button sentence" id="s-00-16-09-879" data-start="00:16:09,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The whole story with Anderson Cooper on CNN.</p>
+<p>CNN《安德森·库珀全记录》。</p>
+<p><button class="play-button sentence" id="s-00-16-15-679" data-start="00:16:15,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An Arab little maker in Israel is okay after an attack on his vehicle on Saturday.</p>
+<p>以色列一位阿拉伯裔议员车辆遇袭后无碍。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208959019" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-20-278" data-start="00:16:20,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His party says an angry mob smashed the cars windows as he was headed to a rally, calling for the release of hostages in Gaza.</p>
+<p>其政党称，他前往呼吁释放加沙人质的集会途中，愤怒人群砸碎车窗。</p>
+<p><button class="play-button sentence" id="s-00-16-27-639" data-start="00:16:27,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The statement says some of the attackers shouted death to Arabs.</p>
+<p>声明称部分袭击者高喊"阿拉伯人去死"。</p>
+<p><button class="play-button sentence" id="s-00-16-31-519" data-start="00:16:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police say three people have been arrested and the lawmaker, I'm another, is later spoke at the rally.</p>
+<p>警方逮捕三人，该议员稍后在集会上发表讲话。</p>
+<p><button class="play-button sentence" id="s-00-16-37-678" data-start="00:16:37,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel's opposition leaders have condemned the attack and called for an investigation.</p>
+<p>以色列反对党领袖谴责袭击并要求调查。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958996" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-43-318" data-start="00:16:43,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At least 30 people were injured in Los Angeles, California, when a car drove into a crowd outside a nightclub on Saturday.</p>
+<p>周六加州洛杉矶夜店外驾车撞人事件致至少30伤。</p>
+<p><button class="play-button sentence" id="s-00-16-49-960" data-start="00:16:49,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No deaths have been reported so far, but seven victims are in critical condition.</p>
+<p>目前无死亡报告，但7名伤者情况危急。</p>
+<p><button class="play-button sentence" id="s-00-16-54-159" data-start="00:16:54,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CNN's Julia Vargas Jones has the latest for us.</p>
+<p>CNN朱莉娅·瓦尔加斯·琼斯带来最新消息。</p>
+<p><button class="play-button sentence" id="s-00-16-58-000" data-start="00:16:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're now beginning to piece together what exactly happened in the moments before this crash outside a nightclub in East Hollywood.</p>
+<p>我们正还原东好莱坞夜店外撞车事件始末。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958973" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-06-240" data-start="00:17:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities say that a man plowed through that crowd, injuring at least 30 people.</p>
+<p>当局称一名男子驾车冲撞人群致至少30人受伤。</p>
+<p><button class="play-button sentence" id="s-00-17-12-558" data-start="00:17:12,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And after that, he was taken out of the car and then a fighting suit.</p>
+<p>随后他被拖出车辆并遭围殴。</p>
+<p><button class="play-button sentence" id="s-00-17-17-318" data-start="00:17:17,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was beaten by the crowd outside and then somebody pulled out a gun and shot the driver.</p>
+<p>人群殴打他后，有人掏枪射击司机。</p>
+<p><button class="play-button sentence" id="s-00-17-23-598" data-start="00:17:23,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That shooter is still at large.</p>
+<p>枪手仍在逃。</p>
+<p><button class="play-button sentence" id="s-00-17-25-878" data-start="00:17:25,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities say that he's considered armed and dangerous right now that remains the priority for police.</p>
+<p>当局称其目前持械且危险，是警方首要缉拿目标。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958947" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-32-919" data-start="00:17:32,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But they also say that this was a very unusual scene.</p>
+<p>但他们表示这是非常规事件。</p>
+<p><button class="play-button sentence" id="s-00-17-36-439" data-start="00:17:36,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not common at all.</p>
+<p>这极其罕见。</p>
+<p><button class="play-button sentence" id="s-00-17-38-038" data-start="00:17:38,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would say in my 18 years as a law enforcement officer and the LAPD, I would say this is the first of its kind that I'm aware of.</p>
+<p>从我18年LAPD执法经历看，这是我知晓的首例。</p>
+<p><button class="play-button sentence" id="s-00-17-48-200" data-start="00:17:48,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now this is a part of Los Angeles that has a vibrant nightlife, but it is not a particularly dangerous or violent part of the city.</p>
+<p>该区域夜生活丰富，但并非城市中特别危险的暴力高发区。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958923" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-56-878" data-start="00:17:56,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mayor Karen Bass said in a statement on Saturday that quote, this is a heartbreaking tragedy.</p>
+<p>市长凯伦·巴斯周六声明称："这是令人心碎的悲剧"。</p>
+<p><button class="play-button sentence" id="s-00-18-02-440" data-start="00:18:02,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to thank the more than 100 LAPD and LAPD personnel who responded to the scene to help save lives.</p>
+<p>感谢超百名LAPD警员及救援人员现场救险。</p>
+<p><button class="play-button sentence" id="s-00-18-10-440" data-start="00:18:10,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The hearts of Angelinos are with all of the victims impacted this morning in a full investigation into what happened is underway.</p>
+<p>天使之城的心与所有受害者同在，全面调查已展开。</p>
+<p><button class="play-button sentence" id="s-00-18-18-278" data-start="00:18:18,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now according to reporting from CNN's John Miller, there's no indication beyond the impaired state of the driver that there was any other criminal intent and no connection to terrorism at this point.</p>
+<p>CNN约翰·米勒报道，目前除司机状态异常外，无其他犯罪意图或恐怖主义关联迹象。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958890" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-29-400" data-start="00:18:29,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Julia Vargas, John CNN, Los Angeles.</p>
+<p>CNN洛杉矶，朱莉娅·瓦尔加斯、约翰报道。</p>
+<p><button class="play-button sentence" id="s-00-18-33-000" data-start="00:18:33,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ninety people were injured during a fire work show in Düsseldorf, Germany on Friday.</p>
+<p>周五德国杜塞尔多夫烟花表演致90人受伤。</p>
+<p><button class="play-button sentence" id="s-00-18-37-680" data-start="00:18:37,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can see in this video, the some fire work started explode and pretty close to the ground.</p>
+<p>视频可见部分烟花近地面爆炸。</p>
+<p><button class="play-button sentence" id="s-00-18-43-078" data-start="00:18:43,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Regency crews say at least one child was hurt and four people needed serious medical attention.</p>
+<p>救援队称至少1名儿童受伤，4人需紧急救治。</p>
+<p><button class="play-button sentence" id="s-00-18-48-679" data-start="00:18:48,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Local police say they're investigating.</p>
+<p>当地警方正调查。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958868" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-51-480" data-start="00:18:51,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Artificial intelligence has benefits, but among its drawbacks is a ravenous demand for electrical power to fuel its countless calculations.</p>
+<p>人工智能虽有益处，但其海量计算导致电力需求激增。</p>
+<p><button class="play-button sentence" id="s-00-18-59-358" data-start="00:18:59,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And with that, a need for better ways to store data.</p>
+<p>因此需要更优数据存储方案。</p>
+<p><button class="play-button sentence" id="s-00-19-02-358" data-start="00:19:02,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CNN's Isabella Zylas explains holograms may provide an answer.</p>
+<p>CNN伊莎贝拉·赛拉斯解释全息技术或是解决方案。</p>
+<p><button class="play-button sentence" id="s-00-19-08-519" data-start="00:19:08,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the AI industry continues to grow, so too do its demands on energy.</p>
+<p>随着AI产业发展，其能源需求同步增长。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958846" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-13-759" data-start="00:19:13,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> AI systems such as Chad G.P.T. or Copilot are incredibly energy hungry.</p>
+<p>如ChatGPT或Copilot等AI系统能耗惊人。</p>
+<p><button class="play-button sentence" id="s-00-19-19-720" data-start="00:19:19,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Its estimated one search on Chad G.P.T. uses almost ten times as much energy as a Google search according to the International Energy Agency.</p>
+<p>据国际能源署估计，一次ChatGPT搜索耗能近乎谷歌搜索十倍。</p>
+<p><button class="play-button sentence" id="s-00-19-29-000" data-start="00:19:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In generating an AI image, can use as much energy as half a smartphone charge, a study by Carnegie Mellon University and AI Sardar Pugging Face found.</p>
+<p>卡内基梅隆大学与AI平台Hugging Face研究发现，生成一张AI图像耗能堪比半次手机充电。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-39-719" data-start="00:19:39,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One London-based Sardar is exploring the question, could holograms be the solution to AI's increasing energy footprint?</p>
+<p>伦敦公司HoloMem正探索：全息技术能否解决AI能源足迹？</p>
+<p><button class="play-button sentence" id="s-00-19-48-239" data-start="00:19:48,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While they're not the kind you might know from Star Wars, they are a way to store data.</p>
+<p>虽非《星球大战》那种全息，但确属数据存储方式。</p>
+<p><button class="play-button sentence" id="s-00-19-52-959" data-start="00:19:52,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The company Hollumem is using holograms etched onto polymer tape as a low energy high-density storage system.</p>
+<p>HoloMem公司用聚合物磁带蚀刻全息图作为低能耗高密度存储系统。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958799" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-00-398" data-start="00:20:00,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most old data storage technologies, physically a single layer says there is one's become on and off lights and darks.</p>
+<p>多数旧存储技术物理单层记录开关明暗信号。</p>
+<p><button class="play-button sentence" id="s-00-20-07-240" data-start="00:20:07,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are stacking multiple data sets in the same piece of media, putting far more information in less space than ever before.</p>
+<p>我们在同介质堆叠多重数据集，以更小空间存储更多信息。</p>
+<p><button class="play-button sentence" id="s-00-20-14-638" data-start="00:20:14,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's predicted that by 2030, data centers could account for about 8% of the world's total energy use.</p>
+<p>预测到2030年，数据中心将占全球总能耗8%。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958778" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-21-118" data-start="00:20:21,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Hollumem's cartridges don't generate heat, eliminating the need for energy intensive cooling systems.</p>
+<p>但HoloMem磁带不产热，无需高耗能冷却系统。</p>
+<p><button class="play-button sentence" id="s-00-20-28-118" data-start="00:20:28,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And because the tapes use the same cartridge format as existing hardware, they don't require mass infrastructure upgrades.</p>
+<p>因磁带采用现有硬件卡带格式，无需大规模基建升级。</p>
+<p><button class="play-button sentence" id="s-00-20-35-519" data-start="00:20:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The existing magnetic tape format that we've been using for the last 50 years is in very environmentally fragile.</p>
+<p>过去50年使用的磁带格式对环境极度敏感。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958759" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-40-960" data-start="00:20:40,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It requires constant thermal and humidity management.</p>
+<p>需持续温湿度管控。</p>
+<p><button class="play-button sentence" id="s-00-20-44-000" data-start="00:20:44,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Without that ideal environment, you have data rot.</p>
+<p>非理想环境会导致数据腐坏。</p>
+<p><button class="play-button sentence" id="s-00-20-46-960" data-start="00:20:46,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's more, the data cartridge capacities that we're seeing simply can't keep up pace with our original data creation.</p>
+<p>现有磁带容量已无法匹配数据生成速度。</p>
+<p><button class="play-button sentence" id="s-00-20-53-720" data-start="00:20:53,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So they're not fit for capacity, for lights or for cost.</p>
+<p>因此在容量、寿命和成本上都不适用。</p>
+<p><button class="play-button sentence" id="s-00-20-59-118" data-start="00:20:59,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hollumem claims that their laser-edged polymer tapes will handle up to 200 terabytes of data storage compared to the current industry standard of just 30 terabytes on the cartridge format.</p>
+<p>HoloMem称其激光蚀刻聚合物磁带可存储200TB数据，远超当前行业标准30TB。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958727" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-12-679" data-start="00:21:12,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Isabel Rosales? Sienna.</p>
+<p>伊莎贝尔·罗萨莱斯？塞纳。</p>
+<p><button class="play-button sentence" id="s-00-21-16-959" data-start="00:21:16,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tech company's CEO, called Cuddling and Employee Encomra, has resigned.</p>
+<p>科技公司CEO因与员工接吻事件辞职。</p>
+<p><button class="play-button sentence" id="s-00-21-21-638" data-start="00:21:21,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His former company, Astronomers says CEO Andy Byron has tended his resignation and the board of directors has accepted.</p>
+<p>前公司Astronomers称CEO安迪·拜伦已提交辞呈并获董事会批准。</p>
+<p><button class="play-button sentence" id="s-00-21-28-680" data-start="00:21:28,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Byron and his employee were spotted on a kiss camera, cold play concert.</p>
+<p>拜伦与员工在酷玩乐队演唱会被吻屏镜头捕捉。</p>
+<p><button class="play-button sentence" id="s-00-21-32-798" data-start="00:21:32,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Their reactions you'll see in there made the video go super viral.</p>
+<p>他们的反应使视频疯狂传播。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958703" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-36-038" data-start="00:21:36,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The company says co-founder and chief product officer Pete DeJoy will serve as interim CEO while the board searches for a new chief executive.</p>
+<p>公司称联合创始人兼首席产品官皮特·德乔伊将任临时CEO，董事会物色新人选。</p>
+<p><button class="play-button sentence" id="s-00-21-45-038" data-start="00:21:45,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A new Korean boy band is getting a lot of attention partly because two of their members have a history unlike any others in K-pop.</p>
+<p>新晋韩国男团引发关注，因其两名成员有独特背景。</p>
+<p><button class="play-button sentence" id="s-00-21-52-480" data-start="00:21:52,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mike Valerio explains more.</p>
+<p>迈克·瓦莱里奥详细报道。</p>
+<p><button class="play-button sentence" id="s-00-21-54-480" data-start="00:21:54,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are two North Korean defectors who could be on the verge of K-pop Superstarter.</p>
+<p>他们是可能成为K-pop超级新星的朝鲜脱北者。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958675" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-04-558" data-start="00:22:04,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meet Hyuk and Suck, two 25-year-olds who each escaped North Korea when they were teenagers.</p>
+<p>25岁的赫克和苏克少年时逃离朝鲜。</p>
+<p><button class="play-button sentence" id="s-00-22-15-038" data-start="00:22:15,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're now living in Seoul, determined to launch the next great K-pop band.</p>
+<p>现居首尔的他们决心打造下一个顶级K-pop组合。</p>
+<p><button class="play-button sentence" id="s-00-22-20-720" data-start="00:22:20,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You both have come so far from North Korea.</p>
+<p>你们从朝鲜远道而来。</p>
+<p><button class="play-button sentence" id="s-00-22-23-519" data-start="00:22:23,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The parts of your journey have affected your music the most.</p>
+<p>这段经历如何影响你们的音乐？</p>
+<p><button class="play-button sentence" id="s-00-22-31-200" data-start="00:22:31,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After coming to South Korea, I liked writing down lyrics or phrases that I wanted to remember.</p>
+<p>到韩国后，我喜欢记录想记住的歌词短语。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-35-798" data-start="00:22:35,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A teacher saw me jotting things down and said, you seem to like writing, why don't you try rapping?</p>
+<p>老师看到后说："你似乎喜欢写作，何不尝试说唱？"</p>
+<p><button class="play-button sentence" id="s-00-22-42-278" data-start="00:22:42,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh mother.</p>
+<p>哦，母亲。</p>
+<p><button class="play-button sentence" id="s-00-22-43-278" data-start="00:22:43,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I liked music when I was in North Korea.</p>
+<p>在朝鲜时我就喜欢音乐。</p>
+<p><button class="play-button sentence" id="s-00-22-44-960" data-start="00:22:44,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I liked singing songs or lyrics about mothers.</p>
+<p>爱唱关于母亲的歌。</p>
+<p><button class="play-button sentence" id="s-00-22-47-720" data-start="00:22:47,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I also wrote lyrics of songs I used to sing.</p>
+<p>也写过自己常唱的歌的歌词。</p>
+<p><button class="play-button sentence" id="s-00-22-51-640" data-start="00:22:51,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both members of the group universe with bandmates Ito from Japan, Kenny from California, and Nathan from Arkansas.</p>
+<p>他们与日本成员伊藤、加州成员肯尼、阿肯色州成员内森组成UNIVERSE团体。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958618" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-01-240" data-start="00:23:01,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Suck and Suck have trained for more than two years now, united in a love of songwriting.</p>
+<p>赫克和苏克已训练两年多，因共同热爱写歌而团结。</p>
+<p><button class="play-button sentence" id="s-00-23-08-359" data-start="00:23:08,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's a lyric that comes from a memory and when you sing that lyric, it hits pretty deeply.</p>
+<p>有没有源自记忆、演唱时直击心灵的歌词？</p>
+<p><button class="play-button sentence" id="s-00-23-14-200" data-start="00:23:14,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a shout out.</p>
+<p>是呐喊部分。</p>
+<p><button class="play-button sentence" id="s-00-23-15-200" data-start="00:23:15,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Shatter, there's a high note part.</p>
+<p>《粉碎》中的高音部分。</p>
+<p><button class="play-button sentence" id="s-00-23-16-799" data-start="00:23:16,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who's going to save us now?</p>
+<p>"现在谁来拯救我们？"</p>
+<p><button class="play-button sentence" id="s-00-23-22-640" data-start="00:23:22,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That line reminded me that sometimes we all need someone's help.</p>
+<p>这句让我想起有时我们都需他人帮助。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958592" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-27-759" data-start="00:23:27,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our songs come from our own stories and experiences.</p>
+<p>我们的歌源自自身故事与经历。</p>
+<p><button class="play-button sentence" id="s-00-23-30-240" data-start="00:23:30,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're like puzzle pieces we put together.</p>
+<p>像拼图碎片般组合。</p>
+<p><button class="play-button sentence" id="s-00-23-33-319" data-start="00:23:33,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They already have more than 22 million likes on TikTok and are planning to debut in America.</p>
+<p>他们在TikTok获超2200万点赞，计划在美国出道。</p>
+<p><button class="play-button sentence" id="s-00-23-40-160" data-start="00:23:40,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Perhaps even teaming up with US artists down the road.</p>
+<p>未来可能与美国艺人合作。</p>
+<p><button class="play-button sentence" id="s-00-23-43-319" data-start="00:23:43,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like we saw with Bruno Mars for instance, and K-pop icon Rose.</p>
+<p>如布鲁诺·马尔斯与K-pop偶像ROSE的合作。</p>
+<p><button class="play-button sentence" id="s-00-23-48-720" data-start="00:23:48,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you two could collab with any American sensation, Ariana Grande, J-Lo, Mariah, who would it be?</p>
+<p>若合作美国巨星，会选谁？</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958561" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-58-318" data-start="00:23:58,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I really like post Malone songs when I was younger.</p>
+<p>年轻时很喜欢波兹·马龙。</p>
+<p><button class="play-button sentence" id="s-00-24-00-960" data-start="00:24:00,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd love to work with them.</p>
+<p>想与他合作。</p>
+<p><button class="play-button sentence" id="s-00-24-03-318" data-start="00:24:03,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first person that comes to mind is Charlie Porter.</p>
+<p>我首先想到查理·普斯。</p>
+<p><button class="play-button sentence" id="s-00-24-06-318" data-start="00:24:06,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For Suck and Suck, taking a leap into the unknown from unlikely beginnings is something anyone can relate to.</p>
+<p>对赫克和苏克而言，从不可能起步跃入未知，是人人能共鸣的故事。</p>
+<p><button class="play-button sentence" id="s-00-24-14-440" data-start="00:24:14,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Through their music, they hope fans worldwide will find the same courage, daring to dream.</p>
+<p>他们希望通过音乐让全球粉丝找到同样的勇气，敢于追梦。</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958536" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-23-200" data-start="00:24:23,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When those people see that we came from tough circumstances and managed to grow and share something with fans, I think that process itself can be meaningful and give others the courage to try.</p>
+<p>当人们看到我们出身艰难却仍能成长并与粉丝分享时，我认为这一过程本身就很有意义，并能给予他人尝试的勇气。</p>
+<p><button class="play-button sentence" id="s-00-24-32-759" data-start="00:24:32,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mike Valerio, CNN, Seoul.</p>
+<p>CNN记者Mike Valerio，首尔报道。</p>
+<p><button class="play-button sentence" id="s-00-24-35-160" data-start="00:24:35,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Love that.</p>
+<p>太棒了。</p>
+<p><button class="play-button sentence" id="s-00-24-37-160" data-start="00:24:37,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got some good news in there.</p>
+<p>我们带来了一些好消息。</p>
+<p><button class="play-button sentence" id="s-00-24-38-558" data-start="00:24:38,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just a little bit of good news.</p>
+<p>只是一点点好消息。</p>
+<p><button class="play-button sentence" id="s-00-24-39-558" data-start="00:24:39,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks for joining me and the team.</p>
+<p>感谢您与我和团队一同观看。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1shgtzwEfQ/?t=-2208958519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-40-960" data-start="00:24:40,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's all I've got for you.</p>
+<p>这就是今天的全部内容。</p>
+<p><button class="play-button sentence" id="s-00-24-41-960" data-start="00:24:41,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I am Ben Hunt and Atlanta.</p>
+<p>我是Ben Hunt，亚特兰大报道。</p>
+<p><button class="play-button sentence" id="s-00-24-43-759" data-start="00:24:43,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, sport is next.</p>
+<p>接下来是体育新闻。</p>
+<p><button class="play-button sentence" id="s-00-24-45-480" data-start="00:24:45,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll be back in 30 minutes.</p>
+<p>我们30分钟后回来。</p>
+<p><button class="play-button sentence" id="s-00-24-47-038" data-start="00:24:47,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're so much more CNN Newsroom.</p>
+<p>这里是CNN新闻直播间。</p>
+<p><button class="play-button sentence" id="s-00-24-49-640" data-start="00:24:49,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Don't go anywhere.</p>
+<p>请不要走开。</p>
+<p><button class="play-button sentence" id="s-00-24-50-640" data-start="00:24:50,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> See you in a bit.</p>
+<p>稍后见。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

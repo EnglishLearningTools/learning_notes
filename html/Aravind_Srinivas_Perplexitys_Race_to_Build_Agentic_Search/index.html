@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Aravind Srinivas: Perplexity's Race to Build Agentic Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The video features Aravind Srinivas discussing Perplexity's innovative approach to search, competition with tech giants, and future plans including a browser with AI agent capabilities.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Aravind Srinivas: Perplexity's Race to Build Agentic Search</h1>
+<p>【与谷歌竞争，Perplexity构建AI代理式搜索】</p>
+<p>Summary:
+The video features Aravind Srinivas discussing Perplexity's innovative approach to search, competition with tech giants, and future plans including a browser with AI agent capabilities.</p>
+<p>摘要：
+视频中阿拉文德·斯里尼瓦斯探讨了Perplexity在搜索领域的创新方法、与科技巨头的竞争以及未来计划，包括开发具备AI代理功能的浏览器。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 70 min</p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它生词.html" target="_blank">其它生词生词</a></p>
+<h2>Table of Contents</h2>
+<p><a name="table-of-contents"></a></p>
+<ul>
+<li><a href="#block-1">00:00:00 YC's next batch is now taking applications.</a></li>
+<li><a href="#block-2">00:00:20 The only mode you have is speed.</a></li>
+<li><a href="#block-3">00:00:45 Why don't you just tell these folks where you're at?</a></li>
+<li><a href="#block-4">00:01:11 So definitely a lot of people in the world using it.</a></li>
+<li><a href="#block-5">00:01:31 Every other AI app is trying to put searches in there in it.</a></li>
+<li><a href="#block-6">00:01:50 We think about it as an assistant rather than a complete aut</a></li>
+<li><a href="#block-7">00:02:14 And we hope to make it like a cloud where you launch several</a></li>
+<li><a href="#block-8">00:02:39 That's never been possible before.</a></li>
+<li><a href="#block-9">00:02:58 I think if Sam Altman were still on the stage today, he woul</a></li>
+<li><a href="#block-10">00:03:19 Do you think that it's going to play out where there's actua</a></li>
+<li><a href="#block-11">00:03:42 Now everyone is trying to do something that can answer any q</a></li>
+<li><a href="#block-12">00:04:04 And there's only a limited amount of things you can be world</a></li>
+<li><a href="#block-13">00:04:24 The browser is much harder to copy than, like, yet another c</a></li>
+<li><a href="#block-14">00:04:44 You have to innovate.</a></li>
+<li><a href="#block-15">00:05:06 And there was, like, a bug, right?</a></li>
+<li><a href="#block-16">00:05:26 Yeah, I love triaging and fixing bugs.</a></li>
+<li><a href="#block-17">00:05:49 Great.</a></li>
+<li><a href="#block-18">00:06:07 We started the company without actually having clear idea of</a></li>
+<li><a href="#block-19">00:06:30 Like, that you shouldn't do either.</a></li>
+<li><a href="#block-20">00:06:55 I allowed that when I was much younger.</a></li>
+<li><a href="#block-21">00:07:16 And just converted every user's query into a SQL query and r</a></li>
+<li><a href="#block-22">00:07:40 So we bet on the fact that language models can do all the re</a></li>
+<li><a href="#block-23">00:08:00 How did you decide that machine learning and AI was like the</a></li>
+<li><a href="#block-24">00:08:19 In fact, it's funny.</a></li>
+<li><a href="#block-25">00:08:41 And the co-founders are like people like, like, a new from g</a></li>
+<li><a href="#block-26">00:09:02 You talk to them because they're interesting people.</a></li>
+<li><a href="#block-27">00:09:25 Yeah.</a></li>
+<li><a href="#block-28">00:09:46 And then mostly either drops completely.</a></li>
+<li><a href="#block-29">00:10:05 But then what we did is, like, we dream bigger and said, wha</a></li>
+<li><a href="#block-30">00:10:26 Especially at the time when chat GPT did not have web search</a></li>
+<li><a href="#block-31">00:10:46 Yes.</a></li>
+<li><a href="#block-32">00:11:06 And it was making a lot of mistakes, hallucinations.</a></li>
+<li><a href="#block-33">00:11:27 And I started like optimizing for like, you know, committing</a></li>
+<li><a href="#block-34">00:11:51 Like that was around the time when we were raising series A </a></li>
+<li><a href="#block-35">00:12:13 Exactly.</a></li>
+<li><a href="#block-36">00:12:35 If you get direct answers to these questions with booking li</a></li>
+<li><a href="#block-37">00:12:58 So that's when I realized that they have to build a separate</a></li>
+<li><a href="#block-38">00:13:23 Which was unprecedented, right?</a></li>
+<li><a href="#block-39">00:13:44 So that plus innovator dilemma, plus the fact that we could </a></li>
+<li><a href="#block-40">00:14:09 And you know, you know, you know, AI mode.</a></li>
+<li><a href="#block-41">00:14:26 The same feature as being launched year after year after yea</a></li>
+<li><a href="#block-42">00:14:53 Why do you think Google has lost that ability?</a></li>
+<li><a href="#block-43">00:15:13 It's hard to take a hit on your own stock and do the thing t</a></li>
+<li><a href="#block-44">00:15:43 Earlier, for access to information, you would never even bot</a></li>
+<li><a href="#block-45">00:16:03 You just ask the AI apps, and there are a bunch of AI assist</a></li>
+<li><a href="#block-46">00:16:23 Yeah.</a></li>
+<li><a href="#block-47">00:16:46 The year was AI mode, and perplexity is dead.</a></li>
+<li><a href="#block-48">00:17:07 But competition is real.</a></li>
+<li><a href="#block-49">00:17:31 And I think comment, the browser will be an abstraction laye</a></li>
+<li><a href="#block-50">00:18:10 I think that's the magic that the browser enables for you, a</a></li>
+<li><a href="#block-51">00:18:30 What do you think will be the very short-term things that yo</a></li>
+<li><a href="#block-52">00:18:55 So the market's already pretty big.</a></li>
+<li><a href="#block-53">00:19:14 And it can go through the entire list of people who applied,</a></li>
+<li><a href="#block-54">00:19:35 I wouldn't get it otherwise.</a></li>
+<li><a href="#block-55">00:19:47 Right?</a></li>
+<li><a href="#block-56">00:20:04 I mean, you don't want to wipe code everything, right?</a></li>
+<li><a href="#block-57">00:20:23 But yeah, front-end design.</a></li>
+<li><a href="#block-58">00:20:43 And so the way machine learning people are using it, AI peop</a></li>
+<li><a href="#block-59">00:21:10 Or there are people who don't know design.</a></li>
+<li><a href="#block-60">00:21:29 Like the speed I wish you can fix bugs and ship to productio</a></li>
+<li><a href="#block-61">00:21:51 And they don't even know how the bug got introduced and they</a></li>
+<li><a href="#block-62">00:22:11 Yeah.</a></li>
+<li><a href="#block-63">00:22:34 I mean, brand definitely has a big value, right?</a></li>
+<li><a href="#block-64">00:22:59 You learn the right to survive and keep building.</a></li>
+<li><a href="#block-65">00:23:27 We focus a lot on like how we present the answer.</a></li>
+<li><a href="#block-66">00:23:49 Until then it's definitely a challenge.</a></li>
+<li><a href="#block-67">00:24:12 Like it's not like WhatsApp where if you build a WhatsApp ri</a></li>
+<li><a href="#block-68">00:24:35 Mainly because you can easily export your chat GPT history, </a></li>
+<li><a href="#block-69">00:24:59 There's a lot of tasks that are running on the browser that </a></li>
+<li><a href="#block-70">00:25:16 It also sounds like a lot of the stuff that you aspire to so</a></li>
+<li><a href="#block-71">00:25:39 What does that look like, do you think in the future?</a></li>
+<li><a href="#block-72">00:26:03 We have collaborations with the maps.</a></li>
+<li><a href="#block-73">00:26:27 So there's a lot of data providers already working with us o</a></li>
+<li><a href="#block-74">00:26:49 Because at the end of the day, the agent is the one that's b</a></li>
+<li><a href="#block-75">00:27:17 The data that they send you on the MCP protocol has to be pe</a></li>
+<li><a href="#block-76">00:27:40 Let's talk next about business model.</a></li>
+<li><a href="#block-77">00:28:03 And I don't think that's needed.</a></li>
+<li><a href="#block-78">00:28:25 We never expected to get this far.</a></li>
+<li><a href="#block-79">00:28:51 It's going to be a thing.</a></li>
+<li><a href="#block-80">00:29:13 And so that's good margins on that user.</a></li>
+<li><a href="#block-81">00:29:40 Which is why I said, you're going to make a lot of money her</a></li>
+<li><a href="#block-82">00:29:58 Before we get there, I wanted to understand your advice for </a></li>
+<li><a href="#block-83">00:30:25 You should assume that if you have a big hit, if your compan</a></li>
+<li><a href="#block-84">00:30:46 And they need to justify all that cap expend.</a></li>
+<li><a href="#block-85">00:31:10 You're not, like, going for a general agency that handles al</a></li>
+<li><a href="#block-86">00:31:32 That's great.</a></li>
+<li><a href="#block-87">00:31:46 I would not have been able to do it without you.</a></li>
+<li><a href="#block-88">00:32:07 It's a heavy responsibility being the default search engine </a></li>
+<li><a href="#block-89">00:32:27 We're building benchmarks internally to keep up to date with</a></li>
+<li><a href="#block-90">00:32:48 And so that's another way to reduce hallucinations.</a></li>
+<li><a href="#block-91">00:33:07 So if you were running Google competing against yourself, wh</a></li>
+<li><a href="#block-92">00:33:39 Yeah, generally I don't know.</a></li>
+<li><a href="#block-93">00:34:03 By the way, if ads are part of a re-AI answer, you're going </a></li>
+<li><a href="#block-94">00:34:28 He came to the office.</a></li>
+<li><a href="#block-95">00:34:46 So a lot of startups, they find some cool application of fou</a></li>
+<li><a href="#block-96">00:35:10 So I was just wondering, how would you approach something li</a></li>
+<li><a href="#block-97">00:35:31 Like we need to figure out a new strategy too and build new </a></li>
+<li><a href="#block-98">00:35:51 And Chrome is the main reason they got billions of Qtel quer</a></li>
+<li><a href="#block-99">00:36:09 And agents can only be built with the browser.</a></li>
+<li><a href="#block-100">00:36:40 So the browser will be a great way to build all these.</a></li>
+<li><a href="#block-101">00:37:04 What do I tell myself in a field like I might fail?</a></li>
+<li><a href="#block-102">00:37:30 I just watched the Elon Musk videos on YouTube.</a></li>
+<li><a href="#block-103">00:37:56 Yeah I hope to, I hope to like stay that way.</a></li>
+<li><a href="#block-104">00:38:27 Not in terms of the business model but just in terms of the </a></li>
+<li><a href="#block-105">00:38:49 How do you think perplexity fits into that and what do you t</a></li>
+<li><a href="#block-106">00:39:17 Okay.</a></li>
+<li><a href="#block-107">00:39:39 Yeah I think there are cases where you actually have objecti</a></li>
+<li><a href="#block-108">00:40:43 Do you measure how accurate you are at that job by user feed</a></li>
+<li><a href="#block-109">00:41:38 Right.</a></li>
+<li><a href="#block-110">00:42:04 I think like one one perspective here is trying to get into </a></li>
+<li><a href="#block-111">00:42:29 You could imagine the kind of people who use Costco regularl</a></li>
+<li><a href="#block-112">00:42:53 As they help you expand to more non-overlapping circles.</a></li>
+</ul>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+let timeoutHandle = null;
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+}
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:00,000', '00:00:03,280')"><img src="play.png" alt="Play"></button> YC's next batch is now taking applications.</p>
+<p>YC的下一批项目正在接受申请。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:03,280', '00:00:04,559')"><img src="play.png" alt="Play"></button> Got a startup in you?</p>
+<p>你心中有创业想法吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:04,560', '00:00:07,519')"><img src="play.png" alt="Play"></button> Apply at ycombinator.com slash apply.</p>
+<p>前往ycombinator.com/apply提交申请。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:07,519', '00:00:12,000')"><img src="play.png" alt="Play"></button> It's never too early and filling out the app will level up your idea.</p>
+<p>行动永远不会太早，填写申请能完善你的创意。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:12,000', '00:00:13,199')"><img src="play.png" alt="Play"></button> Now on to the video.</p>
+<p>现在进入视频内容。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:13,199', '00:00:16,080')"><img src="play.png" alt="Play"></button> You have to innovate to move faster than everybody else.</p>
+<p>必须通过创新比所有人行动更快。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:16,079', '00:00:20,480')"><img src="play.png" alt="Play"></button> And it's like running a marathon but at an extremely high velocity.</p>
+<p>这就像以极高速度跑马拉松。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959979" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:20</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:20,719', '00:00:22,718')"><img src="play.png" alt="Play"></button> The only mode you have is speed.</p>
+<p>速度是你唯一的模式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:22,719', '00:00:24,640')"><img src="play.png" alt="Play"></button> I read all the Twitter comments every time.</p>
+<p>每次我都会阅读所有推特评论。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:24,640', '00:00:28,239')"><img src="play.png" alt="Play"></button> Google IO last year was AI overview and perplexity is dead.</p>
+<p>去年谷歌IO的主题是AI概览，而Perplexity已死。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:28,239', '00:00:30,558')"><img src="play.png" alt="Play"></button> The stereo was AI mode and perplexity is dead.</p>
+<p>今年是AI模式，而Perplexity已死。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:30,559', '00:00:33,359')"><img src="play.png" alt="Play"></button> And I read all of that too and it's always fun.</p>
+<p>这些评论读起来总是很有趣。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:33,359', '00:00:34,399')"><img src="play.png" alt="Play"></button> I love it actually.</p>
+<p>我其实很享受。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:39,679', '00:00:45,679')"><img src="play.png" alt="Play"></button> Airman I see you every, I don't know, two or three months and you give me an update on the latest on perplexity.</p>
+<p>艾尔曼，我大概每两三个月见你一次，你都会更新Perplexity的最新进展。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959954" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:45</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:45,679', '00:00:48,398')"><img src="play.png" alt="Play"></button> Why don't you just tell these folks where you're at?</p>
+<p>不如直接告诉大家现状吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:48,399', '00:00:49,519')"><img src="play.png" alt="Play"></button> How are things going?</p>
+<p>进展如何？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:49,518', '00:00:50,798')"><img src="play.png" alt="Play"></button> Do people use perplexity?</p>
+<p>有人用Perplexity吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:52,479', '00:00:53,840')"><img src="play.png" alt="Play"></button> Do you guys use perplexity?</p>
+<p>你们用Perplexity吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:54,799', '00:00:59,040')"><img src="play.png" alt="Play"></button> No, whether you believe it or not, like I have infer issues every day.</p>
+<p>信不信由你，我们每天都会遇到推理问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:00:59,039', '00:01:04,239')"><img src="play.png" alt="Play"></button> So there are a lot of people using it and this user is actually growing.</p>
+<p>实际上有大量用户且增长迅速。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:04,239', '00:01:11,680')"><img src="play.png" alt="Play"></button> To the extent that we don't actually know how to deal with it, we have to rebuild the infer to scale the next 10x.</p>
+<p>规模之大让我们不得不重建推理系统以实现10倍扩容。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959928" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:11</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:11,680', '00:01:14,158')"><img src="play.png" alt="Play"></button> So definitely a lot of people in the world using it.</p>
+<p>全球确实有很多用户。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:14,159', '00:01:15,358')"><img src="play.png" alt="Play"></button> Thanks to all of you as well.</p>
+<p>也感谢各位用户。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:16,000', '00:01:17,438')"><img src="play.png" alt="Play"></button> What is next for us?</p>
+<p>我们的下一步是什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:17,438', '00:01:22,799')"><img src="play.png" alt="Play"></button> The browser, that's the big bet we're making as far as the future of the company goes.</p>
+<p>浏览器——这是我们对公司未来的重大押注。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:23,519', '00:01:28,639')"><img src="play.png" alt="Play"></button> Everyone's here is like, why should I use perplexity even there's search and other AI apps?</p>
+<p>大家会问：既然有搜索和其他AI应用，为什么还要用Perplexity？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:28,640', '00:01:31,598')"><img src="play.png" alt="Play"></button> Of course, chat GPT has a bigger distribution than us.</p>
+<p>当然，ChatGPT比我们拥有更大分发渠道。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959908" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:31</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:31,599', '00:01:35,039')"><img src="play.png" alt="Play"></button> Every other AI app is trying to put searches in there in it.</p>
+<p>其他AI应用都在内置搜索功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:35,679', '00:01:37,280')"><img src="play.png" alt="Play"></button> All of them support citations.</p>
+<p>它们都支持引用功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:38,000', '00:01:40,640')"><img src="play.png" alt="Play"></button> A lot of them support some of the verticals we could work into.</p>
+<p>许多还支持我们可以切入的垂直领域。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:40,640', '00:01:44,640')"><img src="play.png" alt="Play"></button> Yes, like we're always going to continue to remain better than others in that category.</p>
+<p>是的，我们会始终保持在该领域的领先优势。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:45,358', '00:01:50,318')"><img src="play.png" alt="Play"></button> But I think the browser and agents are truly the next bet that we want to make.</p>
+<p>但浏览器和代理才是我们真正的下一个赌注。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959889" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:50</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:50,879', '00:01:54,399')"><img src="play.png" alt="Play"></button> We think about it as an assistant rather than a complete autonomous agent.</p>
+<p>我们将其视为助手而非完全自主的代理。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:01:54,959', '00:02:02,158')"><img src="play.png" alt="Play"></button> But one omnibox where you can navigate, you can ask informational queries, and you can give a agentic task.</p>
+<p>通过统一搜索框实现导航、信息查询和代理任务下发。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:02,159', '00:02:13,519')"><img src="play.png" alt="Play"></button> And your AI with you on your new tap page, and your site car as an assistant on any of the page you are, makes the browser feel like more like a cognitive operating system rather than just yet another browser.</p>
+<p>新标签页的AI助手和页面侧边栏助手，让浏览器更像认知操作系统而非普通浏览器。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959865" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:14</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:14,318', '00:02:20,000')"><img src="play.png" alt="Play"></button> And we hope to make it like a cloud where you launch several tasks in parallel.</p>
+<p>我们希望使其像云端般并行处理多任务。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:20,318', '00:02:21,839')"><img src="play.png" alt="Play"></button> That are running asynchronously.</p>
+<p>这些任务异步运行。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:22,799', '00:02:31,519')"><img src="play.png" alt="Play"></button> And pulling all your personal context, your email, your calendar, your Amazon, your all sorts of social media accounts that you have.</p>
+<p>整合邮箱、日历、亚马逊账户等所有个人上下文。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:32,239', '00:02:35,598')"><img src="play.png" alt="Play"></button> And you go and do research on real estate, the markets.</p>
+<p>可进行房地产、市场调研等操作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:36,318', '00:02:39,038')"><img src="play.png" alt="Play"></button> And these are all just processes running on your browser.</p>
+<p>这些都只是浏览器上运行的进程。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959840" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:39</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:39,598', '00:02:41,438')"><img src="play.png" alt="Play"></button> That's never been possible before.</p>
+<p>这是前所未有的体验。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:42,240', '00:02:45,919')"><img src="play.png" alt="Play"></button> And Chrome was exciting when each tab was its own process.</p>
+<p>当初Chrome让每个标签独立进程就很惊艳。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:45,919', '00:02:48,639')"><img src="play.png" alt="Play"></button> You think about each query or each prompt could be that.</p>
+<p>现在每个查询或指令都能如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:49,278', '00:02:51,198')"><img src="play.png" alt="Play"></button> And that will be our new browser comment.</p>
+<p>这就是我们的新浏览器愿景。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:51,199', '00:02:53,039')"><img src="play.png" alt="Play"></button> So they're putting all our energy into that.</p>
+<p>因此我们全力投入于此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:53,038', '00:02:55,279')"><img src="play.png" alt="Play"></button> This was going to be the hard question I saved for the end.</p>
+<p>这原本是我留到最后的核心问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:55,278', '00:02:57,118')"><img src="play.png" alt="Play"></button> But since you queued it up, I'll do it right now.</p>
+<p>既然你提到了，我现在就回答。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959821" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:58</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:02:58,079', '00:03:03,519')"><img src="play.png" alt="Play"></button> I think if Sam Altman were still on the stage today, he would say, oh yeah, that's what we're doing.</p>
+<p>若Sam Altman在场也会说"这正是我们在做的"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:04,239', '00:03:10,399')"><img src="play.png" alt="Play"></button> And I think Sundar at Google probably would say, that's the direction we're headed as well.</p>
+<p>谷歌的Sundar也会说这是他们的方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:10,399', '00:03:14,158')"><img src="play.png" alt="Play"></button> So it feels like there are a bunch of players.</p>
+<p>看来有多家竞争者。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:14,158', '00:03:16,000')"><img src="play.png" alt="Play"></button> Now many of them very well funded.</p>
+<p>其中许多资金雄厚。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:16,080', '00:03:19,520')"><img src="play.png" alt="Play"></button> Going in generally the same direction, how do you see the world?</p>
+<p>大体方向相同，你如何看待这个局面？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959800" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:19,520', '00:03:28,559')"><img src="play.png" alt="Play"></button> Do you think that it's going to play out where there's actually a bunch of different use cases and you can own a very important one that others won't want to own?</p>
+<p>你认为会分化出不同用例，而你们能占据关键领域吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:28,560', '00:03:31,919')"><img src="play.png" alt="Play"></button> Or are we in for a major competitive battle?</p>
+<p>还是将面临激烈竞争？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:31,919', '00:03:38,400')"><img src="play.png" alt="Play"></button> Look, if something was really worth doing, it's really natural that people with a lot of funding will go and do it.</p>
+<p>听着，真正有价值的事自然会有资金涌入。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:39,840', '00:03:42,080')"><img src="play.png" alt="Play"></button> People said, for Flexi, it's a great product.</p>
+<p>就像Flexi曾被盛赞。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959777" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:42</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:42,718', '00:03:46,800')"><img src="play.png" alt="Play"></button> Now everyone is trying to do something that can answer any question with sources.</p>
+<p>现在人人都在做带来源的问答产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:47,439', '00:03:48,800')"><img src="play.png" alt="Play"></button> Cursor was a great product.</p>
+<p>Cursor曾是优秀产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:49,439', '00:03:58,159')"><img src="play.png" alt="Play"></button> Now, opening eyes trying to buy Cursor's competitor and through our pick launch code, like, clot code, Google has its own, like, rival tools.</p>
+<p>现在OpenAI试图收购Cursor竞品，谷歌也推出类似工具。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:03:58,159', '00:04:04,000')"><img src="play.png" alt="Play"></button> So it's only natural that when there's a lot of money to be made in a certain sector, people are going to try to copy it.</p>
+<p>有利可图的领域必然引发模仿。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:04</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:04,719', '00:04:13,598')"><img src="play.png" alt="Play"></button> And there's only a limited amount of things you can be world-class at, whether it's being building great models or building one or two really good products.</p>
+<p>世界级能力有限，无论是构建模型还是打造产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:13,598', '00:04:15,759')"><img src="play.png" alt="Play"></button> So you're obviously not going to win on everything.</p>
+<p>显然无法全胜。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:15,758', '00:04:18,318')"><img src="play.png" alt="Play"></button> For us, this is the only thing we care about.</p>
+<p>我们只专注这一点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:18,319', '00:04:24,560')"><img src="play.png" alt="Play"></button> Accuracy at the level of answers, accuracy at the level of tasks, orchestrating all these different tools.</p>
+<p>答案准确性、任务精确性及工具协同能力。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959735" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:24</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:24,560', '00:04:28,560')"><img src="play.png" alt="Play"></button> The browser is much harder to copy than, like, yet another chat tool.</p>
+<p>浏览器比聊天工具更难复制。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:29,278', '00:04:35,758')"><img src="play.png" alt="Play"></button> That said, I'm fully working with the assumption that OpenAI will also build its own browser.</p>
+<p>但我假设OpenAI也会做浏览器。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:35,759', '00:04:38,000')"><img src="play.png" alt="Play"></button> And Throbic will also try to build its own browser.</p>
+<p>Anthropic同样会尝试。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:38,000', '00:04:40,158')"><img src="play.png" alt="Play"></button> Google already has one called Chrome.</p>
+<p>谷歌已有Chrome。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:40,158', '00:04:42,479')"><img src="play.png" alt="Play"></button> So it's completely reasonable to expect them to do it.</p>
+<p>他们跟进很合理。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:42,480', '00:04:44,879')"><img src="play.png" alt="Play"></button> And the only mode you have is speed.</p>
+<p>你唯一的武器是速度。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959715" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:44</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:44,879', '00:04:45,598')"><img src="play.png" alt="Play"></button> You have to innovate.</p>
+<p>必须持续创新。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:45,598', '00:04:47,198')"><img src="play.png" alt="Play"></button> You have to move faster than everybody else.</p>
+<p>要比所有人都更快。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:47,838', '00:04:52,560')"><img src="play.png" alt="Play"></button> And it's like running a marathon but at an extremely high velocity, right?</p>
+<p>就像高速跑马拉松对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:04:53,199', '00:05:00,000')"><img src="play.png" alt="Play"></button> Yeah, I really agree with your statement that, like, you can only focus on one thing and be world-class at one thing.</p>
+<p>我完全同意"专注单一领域做到世界级"的观点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:00,000', '00:05:06,798')"><img src="play.png" alt="Play"></button> And just to give you guys a little glimpse into it, we were backstage before this talk, and he was showing me some of the new stuff that they're working on.</p>
+<p>透露些幕后花絮：开场前他向我展示了新功能。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959693" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:06</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:06,798', '00:05:08,479')"><img src="play.png" alt="Play"></button> And there was, like, a bug, right?</p>
+<p>当时出现了一个bug。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:08,478', '00:05:12,718')"><img src="play.png" alt="Play"></button> And he stopped everything he was doing to, like, figure out what was wrong with this bug.</p>
+<p>他立即停下手头工作排查问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:12,718', '00:05:14,238')"><img src="play.png" alt="Play"></button> Why was it not doing the right thing?</p>
+<p>为什么功能异常？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:14,238', '00:05:21,918')"><img src="play.png" alt="Play"></button> And if you think about, like, what would the CEO of a large company do in that situation, probably they would, like, hand it off to somebody else on their team.</p>
+<p>大公司CEO可能会交给团队处理。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:21,918', '00:05:25,599')"><img src="play.png" alt="Play"></button> So it's like a good piece of evidence that you actually mean what you say.</p>
+<p>这证明你言行一致。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959673" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:26</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:26,158', '00:05:29,518')"><img src="play.png" alt="Play"></button> Yeah, I love triaging and fixing bugs.</p>
+<p>我热爱排查修复bug。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:29,519', '00:05:30,879')"><img src="play.png" alt="Play"></button> I know it sounds trivial.</p>
+<p>听起来可能琐碎。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:31,199', '00:05:34,318')"><img src="play.png" alt="Play"></button> Is that the best use of the time of CEO?</p>
+<p>这是CEO的最佳时间利用吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:35,040', '00:05:37,278')"><img src="play.png" alt="Play"></button> Are there a lot of people who would think otherwise?</p>
+<p>很多人会反对吧？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:37,278', '00:05:41,920')"><img src="play.png" alt="Play"></button> Recently, people are like, oh, I hope this behavior is rubbing off.</p>
+<p>最近有人说希望这种作风能传染。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:41,920', '00:05:45,360')"><img src="play.png" alt="Play"></button> And there's like, I've noticed even Sundar is doing bug support on X right now.</p>
+<p>我注意到Sundar也在X上处理bug了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:45,360', '00:05:49,120')"><img src="play.png" alt="Play"></button> So I'm happy that, like, you know, that's setting a good example.</p>
+<p>很高兴这树立了好榜样。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959650" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:49</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:49,120', '00:05:49,759')"><img src="play.png" alt="Play"></button> Great.</p>
+<p>太好了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:49,759', '00:05:51,359')"><img src="play.png" alt="Play"></button> Okay, let's go back to the beginning.</p>
+<p>让我们回到最初。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:51,360', '00:05:56,399')"><img src="play.png" alt="Play"></button> Like, most of the folks in the audience here are either students or recent grads or grad students.</p>
+<p>在场观众多是学生或应届毕业生。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:05:57,358', '00:06:05,759')"><img src="play.png" alt="Play"></button> And I think hearing your story of, like, how you started perplexity would be really interesting to them because it's probably exactly the world that they're in now.</p>
+<p>他们会对Perplexity的创立故事感兴趣——这正是他们所处的阶段。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:05,759', '00:06:06,079')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:06,079', '00:06:07,119')"><img src="play.png" alt="Play"></button> So, let's see how you got started.</p>
+<p>请分享创业历程。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959632" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:07</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:07,120', '00:06:16,718')"><img src="play.png" alt="Play"></button> We started the company without actually having clear idea of what to build, which is the opposite of what YC advices, which is start from a project and turn it into a company.</p>
+<p>我们创立时没有明确方向，这与YC"从项目起步"的建议相反。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:17,278', '00:06:27,438')"><img src="play.png" alt="Play"></button> I really think at this point in time when AI is improving so fast, you don't have to rigidly stick to any one idea when you're getting started.</p>
+<p>在AI飞速发展的当下，起步时无需固守单一想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:27,439', '00:06:30,638')"><img src="play.png" alt="Play"></button> But the most important thing is you don't change the idea every week.</p>
+<p>但切忌每周更换方向。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959609" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:30</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:30,639', '00:06:32,000')"><img src="play.png" alt="Play"></button> Like, that you shouldn't do either.</p>
+<p>那也不可取。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:32,639', '00:06:40,638')"><img src="play.png" alt="Play"></button> So start with something like brainstorm, think about it, and then try to immediately build it and get it in the hands of people.</p>
+<p>应该先头脑风暴，快速构建并交付用户。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:41,680', '00:06:49,838')"><img src="play.png" alt="Play"></button> One tool that we were building was natural language to SQL, which we actually thought about it as a search tool searching over relational databases.</p>
+<p>我们曾开发自然语言转SQL工具，本质是关系数据库搜索引擎。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:50,478', '00:06:55,518')"><img src="play.png" alt="Play"></button> I allowed Twitter search, but it never, like, like, the original version of Facebook graph search.</p>
+<p>设想过Twitter搜索，类似早期Facebook图谱搜索。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959584" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:55</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:55,519', '00:06:57,439')"><img src="play.png" alt="Play"></button> I allowed that when I was much younger.</p>
+<p>这个想法由来已久。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:06:58,079', '00:07:01,359')"><img src="play.png" alt="Play"></button> So I wanted to, like, rebuild that, but using language models.</p>
+<p>现在想用语言模型重建该功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:02,718', '00:07:04,478')"><img src="play.png" alt="Play"></button> And I allowed Twitter as a platform.</p>
+<p>以Twitter为平台。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:04,478', '00:07:07,358')"><img src="play.png" alt="Play"></button> So it was, there's no good way to search over Twitter.</p>
+<p>当时Twitter搜索体验很差。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:07,358', '00:07:09,359')"><img src="play.png" alt="Play"></button> There still is no good way to search over Twitter.</p>
+<p>至今仍未改善。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:09,918', '00:07:15,838')"><img src="play.png" alt="Play"></button> But at least at the time we organized the entire Twitter's data in the form of, like, relational tables.</p>
+<p>当时我们将Twitter数据组织成关系表。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959563" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:16</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:16,560', '00:07:22,319')"><img src="play.png" alt="Play"></button> And just converted every user's query into a SQL query and ran it against the database.</p>
+<p>把用户查询转为SQL语句执行。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:22,319', '00:07:23,518')"><img src="play.png" alt="Play"></button> It was really, really good.</p>
+<p>效果非常好。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:24,158', '00:07:26,878')"><img src="play.png" alt="Play"></button> And that's what God has started.</p>
+<p>这就是创业起点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:27,678', '00:07:31,679')"><img src="play.png" alt="Play"></button> But at some point we figured it's better to, like, scale this across the web.</p>
+<p>后来决定扩展到全网。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:32,319', '00:07:36,000')"><img src="play.png" alt="Play"></button> And we cannot make every website in the form of tables.</p>
+<p>不可能把所有网站表格化。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:36,559', '00:07:40,158')"><img src="play.png" alt="Play"></button> And neither is it actually easy to answer all sorts of questions.</p>
+<p>回答各类问题也不容易。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959539" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:40</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:40,158', '00:07:46,480')"><img src="play.png" alt="Play"></button> So we bet on the fact that language models can do all the reasoning and parsing and, like, structuring later.</p>
+<p>于是押注语言模型的推理解析能力。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:46,480', '00:07:49,920')"><img src="play.png" alt="Play"></button> But the more important thing is to start with something more unstructured.</p>
+<p>关键是从非结构化数据入手。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:49,920', '00:07:51,840')"><img src="play.png" alt="Play"></button> And that ended up becoming perplexity.</p>
+<p>最终演变成Perplexity。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:52,399', '00:07:52,720')"><img src="play.png" alt="Play"></button> Got it.</p>
+<p>明白了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:07:53,680', '00:08:00,159')"><img src="play.png" alt="Play"></button> And maybe one step before you actually left to go start the company, like, how did you find your co-founders?</p>
+<p>创立公司前，如何找到联合创始人？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959519" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:00</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:00,160', '00:08:05,680')"><img src="play.png" alt="Play"></button> How did you decide that machine learning and AI was like the area you wanted to focus on?</p>
+<p>为何选择专注机器学习与AI领域？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:05,680', '00:08:07,199')"><img src="play.png" alt="Play"></button> Because that was the only thing I was good at.</p>
+<p>因为这是我唯一的专长。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:07,199', '00:08:08,399')"><img src="play.png" alt="Play"></button> I was not good at anything else.</p>
+<p>其他领域都不擅长。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:08,399', '00:08:08,879')"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好吧。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:08,879', '00:08:10,480')"><img src="play.png" alt="Play"></button> So what's the point starting company?</p>
+<p>那为什么要创业？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:10,480', '00:08:13,600')"><img src="play.png" alt="Play"></button> I cannot start a delivery company or a social media company.</p>
+<p>我不适合做配送或社交媒体公司。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:14,079', '00:08:15,599')"><img src="play.png" alt="Play"></button> Like, I'm not the right fit.</p>
+<p>那不是我的领域。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:16,319', '00:08:19,119')"><img src="play.png" alt="Play"></button> The only thing I knew was AI and machine learning.</p>
+<p>我只懂AI和机器学习。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959500" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:19</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:19,120', '00:08:20,160')"><img src="play.png" alt="Play"></button> In fact, it's funny.</p>
+<p>有趣的是。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:20,160', '00:08:21,839')"><img src="play.png" alt="Play"></button> We started an AI company.</p>
+<p>我们创立AI公司。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:22,560', '00:08:25,759')"><img src="play.png" alt="Play"></button> But we're not made fun of not even training our own models.</p>
+<p>却连自研模型都没有。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:26,560', '00:08:29,040')"><img src="play.png" alt="Play"></button> But only the foundation models and stuff we don't train.</p>
+<p>仅使用基础模型。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:29,040', '00:08:30,560')"><img src="play.png" alt="Play"></button> We trained so many different models.</p>
+<p>其实训练过很多模型。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:31,199', '00:08:36,319')"><img src="play.png" alt="Play"></button> But that's the extent to which you need to have the intellectual humility to know, like, what you're good at.</p>
+<p>这需要自知之明——清楚自身能力边界。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:36,799', '00:08:41,040')"><img src="play.png" alt="Play"></button> What is actually doable for you within the resources that you have access to?</p>
+<p>在现有资源下能实现什么？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959478" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:41</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:41,918', '00:08:45,758')"><img src="play.png" alt="Play"></button> And the co-founders are like people like, like, a new from grad school.</p>
+<p>联合创始人来自研究生同学。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:46,399', '00:08:49,120')"><img src="play.png" alt="Play"></button> So we'd been talking and discussing ideas for a long time.</p>
+<p>我们长期交流想法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:49,120', '00:08:55,278')"><img src="play.png" alt="Play"></button> And I think grad school is a great way to, like, you know, like, identify a co-founders.</p>
+<p>研究生阶段是寻找合伙人的好时机。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:08:55,278', '00:09:02,718')"><img src="play.png" alt="Play"></button> You don't talk to them with the, with over the long-term calculation of, like, oh, this could be my co-founder of my future company.</p>
+<p>无需刻意盘算"这人可能是未来合伙人"。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959457" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:02</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:02,719', '00:09:04,958')"><img src="play.png" alt="Play"></button> You talk to them because they're interesting people.</p>
+<p>交流源于志趣相投。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:04,958', '00:09:08,159')"><img src="play.png" alt="Play"></button> And I think that's essentially the value of the Y-Comminator network.</p>
+<p>这正是YC网络的价值。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:08,719', '00:09:13,198')"><img src="play.png" alt="Play"></button> So even if your first startup your fails, you get access to a lot of amazing people.</p>
+<p>即使首次创业失败，也能结识优秀人才。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:13,198', '00:09:15,278')"><img src="play.png" alt="Play"></button> And maybe they could be a future co-founder style.</p>
+<p>他们可能成为未来合伙人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:15,278', '00:09:17,199')"><img src="play.png" alt="Play"></button> That's essentially what grad school was for me.</p>
+<p>研究生经历对我就是如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:17,198', '00:09:18,000')"><img src="play.png" alt="Play"></button> Yeah, that's awesome.</p>
+<p>这很棒。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:18,558', '00:09:25,360')"><img src="play.png" alt="Play"></button> Okay, so you launched this first version of Proplexity, which is largely to, like, do Twitter search effectively.</p>
+<p>你们最初推出的是Twitter搜索版Perplexity。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959434" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:25</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:25,360', '00:09:25,600')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:26,399', '00:09:29,360')"><img src="play.png" alt="Play"></button> At what point did it, like, start to work?</p>
+<p>何时开始见效？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:29,360', '00:09:32,798')"><img src="play.png" alt="Play"></button> And you maybe internally felt like, oh, we should keep working on this.</p>
+<p>团队何时确信应该继续这个方向？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:32,798', '00:09:34,798')"><img src="play.png" alt="Play"></button> This is going to be something to explore.</p>
+<p>觉得值得深入探索？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:35,438', '00:09:39,519')"><img src="play.png" alt="Play"></button> Yeah, so whoever we gave early access to, they were all very excited about it.</p>
+<p>所有早期用户都非常兴奋。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:39,519', '00:09:40,799')"><img src="play.png" alt="Play"></button> They kept using it repeated.</p>
+<p>持续使用。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:41,679', '00:09:45,679')"><img src="play.png" alt="Play"></button> I think there is a phenomenon in products where there's an initial wow factor.</p>
+<p>产品通常有"惊艳期"。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959413" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:46</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:46,399', '00:09:48,319')"><img src="play.png" alt="Play"></button> And then mostly either drops completely.</p>
+<p>之后要么完全弃用。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:48,320', '00:09:50,319')"><img src="play.png" alt="Play"></button> That means you never had real retention.</p>
+<p>说明没有真正留存。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:50,960', '00:09:53,840')"><img src="play.png" alt="Play"></button> Or it definitely drops, but there are sustained usage.</p>
+<p>要么使用量下降但保持稳定。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:09:54,480', '00:10:05,759')"><img src="play.png" alt="Play"></button> So when we saw that for the relational database search, it's like, Twitter, LinkedIn, GitHub, we knew that we had, like, there was something magical about combining large language models in search.</p>
+<p>当看到Twitter/LinkedIn/GitHub的数据库搜索留存时，我们意识到LLM与搜索结合的魔力。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959394" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:05</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:05,759', '00:10:13,199')"><img src="play.png" alt="Play"></button> But then what we did is, like, we dream bigger and said, what if we just give answers and cite the relevant sources?</p>
+<p>于是我们扩大愿景：直接提供带来源的答案。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:13,200', '00:10:16,559')"><img src="play.png" alt="Play"></button> We launched that as a discord bot, and that was also continually being used.</p>
+<p>推出Discord机器人后也获得持续使用。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:16,558', '00:10:19,438')"><img src="play.png" alt="Play"></button> It was not like a one-day usage, and people started ignoring it.</p>
+<p>并非一日热度。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:20,158', '00:10:22,639')"><img src="play.png" alt="Play"></button> So that's when we decided we had the courage to launch it.</p>
+<p>这才有勇气正式发布。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:22,639', '00:10:25,518')"><img src="play.png" alt="Play"></button> We launched it seven days after the chat GPT launch.</p>
+<p>在ChatGPT发布七天后上线。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959373" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:26</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:26,399', '00:10:29,759')"><img src="play.png" alt="Play"></button> Especially at the time when chat GPT did not have web search.</p>
+<p>当时ChatGPT尚无联网搜索功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:29,759', '00:10:30,879')"><img src="play.png" alt="Play"></button> That was a good moment.</p>
+<p>这个时机很好。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:30,879', '00:10:42,079')"><img src="play.png" alt="Play"></button> And I think like many of the successful AI products that people speak about today, cursor included, all were like 20-22 launches, or like early 2023 or late 2022 launches.</p>
+<p>我认为和如今人们谈论的许多成功AI产品一样，包括Cursor，它们大多在2020-2022年或2023年初/2022年底发布。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:42,078', '00:10:46,240')"><img src="play.png" alt="Play"></button> So they're all like old people in the AI timescale.</p>
+<p>以AI的时间尺度衡量，它们都算"老古董"了。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959353" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:46</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:46,240', '00:10:46,798')"><img src="play.png" alt="Play"></button> Yes.</p>
+<p>确实。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:46,798', '00:10:52,879')"><img src="play.png" alt="Play"></button> For me, the aha moment was like the newer EVE, there was like closest 700,000 queries.</p>
+<p>对我来说，顿悟时刻是在某个新年前夕，当时查询量接近70万次。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:53,759', '00:10:56,959')"><img src="play.png" alt="Play"></button> And I was like, okay, this has a crappiest name for a consumer product.</p>
+<p>我当时想，这大概是消费产品中最糟糕的名字了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:56,958', '00:10:58,000')"><img src="play.png" alt="Play"></button> It's called perplexity.</p>
+<p>它叫"Perplexity"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:58,558', '00:10:59,519')"><img src="play.png" alt="Play"></button> Very hard.</p>
+<p>非常拗口。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:10:59,519', '00:11:01,358')"><img src="play.png" alt="Play"></button> Nobody even knows how to share it.</p>
+<p>甚至没人知道怎么拼写它。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:01,360', '00:11:05,360')"><img src="play.png" alt="Play"></button> And then it was so slow, it took seven seconds to answer for a query at the time.</p>
+<p>当时速度极慢，每个查询需要7秒响应。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959334" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:06</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:06,000', '00:11:09,759')"><img src="play.png" alt="Play"></button> And it was making a lot of mistakes, hallucinations.</p>
+<p>还经常出错，产生幻觉回答。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:10,720', '00:11:17,039')"><img src="play.png" alt="Play"></button> And like a no-name company, no-name founder, one or two million dollars in seed funding.</p>
+<p>而且我们是无名公司，创始人没名气，只有一两百万美元种子资金。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:17,038', '00:11:20,159')"><img src="play.png" alt="Play"></button> Despite that, people were caring enough to share screenshots.</p>
+<p>尽管如此，人们仍愿意分享截图。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:20,158', '00:11:24,559')"><img src="play.png" alt="Play"></button> And like, and a new year eve, and you could be watching Netflix, right?</p>
+<p>在新年前夜，人们本可以看网飞节目。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:24,559', '00:11:27,038')"><img src="play.png" alt="Play"></button> So that's when I knew there was something real here.</p>
+<p>那时我意识到这是真正有价值的东西。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959312" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:27,038', '00:11:30,639')"><img src="play.png" alt="Play"></button> And I started like optimizing for like, you know, committing to this vision.</p>
+<p>于是我开始全力投入这个愿景。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:30,639', '00:11:31,057')"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:31,057', '00:11:42,158')"><img src="play.png" alt="Play"></button> And at that point, like on that new year's eve, did you in your head think I'm building a thing that could really compete with Google and like take over a market as big as what Google offers?</p>
+<p>当时在新年前夜，你是否想过自己在打造能真正挑战谷歌、抢占其市场份额的产品？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:42,158', '00:11:42,318')"><img src="play.png" alt="Play"></button> No.</p>
+<p>没有。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:42,318', '00:11:44,158')"><img src="play.png" alt="Play"></button> Or was it just a toy for you?</p>
+<p>还是说它当时只是个玩具？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:44,158', '00:11:50,399')"><img src="play.png" alt="Play"></button> The first time that thought occurred to me was when Google wrote a blog post, when they wrote a blog post about Bard.</p>
+<p>我第一次产生这个想法是谷歌发布Bard博客文章时。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959288" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:51</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:51,678', '00:11:55,199')"><img src="play.png" alt="Play"></button> Like that was around the time when we were raising series A funding.</p>
+<p>那时我们正在进行A轮融资。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:56,080', '00:11:58,559')"><img src="play.png" alt="Play"></button> And everybody said, okay, Bard is going to do whatever you're doing.</p>
+<p>所有人都说Bard会取代我们。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:11:59,519', '00:12:01,598')"><img src="play.png" alt="Play"></button> And it's like, why do we have to build Bard?</p>
+<p>就像在问：为什么还要另建Bard？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:01,599', '00:12:04,078')"><img src="play.png" alt="Play"></button> Like why not just do it on Google, right?</p>
+<p>为什么不直接在谷歌上实现？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:04,078', '00:12:06,238')"><img src="play.png" alt="Play"></button> Where you have all the distribution in the world.</p>
+<p>毕竟谷歌拥有全球分发渠道。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:06,798', '00:12:08,559')"><img src="play.png" alt="Play"></button> So why do you have to build a separate product?</p>
+<p>为何还要单独开发产品？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:08,558', '00:12:13,359')"><img src="play.png" alt="Play"></button> Like just just update your core, main, all the best possible asset to do this.</p>
+<p>直接升级核心产品不就好了？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959266" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:13</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:13,359', '00:12:13,839')"><img src="play.png" alt="Play"></button> Exactly.</p>
+<p>正是。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:14,639', '00:12:18,158')"><img src="play.png" alt="Play"></button> And when I kept thinking it was pretty obvious, you cannot.</p>
+<p>但深入思考后很明显：他们做不到。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:18,158', '00:12:34,639')"><img src="play.png" alt="Play"></button> Like if people can get answers to best who tells to stay in San Francisco with a view of the Golden Gate Bridge or like Bay Bridge, or like where can I stay in New York, like next to the central part with good amenities, or like which flight is the best thing for me to take to fly from Sceptor London?</p>
+<p>比如用户询问"旧金山金门大桥景观酒店"、"纽约中心区优质公寓"或"伦敦至西雅图最佳航班"。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959244" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:35</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:35,519', '00:12:47,919')"><img src="play.png" alt="Play"></button> If you get direct answers to these questions with booking links right there, how are you going to mint money from booking and expedia and kayak and like, like you know, all like same same same same thing for shopping?</p>
+<p>如果直接提供带预订链接的答案，如何从Booking/Expedia/Kayak等平台盈利？购物领域同理。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:48,559', '00:12:55,038')"><img src="play.png" alt="Play"></button> How are you going to take money from Amazon and like Walmart for the same ad where they're all bidding against each other?</p>
+<p>当亚马逊和沃尔玛竞标同一广告位时，如何收费？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:55,839', '00:12:58,079')"><img src="play.png" alt="Play"></button> It's not in their incentive to give you good answers at all.</p>
+<p>它们根本没有提供优质答案的动力。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959221" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:58</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:12:58,720', '00:13:05,519')"><img src="play.png" alt="Play"></button> So that's when I realized that they have to build a separate product, but they can never capitalize on their core distribution.</p>
+<p>于是我明白：他们必须另建产品，却无法利用核心分发优势。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:06,318', '00:13:11,360')"><img src="play.png" alt="Play"></button> And 2024, 2023 especially and large part of 2024 too.</p>
+<p>尤其在2023年和2024年大部分时间。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:12,240', '00:13:16,079')"><img src="play.png" alt="Play"></button> Google had like maybe the fourth of fifth best models at any moment.</p>
+<p>谷歌的模型排名仅第四或第五。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:16,720', '00:13:22,958')"><img src="play.png" alt="Play"></button> So as a startup outside Google, you had access to AI that was better than what Google internally had.</p>
+<p>作为外部初创公司，我们却能使用优于谷歌内部的AI。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959196" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:23</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:23,600', '00:13:25,759')"><img src="play.png" alt="Play"></button> Which was unprecedented, right?</p>
+<p>这前所未有。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:26,399', '00:13:33,038')"><img src="play.png" alt="Play"></button> Until then, if you had to compete with Google and you had to build something that needed a lot of AI in it, good luck, right?</p>
+<p>此前若想用AI产品挑战谷歌，几乎不可能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:33,038', '00:13:37,678')"><img src="play.png" alt="Play"></button> Like because you never have an AI outside Google that's even equal, leave alone being better.</p>
+<p>因为外部AI连持平都难，更别说超越。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:37,678', '00:13:43,278')"><img src="play.png" alt="Play"></button> But now it's a completely reversal of the situation thanks to open AI or anthropic or open source models.</p>
+<p>但如今由于OpenAI/Anthropic/开源模型，形势彻底逆转。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959176" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:44</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:44,000', '00:13:52,639')"><img src="play.png" alt="Play"></button> So that plus innovator dilemma, plus the fact that we could make a lot of mistakes and it's fine, whereas for Google, one mistake tanks their stock.</p>
+<p>加上创新者困境，以及我们能承受犯错（而谷歌一次失误就导致股价暴跌）。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:52,639', '00:13:57,120')"><img src="play.png" alt="Play"></button> Like you remember the live demo of Bard where it failed in the stock, when it was 6%.</p>
+<p>比如Bard演示出错导致股价跌6%。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:13:57,678', '00:14:00,000')"><img src="play.png" alt="Play"></button> So we knew that there was a lot of advantages for us.</p>
+<p>所以我们知道自己优势明显。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:00,558', '00:14:08,638')"><img src="play.png" alt="Play"></button> Yeah, I heard you talk about this recently, but Google specifically has been trying to build perplexity-like experiences.</p>
+<p>听说谷歌一直在尝试构建类似Perplexity的体验。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959150" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:09</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:09,739', '00:14:11,038')"><img src="play.png" alt="Play"></button> And you know, you know, you know, AI mode.</p>
+<p>比如"AI模式"。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:11,038', '00:14:14,319')"><img src="play.png" alt="Play"></button> Yeah, they just like change the name of it each Google IO.</p>
+<p>他们在每届Google I/O都换个名字。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:14,318', '00:14:15,038')"><img src="play.png" alt="Play"></button> And then not.</p>
+<p>然后不了了之。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:15,038', '00:14:15,438')"><img src="play.png" alt="Play"></button> It's true, right?</p>
+<p>确实如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:15,438', '00:14:17,278')"><img src="play.png" alt="Play"></button> I'm not, I'm not like saying something.</p>
+<p>我并非刻意批评。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:17,278', '00:14:18,159')"><img src="play.png" alt="Play"></button> That is, yes.</p>
+<p>事实如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:18,158', '00:14:18,612')"><img src="play.png" alt="Play"></button> Right.</p>
+<p>对。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:18,612', '00:14:25,279')"><img src="play.png" alt="Play"></button> So it's like I, I look at it might sound a little cocky to say that, but it's true.</p>
+<p>可能听起来傲慢，但这是事实。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959134" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:26</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:26,000', '00:14:34,959')"><img src="play.png" alt="Play"></button> The same feature as being launched year after year after year, with a different name, with a different VP, with a different group of people, but it's the same thing.</p>
+<p>相同功能年复一年发布，只是名称、负责人和团队不同。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:35,678', '00:14:39,840')"><img src="play.png" alt="Play"></button> Except maybe it's getting better, but it's never getting launched to everybody.</p>
+<p>或许有改进，但从未全面推广。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:39,840', '00:14:46,000')"><img src="play.png" alt="Play"></button> One of the things I've come to admire about you is you really have a focus on the user experience.</p>
+<p>我欣赏你对用户体验的专注。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:46,080', '00:14:52,398')"><img src="play.png" alt="Play"></button> And you told me how you kind of learned that from Larry Page by reading the book about Google.</p>
+<p>你说这是通过阅读谷歌相关书籍从拉里·佩奇那里学到的。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959106" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:53</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:53,600', '00:14:57,119')"><img src="play.png" alt="Play"></button> Why do you think Google has lost that ability?</p>
+<p>为何谷歌失去了这种能力？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:58,000', '00:14:59,600')"><img src="play.png" alt="Play"></button> Well, it's much bigger business, right?</p>
+<p>因为业务规模太大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:14:59,600', '00:15:01,918')"><img src="play.png" alt="Play"></button> And it's not founder-led anymore.</p>
+<p>且不再由创始人领导。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:02,480', '00:15:03,678')"><img src="play.png" alt="Play"></button> It's hard to take risks.</p>
+<p>难以承担风险。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:04,639', '00:15:05,840')"><img src="play.png" alt="Play"></button> I think they have great people.</p>
+<p>他们仍有优秀人才。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:05,840', '00:15:09,759')"><img src="play.png" alt="Play"></button> Nobody, like, no one in this audience would think Google has incompetent people.</p>
+<p>在座没人会认为谷歌员工无能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:09,759', '00:15:11,759')"><img src="play.png" alt="Play"></button> I think they're like really great engineers.</p>
+<p>他们的工程师非常出色。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:11,759', '00:15:13,678')"><img src="play.png" alt="Play"></button> It's largely the incentive structure.</p>
+<p>主要是激励机制问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959086" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:13</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:13,759', '00:15:19,518')"><img src="play.png" alt="Play"></button> It's hard to take a hit on your own stock and do the thing that's long-term correct.</p>
+<p>很难为长期正确决策承受股价波动。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:20,318', '00:15:27,518')"><img src="play.png" alt="Play"></button> So, a honesty, I'm happy that that sort of dilemma exists, because otherwise, where is the opening for startups?</p>
+<p>说实话，我庆幸这种困境存在，否则初创公司哪有机会？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:28,479', '00:15:34,318')"><img src="play.png" alt="Play"></button> If startups can succeed, then it's going to be, Monopoly is getting bigger and bigger, and that's not great for the world.</p>
+<p>若初创无法成功，垄断将加剧，这对世界不利。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:34,318', '00:15:42,719')"><img src="play.png" alt="Play"></button> I actually am very happy that we're able to win, and they're also able to ship new products, and people are first-time comparing.</p>
+<p>我很高兴我们能赢，他们也能推出新产品，用户首次开始比较。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959056" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:43,440', '00:15:49,360')"><img src="play.png" alt="Play"></button> Earlier, for access to information, you would never even bother to compare an alternative to Google.</p>
+<p>以前没人会费心比较谷歌的替代品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:50,159', '00:15:52,240')"><img src="play.png" alt="Play"></button> That was considered a waste of time and joke.</p>
+<p>那被视为浪费时间或笑话。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:15:53,120', '00:16:00,399')"><img src="play.png" alt="Play"></button> Now, at least, you're like, oh, I first go ask this app, like I'll ask Google, or last chat GPT, or last perplexity, or last Gemini.</p>
+<p>现在用户会说：我先问这个App，或谷歌/ChatGPT/Perplexity/Gemini。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:01,039', '00:16:03,359')"><img src="play.png" alt="Play"></button> And then maybe you don't even ask Google anymore.</p>
+<p>甚至可能不再使用谷歌。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959036" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:03</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:03,360', '00:16:10,879')"><img src="play.png" alt="Play"></button> You just ask the AI apps, and there are a bunch of AI assistants, and the phone makers will start offering all of them as alternatives.</p>
+<p>直接询问AI应用，手机厂商也将提供多种AI助手选择。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:10,879', '00:16:14,398')"><img src="play.png" alt="Play"></button> So it's not going to be like a locked-in default search option.</p>
+<p>默认搜索引擎将不再被垄断。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:14,399', '00:16:23,039')"><img src="play.png" alt="Play"></button> So I'm really happy that they're competing in a world where a monopoly, hopefully, doesn't exist, and that creates a more fair ground for everybody.</p>
+<p>我很高兴他们在一个（希望）不存在垄断的世界竞争，这创造了更公平的环境。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208959016" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:23</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:23,038', '00:16:23,840')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:23,840', '00:16:34,558')"><img src="play.png" alt="Play"></button> Yeah, you're also telling me backstage about, you are facing this increased competition from a variety of folks, but if you look at your numbers, you haven't really seen the effect.</p>
+<p>你说面临多方竞争，但数据未受影响。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:34,558', '00:16:36,719')"><img src="play.png" alt="Play"></button> You know, I read all the Twitter comments every time.</p>
+<p>我读过所有推特评论。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:37,360', '00:16:40,960')"><img src="play.png" alt="Play"></button> The Google I.O. Exactly the same set of comments repeated this year.</p>
+<p>今年Google I/O的评论与往年如出一辙。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:42,000', '00:16:45,600')"><img src="play.png" alt="Play"></button> Google I.O. last year was AI overview, and perplexity is dead.</p>
+<p>去年说"AI概览"发布后Perplexity将死。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958993" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:46</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:46,480', '00:16:48,399')"><img src="play.png" alt="Play"></button> The year was AI mode, and perplexity is dead.</p>
+<p>前年说"AI模式"会杀死Perplexity。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:49,200', '00:16:52,080')"><img src="play.png" alt="Play"></button> And I read all of that too, and it's always fun.</p>
+<p>我觉得这些评论很有趣。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:52,080', '00:16:53,039')"><img src="play.png" alt="Play"></button> I love it, actually.</p>
+<p>实际上我很喜欢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:16:54,240', '00:17:01,758')"><img src="play.png" alt="Play"></button> Because they know that they're all thinking, I don't even expect these things, other people in the company are thinking Google wouldn't build this, or something like that.</p>
+<p>因为他们知道公司内部也有人认为谷歌不会这样做。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:02,320', '00:17:06,400')"><img src="play.png" alt="Play"></button> But reality is, nobody actually gets exposed to those features.</p>
+<p>但事实上，没人真正用过那些功能。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958972" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:07</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:07,200', '00:17:08,318')"><img src="play.png" alt="Play"></button> But competition is real.</p>
+<p>但竞争确实存在。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:08,318', '00:17:19,440')"><img src="play.png" alt="Play"></button> Let's assume, let's accept that OpenAI is extremely well-funded, doesn't have all these innovator-dialma problems, wants to actually ship search on the chat GPT.</p>
+<p>假设资金充足的OpenAI没有创新者困境，真要在ChatGPT推出搜索功能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:19,440', '00:17:23,278')"><img src="play.png" alt="Play"></button> Chat GPT is the most successful consumer AI product out there.</p>
+<p>ChatGPT是最成功的消费级AI产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:23,278', '00:17:31,838')"><img src="play.png" alt="Play"></button> And so competing against it is very difficult, which is why I really want to push the company more on the browser site.</p>
+<p>与之竞争很难，因此我想重点发展浏览器。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958948" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:31</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:31,838', '00:17:37,278')"><img src="play.png" alt="Play"></button> And I think comment, the browser will be an abstraction layer, about chatbots.</p>
+<p>我认为浏览器将成为聊天机器人的抽象层。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:37,278', '00:17:49,838')"><img src="play.png" alt="Play"></button> You could even imagine, if you permit comment, all your chat GPT chats can be fed into that AI, and you don't even have to worry about memory or personalization, or any of these things.</p>
+<p>比如允许将ChatGPT聊天记录导入，无需担心记忆或个性化问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:17:49,838', '00:18:10,318')"><img src="play.png" alt="Play"></button> And it'll do a thing, a lot of new things that a chatbot cannot do, like accessing other tabs, accessing your browsing history, going in completing forms for you, like paying your credit cards, buying stuff for you, and being a scout, you know, going and doing all the research for you, that sort of thing, like, periodic recurring tasks.</p>
+<p>它还能实现聊天机器人无法完成的任务：访问其他标签页/浏览历史、填写表单、支付信用卡、购物、调研等周期性任务。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958909" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:10,318', '00:18:22,158')"><img src="play.png" alt="Play"></button> I think that's the magic that the browser enables for you, and putting it into like mobile, like building mobile versions of this browser, it's going to be very hard, like just engineering wise, it's going to take many months.</p>
+<p>这就是浏览器的魔力，但开发移动版将非常困难，需数月工程时间。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:22,159', '00:18:26,159')"><img src="play.png" alt="Play"></button> So I'm not really worried about someone else trying to copy this, it's going to take time for anybody.</p>
+<p>因此不担心被抄袭，这需要时间。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:26,159', '00:18:30,479')"><img src="play.png" alt="Play"></button> Switching to a different browser is like a pretty big decision for a user.</p>
+<p>对用户而言，更换浏览器是重大决定。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958889" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:30</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:30,558', '00:18:40,318')"><img src="play.png" alt="Play"></button> What do you think will be the very short-term things that your browser will do so much better than what I can get today in Chrome that will make me want to switch?</p>
+<p>短期内你们的浏览器将有哪些优于Chrome的功能促使用户切换？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:40,318', '00:18:46,160')"><img src="play.png" alt="Play"></button> The perfect blend of AI, navigation, and agents, is what we're going to offer.</p>
+<p>我们将提供AI、导航和代理的完美融合。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:46,720', '00:18:50,240')"><img src="play.png" alt="Play"></button> And might sound like a boring answer, but no one's done that.</p>
+<p>听起来平淡，但无人实现过。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:50,880', '00:18:55,359')"><img src="play.png" alt="Play"></button> And there are like hundreds of millions, probably close to a billion people using AI these days.</p>
+<p>目前有数亿甚至近十亿AI用户。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:55</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:55,920', '00:18:57,440')"><img src="play.png" alt="Play"></button> So the market's already pretty big.</p>
+<p>市场已足够大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:18:57,440', '00:19:00,000')"><img src="play.png" alt="Play"></button> What's like a specific example of how I would do that?</p>
+<p>能否举例说明具体应用场景？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:00,160', '00:19:01,440')"><img src="play.png" alt="Play"></button> If I had access to it tomorrow.</p>
+<p>假设明天就能使用。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:02,160', '00:19:03,440')"><img src="play.png" alt="Play"></button> You can schedule your meetings.</p>
+<p>可以安排会议。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:04,400', '00:19:07,759')"><img src="play.png" alt="Play"></button> You can reply to some of your emails that you don't even want to read.</p>
+<p>自动回复不想阅读的邮件。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:08,480', '00:19:14,318')"><img src="play.png" alt="Play"></button> Like for example, let's say you're hosting a Y-Comminator event, and you say, I only want to accept Stanford Dropouts.</p>
+<p>比如举办YC活动时，设置"仅接受斯坦福辍学生"条件。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958845" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:14</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:14,318', '00:19:28,000')"><img src="play.png" alt="Play"></button> And it can go through the entire list of people who applied, and just filter based on who's, you know, to scrape their LinkedIn URLs, filter based on whether they were Stanford, and whether they dropped out or not, and then accepted.</p>
+<p>它能遍历申请者名单，抓取LinkedIn链接，筛选斯坦福辍学者并发送录取通知。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:28,000', '00:19:31,759')"><img src="play.png" alt="Play"></button> Like that level of multi-step reasoning is something that can uniquely do.</p>
+<p>这种多步推理是我们的独特优势。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:32,240', '00:19:33,758')"><img src="play.png" alt="Play"></button> By the way, I'm not saying that's a good filter.</p>
+<p>当然这并非好的筛选标准。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:35</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:35,200', '00:19:36,319')"><img src="play.png" alt="Play"></button> I wouldn't get it otherwise.</p>
+<p>否则我也进不去。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:37,200', '00:19:38,880')"><img src="play.png" alt="Play"></button> So hopefully you're more open.</p>
+<p>希望你们更开放些。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:38,880', '00:19:39,440')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:39,440', '00:19:41,119')"><img src="play.png" alt="Play"></button> We look for deep-mind researchers.</p>
+<p>我们寻找DeepMind研究员。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:41,119', '00:19:41,440')"><img src="play.png" alt="Play"></button> Also.</p>
+<p>之类的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:41,440', '00:19:42,400')"><img src="play.png" alt="Play"></button> Yeah, don't worry.</p>
+<p>别担心。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:43,440', '00:19:44,079')"><img src="play.png" alt="Play"></button> Okay, cool.</p>
+<p>好的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:44,720', '00:19:47,680')"><img src="play.png" alt="Play"></button> Let's talk a little bit about how you run the company now.</p>
+<p>谈谈你现在如何运营公司。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958812" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:47</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:47,680', '00:19:47,839')"><img src="play.png" alt="Play"></button> Right?</p>
+<p>好吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:47,839', '00:19:51,039')"><img src="play.png" alt="Play"></button> I don't know if you wanted to say how many employees you have.</p>
+<p>不知你是否愿意透露员工数量。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:51,039', '00:19:52,240')"><img src="play.png" alt="Play"></button> Yeah, we have about 200.</p>
+<p>约有200人。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:52,240', '00:19:53,758')"><img src="play.png" alt="Play"></button> Okay, so the company's getting bigger.</p>
+<p>公司规模在扩大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:54,720', '00:19:59,199')"><img src="play.png" alt="Play"></button> You now have access to code writing AI tools.</p>
+<p>你们现在使用AI编程工具。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:19:59,598', '00:20:01,680')"><img src="play.png" alt="Play"></button> Are you guys just like, fully in on that stuff?</p>
+<p>是全面采用吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:01,680', '00:20:02,960')"><img src="play.png" alt="Play"></button> Are you vibe-coding everything?</p>
+<p>所有代码都靠AI生成？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:03,598', '00:20:04,558')"><img src="play.png" alt="Play"></button> What's it look like?</p>
+<p>具体情况如何？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958795" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:04</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:04,558', '00:20:06,720')"><img src="play.png" alt="Play"></button> I mean, you don't want to wipe code everything, right?</p>
+<p>并非所有代码都靠AI生成。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:07,440', '00:20:14,878')"><img src="play.png" alt="Play"></button> Like, we frequently run into inference use, and you don't want to wipe code right there, fixing it or live things on production.</p>
+<p>比如推理使用时，不能依赖AI修复生产环境问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:14,878', '00:20:21,200')"><img src="play.png" alt="Play"></button> Like, I do want people well-trained and regular software engineering, infrastructure, distributed systems.</p>
+<p>我需要训练有素的软件工程师处理基础设施和分布式系统。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:21,200', '00:20:22,960')"><img src="play.png" alt="Play"></button> Like, you don't want to replace these skills.</p>
+<p>这些技能无法被替代。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958776" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:23</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:23,838', '00:20:26,160')"><img src="play.png" alt="Play"></button> But yeah, front-end design.</p>
+<p>但前端设计不同。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:26,720', '00:20:28,878')"><img src="play.png" alt="Play"></button> That's where we are seeing tremendous adoption.</p>
+<p>这方面AI采用率极高。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:28,878', '00:20:30,640')"><img src="play.png" alt="Play"></button> Like, cursor is being used by everybody.</p>
+<p>全员使用Cursor。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:31,118', '00:20:35,038')"><img src="play.png" alt="Play"></button> We made it mandatory to use at least one AI coding tool.</p>
+<p>我们强制要求使用至少一种AI编程工具。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:35,038', '00:20:40,879')"><img src="play.png" alt="Play"></button> And internally, it's a complexity that happens to be cursor and like, mix of cursor and GitHub co-pilot.</p>
+<p>内部来看，它本质上是Cursor与GitHub Copilot的混合体。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:41,440', '00:20:43,920')"><img src="play.png" alt="Play"></button> But yeah, we definitely made it compulsory.</p>
+<p>但没错，我们已强制推行使用。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958756" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:43,920', '00:20:52,959')"><img src="play.png" alt="Play"></button> And so the way machine learning people are using it, AI people are like, sometimes they read a paper and they can just upload a screenshot of the pseudocode.</p>
+<p>机器学习从业者的使用方式是：AI研究人员阅读论文后，直接上传伪代码截图。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:53,759', '00:20:58,159')"><img src="play.png" alt="Play"></button> And ask cursor to just edit the files to implement this new algorithm.</p>
+<p>然后让Cursor编辑文件以实现新算法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:20:58,798', '00:21:04,640')"><img src="play.png" alt="Play"></button> And then it's able to write its own unit tests and then run an experiment pretty quickly.</p>
+<p>它还能自主编写单元测试并快速运行实验。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:04,640', '00:21:10,160')"><img src="play.png" alt="Play"></button> That is reducing experimentation time from like three or four days to literally one hour.</p>
+<p>这将实验时间从三四天压缩至短短一小时。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958729" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:10,798', '00:21:12,879')"><img src="play.png" alt="Play"></button> Or there are people who don't know design.</p>
+<p>还有些人不擅长设计。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:12,878', '00:21:18,720')"><img src="play.png" alt="Play"></button> And so sometimes I just give them feedback where I take a screenshot of my iOS app.</p>
+<p>于是我常直接截取iOS应用截图作为反馈。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:18,720', '00:21:20,960')"><img src="play.png" alt="Play"></button> And I said, this button needs to move here with an arrow.</p>
+<p>比如用箭头标注“按钮需移至此处”。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:21,038', '00:21:27,278')"><img src="play.png" alt="Play"></button> And they upload my screenshot to cursor and then ask it to like write a change to the SwiftUI file.</p>
+<p>他们上传截图至Cursor，要求修改SwiftUI文件。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:27,839', '00:21:29,839')"><img src="play.png" alt="Play"></button> So that level of change is incredible.</p>
+<p>这种层级的修改令人惊叹。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958710" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:29</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:29,839', '00:21:35,200')"><img src="play.png" alt="Play"></button> Like the speed I wish you can fix bugs and ship to production is crazy.</p>
+<p>修复漏洞并快速上线的速度超乎想象。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:35,920', '00:21:38,640')"><img src="play.png" alt="Play"></button> The more bugs there are, as long as you can fix them fast.</p>
+<p>只要修复够快，漏洞多也无妨。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:38,640', '00:21:41,679')"><img src="play.png" alt="Play"></button> Yeah, bugs are always ahead of like how fast people can write code though.</p>
+<p>但漏洞数量总超过编码速度。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:41,680', '00:21:44,480')"><img src="play.png" alt="Play"></button> But it just just to be clear, I'm a big fan of all these tools.</p>
+<p>必须声明，我十分推崇这些工具。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:45,038', '00:21:47,200')"><img src="play.png" alt="Play"></button> But it is also introducing new bugs.</p>
+<p>但它们也引入了新漏洞。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:47,920', '00:21:50,400')"><img src="play.png" alt="Play"></button> And many people don't know how to fix them.</p>
+<p>许多人不知如何修复。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958688" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:51</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:51,200', '00:21:54,880')"><img src="play.png" alt="Play"></button> And they don't even know how the bug got introduced and they have to go find it again.</p>
+<p>甚至不清楚漏洞来源，需重新排查。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:54,880', '00:21:57,278')"><img src="play.png" alt="Play"></button> So it's not perfect.</p>
+<p>因此它并非完美。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:21:57,278', '00:22:04,959')"><img src="play.png" alt="Play"></button> And I actually like the more newer tools like clawed code seems to be far smarter than like what cursor is able to do.</p>
+<p>实际上，我认为Clawed Code等新工具比Cursor更智能。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:05,599', '00:22:09,519')"><img src="play.png" alt="Play"></button> So I'm actually like like really positive that this is the right future.</p>
+<p>我坚信这是正确方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:09,519', '00:22:11,039')"><img src="play.png" alt="Play"></button> But there are issues right now.</p>
+<p>但当前仍存在问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958668" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:11</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:11,038', '00:22:11,200')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:12,000', '00:22:12,480')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>没错。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:12,720', '00:22:26,239')"><img src="play.png" alt="Play"></button> In talking to a lot of folks here, one of the major questions that I've heard is as these coding tools get better and better and better, what is the like actual enduring value of a company like yours?</p>
+<p>与众人交流时，核心问题是：随着编码工具日益强大，像贵司这类企业的持久价值何在？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:26,239', '00:22:31,279')"><img src="play.png" alt="Play"></button> If increasingly it's easy to replicate what you have done using these tools.</p>
+<p>若用这些工具能轻易复制你们的成果。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:31,278', '00:22:33,759')"><img src="play.png" alt="Play"></button> What's your take on that general type of question?</p>
+<p>你如何看待这类问题？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958645" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:34</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:34,959', '00:22:37,838')"><img src="play.png" alt="Play"></button> I mean, brand definitely has a big value, right?</p>
+<p>品牌显然极具价值。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:37,838', '00:22:42,318')"><img src="play.png" alt="Play"></button> Like there are cursor competitors for complexity competitors.</p>
+<p>比如Cursor的竞品层出不穷。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:42,318', '00:22:45,919')"><img src="play.png" alt="Play"></button> Like opening I will have like their own cursor.</p>
+<p>OpenAI也会推出自有版本。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:45,920', '00:22:50,480')"><img src="play.png" alt="Play"></button> Opening I has perplexity within chat GPT that did not kill any of these companies.</p>
+<p>ChatGPT内置Perplexity功能却未扼杀任何公司。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:51,119', '00:22:59,679')"><img src="play.png" alt="Play"></button> So there is a certain brand value that once you acquire the scale of like several millions of users, paying users, you don't actually die that fast.</p>
+<p>当用户规模达数百万付费用户时，品牌价值能延缓衰亡。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958620" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:59</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:22:59,680', '00:23:01,758')"><img src="play.png" alt="Play"></button> You learn the right to survive and keep building.</p>
+<p>你们赢得生存权并持续构建。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:02,799', '00:23:04,000')"><img src="play.png" alt="Play"></button> So brand is important.</p>
+<p>故品牌至关重要。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:04,960', '00:23:06,480')"><img src="play.png" alt="Play"></button> Narrative is very important to the brand.</p>
+<p>品牌叙事同样关键。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:07,278', '00:23:10,480')"><img src="play.png" alt="Play"></button> Like you have to communicate to people why do you even need to exist.</p>
+<p>需向用户阐明存在意义。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:11,119', '00:23:12,960')"><img src="play.png" alt="Play"></button> For us, it's the focus on accuracy.</p>
+<p>对我们而言，核心是准确性。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:13,599', '00:23:20,480')"><img src="play.png" alt="Play"></button> Okay, let there exist 100 chat bots but we are the most focused on getting as many answers right as possible.</p>
+<p>纵有百款聊天机器人，我们专注极致准确率。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:20,480', '00:23:26,960')"><img src="play.png" alt="Play"></button> We focus on speed, time to first token on app or web like we're still the fastest despite doing search.</p>
+<p>我们追求速度，应用或网页的首词响应仍为行业最快。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958592" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:27,680', '00:23:30,558')"><img src="play.png" alt="Play"></button> We focus a lot on like how we present the answer.</p>
+<p>答案呈现方式亦是重点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:30,558', '00:23:36,640')"><img src="play.png" alt="Play"></button> So there are some things you are obsessed about because you care about it and that becomes your narrative and your brand identity.</p>
+<p>痴迷于某些细节便构成叙事与品牌标识。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:37,119', '00:23:49,119')"><img src="play.png" alt="Play"></button> And if you manage to get reasonable amount of distribution, not saying 100 million users but tens of millions, then you learn the right to keep playing the game, no matter what other people ship.</p>
+<p>若获数千万用户分发（非亿级），则无论竞品如何都能持续参赛。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958570" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:49</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:49,119', '00:23:50,879')"><img src="play.png" alt="Play"></button> Until then it's definitely a challenge.</p>
+<p>此前挑战必然存在。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:50,880', '00:23:52,319')"><img src="play.png" alt="Play"></button> You have to worry about it.</p>
+<p>必须警惕。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:52,319', '00:23:55,519')"><img src="play.png" alt="Play"></button> Even now we worry about it and the only solution is to move fast and keep ship.</p>
+<p>即便现在，唯一解法仍是快速迭代。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:23:56,400', '00:24:03,038')"><img src="play.png" alt="Play"></button> Beyond brand, like do you think about any network effect types of things emerging with perplexity?</p>
+<p>除品牌外，Perplexity是否考虑网络效应？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:03,920', '00:24:05,600')"><img src="play.png" alt="Play"></button> And brand has network effects, right?</p>
+<p>品牌自带网络效应。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:05,599', '00:24:08,000')"><img src="play.png" alt="Play"></button> Like people tell each other about the brand.</p>
+<p>用户会口口相传。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:08,078', '00:24:12,480')"><img src="play.png" alt="Play"></button> But no AI product has within app network effect.</p>
+<p>但AI产品尚无应用内网络效应。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958547" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:12</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:12,480', '00:24:19,920')"><img src="play.png" alt="Play"></button> Like it's not like WhatsApp where if you build a WhatsApp rival, meta has definitely like a questionable brand, right?</p>
+<p>不似WhatsApp——Meta品牌虽受质疑，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:19,920', '00:24:23,199')"><img src="play.png" alt="Play"></button> Like people don't necessarily trust meta's products.</p>
+<p>用户未必信任其产品，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:23,200', '00:24:25,118')"><img src="play.png" alt="Play"></button> They think like these are ad products.</p>
+<p>视其为广告工具。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:25,759', '00:24:32,318')"><img src="play.png" alt="Play"></button> Despite that, nobody is able to switch up WhatsApp that easily because there's all your contacts, your groups, everything's there.</p>
+<p>却难迁移，因联系人/群组全在其中。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:32,960', '00:24:34,639')"><img src="play.png" alt="Play"></button> AI doesn't quite have that yet.</p>
+<p>AI尚未达此程度。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958524" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:35</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:35,440', '00:24:43,120')"><img src="play.png" alt="Play"></button> Mainly because you can easily export your chat GPT history, uploaded some arrows or things like that.</p>
+<p>主因是ChatGPT历史可轻松导出。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:43,759', '00:24:54,880')"><img src="play.png" alt="Play"></button> I think the browser will definitely be one play to like, you know, figure this out because as you're browsing history and like, which again, you can still export but not the same as just getting a dump, a CSV dump.</p>
+<p>浏览器或是突破口——浏览历史虽可导出，但不同于CSV转储。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:56,079', '00:24:59,280')"><img src="play.png" alt="Play"></button> And your passwords, your wallet, your agent remembers you.</p>
+<p>密码、钱包、代理记忆构成壁垒。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958500" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:59</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:24:59,279', '00:25:04,159')"><img src="play.png" alt="Play"></button> There's a lot of tasks that are running on the browser that you rely on your day-to-day life and work.</p>
+<p>浏览器承载日常依赖的诸多任务。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:04,799', '00:25:13,439')"><img src="play.png" alt="Play"></button> That's one way to like keep get the product a lot more sticky and like, create more network effects, especially if multiple people rely on the same set of tasks, you're sharing it with them.</p>
+<p>此举能增强产品粘性，尤其多人共享任务集时催生网络效应。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:14,000', '00:25:16,080')"><img src="play.png" alt="Play"></button> That's one way to get all this into like the next level.</p>
+<p>这是升级的关键路径。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958483" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:16</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:16,799', '00:25:26,239')"><img src="play.png" alt="Play"></button> It also sounds like a lot of the stuff that you aspire to solve for users requires integrations or partnerships or something with a bunch of other companies in the world.</p>
+<p>你们许多愿景需与外部公司集成或合作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:26,240', '00:25:26,480')"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:26,480', '00:25:38,959')"><img src="play.png" alt="Play"></button> And if you can get those to be good, then there is somewhat of a network effect in the sense that your product will be good and some competitor would have to build the same integration or same deal with these providers.</p>
+<p>若合作顺畅，产品优势将迫使竞品复制相同集成，形成类网络效应。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958460" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:39</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:39,680', '00:25:41,200')"><img src="play.png" alt="Play"></button> What does that look like, do you think in the future?</p>
+<p>未来会如何发展？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:41,200', '00:25:49,359')"><img src="play.png" alt="Play"></button> Like does perplexity do deals with all the airlines in the world and all the hotels and all the e-commerce providers?</p>
+<p>Perplexity会与全球航司/酒店/电商达成合作吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:49,359', '00:25:51,440')"><img src="play.png" alt="Play"></button> So we already work with South Book.</p>
+<p>我们已与South Book合作，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:52,319', '00:25:55,599')"><img src="play.png" alt="Play"></button> They power all the hotel bookings natively done on perplexity.</p>
+<p>支持站内酒店预订。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:25:56,079', '00:26:03,038')"><img src="play.png" alt="Play"></button> We work with TripAdvisor to surface all their views of hotels and different, places.</p>
+<p>与TripAdvisor合作展示酒店及景点数据。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958436" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:03</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:03,038', '00:26:05,278')"><img src="play.png" alt="Play"></button> We have collaborations with the maps.</p>
+<p>同地图服务商协作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:05,278', '00:26:06,240')"><img src="play.png" alt="Play"></button> We work with Yelp.</p>
+<p>接入Yelp。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:07,440', '00:26:12,559')"><img src="play.png" alt="Play"></button> We also, for shopping, we have a lot of merchants who are directly selling on us.</p>
+<p>购物方面，众多商户直接入驻。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:13,838', '00:26:17,920')"><img src="play.png" alt="Play"></button> And then we work with firmly to export the bookings, like native purchases.</p>
+<p>与Firmly合作导出预订及原生购买。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:18,638', '00:26:20,240')"><img src="play.png" alt="Play"></button> So there's already a lot of partnerships.</p>
+<p>现有合作已十分广泛。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:20,240', '00:26:22,160')"><img src="play.png" alt="Play"></button> Shopify is one of our partners.</p>
+<p>Shopify是合作伙伴之一。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:22,160', '00:26:23,680')"><img src="play.png" alt="Play"></button> On finance, we work with F&amp;B.</p>
+<p>金融领域，与F&amp;B合作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:24,558', '00:26:26,878')"><img src="play.png" alt="Play"></button> Sports, we work with like a stats perform.</p>
+<p>体育数据来自Stats Perform。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-73"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958412" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:27,440', '00:26:31,839')"><img src="play.png" alt="Play"></button> So there's a lot of data providers already working with us on these verticals.</p>
+<p>各垂直领域已有大量数据提供商接入。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:31,839', '00:26:36,080')"><img src="play.png" alt="Play"></button> And we just think it's going to expand further as agents start to do things.</p>
+<p>随着代理功能扩展，合作将更深入。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:37,038', '00:26:39,840')"><img src="play.png" alt="Play"></button> Different people are okay with like becoming MCP servers.</p>
+<p>部分企业愿成为MCP服务器，</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:40,400', '00:26:41,360')"><img src="play.png" alt="Play"></button> Some people are not.</p>
+<p>有些则否。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:41,359', '00:26:44,479')"><img src="play.png" alt="Play"></button> Some people just want to like, like, preserve their websites.</p>
+<p>部分仅想保留原有网站。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:44,480', '00:26:49,839')"><img src="play.png" alt="Play"></button> The browser agent will be generic enough that it'll respect whatever the third party wants.</p>
+<p>浏览器代理将足够通用，尊重第三方意愿。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-74"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958390" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:49</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:49,839', '00:26:55,278')"><img src="play.png" alt="Play"></button> Because at the end of the day, the agent is the one that's being permitted by the user to act on their behalf.</p>
+<p>因代理本质是获用户授权代行操作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:56,079', '00:26:59,200')"><img src="play.png" alt="Play"></button> And if there is no MCP server, it's still fine.</p>
+<p>即便无MCP服务器亦无妨。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:26:59,920', '00:27:03,360')"><img src="play.png" alt="Play"></button> You can just use these tabs as if the user would have done them.</p>
+<p>可像用户亲自操作般使用标签页。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:04,319', '00:27:07,920')"><img src="play.png" alt="Play"></button> And that's the key advantage of the browser that you do not have.</p>
+<p>此乃浏览器独有优势。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:08,480', '00:27:16,960')"><img src="play.png" alt="Play"></button> If you commit entirely to just the MCP vision, if you commit entirely to the MCP vision, you require these third party MCP servers to work reliably.</p>
+<p>若完全押注MCP愿景，则需第三方服务器绝对可靠。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-75"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958362" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:17</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:17,759', '00:27:22,240')"><img src="play.png" alt="Play"></button> The data that they send you on the MCP protocol has to be perfect.</p>
+<p>其MCP协议数据必须完美。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:22,240', '00:27:26,400')"><img src="play.png" alt="Play"></button> Your chatbot has to like, you know, deal with all these issues that exist.</p>
+<p>聊天机器人需处理所有现存问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:27,279', '00:27:35,040')"><img src="play.png" alt="Play"></button> On the other hand, if you just ground up design it as the way a human would use that website, you have full control over like how to do it.</p>
+<p>反之，若按人类使用方式设计，则完全自主可控。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:35,039', '00:27:38,080')"><img src="play.png" alt="Play"></button> You don't have to rely on someone else doing the engineering well on their end.</p>
+<p>无需依赖他方工程能力。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-76"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958339" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:40</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:40,480', '00:27:42,719')"><img src="play.png" alt="Play"></button> Let's talk next about business model.</p>
+<p>接下来讨论商业模式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:42,720', '00:27:46,640')"><img src="play.png" alt="Play"></button> Your main competitor, Google, their business model, as you've talked about, is selling ads.</p>
+<p>主要竞品Google依赖广告销售。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:47,759', '00:27:51,199')"><img src="play.png" alt="Play"></button> And you think that prevents them from being really good at what you're doing.</p>
+<p>你认为这阻碍其做好你们的事业。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:51,200', '00:27:52,960')"><img src="play.png" alt="Play"></button> So what will your business model be?</p>
+<p>你们的模式会是？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:52,960', '00:27:56,559')"><img src="play.png" alt="Play"></button> And how will you get it to be on the order of magnitude of Google's?</p>
+<p>如何达到Google量级？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:27:57,278', '00:28:03,039')"><img src="play.png" alt="Play"></button> I don't know if you'll ever get order of magnitude profits as Google just to be clear.</p>
+<p>明确说，利润或永难比肩Google。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-77"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958316" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:03</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:03,038', '00:28:04,318')"><img src="play.png" alt="Play"></button> And I don't think that's needed.</p>
+<p>且无需如此。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:04,318', '00:28:11,200')"><img src="play.png" alt="Play"></button> No one in the history, even Google themselves never had another business that had the margins that Google has.</p>
+<p>历史上包括Google自身，再无业务能达到其利润率。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:11,680', '00:28:17,440')"><img src="play.png" alt="Play"></button> So it's completely reasonable to get something far, far better than any public company out there right now.</p>
+<p>故当前远超其他上市公司的表现已足够。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:18,000', '00:28:20,318')"><img src="play.png" alt="Play"></button> And we still way below Google.</p>
+<p>我们仍远不及Google。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:20,318', '00:28:24,720')"><img src="play.png" alt="Play"></button> Number two, I think the subscription revenues like really encouraging.</p>
+<p>其次，订阅收入增长喜人。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-78"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958294" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:25</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:25,038', '00:28:26,879')"><img src="play.png" alt="Play"></button> We never expected to get this far.</p>
+<p>远超预期。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:26,878', '00:28:33,038')"><img src="play.png" alt="Play"></button> And then we think like we can grow at least a few billions a year and just subs, which is a great business.</p>
+<p>仅订阅年收入即可达数十亿，堪称优质业务。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:33,679', '00:28:44,799')"><img src="play.png" alt="Play"></button> Usage based pricing, where people are paying an agent for completing a task, or people have recurring tasks and they pay based on every single use of the task.</p>
+<p>基于任务完成的用量计费，或按次支付周期性任务。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:45,519', '00:28:50,798')"><img src="play.png" alt="Play"></button> And they normalize this system based on how much it would take to hire a person to do that for them.</p>
+<p>定价参照雇佣人力成本。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-79"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958268" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:51</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:51,838', '00:28:52,960')"><img src="play.png" alt="Play"></button> It's going to be a thing.</p>
+<p>这将成趋势。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:52,960', '00:28:55,199')"><img src="play.png" alt="Play"></button> I don't exactly know how it's going to play out.</p>
+<p>具体形态尚不明确。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:55,200', '00:28:57,199')"><img src="play.png" alt="Play"></button> What are the margins going to be on that?</p>
+<p>利润率如何？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:28:57,200', '00:29:02,960')"><img src="play.png" alt="Play"></button> Potentially it's going to be better than subscriptions in terms of volume of people who would pay for it.</p>
+<p>付费用户规模或超订阅制。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:02,960', '00:29:06,000')"><img src="play.png" alt="Play"></button> But it might be lower margins because it's usage based.</p>
+<p>但用量计费可能导致利润率更低。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:06,000', '00:29:08,558')"><img src="play.png" alt="Play"></button> So you're still going to be spending on all those queries.</p>
+<p>因需持续承担查询成本。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:08,558', '00:29:13,366')"><img src="play.png" alt="Play"></button> Someone might be paying a subscription to one of these AI apps and might not have used it for entire month.</p>
+<p>用户可能付费订阅却整月未使用。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-80"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958246" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:13</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:13,366', '00:29:15,599')"><img src="play.png" alt="Play"></button> And so that's good margins on that user.</p>
+<p>此类用户利润率较高。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:16,640', '00:29:19,840')"><img src="play.png" alt="Play"></button> I don't actually have a clear sense of how this is all going to evolve.</p>
+<p>演变路径尚未清晰。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:19,839', '00:29:24,239')"><img src="play.png" alt="Play"></button> But all I know is subscriptions and usage based pricing are going to be a thing.</p>
+<p>但订阅与用量计费必将兴起。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:24,720', '00:29:33,200')"><img src="play.png" alt="Play"></button> Transactions, if people start buying more through AI's, taking a cut out of the transactions is good.</p>
+<p>若AI促成交易，抽成亦为良策。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:33,200', '00:29:40,000')"><img src="play.png" alt="Play"></button> It's going to be CPAs have historically been way lower margins in CPCs, which is why Google never became a transaction platform.</p>
+<p>CPA利润率历来低于CPC，故Google未成交易平台。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-81"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958219" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:40</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:40,640', '00:29:43,039')"><img src="play.png" alt="Play"></button> Which is why I said, you're going to make a lot of money here.</p>
+<p>因此我说此处盈利空间大。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:43,038', '00:29:44,959')"><img src="play.png" alt="Play"></button> You may never make as much money as Google.</p>
+<p>或永不及Google。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:44,960', '00:29:49,439')"><img src="play.png" alt="Play"></button> Yeah, Google's business model is potentially the best business model ever.</p>
+<p>Google模式堪称史上最佳。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:49,440', '00:29:49,838')"><img src="play.png" alt="Play"></button> Ever.</p>
+<p>没有之一。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:50,558', '00:29:51,518')"><img src="play.png" alt="Play"></button> Yeah, it's fair to not.</p>
+<p>难以企及也合理。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:51,519', '00:29:54,880')"><img src="play.png" alt="Play"></button> Maybe it was so good that you needed AI to kill it, basically.</p>
+<p>或许正因如此，才需AI来颠覆它。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:54,880', '00:29:57,919')"><img src="play.png" alt="Play"></button> All right, we're going to do some audience Q&amp;A in a little bit.</p>
+<p>稍后进行观众问答。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-82"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958201" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:58</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:29:58,640', '00:30:03,518')"><img src="play.png" alt="Play"></button> Before we get there, I wanted to understand your advice for the folks in this room.</p>
+<p>首先，请给在场者一些建议。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:04,078', '00:30:09,439')"><img src="play.png" alt="Play"></button> If you were in their position back, whatever it was, four years ago, what would you advise they do?</p>
+<p>若置身他们四年前的处境，你会如何建议？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:10,558', '00:30:15,518')"><img src="play.png" alt="Play"></button> I would say working incredibly hard, there is no substitute for it.</p>
+<p>唯有极致努力，别无他法。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:16,078', '00:30:24,959')"><img src="play.png" alt="Play"></button> Don't think like you're very smart, like, like, strategizing the right way to build a company despite all, like, what big model labs are doing.</p>
+<p>勿自恃聪明——在大模型实验室碾压下，所谓正确战略皆徒劳。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-83"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958174" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:25</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:25,759', '00:30:38,639')"><img src="play.png" alt="Play"></button> You should assume that if you have a big hit, if your company is something that can make revenue in the scale of hundreds of millions of dollars or potentially billions of dollars, you should always assume that a model company will copy it.</p>
+<p>若公司有数亿乃至数十亿收入潜力，必须假设大模型公司会复制。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:39,680', '00:30:41,759')"><img src="play.png" alt="Play"></button> Mainly because they are really looking for revenue.</p>
+<p>因它们亟需收入。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:41,759', '00:30:45,358')"><img src="play.png" alt="Play"></button> They various, like, tens of billions or close to 50 billion.</p>
+<p>它们坐拥数百亿近五百亿资金。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-84"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958154" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:46</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:46,000', '00:30:48,318')"><img src="play.png" alt="Play"></button> And they need to justify all that cap expend.</p>
+<p>需证明资本支出的合理性。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:48,318', '00:30:51,118')"><img src="play.png" alt="Play"></button> And they need to keep searching for new ways to make money.</p>
+<p>并持续寻找新盈利点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:51,680', '00:30:53,598')"><img src="play.png" alt="Play"></button> So they will copy anything that's good.</p>
+<p>故会复制任何优质项目。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:53,598', '00:30:55,278')"><img src="play.png" alt="Play"></button> I think you got to live with that fear.</p>
+<p>必须学会与这种恐惧共存。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:55,278', '00:30:56,160')"><img src="play.png" alt="Play"></button> You have to embrace it.</p>
+<p>接纳它。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:30:56,878', '00:31:02,239')"><img src="play.png" alt="Play"></button> And realize that, like, your mode comes from moving fast and building your own identity around what you're doing.</p>
+<p>明白优势在于快速行动，建立独特身份。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:02,720', '00:31:10,720')"><img src="play.png" alt="Play"></button> Because users at the end care, like, when you are trying to get like a specific person for your house help, you are searching for that specific person.</p>
+<p>因用户最终在乎的是精准匹配——如寻找特定家政人员时，</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-85"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958129" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:10,720', '00:31:14,879')"><img src="play.png" alt="Play"></button> You're not, like, going for a general agency that handles all of it.</p>
+<p>而非选择全能中介。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:15,440', '00:31:27,038')"><img src="play.png" alt="Play"></button> So I think there's, like, like, real benefit from embracing that fear and, like, sleeping with that fear and waking up every day and, like, feeling excited about what you're going to build, because that's the only thing that'll keep you going.</p>
+<p>拥抱恐惧，与之共眠，每日为所建之事兴奋——唯此能持续驱动你。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:27,680', '00:31:32,478')"><img src="play.png" alt="Play"></button> Well, you guys are the perfect example of how it's possible to go up against somebody as big as Google.</p>
+<p>你们正是对抗Google这类巨头的典范。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-86"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958107" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:32</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:32,478', '00:31:33,118')"><img src="play.png" alt="Play"></button> That's great.</p>
+<p>很棒。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:33,118', '00:31:33,928')"><img src="play.png" alt="Play"></button> All right.</p>
+<p>好的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:33,928', '00:31:35,278')"><img src="play.png" alt="Play"></button> Let's do some Q&amp;A.</p>
+<p>开始问答环节。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:35,278', '00:31:37,359')"><img src="play.png" alt="Play"></button> We'll start on the left side here.</p>
+<p>从左区开始。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:37,358', '00:31:37,838')"><img src="play.png" alt="Play"></button> Go for it.</p>
+<p>请提问。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:38,959', '00:31:39,255')"><img src="play.png" alt="Play"></button> Hi.</p>
+<p>你好。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:39,255', '00:31:40,638')"><img src="play.png" alt="Play"></button> My name is Sammy.</p>
+<p>我叫 Sammy。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:40,638', '00:31:45,759')"><img src="play.png" alt="Play"></button> And I just want to personally thank you for helping me get a 100 in my theory of knowledge course.</p>
+<p>我只是想亲自感谢你帮助我在知识理论课程中取得了满分。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-87"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958093" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:46</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:46,480', '00:31:48,078')"><img src="play.png" alt="Play"></button> I would not have been able to do it without you.</p>
+<p>没有你，我无法做到这一点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:48,078', '00:31:48,639')"><img src="play.png" alt="Play"></button> No shame.</p>
+<p>没什么不好意思的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:49,598', '00:31:51,118')"><img src="play.png" alt="Play"></button> Quick question for you.</p>
+<p>有个问题想问你。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:31:51,118', '00:32:01,358')"><img src="play.png" alt="Play"></button> You know, with your recent partnership with NVIDIA to ship AI models across Europe, there's been talks about perplexity being installed on all Samsung phones or pre-installed.</p>
+<p>你知道，随着你们最近与 NVIDIA 合作在欧洲部署 AI 模型，有传言称 Perplexity 可能会预装在所有三星手机上。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:02,159', '00:32:06,798')"><img src="play.png" alt="Play"></button> And that could lift your valuation towards 14 billion, according to sources like Bloomberg.</p>
+<p>根据彭博等消息来源，这可能将你们的估值推高至 140 亿美元。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-88"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958072" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:07</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:07,598', '00:32:12,492')"><img src="play.png" alt="Play"></button> It's a heavy responsibility being the default search engine for, you know, the mainstream population.</p>
+<p>作为主流人群的默认搜索引擎，这是一项重大责任。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:12,492', '00:32:21,550')"><img src="play.png" alt="Play"></button> What do you think are the most important factors at perplexity to prevent hallucinations or incorrect data from, you know, being given to the masses?</p>
+<p>你认为 Perplexity 防止幻觉或错误数据传播给大众的最重要因素是什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:21,550', '00:32:22,719')"><img src="play.png" alt="Play"></button> Thank you so much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:22,720', '00:32:23,038')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:23,200', '00:32:27,278')"><img src="play.png" alt="Play"></button> Hello, hallucinations is something we really care about.</p>
+<p>你好，幻觉是我们非常关注的问题。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-89"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958052" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:27,278', '00:32:32,398')"><img src="play.png" alt="Play"></button> We're building benchmarks internally to keep up to date with that.</p>
+<p>我们正在内部建立基准测试以跟上这一挑战。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:32,398', '00:32:39,439')"><img src="play.png" alt="Play"></button> The only way there is to keep building a better search index, keep capturing better snippets of all the web pages.</p>
+<p>唯一的办法是持续构建更好的搜索索引，抓取更优质的网页片段。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:39,440', '00:32:48,558')"><img src="play.png" alt="Play"></button> And then like these models like, you know, are getting fast enough that you can have them reason multi-step for every query without incurring too much costs.</p>
+<p>而且这些模型的速度已经足够快，可以以较低成本为每个查询进行多步推理。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-90"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958031" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:48</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:48,558', '00:32:50,878')"><img src="play.png" alt="Play"></button> And so that's another way to reduce hallucinations.</p>
+<p>这也是减少幻觉的另一种方式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:51,680', '00:32:55,119')"><img src="play.png" alt="Play"></button> I want to ask you about like the innovators, the lemma.</p>
+<p>我想问问你关于创新者和引理的问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:32:55,119', '00:33:07,119')"><img src="play.png" alt="Play"></button> So if you were in Sunda's shoes or in, like the Google co-founder's shoes, like what would you do and how would you kind of come up with maybe changing their business model, even if it's a worse model?</p>
+<p>如果你站在 Sundar 或谷歌联合创始人的立场上，你会怎么做？你会如何考虑改变他们的商业模式，即使这可能是一个更差的模式？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-91"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208958012" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:07</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:07,119', '00:33:10,880')"><img src="play.png" alt="Play"></button> So if you were running Google competing against yourself, what would you do?</p>
+<p>如果你在运营谷歌并与自己竞争，你会怎么做？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:11,599', '00:33:14,154')"><img src="play.png" alt="Play"></button> I think I don't envy the job at all.</p>
+<p>我认为我一点也不羡慕这份工作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:14,154', '00:33:16,799')"><img src="play.png" alt="Play"></button> Nobody in the world wants that job.</p>
+<p>世界上没人想要这份工作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:17,759', '00:33:20,000')"><img src="play.png" alt="Play"></button> It's a very difficult job.</p>
+<p>这是一份非常困难的工作。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:20,880', '00:33:26,640')"><img src="play.png" alt="Play"></button> Do you sacrifice the business model in order to get like a new bit at the next product?</p>
+<p>你会为了下一代产品牺牲商业模式吗？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:26,640', '00:33:28,399')"><img src="play.png" alt="Play"></button> Or would you ship it as a separate product?</p>
+<p>还是会将其作为独立产品推出？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:28,400', '00:33:36,399')"><img src="play.png" alt="Play"></button> Like if you're Google, would you just build a separate thing that is the perplexity competitor and sacrifice the distribution advantage that you have in the short run?</p>
+<p>比如，如果你是谷歌，你会直接打造一个与 Perplexity 竞争的产品，并牺牲短期内的分发优势吗？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-92"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957980" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:39</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:39,599', '00:33:42,080')"><img src="play.png" alt="Play"></button> Yeah, generally I don't know.</p>
+<p>是的，总的来说我不知道。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:42,079', '00:33:46,960')"><img src="play.png" alt="Play"></button> I think I can say all of what I want, but they have more data on what their users are doing.</p>
+<p>我想我可以畅所欲言，但他们拥有更多关于用户行为的数据。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:47,680', '00:33:51,200')"><img src="play.png" alt="Play"></button> And there are a lot of people in the world who hate AI by the way.</p>
+<p>顺便说一句，世界上有很多人讨厌 AI。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:51,200', '00:33:58,239')"><img src="play.png" alt="Play"></button> So I think just throwing AI down people's throats on such a massive distribution area is not easy.</p>
+<p>因此，我认为在如此大规模的分发领域强行推广 AI 并不容易。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:33:58,880', '00:34:03,359')"><img src="play.png" alt="Play"></button> What I would do, I definitely don't know and I don't want to be in that position also.</p>
+<p>我会怎么做？我完全不知道，而且我也不想处于那个位置。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-93"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:03</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:03,359', '00:34:08,000')"><img src="play.png" alt="Play"></button> By the way, if ads are part of a re-AI answer, you're going to hate it too.</p>
+<p>顺便说一句，如果广告成为 AI 答案的一部分，你也会讨厌它。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:09,039', '00:34:13,359')"><img src="play.png" alt="Play"></button> And so it's good that there's alternatives like us.</p>
+<p>所以有像我们这样的替代方案是件好事。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:14,639', '00:34:15,039')"><img src="play.png" alt="Play"></button> All right.</p>
+<p>好的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:17,119', '00:34:17,836')"><img src="play.png" alt="Play"></button> Hey, everyone.</p>
+<p>大家好。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:17,836', '00:34:18,719')"><img src="play.png" alt="Play"></button> My name's Aakshad.</p>
+<p>我叫 Aakshad。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:19,679', '00:34:25,440')"><img src="play.png" alt="Play"></button> So in a recent interview with Nikhil Komet, he asked you for an internship at perplexity.</p>
+<p>在最近与 Nikhil Komet 的采访中，他向你申请了 Perplexity 的实习机会。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:25,440', '00:34:28,558')"><img src="play.png" alt="Play"></button> So I was just wondering how that arrangement is going.</p>
+<p>所以我想知道这个安排进展如何。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-94"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957931" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:28</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:28,559', '00:34:30,220')"><img src="play.png" alt="Play"></button> He came to the office.</p>
+<p>他来过办公室。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:30,220', '00:34:32,159')"><img src="play.png" alt="Play"></button> He spent a couple of days.</p>
+<p>他待了几天。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:32,159', '00:34:35,039')"><img src="play.png" alt="Play"></button> I mean, he hasn't posted about it, so I'll let him post about it.</p>
+<p>我是说，他还没有发布相关内容，所以我让他自己发布。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:35,039', '00:34:36,799')"><img src="play.png" alt="Play"></button> But we did spend time with him.</p>
+<p>但我们的确和他共度了一段时间。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:37,518', '00:34:40,400')"><img src="play.png" alt="Play"></button> It was not a proper internship, but we did speak to him for a while.</p>
+<p>这不是正式的实习，但我们确实和他聊了一段时间。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:41,840', '00:34:45,198')"><img src="play.png" alt="Play"></button> I want to start by saying thank you very much for your very candid answers.</p>
+<p>首先，非常感谢你坦诚的回答。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:45,199', '00:34:46,719')"><img src="play.png" alt="Play"></button> I really appreciated that.</p>
+<p>我非常感激。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-95"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957913" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:46</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:46,719', '00:34:51,438')"><img src="play.png" alt="Play"></button> So a lot of startups, they find some cool application of foundation models.</p>
+<p>很多初创公司会发现基础模型的一些酷炫应用。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:52,079', '00:34:54,078')"><img src="play.png" alt="Play"></button> And then they'll build something off of that.</p>
+<p>然后他们会在此基础上构建产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:34:54,079', '00:35:01,118')"><img src="play.png" alt="Play"></button> But then if it does gain traction, then the foundation models will consolidate that into their own infrastructure.</p>
+<p>但如果它真的获得关注，基础模型公司会将其整合到自己的基础设施中。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:01,679', '00:35:09,838')"><img src="play.png" alt="Play"></button> And perplexity sort of has that issue too with a lot of LM's adding search, like Taj Gbt, Gemini, companies like Coheer.</p>
+<p>Perplexity 也面临类似问题，因为许多语言模型公司（如 Taj Gbt、Gemini 和 Coheer 等）正在添加搜索功能。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-96"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957889" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:10</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:10,639', '00:35:14,960')"><img src="play.png" alt="Play"></button> So I was just wondering, how would you approach something like that?</p>
+<p>所以我想知道，你会如何应对这种情况？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:14,960', '00:35:17,519')"><img src="play.png" alt="Play"></button> Would you try to pivot, just get better at what you do?</p>
+<p>你会尝试转型，还是专注于做得更好？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:17,518', '00:35:22,319')"><img src="play.png" alt="Play"></button> Or I think I would say pick something you want to be known for.</p>
+<p>或者我认为我会选择你们希望被认可的方向。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:23,518', '00:35:28,959')"><img src="play.png" alt="Play"></button> Yes, there are other people integrating search, but we still want to be the fastest and most accurate.</p>
+<p>是的，虽然其他公司也在整合搜索，但我们仍希望成为最快和最准确的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:28,960', '00:35:31,920')"><img src="play.png" alt="Play"></button> And obviously I cannot just say that and stop.</p>
+<p>显然，我不能只是说说而已。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-97"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957868" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:31</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:31,920', '00:35:37,440')"><img src="play.png" alt="Play"></button> Like we need to figure out a new strategy too and build new products that don't exist yet.</p>
+<p>我们需要制定新策略，并构建尚未存在的新产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:38,320', '00:35:40,959')"><img src="play.png" alt="Play"></button> So our browser will be that bad for us.</p>
+<p>因此，我们的浏览器将成为我们的重要资产。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:40,960', '00:35:43,920')"><img src="play.png" alt="Play"></button> And browser and search are not too distinct to products.</p>
+<p>浏览器和搜索并不是完全不同的产品。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:43,920', '00:35:48,079')"><img src="play.png" alt="Play"></button> They're actually like the browser is a natural graduation step from search.</p>
+<p>实际上，浏览器是搜索的自然延伸。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:48,719', '00:35:51,760')"><img src="play.png" alt="Play"></button> Just like how Google graduated from Google search to Chrome.</p>
+<p>就像谷歌从 Google 搜索发展到 Chrome 一样。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-98"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957848" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:51</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:51,760', '00:35:56,399')"><img src="play.png" alt="Play"></button> And Chrome is the main reason they got billions of Qtel queries from hundreds of millions.</p>
+<p>Chrome 是他们从数亿用户获得数十亿 Qtel 查询的主要原因。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:35:56,400', '00:36:01,359')"><img src="play.png" alt="Play"></button> So in Google IPO, they had no browser and they had like maybe 100 million queries.</p>
+<p>在谷歌 IPO 时，他们没有浏览器，查询量大约为 1 亿次。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:01,360', '00:36:03,839')"><img src="play.png" alt="Play"></button> Now you know like it's like 10 billion or something.</p>
+<p>现在你知道，这个数字大约是 100 亿次。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:04,480', '00:36:06,399')"><img src="play.png" alt="Play"></button> So the browser is an important part of that.</p>
+<p>因此，浏览器是其中的重要部分。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:06,400', '00:36:09,359')"><img src="play.png" alt="Play"></button> And so that's why we are making a massive bet on that.</p>
+<p>这就是为什么我们在这方面下了重注。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-99"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957830" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:09</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:09,360', '00:36:11,199')"><img src="play.png" alt="Play"></button> And agents can only be built with the browser.</p>
+<p>而且智能代理只能通过浏览器构建。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:11,199', '00:36:36,878')"><img src="play.png" alt="Play"></button> I'm very like convinced about that vision that if you want to have a mobile agent that you can actually build an implement without being restricted by whatever OS rules that Apple or Google sets in terms of not being able to call third party apps, expecting every mobile app to have MCP servers and then like connecting all their data to your thing is not going to be that straightforward.</p>
+<p>我非常坚信这一愿景：如果你想构建一个移动代理，并能真正实施而不受苹果或谷歌操作系统规则的限制（比如无法调用第三方应用），指望每个移动应用都配备 MCP 服务器并将所有数据连接到你的系统并不那么容易。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:36,878', '00:36:39,758')"><img src="play.png" alt="Play"></button> Like nobody wants to be disintermediated by an AI that quickly.</p>
+<p>没有人希望这么快被 AI 绕过。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-100"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957799" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:36:40</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:40,398', '00:36:42,798')"><img src="play.png" alt="Play"></button> So the browser will be a great way to build all these.</p>
+<p>因此，浏览器将是构建所有这些的绝佳方式。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:42,798', '00:36:43,119')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:43,838', '00:36:48,878')"><img src="play.png" alt="Play"></button> So as a lot of us here have done, we tried, we failed at our startups.</p>
+<p>就像我们许多人一样，我们尝试过，也在初创中失败过。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:49,838', '00:36:52,078')"><img src="play.png" alt="Play"></button> You know some of us have been more successful than others.</p>
+<p>你知道，有些人比其他人更成功。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:52,079', '00:36:53,278')"><img src="play.png" alt="Play"></button> Some like me have failed.</p>
+<p>像我这样的人失败了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:36:53,360', '00:37:04,319')"><img src="play.png" alt="Play"></button> When you're in that moment failing over and over again, what do you tell yourself as CEO or as an entrepreneur to win to teach yourself to win?</p>
+<p>当你一次又一次失败时，作为 CEO 或企业家，你会如何激励自己走向成功？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-101"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957775" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:04</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:04,320', '00:37:06,639')"><img src="play.png" alt="Play"></button> What do I tell myself in a field like I might fail?</p>
+<p>在我可能失败的领域，我会对自己说什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:07,760', '00:37:19,679')"><img src="play.png" alt="Play"></button> Yeah or when you're in that very specific moment of failing where you feel like everything's crashing down on you or this feature isn't working or this bug is popped up, how do you get through that and what do you think your biggest motivational factor is in that realm?</p>
+<p>是的，或者当你处于失败的具体时刻，感觉一切都在崩溃，某个功能无法运行或出现漏洞时，你如何度过难关？你认为在那个领域最大的动力是什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:20,318', '00:37:30,000')"><img src="play.png" alt="Play"></button> Or maybe like at the beginning before it started to take off, what gave you the hope to keep working on it versus just go back to open AI and get your job?</p>
+<p>或者在一开始尚未起飞时，是什么让你坚持继续努力，而不是回到 OpenAI 工作？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-102"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957750" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:30</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:30,000', '00:37:33,518')"><img src="play.png" alt="Play"></button> I just watched the Elon Musk videos on YouTube.</p>
+<p>我只是在 YouTube 上看了埃隆·马斯克的视频。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:34,719', '00:37:35,518')"><img src="play.png" alt="Play"></button> Now I'm serious.</p>
+<p>我是认真的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:42,960', '00:37:48,868')"><img src="play.png" alt="Play"></button> I can tell you which video there's a video where that's like the third failure in a row and like what do you think?</p>
+<p>我可以告诉你是哪个视频——有一个视频是他连续第三次失败时，他在想什么？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:48,868', '00:37:50,788')"><img src="play.png" alt="Play"></button> And he's like I don't ever give up.</p>
+<p>他说：“我永远不会放弃。”</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:50,788', '00:37:53,120')"><img src="play.png" alt="Play"></button> I would have to be dead or incapacitated.</p>
+<p>除非我死了或丧失能力。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:53,119', '00:37:55,199')"><img src="play.png" alt="Play"></button> So you'd say you're also never going to give up?</p>
+<p>所以你会说你也不会放弃？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-103"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957724" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:37:56</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:56,000', '00:37:58,762')"><img src="play.png" alt="Play"></button> Yeah I hope to, I hope to like stay that way.</p>
+<p>是的，我希望保持这种态度。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:58,762', '00:37:59,709')"><img src="play.png" alt="Play"></button> It's not easy.</p>
+<p>这并不容易。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:37:59,709', '00:38:04,339')"><img src="play.png" alt="Play"></button> I think he's done it for way longer and that's why you all like respect him.</p>
+<p>我认为他坚持的时间更长，这就是为什么大家都尊敬他。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:04,339', '00:38:12,118')"><img src="play.png" alt="Play"></button> But that's you know there are examples of great entrepreneurs have done this despite all the odds stacked against him.</p>
+<p>但你知道，有很多伟大的企业家在重重困难下依然做到了这一点。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:12,118', '00:38:15,234')"><img src="play.png" alt="Play"></button> So what do you have to lose this keep going?</p>
+<p>所以坚持下去有什么损失呢？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:15,234', '00:38:16,078')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:24,079', '00:38:27,459')"><img src="play.png" alt="Play"></button> Yeah my question is about kind of the sustainability of perplexity.</p>
+<p>是的，我的问题是关于 Perplexity 的可持续性。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-104"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957692" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:38:27</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:27,459', '00:38:30,778')"><img src="play.png" alt="Play"></button> Not in terms of the business model but just in terms of the web in general.</p>
+<p>不是商业模式，而是整个网络的可持续性。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:30,778', '00:38:37,038')"><img src="play.png" alt="Play"></button> You know a lot of studies have come out recently showing that AI search engines like perplexity drive a lot less traffic to websites.</p>
+<p>你知道，最近很多研究表明，像 Perplexity 这样的 AI 搜索引擎为网站带来的流量大幅减少。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:37,039', '00:38:49,038')"><img src="play.png" alt="Play"></button> So I'm curious what do you think like the web will look like in five to ten years when a lot of these websites you know they're not getting as much traffic and so they have to kind of cease their operations and like the web will just be a lot quieter of a place for contentration.</p>
+<p>所以我很好奇，你认为五到十年后网络会是什么样子？当许多网站因流量减少而不得不停止运营时，网络是否会变得更加安静？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-105"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957670" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:38:49</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:49,039', '00:38:52,559')"><img src="play.png" alt="Play"></button> How do you think perplexity fits into that and what do you think the web will look like in that era?</p>
+<p>你认为 Perplexity 将如何适应这种情况？在那个时代，网络会是什么样子？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:38:53,440', '00:39:03,801')"><img src="play.png" alt="Play"></button> I think that there are going to be you know the web is already pretty long tail and there's a massive power law so I feel like the power law is going to get even more skewed.</p>
+<p>我认为，网络已经呈现长尾分布，幂律效应非常明显，而且我认为这种效应会进一步加剧。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:03,801', '00:39:05,279')"><img src="play.png" alt="Play"></button> That is very obvious.</p>
+<p>这非常明显。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:05,280', '00:39:17,382')"><img src="play.png" alt="Play"></button> There are going to be certain brands that are well known and they're going to preserve direct organic visits but those who are trying to game the SEO system and trying to get traffic I think they're definitely going to have a harder time.</p>
+<p>某些知名品牌将保持直接的自然访问，而那些试图操纵 SEO 系统获取流量的网站将面临更大的困难。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-106"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957642" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:39:17</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:17,382', '00:39:17,679')"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:19,039', '00:39:20,658')"><img src="play.png" alt="Play"></button> I have been good afternoon.</p>
+<p>下午好。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:20,658', '00:39:29,199')"><img src="play.png" alt="Play"></button> Firstly where do you place the line between summarization and plagiarism in report generation and how do you avoid IP violations in your product?</p>
+<p>首先，在报告生成中，你如何界定摘要和抄袭的界限？如何避免产品中的知识产权侵权？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:30,000', '00:39:39,985')"><img src="play.png" alt="Play"></button> And secondly how do you deal with political bias and political sorry political bias in personal interest in news articles and other human written sources?</p>
+<p>其次，你如何处理新闻文章和其他人工撰写内容中的政治偏见和个人利益问题？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-107"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957620" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:39:39</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:39,985', '00:39:47,359')"><img src="play.png" alt="Play"></button> Yeah I think there are cases where you actually have objective truth right like what was the score and then be a game?</p>
+<p>是的，我认为有些情况下存在客观事实，比如比赛的比分是多少？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:39:47,359', '00:40:24,873')"><img src="play.png" alt="Play"></button> What is the live weather right now in San Francisco where you don't want to you don't want to be wrong ever on those queries and people know what is true but you can even there you're trusting right like a trusting some data provider who's tracking the live game the TV that showing you the number or Apple or Google's like acu weather all these things so at some point it all relies on trust and trust is built over time based on being being accurate reliably and so trying to surface the right data from the right people who earn the right to like like be surface in AI is how we think about it for accuracy.</p>
+<p>旧金山现在的实时天气是什么？在这些查询中，你永远不想出错，人们知道什么是真实的。但即便如此，你也在信任某些数据提供商，比如追踪比赛的电视台、苹果或谷歌的天气服务等。因此，这一切最终都依赖于信任，而信任是通过长期可靠准确性建立的。因此，我们通过从有权被 AI 引用的正确来源提取数据来确保准确性。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:24,873', '00:40:43,463')"><img src="play.png" alt="Play"></button> Now there are things that don't have one clear accurate answer I think they're the best thing we can do is offer all the perspectives and not really take a clear opinion on like what is right and wrong when there's no clear answer to that question.</p>
+<p>对于没有明确答案的问题，我们能做的最好的事情是提供所有观点，而不是在问题没有明确答案时给出对错的判断。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-108"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957556" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:40:43</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:43,463', '00:40:49,315')"><img src="play.png" alt="Play"></button> Do you measure how accurate you are at that job by user feedback in some way?</p>
+<p>你们是否通过用户反馈来衡量这方面的准确性？</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:49,315', '00:40:58,988')"><img src="play.png" alt="Play"></button> We don't actually measure today we should and e-valset should be built for that like like questions where there is no one objective answer.</p>
+<p>目前我们没有测量，但我们应该这样做，并为此构建评估集，特别是针对没有唯一客观答案的问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:40:58,988', '00:41:38,159')"><img src="play.png" alt="Play"></button> The problem with building an automated e-val for that type of thing is what is the right answer it's subjective right like like if if there are questions about the origins of COVID and there's so many different opinions of that relying a lot on Wikipedia as a source and you know you can say maybe for a human reader you're like okay you're saying all the things Wikipedia said it's a good answer but maybe what you want is to say stuff that is not there in Wikipedia and that relies on like having a much better human evaluators like pool much smarter people who are supposed to read these things and they're not like available for like you know scale AI style evaluations right?</p>
+<p>为这类问题构建自动化评估的难点在于，正确答案是主观的。例如，关于 COVID 起源的问题有很多不同观点，很大程度上依赖维基百科作为来源。对人类读者来说，引用维基百科的内容可能是一个好答案，但也许你希望提供维基百科中没有的信息，这需要更优秀的人类评估者——更聪明的人来阅读这些内容，而这无法通过规模化 AI 评估实现。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-109"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957501" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:41:38</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:38,159', '00:41:38,799')"><img src="play.png" alt="Play"></button> Right.</p>
+<p>对。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:38,799', '00:41:43,920')"><img src="play.png" alt="Play"></button> Okay I think we have time for one final question you get it.</p>
+<p>好的，我想我们还有时间问最后一个问题。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:43,920', '00:41:44,458')"><img src="play.png" alt="Play"></button> Awesome.</p>
+<p>太好了。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:44,458', '00:41:47,422')"><img src="play.png" alt="Play"></button> Hi my name is Angel thank you so much for talking to us.</p>
+<p>你好，我叫 Angel，非常感谢你和我们交流。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:41:47,422', '00:42:04,568')"><img src="play.png" alt="Play"></button> I have a question about you go go to market strategy you had a great campaign for students is how I and assume many college students learn about you guys but then also you had a collaboration with Koushi which is a little bit different audience so I'm just trying to understand how do you decide which audience you're trying to get?</p>
+<p>我有一个关于市场进入策略的问题。你们针对学生的推广活动很棒，我和许多大学生都是这样了解到你们的。但你们也与 Koushi 合作，面向的受众略有不同。我想了解你们如何决定目标受众？</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-110"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957475" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:42:04</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:04,568', '00:42:13,836')"><img src="play.png" alt="Play"></button> I think like one one perspective here is trying to get into distributions of users that you don't typically have access to on your traditional marketing channels.</p>
+<p>我认为一个角度是尝试触达传统营销渠道无法覆盖的用户群体。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:13,836', '00:42:17,693')"><img src="play.png" alt="Play"></button> You know there are a lot of people who don't use Twitter or LinkedIn.</p>
+<p>你知道有很多人不使用 Twitter 或 LinkedIn。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:19,636', '00:42:22,954')"><img src="play.png" alt="Play"></button> And they all exist and we just are living in a bubble here.</p>
+<p>他们确实存在，而我们只是活在自己的信息茧房中。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:23,169', '00:42:28,605')"><img src="play.png" alt="Play"></button> There are some other businesses that have good access to them like traditional businesses.</p>
+<p>有些其他企业（如传统企业）能更好地触达他们。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-111"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957450" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:42:29</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:29,990', '00:42:36,592')"><img src="play.png" alt="Play"></button> You could imagine the kind of people who use Costco regularly may not even be using AI on a regular basis.</p>
+<p>可以想象，经常去 Costco 的人可能甚至不常使用 AI。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:36,981', '00:42:43,021')"><img src="play.png" alt="Play"></button> If that's the kind of people you're going for then it makes sense to change your strategy to reach them.</p>
+<p>如果你的目标群体是这类人，那么调整策略以触达他们是有意义的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:43,021', '00:42:46,839')"><img src="play.png" alt="Play"></button> But also remember that it's good to grow with adjacencies.</p>
+<p>但也要记住，通过相邻增长是好的。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:46,839', '00:42:53,063')"><img src="play.png" alt="Play"></button> Like you do want to have some overlapping sets of people who would be the word of mod carriers.</p>
+<p>比如你需要一些重叠的用户群体作为口碑传播者。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+<p><a name="block-112"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1JhuLzSE11/?t=-2208957426" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:42:53</span></a></h3>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:53,063', '00:42:56,959')"><img src="play.png" alt="Play"></button> As they help you expand to more non-overlapping circles.</p>
+<p>因为他们能帮你扩展到更多非重叠的圈子。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:42:57,437', '00:43:01,601')"><img src="play.png" alt="Play"></button> So I think that that's how I think about it like that should be some overlap.</p>
+<p>所以我认为应该保持一定的重叠。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:01,601', '00:43:04,703')"><img src="play.png" alt="Play"></button> But your distribution should keep evolving over time.</p>
+<p>但你的分发策略应随时间不断演变。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:04,703', '00:43:05,308')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:05,308', '00:43:07,461')"><img src="play.png" alt="Play"></button> All right Arvan thanks for joining us.</p>
+<p>好的 Arvan，感谢参与。</p>
+<p><button class="play-button" onclick="playAtTimestamp('00:43:07,461', '00:43:08,000')"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+<p><a href="#table-of-contents">Back to Top</a></p>
+<hr />
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

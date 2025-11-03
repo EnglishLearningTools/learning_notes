@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Massive Earthquake Triggers Pacific-Wide Tsunami Warnings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A magnitude 8.8 earthquake struck off Russia's Kamchatka Peninsula, one of the strongest in modern history, triggering tsunami warnings across the Pacific. Evacuations are underway in Japan, Hawaii, and the US West Coast. Waves up to 5 meters hit Russian coastal towns, while smaller waves were recorded in Japan. Hawaii issued its highest alert, with erratic ocean behavior reported. The Fukushima nuclear plant evacuated workers as a precaution. Over 30 aftershocks have followed, prolonging risks. Advisories extend to New Zealand, Mexico, and Southeast Asia, with authorities urging coastal vigilance for hours or even days.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Massive Earthquake Triggers Pacific-Wide Tsunami Warnings</h1>
+<p>【BBC News 20250731 8.8级强震引发太平洋海啸警报｜日本、夏威夷紧急疏散｜俄罗斯远东3米巨浪】</p>
+<p>Summary:
+A magnitude 8.8 earthquake struck off Russia's Kamchatka Peninsula, one of the strongest in modern history, triggering tsunami warnings across the Pacific. Evacuations are underway in Japan, Hawaii, and the US West Coast. Waves up to 5 meters hit Russian coastal towns, while smaller waves were recorded in Japan. Hawaii issued its highest alert, with erratic ocean behavior reported. The Fukushima nuclear plant evacuated workers as a precaution. Over 30 aftershocks have followed, prolonging risks. Advisories extend to New Zealand, Mexico, and Southeast Asia, with authorities urging coastal vigilance for hours or even days.</p>
+<p>摘要：
+俄罗斯堪察加半岛附近发生8.8级强震，为现代史上最强地震之一，引发环太平洋海啸警报。日本、夏威夷和美国西海岸紧急疏散。俄罗斯沿海城镇遭遇5米巨浪，日本观测到较小浪高。夏威夷发布最高级别警报，海面异常波动。福岛核电站预防性撤离人员。余震超30次，风险持续。新西兰、墨西哥和东南亚多国发布预警，呼吁沿海地区长时间保持警惕。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 24 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-560" data-start="00:00:00,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, I'm Karen Jinoni.</p>
+<p>你好，我是凯伦·吉诺尼。</p>
+<p><button class="play-button sentence" id="s-00-00-02-075" data-start="00:00:02,075" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We begin with news of a huge earthquake, one of the strongest recorded in modern history, which has triggered tsunami warnings across large parts of the Pacific.</p>
+<p>我们首先报道一场大地震的消息，这是现代有记录以来最强烈的地震之一，已引发太平洋大部分地区的海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-00-12-000" data-start="00:00:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Evacuations are underway in Japan, Hawaii, and some parts of the US West Coast as a magnitude 8.8 earthquake off Russia's far eastern Kamchchatka Peninsula has triggered tsunami warnings right across the Pacific Ocean.</p>
+<p>日本、夏威夷和美国西海岸部分地区正在进行疏散，因为俄罗斯远东堪察加半岛附近发生的8.8级地震引发了整个太平洋的海啸警报。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-28-913" data-start="00:00:28,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was tsunami alerts of varying levels uh issued in parts of China, the Philippines, Indonesia, Guam, Peru, and the Galapicus Islands off Ecuador.</p>
+<p>中国部分地区、菲律宾、印度尼西亚、关岛、秘鲁和厄瓜多尔的加拉帕戈斯群岛发布了不同级别的海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-00-39-840" data-start="00:00:39,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia says it was the largest quake recorded in the region in more than 70 years with tsunami waves as high as 3 to four meters reported in Kamchchatka.</p>
+<p>俄罗斯称这是该地区70多年来记录到的最大地震，堪察加半岛报告的海啸浪高达3至4米。</p>
+<p><button class="play-button sentence" id="s-00-00-50-238" data-start="00:00:50,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These pictures show tsunami waves crashing on to the coastal town of Seao Kurilsk in Russia's Kuril Islands.</p>
+<p>这些画面显示海啸巨浪冲击俄罗斯千岛群岛的塞奥库里尔斯克沿海小镇。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959941" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-58-768" data-start="00:00:58,768" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Waves of half a meter have been recorded in parts of Japan.</p>
+<p>日本部分地区已监测到半米高的海浪。</p>
+<p><button class="play-button sentence" id="s-00-01-02-635" data-start="00:01:02,635" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities there are warning subsequent waves may be bigger.</p>
+<p>当地政府警告后续海浪可能更大。</p>
+<p><button class="play-button sentence" id="s-00-01-07-118" data-start="00:01:07,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Evacuation warnings span hundreds of kilometers of that Pacific coast.</p>
+<p>疏散警报覆盖了太平洋沿岸数百公里范围。</p>
+<p><button class="play-button sentence" id="s-00-01-11-438" data-start="00:01:11,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Workers at the Fukushima nuclear power plant, the site of a major disaster after a tsunami in 2011, have been moved to higher ground.</p>
+<p>2011年海啸后发生重大事故的福岛核电站工作人员已转移至高地。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959920" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-19-947" data-start="00:01:19,947" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The highest level of tsunami warning, as well as an evacuation order, is in effect in Hawaii.</p>
+<p>夏威夷已发布最高级别海啸警报和疏散令。</p>
+<p><button class="play-button sentence" id="s-00-01-25-657" data-start="00:01:25,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Authorities there say the biggest waves are likely to start making impact in a couple of hours time.</p>
+<p>当地政府表示最大海浪可能在几小时后开始冲击。</p>
+<p><button class="play-button sentence" id="s-00-01-33-040" data-start="00:01:33,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're just hearing that a sixfoot wave has passed through the Midway atal island between Japan and Hawaii.</p>
+<p>我们刚刚获悉一个六英尺高的海浪已通过日本和夏威夷之间的中途岛环礁。</p>
+<p><button class="play-button sentence" id="s-00-01-39-621" data-start="00:01:39,621" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The governor of Hawaii says he's still expecting significant waves.</p>
+<p>夏威夷州长表示他仍预计会有大浪。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959896" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-43-941" data-start="00:01:43,941" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He will only give the all clear when he feels it's completely safe.</p>
+<p>只有在他认为完全安全时才会解除警报。</p>
+<p><button class="play-button sentence" id="s-00-01-47-921" data-start="00:01:47,921" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, let's speak to our Los Angeles correspondent, Peter Bose.</p>
+<p>现在让我们连线洛杉矶记者彼得·博斯。</p>
+<p><button class="play-button sentence" id="s-00-01-51-468" data-start="00:01:51,468" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Peter, you're keeping a close eye on the west coast of the United States and Hawaii.</p>
+<p>彼得，你正在密切关注美国西海岸和夏威夷的情况。</p>
+<p><button class="play-button sentence" id="s-00-01-56-814" data-start="00:01:56,814" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us the latest.</p>
+<p>请告诉我们最新进展。</p>
+<p><button class="play-button sentence" id="s-00-01-59-280" data-start="00:01:59,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, yes, and I've been closely watching images coming out of Hawaii in the last hour because the initial prediction was that at some point over the last 45 minutes or so that they would see signs of a tsunami coming into in the Pacific off the coast of the Hawaiian Islands.</p>
+<p>是的，过去一小时我一直在密切关注来自夏威夷的画面，因为最初预测在过去45分钟左右会看到海啸进入夏威夷群岛太平洋沿岸的迹象。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959862" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-17-634" data-start="00:02:17,634" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's exactly what they've been seeing.</p>
+<p>这正是他们观察到的现象。</p>
+<p><button class="play-button sentence" id="s-00-02-19-433" data-start="00:02:19,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, there's been nothing catastrophic, but there's certainly erratic behavior in the the currents over the Pacific.</p>
+<p>目前尚未出现灾难性情况，但太平洋洋流确实出现了异常波动。</p>
+<p><button class="play-button sentence" id="s-00-02-26-354" data-start="00:02:26,354" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> sometimes seeing the water receding suddenly from a beach only to see the waves coming back in which is a typical sort of preemptive behavior of the ocean ahead of a tsunami.</p>
+<p>有时会看到海水突然从海滩退去，随后海浪又涌回来，这是海啸前海洋的典型预警行为。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-37-397" data-start="00:02:37,397" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what the experts are saying is that this kind of erratic behavior could last for several hours and the worst if indeed the worst is to come may be several hours away.</p>
+<p>专家表示这种异常波动可能持续数小时，最坏情况如果真会发生可能还要几小时。</p>
+<p><button class="play-button sentence" id="s-00-02-49-306" data-start="00:02:49,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's going to be some time.</p>
+<p>所以还需要一些时间。</p>
+<p><button class="play-button sentence" id="s-00-02-50-530" data-start="00:02:50,530" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's going to be a very long night in Hawaii before the all clear can be given.</p>
+<p>夏威夷将度过漫长的一夜才能解除警报。</p>
+<p><button class="play-button sentence" id="s-00-02-55-333" data-start="00:02:55,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the same applies to here in California.</p>
+<p>加利福尼亚也是如此。</p>
+<p><button class="play-button sentence" id="s-00-02-57-802" data-start="00:02:57,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clearly the danger isn't as as acute in California or indeed other western states, Oregon, Washington, indeed western Canada as well where there are also warnings also Alaska where there's been a warning for several hours.</p>
+<p>显然加利福尼亚或其他西部州如俄勒冈、华盛顿的危险性没那么紧迫，加拿大西部和阿拉斯加也发布了数小时警报。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959806" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-13-419" data-start="00:03:13,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've seen the same kind of behavior in terms of people being told to get away from the beaches, to get away from the coastline, to get to higher ground where it is safe.</p>
+<p>我们看到同样的应对措施，人们被告知远离海滩和海岸线，前往安全的高地。</p>
+<p><button class="play-button sentence" id="s-00-03-23-582" data-start="00:03:23,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And largely people have been heeding those warnings.</p>
+<p>大多数人都在遵守这些警告。</p>
+<p><button class="play-button sentence" id="s-00-03-26-318" data-start="00:03:26,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I suppose Peter, Hawaii is is first in the path of any potential tsunami crossing the Pacific, the furthest west point of of the United States.</p>
+<p>彼得，我想夏威夷是任何横跨太平洋的海啸最先经过的地方，是美国最西端的点。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959780" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-39-199" data-start="00:03:39,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, exactly.</p>
+<p>正是如此。</p>
+<p><button class="play-button sentence" id="s-00-03-39-890" data-start="00:03:39,890" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's why we're watching closely to see what kind of behavior we see from this tsunami in Hawaii, in those Hawaiian islands.</p>
+<p>这就是我们密切关注夏威夷群岛海啸动态的原因。</p>
+<p><button class="play-button sentence" id="s-00-03-48-929" data-start="00:03:48,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that could well be a good sign in terms of what's to come or what's not to come for uh California in particular.</p>
+<p>这对预测加利福尼亚可能面临的情况是个重要参考。</p>
+<p><button class="play-button sentence" id="s-00-03-55-736" data-start="00:03:55,736" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the experts here are saying that whatever happens, it's unlikely that there'll be any kind of catastrophic impact or or damage on the California coastline.</p>
+<p>但这里专家表示无论发生什么，加利福尼亚海岸线都不太可能遭受灾难性影响或破坏。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959755" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-04-479" data-start="00:04:04,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Peter, thank you for the moment.</p>
+<p>彼得，暂时先感谢你。</p>
+<p><button class="play-button sentence" id="s-00-04-05-821" data-start="00:04:05,821" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Peter Bose in Los Angeles.</p>
+<p>洛杉矶的彼得·博斯报道。</p>
+<p><button class="play-button sentence" id="s-00-04-07-653" data-start="00:04:07,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And let's just uh tell you the latest uh that we've been seeing.</p>
+<p>现在向大家通报我们观察到的最新情况。</p>
+<p><button class="play-button sentence" id="s-00-04-11-571" data-start="00:04:11,571" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> the live page the BBC website has up and running right now has every development that we are monitoring because it is one of the strongest earthquakes in modern history and that has meant evacuations in so many places around the Pacific, Japan, Hawaii, the US West Coast.</p>
+<p>BBC网站实时页面正在运行，包含我们监测的所有进展，因为这是现代史上最强烈的地震之一，导致环太平洋地区包括日本、夏威夷和美国西海岸多地疏散。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959729" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-30-363" data-start="00:04:30,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was a magnitude 8.8 quake and it hit the far east of Russia, the Kamchchatka Peninsula causing uh waves there.</p>
+<p>这是8.8级地震，袭击了俄罗斯远东的堪察加半岛，引发了海浪。</p>
+<p><button class="play-button sentence" id="s-00-04-40-608" data-start="00:04:40,608" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are hearing and seeing reports of and widespread flooding.</p>
+<p>我们听到并看到关于大面积洪水的报道。</p>
+<p><button class="play-button sentence" id="s-00-04-44-560" data-start="00:04:44,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also been seeing videos online uh of uh the ground shaking, people actually being uh falling over because of the force of the earthquake and uh the extent of of the damage and what is going on there is still emerging.</p>
+<p>我们还看到网络视频显示地面震动，人们因地震威力而跌倒，损害程度和现场情况仍在显现。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-00-032" data-start="00:05:00,032" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But let's hear from Kelsey Sheepard who is a local resident in Hawaii, evacuating from her home in Northshore.</p>
+<p>现在连线夏威夷北岸居民凯尔西·谢帕德，她正在从家中撤离。</p>
+<p><button class="play-button sentence" id="s-00-05-07-712" data-start="00:05:07,712" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she's been speaking to us from Hawaii and she received a tsunami warning while she was live on air.</p>
+<p>她从夏威夷向我们讲述时，正在直播中收到了海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-05-14-720" data-start="00:05:14,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The current situation right now is there's been a tsunami threat and the National Weather Service has issued a tsunami warning and sirens have been sounded across the state.</p>
+<p>目前情况是存在海啸威胁，国家气象局已发布海啸警报，全州响起警报声。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959672" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-27-073" data-start="00:05:27,073" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um and we've just been advised to um move out if you are in those coastal areas that will be impacted.</p>
+<p>我们刚被告知如果身处可能受影响的沿海地区就要撤离。</p>
+<p><button class="play-button sentence" id="s-00-05-35-997" data-start="00:05:35,997" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um and we got some emergency alerts.</p>
+<p>我们收到一些紧急警报。</p>
+<p><button class="play-button sentence" id="s-00-05-40-791" data-start="00:05:40,791" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've had three.</p>
+<p>我们收到了三次。</p>
+<p><button class="play-button sentence" id="s-00-05-43-114" data-start="00:05:43,114" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One at 2:44 Hawaiian Standard Time, 3:24, and then one about like 15 minutes ago.</p>
+<p>第一次是夏威夷标准时间2:44，第二次3:24，第三次大约15分钟前。</p>
+<p><button class="play-button sentence" id="s-00-05-50-202" data-start="00:05:50,202" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wouldn't say we were prepared for this, but um we did have a tsunami watch about a week ago.</p>
+<p>不能说我们对此有准备，但大约一周前确实有过海啸监测预警。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959642" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-57-168" data-start="00:05:57,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so um for my husband and I immediately we packed up our 7 um 5hour bags and um we are just hoping that all the families can stay safe and get to high ground and hopefully the tsunami will not be um harmful to Hawaii and everywhere around the world.</p>
+<p>所以我和丈夫立即收拾了应急包，只希望所有家庭都能安全到达高地，希望海啸不会对夏威夷和世界各地造成伤害。</p>
+<p><button class="play-button sentence" id="s-00-06-23-759" data-start="00:06:23,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-06-24-218" data-start="00:06:24,218" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and the government um has far less resources in Hawaii than maybe in this part of the world which sees a lot more earthquakes.</p>
+<p>夏威夷政府的资源可能远少于这个地震多发地区的其他地方。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959607" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-32-526" data-start="00:06:32,526" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh what's your sense?</p>
+<p>你的感受如何？</p>
+<p><button class="play-button sentence" id="s-00-06-33-915" data-start="00:06:33,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is that something that is talked about a lot uh you know with the public?</p>
+<p>公众经常讨论这个问题吗？</p>
+<p><button class="play-button sentence" id="s-00-06-40-399" data-start="00:06:40,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um I would say that a lot a lot of the people that Sorry, we have a siren going off now.</p>
+<p>我想说很多...抱歉，现在警报又响了。</p>
+<p><button class="play-button sentence" id="s-00-06-50-800" data-start="00:06:50,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-06-51-257" data-start="00:06:51,257" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, just to clarify for our viewers, that's you getting is that another tsunami warning you just got?</p>
+<p>向观众说明一下，这是你刚收到的另一个海啸警报吗？</p>
+<p><button class="play-button sentence" id="s-00-06-58-240" data-start="00:06:58,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-06-59-052" data-start="00:06:59,052" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, the message says siren sounding for tsunami threat 2 hours out from first wave arrival estimated at 7:10 p.m.</p>
+<p>消息显示警报响起，海啸威胁距离首波抵达还有2小时，预计晚上7:10到达。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959571" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-08-457" data-start="00:07:08,457" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Evacuate coastal areas.</p>
+<p>请撤离沿海地区。</p>
+<p><button class="play-button sentence" id="s-00-07-10-918" data-start="00:07:10,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was sent by the Hawaii Emergency Management Agency.</p>
+<p>这是夏威夷紧急事务管理局发送的。</p>
+<p><button class="play-button sentence" id="s-00-07-15-469" data-start="00:07:15,469" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Kelsey Shepard speaking to my colleague Suranjanna Terari.</p>
+<p>这是凯尔西·谢帕德接受我同事苏兰詹娜·特拉里的采访。</p>
+<p><button class="play-button sentence" id="s-00-07-20-589" data-start="00:07:20,589" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh let's go to Japan now and speak to our correspondent there, Shima Khalil.</p>
+<p>现在连线我们在日本的记者希玛·哈利勒。</p>
+<p><button class="play-button sentence" id="s-00-07-25-598" data-start="00:07:25,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shima, just tell us the latest picture.</p>
+<p>希玛，请告诉我们最新情况。</p>
+<p><button class="play-button sentence" id="s-00-07-28-478" data-start="00:07:28,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, dozens of waves have arrived in Japan.</p>
+<p>已有数十波海浪抵达日本。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959548" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-31-303" data-start="00:07:31,303" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The highest we're getting from the meteorological agency now is over a meter high, a meter, a meter and 30 cm um actually.</p>
+<p>气象厅目前监测到的最高浪高超过1米，实际上是1米30厘米。</p>
+<p><button class="play-button sentence" id="s-00-07-39-449" data-start="00:07:39,449" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the message from the authorities is that the risk is far from over.</p>
+<p>当局表示风险远未结束。</p>
+<p><button class="play-button sentence" id="s-00-07-43-322" data-start="00:07:43,322" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> that even though we've been getting these waves, tsunami waves that have been hitting um the Pacific coast of Japan, that they could come, they could come as high as 3 m.</p>
+<p>尽管已有这些海浪冲击日本太平洋沿岸，但海浪可能高达3米。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959526" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-53-949" data-start="00:07:53,949" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The meteorological agency held a press conference in the last couple of hours and their message is tsunamis are still being observed.</p>
+<p>气象厅在过去几小时召开了新闻发布会，表示仍在观测海啸。</p>
+<p><button class="play-button sentence" id="s-00-08-00-702" data-start="00:08:00,702" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They can strike suddenly.</p>
+<p>海啸可能突然袭来。</p>
+<p><button class="play-button sentence" id="s-00-08-02-272" data-start="00:08:02,272" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh please do not leave safe places until the warning is lifted.</p>
+<p>在警报解除前请不要离开安全地点。</p>
+<p><button class="play-button sentence" id="s-00-08-06-056" data-start="00:08:06,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And they also will go on to say is that when tsunami coincides with a high tide, there is a possibility that the water level will rise further than it currently is.</p>
+<p>他们还表示当海啸与涨潮同时发生时，水位可能比现在更高。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959504" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-15-348" data-start="00:08:15,348" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I the blanket message for people across that Pacific coast from Hokkaido in the north all the way down to Wakayama in the southwest is that stay on high alert, evacuate uh beach areas, and stay on high ground.</p>
+<p>对从北部北海道到西南部和歌山的太平洋沿岸居民的总体建议是保持高度警惕，撤离海滩区域，留在高地。</p>
+<p><button class="play-button sentence" id="s-00-08-28-879" data-start="00:08:28,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also been looking at footage um on different channels here in Japan of people taking refuge on rooftops for example on buildings in Hokkaido.</p>
+<p>我们还看到日本不同频道播放的画面，比如北海道人们在建筑物屋顶避难。</p>
+<p><button class="play-button sentence" id="s-00-08-37-241" data-start="00:08:37,241" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some were in an observatory uh building overlooking the beach area on a high ground um in Chiba south of Tokyo.</p>
+<p>有些人在千叶县东京南部高地的观测楼里俯瞰海滩区域。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959476" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-43-915" data-start="00:08:43,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So people have been heeding uh th those warnings.</p>
+<p>人们一直在留意这些警告。</p>
+<p><button class="play-button sentence" id="s-00-08-46-719" data-start="00:08:46,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But of course because of the because of how big that Pacific area is, it will have affected nearly 2 million people who have been told to evacuate.</p>
+<p>但由于太平洋区域广阔，已影响近200万被要求疏散的人。</p>
+<p><button class="play-button sentence" id="s-00-08-55-519" data-start="00:08:55,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and China.</p>
+<p>还有中国。</p>
+<p><button class="play-button sentence" id="s-00-08-56-236" data-start="00:08:56,236" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This must be triggering uh memories of 2011, the enormous earthquake and tsunami that hit particularly Fukushima nuclear plant.</p>
+<p>这必定唤起2011年特大地震和海啸的记忆，尤其是福岛核电站事故。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959455" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-04-240" data-start="00:09:04,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are they doing there?</p>
+<p>当地现在采取什么措施？</p>
+<p><button class="play-button sentence" id="s-00-09-06-720" data-start="00:09:06,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-09-06-968" data-start="00:09:06,968" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And and look, Japan is no stranger to this.</p>
+<p>日本对此并不陌生。</p>
+<p><button class="play-button sentence" id="s-00-09-09-401" data-start="00:09:09,401" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We we get earthquakes um earthquake alerts almost on a daily basis depending on the strength of of any given earthquake, tsunami alerts as well.</p>
+<p>我们几乎每天都会收到地震警报，根据地震强度还有海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-09-17-852" data-start="00:09:17,852" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is this is quite a a a big one because of how big the earthquake is on Russia's Pacific coast and how shallow it is and and and the effects the the effects of possible aftershocks.</p>
+<p>这次相当严重，因为俄罗斯太平洋沿岸地震强度大、震源浅，以及可能余震的影响。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959430" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-29-120" data-start="00:09:29,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I think when you speak about Fuku Fukushima, of course, this is a place of concern because of the Fukushima Dichi power plant.</p>
+<p>但说到福岛，这当然是关注重点，因为福岛第一核电站。</p>
+<p><button class="play-button sentence" id="s-00-09-36-010" data-start="00:09:36,010" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We did hear from TCO earlier which is the company that uh that operates the plant and they said that all workers in the Fukushima power plant have been evacuated but they also said that there have been no abnormalities um reported from the power plant but yes of course it's an area of concern because it's been hit by this nuclear meltdown in 2011 and there is still nuclear debris that's been constantly cooled uh by water and then this water is is stored in in in tanks and so it's a it's a really critical ical area and so they of course they want to be monitoring this as these waves keep coming to the east coast.</p>
+<p>我们早前收到运营公司东京电力的消息，称福岛核电站所有员工已撤离，但也表示核电站未报告异常。当然这是重点关注区域，因为2011年核熔毁事故后，仍有需要持续用水冷却的核残渣，这些水储存在罐中，所以这是非常关键的区域，随着海浪不断冲击东海岸，他们自然要密切监控。</p>
+<p><button class="play-button sentence" id="s-00-10-12-240" data-start="00:10:12,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shya, thanks very much.</p>
+<p>希玛，非常感谢。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959386" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-13-692" data-start="00:10:13,692" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shima Khalil, uh let's just bring you one update coming in uh from the Russian news agency about the size of the waves that are hitting that very far eastern part of Russia.</p>
+<p>希玛·哈利勒，现在插播俄罗斯通讯社关于袭击俄远东地区海浪大小的更新。</p>
+<p><button class="play-button sentence" id="s-00-10-24-962" data-start="00:10:24,962" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> uh tsunami waves near the Russian Pacific town of Seira Kurilisk have exceeded three meters in height and the most powerful wave has reached up to 5 m.</p>
+<p>俄罗斯太平洋城镇塞拉库里利斯克附近的海啸浪高已超过3米，最强浪高达5米。</p>
+<p><button class="play-button sentence" id="s-00-10-35-759" data-start="00:10:35,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's uh go over to uh the another part of the Pacific uh Australia and New Zealand.</p>
+<p>现在转向太平洋另一区域的澳大利亚和新西兰。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959358" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-41-020" data-start="00:10:41,020" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh let's talk to Katie Watson, our correspondent in Sydney.</p>
+<p>连线我们在悉尼的记者凯蒂·沃森。</p>
+<p><button class="play-button sentence" id="s-00-10-44-288" data-start="00:10:44,288" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Katie, uh particular concern about New Zealand.</p>
+<p>凯蒂，新西兰特别令人关注。</p>
+<p><button class="play-button sentence" id="s-00-10-49-440" data-start="00:10:49,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that's right.</p>
+<p>是的。</p>
+<p><button class="play-button sentence" id="s-00-10-50-135" data-start="00:10:50,135" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here in Australia, they haven't issued any warnings or advisories, but um an hour or so ago.</p>
+<p>澳大利亚尚未发布任何警告或建议，但大约一小时前。</p>
+<p><button class="play-button sentence" id="s-00-10-55-695" data-start="00:10:55,695" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um they did issue an an advisory in in New Zealand sending a message to everybody um on on their mobiles um saying that they that people needed to be very careful about coastal areas warning them that both the North Island and the South Island um were areas uh that may be affected.</p>
+<p>新西兰确实发布了建议，通过手机短信通知所有人需要非常小心沿海地区，警告北岛和南岛都可能受影响。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959325" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-14-651" data-start="00:11:14,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the advisory said that it would be that surges could be expected around midnight local time.</p>
+<p>建议称预计当地时间午夜左右会出现涌浪。</p>
+<p><button class="play-button sentence" id="s-00-11-22-452" data-start="00:11:22,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um and that's uh so that's in about uh what maybe 6 hours.</p>
+<p>大约6小时后。</p>
+<p><button class="play-button sentence" id="s-00-11-26-936" data-start="00:11:26,936" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um and that again this is an advisory uh warning people who are on boats to leave the boats, people not to go swimming, to go surfing.</p>
+<p>这仍是建议，警告船上人员离船，人们不要游泳或冲浪。</p>
+<p><button class="play-button sentence" id="s-00-11-35-832" data-start="00:11:35,832" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um and that this advisory would be in place until that the advisory is canled.</p>
+<p>建议将一直有效直至取消。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959299" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-40-813" data-start="00:11:40,813" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> and and how used to uh are people there in in New Zealand to being on alert for this sort of natural disaster potentially.</p>
+<p>新西兰人对这种潜在自然灾害警报的熟悉程度如何？</p>
+<p><button class="play-button sentence" id="s-00-11-52-720" data-start="00:11:52,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, New Zealand's no stranger to earthquakes.</p>
+<p>新西兰对地震并不陌生。</p>
+<p><button class="play-button sentence" id="s-00-11-55-929" data-start="00:11:55,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um there is a a system in place um clearly very organized with more than 7 hours notice.</p>
+<p>已建立非常完善的系统，提前7个多小时发出通知。</p>
+<p><button class="play-button sentence" id="s-00-12-03-289" data-start="00:12:03,289" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This uh advisory was sent to everybody um on text message.</p>
+<p>这条建议通过短信发送给所有人。</p>
+<p><button class="play-button sentence" id="s-00-12-07-894" data-start="00:12:07,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Uh in fact as this message was sent to parliament was debating a bill they briefly paused to read the advisory to make sure everybody was up to date with what it said and then carried on um debating.</p>
+<p>事实上当消息发送时议会正在辩论法案，他们短暂暂停阅读建议确保所有人了解内容，然后继续辩论。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959260" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-19-828" data-start="00:12:19,828" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, you know, people here are very well are very used to um warnings and advisories and um and there's clearly a system um in place, but you know, this is as as I said, this is an advisory.</p>
+<p>所以这里人们非常习惯警告和建议，已有完善的系统，但如我所说这只是建议。</p>
+<p><button class="play-button sentence" id="s-00-12-32-603" data-start="00:12:32,603" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is, you know, they talk about the fact that this could happen.</p>
+<p>他们讨论可能发生的情况。</p>
+<p><button class="play-button sentence" id="s-00-12-36-097" data-start="00:12:36,097" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is a threat um and it should be regarded as real until the advisory is canled.</p>
+<p>存在威胁，在建议取消前都应认真对待。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959238" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-41-120" data-start="00:12:41,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Katie, thanks very much.</p>
+<p>好的，凯蒂，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-12-42-922" data-start="00:12:42,922" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Katie Watson reporting from Australia on the alert that has been in New Zealand.</p>
+<p>凯蒂·沃森从澳大利亚报道新西兰的警报情况。</p>
+<p><button class="play-button sentence" id="s-00-12-48-879" data-start="00:12:48,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's uh go through what's been going on over the last few hours.</p>
+<p>让我们回顾过去几小时的情况。</p>
+<p><button class="play-button sentence" id="s-00-12-51-924" data-start="00:12:51,924" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our correspondent, news correspondent Aruna Younger in the studio with me.</p>
+<p>我们的新闻记者阿鲁娜·杨格在演播室与我一起。</p>
+<p><button class="play-button sentence" id="s-00-12-55-606" data-start="00:12:55,606" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aruna, just tell us when news first emerged of this and and what has been happening since.</p>
+<p>阿鲁娜，请告诉我们消息何时首次出现</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959217" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-02-225" data-start="00:13:02,225" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah. So Karen, as you know, there was a huge magnitude earthquake which happened off the northeast coast of Russia, 8.8, which is a hu it's huge.</p>
+<p>是的，凯伦，如你所知，俄罗斯东北海岸附近发生了一场8.8级的巨大地震，这非常非常强烈。</p>
+<p><button class="play-button sentence" id="s-00-13-11-723" data-start="00:13:11,723" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's one of it's the sixth largest in history.</p>
+<p>这是有记录以来第六大的地震。</p>
+<p><button class="play-button sentence" id="s-00-13-15-413" data-start="00:13:15,413" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it gives you an idea of the of the magnitude of that.</p>
+<p>这让你对地震的规模有了概念。</p>
+<p><button class="play-button sentence" id="s-00-13-18-229" data-start="00:13:18,229" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This happened 130 kilometers off Petetro Pavlo Kamchchatky in northeastern Russia.</p>
+<p>这次地震发生在俄罗斯东北部彼得罗巴甫洛夫斯克-堪察茨基130公里外。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959195" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-24-234" data-start="00:13:24,234" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a peninsula that runs down the east coast of Russia and at that point it is on the Pacific rim of fire.</p>
+<p>这是一个沿着俄罗斯东海岸延伸的半岛，位于环太平洋火山带上。</p>
+<p><button class="play-button sentence" id="s-00-13-30-930" data-start="00:13:30,930" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a sort of ring right around the Pacific Ocean where earthquake activity often takes place.</p>
+<p>这是一个环绕太平洋的环形地带，地震活动频繁。</p>
+<p><button class="play-button sentence" id="s-00-13-36-399" data-start="00:13:36,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Part of Russia is is almost it's further east than Japan.</p>
+<p>俄罗斯的部分地区甚至比日本更靠东。</p>
+<p><button class="play-button sentence" id="s-00-13-39-324" data-start="00:13:39,324" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It really does stretch that far.</p>
+<p>它确实延伸得那么远。</p>
+<p><button class="play-button sentence" id="s-00-13-40-983" data-start="00:13:40,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's right.</p>
+<p>没错。</p>
+<p><button class="play-button sentence" id="s-00-13-41-737" data-start="00:13:41,737" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And right up it almost joins the top of North America.</p>
+<p>再往北，它几乎与北美洲的顶端相连。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959175" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-44-889" data-start="00:13:44,889" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're talking right up there.</p>
+<p>所以我们讨论的就是那个区域。</p>
+<p><button class="play-button sentence" id="s-00-13-47-146" data-start="00:13:47,146" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> um in that particular region um the Russian port town of Seo Kurilk saw some of the largest waves so three to five meter high waves that port town was inundated</p>
+<p>在那个特定区域，俄罗斯港口城镇塞奥库里尔斯克遭遇了最高的海浪，三到五米高的海浪淹没了该城镇。</p>
+<p><button class="play-button sentence" id="s-00-13-58-639" data-start="00:13:58,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> um the population of 2,000 people um were evacuated were kind of told to move to higher ground and videos that you can see um of that on social media s show water surging inland into the ground into into the area.</p>
+<p>约2000名居民被疏散，被告知转移到高地，社交媒体上的视频显示海水涌入内陆地区。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959147" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-12-673" data-start="00:14:12,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, that's right.</p>
+<p>是的，没错。</p>
+<p><button class="play-button sentence" id="s-00-14-13-839" data-start="00:14:13,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the electricity has been cut off in that area because the earthquake damaged um the power grid in that area.</p>
+<p>该地区电力中断，因为地震损坏了电网。</p>
+<p><button class="play-button sentence" id="s-00-14-20-567" data-start="00:14:20,567" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A state of emergency has been declared in the northern Kuriel Islands which is part of that area in which Seo Kurilsk is in.</p>
+<p>北库里尔群岛已宣布进入紧急状态，塞奥库里尔斯克就位于该地区。</p>
+<p><button class="play-button sentence" id="s-00-14-28-879" data-start="00:14:28,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also been hearing um as you say from other areas of the world which which you know which are surrounding this Pacific area which is affected.</p>
+<p>我们也听到来自世界其他受影响的环太平洋地区的消息。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959121" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-38-056" data-start="00:14:38,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, we've been hearing from um Honolulu, Hawaii.</p>
+<p>比如，我们听到来自夏威夷檀香山的消息。</p>
+<p><button class="play-button sentence" id="s-00-14-40-951" data-start="00:14:40,951" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Apparently, there the authorities say that a 1.8 meter wave um has hit the Midway atal, which is an atal between Japan and Hawaii.</p>
+<p>显然，当局表示1.8米高的海浪袭击了中途岛，这是日本和夏威夷之间的一个环礁。</p>
+<p><button class="play-button sentence" id="s-00-14-50-041" data-start="00:14:50,041" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's just come out in the last few minutes.</p>
+<p>这是刚刚几分钟前发布的消息。</p>
+<p><button class="play-button sentence" id="s-00-14-52-078" data-start="00:14:52,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been hearing about that.</p>
+<p>我们一直在关注此事。</p>
+<p><button class="play-button sentence" id="s-00-14-53-600" data-start="00:14:53,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also from Hawaii, the Coast Guard there says it's closed all harbors and all vessels have been told to remain offshore.</p>
+<p>同样来自夏威夷，海岸警卫队表示已关闭所有港口，并通知所有船只留在近海。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959098" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-01-129" data-start="00:15:01,129" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also, um flights have been diverted from Hawaii.</p>
+<p>此外，航班已从夏威夷改道。</p>
+<p><button class="play-button sentence" id="s-00-15-04-078" data-start="00:15:04,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, we've also heard um from Mexico.</p>
+<p>我们还听到来自墨西哥的消息。</p>
+<p><button class="play-button sentence" id="s-00-15-06-834" data-start="00:15:06,834" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government there has um told people to avoid the Pacific beaches because of strong currents.</p>
+<p>墨西哥政府已告知人们因强流避免前往太平洋海滩。</p>
+<p><button class="play-button sentence" id="s-00-15-12-103" data-start="00:15:12,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the Philippines and Indonesia, they've issued tsunami advisories.</p>
+<p>菲律宾和印尼发布了海啸预警。</p>
+<p><button class="play-button sentence" id="s-00-15-16-560" data-start="00:15:16,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Advisories are a little bit less than a tsunami warning.</p>
+<p>预警级别略低于海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-15-20-340" data-start="00:15:20,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, again, people have been told to avoid the shorelines.</p>
+<p>再次提醒人们远离海岸线。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959076" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-23-763" data-start="00:15:23,763" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's also been warnings of various levels in China, Guam, Peru, the Galapicus Islands, off Ecuador.</p>
+<p>中国、关岛、秘鲁、厄瓜多尔附近的加拉帕戈斯群岛也发布了不同级别的警告。</p>
+<p><button class="play-button sentence" id="s-00-15-31-582" data-start="00:15:31,582" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, we've also heard just in the last few minutes from the mayor of L the of Los Angeles and he's issued a tsunami watch, but that's now been upgraded to a tsunami advisory.</p>
+<p>就在几分钟前，我们听到洛杉矶市长发布了海啸观察，现已升级为海啸预警。</p>
+<p><button class="play-button sentence" id="s-00-15-42-498" data-start="00:15:42,498" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Um, again, people told to stay stay in higher ground, stay away from the coasts because although the the earthquake took place a few hours ago, it's the aftershocks.</p>
+<p>再次提醒人们留在高地，远离海岸，因为尽管地震发生在几小时前，但余震仍在持续。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959045" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-54-579" data-start="00:15:54,579" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in Russia, there's been at least 30 aftershocks after this earthquake.</p>
+<p>俄罗斯已发生至少30次余震。</p>
+<p><button class="play-button sentence" id="s-00-15-59-112" data-start="00:15:59,112" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So tsunami activity could take place, you know, we've been hearing really it could go on for for the for for a month or so afterwards.</p>
+<p>因此海啸活动可能持续，我们听说可能会持续一个月左右。</p>
+<p><button class="play-button sentence" id="s-00-16-06-573" data-start="00:16:06,573" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So um you know people are advised to take care that's extraordinary in co in coastal areas the risk doesn't go away completely for all that time and and Aruna just the number of countries that you have described east west north south this Pacific ring of fire absolutely huge.</p>
+<p>所以沿海地区的风险在这段时间内不会完全消失，阿鲁纳，你描述的环太平洋国家数量之多令人震惊。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Yd8BzWE3S/?t=-2208959016" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-23-839" data-start="00:16:23,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it it has a huge impact on on a massive area of the world.</p>
+<p>是的，它对世界上大片地区产生了巨大影响。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

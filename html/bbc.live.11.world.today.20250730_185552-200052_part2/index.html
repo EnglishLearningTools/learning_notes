@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Breaking News: Global Disruptions from Russian Earthquake and UK Air Traffic Chaos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A powerful 8.8-magnitude earthquake struck Russia’s Kamchatka Peninsula, triggering tsunami warnings across the Pacific, including Japan and Hawaii. While alerts were later downgraded, coastal flooding and evacuations occurred. Meanwhile, a technical fault in UK air traffic control caused widespread flight disruptions, with passengers urged to check before traveling. Separately, YouTube surpassed traditional broadcasters to become the UK’s second-most-watched platform, favored by younger audiences.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Breaking News: Global Disruptions from Russian Earthquake and UK Air Traffic Chaos</h1>
+<p>【BBC World Today 20250731 P2 俄罗斯8.8级强震引发跨太平洋海啸警报｜英国航空系统瘫痪｜YouTube逆袭成英国第二大媒体平台】</p>
+<p>Summary:
+A powerful 8.8-magnitude earthquake struck Russia’s Kamchatka Peninsula, triggering tsunami warnings across the Pacific, including Japan and Hawaii. While alerts were later downgraded, coastal flooding and evacuations occurred. Meanwhile, a technical fault in UK air traffic control caused widespread flight disruptions, with passengers urged to check before traveling. Separately, YouTube surpassed traditional broadcasters to become the UK’s second-most-watched platform, favored by younger audiences.</p>
+<p>摘要：
+俄罗斯堪察加半岛发生8.8级强震，引发太平洋沿岸海啸警报，日本、夏威夷等地紧急疏散，部分沿海地区遭洪水侵袭。英国航空管制系统技术故障导致航班大面积延误或取消。此外，YouTube超越传统媒体，成为英国第二大视频平台，尤其受年轻用户青睐。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 31 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959994" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-06-000" data-start="00:00:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the world today on BBC News, the latest headlines.</p>
+<p>这是BBC新闻带来的今日世界，最新头条新闻。</p>
+<p><button class="play-button sentence" id="s-00-00-09-359" data-start="00:00:09,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fights across the UK have been disrupted by a technical fault with air traffic control.</p>
+<p>英国各地的航班因空中交通管制技术故障而中断。</p>
+<p><button class="play-button sentence" id="s-00-00-14-279" data-start="00:00:14,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Some planes are now taking off, but passengers are warning being warned to check before they travel.</p>
+<p>部分航班现已起飞，但乘客被警告出行前需确认航班状态。</p>
+<p><button class="play-button sentence" id="s-00-00-20-000" data-start="00:00:20,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the strongest earthquakes in history strikes Russia's far east, sparking tsunami warnings as far away as California, which have been scaled back.</p>
+<p>史上最强地震之一袭击俄罗斯远东地区，引发远至加利福尼亚的海啸警报，目前警报已降级。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959970" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-30-000" data-start="00:00:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> YouTube is now the UK's second favourite viewing service, and it's winning over viewers of all ages.</p>
+<p>YouTube现为英国第二大视频平台，正赢得各年龄段观众青睐。</p>
+<p><button class="play-button sentence" id="s-00-00-43-158" data-start="00:00:43,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tsunami alerts have now been scaled back across much of the northern Pacific, following a powerful earthquake of Russia's far east.</p>
+<p>俄罗斯远东强震后，北太平洋大部分地区海啸警报已降级。</p>
+<p><button class="play-button sentence" id="s-00-00-51-000" data-start="00:00:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 8.8 magnitude quake struck off Kamchatka, enduring several people on the remote Russian peninsula with warnings of aftershocks and waves of up to 4 metres reported there.</p>
+<p>8.8级地震袭击堪察加半岛近海，当地居民面临余震和高达4米海浪的威胁。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959938" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-01-960" data-start="00:01:01,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also sparked tsunami warnings of varying levels across much of the world.</p>
+<p>此次地震还引发全球多地区不同级别的海啸警报。</p>
+<p><button class="play-button sentence" id="s-00-01-06-480" data-start="00:01:06,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The highest warning levels were in place in Hawaii and across much of Japan.</p>
+<p>夏威夷和日本大部分地区曾发布最高级别警报。</p>
+<p><button class="play-button sentence" id="s-00-01-10-560" data-start="00:01:10,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There have also been alerts and warnings of differing levels across the Pacific.</p>
+<p>太平洋沿岸各地还发布了不同级别的警报。</p>
+<p><button class="play-button sentence" id="s-00-01-14-640" data-start="00:01:14,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, let's take a look now at how the situation unfolded from the start.</p>
+<p>让我们从头回顾事件发展过程。</p>
+<p><button class="play-button sentence" id="s-00-01-18-879" data-start="00:01:18,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The earthquake struck off Russia's Kamchatka peninsula at around about 1.27pm local time.</p>
+<p>地震发生于当地时间约13:27，震中位于俄罗斯堪察加半岛近海。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959914" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-25-640" data-start="00:01:25,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People in the region immediately began sharing videos themselves as their building shook.</p>
+<p>当地民众在建筑摇晃时立即开始分享现场视频。</p>
+<p><button class="play-button sentence" id="s-00-01-30-399" data-start="00:01:30,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The region's governor then called for calm.</p>
+<p>该地区长官随后呼吁保持冷静。</p>
+<p><button class="play-button sentence" id="s-00-01-32-799" data-start="00:01:32,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the earthquake is one of the most powerful ever recorded and it did cause building damage, but there were no reports of anyone being killed.</p>
+<p>此次地震属有记录以来最强之一，虽造成建筑损毁，但尚无人员死亡报告。</p>
+<p><button class="play-button sentence" id="s-00-01-41-400" data-start="00:01:41,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Within hours, the tsunami began rolling into the nearby Sakhalin region.</p>
+<p>数小时内海啸波涌入库页岛附近区域。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959893" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-46-438" data-start="00:01:46,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Houses on the coastline were flooded.</p>
+<p>沿海房屋被洪水淹没。</p>
+<p><button class="play-button sentence" id="s-00-01-48-560" data-start="00:01:48,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Buildings across the coast were swamped by the incoming tide.</p>
+<p>沿岸建筑被涌入的海潮淹没。</p>
+<p><button class="play-button sentence" id="s-00-01-52-319" data-start="00:01:52,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The marked sea lions were seen diving into the sea as quake kits the island of Antisforov.</p>
+<p>地震波及安蒂斯福罗夫岛时，可见斑海豹跃入海中。</p>
+<p><button class="play-button sentence" id="s-00-01-59-319" data-start="00:01:59,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But with more on the impact on Russia, here's our Russia editor, Steve Rosenberg.</p>
+<p>更多关于俄罗斯影响的报道，请听本台俄罗斯主编史蒂夫·罗森伯格的报道。</p>
+<p><button class="play-button sentence" id="s-00-02-06-959" data-start="00:02:06,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The power of nature to spark panic.</p>
+<p>大自然引发恐慌的力量。</p>
+<p><button class="play-button sentence" id="s-00-02-11-000" data-start="00:02:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is how some Russians experience the earthquake.</p>
+<p>这是部分俄罗斯民众的地震经历。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-15-758" data-start="00:02:15,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shaken to the core.</p>
+<p>核心震动。</p>
+<p><button class="play-button sentence" id="s-00-02-17-840" data-start="00:02:17,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And wondering if their homes would remain in one piece.</p>
+<p>担忧家园是否完好。</p>
+<p><button class="play-button sentence" id="s-00-02-23-878" data-start="00:02:23,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the Russian Far East, they used to tremors, but not on this scale.</p>
+<p>俄罗斯远东居民习惯地震，但未曾经历如此强度。</p>
+<p><button class="play-button sentence" id="s-00-02-30-758" data-start="00:02:30,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A cancer hospital was shaken too right in the middle of an operation.</p>
+<p>一家癌症医院在手术期间遭遇震动。</p>
+<p><button class="play-button sentence" id="s-00-02-35-878" data-start="00:02:35,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The doctors kept calm and kept going.</p>
+<p>医生们保持镇定继续手术。</p>
+<p><button class="play-button sentence" id="s-00-02-39-560" data-start="00:02:39,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The governor of Kamchatka said it was the strongest earthquake in decades and called for calm.</p>
+<p>堪察加长官称此为数十年来最强地震，呼吁民众冷静。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959829" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-50-560" data-start="00:02:50,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Soonami waves, more than five meters high, struck the town of Severakurielsk, flooding the port and washing away more than a dozen boats.</p>
+<p>超5米高的海啸波袭击北库里尔斯克镇，淹没港口并冲走十余艘船只。</p>
+<p><button class="play-button sentence" id="s-00-03-01-120" data-start="00:03:01,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Kamchatka, buildings are being checked.</p>
+<p>堪察加地区正进行建筑安全检查。</p>
+<p><button class="play-button sentence" id="s-00-03-04-079" data-start="00:03:04,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The damage assessed and they're bracing themselves for aftershocks in the days to come.</p>
+<p>评估损失的同时，当地正为未来数日的余震做准备。</p>
+<p><button class="play-button sentence" id="s-00-03-11-079" data-start="00:03:11,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Steve Rosenberg, BBC News, Moscow.</p>
+<p>BBC新闻史蒂夫·罗森伯格，莫斯科报道。</p>
+<p><button class="play-button sentence" id="s-00-03-14-800" data-start="00:03:14,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For the quake triggered real-time tsunami warning systems.</p>
+<p>此次地震触发实时海啸预警系统。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959802" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-17-718" data-start="00:03:17,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Japan, nearly two million people were ordered to leave their homes.</p>
+<p>日本近两百万人被要求撤离住所。</p>
+<p><button class="play-button sentence" id="s-00-03-21-718" data-start="00:03:21,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a country where memories of the 2011 Fukushima earthquake and tsunami are still fresh, people were seen taking shelter on top of buildings away from any threat of waves.</p>
+<p>在这个对2011年福岛地震海啸记忆犹新的国家，民众在建筑高层躲避海浪威胁。</p>
+<p><button class="play-button sentence" id="s-00-03-32-879" data-start="00:03:32,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Japanese meteorological agency has now removed all tsunami warnings, though, downgrading them to advisories.</p>
+<p>日本气象厅现已解除所有海啸警报，降级为海啸提醒。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959780" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-39-800" data-start="00:03:39,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Tokyo correspondent, Shima Khriliel, has been following all the developments.</p>
+<p>本台东京记者岛仓利惠持续关注事态发展。</p>
+<p><button class="play-button sentence" id="s-00-03-45-199" data-start="00:03:45,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is how thousands on Japan's Pacific coast were woken up.</p>
+<p>这是日本太平洋沿岸数千人被惊醒的方式。</p>
+<p><button class="play-button sentence" id="s-00-03-49-318" data-start="00:03:49,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sirens alerting them of a tsunami, this one in the Hokkaido area.</p>
+<p>警报声提醒海啸来袭，此次发生在北海道地区。</p>
+<p><button class="play-button sentence" id="s-00-03-54-560" data-start="00:03:54,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For hours, dozens of waves hit the coastline, some over one meter high, before the Japanese meteorological agency downgraded the alert to advisory along the whole Pacific coast.</p>
+<p>数小时内数十波海浪冲击海岸，部分超1米高，之后气象厅将整个太平洋沿岸警报降级。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959754" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-05-718" data-start="00:04:05,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Earlier in the day in the searing heat, at the height of school holidays, families have abandoned the beaches.</p>
+<p>当天早些时候，在酷热天气和学校假期高峰，家庭游客撤离海滩。</p>
+<p><button class="play-button sentence" id="s-00-04-11-758" data-start="00:04:11,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Instead, many were stuck in traffic jams, as they tried to evacuate.</p>
+<p>许多人因疏散被困在交通堵塞中。</p>
+<p><button class="play-button sentence" id="s-00-04-15-598" data-start="00:04:15,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I woke up in the sea, so I heard the warning there.</p>
+<p>我在海边醒来，所以听到了警报。</p>
+<p><button class="play-button sentence" id="s-00-04-20-040" data-start="00:04:20,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My boss told me to go home to be with my kid.</p>
+<p>老板让我回家陪孩子。</p>
+<p><button class="play-button sentence" id="s-00-04-23-839" data-start="00:04:23,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Hokkaido, a group gathered on the rooftop of a building, as the warnings continued throughout the day.</p>
+<p>北海道一群人聚集在建筑屋顶，全天持续接收警报。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959730" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-29-680" data-start="00:04:29,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People here in Japan are used to receiving earthquake and tsunami alerts, but a warning that includes the Fukushima area, which this one does, always triggers a heightened sense of concern because of what happened in 2011, that catastrophic earthquake, tsunami, and nuclear meltdown.</p>
+<p>日本民众习惯接收地震海啸警报，但涉及福岛地区的警报总会引发高度担忧，源于2011年灾难性地震、海啸及核泄漏事件。</p>
+<p><button class="play-button sentence" id="s-00-04-45-600" data-start="00:04:45,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Fukushima nuclear power plant operator said that all workers have been evacuated, and no abnormalities were reported.</p>
+<p>福岛核电站运营商表示所有员工已撤离，未报告异常情况。</p>
+<p><button class="play-button sentence" id="s-00-04-52-800" data-start="00:04:52,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like Japan, Hawaii also sits on the Pacific Ring of Fire, which means it's prone to earthquakes and tsunamis.</p>
+<p>与日本类似，夏威夷也位于环太平洋火山带，易受地震海啸影响。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959699" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-00-279" data-start="00:05:00,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sirens sounded on the beaches where six-foot-high waves hit the shores, and ships were sent out to sea.</p>
+<p>六英尺高海浪冲击海岸时，海滩警报响起，船只被派往海上。</p>
+<p><button class="play-button sentence" id="s-00-05-06-160" data-start="00:05:06,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'd will likely one of the last ones that got back onto the cruise ship, and then we could see a lot of other people getting dropped off and just lining up, but they didn't make it.</p>
+<p>我们可能是最后返回游轮的人，看到许多人下车排队却未能登船。</p>
+<p><button class="play-button sentence" id="s-00-05-16-079" data-start="00:05:16,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were then told to get up to high ground, unsure, so it was quite scary.</p>
+<p>他们被告知前往高地，充满不确定性，场面十分可怕。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959677" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-22-360" data-start="00:05:22,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Many roads were gridlocked on this very tense day across the Pacific coasts.</p>
+<p>太平洋沿岸多地道路在这个紧张日子里陷入瘫痪。</p>
+<p><button class="play-button sentence" id="s-00-05-28-759" data-start="00:05:28,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hours after the huge earthquake in Russia's Far East, the warnings may be downgraded, but the people in the region remain vigilant.</p>
+<p>俄罗斯远东强震数小时后，警报虽降级，当地民众仍保持警惕。</p>
+<p><button class="play-button sentence" id="s-00-05-36-319" data-start="00:05:36,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Shai Mikhaili, BBC News, Tokyo.</p>
+<p>BBC新闻沙伊·米哈伊利，东京报道。</p>
+<p><button class="play-button sentence" id="s-00-05-39-040" data-start="00:05:39,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All the waves then traveled across the Pacific and hit California and Hawaii.</p>
+<p>所有海浪穿越太平洋冲击加利福尼亚和夏威夷。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959655" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-44-279" data-start="00:05:44,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Western U.S. states, as well as Canada's British Columbia, were all placed on alert.</p>
+<p>美国西部各州及加拿大不列颠哥伦比亚省均发布警报。</p>
+<p><button class="play-button sentence" id="s-00-05-49-120" data-start="00:05:49,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Hawaii, people were caught up in traffic as they tried to obey those directives to get to higher ground.</p>
+<p>夏威夷民众遵循指令前往高地时遭遇交通堵塞。</p>
+<p><button class="play-button sentence" id="s-00-05-55-399" data-start="00:05:55,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The warning there has also been downgraded to an alert, and some people have been told they can head home.</p>
+<p>当地警报已降级，部分民众被告知可返家。</p>
+<p><button class="play-button sentence" id="s-00-06-00-920" data-start="00:06:00,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the U.S. mainland, waves have up to a meter above tidal levels have also been recorded in northern California, but no major damage has been reported.</p>
+<p>美国本土北加州记录到超潮位1米的海浪，但未报告重大损失。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959629" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-10-120" data-start="00:06:10,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Warnings remain in place, though, in parts of the coast from Humboldt to the Oregon border.</p>
+<p>洪堡至俄勒冈边界部分海岸仍维持警报。</p>
+<p><button class="play-button sentence" id="s-00-06-15-319" data-start="00:06:15,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Rachel Burrows is on a cruise ship of the coast of Hawaii.</p>
+<p>雷切尔·伯罗斯正在夏威夷海岸的游轮上。</p>
+<p><button class="play-button sentence" id="s-00-06-19-040" data-start="00:06:19,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was on a tour when the emergency warnings came through.</p>
+<p>紧急警报响起时她正在观光。</p>
+<p><button class="play-button sentence" id="s-00-06-22-319" data-start="00:06:22,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was quite scary because all the sirens started going off around the area because it was quite serious.</p>
+<p>非常可怕，因为周围警报突然响起，情况相当严重。</p>
+<p><button class="play-button sentence" id="s-00-06-29-800" data-start="00:06:29,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got off the tour bus and everyone was running trying to get on the ship because they were closing the ship off because we needed to get out to city.</p>
+<p>我们跳下观光车，所有人都在冲向船只，因为即将封船需离港。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959599" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-40-480" data-start="00:06:40,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We were one of the last ones that got back onto the cruise ship and then we could see a lot of other people getting dropped off and just lining up, but they didn't make it.</p>
+<p>我们最后登船，看到许多人下车排队却未能成功。</p>
+<p><button class="play-button sentence" id="s-00-06-50-079" data-start="00:06:50,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were told to get up to higher ground on shore, so it was quite scary.</p>
+<p>他们被要求前往岸边高地，场面十分可怕。</p>
+<p><button class="play-button sentence" id="s-00-06-55-680" data-start="00:06:55,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Sianaroseto is a professor and natural hazards engineering at the University of Death in the Netherlands.</p>
+<p>西亚纳罗塞托是荷兰代尔夫特大学自然灾害工程教授。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959578" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-01-399" data-start="00:07:01,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She talked me through what exactly made this earthquake and the subsequent tsunami, not quite as devastating as was first feared.</p>
+<p>她向我解释为何此次地震及后续海啸未如最初担忧的具有毁灭性。</p>
+<p><button class="play-button sentence" id="s-00-07-09-519" data-start="00:07:09,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the tsunami is triggered when a large earthquake happens under the ocean or at the ocean floor.</p>
+<p>海啸由海底或洋底强震引发。</p>
+<p><button class="play-button sentence" id="s-00-07-16-800" data-start="00:07:16,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That earthquake in order to make a tsunami has to have a large vertical uplift because it has to displace the ocean above it and that lifting up of the water and dropping it basically creates the tsunami wave.</p>
+<p>引发海啸的地震需具备强烈垂直抬升，通过抬降上方水体形成海啸波。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959546" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-33-759" data-start="00:07:33,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In this case, although the fault rupture, so the piece of crust that basically ruptured creating the earthquake was really large.</p>
+<p>本次地震虽断层破裂规模巨大。</p>
+<p><button class="play-button sentence" id="s-00-07-43-158" data-start="00:07:43,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was over 300 kilometres long and about 100 or so kilometres wide and it did move a substantial amount.</p>
+<p>断裂带长超300公里，宽约100公里，位移量可观。</p>
+<p><button class="play-button sentence" id="s-00-07-52-680" data-start="00:07:52,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vertical displacement wasn't as large as it could have been and this is actually a very good thing and it created waves that are less high than could have happened.</p>
+<p>垂直位移未达可能最大值实属幸运，因此产生的海浪低于预期高度。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959515" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-04-279" data-start="00:08:04,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nevertheless, it's not to be underestimated that a tsunami and a nation of a metre can cause death.</p>
+<p>但不可低估一米高海啸仍可能致命。</p>
+<p><button class="play-button sentence" id="s-00-08-13-240" data-start="00:08:13,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And tell me a little bit more about the warning system because this obviously proved to be extremely effective, which is happening, isn't it given that in the future we may not have these events that don't end up being the magnitude we expected?</p>
+<p>请详述预警系统，显然此次效果显著。考虑到未来可能遭遇超预期灾害，这很关键对吗？</p>
+<p><button class="play-button sentence" id="s-00-08-25-278" data-start="00:08:25,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely. I think this is a real success story.</p>
+<p>当然，这是真正的成功案例。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959490" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-29-560" data-start="00:08:29,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fact that the evacuation alarms and orders went out fairly early on meant that people who were less mobile, more vulnerable, were able to be evacuated to higher land or to taller buildings and definitely away from the beaches and sort of any port areas.</p>
+<p>早期发布疏散警报和指令，使行动不便者和弱势群体能及时撤离至高地或高层建筑，远离海滩港口区域。</p>
+<p><button class="play-button sentence" id="s-00-08-51-720" data-start="00:08:51,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is extremely important because what we don't want to have is a repetition of, for example, what happened in the 2004 Indian Ocean tsunami where there wasn't any tsunami warning system in place and over 235,000 people died.</p>
+<p>这至关重要，因我们不愿重蹈2004年印度洋海啸覆辙——当时无预警系统致23.5万人丧生。</p>
+<p><button class="play-button sentence" id="s-00-09-08-600" data-start="00:09:08,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think we can really think of this as a real success.</p>
+<p>因此这堪称重大成功。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959446" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-13-759" data-start="00:09:13,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The UN says attacks by Jewish settlers on Palestinians living in the Israeli occupied West Bank are on the rise with violence up by 13% over the past year.</p>
+<p>联合国称，以色列占领的约旦河西岸，犹太定居者对巴勒斯坦人的袭击事件同比增加13%。</p>
+<p><button class="play-button sentence" id="s-00-09-23-360" data-start="00:09:23,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the latest attack on Monday night Palestinian activists, Al-Dar Hasselene, who helped make the Oscar-winning documentary No Other Land, was killed during an attack by settlers.</p>
+<p>周一晚间最新袭击中，参与制作奥斯卡获奖纪录片《别无他地》的巴勒斯坦活动家阿尔达尔·哈塞莱恩遭定居者杀害。</p>
+<p><button class="play-button sentence" id="s-00-09-33-639" data-start="00:09:33,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jewish settlements are illegal under international law but are built on land which Palestinians want for a future state.</p>
+<p>国际法认定犹太定居点非法，但这些建筑位于巴勒斯坦未来建国所需的土地上。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959419" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-40-798" data-start="00:09:40,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over this month two men were killed in the town of Sinjil.</p>
+<p>本月辛吉尔镇两名男子遇害。</p>
+<p><button class="play-button sentence" id="s-00-09-43-839" data-start="00:09:43,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of them was Palestinian-American, Sia Follah Musalat.</p>
+<p>其中一位是巴勒斯坦裔美国人西亚·弗拉·穆萨拉特。</p>
+<p><button class="play-button sentence" id="s-00-09-47-519" data-start="00:09:47,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> John Donerson reports now from there.</p>
+<p>约翰·多纳森现场报道。</p>
+<p><button class="play-button sentence" id="s-00-09-52-000" data-start="00:09:52,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This summer, the occupied West Bank is burning and its extremist Jewish settlers caught on CCTV who were igniting the fires.</p>
+<p>今夏被占领的约旦河西岸燃起战火，监控拍到极端犹太定居者纵火画面。</p>
+<p><button class="play-button sentence" id="s-00-10-05-240" data-start="00:10:05,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the Palestinian village of Berkha the next morning, you can see the damage.</p>
+<p>次日清晨在巴勒斯坦村庄贝尔卡可见破坏痕迹。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959388" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-11-120" data-start="00:10:11,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People are in their home, sitting in their houses.</p>
+<p>人们在家中静坐。</p>
+<p><button class="play-button sentence" id="s-00-10-14-038" data-start="00:10:14,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why you attack them?</p>
+<p>为何袭击他们？</p>
+<p><button class="play-button sentence" id="s-00-10-15-440" data-start="00:10:15,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cars sitting in the street.</p>
+<p>街道上的车辆。</p>
+<p><button class="play-button sentence" id="s-00-10-17-038" data-start="00:10:17,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why you burn it?</p>
+<p>为何焚烧？</p>
+<p><button class="play-button sentence" id="s-00-10-18-278" data-start="00:10:18,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why you come and do all these nonsense?</p>
+<p>为何来此制造事端？</p>
+<p><button class="play-button sentence" id="s-00-10-21-720" data-start="00:10:21,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is this is what you try to prove?</p>
+<p>这就是你们想证明的？</p>
+<p><button class="play-button sentence" id="s-00-10-24-200" data-start="00:10:24,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not going to bring peace for you.</p>
+<p>这不会为你们带来和平。</p>
+<p><button class="play-button sentence" id="s-00-10-27-360" data-start="00:10:27,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These kinds of attacks by settlers are happening now on an almost daily basis.</p>
+<p>此类定居者袭击现几乎每日发生。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959366" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-33-360" data-start="00:10:33,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The city, cars being destroyed, olive groves, set on fire, livestock, poisoned, shootings and Palestinians even beaten to death.</p>
+<p>城市中车辆被毁、橄榄园焚烧、牲畜投毒、枪击事件，甚至巴勒斯坦人遭殴打致死。</p>
+<p><button class="play-button sentence" id="s-00-10-45-960" data-start="00:10:45,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sia Follah Musalat was among the latest to be killed.</p>
+<p>西亚·弗拉·穆萨拉特是最新遇害者之一。</p>
+<p><button class="play-button sentence" id="s-00-10-51-720" data-start="00:10:51,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The 20-year-old Palestinian-American who ran an ice cream shop in Florida had been visiting his family home when he was set upon by his railing settlers.</p>
+<p>这位20岁巴勒斯坦裔美国人在佛罗里达经营冰淇淋店，回乡探亲时遭定居者围攻。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959336" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-04-000" data-start="00:11:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr Mota's Tawavshi discovered the body.</p>
+<p>莫塔·塔瓦什医生发现遗体。</p>
+<p><button class="play-button sentence" id="s-00-11-09-438" data-start="00:11:09,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said the young man had been beaten to death with stigs and clubs.</p>
+<p>他表示年轻人遭棍棒殴打致死。</p>
+<p><button class="play-button sentence" id="s-00-11-13-918" data-start="00:11:13,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was shot to see the bruises.</p>
+<p>他震惊于伤痕。</p>
+<p><button class="play-button sentence" id="s-00-11-15-519" data-start="00:11:15,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's criminal.</p>
+<p>这是犯罪。</p>
+<p><button class="play-button sentence" id="s-00-11-17-720" data-start="00:11:17,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's terrorism he went on.</p>
+<p>他继续道这是恐怖主义。</p>
+<p><button class="play-button sentence" id="s-00-11-21-720" data-start="00:11:21,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And for safe American father, Kamal, he wants answers.</p>
+<p>美国公民卡迈勒作为父亲要求答案。</p>
+<p><button class="play-button sentence" id="s-00-11-26-639" data-start="00:11:26,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're in pain.</p>
+<p>我们很痛苦。</p>
+<p><button class="play-button sentence" id="s-00-11-29-318" data-start="00:11:29,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're in grief.</p>
+<p>我们很悲伤。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959308" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-31-759" data-start="00:11:31,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we want justice.</p>
+<p>我们要求正义。</p>
+<p><button class="play-button sentence" id="s-00-11-34-600" data-start="00:11:34,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We hope that maybe his sacrifice will not go on vain.</p>
+<p>希望他的牺牲不会白费。</p>
+<p><button class="play-button sentence" id="s-00-11-42-038" data-start="00:11:42,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Something will change now.</p>
+<p>现在必须改变。</p>
+<p><button class="play-button sentence" id="s-00-11-45-798" data-start="00:11:45,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as the grieving for Saif Al-Amusalat continues, the settler violence documented by the United Nations has not stopped.</p>
+<p>当人们仍在哀悼赛义夫·阿穆萨拉特时，联合国记录的定居者暴力持续不断。</p>
+<p><button class="play-button sentence" id="s-00-11-53-918" data-start="00:11:53,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The latest Palestinian to be killed, a young journalist and activist earlier this week.</p>
+<p>本周最新遇害者是位年轻记者兼活动家。</p>
+<p><button class="play-button sentence" id="s-00-11-59-918" data-start="00:11:59,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> John Donnison, BBC News, in the occupied West Bank.</p>
+<p>BBC新闻约翰·多尼森，被占领的约旦河西岸报道。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959275" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-04-158" data-start="00:12:04,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Still to come, on the world today, YouTube becomes the second most watch viewing service in the UK surpassed only by the BBC.</p>
+<p>今日世界后续内容：YouTube成为英国第二大视频平台，仅次于BBC。</p>
+<p><button class="play-button sentence" id="s-00-12-12-839" data-start="00:12:12,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A NASA and Indian Space Research Organization launched a new satellite which its hope will help predict and prepare for natural disasters.</p>
+<p>NASA与印度空间研究组织发射新卫星，有望助力自然灾害预测防范。</p>
+<p><button class="play-button sentence" id="s-00-12-21-158" data-start="00:12:21,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the world and across the UK, this is the world today on BBC News.</p>
+<p>覆盖全球与英国，这里是BBC新闻的今日世界。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959198" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-21-158" data-start="00:13:21,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> YouTube has become the second most watch viewing service in the UK surpassed only by the BBC.</p>
+<p>YouTube已成为英国第二大视频平台，仅次于BBC。</p>
+<p><button class="play-button sentence" id="s-00-13-40-240" data-start="00:13:40,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The regulator of Combs latest annual report finds the platform is the top choice for children and young adults has become increasingly popular for older audiences too.</p>
+<p>监管机构最新年报显示，该平台是青少年首选，也越来越受年长观众欢迎。</p>
+<p><button class="play-button sentence" id="s-00-13-50-038" data-start="00:13:50,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The broadcast TV remains in long-term decline but still accounts for most at home viewing at 56%.</p>
+<p>广播电视虽长期衰退，仍占家庭观看量的56%。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959163" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-57-000" data-start="00:13:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Elsewhere, the Australian government has announced it will ban under 16 from having YouTube accounts.</p>
+<p>澳大利亚政府宣布将禁止16岁以下用户拥有YouTube账号。</p>
+<p><button class="play-button sentence" id="s-00-14-02-158" data-start="00:14:02,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The platform was initially supposed to be exempt from a wider social media ban for children which is due to come into force in December.</p>
+<p>该平台原被排除在12月生效的儿童社交媒体禁令之外。</p>
+<p><button class="play-button sentence" id="s-00-14-08-000" data-start="00:14:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That decision has been reversed.</p>
+<p>该决定已被撤销。</p>
+<p><button class="play-button sentence" id="s-00-14-09-798" data-start="00:14:09,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let me talk now to Jordan Schwarzenberg, who is the co-founder of Arcade Media at Berger.</p>
+<p>现在让我和乔丹·施瓦岑伯格谈谈，他是伯杰Arcade Media的联合创始人。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959142" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-17-120" data-start="00:14:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A manager of the very well-known YouTube group, The Side Men.</p>
+<p>他是知名YouTube团体The Side Men的经理。</p>
+<p><button class="play-button sentence" id="s-00-14-21-840" data-start="00:14:21,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, you have seven friends around the country and basically what you have done is created this huge collective where you have 22 million subscribers on your channel, millions more on subsidiary channels.</p>
+<p>现在，你在全国有七个朋友，基本上你们所做的是创建了这个庞大的集体，你们的主频道有2200万订阅者，子频道还有数百万订阅者。</p>
+<p><button class="play-button sentence" id="s-00-14-33-200" data-start="00:14:33,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you know better than anything, Jordan Schwarzenberger, how YouTube works.</p>
+<p>所以乔丹·施瓦岑伯格，你比任何人都更了解YouTube的运作方式。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959122" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-37-678" data-start="00:14:37,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You are a huge success on it.</p>
+<p>你在YouTube上取得了巨大成功。</p>
+<p><button class="play-button sentence" id="s-00-14-39-038" data-start="00:14:39,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So why do you think YouTube is now on the cusp of potentially getting past the BBC in terms of most popular platform?</p>
+<p>那么，为什么你认为YouTube现在有可能超越BBC成为最受欢迎的平台？</p>
+<p><button class="play-button sentence" id="s-00-14-47-080" data-start="00:14:47,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For anyone who has been in the space for a long time, this is no surprise.</p>
+<p>对于长期关注这一领域的人来说，这并不令人惊讶。</p>
+<p><button class="play-button sentence" id="s-00-14-50-960" data-start="00:14:50,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have been doing this now for 10 years.</p>
+<p>我已经从事这一行业10年了。</p>
+<p><button class="play-button sentence" id="s-00-14-52-200" data-start="00:14:52,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Side Men have been making content for 13 years, probably individually.</p>
+<p>The Side Men制作内容已有13年，可能是个人的努力。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959104" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-55-840" data-start="00:14:55,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> YouTube is 20 this year.</p>
+<p>YouTube今年已经20岁了。</p>
+<p><button class="play-button sentence" id="s-00-14-57-000" data-start="00:14:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So again, no surprise.</p>
+<p>所以，再次强调，这并不令人惊讶。</p>
+<p><button class="play-button sentence" id="s-00-14-58-000" data-start="00:14:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the reason why is because YouTube represents the shift into decentralized media.</p>
+<p>我认为原因是YouTube代表了向去中心化媒体的转变。</p>
+<p><button class="play-button sentence" id="s-00-15-02-919" data-start="00:15:02,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If there is nothing else to think about in culture, it is this that we now live in an undemanded society.</p>
+<p>如果文化中还有什么值得思考的，那就是我们现在生活在一个需求未被满足的社会。</p>
+<p><button class="play-button sentence" id="s-00-15-08-000" data-start="00:15:08,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have total control over our feeds.</p>
+<p>我们完全控制自己的信息流。</p>
+<p><button class="play-button sentence" id="s-00-15-09-480" data-start="00:15:09,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have total control over what we consume, when we consume it.</p>
+<p>我们完全控制自己消费的内容和时间。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959087" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:12</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-12-399" data-start="00:15:12,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And YouTube feeds that.</p>
+<p>而YouTube满足了这一点。</p>
+<p><button class="play-button sentence" id="s-00-15-13-399" data-start="00:15:13,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ultimately, it has allowed individuals, everyday kids in their bedroom, to have access to audience and also money when the audience grows.</p>
+<p>最终，它让个人、卧室里的普通孩子能够接触到观众，并在观众增长时获得收入。</p>
+<p><button class="play-button sentence" id="s-00-15-19-798" data-start="00:15:19,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it is this perfect economy.</p>
+<p>因此，这是一个完美的经济模式。</p>
+<p><button class="play-button sentence" id="s-00-15-21-360" data-start="00:15:21,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And again, it is no surprise for anyone that has been in it and I don't think it is going away any time soon.</p>
+<p>同样，对于身处其中的人来说，这并不令人惊讶，而且我认为它短期内不会消失。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959074" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-25-678" data-start="00:15:25,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it still hasn't passed the BBC.</p>
+<p>但它仍然没有超越BBC。</p>
+<p><button class="play-button sentence" id="s-00-15-28-879" data-start="00:15:28,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For now.</p>
+<p>目前还没有。</p>
+<p><button class="play-button sentence" id="s-00-15-29-879" data-start="00:15:29,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For now.</p>
+<p>目前还没有。</p>
+<p><button class="play-button sentence" id="s-00-15-30-879" data-start="00:15:30,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think you know what we know is that the trajectory is going one way and I wouldn't put them as a like for like.</p>
+<p>我认为我们所知道的是，趋势是单向的，我不会将它们相提并论。</p>
+<p><button class="play-button sentence" id="s-00-15-36-438" data-start="00:15:36,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> YouTube is the subject of the audience.</p>
+<p>YouTube以观众为主体。</p>
+<p><button class="play-button sentence" id="s-00-15-37-438" data-start="00:15:37,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are very different.</p>
+<p>它们非常不同。</p>
+<p><button class="play-button sentence" id="s-00-15-38-438" data-start="00:15:38,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are once a public service broadcaster and one is a platform for videos.</p>
+<p>一个是公共服务广播机构，一个是视频平台。</p>
+<p><button class="play-button sentence" id="s-00-15-41-918" data-start="00:15:41,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But also people confuse the YouTube.</p>
+<p>但人们也会混淆YouTube。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959055" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-44-038" data-start="00:15:44,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not a social media platform.</p>
+<p>它不是社交媒体平台。</p>
+<p><button class="play-button sentence" id="s-00-15-45-558" data-start="00:15:45,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a search engine.</p>
+<p>它是一个搜索引擎。</p>
+<p><button class="play-button sentence" id="s-00-15-46-558" data-start="00:15:46,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it is really the equivalent of Google but for video.</p>
+<p>它实际上是视频版的Google。</p>
+<p><button class="play-button sentence" id="s-00-15-49-038" data-start="00:15:49,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it is a library, it is a vast.</p>
+<p>所以它是一个图书馆，一个庞大的资源库。</p>
+<p><button class="play-button sentence" id="s-00-15-51-399" data-start="00:15:51,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can't really compare the two.</p>
+<p>你真的无法将两者进行比较。</p>
+<p><button class="play-button sentence" id="s-00-15-52-879" data-start="00:15:52,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what we know is that kids especially are turning to YouTube first.</p>
+<p>但我们知道，尤其是孩子们会首先选择YouTube。</p>
+<p><button class="play-button sentence" id="s-00-15-56-000" data-start="00:15:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't allow my kids to have YouTube.</p>
+<p>我不允许我的孩子使用YouTube。</p>
+<p><button class="play-button sentence" id="s-00-15-57-719" data-start="00:15:57,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are not allowing it.</p>
+<p>他们不允许。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959041" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-58-719" data-start="00:15:58,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't allow it.</p>
+<p>他们不允许。</p>
+<p><button class="play-button sentence" id="s-00-15-59-719" data-start="00:15:59,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It allowed it.</p>
+<p>它允许了。</p>
+<p><button class="play-button sentence" id="s-00-16-00-719" data-start="00:16:00,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Australia now is banning under 16 from having YouTube accounts.</p>
+<p>澳大利亚现在禁止16岁以下的人拥有YouTube账户。</p>
+<p><button class="play-button sentence" id="s-00-16-03-360" data-start="00:16:03,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think there is now push against these young people having these accounts?</p>
+<p>你认为现在是否在反对年轻人拥有这些账户？</p>
+<p><button class="play-button sentence" id="s-00-16-07-678" data-start="00:16:07,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Kids having these accounts?</p>
+<p>孩子们拥有这些账户？</p>
+<p><button class="play-button sentence" id="s-00-16-08-798" data-start="00:16:08,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can get quite addicted to things like YouTube shorts if you are a youngster.</p>
+<p>如果你是年轻人，你可能会对YouTube Shorts等东西上瘾。</p>
+<p><button class="play-button sentence" id="s-00-16-12-000" data-start="00:16:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is almost like a social media website.</p>
+<p>它几乎像一个社交媒体网站。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959025" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-14-038" data-start="00:16:14,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know you are saying it is not but it feels that way sometimes.</p>
+<p>我知道你说它不是，但有时感觉就是那样。</p>
+<p><button class="play-button sentence" id="s-00-16-16-519" data-start="00:16:16,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I mean social media is more peer to peer.</p>
+<p>是的，社交媒体更像是点对点的。</p>
+<p><button class="play-button sentence" id="s-00-16-18-158" data-start="00:16:18,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that shorts tick tock the kind of high dopamine content.</p>
+<p>我认为Shorts和TikTok这类内容能带来高多巴胺刺激。</p>
+<p><button class="play-button sentence" id="s-00-16-20-958" data-start="00:16:20,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, I totally agree there is limits that need to be put on that because what it does to the brain and the chemicals etc is quite alarming especially for young kids.</p>
+<p>是的，我完全同意需要对此加以限制，因为它对大脑和化学物质的影响相当令人担忧，尤其是对年幼的孩子。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208959012" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-27-958" data-start="00:16:27,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But look, YouTube is a long form content.</p>
+<p>但你看，YouTube是长视频内容。</p>
+<p><button class="play-button sentence" id="s-00-16-29-438" data-start="00:16:29,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have got the most diverse range of creators.</p>
+<p>它有最多样化的创作者群体。</p>
+<p><button class="play-button sentence" id="s-00-16-31-158" data-start="00:16:31,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You have got a platform I think that is one of the most actually safe platforms in the world in terms of their brand safety and everything else.</p>
+<p>我认为它是一个在品牌安全等方面实际上最安全的平台之一。</p>
+<p><button class="play-button sentence" id="s-00-16-35-958" data-start="00:16:35,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, I wouldn't keep your kids from YouTube.</p>
+<p>所以，是的，我不会阻止你的孩子使用YouTube。</p>
+<p><button class="play-button sentence" id="s-00-16-38-078" data-start="00:16:38,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is great.</p>
+<p>那太好了。</p>
+<p><button class="play-button sentence" id="s-00-16-39-038" data-start="00:16:39,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You are staying off YouTube kids.</p>
+<p>你远离YouTube Kids。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958999" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-40-038" data-start="00:16:40,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sorry.</p>
+<p>抱歉。</p>
+<p><button class="play-button sentence" id="s-00-16-41-038" data-start="00:16:41,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What would you advise the BBC to do to stay on top?</p>
+<p>你会建议BBC如何保持领先地位？</p>
+<p><button class="play-button sentence" id="s-00-16-43-278" data-start="00:16:43,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would advise the BBC to be radically honest about the future and really embrace where consumption and where attention is moving with just YouTube.</p>
+<p>我会建议BBC对未来保持彻底的诚实，并真正接受消费和注意力正在向YouTube转移的趋势。</p>
+<p><button class="play-button sentence" id="s-00-16-50-558" data-start="00:16:50,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-16-51-558" data-start="00:16:51,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fantastic.</p>
+<p>太棒了。</p>
+<p><button class="play-button sentence" id="s-00-16-52-558" data-start="00:16:52,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well Jordan, it is so good to talk to you.</p>
+<p>乔丹，和你交谈真是太好了。</p>
+<p><button class="play-button sentence" id="s-00-16-53-558" data-start="00:16:53,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you very much for joining us.</p>
+<p>非常感谢你的参与。</p>
+<p><button class="play-button sentence" id="s-00-16-54-558" data-start="00:16:54,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Very good.</p>
+<p>非常好。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-55-558" data-start="00:16:55,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And let us talk a little bit now about the world of science and space because for the first time into 350 years a woman has been appointed the role of astronomer Royal.</p>
+<p>现在让我们谈谈科学和太空的世界，因为350年来首次有一位女性被任命为皇家天文学家。</p>
+<p><button class="play-button sentence" id="s-00-17-05-920" data-start="00:17:05,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is the most senior astronomer in the UK.</p>
+<p>这是英国最高级别的天文学家职位。</p>
+<p><button class="play-button sentence" id="s-00-17-08-319" data-start="00:17:08,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Professor Michelle Dottie's job will be to promote Britain's space science.</p>
+<p>米歇尔·多蒂教授的工作将是推动英国的太空科学。</p>
+<p><button class="play-button sentence" id="s-00-17-11-720" data-start="00:17:11,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And she has been talking about her journey with our science correspondent Palabgosch.</p>
+<p>她一直在与我们的科学记者Palabgosch谈论她的经历。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958963" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-17-000" data-start="00:17:17,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We put all of the electronics into this protective box and it is on the main body of the space craft.</p>
+<p>我们将所有电子设备放入这个保护盒中，它位于航天器的主体上。</p>
+<p><button class="play-button sentence" id="s-00-17-22-240" data-start="00:17:22,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Professor Michelle Dottie shows me the lab she developed instruments to test for the possibility of alien life in our solar system.</p>
+<p>米歇尔·多蒂教授向我展示了她开发的实验室仪器，用于测试太阳系中外星生命的可能性。</p>
+<p><button class="play-button sentence" id="s-00-17-31-038" data-start="00:17:31,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now on board a spacecraft headed towards the icy moons of Jupiter.</p>
+<p>现在这些仪器搭载在一艘前往木星冰卫星的航天器上。</p>
+<p><button class="play-button sentence" id="s-00-17-35-159" data-start="00:17:35,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Professor Dottie's journey into space began long ago when she was a child.</p>
+<p>但多蒂教授的太空之旅早在她小时候就开始了。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958939" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-40-680" data-start="00:17:40,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This photograph here shows a picture of my dad and me in the middle and then my sister sitting down in front of us.</p>
+<p>这张照片展示了我和爸爸在中间，我姐姐坐在我们前面。</p>
+<p><button class="play-button sentence" id="s-00-17-47-278" data-start="00:17:47,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was about 10 then.</p>
+<p>那时我大约10岁。</p>
+<p><button class="play-button sentence" id="s-00-17-49-038" data-start="00:17:49,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the things he did was he built his own telescope.</p>
+<p>他做的一件事是自己建造了一台望远镜。</p>
+<p><button class="play-button sentence" id="s-00-17-51-838" data-start="00:17:51,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I remember my sister and I, Susie, helped mix the concrete for the base of the telescope, most important part of course.</p>
+<p>我记得我和姐姐苏茜帮忙搅拌望远镜底座的混凝土，当然这是最重要的部分。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-58-519" data-start="00:17:58,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was when I got my first view of Jupiter and its four moons.</p>
+<p>那是我第一次看到木星及其四颗卫星。</p>
+<p><button class="play-button sentence" id="s-00-18-02-200" data-start="00:18:02,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Never thinking I'd end up doing what I'm doing today.</p>
+<p>从未想过我会从事今天的工作。</p>
+<p><button class="play-button sentence" id="s-00-18-06-000" data-start="00:18:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reachievement is all the more remarkable as she didn't study science after she left primary school in South Africa where she grew up.</p>
+<p>她的成就更加引人注目，因为她在南非长大，小学毕业后没有学习科学。</p>
+<p><button class="play-button sentence" id="s-00-18-13-118" data-start="00:18:13,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the school I went to I didn't do science.</p>
+<p>所以我上的学校没有科学课程。</p>
+<p><button class="play-button sentence" id="s-00-18-16-200" data-start="00:18:16,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good heavens, how did you catch up?</p>
+<p>天哪，你是怎么赶上来的？</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958901" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-18-278" data-start="00:18:18,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was really hard.</p>
+<p>真的很困难。</p>
+<p><button class="play-button sentence" id="s-00-18-19-798" data-start="00:18:19,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But she was so clever she soon caught up and came to the UK to become one of the country's leading space scientists.</p>
+<p>但她非常聪明，很快就赶上了，并来到英国成为该国顶尖的太空科学家之一。</p>
+<p><button class="play-button sentence" id="s-00-18-26-680" data-start="00:18:26,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I still pinch myself that I'm involved in outer planetary missions.</p>
+<p>我仍然不敢相信自己参与了外行星任务。</p>
+<p><button class="play-button sentence" id="s-00-18-30-839" data-start="00:18:30,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fact that I'm astronomer royal, I'm pinching myself, I can't quite believe it.</p>
+<p>作为皇家天文学家，我掐自己，简直不敢相信。</p>
+<p><button class="play-button sentence" id="s-00-18-35-440" data-start="00:18:35,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Grennich time ball falls, indicating that it's one o'clock to sailors on the Thames, harking back to a bygone age of astronomy.</p>
+<p>格林尼治时间球落下，向泰晤士河上的水手们指示一点钟，让人回想起天文学的过去时代。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958875" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-44-200" data-start="00:18:44,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The role of astronomer royal was created 350 years ago here at the Royal Observatory in Grennich.</p>
+<p>皇家天文学家的职位是350年前在格林尼治皇家天文台设立的。</p>
+<p><button class="play-button sentence" id="s-00-18-50-880" data-start="00:18:50,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The job back then was to advise the king on how to use the stars to improve navigation at sea.</p>
+<p>当时的工作是向国王建议如何利用星星改进海上导航。</p>
+<p><button class="play-button sentence" id="s-00-18-57-240" data-start="00:18:57,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over the centuries 15 men have held the post of astronomer royal.</p>
+<p>几个世纪以来，共有15位男性担任皇家天文学家。</p>
+<p><button class="play-button sentence" id="s-00-19-01-960" data-start="00:19:01,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Professor Dockety hopes her appointment will attract more girls and women into science.</p>
+<p>多蒂教授希望她的任命能吸引更多女孩和女性进入科学领域。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958853" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-06-798" data-start="00:19:06,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When young children in particular see someone that looks like them, doing a job they think they would never get an opportunity to do, it changes their mindset a little.</p>
+<p>尤其是当孩子们看到与自己相似的人从事他们认为自己永远没有机会从事的工作时，他们的心态会有所改变。</p>
+<p><button class="play-button sentence" id="s-00-19-17-880" data-start="00:19:17,880" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The woman who was so motivated to study science after seeing the planet Jupiter as a girl that she sent a probe to investigate it now has the job of making all of us as excited about space as she so clearly is.</p>
+<p>这位女性在小时候看到木星后受到激励学习科学，如今她发送探测器去研究它，她的工作是让我们所有人都像她一样对太空充满热情。</p>
+<p><button class="play-button sentence" id="s-00-19-32-719" data-start="00:19:32,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Palab goes BBC News.</p>
+<p>Palab，BBC新闻。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958823" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-36-159" data-start="00:19:36,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NASA and the Indian Space Research Organisation have launched a new satellite which it's hoped will help predict and prepare for natural disasters.</p>
+<p>NASA和印度空间研究组织发射了一颗新卫星，希望它能帮助预测和准备自然灾害。</p>
+<p><button class="play-button sentence" id="s-00-19-44-558" data-start="00:19:44,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The device which touched off from southern India carries one of the most sophisticated and powerful radars ever developed.</p>
+<p>从印度南部发射的这颗卫星搭载了有史以来最先进、最强大的雷达之一。</p>
+<p><button class="play-button sentence" id="s-00-19-51-838" data-start="00:19:51,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Scientists say the satellite will closely monitor the Earth's surface measuring ice sheets, coastal regions and other land features supplying unprecedented amounts of data.</p>
+<p>科学家表示，这颗卫星将密切监测地球表面，测量冰盖、沿海地区和其他陆地特征，提供前所未有的数据量。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958798" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-01-278" data-start="00:20:01,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr David Whitehouse is a space scientist and an author and I asked him to explain exactly how these satellites might be able to predict these natural disasters in the future.</p>
+<p>大卫·怀特豪斯博士是一位太空科学家和作家，我请他解释这些卫星未来如何预测自然灾害。</p>
+<p><button class="play-button sentence" id="s-00-20-12-798" data-start="00:20:12,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a radar satellite so it sends two radar beams from orbit and receives their reflection and therefore it can operate in clouds and at night and makes a complete map of the Earth every week.</p>
+<p>这是一颗雷达卫星，所以它从轨道上发送两束雷达波并接收反射信号，因此它可以在云层中和夜间工作，每周绘制一次完整的地球地图。</p>
+<p><button class="play-button sentence" id="s-00-20-25-799" data-start="00:20:25,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But because one of the radar beams is as we're slightly longer wavelength and usual this gives it unique abilities.</p>
+<p>但由于其中一束雷达波的波长稍长，这赋予了它独特的能力。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV11b86zSE62/?vd_source=342c2ae6bed1514328e9c8fe99c715d4&amp;p=2?t=-2208958767" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-32-319" data-start="00:20:32,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For instance when it's looking at forests it can one part of the radar beam can look at the forest canopy but the longer beam will actually reach down to the surface, telegous watts on the surface giving us the water content and various other bits of information.</p>
+<p>例如，当它观察森林时，雷达波的一部分可以观察森林冠层，但较长的波束实际上可以到达地表，测量地表的水分含量和其他各种信息。</p>
+<p><button class="play-button sentence" id="s-00-20-48-798" data-start="00:20:48,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This gives it a broad spread of information not only looking at forests but ice sheets, water resources and also volcanoes.</p>
+<p>这使它能够广泛收集信息，不仅观察森林，还包括冰盖、水资源和火山。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

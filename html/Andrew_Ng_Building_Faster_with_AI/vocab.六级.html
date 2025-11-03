@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Andrew Ng: Building Faster with AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Ng shares insights on accelerating startup success through AI, emphasizing execution speed, concrete ideas, and leveraging AI tools like agentic workflows and coding assistance. He highlights the importance of the application layer for opportunities and rapid prototyping to validate ideas quickly.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>📚 六级生词表</h1>
+<ul>
+<li><a href="https://dict.eudic.net/dicts/en/absolutely" target="_blank">absolutely</a>  adv. 当然</li>
+<li><a href="https://dict.eudic.net/dicts/en/filter" target="_blank">filter</a>  v. 过滤</li>
+<li><a href="https://dict.eudic.net/dicts/en/lobby" target="_blank">lobby</a>  n. 游说</li>
+<li><a href="https://dict.eudic.net/dicts/en/typical" target="_blank">typical</a>  adj. 典型的</li>
+<li><a href="https://dict.eudic.net/dicts/en/revenue" target="_blank">revenue</a>  n. 收入</li>
+<li><a href="https://dict.eudic.net/dicts/en/figure" target="_blank">figure</a>  n. 数字</li>
+<li><a href="https://dict.eudic.net/dicts/en/transform" target="_blank">transform</a>  v. 转变</li>
+<li><a href="https://dict.eudic.net/dicts/en/concrete" target="_blank">concrete</a>  adj. 具体的</li>
+<li><a href="https://dict.eudic.net/dicts/en/prompt" target="_blank">prompt</a>  v. 促使</li>
+<li><a href="https://dict.eudic.net/dicts/en/accidentally" target="_blank">accidentally</a>  adv. 偶然地，意外地</li>
+<li><a href="https://dict.eudic.net/dicts/en/guarantee" target="_blank">guarantee</a>  v. 保证</li>
+<li><a href="https://dict.eudic.net/dicts/en/accurate" target="_blank">accurate</a>  adj. 精确的</li>
+<li><a href="https://dict.eudic.net/dicts/en/innovation" target="_blank">innovation</a>  n. 创新，革新；新观念；新方法；新发明</li>
+<li><a href="https://dict.eudic.net/dicts/en/impact" target="_blank">impact</a>  n. 影响</li>
+<li><a href="https://dict.eudic.net/dicts/en/deliver" target="_blank">deliver</a>  v. 递送；发表演讲</li>
+<li><a href="https://dict.eudic.net/dicts/en/code" target="_blank">code</a>  n. 代号，密码</li>
+<li><a href="https://dict.eudic.net/dicts/en/ridiculous" target="_blank">ridiculous</a>  adj. 滑稽的，可笑的</li>
+<li><a href="https://dict.eudic.net/dicts/en/spot" target="_blank">spot</a>  n. 点；地点，处所 v. 发现</li>
+<li><a href="https://dict.eudic.net/dicts/en/convince" target="_blank">convince</a>  v. 使……相信</li>
+<li><a href="https://dict.eudic.net/dicts/en/sector" target="_blank">sector</a>  n. 部门</li>
+<li><a href="https://dict.eudic.net/dicts/en/outcome" target="_blank">outcome</a>  n. 结果</li>
+<li><a href="https://dict.eudic.net/dicts/en/view" target="_blank">view</a>  v. 看待</li>
+<li><a href="https://dict.eudic.net/dicts/en/reverse" target="_blank">reverse</a>  adj. 相反的</li>
+<li><a href="https://dict.eudic.net/dicts/en/ecosystem" target="_blank">ecosystem</a>  n. 生态系统</li>
+<li><a href="https://dict.eudic.net/dicts/en/evolve" target="_blank">evolve</a>  v. 进化</li>
+<li><a href="https://dict.eudic.net/dicts/en/release" target="_blank">release</a>  v. 释放；发布</li>
+<li><a href="https://dict.eudic.net/dicts/en/slash" target="_blank">slash</a>  v. 猛削，劈，砍；削减</li>
+<li><a href="https://dict.eudic.net/dicts/en/potential" target="_blank">potential</a>  adj. 潜在的 n. 潜力</li>
+<li><a href="https://dict.eudic.net/dicts/en/program" target="_blank">program</a>  v. 计划，安排</li>
+<li><a href="https://dict.eudic.net/dicts/en/shift" target="_blank">shift</a>  v. 转移注意力；转变</li>
+<li><a href="https://dict.eudic.net/dicts/en/expansion" target="_blank">expansion</a>  n. 扩张；扩大</li>
+<li><a href="https://dict.eudic.net/dicts/en/combination" target="_blank">combination</a>  n. 组合，结合</li>
+<li><a href="https://dict.eudic.net/dicts/en/slightly" target="_blank">slightly</a>  adv. 轻微地</li>
+<li><a href="https://dict.eudic.net/dicts/en/ready" target="_blank">ready</a>  adj. 乐意的，愿意的</li>
+<li><a href="https://dict.eudic.net/dicts/en/feasible" target="_blank">feasible</a>  adj. 可行的</li>
+<li><a href="https://dict.eudic.net/dicts/en/check" target="_blank">check</a>  v. 检查；阻止</li>
+<li><a href="https://dict.eudic.net/dicts/en/rigorous" target="_blank">rigorous</a>  adj. 严格的</li>
+<li><a href="https://dict.eudic.net/dicts/en/bias" target="_blank">bias</a>  n. 偏见</li>
+<li><a href="https://dict.eudic.net/dicts/en/awkward" target="_blank">awkward</a>  adj. 尴尬的；棘手的；笨拙的</li>
+<li><a href="https://dict.eudic.net/dicts/en/vehicle" target="_blank">vehicle</a>  n. 车辆</li>
+<li><a href="https://dict.eudic.net/dicts/en/solid" target="_blank">solid</a>  adj. 坚实的；稳固的</li>
+<li><a href="https://dict.eudic.net/dicts/en/remarkable" target="_blank">remarkable</a>  adj. 显著的，杰出的</li>
+<li><a href="https://dict.eudic.net/dicts/en/suspicious" target="_blank">suspicious</a>  adj. 怀疑的</li>
+<li><a href="https://dict.eudic.net/dicts/en/controversial" target="_blank">controversial</a>  adj. 受到争议的</li>
+<li><a href="https://dict.eudic.net/dicts/en/rate" target="_blank">rate</a>  n. 费用</li>
+<li><a href="https://dict.eudic.net/dicts/en/essential" target="_blank">essential</a>  adj. 必须的；本质的</li>
+<li><a href="https://dict.eudic.net/dicts/en/available" target="_blank">available</a>  adj. 可获得的，可利用的</li>
+<li><a href="https://dict.eudic.net/dicts/en/dynamics" target="_blank">dynamics</a>  n. 动力学</li>
+<li><a href="https://dict.eudic.net/dicts/en/contrary" target="_blank">contrary</a>  adj. 相反的</li>
+<li><a href="https://dict.eudic.net/dicts/en/stuff" target="_blank">stuff</a>  n. 材料，东西</li>
+<li><a href="https://dict.eudic.net/dicts/en/tutor" target="_blank">tutor</a>  v. 辅导</li>
+<li><a href="https://dict.eudic.net/dicts/en/distribution" target="_blank">distribution</a>  n. 分布，分配</li>
+<li><a href="https://dict.eudic.net/dicts/en/trend" target="_blank">trend</a>  n. 趋势</li>
+<li><a href="https://dict.eudic.net/dicts/en/pursue" target="_blank">pursue</a>  v. 追求</li>
+<li><a href="https://dict.eudic.net/dicts/en/instantaneous" target="_blank">instantaneous</a>  adj. 即时的，瞬间的</li>
+<li><a href="https://dict.eudic.net/dicts/en/switch" target="_blank">switch</a>  v. 转换</li>
+<li><a href="https://dict.eudic.net/dicts/en/practice" target="_blank">practice</a>  n. 做法</li>
+<li><a href="https://dict.eudic.net/dicts/en/foundation" target="_blank">foundation</a>  n. 基金会</li>
+<li><a href="https://dict.eudic.net/dicts/en/adventure" target="_blank">adventure</a>  n. 冒险</li>
+<li><a href="https://dict.eudic.net/dicts/en/hypothesis" target="_blank">hypothesis</a>  n. 假设，假说</li>
+<li><a href="https://dict.eudic.net/dicts/en/gap" target="_blank">gap</a>  n. 差距</li>
+<li><a href="https://dict.eudic.net/dicts/en/coach" target="_blank">coach</a>  n. 教练</li>
+<li><a href="https://dict.eudic.net/dicts/en/position" target="_blank">position</a>  v. 安放 n. 位置；职位</li>
+<li><a href="https://dict.eudic.net/dicts/en/extinction" target="_blank">extinction</a>  n. 灭绝</li>
+<li><a href="https://dict.eudic.net/dicts/en/impart" target="_blank">impart</a>  v. 传授，教授</li>
+<li><a href="https://dict.eudic.net/dicts/en/dramatically" target="_blank">dramatically</a>  adv. 大幅度地；戏剧性地</li>
+<li><a href="https://dict.eudic.net/dicts/en/productivity" target="_blank">productivity</a>  n. 生产力</li>
+<li><a href="https://dict.eudic.net/dicts/en/mechanism" target="_blank">mechanism</a>  n. 机制</li>
+<li><a href="https://dict.eudic.net/dicts/en/odds" target="_blank">odds</a>  n. 可能性</li>
+<li><a href="https://dict.eudic.net/dicts/en/access" target="_blank">access</a>  v. 取得，获取</li>
+<li><a href="https://dict.eudic.net/dicts/en/widespread" target="_blank">widespread</a>  adj. 广泛传播的</li>
+<li><a href="https://dict.eudic.net/dicts/en/generate" target="_blank">generate</a>  v. 产生</li>
+<li><a href="https://dict.eudic.net/dicts/en/specific" target="_blank">specific</a>  adj. 具体的</li>
+<li><a href="https://dict.eudic.net/dicts/en/frankly" target="_blank">frankly</a>  adv. 坦率地</li>
+<li><a href="https://dict.eudic.net/dicts/en/momentum" target="_blank">momentum</a>  n. 动力，势头</li>
+<li><a href="https://dict.eudic.net/dicts/en/hack" target="_blank">hack</a>  v. 黑客攻击</li>
+<li><a href="https://dict.eudic.net/dicts/en/matter" target="_blank">matter</a>  v. 重要；要紧</li>
+<li><a href="https://dict.eudic.net/dicts/en/memo" target="_blank">memo</a>  n. 备忘录</li>
+<li><a href="https://dict.eudic.net/dicts/en/propose" target="_blank">propose</a>  v. 提出</li>
+<li><a href="https://dict.eudic.net/dicts/en/perspective" target="_blank">perspective</a>  n. 视角，观点</li>
+<li><a href="https://dict.eudic.net/dicts/en/value" target="_blank">value</a>  v. 尊重，重视；估价</li>
+<li><a href="https://dict.eudic.net/dicts/en/block" target="_blank">block</a>  n. 阻塞；障碍物</li>
+<li><a href="https://dict.eudic.net/dicts/en/main" target="_blank">main</a>  n. 总管道，干线</li>
+<li><a href="https://dict.eudic.net/dicts/en/way" target="_blank">way</a>  n. （特定的）状态，状况</li>
+<li><a href="https://dict.eudic.net/dicts/en/can" target="_blank">can</a>  v. 装罐头</li>
+<li><a href="https://dict.eudic.net/dicts/en/box" target="_blank">box</a>  n. （法庭的）专席</li>
+<li><a href="https://dict.eudic.net/dicts/en/position" target="_blank">position</a>  n. 形势；主张，立场</li>
+<li><a href="https://dict.eudic.net/dicts/en/responsible" target="_blank">responsible</a>  adj. 可靠的；责任重大的</li>
+<li><a href="https://dict.eudic.net/dicts/en/check" target="_blank">check</a>  n. 支票；帐单</li>
+<li><a href="https://dict.eudic.net/dicts/en/second" target="_blank">second</a>  v. 支持</li>
+<li><a href="https://dict.eudic.net/dicts/en/platform" target="_blank">platform</a>  n. 政纲，党纲，宣言</li>
+<li><a href="https://dict.eudic.net/dicts/en/sign" target="_blank">sign</a>  n. 征兆，迹象，病症</li>
+<li><a href="https://dict.eudic.net/dicts/en/literally" target="_blank">literally</a>  adv. 照字义，逐字地</li>
+<li><a href="https://dict.eudic.net/dicts/en/brand" target="_blank">brand</a>  v. 在…上打烙印</li>
+<li><a href="https://dict.eudic.net/dicts/en/over" target="_blank">over</a>  prep. 在（做）…时</li>
+<li><a href="https://dict.eudic.net/dicts/en/prototype" target="_blank">prototype</a>  n. 原型；典型，范例</li>
+<li><a href="https://dict.eudic.net/dicts/en/excuse" target="_blank">excuse</a>  v. 为…辩解；使免除</li>
+<li><a href="https://dict.eudic.net/dicts/en/head" target="_blank">head</a>  v. 用头顶（球）；朝...行进</li>
+<li><a href="https://dict.eudic.net/dicts/en/through" target="_blank">through</a>  prep. 因为，由于</li>
+<li><a href="https://dict.eudic.net/dicts/en/singular" target="_blank">singular</a>  adj. 异常的，奇异的</li>
+<li><a href="https://dict.eudic.net/dicts/en/wind" target="_blank">wind</a>  n. 风</li>
+<li><a href="https://dict.eudic.net/dicts/en/team" target="_blank">team</a>  v. 协作，合作</li>
+<li><a href="https://dict.eudic.net/dicts/en/consumer" target="_blank">consumer</a>  n. 消费者，用户</li>
+<li><a href="https://dict.eudic.net/dicts/en/token" target="_blank">token</a>  n. 辅币；象征</li>
+<li><a href="https://dict.eudic.net/dicts/en/linear" target="_blank">linear</a>  adj. 线的；长度的</li>
+<li><a href="https://dict.eudic.net/dicts/en/realistic" target="_blank">realistic</a>  adj. 现实的；现实主义的</li>
+<li><a href="https://dict.eudic.net/dicts/en/systematically" target="_blank">systematically</a>  adv. 系统地，有规则地</li>
+<li><a href="https://dict.eudic.net/dicts/en/usage" target="_blank">usage</a>  n. 习惯用法</li>
+<li><a href="https://dict.eudic.net/dicts/en/question" target="_blank">question</a>  v. 问，询问，讯问</li>
+<li><a href="https://dict.eudic.net/dicts/en/towards" target="_blank">towards</a>  prep. 用于，有助于</li>
+<li><a href="https://dict.eudic.net/dicts/en/awful" target="_blank">awful</a>  adj. 威严的；令人崇敬的</li>
+<li><a href="https://dict.eudic.net/dicts/en/web" target="_blank">web</a>  n. 网，网状物</li>
+<li><a href="https://dict.eudic.net/dicts/en/even" target="_blank">even</a>  adj. 平稳的，均匀的</li>
+<li><a href="https://dict.eudic.net/dicts/en/coordinate" target="_blank">coordinate</a>  adj. 同等的</li>
+<li><a href="https://dict.eudic.net/dicts/en/entry" target="_blank">entry</a>  n. 入口，通道；条目</li>
+<li><a href="https://dict.eudic.net/dicts/en/theme" target="_blank">theme</a>  n. 题目；主题；主旋律；（句子的）主位；词干</li>
+<li><a href="https://dict.eudic.net/dicts/en/essential" target="_blank">essential</a>  adj. 极其重要的；必不可少的</li>
+<li><a href="https://dict.eudic.net/dicts/en/detail" target="_blank">detail</a>  n. 琐碎，小事</li>
+<li><a href="https://dict.eudic.net/dicts/en/what" target="_blank">what</a>  adj. 所…的</li>
+<li><a href="https://dict.eudic.net/dicts/en/instantaneous" target="_blank">instantaneous</a>  adj. 瞬间的，即刻的</li>
+<li><a href="https://dict.eudic.net/dicts/en/terminology" target="_blank">terminology</a>  n. 术语学，术语</li>
+<li><a href="https://dict.eudic.net/dicts/en/revenue" target="_blank">revenue</a>  n. 收入；收入数目</li>
+<li><a href="https://dict.eudic.net/dicts/en/fitness" target="_blank">fitness</a>  n. 适当，恰当；健康</li>
+<li><a href="https://dict.eudic.net/dicts/en/influence" target="_blank">influence</a>  n. 势力，权势</li>
+<li><a href="https://dict.eudic.net/dicts/en/automate" target="_blank">automate</a>  v. 使自动化</li>
+<li><a href="https://dict.eudic.net/dicts/en/bend" target="_blank">bend</a>  v. 使屈从，屈从</li>
+<li><a href="https://dict.eudic.net/dicts/en/subject" target="_blank">subject</a>  v. 使隶属</li>
+<li><a href="https://dict.eudic.net/dicts/en/integrate" target="_blank">integrate</a>  v. 使结合，使并入</li>
+<li><a href="https://dict.eudic.net/dicts/en/contrast" target="_blank">contrast</a>  v. 使对比；形成对比</li>
+<li><a href="https://dict.eudic.net/dicts/en/mature" target="_blank">mature</a>  v. 使成熟，成熟</li>
+<li><a href="https://dict.eudic.net/dicts/en/develop" target="_blank">develop</a>  v. 使（底片）显影</li>
+<li><a href="https://dict.eudic.net/dicts/en/experimentation" target="_blank">experimentation</a>  n. 实验；试验</li>
+<li><a href="https://dict.eudic.net/dicts/en/execution" target="_blank">execution</a>  n. 实行，执行；处死刑</li>
+<li><a href="https://dict.eudic.net/dicts/en/productivity" target="_blank">productivity</a>  n. 生产率；多产</li>
+<li><a href="https://dict.eudic.net/dicts/en/productive" target="_blank">productive</a>  adj. 生产的；出产…的</li>
+<li><a href="https://dict.eudic.net/dicts/en/context" target="_blank">context</a>  n. 上下文；来龙去脉</li>
+<li><a href="https://dict.eudic.net/dicts/en/blue" target="_blank">blue</a>  adj. 伤心的；下流的</li>
+<li><a href="https://dict.eudic.net/dicts/en/goodness" target="_blank">goodness</a>  n. 善良，善行，美德</li>
+<li><a href="https://dict.eudic.net/dicts/en/underwear" target="_blank">underwear</a>  n. 衫衣，内衣，贴身衣</li>
+<li><a href="https://dict.eudic.net/dicts/en/gap" target="_blank">gap</a>  n. 差距；山口，山峡</li>
+<li><a href="https://dict.eudic.net/dicts/en/choice" target="_blank">choice</a>  n. 入选者 adj. 优等的</li>
+<li><a href="https://dict.eudic.net/dicts/en/sight" target="_blank">sight</a>  n. 景象；名胜，风景</li>
+<li><a href="https://dict.eudic.net/dicts/en/lobby" target="_blank">lobby</a>  n. 前厅，（剧院的）门廊</li>
+<li><a href="https://dict.eudic.net/dicts/en/scratch" target="_blank">scratch</a>  n. （某人皮肤上的）划痕，划伤</li>
+<li><a href="https://dict.eudic.net/dicts/en/distortion" target="_blank">distortion</a>  n. 歪曲；畸变</li>
+<li><a href="https://dict.eudic.net/dicts/en/difficult" target="_blank">difficult</a>  adj. 难以满足的</li>
+<li><a href="https://dict.eudic.net/dicts/en/intent" target="_blank">intent</a>  adj. 目不转睛的，热切的</li>
+<li><a href="https://dict.eudic.net/dicts/en/end" target="_blank">end</a>  n. 目标，目的</li>
+<li><a href="https://dict.eudic.net/dicts/en/feel" target="_blank">feel</a>  v. 摸起来</li>
+<li><a href="https://dict.eudic.net/dicts/en/filter" target="_blank">filter</a>  v. 滤过</li>
+<li><a href="https://dict.eudic.net/dicts/en/inspiration" target="_blank">inspiration</a>  n. 灵感；妙想；鼓舞</li>
+<li><a href="https://dict.eudic.net/dicts/en/solar" target="_blank">solar</a>  adj. 利用太阳光的</li>
+<li><a href="https://dict.eudic.net/dicts/en/fantastic" target="_blank">fantastic</a>  adj. 空想的；奇异的</li>
+<li><a href="https://dict.eudic.net/dicts/en/suspicious" target="_blank">suspicious</a>  adj. 可疑的；猜疑的</li>
+<li><a href="https://dict.eudic.net/dicts/en/start" target="_blank">start</a>  v. 开动，着手；开设</li>
+<li><a href="https://dict.eudic.net/dicts/en/tutor" target="_blank">tutor</a>  v. 教，指导</li>
+<li><a href="https://dict.eudic.net/dicts/en/architect" target="_blank">architect</a>  n. 建筑师；创造者</li>
+<li><a href="https://dict.eudic.net/dicts/en/enterprise" target="_blank">enterprise</a>  n. 艰巨的事业；事业心</li>
+<li><a href="https://dict.eudic.net/dicts/en/rate" target="_blank">rate</a>  n. 价格 v. 对…评定</li>
+<li><a href="https://dict.eudic.net/dicts/en/hypothesis" target="_blank">hypothesis</a>  n. 假设；前提</li>
+<li><a href="https://dict.eudic.net/dicts/en/line" target="_blank">line</a>  v. 加衬里于</li>
+<li><a href="https://dict.eudic.net/dicts/en/terminal" target="_blank">terminal</a>  n. 计算机终端；线接头</li>
+<li><a href="https://dict.eudic.net/dicts/en/set" target="_blank">set</a>  n. 集（合）</li>
+<li><a href="https://dict.eudic.net/dicts/en/mechanism" target="_blank">mechanism</a>  n. 机械装置；机制</li>
+<li><a href="https://dict.eudic.net/dicts/en/framework" target="_blank">framework</a>  n. 体制</li>
+<li><a href="https://dict.eudic.net/dicts/en/response" target="_blank">response</a>  n. 回应</li>
+<li><a href="https://dict.eudic.net/dicts/en/slide" target="_blank">slide</a>  n. 滑动，滑行</li>
+<li><a href="https://dict.eudic.net/dicts/en/outcome" target="_blank">outcome</a>  n. 后果，成果</li>
+<li><a href="https://dict.eudic.net/dicts/en/hit" target="_blank">hit</a>  n. 轰动一时的人（或事）</li>
+<li><a href="https://dict.eudic.net/dicts/en/applause" target="_blank">applause</a>  n. 喝彩；夸奖，称赞</li>
+<li><a href="https://dict.eudic.net/dicts/en/move" target="_blank">move</a>  n. 行动，步骤</li>
+<li><a href="https://dict.eudic.net/dicts/en/slap" target="_blank">slap</a>  v. 掴 n. 巴掌</li>
+<li><a href="https://dict.eudic.net/dicts/en/valuable" target="_blank">valuable</a>  n. 贵重物品，财宝</li>
+<li><a href="https://dict.eudic.net/dicts/en/silicon" target="_blank">silicon</a>  n. 硅（旧名矽）</li>
+<li><a href="https://dict.eudic.net/dicts/en/number" target="_blank">number</a>  v. 共计，达…之数</li>
+<li><a href="https://dict.eudic.net/dicts/en/studio" target="_blank">studio</a>  n. 播音室；工作室</li>
+<li><a href="https://dict.eudic.net/dicts/en/implement" target="_blank">implement</a>  n. 工具 v. 贯彻</li>
+<li><a href="https://dict.eudic.net/dicts/en/impart" target="_blank">impart</a>  v. 给予；传递；告诉</li>
+<li><a href="https://dict.eudic.net/dicts/en/negative" target="_blank">negative</a>  adj. 负的；（结果）阴性的</li>
+<li><a href="https://dict.eudic.net/dicts/en/coach" target="_blank">coach</a>  v. 指导，训练；辅导</li>
+<li><a href="https://dict.eudic.net/dicts/en/answer" target="_blank">answer</a>  v. 符合，适合</li>
+<li><a href="https://dict.eudic.net/dicts/en/landscape" target="_blank">landscape</a>  n. 风景，景色，景致</li>
+<li><a href="https://dict.eudic.net/dicts/en/contrary" target="_blank">contrary</a>  n. 反对命题</li>
+<li><a href="https://dict.eudic.net/dicts/en/toss" target="_blank">toss</a>  v. 翻来覆去</li>
+<li><a href="https://dict.eudic.net/dicts/en/generate" target="_blank">generate</a>  v. 发生，产生；生成</li>
+<li><a href="https://dict.eudic.net/dicts/en/whereas" target="_blank">whereas</a>  conj. 而，却，反之</li>
+<li><a href="https://dict.eudic.net/dicts/en/between" target="_blank">between</a>  adv. 当中，中间</li>
+<li><a href="https://dict.eudic.net/dicts/en/simple" target="_blank">simple</a>  adj. 单纯的；迟钝的</li>
+<li><a href="https://dict.eudic.net/dicts/en/massive" target="_blank">massive</a>  adj. 粗大的；大而重的</li>
+<li><a href="https://dict.eudic.net/dicts/en/smart" target="_blank">smart</a>  v. 刺疼，扎疼，剧痛</li>
+<li><a href="https://dict.eudic.net/dicts/en/stem" target="_blank">stem</a>  n. 词干</li>
+<li><a href="https://dict.eudic.net/dicts/en/innovation" target="_blank">innovation</a>  n. 创新，改革；新设施</li>
+<li><a href="https://dict.eudic.net/dicts/en/report" target="_blank">report</a>  n. 传说，议论</li>
+<li><a href="https://dict.eudic.net/dicts/en/punch" target="_blank">punch</a>  v. 打孔 n. 冲压机</li>
+<li><a href="https://dict.eudic.net/dicts/en/tactics" target="_blank">tactics</a>  n. 战术，兵法</li>
+<li><a href="https://dict.eudic.net/dicts/en/awkward" target="_blank">awkward</a>  adj. 令人尴尬的</li>
+<li><a href="https://dict.eudic.net/dicts/en/reason" target="_blank">reason</a>  v. 论证，推断</li>
+<li><a href="https://dict.eudic.net/dicts/en/transform" target="_blank">transform</a>  v. 变换</li>
+<li><a href="https://dict.eudic.net/dicts/en/fall" target="_blank">fall</a>  v. 变成，成为，陷入</li>
+<li><a href="https://dict.eudic.net/dicts/en/program" target="_blank">program</a>  v. 编制程序</li>
+<li><a href="https://dict.eudic.net/dicts/en/reverse" target="_blank">reverse</a>  n. 背面，反面</li>
+<li><a href="https://dict.eudic.net/dicts/en/blind" target="_blank">blind</a>  n. 百叶窗；窗帘；遮帘</li>
+<li><a href="https://dict.eudic.net/dicts/en/white" target="_blank">white</a>  adj. 白种（人）的</li>
+<li><a href="https://dict.eudic.net/dicts/en/should" target="_blank">should</a>  v. 应该；竟然会</li>
+<li><a href="https://dict.eudic.net/dicts/en/market" target="_blank">market</a>  v. 推销</li>
+<li><a href="https://dict.eudic.net/dicts/en/rigorous" target="_blank">rigorous</a>  adj. 严格的</li>
+<li><a href="https://dict.eudic.net/dicts/en/switch" target="_blank">switch</a>  n. （树木的）软枝条</li>
+<li><a href="https://dict.eudic.net/dicts/en/hard" target="_blank">hard</a>  adj. （酒）烈性的</li>
+<li><a href="https://dict.eudic.net/dicts/en/software" target="_blank">software</a>  n. （计算机的）软件</li>
+<li><a href="https://dict.eudic.net/dicts/en/versus" target="_blank">versus</a>  prep. （比赛等中）对</li>
+<li><a href="https://dict.eudic.net/dicts/en/grab" target="_blank">grab</a>  v. 攫取，抓取</li>
+<li><a href="https://dict.eudic.net/dicts/en/narrative" target="_blank">narrative</a>  n. 叙述文， 故事； 叙述， 讲述</li>
+<li><a href="https://dict.eudic.net/dicts/en/scratch" target="_blank">scratch</a>  v. 抓，搔，扒；刮擦，刻划 n. 抓痕， 划痕； 抓， 搔， 刮</li>
+<li><a href="https://dict.eudic.net/dicts/en/analysis" target="_blank">analysis</a>  n. 分析， 分析报告； 分解， 解析</li>
+<li><a href="https://dict.eudic.net/dicts/en/flip" target="_blank">flip</a>  adj. 〈口〉无理的， 轻率的， 轻浮的 vt. 快速翻动，转动 n. 捻掷，轻抛；轻拍</li>
+<li><a href="https://dict.eudic.net/dicts/en/compute" target="_blank">compute</a>  v. 计算， 估算</li>
+<li><a href="https://dict.eudic.net/dicts/en/implement" target="_blank">implement</a>  vt. 使生效， 履行， 实施 n. 工具， 器具， 用具</li>
+<li><a href="https://dict.eudic.net/dicts/en/mobile" target="_blank">mobile</a>  adj. 运动的；流动的；多变的 n. 移动电话</li>
+<li><a href="https://dict.eudic.net/dicts/en/multiple" target="_blank">multiple</a>  adj. 复合的；多重的，多样的 n. 倍数</li>
+<li><a href="https://dict.eudic.net/dicts/en/versus" target="_blank">versus</a>  prep. 以…为对手， 对； 与…相对， 与…相比之下</li>
+<li><a href="https://dict.eudic.net/dicts/en/focus" target="_blank">focus</a>  v. 聚焦；集中 n. 焦点， 中心</li>
+<li><a href="https://dict.eudic.net/dicts/en/linear" target="_blank">linear</a>  adj. 线的， 直线的， 线状的； 长度的； 线性的</li>
+<li><a href="https://dict.eudic.net/dicts/en/function" target="_blank">function</a>  vi. 工作， 运行； 起作用 n. 功能，职务；【数】函数；重大聚会</li>
+<li><a href="https://dict.eudic.net/dicts/en/basis" target="_blank">basis</a>  n. 基础， 根据； 原则</li>
+<li><a href="https://dict.eudic.net/dicts/en/tutor" target="_blank">tutor</a>  v. 当…导师， 当…家庭教师 n. 导师；家庭教师，私人教师</li>
+<li><a href="https://dict.eudic.net/dicts/en/pursue" target="_blank">pursue</a>  vt. 继续， 从事； 追赶， 追踪； 追求</li>
+<li><a href="https://dict.eudic.net/dicts/en/design" target="_blank">design</a>  vt. 设计；预定，指定 n. 设计， 构想； 图样； 企图</li>
+<li><a href="https://dict.eudic.net/dicts/en/despite" target="_blank">despite</a>  prep. 不管， 不顾</li>
+<li><a href="https://dict.eudic.net/dicts/en/fantastic" target="_blank">fantastic</a>  adj. 极好的， 极出色的； 了不起的； 极大的； 难以相信的； 异想天开的， 不实际的； 奇异的， 古怪的</li>
+<li><a href="https://dict.eudic.net/dicts/en/recognize" target="_blank">recognize</a>  vt. 认出， 识别； 承认， 确认， 认可； 赏识， 表彰， 报偿</li>
+<li><a href="https://dict.eudic.net/dicts/en/chase" target="_blank">chase</a>  n&amp;vt. 追逐， 追赶， 追求</li>
+<li><a href="https://dict.eudic.net/dicts/en/attack" target="_blank">attack</a>  n&amp;vt. 攻击， 进攻； 突然发作</li>
+<li><a href="https://dict.eudic.net/dicts/en/given" target="_blank">given</a>  adj. 规定的，特定的；假设的，已知的；有癖好的，有倾向的 prep. 考虑到</li>
+<li><a href="https://dict.eudic.net/dicts/en/concept" target="_blank">concept</a>  n. 概念， 观念； 设想</li>
+<li><a href="https://dict.eudic.net/dicts/en/silicon" target="_blank">silicon</a>  n. 硅</li>
+<li><a href="https://dict.eudic.net/dicts/en/fund" target="_blank">fund</a>  n. 资金，基金；存款 vt. 为…提供资金</li>
+<li><a href="https://dict.eudic.net/dicts/en/typical" target="_blank">typical</a>  adj. 典型的， 有代表性的</li>
+<li><a href="https://dict.eudic.net/dicts/en/controversial" target="_blank">controversial</a>  adj. 引起争论的， 有争议的</li>
+<li><a href="https://dict.eudic.net/dicts/en/layer" target="_blank">layer</a>  n. 层， 层次</li>
+<li><a href="https://dict.eudic.net/dicts/en/theme" target="_blank">theme</a>  n. 主题， 题目</li>
+<li><a href="https://dict.eudic.net/dicts/en/reverse" target="_blank">reverse</a>  vi. 反向，倒转 adj. 反向的； 相反的； 颠倒的 vt. 撤销，废除；使完全相反，彻底转变；使反转，使次序颠倒 n. 相反情况，对立面；反面，背面，后面；损失，倒退</li>
+<li><a href="https://dict.eudic.net/dicts/en/feasible" target="_blank">feasible</a>  adj. 可行的， 可能的</li>
+<li><a href="https://dict.eudic.net/dicts/en/potential" target="_blank">potential</a>  adj. 潜在的，可能的 n. 潜力， 潜能</li>
+<li><a href="https://dict.eudic.net/dicts/en/combination" target="_blank">combination</a>  n. 结合， 联合； 化合</li>
+<li><a href="https://dict.eudic.net/dicts/en/process" target="_blank">process</a>  n. 过程；制作方法；程序 vt. 加工， 办理</li>
+<li><a href="https://dict.eudic.net/dicts/en/stack" target="_blank">stack</a>  n. 堆，垛 vt. 堆积， 堆放于</li>
+<li><a href="https://dict.eudic.net/dicts/en/impact" target="_blank">impact</a>  v. 影响， 作用， 冲击 n. [Im'pækt]</li>
+<li><a href="https://dict.eudic.net/dicts/en/relative" target="_blank">relative</a>  adj. 有关系的，相对的 n. 亲属， 亲戚</li>
+<li><a href="https://dict.eudic.net/dicts/en/legal" target="_blank">legal</a>  adj. 法律的； 合法的</li>
+<li><a href="https://dict.eudic.net/dicts/en/planet" target="_blank">planet</a>  n. 行星</li>
+<li><a href="https://dict.eudic.net/dicts/en/acceptance" target="_blank">acceptance</a>  n. 接受， 承认； 容忍</li>
+<li><a href="https://dict.eudic.net/dicts/en/beneficial" target="_blank">beneficial</a>  adj. 有利的， 有益的</li>
+<li><a href="https://dict.eudic.net/dicts/en/whereas" target="_blank">whereas</a>  conj. 然而， 但是， 尽管</li>
+<li><a href="https://dict.eudic.net/dicts/en/afford" target="_blank">afford</a>  vt. 担负得起； 提供</li>
+<li><a href="https://dict.eudic.net/dicts/en/instantaneous" target="_blank">instantaneous</a>  adj. 瞬间的， 即刻的</li>
+<li><a href="https://dict.eudic.net/dicts/en/stream" target="_blank">stream</a>  v. 流出， 涌出 n. 河，溪流；一股，一串</li>
+<li><a href="https://dict.eudic.net/dicts/en/revenue" target="_blank">revenue</a>  n. 收入， 收益； 税收， 岁入</li>
+<li><a href="https://dict.eudic.net/dicts/en/combine" target="_blank">combine</a>  v. 结合，联合；化合 n. 联合企业； 联合收割机</li>
+<li><a href="https://dict.eudic.net/dicts/en/background" target="_blank">background</a>  n. 出身背景， 经历； 背景资料； 背景， 底子</li>
+<li><a href="https://dict.eudic.net/dicts/en/nonetheless" target="_blank">nonetheless</a>  adv. 尽管如此， 依然， 然而</li>
+<li><a href="https://dict.eudic.net/dicts/en/transform" target="_blank">transform</a>  vt. 使改观， 改革； 变换， 把…转换成</li>
+<li><a href="https://dict.eudic.net/dicts/en/execution" target="_blank">execution</a>  n. 死刑； 实行， 执行， 履行； 演奏， 表演</li>
+<li><a href="https://dict.eudic.net/dicts/en/execute" target="_blank">execute</a>  vt. 将…处死； 实施</li>
+<li><a href="https://dict.eudic.net/dicts/en/perspective" target="_blank">perspective</a>  n. 视角， 观点； 远景， 景观； 透视画法， 透视图</li>
+<li><a href="https://dict.eudic.net/dicts/en/definitely" target="_blank">definitely</a>  adv. 一定地， 明确地</li>
+<li><a href="https://dict.eudic.net/dicts/en/impart" target="_blank">impart</a>  vt. 告知， 透露； 赋予， 给予</li>
+<li><a href="https://dict.eudic.net/dicts/en/agent" target="_blank">agent</a>  n. 代理人， 代理商； 政府代表； 动因， 原因； 剂</li>
+<li><a href="https://dict.eudic.net/dicts/en/project" target="_blank">project</a>  v. 伸出； 投射； 放映 n. 方案， 计划； 课题， 项目； 工程</li>
+<li><a href="https://dict.eudic.net/dicts/en/awkward" target="_blank">awkward</a>  adj. 笨拙的， 尴尬的； 难操纵的， 使用不便的； 不灵巧的</li>
+<li><a href="https://dict.eudic.net/dicts/en/update" target="_blank">update</a>  vt. 更新；使现代化 n. 最新信息</li>
+<li><a href="https://dict.eudic.net/dicts/en/assistance" target="_blank">assistance</a>  n. 协助， 援助</li>
+<li><a href="https://dict.eudic.net/dicts/en/definition" target="_blank">definition</a>  n. 定义， 释义， 定界； 清晰， 鲜明</li>
+<li><a href="https://dict.eudic.net/dicts/en/apply" target="_blank">apply</a>  vi. 应用，实施，使用；适用；申请，请求 vt. 涂， 敷， 施</li>
+<li><a href="https://dict.eudic.net/dicts/en/trend" target="_blank">trend</a>  vi. 伸向，倾向 n. 倾向</li>
+<li><a href="https://dict.eudic.net/dicts/en/convince" target="_blank">convince</a>  vt. 使确信， 使信服， 说服</li>
+<li><a href="https://dict.eudic.net/dicts/en/advantage" target="_blank">advantage</a>  n. 优点， 优势； 好处</li>
+<li><a href="https://dict.eudic.net/dicts/en/command" target="_blank">command</a>  n&amp;vt. 命令， 指挥； 控制</li>
+<li><a href="https://dict.eudic.net/dicts/en/slash" target="_blank">slash</a>  vt. 砍；大幅度削减 n. 砍， 砍痕； 斜线号</li>
+<li><a href="https://dict.eudic.net/dicts/en/vague" target="_blank">vague</a>  adj. 不明确的； 含糊的； 暧昧的</li>
+<li><a href="https://dict.eudic.net/dicts/en/score" target="_blank">score</a>  n. 得分，比数，成绩；二十 vt. 分， 给…打分； 画线于； 获胜</li>
+<li><a href="https://dict.eudic.net/dicts/en/detail" target="_blank">detail</a>  n. 细节，枝节；零件 vt. 详细说明</li>
+<li><a href="https://dict.eudic.net/dicts/en/weird" target="_blank">weird</a>  adj. 古怪的， 离奇的； 怪诞的， 神秘而可怕的</li>
+<li><a href="https://dict.eudic.net/dicts/en/ridiculous" target="_blank">ridiculous</a>  adj. 荒谬的， 可笑的</li>
+<li><a href="https://dict.eudic.net/dicts/en/slap" target="_blank">slap</a>  vt. 掴，掌击，拍；啪的一声放 n. 掴， 掌击， 拍</li>
+<li><a href="https://dict.eudic.net/dicts/en/educational" target="_blank">educational</a>  adj. 教育的， 教育性的</li>
+<li><a href="https://dict.eudic.net/dicts/en/responsible" target="_blank">responsible</a>  adj. 需负责任的， 承担责任的； 有责任感的， 负责可靠的； 责任重大的， 重要的</li>
+<li><a href="https://dict.eudic.net/dicts/en/release" target="_blank">release</a>  n&amp;vt. 释放， 排放； 解除， 解脱； 放开， 松开； 发布； 发行</li>
+<li><a href="https://dict.eudic.net/dicts/en/converge" target="_blank">converge</a>  vi. 会合， 互相靠拢； 聚集， 集中； 趋近</li>
+<li><a href="https://dict.eudic.net/dicts/en/partial" target="_blank">partial</a>  adj. 部分的； 不公平的； 偏爱的， 偏袒的</li>
+<li><a href="https://dict.eudic.net/dicts/en/manufacturer" target="_blank">manufacturer</a>  n. 制造商， 制造厂</li>
+<li><a href="https://dict.eudic.net/dicts/en/prototype" target="_blank">prototype</a>  n. 原型</li>
+<li><a href="https://dict.eudic.net/dicts/en/rigorous" target="_blank">rigorous</a>  adj. 严密的， 缜密的； 严格的， 严厉的</li>
+<li><a href="https://dict.eudic.net/dicts/en/financial" target="_blank">financial</a>  adj. 财政的， 金融的</li>
+<li><a href="https://dict.eudic.net/dicts/en/specific" target="_blank">specific</a>  adj. 特有的；明确的；具体的 n. 详情， 细节</li>
+<li><a href="https://dict.eudic.net/dicts/en/application" target="_blank">application</a>  n. 申请， 申请书； 施用， 涂抹； 应用， 实施； 实用性</li>
+<li><a href="https://dict.eudic.net/dicts/en/productive" target="_blank">productive</a>  adj. 多产的， 富饶的； 富有成效的</li>
+<li><a href="https://dict.eudic.net/dicts/en/hypothesis" target="_blank">hypothesis</a>  n. 假设， 假说， 前提</li>
+<li><a href="https://dict.eudic.net/dicts/en/accurate" target="_blank">accurate</a>  adj. 准确的， 正确无误的</li>
+<li><a href="https://dict.eudic.net/dicts/en/maintain" target="_blank">maintain</a>  vt. 维持； 维修， 保养； 主张； 赡养</li>
+<li><a href="https://dict.eudic.net/dicts/en/remain" target="_blank">remain</a>  vi. 剩下，余留，保持；仍然是 n. 残余； 残骸； 遗迹</li>
+<li><a href="https://dict.eudic.net/dicts/en/toss" target="_blank">toss</a>  vi. 掷钱币来决定；翻来覆去 vt. 扔，抛，掷；猛抬；拌；掷；使摇动，使颠簸 n. 掷钱币来决定； 猛抬头</li>
+<li><a href="https://dict.eudic.net/dicts/en/guarantee" target="_blank">guarantee</a>  n. 保证，担保物 vt. 保证， 担保</li>
+<li><a href="https://dict.eudic.net/dicts/en/acquire" target="_blank">acquire</a>  vt. 取得， 获得； 学到</li>
+<li><a href="https://dict.eudic.net/dicts/en/debate" target="_blank">debate</a>  n&amp;v. 争论， 辩论</li>
+<li><a href="https://dict.eudic.net/dicts/en/negative" target="_blank">negative</a>  adj. 否定的，消极的；负的，阴性的 n. 负片， 底片； 负数</li>
+<li><a href="https://dict.eudic.net/dicts/en/momentum" target="_blank">momentum</a>  n. 动力， 冲力， 势头； 动量</li>
+<li><a href="https://dict.eudic.net/dicts/en/promising" target="_blank">promising</a>  adj. 有希望的， 有前途的</li>
+<li><a href="https://dict.eudic.net/dicts/en/slide" target="_blank">slide</a>  v. 滑；悄悄地移动 n. 滑动； 滑道， 滑面； 幻灯片</li>
+<li><a href="https://dict.eudic.net/dicts/en/vehicle" target="_blank">vehicle</a>  n. 车辆， 机动车； 传播媒介， 工具， 手段</li>
+<li><a href="https://dict.eudic.net/dicts/en/web" target="_blank">web</a>  n. 网； 网络； 错综复杂的事物</li>
+<li><a href="https://dict.eudic.net/dicts/en/electricity" target="_blank">electricity</a>  n. 电</li>
+<li><a href="https://dict.eudic.net/dicts/en/economic" target="_blank">economic</a>  adj. 经济的；经济学的 n. 经济学； 经济状况</li>
+<li><a href="https://dict.eudic.net/dicts/en/mature" target="_blank">mature</a>  adj. 成熟的，成年人的；深思熟虑的；到期的，应支付的 vt. 使成熟</li>
+<li><a href="https://dict.eudic.net/dicts/en/faith" target="_blank">faith</a>  n. 信任， 信心； 信仰， 信条</li>
+<li><a href="https://dict.eudic.net/dicts/en/inspiration" target="_blank">inspiration</a>  n. 灵感； 鼓舞人心的人</li>
+<li><a href="https://dict.eudic.net/dicts/en/electric" target="_blank">electric</a>  adj. 电的， 电动的</li>
+<li><a href="https://dict.eudic.net/dicts/en/draft" target="_blank">draft</a>  n. 草稿；汇票；征兵；通风 vt. 起草； 征募</li>
+<li><a href="https://dict.eudic.net/dicts/en/complex" target="_blank">complex</a>  adj. 由许多部分组成的，复合的；复杂的，难懂的 n. 综合体， 集合体； 情结， 夸大的情绪反应</li>
+<li><a href="https://dict.eudic.net/dicts/en/innovation" target="_blank">innovation</a>  n. 新方法， 新事物； 革新， 创新</li>
+<li><a href="https://dict.eudic.net/dicts/en/essential" target="_blank">essential</a>  adj. 必要的，本质的 n. 要素； 必需品</li>
+<li><a href="https://dict.eudic.net/dicts/en/suspicious" target="_blank">suspicious</a>  adj. 猜疑的， 疑心的； 可疑的； 表示怀疑的</li>
+<li><a href="https://dict.eudic.net/dicts/en/complain" target="_blank">complain</a>  vi. 抱怨， 诉苦； 控告， 投诉</li>
+<li><a href="https://dict.eudic.net/dicts/en/management" target="_blank">management</a>  n. 管理； 处理； 管理部门， 管理人员</li>
+<li><a href="https://dict.eudic.net/dicts/en/avoid" target="_blank">avoid</a>  vt. 避免， 躲开； 撤销</li>
+<li><a href="https://dict.eudic.net/dicts/en/expert" target="_blank">expert</a>  adj. 熟练的 n. 专家</li>
+<li><a href="https://dict.eudic.net/dicts/en/decade" target="_blank">decade</a>  n. 十年， 十年期</li>
+<li><a href="https://dict.eudic.net/dicts/en/output" target="_blank">output</a>  n. 产量；输出，输出功率 vt. 输出</li>
+<li><a href="https://dict.eudic.net/dicts/en/contrast" target="_blank">contrast</a>  vi. 形成对比， 对比之下显出区别 n. 对比，对照；反差[kən'trɑːst] vt. 对比，对照</li>
+<li><a href="https://dict.eudic.net/dicts/en/diffuse" target="_blank">diffuse</a>  v. 扩散， 弥漫； 传播， 散布 adj. 冗长的， 漫无边际的； 四散的， 弥漫的</li>
+<li><a href="https://dict.eudic.net/dicts/en/widespread" target="_blank">widespread</a>  adj. 分布广泛的， 普遍的</li>
+<li><a href="https://dict.eudic.net/dicts/en/expansion" target="_blank">expansion</a>  n. 扩大； 扩充； 扩张； 膨胀</li>
+<li><a href="https://dict.eudic.net/dicts/en/mental" target="_blank">mental</a>  adj. 心理的， 精神的， 思想上的； 精神病的； 智力的</li>
+<li><a href="https://dict.eudic.net/dicts/en/productivity" target="_blank">productivity</a>  n. 生产力； 生产率</li>
+<li><a href="https://dict.eudic.net/dicts/en/consumer" target="_blank">consumer</a>  n. 消费者， 用户， 消耗者</li>
+<li><a href="https://dict.eudic.net/dicts/en/brand" target="_blank">brand</a>  n. 商标，牌子 vt. 铭刻， 打烙印于； 加污名于， 谴责</li>
+<li><a href="https://dict.eudic.net/dicts/en/access" target="_blank">access</a>  n. 接近；通道，入口；接近的机会 vt. 存取</li>
+<li><a href="https://dict.eudic.net/dicts/en/conference" target="_blank">conference</a>  n. 会议， 讨论会； 讨论， 商谈</li>
+<li><a href="https://dict.eudic.net/dicts/en/current" target="_blank">current</a>  adj. 当前的，通用的；流行的，流传的 n. 潮流； 电流； 趋势， 倾向</li>
+<li><a href="https://dict.eudic.net/dicts/en/available" target="_blank">available</a>  adj. 现成可使用的， 通用的； 可取的； 联系的； 可得到的</li>
+<li><a href="https://dict.eudic.net/dicts/en/dynamic" target="_blank">dynamic</a>  adj. 动力的， 动力学的； 动态的； 有活力的， 有生气的</li>
+<li><a href="https://dict.eudic.net/dicts/en/generate" target="_blank">generate</a>  vt. 发生， 引起； 生殖</li>
+<li><a href="https://dict.eudic.net/dicts/en/figure" target="_blank">figure</a>  vi. 出现；合乎情理 n. 数字；人物；算术；体型，风姿；轮廓；画像，塑像；图，图形 vt. 计算； 认为， 猜想</li>
+<li><a href="https://dict.eudic.net/dicts/en/beyond" target="_blank">beyond</a>  adv. 在更远处， 再往后 prep. 在…的那边，远于；迟于；越出</li>
+<li><a href="https://dict.eudic.net/dicts/en/proof" target="_blank">proof</a>  adj. 耐…的， 能防…的 n. 证据，证明；校样，样张</li>
+<li><a href="https://dict.eudic.net/dicts/en/overhead" target="_blank">overhead</a>  adv. 在头顶上 adj. 在头顶上的；架空的 n. 经常费用， 管理费用</li>
+<li><a href="https://dict.eudic.net/dicts/en/conclude" target="_blank">conclude</a>  vi. 结束， 终了 vt. 推断出，推论出；缔结，议定</li>
+<li><a href="https://dict.eudic.net/dicts/en/distribution" target="_blank">distribution</a>  n. 分发， 分配， 分布</li>
+<li><a href="https://dict.eudic.net/dicts/en/feature" target="_blank">feature</a>  n. 特征，特色；面貌；特写，专题节目；故事片 vt. 突出； 由…主演</li>
+<li><a href="https://dict.eudic.net/dicts/en/token" target="_blank">token</a>  adj. 象征性的， 装样子的 n. 筹码；信物，标志，纪念品；代金券，礼券</li>
+<li><a href="https://dict.eudic.net/dicts/en/massive" target="_blank">massive</a>  adj. 大的， 大而重的； 大块的； 大量的， 大规模的</li>
+<li><a href="https://dict.eudic.net/dicts/en/realistic" target="_blank">realistic</a>  adj. 现实的； 实际可行的； 现实主义的， 逼真的</li>
+<li><a href="https://dict.eudic.net/dicts/en/scale" target="_blank">scale</a>  n. 大小，规模；等级，级别；天平，磅秤；比例；刻度，标度；鳞 vt. 攀登， 爬越</li>
+<li><a href="https://dict.eudic.net/dicts/en/aware" target="_blank">aware</a>  adj. 知道的， 意识到的</li>
+<li><a href="https://dict.eudic.net/dicts/en/security" target="_blank">security</a>  n. 安全， 保障； 抵押品； 证券</li>
+<li><a href="https://dict.eudic.net/dicts/en/intent" target="_blank">intent</a>  adj. 专心的， 专注的； 急切的 n. 意图，意向，目的</li>
+<li><a href="https://dict.eudic.net/dicts/en/response" target="_blank">response</a>  n. 回答， 答复； 反应， 响应</li>
+</ul>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

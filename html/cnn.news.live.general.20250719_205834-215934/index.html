@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>cnn.news.live.general: London Time 2025-07-19 20:58 - 21:59</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="President Trump sues Wall Street Journal over Epstein-related libel claims as his base rallies amid DOJ scrutiny.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>cnn.news.live.general: London Time 2025-07-19 20:58 - 21:59</h1>
+<p>【CNN新闻 20250720 特朗普指控《华尔街日报》诽谤｜美国民众对政府处理爱泼斯坦案件的方式表示不信任｜特朗普在共和党中的支持率未受影响】</p>
+<p>Summary:
+President Trump sues Wall Street Journal over Epstein-related libel claims as his base rallies amid DOJ scrutiny.</p>
+<p>摘要：
+特朗普总统就爱泼斯坦相关诽谤指控起诉《华尔街日报》，其支持者在司法部审查中集结，美国民众对政府处理爱泼斯坦案件的方式表示不信任，特朗普在共和党中的支持率未受影响。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 23 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're in the scene of newsroom.</p>
+<p>您现在身处新闻演播室。</p>
+<p><button class="play-button sentence" id="s-00-00-02-699" data-start="00:00:02,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Jessica Deane in New York and tonight president Donald Trump taking legal action against another media organization.</p>
+<p>我是纽约的杰西卡·迪恩，今晚唐纳德·特朗普总统正对另一家媒体机构采取法律行动。</p>
+<p><button class="play-button sentence" id="s-00-00-11-334" data-start="00:00:11,334" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this time it's the Wall Street Journal's publisher Dow Jones.</p>
+<p>这次是《华尔街日报》的出版商道琼斯公司。</p>
+<p><button class="play-button sentence" id="s-00-00-15-064" data-start="00:00:15,064" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump is doing the company.</p>
+<p>特朗普正在起诉该公司。</p>
+<p><button class="play-button sentence" id="s-00-00-16-608" data-start="00:00:16,608" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's owner, Rupert Murdock, and two reporters for libel after eight story on a collection of letters reportedly gifted to Jeffrey Epstein for his 50th birthday.</p>
+<p>其所有者鲁珀特·默多克和两名记者因一篇关于据称赠送给杰弗里·爱泼斯坦50岁生日的一批信件报道而被控诽谤。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959975" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-24-983" data-start="00:00:24,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the letters the newspaper says included a doodle of a naked woman's shape with Trump's name on it and an imagined conversation on how Trump and Epstein share a secret.</p>
+<p>报纸称其中一封信包含一幅裸体女性涂鸦，上有特朗普的名字，以及一段关于特朗普与爱泼斯坦共享秘密的虚构对话。</p>
+<p><button class="play-button sentence" id="s-00-00-34-967" data-start="00:00:34,967" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president denies he wrote the note.</p>
+<p>总统否认写过该便条。</p>
+<p><button class="play-button sentence" id="s-00-00-37-460" data-start="00:00:37,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The suit comes amid a firestorm of criticism over the Justice Department's handling of the Epstein case with much of it coming from Trump's own mega base.</p>
+<p>诉讼之际，司法部对爱泼斯坦案的处理引发激烈批评，其中许多来自特朗普的MAGA阵营。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-46-800" data-start="00:00:46,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But many mega supporters now rallying around the president and senior reporter Betsy Klein is joining us now.</p>
+<p>但许多MAGA支持者正集结支持总统，资深记者贝琪·克莱恩现在加入我们。</p>
+<p><button class="play-button sentence" id="s-00-00-53-375" data-start="00:00:53,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Betsy, the Justice Department now asking a judge to release years old grand jury testimony related to Epstein to release that out to the public.</p>
+<p>贝琪，司法部正要求法官公开多年前与爱泼斯坦相关的大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-01-01-122" data-start="00:01:01,122" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All of this is we're seeing kind of Trump's full base, including mega world, start to rally behind him once again.</p>
+<p>我们看到特朗普的整个支持基础，包括MAGA群体，再次开始团结在他身后。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-07-886" data-start="00:01:07,886" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is the Trump administration hoping to accomplish with this?</p>
+<p>特朗普政府希望通过此举实现什么？</p>
+<p><button class="play-button sentence" id="s-00-01-10-775" data-start="00:01:10,775" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is are they likely to accomplish?</p>
+<p>他们可能实现什么？</p>
+<p><button class="play-button sentence" id="s-00-01-12-319" data-start="00:01:12,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the president's preference in all of this is for this to go away.</p>
+<p>总统的倾向是让此事平息。</p>
+<p><button class="play-button sentence" id="s-00-01-16-992" data-start="00:01:16,992" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one of the reason he just hasn't been able to change the narrative is that the president himself and other top officials, vice president JD Vance attorney general Pam Bondy FBI director Cash Patel and his deputy Dan Bangeena were among those propagating for years conspiracy theories around Jeffrey Epstein.</p>
+<p>他未能扭转舆论的原因之一是，总统本人及其他高层官员——副总统JD·万斯、司法部长帕姆·邦迪、FBI局长卡什·帕特尔及其副手丹·班吉纳——多年来一直在传播关于杰弗里·爱泼斯坦的阴谋论。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959905" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-34-675" data-start="00:01:34,675" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's been nearly two weeks now since the Department of Justice and the FBI released that memo that concluded that Epstein died by suicide and that there was no so-called client list.</p>
+<p>距离司法部和FBI发布备忘录称爱泼斯坦死于自杀且不存在所谓“客户名单”已近两周。</p>
+<p><button class="play-button sentence" id="s-00-01-45-694" data-start="00:01:45,694" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Since then, mega world has been in full revolt demanding transparency documents and more information about all of this setting up really a loyalty test between President Trump and this movement that he created.</p>
+<p>此后，MAGA群体全面抗议，要求透明文件及更多信息，这实际上成为特朗普总统与其所创运动之间的忠诚度考验。</p>
+<p><button class="play-button sentence" id="s-00-01-58-784" data-start="00:01:58,784" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president announced that he was asking his attorney general Pam Bondy to unseal all pertinent testimony related to Jeffrey Epstein.</p>
+<p>总统宣布要求司法部长帕姆·邦迪解封所有与杰弗里·爱泼斯坦相关的证词。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959873" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-06-765" data-start="00:02:06,765" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government filed that request in a federal court on Friday, but this could be a lengthy process.</p>
+<p>政府周五向联邦法院提交该请求，但这可能是个漫长过程。</p>
+<p><button class="play-button sentence" id="s-00-02-13-490" data-start="00:02:13,490" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, if that request is indeed granted, it really represents a small fraction of the overall testimony against Epstein, but it really shouldn't be a surprise that the president's most ardent and vocal supporters are upset and in revolt about all of this.</p>
+<p>若请求获准，其仅代表针对爱泼斯坦的全部证词的一小部分，但总统最狂热支持者的不满与抗议并不令人意外。</p>
+<p><button class="play-button sentence" id="s-00-02-29-535" data-start="00:02:29,535" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president, appearing to acknowledge that in a post to social media this earlier this morning, he said, quote, I've asked the Justice Department to release all grand jury testimony with respect to Jeffrey Epstein, subject only to court approval with that being said.</p>
+<p>总统今早在社交媒体发帖承认此事，称“我已要求司法部公开所有与杰弗里·爱泼斯坦相关的大陪审团证词，仅需法院批准”。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959836" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-43-641" data-start="00:02:43,641" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And even if the court gave its full and unwavering approval, nothing will be good enough for the troublemakers and radical efflunatics making the request.</p>
+<p>即便法院完全批准，对提出要求的麻烦制造者和激进狂热分子而言也永远不够。</p>
+<p><button class="play-button sentence" id="s-00-02-51-728" data-start="00:02:51,728" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It will always be more, more, more.</p>
+<p>他们总会要求更多、更多、更多。</p>
+<p><button class="play-button sentence" id="s-00-02-53-933" data-start="00:02:53,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the pressure continued to mount when the Wall Street Journal published that story with a letter that appeared to be signed by President Trump to Jeffrey Epstein on the occasion of his 50th birthday back in 2003.</p>
+<p>压力持续升级，《华尔街日报》报道了一封据称由特朗普总统于2003年签署、祝贺爱泼斯坦50岁生日的信件。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959813" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-06-752" data-start="00:03:06,752" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It included that picture drawing of a naked woman, the president calling that fake and now making good on his threat to suit the Wall Street Journal.</p>
+<p>信中包含一幅裸体女性素描，总统称其伪造，并兑现威胁起诉《华尔街日报》。</p>
+<p><button class="play-button sentence" id="s-00-03-16-069" data-start="00:03:16,069" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's publishers and reporters for libel, assault and slander.</p>
+<p>起诉其出版商及记者诽谤、攻击与诋毁。</p>
+<p><button class="play-button sentence" id="s-00-03-20-433" data-start="00:03:20,433" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's spokesperson for Dow Jones, the newspapers publisher, defending the paper in a statement to CNN saying, quote, we have full confidence in the rigor and accuracy of our reporting and will vigorously defend against any lawsuit.</p>
+<p>道琼斯公司发言人向CNN声明为报道辩护：“我们对报道的严谨与准确性充满信心，将积极应诉。”</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959785" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-34-598" data-start="00:03:34,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the president, of course, reverting to a familiar playbook going after the media and Democrats and really hoping that all of this can be enough to turn the tide and bring his supporters back into the fold.</p>
+<p>但总统当然重施故技，攻击媒体与民主党，希望借此扭转局势，赢回支持者。</p>
+<p><button class="play-button sentence" id="s-00-03-46-438" data-start="00:03:46,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Betsy Klein at the White House.</p>
+<p>好的，白宫的贝琪·克莱恩。</p>
+<p><button class="play-button sentence" id="s-00-03-48-539" data-start="00:03:48,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for your reporting.</p>
+<p>非常感谢您的报道。</p>
+<p><button class="play-button sentence" id="s-00-03-50-399" data-start="00:03:50,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Former deputy FBI director and senior law enforcement analyst Andrew McCabe is joining us now on this.</p>
+<p>前FBI副局长、资深执法分析师安德鲁·麦凯布就此加入我们。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-55-186" data-start="00:03:55,186" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he thinks for being here with us, the Trump administration has asked for what it calls pertinent grand jury testimony to be released.</p>
+<p>他认为特朗普政府要求公开所谓“相关”大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-04-02-476" data-start="00:04:02,476" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From your experience with investigations, what might this include when they're saying grand jury testimony?</p>
+<p>根据您的调查经验，所谓大陪审团证词可能包含什么？</p>
+<p><button class="play-button sentence" id="s-00-04-09-261" data-start="00:04:09,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What can people actually expect from this?</p>
+<p>人们实际能期待什么？</p>
+<p><button class="play-button sentence" id="s-00-04-12-240" data-start="00:04:12,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sure.</p>
+<p>当然。</p>
+<p><button class="play-button sentence" id="s-00-04-12-726" data-start="00:04:12,726" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think probably it's good to rule out the things they should not expect.</p>
+<p>我认为最好先排除他们不应期待的内容。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959741" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-18-765" data-start="00:04:18,765" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So grand jury testimony is a very, very small subset of the information that's in the investigative files.</p>
+<p>大陪审团证词仅是调查文件中极小部分。</p>
+<p><button class="play-button sentence" id="s-00-04-25-687" data-start="00:04:25,687" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So everything else would not be included.</p>
+<p>其余内容均不包含在内。</p>
+<p><button class="play-button sentence" id="s-00-04-28-536" data-start="00:04:28,536" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And because the president's directive specifically requested grand jury testimony, that means all of the other information that investigators gather with the help of the grand jury through subpoenas, like phone records, email records, things like that.</p>
+<p>因总统明确要求大陪审团证词，意味着通过传票获取的其他信息——如通话记录、邮件记录等——均不公开。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959715" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-44-539" data-start="00:04:44,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> None of that would be included either.</p>
+<p>这些也不会包含。</p>
+<p><button class="play-button sentence" id="s-00-04-46-717" data-start="00:04:46,717" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you're simply talking about live witnesses who came into the grand jury and testified.</p>
+<p>因此仅涉及亲自到大陪审团作证的证人。</p>
+<p><button class="play-button sentence" id="s-00-04-52-287" data-start="00:04:52,287" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we focus on that just for a minute.</p>
+<p>我们稍作聚焦。</p>
+<p><button class="play-button sentence" id="s-00-04-54-639" data-start="00:04:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's remember that the only two people that they sought to indict in those cases were Jeffrey Epstein and Gilein Maxwell.</p>
+<p>需记得该案中仅起诉杰弗里·爱泼斯坦和吉莱恩·麦克斯韦尔。</p>
+<p><button class="play-button sentence" id="s-00-05-02-208" data-start="00:05:02,208" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That means the people who came in and testified were likely asked questions primarily or only about Epstein and Maxwell, which means that testimony might not include any of the information that most of the conspiracy theorists are really anxious to get their hands on, which is the identities of other people that we haven't heard about confirming that maybe rich and powerful people were engaged in this activity with Epstein.</p>
+<p>意味着证人证词或仅涉及爱泼斯坦与麦克斯韦尔，未必包含阴谋论者渴望的“未曝光权贵参与者”信息。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959669" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-30-415" data-start="00:05:30,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's unlikely any of that will be in there.</p>
+<p>我认为这些内容不太可能出现。</p>
+<p><button class="play-button sentence" id="s-00-05-33-204" data-start="00:05:33,204" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then finally, if anything is released, and that's a big if because there are all kinds of other factors that the judge is going to consider here, all of the identities of people who are referred to in the testimony are going to be redacted out.</p>
+<p>即便有内容公开（法官需考量诸多因素），证词中涉及的所有身份信息将被涂黑。</p>
+<p><button class="play-button sentence" id="s-00-05-47-142" data-start="00:05:47,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think people who think that this is going to happen quickly, and it's going to be like a lot of interesting information really need to reset their expectations.</p>
+<p>因此，认为此事会快速解决或提供大量有趣信息的人需调整预期。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959644" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-55-869" data-start="00:05:55,869" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And a couple things, you have to underline that the judge will rule on this.</p>
+<p>需强调法官将裁决此事。</p>
+<p><button class="play-button sentence" id="s-00-06-00-190" data-start="00:06:00,190" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So even if he wanted to, President Trump, could he direct DOJ or the FBI to release much more than what he's already directed them to do?</p>
+<p>即使特朗普总统愿意，他能指令司法部或FBI公开超出当前要求的内容吗？</p>
+<p><button class="play-button sentence" id="s-00-06-09-994" data-start="00:06:09,994" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And will that also be subject to a judge?</p>
+<p>这是否也需法官批准？</p>
+<p><button class="play-button sentence" id="s-00-06-12-809" data-start="00:06:12,809" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, he could.</p>
+<p>他可以。</p>
+<p><button class="play-button sentence" id="s-00-06-14-327" data-start="00:06:14,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So he can't direct them to release the materials that have been sealed by the court.</p>
+<p>但他无法指令公开法院密封的材料。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959618" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-21-271" data-start="00:06:21,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That has to go through the court.</p>
+<p>这需经法院程序。</p>
+<p><button class="play-button sentence" id="s-00-06-22-658" data-start="00:06:22,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's like what they're doing with the testimony, grand jury testimony, but all of the other information, things like the write-ups of FBI interviews of witnesses and victims and other people, the internal FBI documents that detail what sort of investigative steps they've taken, what surveillance they've conducted, informants that they talk to, all kinds of things like that.</p>
+<p>大陪审团证词需法院批准，但其他信息——如FBI对证人、受害者的访谈记录、内部调查文件、监控记录、线人信息等——则不同。</p>
+<p><button class="play-button sentence" id="s-00-06-44-301" data-start="00:06:44,301" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> None of that is covered by the court ceiling.</p>
+<p>这些不受法院密封限制。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-46-903" data-start="00:06:46,903" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so technically, that's within the province of DOJ and the President to decide to release.</p>
+<p>技术上，司法部与总统有权决定公开。</p>
+<p><button class="play-button sentence" id="s-00-06-52-297" data-start="00:06:52,297" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's a lot of reasons why you shouldn't release things like that.</p>
+<p>但有许多理由不应公开此类信息。</p>
+<p><button class="play-button sentence" id="s-00-06-55-959" data-start="00:06:55,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The biggest being, there are many people identified in all that activity who were never charged with a crime.</p>
+<p>最重要的是，许多被提及者从未被指控犯罪。</p>
+<p><button class="play-button sentence" id="s-00-07-01-871" data-start="00:07:01,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so there's not enough evidence to make a case that they did anything wrong.</p>
+<p>无足够证据证明其有不当行为。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959574" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-05-600" data-start="00:07:05,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So if we now release their information, you're going to really destroy a lot of reputations probably unfairly.</p>
+<p>若公开其信息，可能不公正地摧毁许多人的声誉。</p>
+<p><button class="play-button sentence" id="s-00-07-12-656" data-start="00:07:12,656" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you mentioned this could take some time.</p>
+<p>您提到此事或耗时较长。</p>
+<p><button class="play-button sentence" id="s-00-07-16-090" data-start="00:07:16,090" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How long could this take?</p>
+<p>具体需多久？</p>
+<p><button class="play-button sentence" id="s-00-07-19-040" data-start="00:07:19,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So great question.</p>
+<p>好问题。</p>
+<p><button class="play-button sentence" id="s-00-07-20-130" data-start="00:07:20,130" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we know that the government has already submitted their motion.</p>
+<p>政府已提交动议。</p>
+<p><button class="play-button sentence" id="s-00-07-23-949" data-start="00:07:23,949" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's officially on the court's calendar.</p>
+<p>正式进入法院日程。</p>
+<p><button class="play-button sentence" id="s-00-07-26-268" data-start="00:07:26,268" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The court is going to have to have hearings about this.</p>
+<p>法院需举行听证会。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959551" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-28-901" data-start="00:07:28,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're going to want to hear from the government in person.</p>
+<p>将听取政府当面陈述。</p>
+<p><button class="play-button sentence" id="s-00-07-31-591" data-start="00:07:31,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But they're also going to give it make an opportunity for other people, i.e. people who would be impacted by the release of this testimony to come in and state their preference.</p>
+<p>同时允许受证词公开影响者陈述意见。</p>
+<p><button class="play-button sentence" id="s-00-07-41-512" data-start="00:07:41,512" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's certainly possible that a lot of those people will come in and say, no, we don't want these things released.</p>
+<p>很可能许多人会反对公开。</p>
+<p><button class="play-button sentence" id="s-00-07-47-363" data-start="00:07:47,363" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you can imagine victims who may have testified in front of the grand jury don't want to be identified.</p>
+<p>例如大陪审团作证的受害者不希望身份曝光。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959526" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-53-146" data-start="00:07:53,146" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They don't want to have, you know, they don't want their, their, the things they said or their identity to be released.</p>
+<p>不愿其陈述或身份被公开。</p>
+<p><button class="play-button sentence" id="s-00-07-58-493" data-start="00:07:58,493" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the judge is likely to give those people a lot of consideration in this balancing test.</p>
+<p>法官在权衡时将重点考虑这些人的诉求。</p>
+<p><button class="play-button sentence" id="s-00-08-03-133" data-start="00:08:03,133" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's possible that at the end of this long process, the judge doesn't release anything.</p>
+<p>最终法官可能决定不公开任何内容。</p>
+<p><button class="play-button sentence" id="s-00-08-08-517" data-start="00:08:08,517" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's, it's really up in the air right now.</p>
+<p>因此目前仍是未知数。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959508" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-11-959" data-start="00:08:11,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think so many people out there have been promised some sort of resolution in all of this, either by supporters of the president or just online conspiracy theories by, by others who are now in this administration, that there would be some sort of, again, resolution.</p>
+<p>许多人被总统支持者或现任政府中的阴谋论者承诺此事会有“解决方案”。</p>
+<p><button class="play-button sentence" id="s-00-08-30-055" data-start="00:08:30,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you think that even exists at this point?</p>
+<p>您认为目前存在这种可能吗？</p>
+<p><button class="play-button sentence" id="s-00-08-33-426" data-start="00:08:33,426" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not a chance.</p>
+<p>绝无可能。</p>
+<p><button class="play-button sentence" id="s-00-08-34-599" data-start="00:08:34,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not a chance.</p>
+<p>毫无可能。</p>
+<p><button class="play-button sentence" id="s-00-08-35-772" data-start="00:08:35,772" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think that this issue has been so mythologized primarily by people like Hashtagel and Dan Bangeino and, and Pam Bondi and the things they've said publicly to like fan the flames of this interest.</p>
+<p>此问题被哈什塔格尔、丹·班吉纳、帕姆·邦迪等人的公开言论神化，煽动舆论。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959471" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-48-506" data-start="00:08:48,506" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't think that there's any way that that community will ever be satisfied.</p>
+<p>我不认为该群体会得到满足。</p>
+<p><button class="play-button sentence" id="s-00-08-54-265" data-start="00:08:54,265" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, you know, honestly, I get, I understand people's desire to want to help the victims and protect children.</p>
+<p>诚然，我理解人们帮助受害者、保护儿童的愿望。</p>
+<p><button class="play-button sentence" id="s-00-09-03-862" data-start="00:09:03,862" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is absolutely admirable.</p>
+<p>这值得钦佩。</p>
+<p><button class="play-button sentence" id="s-00-09-06-243" data-start="00:09:06,243" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we don't do that by unleashing a flood of essentially do it yourself, investigators and vigilante justice out on the people whose names might appear in some of these files.</p>
+<p>但不能通过发动“DIY调查”或对文件中提及者实施私刑来实现。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959438" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-21-103" data-start="00:09:21,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's a very toxic mixture that could lead to people taking matters into their own hands, which is never a good idea.</p>
+<p>这种危险组合可能导致民众自行其是，绝非好事。</p>
+<p><button class="play-button sentence" id="s-00-09-28-456" data-start="00:09:28,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's anything less than 100% transparency is not going to satisfy those people.</p>
+<p>因此，除非100%透明，否则无法满足这些人。</p>
+<p><button class="play-button sentence" id="s-00-09-38-411" data-start="00:09:38,411" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the chances of you getting 100% transparency here are almost zero.</p>
+<p>而实现100%透明的概率几乎为零。</p>
+<p><button class="play-button sentence" id="s-00-09-44-420" data-start="00:09:44,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Another question involving this lawsuit with President Trump having now sued Dow Jones and and Rupert Murdock, the reporters involved in that Wall Street Journal story.</p>
+<p>关于特朗普起诉道琼斯、鲁珀特·默多克及《华尔街日报》记者的诉讼。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959404" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-55-637" data-start="00:09:55,637" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Does that lawsuit potentially open up discovery on on both sides?</p>
+<p>此案会否启动双方证据开示程序？</p>
+<p><button class="play-button sentence" id="s-00-10-01-177" data-start="00:10:01,177" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what I'm getting at here is would the president have to be subject to discovery as well?</p>
+<p>重点是总统本人会否也需接受证据开示？</p>
+<p><button class="play-button sentence" id="s-00-10-06-244" data-start="00:10:06,244" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Could more information come out?</p>
+<p>更多信息会否曝光？</p>
+<p><button class="play-button sentence" id="s-00-10-08-892" data-start="00:10:08,892" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely.</p>
+<p>当然。</p>
+<p><button class="play-button sentence" id="s-00-10-10-081" data-start="00:10:10,081" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's is a really interesting aspect to this choice to sue the Dow Jones and the Wall Street Journal.</p>
+<p>起诉道琼斯和《华尔街日报》的选择非常耐人寻味。</p>
+<p><button class="play-button sentence" id="s-00-10-19-014" data-start="00:10:19,014" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So here that the president is the plaintiff in this suit.</p>
+<p>总统作为本案原告。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959377" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-22-605" data-start="00:10:22,605" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And as the plaintiff, he will not enjoy the same sort of protections and privileges that he would enjoy if you were the defendant in a civil suit that was brought by some private citizen.</p>
+<p>作为原告，他无法享有作为民事被告时的保护与特权。</p>
+<p><button class="play-button sentence" id="s-00-10-33-960" data-start="00:10:33,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He has a lot of those as in his in his position as president, he can say, you know, things are subject to presidential privilege or that he essentially doesn't have the time to comply with the process things like that.</p>
+<p>作为总统，他可主张行政特权或以无暇配合程序为由推脱。</p>
+<p><button class="play-button sentence" id="s-00-10-45-785" data-start="00:10:45,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You don't get any of those excuses when you initiate the court process.</p>
+<p>但作为诉讼发起方，他无此类借口。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959349" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-50-445" data-start="00:10:50,445" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So he's going to have to go through discovery just like the Dow Jones will.</p>
+<p>因此他必须像道琼斯一样接受证据开示。</p>
+<p><button class="play-button sentence" id="s-00-10-54-383" data-start="00:10:54,383" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ironically, the thing that he claims is fake, which really I don't think anyone has even seen yet.</p>
+<p>讽刺的是，他声称伪造的信件（尚未有人亲眼所见）。</p>
+<p><button class="play-button sentence" id="s-00-10-59-143" data-start="00:10:59,143" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've all heard reporting on it, but I don't know that anyone's actually published the letter.</p>
+<p>我们仅听闻报道，但无人实际公开该信件。</p>
+<p><button class="play-button sentence" id="s-00-11-03-746" data-start="00:11:03,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're all going to get to see that a thousand times because these things are going to come out and discovery.</p>
+<p>我们将在证据开示中反复看到它。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959331" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-08-631" data-start="00:11:08,631" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They likely will not be protected.</p>
+<p>其很可能不受保护。</p>
+<p><button class="play-button sentence" id="s-00-11-10-489" data-start="00:11:10,489" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so he's had the suit will have the effect of making this an issue for people to talk about and think about and learn more about for a long time.</p>
+<p>因此诉讼将长期引发公众讨论与关注。</p>
+<p><button class="play-button sentence" id="s-00-11-19-971" data-start="00:11:19,971" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you know, I'm not sure that that's the greatest way to defend against something that you claim is fake and is damaging your reputation.</p>
+<p>这未必是反驳“伪造且损害声誉”指控的最佳方式。</p>
+<p><button class="play-button sentence" id="s-00-11-28-360" data-start="00:11:28,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-11-28-778" data-start="00:11:28,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It'll be interesting to see how this develops.</p>
+<p>此事进展值得关注。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959309" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-30-591" data-start="00:11:30,591" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Andrew McCabe, thanks so much.</p>
+<p>安德鲁·麦凯布，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-11-31-799" data-start="00:11:31,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Really appreciate it.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-11-33-395" data-start="00:11:33,395" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you, Jess.</p>
+<p>谢谢，杰西。</p>
+<p><button class="play-button sentence" id="s-00-11-34-571" data-start="00:11:34,571" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So how are Americans reacting to this story that despite the president's efforts, just is simply not fading away right now.</p>
+<p>那么美国民众对这条新闻有何反应？尽管总统努力平息，此事目前仍未消退。</p>
+<p><button class="play-button sentence" id="s-00-11-41-326" data-start="00:11:41,326" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Harry, Anthony is joining us now to run the numbers on that.</p>
+<p>哈里，安东尼现在加入我们，为我们分析相关数据。</p>
+<p><button class="play-button sentence" id="s-00-11-44-722" data-start="00:11:44,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Harry. Jessica last weekend, we spoke about it.</p>
+<p>哈里。杰西卡，上周末我们讨论过此事。</p>
+<p><button class="play-button sentence" id="s-00-11-48-438" data-start="00:11:48,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Interest in the Epstein files and the Epstein case is sky high.</p>
+<p>公众对爱泼斯坦文件和爱泼斯坦案件的兴趣极高。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959287" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-52-283" data-start="00:11:52,283" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the American public does not trust what the government is selling them.</p>
+<p>而美国公众不信任政府向他们传达的信息。</p>
+<p><button class="play-button sentence" id="s-00-11-55-929" data-start="00:11:55,929" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are we talking about here is the government hiding Epstein's alleged clientless.</p>
+<p>我们讨论的是政府隐瞒爱泼斯坦所谓的客户名单。</p>
+<p><button class="play-button sentence" id="s-00-12-00-225" data-start="00:12:00,225" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Get this 69% of Americans agree that the federal government is, in fact, hiding Epstein's alleged clientless versus just six, six percent who say that they are not and get this a majority of Republicans and Democrats do, in fact, agree on this issue that the government is hiding Epstein's alleged clientless.</p>
+<p>值得注意的是，69%的美国人认为联邦政府确实隐瞒了爱泼斯坦所谓的客户名单，而仅有6%的人持相反意见。更值得注意的是，多数共和党人和民主党人实际上在此问题上达成一致，认为政府隐瞒了名单。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959262" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-17-565" data-start="00:12:17,565" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can never get a majority of Republicans and Democrats to agree on anything, but they do agree on this particular issue.</p>
+<p>要让共和党人和民主党人在任何事上达成多数一致几乎不可能，但他们确实在这个特定问题上意见统一。</p>
+<p><button class="play-button sentence" id="s-00-12-23-726" data-start="00:12:23,726" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And perhaps not so surprisingly, you get a plurality of Democrats and Republicans agreeing that they are dissatisfied, dissatisfied with the amount of information that the government has released so far.</p>
+<p>或许并不意外，相当比例的民主党人和共和党人都对政府目前披露的信息量感到不满。</p>
+<p><button class="play-button sentence" id="s-00-12-34-164" data-start="00:12:34,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are we talking about this?</p>
+<p>我们具体在讨论什么？</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959244" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-35-454" data-start="00:12:35,454" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we're talking about if we look at Republicans and independents who lean Republican, 43% are dissatisfied with the amount of information released so far compared to get this just a four, one, two, three, four percent of Republicans who are, in fact, satisfied with the amount of information released so far by the federal government when it comes to the Epstein case.</p>
+<p>具体而言，43%的共和党人和倾向共和党的独立人士对目前披露的信息量不满，而仅有4%的共和党人对联邦政府在爱泼斯坦案件中的信息披露感到满意。</p>
+<p><button class="play-button sentence" id="s-00-12-54-198" data-start="00:12:54,198" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we look over here on this side of the screen among Democrats, get this 60% of Democrats and independent leaning Democrats are, in fact, dissatisfied with the amount of information released so far.</p>
+<p>再看屏幕这一侧的民主党人，60%的民主党人和倾向民主党的独立人士对目前的信息披露量表示不满。</p>
+<p><button class="play-button sentence" id="s-00-13-04-120" data-start="00:13:04,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And get this just one, two, three percent of Democrats are, in fact, satisfied so far with the amount of information released.</p>
+<p>而仅有3%的民主党人对目前的信息披露量感到满意。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959209" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-10-947" data-start="00:13:10,947" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, you see this, you see that the plurality of Republicans are dissatisfied.</p>
+<p>现在可以看到，相当比例的共和党人感到不满。</p>
+<p><button class="play-button sentence" id="s-00-13-14-690" data-start="00:13:14,690" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So how is it impacting President Trump's overall approval rating?</p>
+<p>那么这对特朗普总统的整体支持率有何影响？</p>
+<p><button class="play-button sentence" id="s-00-13-18-188" data-start="00:13:18,188" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, get this, because this one was a bit of a surprise to me, Jessica.</p>
+<p>杰西卡，这一点让我有些意外。</p>
+<p><button class="play-button sentence" id="s-00-13-21-337" data-start="00:13:21,337" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Look at this. Republicans who approve of the job that Donald Trump is doing get this.</p>
+<p>请看数据：支持特朗普工作的共和党人比例——</p>
+<p><button class="play-button sentence" id="s-00-13-26-161" data-start="00:13:26,161" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And our CNN SSRS poll, it was 86% prior to this whole Epstein saga.</p>
+<p>根据CNN与SSRS的联合民调，在爱泼斯坦事件爆发前为86%。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959189" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-30-430" data-start="00:13:30,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, it's 88%.</p>
+<p>现在升至88%。</p>
+<p><button class="play-button sentence" id="s-00-13-31-269" data-start="00:13:31,269" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, the percentage of Republicans who approve of the job that Donald Trump is doing has actually, if anything, climbed a little bit according to our CNN polling.</p>
+<p>实际上，根据CNN民调，共和党人对特朗普工作的支持率甚至略有上升。</p>
+<p><button class="play-button sentence" id="s-00-13-39-598" data-start="00:13:39,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have out Quinnipiac, 87% before this whole Epstein saga started approved of the job that Donald Trump was doing among Republicans.</p>
+<p>昆尼皮亚克民调显示，事件前共和党人对特朗普工作的支持率为87%。</p>
+<p><button class="play-button sentence" id="s-00-13-47-525" data-start="00:13:47,525" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, it's 90%.</p>
+<p>现在达到90%。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959171" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-48-331" data-start="00:13:48,331" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we see agreement between the CNN polling and the Quinnipiac polling.</p>
+<p>可见CNN与昆尼皮亚克的民调结果一致。</p>
+<p><button class="play-button sentence" id="s-00-13-52-058" data-start="00:13:52,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, Republicans are not thrilled with how the government is responding to the Epstein case, but so far they aren't back not taking it out on Donald Trump, at least when it comes to his overall approval rating.</p>
+<p>是的，共和党人对政府处理爱泼斯坦案件的方式并不满意，但至少就整体支持率而言，他们并未因此迁怒于特朗普。</p>
+<p><button class="play-button sentence" id="s-00-14-02-269" data-start="00:14:02,269" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, you might be asking yourself, why?</p>
+<p>你可能会问：为什么？</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959155" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-04-200" data-start="00:14:04,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I think this nugget gives it all away.</p>
+<p>我认为这个关键点说明了一切。</p>
+<p><button class="play-button sentence" id="s-00-14-06-536" data-start="00:14:06,536" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Republicans who said the nation's top issue was the Epstein case get this.</p>
+<p>认为爱泼斯坦案件是国家首要问题的共和党人比例——</p>
+<p><button class="play-button sentence" id="s-00-14-11-479" data-start="00:14:11,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Zero, one, one, one, one, respondent, not one percent, one respondent of Republicans said that the nation's top issue wasn't back the Epstein case.</p>
+<p>注意：不是1%，而是仅有1名共和党受访者认为此案是国家首要问题。</p>
+<p><button class="play-button sentence" id="s-00-14-20-820" data-start="00:14:20,820" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So with this particular point, Jessica, Dean, what we're dealing with is a public that is very much dissatisfied with how the government is responding so far to the Epstein case.</p>
+<p>杰西卡、迪恩，这说明公众对政府目前处理爱泼斯坦案件的方式非常不满。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959130" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-29-268" data-start="00:14:29,268" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lot of folks, both on the right and the left, do in fact believe that the government is hiding Epstein's alleged client list, but yet when it comes to his approval rating, Donald Trump's approval rating with the Republican base so far they're sticking with them because at this point, even if they believe the government is potentially hiding something, they don't think it's all that important back to you.</p>
+<p>左右两派的许多民众确实认为政府隐瞒了爱泼斯坦所谓的客户名单，但就支持率而言，共和党基本盘仍力挺特朗普，因为他们即便认为政府可能有所隐瞒，也不认为此事多重要。交还给你。</p>
+<p><button class="play-button sentence" id="s-00-14-48-091" data-start="00:14:48,091" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right, Harry Anten, thanks so much for that.</p>
+<p>好的，哈里·安滕，非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-14-50-918" data-start="00:14:50,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A bill that guts federal funding for public broadcasting in America sits on President Trump's desk waiting for his signature, plus a viral moment at a cold play concert is getting reenacted, kind of by everybody everywhere.</p>
+<p>一项削减美国公共广播联邦拨款的法案正等待特朗普总统签署，此外酷玩乐队演唱会上一个走红场景正被各地网友争相模仿。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1Qeg4zgEdf/?t=-2208959094" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-05-297" data-start="00:15:05,297" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're in the CNN Newsroom.</p>
+<p>这里是CNN新闻直播间。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

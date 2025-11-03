@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Nightly News Full Episode - July 17</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tonight's episode covers President Trump's medical diagnosis of chronic venous insufficiency, Midwest flash flooding, a lightning strike survivor in New Jersey, heat alerts in Louisiana, an Israeli strike on Gaza's Catholic church, a teenage arrest in a Maine homicide, rising gastrointestinal cancers in young adults, and a man's quest for birthday freebies.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Nightly News Full Episode - July 17</h1>
+<p>【NBC News 20250718 特朗普被诊断患有慢性静脉功能不全｜中西部突发洪水｜以色列袭击加沙天主教堂｜CBS停播史蒂芬主持30年的《深夜秀》】</p>
+<p>Summary:
+Tonight's episode covers President Trump's medical diagnosis of chronic venous insufficiency, Midwest flash flooding, a lightning strike survivor in New Jersey, heat alerts in Louisiana, an Israeli strike on Gaza's Catholic church, a teenage arrest in a Maine homicide, rising gastrointestinal cancers in young adults, and a man's quest for birthday freebies.</p>
+<p>摘要：
+本期节目报道了特朗普总统被诊断患有慢性静脉功能不全、中西部突发洪水、新泽西州一名闪电袭击幸存者、路易斯安那州高温警报、以色列袭击加沙天主教堂、缅因州一起青少年凶杀案逮捕、年轻人胃肠道癌症发病率上升，以及一名男子生日当天疯狂获取免费食物的故事。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 31 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, the White House revealing President Trump's new medical diagnosis.</p>
+<p>今晚，白宫公布了特朗普总统的新医疗诊断结果。</p>
+<p><button class="play-button sentence" id="s-00-00-05-560" data-start="00:00:05,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The president experiencing swelling in his legs, now diagnosed with chronic venous insufficiency.</p>
+<p>总统腿部出现肿胀，现被诊断为慢性静脉功能不全。</p>
+<p><button class="play-button sentence" id="s-00-00-12-220" data-start="00:00:12,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House also explaining this bruising on his hand, appearing to be covered in makeup.</p>
+<p>白宫还解释了他手上看似被化妆品遮盖的淤青。</p>
+<p><button class="play-button sentence" id="s-00-00-17-199" data-start="00:00:17,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight will show you the letter from his doctor assuring the country the president remains in excellent health.</p>
+<p>今晚将展示其医生的信函，向全国保证总统健康状况良好。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959977" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-22-838" data-start="00:00:22,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Flash flooding in the Midwest as a month's worth of rain hit Kansas City in under 24 hours.</p>
+<p>中西部突发洪水，堪萨斯城24小时内降雨量达月均值。</p>
+<p><button class="play-button sentence" id="s-00-00-28-960" data-start="00:00:28,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In New Jersey, we hear from a man who survived after getting struck by lightning.</p>
+<p>新泽西州一名遭雷击幸存者讲述经历。</p>
+<p><button class="play-button sentence" id="s-00-00-33-420" data-start="00:00:33,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tens of millions under heat alerts as that tropical disturbance closes in Louisiana.</p>
+<p>热带扰动逼近路易斯安那州，数千万人收到高温警报。</p>
+<p><button class="play-button sentence" id="s-00-00-38-740" data-start="00:00:38,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Israeli strike on the only Catholic church in Gaza, the parish priest, a close friend of the late Pope Francis injured.</p>
+<p>以色列袭击加沙唯一天主教堂，已故教皇方济各的密友——本堂神父受伤。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959953" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-46-280" data-start="00:00:46,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why Israel is saying it was a mistake.</p>
+<p>以色列为何称这是误击。</p>
+<p><button class="play-button sentence" id="s-00-00-48-719" data-start="00:00:48,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The stunning arrest and connection to that paddle border who was killed in Maine, a teenage boy now in custody.</p>
+<p>缅因州一名桨板爱好者遇害案告破，一名青少年被捕。</p>
+<p><button class="play-button sentence" id="s-00-00-55-320" data-start="00:00:55,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What the medical examiner says was the cause of her death.</p>
+<p>法医公布其死因。</p>
+<p><button class="play-button sentence" id="s-00-00-59-100" data-start="00:00:59,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In our series, the cost of denial, a North Carolina couple, denied over and over by their insurance for medications to manage side effects from cancer treatment.</p>
+<p>系列报道《拒保的代价》：北卡罗来纳州夫妇多次被保险公司拒绝报销癌症治疗副作用药物。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959931" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-08-840" data-start="00:01:08,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What happened when they used AI to write their last appeal letter?</p>
+<p>他们用AI撰写最终申诉信后发生了什么？</p>
+<p><button class="play-button sentence" id="s-00-01-13-000" data-start="00:01:13,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And one man's audacity to get as many free meals, coffee and ice cream as he could on his birthday.</p>
+<p>一名男子生日当天疯狂获取免费餐食、咖啡和冰淇淋。</p>
+<p><button class="play-button sentence" id="s-00-01-19-480" data-start="00:01:19,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, the Indiana Jones of Freebies shares his secrets.</p>
+<p>今晚，"免费品界的印第安纳·琼斯"分享他的秘诀。</p>
+<p><button class="play-button sentence" id="s-00-01-23-159" data-start="00:01:23,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nightly news.</p>
+<p>《晚间新闻》。</p>
+<p><button class="play-button sentence" id="s-00-01-24-159" data-start="00:01:24,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's March right now.</p>
+<p>现在是三月。</p>
+<p><button class="play-button sentence" id="s-00-01-26-399" data-start="00:01:26,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is NBC Nightly News with Tom Yamas.</p>
+<p>这里是汤姆·亚马斯的NBC《晚间新闻》。</p>
+<p><button class="play-button sentence" id="s-00-01-34-078" data-start="00:01:34,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And good evening with so much scrutiny on the health of the American president lately, it came as a surprise when the White House announced President Trump had been diagnosed with a medical condition impacting blood flow known as chronic venous insufficiency.</p>
+<p>近期美国总统健康状况备受关注之际，白宫突然宣布特朗普总统被诊断出影响血流的慢性静脉功能不全。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959892" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-47-438" data-start="00:01:47,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It can create swelling in the legs, which some have observed in his recent public appearances.</p>
+<p>该病症会导致腿部肿胀，有人注意到他近期公开露面时的异常。</p>
+<p><button class="play-button sentence" id="s-00-01-52-280" data-start="00:01:52,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a common diagnosis for older adults and the president's doctor said overall, he's an excellent health.</p>
+<p>这是老年人常见病症，总统医生表示其整体健康状况良好。</p>
+<p><button class="play-button sentence" id="s-00-01-58-358" data-start="00:01:58,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then there's his hands, which some have noted appear to be covered in makeup in recent weeks.</p>
+<p>还有人发现他近几周双手似乎涂抹了化妆品。</p>
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House press secretary says it stems from greeting so many people with a handshake.</p>
+<p>白宫新闻秘书称这是因与多人握手所致。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959872" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-07-840" data-start="00:02:07,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett Hake leads us off tonight from the White House.</p>
+<p>加勒特·哈克从白宫为我们开启今晚报道。</p>
+<p><button class="play-button sentence" id="s-00-02-10-878" data-start="00:02:10,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight with recent photos showing what appear to be swelling in President Trump's ankles and bruises on his hands, this announcement from the White House.</p>
+<p>近期照片显示特朗普总统脚踝肿胀、手部淤青后，白宫发布声明。</p>
+<p><button class="play-button sentence" id="s-00-02-18-800" data-start="00:02:18,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the effort of transparency, the president wanted me to share a note from his physician with all of you today.</p>
+<p>为保持透明度，总统要求我今天向各位分享其医生的说明。</p>
+<p><button class="play-button sentence" id="s-00-02-24-680" data-start="00:02:24,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Press secretary Caroline Levit, reading a letter from the president's doctor revealing he's been diagnosed with chronic venous insufficiency, a common swelling of the legs caused by blood pooling in the veins.</p>
+<p>新闻秘书卡罗琳·莱维特宣读医生信函，披露总统被诊断为慢性静脉功能不全——一种因静脉淤血导致的常见腿部肿胀。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959843" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-36-120" data-start="00:02:36,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In recent weeks, President Trump noted mild swelling in his lower legs.</p>
+<p>近几周特朗普总统发现小腿轻微肿胀。</p>
+<p><button class="play-button sentence" id="s-00-02-40-400" data-start="00:02:40,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bilateral lower extremity vent, venous Doppler ultrasounds were performed and revealed chronic venous insufficiency.</p>
+<p>双下肢静脉多普勒超声检查显示慢性静脉功能不全。</p>
+<p><button class="play-button sentence" id="s-00-02-48-758" data-start="00:02:48,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> May be nine in common condition, particularly in individuals over the age of 70.</p>
+<p>这在70岁以上人群中相当常见。</p>
+<p><button class="play-button sentence" id="s-00-02-55-280" data-start="00:02:55,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Importantly, there was no evidence of deep vein from bohesus or arterial disease.</p>
+<p>关键是无深静脉血栓或动脉疾病迹象。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959818" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-01-120" data-start="00:03:01,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That physician letter, which the White House released noting an echocardiogram was also performed and confirmed normal cardiac structure and function.</p>
+<p>白宫发布的医生信中提到超声心动图检查确认心脏结构与功能正常。</p>
+<p><button class="play-button sentence" id="s-00-03-09-000" data-start="00:03:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No signs of heart failure, renal impairment or systemic illness were identified.</p>
+<p>未发现心衰、肾功能损害或全身性疾病迹象。</p>
+<p><button class="play-button sentence" id="s-00-03-13-718" data-start="00:03:13,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Adding the president remains in excellent health.</p>
+<p>强调总统健康状况依然极佳。</p>
+<p><button class="play-button sentence" id="s-00-03-16-280" data-start="00:03:16,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House says the president, who's 79, is not experiencing pain or discomfort.</p>
+<p>白宫表示79岁的总统未感到疼痛或不适。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959798" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-21-560" data-start="00:03:21,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Chronic venous insufficiency is actually quite common.</p>
+<p>慢性静脉功能不全其实相当普遍。</p>
+<p><button class="play-button sentence" id="s-00-03-24-919" data-start="00:03:24,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It occurs at about 40 to 50 percent of adults over the age of 70.</p>
+<p>约40%-50%的70岁以上成年人患有此症。</p>
+<p><button class="play-button sentence" id="s-00-03-29-680" data-start="00:03:29,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We spoke to vascular surgeon Dr. Lee Kirksy at the Cleveland Clinic.</p>
+<p>我们采访了克利夫兰诊所血管外科医生李·柯克西。</p>
+<p><button class="play-button sentence" id="s-00-03-33-598" data-start="00:03:33,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are the symptoms typically?</p>
+<p>典型症状是什么？</p>
+<p><button class="play-button sentence" id="s-00-03-35-479" data-start="00:03:35,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Those patients with mild symptoms may simply have occasional legs swelling.</p>
+<p>轻度患者可能仅偶尔腿部肿胀。</p>
+<p><button class="play-button sentence" id="s-00-03-40-639" data-start="00:03:40,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The most severe instances patients may experience discoloration or even skin ulceration.</p>
+<p>最严重者可能出现肤色改变甚至皮肤溃疡。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959773" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-46-639" data-start="00:03:46,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As for the bruising on his hand, seen here during a meeting with French president Macron in February and appearing to be covered by makeup earlier this week, the White House physician saying it's consistent with minor soft tissue irritation from frequent hand shaking and the use of aspirin, taken as a standard cardiovascular prevention regimen.</p>
+<p>关于其手部淤青（2月会见法国总统马克龙时可见，本周初看似被化妆品遮盖），白宫医生称这与频繁握手及服用阿司匹林（标准心血管预防方案）导致的轻微软组织刺激一致。</p>
+<p><button class="play-button sentence" id="s-00-04-04-919" data-start="00:04:04,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump has repeatedly joked about the amount of hand shaking his role requires, including after this lengthy receiving line during his recent trip to the Middle East.</p>
+<p>特朗普常调侃工作需要大量握手，包括最近中东之行长时间迎宾队列后。</p>
+<p><button class="play-button sentence" id="s-00-04-12-919" data-start="00:04:12,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I shook more hands than any of it being incapable of doing.</p>
+<p>"我握手次数多到难以置信。"</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959741" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-18-519" data-start="00:04:18,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was a long day and there were big people.</p>
+<p>"那天很漫长，来宾都是大人物。"</p>
+<p><button class="play-button sentence" id="s-00-04-21-838" data-start="00:04:21,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett joins us tonight from the White House.</p>
+<p>加勒特今晚从白宫连线我们。</p>
+<p><button class="play-button sentence" id="s-00-04-23-360" data-start="00:04:23,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Garrett, how is his diagnosis expected to affect the president going forward?</p>
+<p>加勒特，该诊断对总统今后有何影响？</p>
+<p><button class="play-button sentence" id="s-00-04-28-199" data-start="00:04:28,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well Tom, the White House insists that it won't.</p>
+<p>汤姆，白宫坚称不会有影响。</p>
+<p><button class="play-button sentence" id="s-00-04-30-000" data-start="00:04:30,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> White House official tells me the president doesn't intend to make any changes to his schedule or to his lifestyle.</p>
+<p>白宫官员表示总统不打算改变日程或生活方式。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959725" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-34-639" data-start="00:04:34,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They say today's disclosure is much more about transparency than any kind of particular medical concern.</p>
+<p>称今日披露更多是出于透明度而非特殊医疗考虑。</p>
+<p><button class="play-button sentence" id="s-00-04-39-800" data-start="00:04:39,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom?</p>
+<p>汤姆？</p>
+<p><button class="play-button sentence" id="s-00-04-40-800" data-start="00:04:40,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Garrett.</p>
+<p>好的，加勒特。</p>
+<p><button class="play-button sentence" id="s-00-04-41-800" data-start="00:04:41,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hey, Cleaning is off tonight.</p>
+<p>今晚清洁工作暂停。</p>
+<p><button class="play-button sentence" id="s-00-04-42-800" data-start="00:04:42,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Garrett, thank you.</p>
+<p>谢谢加勒特。</p>
+<p><button class="play-button sentence" id="s-00-04-43-800" data-start="00:04:43,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to the South, we're four million are under flood watches in Louisiana and Mississippi as the tropical downpours expected to soak the central Gulf closed.</p>
+<p>现在转向南部：热带暴雨将侵袭墨西哥湾中部，路易斯安那和密西西比州400万人收到洪水警戒。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959708" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-51-839" data-start="00:04:51,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NBC's George Suleez is in the storm zone tonight.</p>
+<p>NBC乔治·苏莱兹正在风暴区报道。</p>
+<p><button class="play-button sentence" id="s-00-04-56-240" data-start="00:04:56,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Heavy rain and gusting winds slamming Southwest Florida in Missouri, dramatic flash flooding.</p>
+<p>暴雨狂风袭击密苏里州西南部，突发洪水肆虐。</p>
+<p><button class="play-button sentence" id="s-00-05-02-560" data-start="00:05:02,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This roadway completely washed out.</p>
+<p>这条道路完全被冲毁。</p>
+<p><button class="play-button sentence" id="s-00-05-06-240" data-start="00:05:06,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The city is seeing a month's worth of rain in just 24 hours.</p>
+<p>该市24小时降雨量达月均值。</p>
+<p><button class="play-button sentence" id="s-00-05-10-360" data-start="00:05:10,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In New Jersey, officials say a deadly lightning strike at this archery club entered more than a dozen people, including a seven year old.</p>
+<p>新泽西州官员称某射箭俱乐部遭致命雷击，波及十余人包括一名7岁儿童。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959681" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-18-480" data-start="00:05:18,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But Thomas, the club's treasurer, surviving and is now recovering from first degree burns on his body.</p>
+<p>俱乐部财务托马斯幸存，现正从一度烧伤中恢复。</p>
+<p><button class="play-button sentence" id="s-00-05-24-240" data-start="00:05:24,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How lucky do you feel to be alive?</p>
+<p>"你觉得活着有多幸运？"</p>
+<p><button class="play-button sentence" id="s-00-05-26-240" data-start="00:05:26,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm pretty lucky to be alive.</p>
+<p>"我非常幸运。"</p>
+<p><button class="play-button sentence" id="s-00-05-28-680" data-start="00:05:28,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thomas and other witnesses at the range say there was no rain or thunder before the bolt struck, which authorities say killed 61 year old Robert Montgomery.</p>
+<p>托马斯等目击者称雷击前无降雨或雷鸣，当局称61岁的罗伯特·蒙哥马利遇难。</p>
+<p><button class="play-button sentence" id="s-00-05-37-079" data-start="00:05:37,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was really good. Got it. When I reached out for help.</p>
+<p>"他人很好。我求救时..."</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959659" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-40-079" data-start="00:05:40,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's the first one to answer.</p>
+<p>"他是第一个回应的人。"</p>
+<p><button class="play-button sentence" id="s-00-05-48-079" data-start="00:05:48,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This week, a string of summer wild weather wreaking havoc across the country.</p>
+<p>本周夏季极端天气在全国造成破坏。</p>
+<p><button class="play-button sentence" id="s-00-05-52-519" data-start="00:05:52,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Holy moly! Wisconsin slammed with at least seven reported tornadoes yesterday.</p>
+<p>威斯康星州昨日至少报告7场龙卷风。</p>
+<p><button class="play-button sentence" id="s-00-05-58-560" data-start="00:05:58,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, southern Louisiana and Mississippi braced for a bout of tropical turbulent weather that may dump as much as 10 inches of rain over several days.</p>
+<p>路易斯安那和密西西比州南部准备应对热带风暴，未来几天降雨或达10英寸。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959633" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-06-920" data-start="00:06:06,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> George Suleyce and BC News.</p>
+<p>乔治·苏莱斯，BC新闻。</p>
+<p><button class="play-button sentence" id="s-00-06-08-920" data-start="00:06:08,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> OK, we want to head to the mid east down the deadly strike on the only Catholic church in Gaza.</p>
+<p>现在关注加沙唯一天主教堂遭致命袭击。</p>
+<p><button class="play-button sentence" id="s-00-06-13-560" data-start="00:06:13,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hit by an Israeli tank shell, prompting President Trump to call Israel's prime minister to criticize that strike.</p>
+<p>以军坦克炮弹击中教堂，特朗普总统致电以色列总理批评该行动。</p>
+<p><button class="play-button sentence" id="s-00-06-19-759" data-start="00:06:19,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Matt Bradley is in Israel tonight.</p>
+<p>马特·布拉德利今晚在以色列报道。</p>
+<p><button class="play-button sentence" id="s-00-06-22-399" data-start="00:06:22,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, a look at the damage to Gaza's only Catholic church after it was struck by Israeli artillery.</p>
+<p>今晚查看加沙唯一天主教堂遭以军炮击后的损毁情况。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959612" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-27-800" data-start="00:06:27,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The building still standing, but church officials say three people were killed.</p>
+<p>建筑未倒塌，但教会官员称3人遇难。</p>
+<p><button class="play-button sentence" id="s-00-06-32-279" data-start="00:06:32,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two of them buried today.</p>
+<p>其中两人今日下葬。</p>
+<p><button class="play-button sentence" id="s-00-06-33-720" data-start="00:06:33,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are few more rules that the neighboring Greek Orthodox Church.</p>
+<p>邻近的希腊东正教教堂还有更多规定。</p>
+<p><button class="play-button sentence" id="s-00-06-37-800" data-start="00:06:37,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As they were leaving after finishing their prayer, they were targeted at this man who was sheltering in the church.</p>
+<p>信徒结束祈祷离开时，这名在教堂避难者成为袭击目标。</p>
+<p><button class="play-button sentence" id="s-00-06-43-120" data-start="00:06:43,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The strike prompting a call and criticism from President Trump.</p>
+<p>袭击引发特朗普总统电话批评。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959593" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-46-680" data-start="00:06:46,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What is the President's reaction to that church coming under fire?</p>
+<p>"总统对教堂遇袭有何反应？"</p>
+<p><button class="play-button sentence" id="s-00-06-49-800" data-start="00:06:49,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was not a positive reaction.</p>
+<p>"反应消极。"</p>
+<p><button class="play-button sentence" id="s-00-06-51-360" data-start="00:06:51,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He called Prime Minister Netanyahu this morning to address the strikes on that church in Gaza.</p>
+<p>"他今早致电内塔尼亚胡总理谈及加沙教堂遇袭。"</p>
+<p><button class="play-button sentence" id="s-00-06-57-639" data-start="00:06:57,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The idea of this strike meant from a tank shell fired nearby, hit the church mistakenly.</p>
+<p>以方称这是附近发射的坦克炮弹误击教堂。</p>
+<p><button class="play-button sentence" id="s-00-07-01-959" data-start="00:07:01,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israeli Prime Minister Benjamin Netanyahu saying Israel deeply regrets that a stray ammunition hit Gaza's holy family church.</p>
+<p>以色列总理内塔尼亚胡称对流弹击中加沙圣家教堂深表遗憾。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959571" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:08</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-08-838" data-start="00:07:08,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Every innocent life lost is a tragedy.</p>
+<p>"每个无辜生命的逝去都是悲剧。"</p>
+<p><button class="play-button sentence" id="s-00-07-10-879" data-start="00:07:10,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We share the grief of the families and the faithful.</p>
+<p>"我们与遇难者家属及信徒同悲。"</p>
+<p><button class="play-button sentence" id="s-00-07-13-439" data-start="00:07:13,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Among the lately injured was the parish priest, Father Gabriel Rominelli.</p>
+<p>伤者包括本堂神父加布里埃尔·罗米内利。</p>
+<p><button class="play-button sentence" id="s-00-07-17-120" data-start="00:07:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was Father Rominelli, who the late Pope Francis called every day in the months before he died.</p>
+<p>已故教皇方济各去世前数月每日致电罗米内利神父。</p>
+<p><button class="play-button sentence" id="s-00-07-23-920" data-start="00:07:23,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To check up on the church and the tiny Catholic community here as it kept its faith under fire.</p>
+<p>为关心这个在战火中坚守信仰的小型天主教社区。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959550" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-29-639" data-start="00:07:29,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight, Pope Leo calling it a military attack on the church and saying he was deeply saddened and he renewed his calls for an immediate ceasefire.</p>
+<p>今晚教皇利奥称这是对教堂的军事攻击，表示深感悲痛，再次呼吁立即停火。</p>
+<p><button class="play-button sentence" id="s-00-07-37-680" data-start="00:07:37,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tom?</p>
+<p>汤姆？</p>
+<p><button class="play-button sentence" id="s-00-07-38-680" data-start="00:07:38,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Okay, Matt, we thank you.</p>
+<p>好的，谢谢马特。</p>
+<p><button class="play-button sentence" id="s-00-07-39-879" data-start="00:07:39,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back home to that devastating death in Maine.</p>
+<p>回到缅因州那起骇人凶杀案。</p>
+<p><button class="play-button sentence" id="s-00-07-42-160" data-start="00:07:42,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police today arresting a teenager in connection with the homicide of a 48-year-old paddle border whose body was found earlier this month.</p>
+<p>警方今日逮捕一名青少年，涉本月早前发现的48岁桨板爱好者遇害案。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959530" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-49-560" data-start="00:07:49,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> NBC's Aaron McLaughlin has the latest on the investigation.</p>
+<p>NBC亚伦·麦克劳克林带来调查最新进展。</p>
+<p><button class="play-button sentence" id="s-00-07-53-079" data-start="00:07:53,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight a shocking development in the killing of Sunshine Stewart.</p>
+<p>桑夏·斯图尔特遇害案出现惊人进展。</p>
+<p><button class="play-button sentence" id="s-00-07-56-439" data-start="00:07:56,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A 17-year-old male is now in custody in connection with her homicide.</p>
+<p>一名17岁男性因涉该案被拘。</p>
+<p><button class="play-button sentence" id="s-00-08-01-120" data-start="00:08:01,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The much-loved local was found dead near a campsite in the quiet town of Union Maine.</p>
+<p>这位深受爱戴的当地人在缅因州尤宁镇露营地附近被发现身亡。</p>
+<p><button class="play-button sentence" id="s-00-08-06-000" data-start="00:08:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police also confirming the 48-year-old was killed by strangulation and blunt-force trauma.</p>
+<p>警方确认死者遭扼颈及钝器创伤致死。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959508" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-11-439" data-start="00:08:11,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The news leaving close friend Chloe Keller stunned.</p>
+<p>好友克洛伊·凯勒听闻震惊。</p>
+<p><button class="play-button sentence" id="s-00-08-14-199" data-start="00:08:14,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's inconceivable.</p>
+<p>"难以置信。"</p>
+<p><button class="play-button sentence" id="s-00-08-15-240" data-start="00:08:15,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I can't imagine being that age and making that choice to harm another human being.</p>
+<p>"无法想象那个年纪会做出伤害他人的选择。"</p>
+<p><button class="play-button sentence" id="s-00-08-20-278" data-start="00:08:20,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police say the 17-year-old was arrested without incident in Union late last night.</p>
+<p>警方称该青少年昨晚在尤宁镇顺利被捕。</p>
+<p><button class="play-button sentence" id="s-00-08-24-718" data-start="00:08:24,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've yet to release his identity, pointing to a status as a minor, saying in a statement that the teen has been transported to a youth development center in South Portland.</p>
+<p>因未成年暂不公开身份，声明称其已被送往南波特兰青少年发展中心。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959486" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-33-080" data-start="00:08:33,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The suspect's ethnicity is very experienced on a water level.</p>
+<p>嫌疑人水性极佳。</p>
+<p><button class="play-button sentence" id="s-00-08-37-519" data-start="00:08:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> According to police, Stewart's body was located during a search of Crawford pond on July 3rd, last scene paddle boarding the evening before.</p>
+<p>警方称7月3日搜索克劳福德池塘时发现尸体，其最后露面是前晚玩桨板。</p>
+<p><button class="play-button sentence" id="s-00-08-44-960" data-start="00:08:44,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A public safety official told local newspaper MIGCO's villager, Stewart's paddle board was found by drone on an island called 100-acre.</p>
+<p>公共安全官员告诉当地媒体，无人机在"百亩岛"发现其桨板。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959467" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-52-240" data-start="00:08:52,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Her body was next to it.</p>
+<p>尸体就在旁边。</p>
+<p><button class="play-button sentence" id="s-00-08-53-448" data-start="00:08:53,448" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're the water met the shore.</p>
+<p>位于水岸交界处。</p>
+<p><button class="play-button sentence" id="s-00-08-55-038" data-start="00:08:55,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When a community that's been safe for time immemorial has its innocence robbed of it, it does shake the foundation of comfort and safety.</p>
+<p>"当亘古安全的社区突遭变故，确实动摇了人们的安心感。"</p>
+<p><button class="play-button sentence" id="s-00-09-05-200" data-start="00:09:05,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What do you want to see happen next?</p>
+<p>"你希望接下来怎样？"</p>
+<p><button class="play-button sentence" id="s-00-09-07-600" data-start="00:09:07,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think everyone, all of us who knew and loved her, need to gather and be together and celebrate her.</p>
+<p>"所有认识并爱她的人应聚在一起纪念她。"</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959445" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-14-720" data-start="00:09:14,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She was beloved, profoundly beloved by everyone I knew who knew her.</p>
+<p>"她深受所有认识她的人爱戴。"</p>
+<p><button class="play-button sentence" id="s-00-09-19-679" data-start="00:09:19,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Erin McLaughlin, NBC News.</p>
+<p>NBC新闻，艾琳·麦克劳克林。</p>
+<p><button class="play-button sentence" id="s-00-09-22-000" data-start="00:09:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On the health front tonight, an alarming new report shows gastrointestinal cancers are on the rise in people under 50, increasing faster than any other type of early onset cancer.</p>
+<p>健康方面：新报告显示50岁以下人群胃肠道癌症增速超过其他早发型癌症。</p>
+<p><button class="play-button sentence" id="s-00-09-32-480" data-start="00:09:32,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Anton's with what you need to know.</p>
+<p>安东带来详细报道。</p>
+<p><button class="play-button sentence" id="s-00-09-34-240" data-start="00:09:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, chemotherapy round five starts today.</p>
+<p>"今天开始第五轮化疗。"</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959421" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-38-558" data-start="00:09:38,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is not the trend Mark Sevalano Jr. wants to set.</p>
+<p>小马克·塞瓦拉诺不愿成为这种趋势的代表。</p>
+<p><button class="play-button sentence" id="s-00-09-42-318" data-start="00:09:42,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have you ever heard of a soft agile cancer?</p>
+<p>"你听说过软性消化道癌症吗？"</p>
+<p><button class="play-button sentence" id="s-00-09-44-798" data-start="00:09:44,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At 40, he was diagnosed with stage two esophageal cancer.</p>
+<p>40岁时他被诊断为二期食道癌。</p>
+<p><button class="play-button sentence" id="s-00-09-49-599" data-start="00:09:49,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was... let's put it this way. I'm still processing it today.</p>
+<p>"我至今仍在消化这个事实。"</p>
+<p><button class="play-button sentence" id="s-00-09-54-719" data-start="00:09:54,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a gastrointestinal or GI cancer, the fastest rising type of cancer in people under 50 in the US and around the world.</p>
+<p>这是全球50岁以下人群中增速最快的胃肠道癌症。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959396" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-03-759" data-start="00:10:03,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They include colorectal gastric, pancreatic, any soft agile cancers, increasing 2% a year.</p>
+<p>结直肠癌、胃癌、胰腺癌等年增2%。</p>
+<p><button class="play-button sentence" id="s-00-10-11-038" data-start="00:10:11,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The findings published today in JAMA.</p>
+<p>该研究今日发表于《美国医学会杂志》。</p>
+<p><button class="play-button sentence" id="s-00-10-14-078" data-start="00:10:14,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dana Farber's Dr. Kimi Aing co-authored the review.</p>
+<p>丹娜·法伯癌症研究所的金姆·艾恩博士是合著者。</p>
+<p><button class="play-button sentence" id="s-00-10-17-678" data-start="00:10:17,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's driving the increase?</p>
+<p>"增长原因是什么？"</p>
+<p><button class="play-button sentence" id="s-00-10-19-278" data-start="00:10:19,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, that is the question of the century.</p>
+<p>"这是世纪难题。"</p>
+<p><button class="play-button sentence" id="s-00-10-21-359" data-start="00:10:21,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We currently do not know what is driving the rising race of gastrointestinal cancers in young people.</p>
+<p>我们目前尚不清楚导致年轻人胃肠癌发病率上升的原因。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959372" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-27-519" data-start="00:10:27,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They do know one-third have a hereditary factor.</p>
+<p>但已知三分之一病例与遗传因素有关。</p>
+<p><button class="play-button sentence" id="s-00-10-30-720" data-start="00:10:30,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Among other risk factors, obesity, poor diet, including ultra-process foods, and sedentary lifestyle.</p>
+<p>其他风险因素包括肥胖、不良饮食（如超加工食品）和久坐生活方式。</p>
+<p><button class="play-button sentence" id="s-00-10-38-399" data-start="00:10:38,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We also need to start looking at other novel environmental exposures, such as things in the air, such as chemicals in our food, and things like microplastics.</p>
+<p>我们还需研究其他新型环境暴露因素，如空气中的物质、食品中的化学物质和微塑料等。</p>
+<p><button class="play-button sentence" id="s-00-10-48-080" data-start="00:10:48,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now cancer-free, Mark is urging his followers to be aware.</p>
+<p>现已康复的马克呼吁粉丝提高警惕。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959348" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-51-919" data-start="00:10:51,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Cancer could happen to anybody at any age at any time.</p>
+<p>癌症可能发生在任何人、任何年龄、任何时刻。</p>
+<p><button class="play-button sentence" id="s-00-10-56-320" data-start="00:10:56,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you feel like something is wrong, please go get checked.</p>
+<p>若感到不适，请及时就医检查。</p>
+<p><button class="play-button sentence" id="s-00-11-02-080" data-start="00:11:02,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because early detection can save lives.</p>
+<p>因为早期检测能挽救生命。</p>
+<p><button class="play-button sentence" id="s-00-11-05-278" data-start="00:11:05,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Antonson NBC News.</p>
+<p>安东森，NBC新闻。</p>
+<p><button class="play-button sentence" id="s-00-11-07-679" data-start="00:11:07,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're following some breaking news right now.</p>
+<p>我们正在追踪一则突发新闻。</p>
+<p><button class="play-button sentence" id="s-00-11-09-440" data-start="00:11:09,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's get this late update.</p>
+<p>来看最新进展。</p>
+<p><button class="play-button sentence" id="s-00-11-12-798" data-start="00:11:12,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's right, Tom.</p>
+<p>没错，汤姆。</p>
+<p><button class="play-button sentence" id="s-00-11-13-440" data-start="00:11:13,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just moments ago, major announcement from CBS saying the network is canceling the late show with Stephen Colbert.</p>
+<p>片刻前，CBS宣布将停播史蒂芬·科拜尔主持的《深夜秀》。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959320" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-19-759" data-start="00:11:19,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> After more than three decades on the air, Stephen Colbert making that announcement himself in a social media post, he said the network made the call to end not only his run as host, but to cancel the late show altogether in just 10 months in May of next year.</p>
+<p>播出三十余年后，科拜尔在社交媒体亲自宣布，CBS决定明年五月结束他的主持生涯并停播该节目。</p>
+<p><button class="play-button sentence" id="s-00-11-33-600" data-start="00:11:33,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert appeared to make the announcement during a recording of tonight's program.</p>
+<p>科拜尔在今晚节目录制时透露了这一消息。</p>
+<p><button class="play-button sentence" id="s-00-11-37-200" data-start="00:11:37,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can hear the audience reacting in real time.</p>
+<p>观众的反应被实时记录。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959300" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-40-000" data-start="00:11:40,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before we start the show, I want to let you know something that I found out just last night.</p>
+<p>节目开始前，我想告知昨晚才得知的消息。</p>
+<p><button class="play-button sentence" id="s-00-11-44-559" data-start="00:11:44,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Next year will be our last season.</p>
+<p>明年将是我们最后一季。</p>
+<p><button class="play-button sentence" id="s-00-11-47-279" data-start="00:11:47,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The network will be ending the late show in May.</p>
+<p>CBS将在五月停播《深夜秀》。</p>
+<p><button class="play-button sentence" id="s-00-11-51-039" data-start="00:11:51,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And... Yeah, I share your feelings.</p>
+<p>是的，我和你们感受相同。</p>
+<p><button class="play-button sentence" id="s-00-12-01-120" data-start="00:12:01,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not just the end of our show, but it's the end of the late show on CBS.</p>
+<p>这不仅是我们节目的终结，也是CBS《深夜秀》的终结。</p>
+<p><button class="play-button sentence" id="s-00-12-05-919" data-start="00:12:05,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not being replaced.</p>
+<p>我不会被替代。</p>
+<p><button class="play-button sentence" id="s-00-12-07-440" data-start="00:12:07,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is all just going away.</p>
+<p>一切就此结束。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959270" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-09-600" data-start="00:12:09,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Colbert took over as host and executive producer of the late show back in 2015.</p>
+<p>科拜尔于2015年接任《深夜秀》主持人和执行制片人。</p>
+<p><button class="play-button sentence" id="s-00-12-13-919" data-start="00:12:13,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CBS in Paramount releasing a statement late today saying in part, this is purely a financial decision against a challenging backdrop in late night.</p>
+<p>CBS与派拉蒙今日声明称，这是深夜档面临挑战下的财务决策。</p>
+<p><button class="play-button sentence" id="s-00-12-21-919" data-start="00:12:21,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is not related in any way to the show's performance, content, or other matters happening at Paramount.</p>
+<p>与节目表现、内容或派拉蒙内部事务无关。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959251" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-28-080" data-start="00:12:28,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now this comes amid a shifting landscape in the media industry and Paramount itself is in the middle of a historic merger.</p>
+<p>当前媒体行业格局剧变，派拉蒙正进行历史性合并。</p>
+<p><button class="play-button sentence" id="s-00-12-34-812" data-start="00:12:34,812" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The late show launched back in 1993 with David Letterman as the original host before handing the reins to Colbert after his run on Comedy Central.</p>
+<p>《深夜秀》1993年由大卫·莱特曼首创，后由喜剧中心出身的科拜尔接棒。</p>
+<p><button class="play-button sentence" id="s-00-12-43-918" data-start="00:12:43,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we'll be right back in 60 seconds.</p>
+<p>稍后60秒回来。</p>
+<p><button class="play-button sentence" id="s-00-12-45-979" data-start="00:12:45,979" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The side effects from cancer left here an excruciating pain, but three times her insurance denied the medication, her physicians said she needed how using artificial intelligence helped her finally get the coverage of doctors ordered.</p>
+<p>癌症副作用令她剧痛难忍，但保险公司三次拒赔医生开具的药物，最终人工智能帮她获赔。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959220" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-59-388" data-start="00:12:59,388" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's next.</p>
+<p>详情稍后。</p>
+<p><button class="play-button sentence" id="s-00-13-02-399" data-start="00:13:02,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now to our series The Cost of Denial and the technique more people are using to fight back against the insurance companies that deny coverage or claims.</p>
+<p>《拒赔的代价》系列报道：越来越多人用AI技术对抗保险公司拒赔。</p>
+<p><button class="play-button sentence" id="s-00-13-10-559" data-start="00:13:10,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Artificial intelligence so simple our Brian Chung found out just about anyone can do it.</p>
+<p>布莱恩·钟发现AI工具操作简单，人人可用。</p>
+<p><button class="play-button sentence" id="s-00-13-16-480" data-start="00:13:16,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I basically avoided stairs.</p>
+<p>我基本避免走楼梯。</p>
+<p><button class="play-button sentence" id="s-00-13-18-753" data-start="00:13:18,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, if I could.</p>
+<p>是的，尽可能不走。</p>
+<p><button class="play-button sentence" id="s-00-13-20-080" data-start="00:13:20,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's because every step was grueling for Stephanie Nickstorfe.</p>
+<p>因为每一步对斯蒂芬妮·尼克斯特菲都是折磨。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959195" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-24-639" data-start="00:13:24,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Davidson, North Carolina, her morning routine nearly impossible to get through without pain.</p>
+<p>在北卡罗来纳州戴维森市，她的晨间日常伴随疼痛。</p>
+<p><button class="play-button sentence" id="s-00-13-29-759" data-start="00:13:29,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She had to ask for help just to open a juice container.</p>
+<p>她甚至需要帮忙打开果汁瓶盖。</p>
+<p><button class="play-button sentence" id="s-00-13-32-862" data-start="00:13:32,862" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So even that was something you could do six months ago.</p>
+<p>半年前这些事你还能自理？</p>
+<p><button class="play-button sentence" id="s-00-13-36-267" data-start="00:13:36,267" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh yeah, no, no, no.</p>
+<p>哦不，完全不行了。</p>
+<p><button class="play-button sentence" id="s-00-13-37-678" data-start="00:13:37,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2022, Stephanie was diagnosed with stage 4 skin cancer.</p>
+<p>2022年斯蒂芬妮确诊四期皮肤癌。</p>
+<p><button class="play-button sentence" id="s-00-13-41-180" data-start="00:13:41,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Luckily, she responded well to immunotherapy.</p>
+<p>幸运的是，免疫疗法效果良好。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959175" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-44-252" data-start="00:13:44,252" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the flip side of that is that there are side effects.</p>
+<p>但副作用随之而来。</p>
+<p><button class="play-button sentence" id="s-00-13-48-239" data-start="00:13:48,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For Stephanie, that meant excruciating joint pain.</p>
+<p>对她而言是剧烈的关节疼痛。</p>
+<p><button class="play-button sentence" id="s-00-13-50-925" data-start="00:13:50,925" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two doctors recommended the infusion medication in Fliximab, but her insurance denied coverage.</p>
+<p>两位医生推荐输注英夫利昔单抗，但保险公司拒赔。</p>
+<p><button class="play-button sentence" id="s-00-13-56-005" data-start="00:13:56,005" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I remember getting on the phone in the gallon at the insurance company in the day.</p>
+<p>我记得那天疯狂打电话给保险公司。</p>
+<p><button class="play-button sentence" id="s-00-13-59-975" data-start="00:13:59,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, the insurance.</p>
+<p>对，保险公司。</p>
+<p><button class="play-button sentence" id="s-00-14-01-019" data-start="00:14:01,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, yeah, it's definitely his husband Jason Furious when he saw the denial letter from Primera Blue Cross, which had covered her cancer care, saying the services requested don't meet guidelines for coverage and call the use of infliximab experimental.</p>
+<p>丈夫杰森看到Primera蓝十字的拒赔信时暴怒，信中称该药物不符合赔付标准且属实验性用途。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959145" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-14-661" data-start="00:14:14,661" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Two appeals were also denied.</p>
+<p>两次申诉也被驳回。</p>
+<p><button class="play-button sentence" id="s-00-14-16-480" data-start="00:14:16,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Did you feel like you were being treated as human beings?</p>
+<p>你们觉得自己被当人对待了吗？</p>
+<p><button class="play-button sentence" id="s-00-14-19-192" data-start="00:14:19,192" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely not.</p>
+<p>完全没有。</p>
+<p><button class="play-button sentence" id="s-00-14-20-798" data-start="00:14:20,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just a number.</p>
+<p>只是个数字。</p>
+<p><button class="play-button sentence" id="s-00-14-21-630" data-start="00:14:21,630" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, no, no name, no face kind of thing.</p>
+<p>对，无名无姓的存在。</p>
+<p><button class="play-button sentence" id="s-00-14-23-918" data-start="00:14:23,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, G-B-L.</p>
+<p>是的，冷冰冰的。</p>
+<p><button class="play-button sentence" id="s-00-14-24-768" data-start="00:14:24,768" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Desperate, Jason turned to artificial intelligence.</p>
+<p>绝望中杰森尝试人工智能。</p>
+<p><button class="play-button sentence" id="s-00-14-28-798" data-start="00:14:28,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You get the point of where, okay, this is our last hope.</p>
+<p>他意识到这是最后希望。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959127" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-32-320" data-start="00:14:32,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had come across a doctor developing an AI tool to take on insurance companies.</p>
+<p>他遇到一位开发AI工具对抗保险公司的医生。</p>
+<p><button class="play-button sentence" id="s-00-14-36-399" data-start="00:14:36,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That doctor helped him use AI to generate an appeal letter for Stephanie more than 20 pages long within 48 hours of sending in that version, along with copies to public officials.</p>
+<p>医生协助他用AI生成20多页申诉信，48小时内提交并抄送政府官员。</p>
+<p><button class="play-button sentence" id="s-00-14-45-840" data-start="00:14:45,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Right up top, your appeal was approved.</p>
+<p>结果申诉获批。</p>
+<p><button class="play-button sentence" id="s-00-14-48-132" data-start="00:14:48,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Despite the three previous denials for Stephanie, Primera Blue Cross now tells NBC News that the denial of service came from a Primera processing error involving a misapplication of policy that was no intent to deny care.</p>
+<p>尽管三次拒赔，Primera蓝十字向NBC新闻解释是因政策适用错误，非故意拒赔。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959098" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-01-600" data-start="00:15:01,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ultimate approval letter from Primera said, I want to apologize that you have been waiting to receive treatment for nine months.</p>
+<p>最终批准信中写道："对您等待治疗九个月深表歉意。"</p>
+<p><button class="play-button sentence" id="s-00-15-08-286" data-start="00:15:08,286" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now there are AI services specifically designed for insurance denials.</p>
+<p>现有专门针对保险拒赔的AI服务。</p>
+<p><button class="play-button sentence" id="s-00-15-12-542" data-start="00:15:12,542" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Introducing Claimable.</p>
+<p>例如Claimable。</p>
+<p><button class="play-button sentence" id="s-00-15-13-869" data-start="00:15:13,869" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of them Claimable says it can generate appeal letters for coverage of 70 medications for a cost of about $40.</p>
+<p>该公司称能以约40美元生成70种药物的申诉信。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959079" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-20-480" data-start="00:15:20,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Planning stairs is of like, uh, climbing stairs are offered.</p>
+<p>规划楼梯就像...呃，提供攀爬选择。</p>
+<p><button class="play-button sentence" id="s-00-15-25-919" data-start="00:15:25,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We tested it with Jason plugging in insurance information and using drop-down menus to explain symptoms and the deny claim.</p>
+<p>我们让杰森输入保险信息，用下拉菜单描述症状和拒赔情况来测试。</p>
+<p><button class="play-button sentence" id="s-00-15-32-754" data-start="00:15:32,754" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, so I will hit continue.</p>
+<p>点击继续。</p>
+<p><button class="play-button sentence" id="s-00-15-34-539" data-start="00:15:34,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In about 15 minutes, I had an expansive appeals letter complete with scientific references and personal stories.</p>
+<p>约15分钟就生成包含科学依据和个人经历的详细申诉信。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959059" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-40-960" data-start="00:15:40,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These are things I would never have thought of.</p>
+<p>这些是我根本想不到的内容。</p>
+<p><button class="play-button sentence" id="s-00-15-42-983" data-start="00:15:42,983" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The next door's credit AI would Stephanie finally getting the drug she needed, but they're left frustrated.</p>
+<p>AI助力斯蒂芬妮终获所需药物，但过程令人沮丧。</p>
+<p><button class="play-button sentence" id="s-00-15-48-113" data-start="00:15:48,113" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It took so much time.</p>
+<p>耗费太多时间。</p>
+<p><button class="play-button sentence" id="s-00-15-49-120" data-start="00:15:49,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If you could talk to the CEO of the insurance company, what would you say?</p>
+<p>若对保险公司CEO说句话？</p>
+<p><button class="play-button sentence" id="s-00-15-54-639" data-start="00:15:54,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No.</p>
+<p>不。</p>
+<p><button class="play-button sentence" id="s-00-15-54-843" data-start="00:15:54,843" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I would say what if this was your wife?</p>
+<p>我会问：若这是你妻子呢？</p>
+<p><button class="play-button sentence" id="s-00-15-56-960" data-start="00:15:56,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>对。</p>
+<p><button class="play-button sentence" id="s-00-15-57-266" data-start="00:15:57,266" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this was happening to you?</p>
+<p>若发生在你身上？</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959041" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-58-798" data-start="00:15:58,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah.</p>
+<p>是啊。</p>
+<p><button class="play-button sentence" id="s-00-15-59-261" data-start="00:15:59,261" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Or your daughter or your sister.</p>
+<p>或你女儿、姐妹？</p>
+<p><button class="play-button sentence" id="s-00-16-03-278" data-start="00:16:03,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That message from a couple that says they had to use artificial intelligence to be treated like real people.</p>
+<p>这对夫妇表示：必须用AI才能被当人对待。</p>
+<p><button class="play-button sentence" id="s-00-16-09-747" data-start="00:16:09,747" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Brian Chung joins us now live in studio.</p>
+<p>布莱恩·钟现加入直播。</p>
+<p><button class="play-button sentence" id="s-00-16-12-409" data-start="00:16:12,409" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Brian, for some, using AI that may sound intimidating.</p>
+<p>布莱恩，对某些人AI可能显得复杂。</p>
+<p><button class="play-button sentence" id="s-00-16-15-250" data-start="00:16:15,250" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, it sounds a little techy.</p>
+<p>是的，听起来技术性强。</p>
+<p><button class="play-button sentence" id="s-00-16-16-364" data-start="00:16:16,364" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sounds a little difficult, but I found it simple and relatively quick to use.</p>
+<p>但实际操作简单快捷。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208959020" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-19-327" data-start="00:16:19,327" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I should point out that it's not just AI tools that are being used for health insurance.</p>
+<p>不仅健康保险，AI也用于房主保险申诉。</p>
+<p><button class="play-button sentence" id="s-00-16-23-283" data-start="00:16:23,283" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are tools that homeowners can use to dispute their deny claims as well.</p>
+<p>房主也能用类似工具。</p>
+<p><button class="play-button sentence" id="s-00-16-27-278" data-start="00:16:27,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, Brian Chung for a Sprint great story.</p>
+<p>感谢布莱恩·钟的精彩报道。</p>
+<p><button class="play-button sentence" id="s-00-16-29-304" data-start="00:16:29,304" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're back in a moment with huge news for people who vat and a major update from the FDA.</p>
+<p>稍后带来电子烟用户重大新闻和FDA最新动态。</p>
+<p><button class="play-button sentence" id="s-00-16-33-839" data-start="00:16:33,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're back now with an update in the Brianna Taylor case, the Justice Department asking a federal judge to sentence former Louisville police officer Brett Hankinson to just one day in prison after he was convicted of violating Taylor civil rights in a raid that led to her killing in 2020.</p>
+<p>布伦娜·泰勒案进展：司法部建议联邦法官仅判涉事警察汉金森一天监禁，其2020年突袭行动中侵犯泰勒公民权致其死亡。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958989" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-50-520" data-start="00:16:50,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The charge Hankinson was convicted on carries a potential maximum life sentence in prison.</p>
+<p>该指控最高可判终身监禁。</p>
+<p><button class="play-button sentence" id="s-00-16-55-757" data-start="00:16:55,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Louisville's mayor today calling for Hankinson to receive a quote, serious prison sentence.</p>
+<p>路易斯维尔市长今日呼吁对其"严惩"。</p>
+<p><button class="play-button sentence" id="s-00-17-01-063" data-start="00:17:01,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Also tonight, some big news for people who vat the FDA saying that jewel labs can continue selling e-cigarettes and refill cartridges after wrapping up a multi-year review.</p>
+<p>FDA宣布Juul可继续销售电子烟及烟弹，结束多年审查。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958968" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-11-558" data-start="00:17:11,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But an FDA spokesperson also says that doesn't mean the products are safe or FDA approved.</p>
+<p>但发言人强调这不代表产品安全或获FDA批准。</p>
+<p><button class="play-button sentence" id="s-00-17-17-118" data-start="00:17:17,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It just means that jewel met the legal standard to market their vape as tobacco products in the US.</p>
+<p>仅表明Juul符合作为烟草产品在美国销售的法律标准。</p>
+<p><button class="play-button sentence" id="s-00-17-22-960" data-start="00:17:22,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sad news in the sports world tonight Felix Baumgartner, the extreme sport athlete, daredevil and skydiver died in a paragliding accident in Italy.</p>
+<p>体坛噩耗：极限运动员菲利克斯·鲍姆加特纳在意大利滑翔伞事故中丧生，享年56岁。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958948" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-31-386" data-start="00:17:31,386" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You might remember him from this moment, his 2012 stunt when he jumped down to earth from the stratosphere that was the highest ever free fall at the time.</p>
+<p>他2012年从平流层跳伞创下纪录。</p>
+<p><button class="play-button sentence" id="s-00-17-40-174" data-start="00:17:40,174" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was 56 years old.</p>
+<p>终年56岁。</p>
+<p><button class="play-button sentence" id="s-00-17-41-349" data-start="00:17:41,349" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And when we return to reminder why the best things in life are free.</p>
+<p>稍后带来"生活中最好的东西是免费的"特别报道。</p>
+<p><button class="play-button sentence" id="s-00-17-45-368" data-start="00:17:45,368" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One man's audacity to get every freebie he can find from cookies, to coffee, to cheesecake, to Chipotle in a single day, his birthday.</p>
+<p>一男子生日当天疯狂收集免费食物。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958926" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-53-169" data-start="00:17:53,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's next.</p>
+<p>即将播出。</p>
+<p><button class="play-button sentence" id="s-00-17-59-519" data-start="00:17:59,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally, there is good news tonight.</p>
+<p>最后是今日好消息。</p>
+<p><button class="play-button sentence" id="s-00-18-01-496" data-start="00:18:01,496" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Who doesn't love a freebie on their birthday?</p>
+<p>谁不爱生日免费福利？</p>
+<p><button class="play-button sentence" id="s-00-18-03-920" data-start="00:18:03,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, one man is making it his mission to see how much food, coffee and ice cream one birthday boy can get.</p>
+<p>一男子挑战生日当天获取最多免费食物。</p>
+<p><button class="play-button sentence" id="s-00-18-10-331" data-start="00:18:10,331" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's Camilla Bernal.</p>
+<p>卡米拉·伯纳尔报道。</p>
+<p><button class="play-button sentence" id="s-00-18-11-796" data-start="00:18:11,796" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let me show you everyone getting free food today.</p>
+<p>看看他今天获得的免费食物。</p>
+<p><button class="play-button sentence" id="s-00-18-15-759" data-start="00:18:15,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Full price is for quitters.</p>
+<p>付全价是认输。</p>
+<p><button class="play-button sentence" id="s-00-18-17-414" data-start="00:18:17,414" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Free pretzel, wetzels pretzels, apple pie from top ice.</p>
+<p>免费椒盐卷饼、苹果派。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958899" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-20-798" data-start="00:18:20,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, blah, blah, blah, blah.</p>
+<p>还有一堆美食。</p>
+<p><button class="play-button sentence" id="s-00-18-22-143" data-start="00:18:22,143" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last freeze to talk about.</p>
+<p>最后要说的是。</p>
+<p><button class="play-button sentence" id="s-00-18-23-429" data-start="00:18:23,429" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We got a small orange chicken this year.</p>
+<p>今年有小份橙子鸡。</p>
+<p><button class="play-button sentence" id="s-00-18-25-358" data-start="00:18:25,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because there's always a deal, Clint Savatos can help you find only paid $1 for the $6 taco.</p>
+<p>克林特·萨瓦托斯总能找到优惠，比如1美元买6美元玉米卷。</p>
+<p><button class="play-button sentence" id="s-00-18-31-118" data-start="00:18:31,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Especially on your birthday.</p>
+<p>尤其在生日时。</p>
+<p><button class="play-button sentence" id="s-00-18-32-914" data-start="00:18:32,914" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm always looking for a deal.</p>
+<p>我总在寻找优惠。</p>
+<p><button class="play-button sentence" id="s-00-18-34-709" data-start="00:18:34,709" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm always looking to save money.</p>
+<p>总想省钱。</p>
+<p><button class="play-button sentence" id="s-00-18-36-720" data-start="00:18:36,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Six lemon pepper wings at Buffalo, wow wings.</p>
+<p>布法罗辣翅六只。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958881" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-38-878" data-start="00:18:38,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As the Wall Street Journal reported, this trend is on the rise.</p>
+<p>《华尔街日报》称此趋势兴起。</p>
+<p><button class="play-button sentence" id="s-00-18-42-422" data-start="00:18:42,422" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's one of many on social media competing for free treats and even meals.</p>
+<p>他是社交媒体上争抢免费美食的一员。</p>
+<p><button class="play-button sentence" id="s-00-18-50-960" data-start="00:18:50,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The preparation takes months and when others are making wish list, Clint is making spreadsheets.</p>
+<p>他花数月准备电子表格规划。</p>
+<p><button class="play-button sentence" id="s-00-19-00-640" data-start="00:19:00,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For this year's birthday, more than 38 stops, 18,000 steps and less than $25 spent.</p>
+<p>今年生日跑了38个地方，走1.8万步，花费不到25美元。</p>
+<p><button class="play-button sentence" id="s-00-19-08-720" data-start="00:19:08,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But impossible to do alone.</p>
+<p>但独力难成。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958849" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-10-336" data-start="00:19:10,336" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I had to call him to help for these birthday rewards.</p>
+<p>需要朋友帮忙兑换生日福利。</p>
+<p><button class="play-button sentence" id="s-00-19-13-359" data-start="00:19:13,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it fun or does it feel like work?</p>
+<p>这是乐趣还是工作？</p>
+<p><button class="play-button sentence" id="s-00-19-15-457" data-start="00:19:15,457" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's a lot of fun getting free guacamole is fantastic.</p>
+<p>免费鳄梨酱太棒了，超有趣。</p>
+<p><button class="play-button sentence" id="s-00-19-19-278" data-start="00:19:19,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Clint's goal for next year is more than 40 freebies, but in the meantime, free coffee.</p>
+<p>明年目标是40项免费福利，现在先享免费咖啡。</p>
+<p><button class="play-button sentence" id="s-00-19-27-038" data-start="00:19:27,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's still caching in the deals.</p>
+<p>他仍在兑现优惠。</p>
+<p><button class="play-button sentence" id="s-00-19-29-430" data-start="00:19:29,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's better when it's free.</p>
+<p>免费更美味。</p>
+<p><button class="play-button sentence" id="s-00-19-31-468" data-start="00:19:31,468" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Oh, everything's better when it's free.</p>
+<p>免费让一切更美好。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-35-119" data-start="00:19:35,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks for all the birthday wishes.</p>
+<p>感谢所有生日祝福。</p>
+<p><button class="play-button sentence" id="s-00-19-37-519" data-start="00:19:37,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Camila Bernal NBC News Los Angeles.</p>
+<p>卡米拉·伯纳尔，NBC新闻洛杉矶报道。</p>
+<p><button class="play-button sentence" id="s-00-19-41-200" data-start="00:19:41,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is better when it's free.</p>
+<p>免费确实更好。</p>
+<p><button class="play-button sentence" id="s-00-19-42-721" data-start="00:19:42,721" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So true.</p>
+<p>太对了。</p>
+<p><button class="play-button sentence" id="s-00-19-43-184" data-start="00:19:43,184" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Nightly News for this Thursday.</p>
+<p>以上就是本周四《夜间新闻》。</p>
+<p><button class="play-button sentence" id="s-00-19-45-366" data-start="00:19:45,366" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Tom Yamas.</p>
+<p>我是汤姆·亚马思。</p>
+<p><button class="play-button sentence" id="s-00-19-46-160" data-start="00:19:46,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thanks so much for watching.</p>
+<p>感谢收看。</p>
+<p><button class="play-button sentence" id="s-00-19-47-701" data-start="00:19:47,701" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tonight and always we're here for you.</p>
+<p>我们始终为您服务。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1dFgGzTE8Y/?t=-2208958810" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-49-757" data-start="00:19:49,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good night.</p>
+<p>晚安。</p>
+<p><button class="play-button sentence" id="s-00-19-56-960" data-start="00:19:56,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We thank you for watching and remember stay updated on breaking news and top stories on the NBC News app or watch live on our YouTube channel.</p>
+<p>感谢观看，请通过NBC新闻应用或YouTube频道获取最新突发新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

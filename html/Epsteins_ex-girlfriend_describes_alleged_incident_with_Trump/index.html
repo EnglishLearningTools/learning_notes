@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Epstein’s ex-girlfriend describes alleged incident with Trump</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jeffrey Epstein's ex-girlfriend alleges Trump groped her in 1993 while Epstein watched and smiled, calling it a "weird twisted game." Trump denies the claims.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Epstein’s ex-girlfriend describes alleged incident with Trump</h1>
+<p>【CNN News 20250721 爱泼斯坦前女友描述与特朗普的涉嫌猥亵事件】</p>
+<p>Summary:
+Jeffrey Epstein's ex-girlfriend alleges Trump groped her in 1993 while Epstein watched and smiled, calling it a "weird twisted game." Trump denies the claims.</p>
+<p>摘要：
+杰弗里·爱泼斯坦的前女友指控特朗普在1993年对她实施猥亵，而爱泼斯坦在一旁观看并微笑，称这是一场“怪异扭曲的游戏”。特朗普否认了这些指控。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 14 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeffrey Epstein's ex-girlfriend speaking out tonight, Stacey Williams, a former sports illustrated model who dated Epstein in the early 90s, has spent time with both Epstein and Donald Trump together.</p>
+<p>杰弗里·爱泼斯坦的前女友今晚发声，斯泰西·威廉姆斯是90年代初与爱泼斯坦约会的前《体育画报》模特，曾与爱泼斯坦和唐纳德·特朗普共处。</p>
+<p><button class="play-button sentence" id="s-00-00-11-480" data-start="00:00:11,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In one disturbing alleged incident, which Williams went public with last year before the presidential election, Williams says Trump groped her in front of Epstein at Trump Tower in 1993.</p>
+<p>在一段令人不安的涉嫌事件中，威廉姆斯去年在总统大选前公开指控，称1993年在特朗普大厦，特朗普在爱泼斯坦面前对她实施了猥亵。</p>
+<p><button class="play-button sentence" id="s-00-00-23-079" data-start="00:00:23,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's what she told our son, Lenservati, when she first broke her silence.</p>
+<p>这是她首次打破沉默时告诉我们的记者伦瑟瓦蒂的内容。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959971" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-28-199" data-start="00:00:28,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The second he was in front of me, he pulled me into him, and his hands were just on me and didn't come off.</p>
+<p>他一站到我面前，就把我拉过去，他的手一直放在我身上，没有松开。</p>
+<p><button class="play-button sentence" id="s-00-00-38-158" data-start="00:00:38,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then the hands started moving, and they were on the side of my breasts, on my hips, back down to my butt, back up sort of then, you know, they were just on me the whole time.</p>
+<p>然后他的手开始移动，先是放在我的胸部侧面，接着是臀部，然后又回到臀部上方，你知道，他的手一直没离开过我。</p>
+<p><button class="play-button sentence" id="s-00-00-50-600" data-start="00:00:50,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I, sorry. I froze.</p>
+<p>而我，抱歉，我僵住了。</p>
+<p><button class="play-button sentence" id="s-00-00-58-600" data-start="00:00:58,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Williams also claimed that Epstein and Trump looked at each other and smiled during the alleged incident, which Williams says she now believes was coordinated and quote some kind of weird twisted game.</p>
+<p>威廉姆斯还声称，爱泼斯坦和特朗普在涉嫌事件中互相看着对方并微笑，她现在认为这是有预谋的，并称之为“某种怪异扭曲的游戏”。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959929" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-10-840" data-start="00:01:10,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump denied Williams' allegations through his campaign at the time, which said in part, quote, it's obvious this fake story was contrived by Kamala Harris' campaign.</p>
+<p>特朗普当时通过竞选团队否认了威廉姆斯的指控，称“这明显是卡玛拉·哈里斯的竞选团队编造的假新闻”。</p>
+<p><button class="play-button sentence" id="s-00-01-20-718" data-start="00:01:20,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Stacey Williams is out front now to speak out for the first time since the uproar over Trump's handling of the Epstein case.</p>
+<p>斯泰西·威廉姆斯现在首次公开谈论此事，此前因特朗普处理爱泼斯坦案引发的争议。</p>
+<p><button class="play-button sentence" id="s-00-01-27-918" data-start="00:01:27,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stacey, thank you so much for joining us tonight.</p>
+<p>斯泰西，非常感谢你今晚加入我们。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959908" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-31-078" data-start="00:01:31,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As you know, Epstein is dominating the news once again in his relationship with Trump is under scrutiny.</p>
+<p>如你所知，爱泼斯坦再次成为新闻焦点，他与特朗普的关系正受到审查。</p>
+<p><button class="play-button sentence" id="s-00-01-36-959" data-start="00:01:36,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> While you were dating Epstein, can you tell us how close these two men were?</p>
+<p>在你与爱泼斯坦约会期间，你能告诉我们这两人关系有多密切吗？</p>
+<p><button class="play-button sentence" id="s-00-01-42-799" data-start="00:01:42,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were best friends.</p>
+<p>他们是最好的朋友。</p>
+<p><button class="play-button sentence" id="s-00-01-44-640" data-start="00:01:44,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, I dated Jeffrey for a period of more or less, I think about four or five months.</p>
+<p>你知道，我和杰弗里约会了大约四五个月。</p>
+<p><button class="play-button sentence" id="s-00-01-51-400" data-start="00:01:51,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the only friend that he would mention every time we saw each other or had a phone conversation was Donald and he would share a lot of anecdotes, I have plenty of anecdotes.</p>
+<p>每次我们见面或通电话时，他唯一提到的朋友就是唐纳德，他会分享很多轶事，我也有很多轶事。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-05-560" data-start="00:02:05,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And yeah, they were very close and they were up to no good.</p>
+<p>是的，他们非常亲密，而且没干好事。</p>
+<p><button class="play-button sentence" id="s-00-02-09-598" data-start="00:02:09,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And how did Epstein talk about Trump?</p>
+<p>爱泼斯坦是怎么谈论特朗普的？</p>
+<p><button class="play-button sentence" id="s-00-02-12-318" data-start="00:02:12,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sort of what was the quality of those anecdotes and how he described him?</p>
+<p>那些轶事的性质是什么？他是怎么描述特朗普的？</p>
+<p><button class="play-button sentence" id="s-00-02-17-718" data-start="00:02:17,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, there was a time when he mentioned the idea to check in on him because he was unwell and very upset about something that had happened.</p>
+<p>有一次，他提到要去看望特朗普，因为特朗普身体不适，并对某件事感到非常沮丧。</p>
+<p><button class="play-button sentence" id="s-00-02-34-680" data-start="00:02:34,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I remember because he was late to pick me up and he was explaining why he was late.</p>
+<p>我记得因为他接我迟到了，还解释了原因。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959841" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-38-960" data-start="00:02:38,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were just, you know, it was such a long time ago, but it was just part, that was his, that was his bro, that was his wing man.</p>
+<p>你知道，那是很久以前的事了，但那就是他的兄弟，他的搭档。</p>
+<p><button class="play-button sentence" id="s-00-02-45-359" data-start="00:02:45,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was clearly, I'd hear about Gilan and I'd hear about Jeffrey.</p>
+<p>很明显，我听说过吉兰，也听说过杰弗里。</p>
+<p><button class="play-button sentence" id="s-00-02-48-919" data-start="00:02:48,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I met Gilan in his house.</p>
+<p>我在他家里见过吉兰。</p>
+<p><button class="play-button sentence" id="s-00-02-50-519" data-start="00:02:50,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She would come wafting in and out, the home in New York.</p>
+<p>她会在纽约的家里进进出出。</p>
+<p><button class="play-button sentence" id="s-00-02-55-718" data-start="00:02:55,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So he was clearly just someone that he talked about all the time.</p>
+<p>所以他显然是他经常谈论的人。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959820" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-59-280" data-start="00:02:59,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And again, you know, I really, I met Jeffrey the second time when we started dating based on the introduction, the reintroduction that happened at the Plaza Hotel at a Christmas party in 1992 that Donald Trump threw.</p>
+<p>再说一次，你知道，我第二次见到杰弗里是在1992年特朗普在广场酒店举办的圣诞派对上，那次重新介绍让我们开始约会。</p>
+<p><button class="play-button sentence" id="s-00-03-15-598" data-start="00:03:15,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> No, they were very, very close.</p>
+<p>不，他们非常非常亲密。</p>
+<p><button class="play-button sentence" id="s-00-03-18-120" data-start="00:03:18,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So let's talk about this incident, a alleged incident in 1993, where you say that Trump grove you in front of Epstein.</p>
+<p>那么我们来谈谈1993年的这起涉嫌事件，你说特朗普在爱泼斯坦面前猥亵了你。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959793" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-26-878" data-start="00:03:26,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I do want to note that CNN has spoken to three friends of yours who confirmed that you told them about this alleged incident over past decades.</p>
+<p>我想指出，CNN已经与你的三位朋友交谈过，他们证实你在过去几十年里向他们讲述过这起涉嫌事件。</p>
+<p><button class="play-button sentence" id="s-00-03-35-280" data-start="00:03:35,280" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you tell me more about what happened that day and particularly how Trump and Epstein interacted?</p>
+<p>你能详细说说那天发生了什么吗？尤其是特朗普和爱泼斯坦是如何互动的？</p>
+<p><button class="play-button sentence" id="s-00-03-40-758" data-start="00:03:40,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, before I get into the details of what happened, which obviously I told you guys and I've shared with multiple outlets, the specifics of the assault that happened.</p>
+<p>好的，在我详细讲述发生的事情之前，显然我已经告诉过你们，也向多家媒体分享过这起袭击的具体细节。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959770" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-49-840" data-start="00:03:49,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I want to point out that I was polygraphed before I did all this by one of the most renowned examiners in the world.</p>
+<p>我想指出，我在做这一切之前接受了世界上最著名的测谎专家之一的测谎。</p>
+<p><button class="play-button sentence" id="s-00-04-02-680" data-start="00:04:02,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Michael Wolfe has hundreds of hours of interviews with Jeffrey Epstein, where Jeffrey confirmed to Michael what the two of them did to me long before I came out and told you all of this.</p>
+<p>迈克尔·沃尔夫与杰弗里·爱泼斯坦进行了数百小时的访谈，爱泼斯坦早就向迈克尔承认了他们两人对我做的事，远早于我公开讲述这一切。</p>
+<p><button class="play-button sentence" id="s-00-04-16-240" data-start="00:04:16,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So those are two critical data points that you need to have and now I'll walk you through what happened.</p>
+<p>所以这是你需要知道的两个关键数据点，现在我来告诉你发生了什么。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:21</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-21-360" data-start="00:04:21,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was dating Jeffrey.</p>
+<p>我当时在和杰弗里约会。</p>
+<p><button class="play-button sentence" id="s-00-04-23-199" data-start="00:04:23,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was always talking about Donald.</p>
+<p>他总是谈论唐纳德。</p>
+<p><button class="play-button sentence" id="s-00-04-24-639" data-start="00:04:24,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was as bestie and everything and he was joking about how Donald thought I was hot and Donald thinks I'm this or whatever, once to talk to you and he was telling me this as we were taking a walk down Fifth Avenue one day and he said, let's stop in and see him at his offices.</p>
+<p>他是他的好兄弟，他还开玩笑说唐纳德觉得我很火辣，唐纳德觉得我怎么怎么样，有一天我们在第五大道散步时他告诉我这些，然后他说，我们去他办公室看看他吧。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959720" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-39-439" data-start="00:04:39,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we went up to his office in Trump Tower and within a couple of minutes, Jeffrey Donald was outside of his door and his hands were all over me.</p>
+<p>于是我们去了特朗普大厦的办公室，几分钟后，杰弗里·唐纳德站在门外，他的手就开始在我身上乱摸。</p>
+<p><button class="play-button sentence" id="s-00-04-53-040" data-start="00:04:53,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They were on my breasts, they were on my butt, they were on my hips up and down while the two of them just kept having a normal conversation.</p>
+<p>他的手放在我的胸部、臀部，上下移动，而他们两人还在正常交谈。</p>
+<p><button class="play-button sentence" id="s-00-05-01-759" data-start="00:05:01,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't remember exactly what was in the conversation again.</p>
+<p>我不记得具体谈了什么。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959695" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-04-720" data-start="00:05:04,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was, we're talking 90, this is 93 now.</p>
+<p>那是90年代，现在是93年。</p>
+<p><button class="play-button sentence" id="s-00-05-07-920" data-start="00:05:07,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was something about, it was irrelevant.</p>
+<p>大概是些无关紧要的事。</p>
+<p><button class="play-button sentence" id="s-00-05-11-160" data-start="00:05:11,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was like, oh, Stacey's career's on fire.</p>
+<p>比如，哦，斯泰西的事业如日中天。</p>
+<p><button class="play-button sentence" id="s-00-05-12-959" data-start="00:05:12,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She just did sports all straight again, you know, blah, blah, blah, blah, blah, and they were back and forth smiling and grinning and carrying on a conversation while Donald ran his hands all over me and you know, when that happens in broad daylight in someone's office and an assistant's walking back and forth, you're in shock.</p>
+<p>她刚又上了《体育画报》，你知道，就是些废话，他们笑着来回交谈，而唐纳德的手一直在我身上摸来摸去，你知道，当这种事在光天化日之下发生在别人的办公室，还有助理来回走动时，你会震惊。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959665" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-34-839" data-start="00:05:34,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If it happens in a dark alleyway, right? You defend yourself, but when it's hidden in its brazenness like that, which is Donald Trump's forte, you know, you go into shock.</p>
+<p>如果发生在黑暗的小巷里，对吧？你会自卫，但当它如此明目张胆却又隐蔽，这是唐纳德·特朗普的专长，你知道，你会陷入震惊。</p>
+<p><button class="play-button sentence" id="s-00-05-46-639" data-start="00:05:46,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I froze and it was over and very quickly.</p>
+<p>所以我僵住了，事情很快就结束了。</p>
+<p><button class="play-button sentence" id="s-00-05-52-480" data-start="00:05:52,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was a few minutes and then we got back in the elevator and Jeffrey's energy had changed.</p>
+<p>几分钟后我们回到电梯，杰弗里的情绪变了。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959640" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:59</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-59-399" data-start="00:05:59,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He was like seething, he was enraged, he would make eye contact with me and then we got out on the street on Fifth Avenue and he looked at me and he just started yelling at me saying why did you let him do that?</p>
+<p>他怒火中烧，非常愤怒，他会和我对视，然后我们走到第五大道的街上，他看着我就开始冲我大喊，说你为什么让他那么做？</p>
+<p><button class="play-button sentence" id="s-00-06-11-240" data-start="00:06:11,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he was so enraged and then I remember thinking like, why did I?</p>
+<p>他非常愤怒，然后我记得我在想，我为什么？</p>
+<p><button class="play-button sentence" id="s-00-06-15-079" data-start="00:06:15,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I felt like I was coming back into my body at that moment and I was confused.</p>
+<p>那一刻我感觉自己回到了身体里，我很困惑。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-20-800" data-start="00:06:20,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's the story of the assault.</p>
+<p>这就是那次袭击的故事。</p>
+<p><button class="play-button sentence" id="s-00-06-25-319" data-start="00:06:25,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I do just want to note, Stacey, that Trump has denied these allegations, which you are well aware of.</p>
+<p>斯泰西，我想指出，特朗普已经否认了这些指控，你也清楚这一点。</p>
+<p><button class="play-button sentence" id="s-00-06-31-839" data-start="00:06:31,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I know at times you've referenced videos which we have not confirmed the existence of, but I know that you felt that this was coordinated later when you looked back on it.</p>
+<p>我知道你有时提到一些视频，我们尚未确认其存在，但我知道你后来回顾时认为这是有预谋的。</p>
+<p><button class="play-button sentence" id="s-00-06-41-120" data-start="00:06:41,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What was it that made you draw that conclusion?</p>
+<p>是什么让你得出这个结论？</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959595" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-44-199" data-start="00:06:44,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I had, I was sort of known in the industry for being somewhat combative with, you know, photographers who would expose themselves or do inappropriate things or even guys who would touch or harass on the streets and Jeffrey was aware of that.</p>
+<p>嗯，我在业内以对摄影师或街头骚扰者采取对抗态度而闻名，杰弗里知道这一点。</p>
+<p><button class="play-button sentence" id="s-00-07-04-759" data-start="00:07:04,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I think he was excited.</p>
+<p>我认为他很兴奋。</p>
+<p><button class="play-button sentence" id="s-00-07-08-560" data-start="00:07:08,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the gist in my mind, given what he knew and the way it played out was, hey, you know, I'm gonna deliver this person to you who's actually not gonna let you get away with what you do.</p>
+<p>根据他所知道的和事情的发展，我认为他的想法是，嘿，我要把这个人交给你，她实际上不会让你得逞。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959560" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-19-399" data-start="00:07:19,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I did because I froze.</p>
+<p>但我确实让他得逞了，因为我僵住了。</p>
+<p><button class="play-button sentence" id="s-00-07-22-000" data-start="00:07:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like I said, when a tinnan is brazenness like that, you freeze and, you know, he's a master of that.</p>
+<p>就像我说的，当一个人如此肆无忌惮时，你会僵住，你知道，他是这方面的高手。</p>
+<p><button class="play-button sentence" id="s-00-07-28-000" data-start="00:07:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I mean, he talked about it, right? He talked about pussy grabbing on the Access Hollywood tape.</p>
+<p>我是说，他谈论过这个，对吧？他在《走进好莱坞》录音带里谈论过抓女性下体。</p>
+<p><button class="play-button sentence" id="s-00-07-35-240" data-start="00:07:35,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And tonight, if you're aware, President Trump has filed this libel lawsuit against the Wall Street Journal over its reporting that there was this note, bearing Trump's name as a signature in an outline of a naked woman that was included in a 50th birthday album for Epstein in 2003, a note that also depicted an imaginary conversation between the two men and part of it reads, quote, Donald saying, we have certain things in common, Jeffrey.</p>
+<p>今晚，如果你知道的话，特朗普总统已经对《华尔街日报》提起诽谤诉讼，因其报道称2003年爱泼斯坦的50岁生日相册中包含一张纸条，上面有特朗普的签名，旁边是一个裸体女性的轮廓，纸条还描绘了两人之间的虚构对话，部分内容是，唐纳德说：“我们有一些共同点，杰弗里。”</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959517" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-02-560" data-start="00:08:02,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeffrey, yes, we do come to think of it.</p>
+<p>杰弗里：“是的，我们确实有。”</p>
+<p><button class="play-button sentence" id="s-00-08-04-639" data-start="00:08:04,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald, Enigma's never age. Have you noticed that?</p>
+<p>唐纳德：“谜一样的人永远不会老，你注意到了吗？”</p>
+<p><button class="play-button sentence" id="s-00-08-07-519" data-start="00:08:07,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Jeffrey is a matter of fact. It was clear to me that last, the last time I saw you and then finally, Donald, a pal is a wonderful thing.</p>
+<p>杰弗里：“事实上，我上次见到你时就很清楚。”最后，唐纳德：“朋友是美好的。”</p>
+<p><button class="play-button sentence" id="s-00-08-14-920" data-start="00:08:14,920" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Happy birthday and may every day be another wonderful secret.</p>
+<p>“生日快乐，愿每一天都是另一个美好的秘密。”</p>
+<p><button class="play-button sentence" id="s-00-08-19-000" data-start="00:08:19,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump called that letter fake.</p>
+<p>特朗普称那封信是假的。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959499" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-20-639" data-start="00:08:20,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said it was out of character for him because he never wrote a picture, drew a picture in his life, wrote a picture.</p>
+<p>他说这不符合他的性格，因为他一生中从未画过画。</p>
+<p><button class="play-button sentence" id="s-00-08-26-759" data-start="00:08:26,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think he said it's not his kind of language.</p>
+<p>我想他说这不是他的语言风格。</p>
+<p><button class="play-button sentence" id="s-00-08-29-360" data-start="00:08:29,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Based on your time with both men, does that sound out of character to you?</p>
+<p>根据你与这两人相处的时间，这听起来不符合他的性格吗？</p>
+<p><button class="play-button sentence" id="s-00-08-33-960" data-start="00:08:33,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are you kidding me?</p>
+<p>你在开玩笑吗？</p>
+<p><button class="play-button sentence" id="s-00-08-35-720" data-start="00:08:35,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know what they were up to together.</p>
+<p>我知道他们一起干了什么。</p>
+<p><button class="play-button sentence" id="s-00-08-37-318" data-start="00:08:37,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It happened to me.</p>
+<p>这事发生在我身上。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959481" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-38-399" data-start="00:08:38,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was polygraphed.</p>
+<p>我通过了测谎。</p>
+<p><button class="play-button sentence" id="s-00-08-40-080" data-start="00:08:40,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I have the post-disult postcard with a love note.</p>
+<p>我有带情书的明信片。</p>
+<p><button class="play-button sentence" id="s-00-08-44-240" data-start="00:08:44,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I have the receipts.</p>
+<p>所以我有证据。</p>
+<p><button class="play-button sentence" id="s-00-08-45-918" data-start="00:08:45,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where are Donald Trump's receipts?</p>
+<p>唐纳德·特朗普的证据在哪里？</p>
+<p><button class="play-button sentence" id="s-00-08-47-399" data-start="00:08:47,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where are they?</p>
+<p>在哪里？</p>
+<p><button class="play-button sentence" id="s-00-08-48-438" data-start="00:08:48,438" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I know what they're up together and I know what that means.</p>
+<p>我知道他们一起干了什么，我知道那意味着什么。</p>
+<p><button class="play-button sentence" id="s-00-08-50-600" data-start="00:08:50,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's very clear.</p>
+<p>非常清楚。</p>
+<p><button class="play-button sentence" id="s-00-08-51-558" data-start="00:08:51,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It wasn't baking or fishing.</p>
+<p>不是烘焙或钓鱼。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1EdgezuEWW/?t=-2208959466" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-53-960" data-start="00:08:53,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stacy Williams, I really appreciate you taking the time to speak with us tonight.</p>
+<p>斯泰西·威廉姆斯，非常感谢你今晚抽时间与我们交谈。</p>
+<p><button class="play-button sentence" id="s-00-08-58-960" data-start="00:08:58,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much.</p>
+<p>非常感谢。</p>
+<p><button class="play-button sentence" id="s-00-08-59-960" data-start="00:08:59,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you.</p>
+<p>谢谢。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

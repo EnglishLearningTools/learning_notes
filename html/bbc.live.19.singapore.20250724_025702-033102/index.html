@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>bbc.live.19.singapore: London Time 2025-07-24 02:57 - 03:31</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live coverage from Singapore on BBC News, featuring warnings of manmade starvation in Gaza, US court rulings on Epstein files, protests in Ukraine, and global trade updates.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>bbc.live.19.singapore: London Time 2025-07-24 02:57 - 03:31</h1>
+<p>【BBC News 20250724 特斯拉公布十余年来最差季度销售｜加沙人为饥荒｜联合国称海地上半年130万人流离失所，4000人丧生】</p>
+<p>Summary:
+Live coverage from Singapore on BBC News, featuring warnings of manmade starvation in Gaza, US court rulings on Epstein files, protests in Ukraine, and global trade updates.</p>
+<p>摘要：
+来自新加坡的BBC新闻直播报道，涵盖加沙人为饥荒警告、美国法院对爱泼斯坦文件的裁决、乌克兰抗议活动以及全球贸易动态。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 33 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959985" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-15-000" data-start="00:00:15,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Live from Singapore, this is BBC News.</p>
+<p>这里是BBC新闻，正在新加坡为您直播。</p>
+<p><button class="play-button sentence" id="s-00-00-18-699" data-start="00:00:18,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 100 agents, agencies, warn of mass manmade starvation in Gaza.</p>
+<p>超过100个机构和组织警告加沙正面临大规模人为饥荒。</p>
+<p><button class="play-button sentence" id="s-00-00-24-379" data-start="00:00:24,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel denies responsibility, saying the age shortage is engineered by Hamas.</p>
+<p>以色列否认责任，称物资短缺是哈马斯策划的。</p>
+<p><button class="play-button sentence" id="s-00-00-29-379" data-start="00:00:29,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A US judge blocks the release of court files related to Jeffrey Epstein as more reports linking Donald Trump to the disgraced financier emerged.</p>
+<p>美国法官阻止了与杰弗里·爱泼斯坦相关的法庭文件公开，同时更多报道将唐纳德·特朗普与这名声名狼藉的金融家联系起来。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959960" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-39-378" data-start="00:00:39,378" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thousands take to the streets in Kiev as Ukraine's government faces a growing backlash over moves to limit the power of anti-corruption agencies.</p>
+<p>数千人走上基辅街头，乌克兰政府因削弱反腐机构权力而面临日益强烈的反对。</p>
+<p><button class="play-button sentence" id="s-00-00-49-259" data-start="00:00:49,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And coming up on business today, India's Prime Minister arrives in the UK as the two countries prepared to sign one of the largest pulse Brexit trade deals.</p>
+<p>今日商业新闻：印度总理抵达英国，两国准备签署脱欧后规模最大的贸易协议之一。</p>
+<p><button class="play-button sentence" id="s-00-00-59-179" data-start="00:00:59,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A warm welcome to New Year's Day, I'm Sarah and Janath Wari.</p>
+<p>欢迎收看新年特别节目，我是莎拉和贾纳特·瓦里。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959919" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-20-420" data-start="00:01:20,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More than 100 aid organizations and human rights groups are warning of mass starvation in Gaza and pressing for governments to take action.</p>
+<p>100多个援助组织和人权团体警告加沙将爆发大规模饥荒，敦促各国政府采取行动。</p>
+<p><button class="play-button sentence" id="s-00-01-28-938" data-start="00:01:28,938" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel, which controls all border crossings in Gaza, denies claims that it's not allowing food to be distributed.</p>
+<p>控制加沙所有边境的以色列否认阻挠食物分发。</p>
+<p><button class="play-button sentence" id="s-00-01-35-578" data-start="00:01:35,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It insists there are hundreds of Laurie's carrying aid inside the territory, and the Israeli government says the age shortage is engineered by Hamas.</p>
+<p>以方坚称有数百辆卡车在加沙运送援助，并称物资短缺是哈马斯制造的。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-44-659" data-start="00:01:44,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now international journalists are not allowed into Gaza, so some of it has been filmed by trusted freelancers who live there.</p>
+<p>目前国际记者无法进入加沙，部分画面由当地可信的自由记者拍摄。</p>
+<p><button class="play-button sentence" id="s-00-01-53-019" data-start="00:01:53,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And our correspondent Emir Nadir sent this report from Jerusalem, a warning his report contains some disturbing images from the start.</p>
+<p>本台记者埃米尔·纳迪尔从耶路撒冷发回报道，提醒内容含令人不安的画面。</p>
+<p><button class="play-button sentence" id="s-00-02-03-858" data-start="00:02:03,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Gaza is in the grip of starvation.</p>
+<p>加沙正陷入饥荒。</p>
+<p><button class="play-button sentence" id="s-00-02-07-299" data-start="00:02:07,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tyson-ing is hold.</p>
+<p>情况严峻。</p>
+<p><button class="play-button sentence" id="s-00-02-10-060" data-start="00:02:10,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In front of our eyes, man-made.</p>
+<p>我们眼前的是人为灾难。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-15-860" data-start="00:02:15,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Musab's school was damaged last month in an Israeli air strike.</p>
+<p>穆萨布的学校上月遭以色列空袭损毁。</p>
+<p><button class="play-button sentence" id="s-00-02-20-258" data-start="00:02:20,258" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now the 14-year-old is deteriorating from a lack of medicine and food.</p>
+<p>这名14岁少年因缺医少食正日渐虚弱。</p>
+<p><button class="play-button sentence" id="s-00-02-27-580" data-start="00:02:27,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His weight before he was injured was 40 kilograms, and now it's barely 10.</p>
+<p>他受伤前体重40公斤，现在不足10公斤。</p>
+<p><button class="play-button sentence" id="s-00-02-33-060" data-start="00:02:33,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because of malnutrition, we cry out a hundred thousand times.</p>
+<p>因为营养不良，我们无数次哭喊。</p>
+<p><button class="play-button sentence" id="s-00-02-37-900" data-start="00:02:37,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I die a thousand times every day.</p>
+<p>我每天经历千次死亡。</p>
+<p><button class="play-button sentence" id="s-00-02-45-460" data-start="00:02:45,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But finding food for your family is terrifying and perilous.</p>
+<p>但为家人寻找食物既恐怖又危险。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959826" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-53-538" data-start="00:02:53,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our BBC freelance team visited a British field hospital in southern Gaza today.</p>
+<p>BBC自由记者团队今日探访加沙南部的英国野战医院。</p>
+<p><button class="play-button sentence" id="s-00-02-58-419" data-start="00:02:58,419" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Patients brought in who sought food, but found only violence.</p>
+<p>被送来的患者本为寻食，却遭遇暴力。</p>
+<p><button class="play-button sentence" id="s-00-03-01-899" data-start="00:03:01,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have patients that have sustained gunshot wounds, strait wounds, have leg amputations, have gunshot wounds to the chest, which of course, punctured lungs and so on.</p>
+<p>收治患者有枪伤、刀伤、截肢、肺部贯穿伤等。</p>
+<p><button class="play-button sentence" id="s-00-03-19-658" data-start="00:03:19,658" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> From 2000 Palestinians are being treated by UK med-each month, many arriving after attacks at the US and Israeli-backed food distribution points.</p>
+<p>每月有2000名巴勒斯坦人接受英国医疗队治疗，多数是在美以支持的食品分发点遇袭后送医。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959792" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-27-740" data-start="00:03:27,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Where over a thousand Palestinians have been killed in recent weeks says the UN.</p>
+<p>联合国称最近数周已有超千名巴勒斯坦人在这些地点丧生。</p>
+<p><button class="play-button sentence" id="s-00-03-33-300" data-start="00:03:33,300" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was injured at the US back the eight centers.</p>
+<p>我在美国支持的援助中心受伤。</p>
+<p><button class="play-button sentence" id="s-00-03-36-620" data-start="00:03:36,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I went to get food for my family, my dad, mom and the rest of the family.</p>
+<p>我去为父母和家人领取食物。</p>
+<p><button class="play-button sentence" id="s-00-03-41-620" data-start="00:03:41,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was shot in my hand and my lower leg.</p>
+<p>我的手和腿部中弹。</p>
+<p><button class="play-button sentence" id="s-00-03-44-900" data-start="00:03:44,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Palestinians are accusing Israeli troops and security contractors of opening fire on them daily as they try to get food aid.</p>
+<p>巴勒斯坦人指控以军和安保承包商每日向领取食物者开火。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959767" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-52-020" data-start="00:03:52,020" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Israel has said it uses warning fire and has disputed the number of reported deaths.</p>
+<p>以色列称仅使用警示性射击，并对死亡人数提出异议。</p>
+<p><button class="play-button sentence" id="s-00-03-57-340" data-start="00:03:57,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We know that we might get injured or killed at any time, yet we still go there to get a kilo of flour.</p>
+<p>我们明白随时可能受伤或死亡，但仍为获取一公斤面粉前往。</p>
+<p><button class="play-button sentence" id="s-00-04-04-780" data-start="00:04:04,780" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it's not just the patients who are hungry.</p>
+<p>但饥饿者不仅是患者。</p>
+<p><button class="play-button sentence" id="s-00-04-06-818" data-start="00:04:06,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr. Asil lives in a tent with her family.</p>
+<p>阿西尔医生与家人住在帐篷里。</p>
+<p><button class="play-button sentence" id="s-00-04-09-340" data-start="00:04:09,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She tells us she hasn't eaten since yesterday.</p>
+<p>她表示自昨日起未进食。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959746" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-13-860" data-start="00:04:13,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My husband went a couple of times to get aid and got shot.</p>
+<p>我丈夫数次领取援助时中弹。</p>
+<p><button class="play-button sentence" id="s-00-04-17-180" data-start="00:04:17,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> If we are to die from hunger, so be it.</p>
+<p>若将饿死，那就如此吧。</p>
+<p><button class="play-button sentence" id="s-00-04-20-060" data-start="00:04:20,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because seeking aid is seeking death.</p>
+<p>因寻求援助等于寻死。</p>
+<p><button class="play-button sentence" id="s-00-04-22-420" data-start="00:04:22,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> On his first visit to Gaza since the start of the war, Israeli President Isaac Herzog told his troops today that their actions don't break international law, and that Hamas is spinning a narrative against their humanitarian efforts.</p>
+<p>以色列总统赫尔佐格战时首访加沙，称以军行动未违反国际法，并指责哈马斯扭曲以方人道主义努力。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959724" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-35-459" data-start="00:04:35,459" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Humanitarian organisations accuse Israel of imposing a siege on Gaza, something Israel categorically rejects.</p>
+<p>人道组织指控以色列对加沙实施围困，遭以方断然否认。</p>
+<p><button class="play-button sentence" id="s-00-04-42-500" data-start="00:04:42,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Palestinians are now at the mercy of starvation that is expanding rapidly in Gaza and reaching every family.</p>
+<p>巴勒斯坦人正屈服于加沙迅速蔓延至每个家庭的饥荒。</p>
+<p><button class="play-button sentence" id="s-00-04-49-220" data-start="00:04:49,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Emeonada, BBC News, Jerusalem.</p>
+<p>埃米奥纳达，BBC新闻，耶路撒冷报道。</p>
+<p><button class="play-button sentence" id="s-00-04-53-338" data-start="00:04:53,338" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In other news, US court has denied the Trump administration's request to unseal grand jury transcripts from the investigation into the late sex offender Jeffrey Epstein.</p>
+<p>其他消息：美国法院驳回特朗普政府要求公开已故性犯罪者杰弗里·爱泼斯坦调查大陪审团笔录的请求。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959695" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-04-259" data-start="00:05:04,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The judge in Florida turned down the request because it had only been made on the grounds of public interest and not as part of judicial proceedings.</p>
+<p>佛罗里达州法官以"仅基于公共利益非司法程序"为由拒绝。</p>
+<p><button class="play-button sentence" id="s-00-05-12-180" data-start="00:05:12,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our North America correspondent Arunacham Mukherj explains the complications with unsealing grand jury transcripts.</p>
+<p>北美记者阿鲁纳查姆·穆克吉解释公开大陪审团笔录的复杂性。</p>
+<p><button class="play-button sentence" id="s-00-05-18-939" data-start="00:05:18,939" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This was always supposed to be very difficult, legally speaking, for the court to agree in unsealing those grand jury testimony.</p>
+<p>法律上法院极难同意公开此类笔录。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959674" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-25-660" data-start="00:05:25,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because we have been told that you have to have very strong reasons to actually make those details public because these are transcripts which are protected by law, which is also the argument that was made by the judge when she went ahead and ruled against the unsealing of the documents.</p>
+<p>因法律规定此类笔录受保护，法官也据此裁决不予公开。</p>
+<p><button class="play-button sentence" id="s-00-05-41-778" data-start="00:05:41,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It would be a violation of state laws.</p>
+<p>公开将违反州法律。</p>
+<p><button class="play-button sentence" id="s-00-05-43-858" data-start="00:05:43,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that's that.</p>
+<p>情况如此。</p>
+<p><button class="play-button sentence" id="s-00-05-44-858" data-start="00:05:44,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Donald Trump would have hoped that the publication of some of those transcripts would have perhaps specified some of those voices who have been demanding more details in the Epstein investigation.</p>
+<p>特朗普曾希望公开笔录能回应要求爱泼斯坦调查透明化的呼声。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959645" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-54-259" data-start="00:05:54,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that certainly did not happen.</p>
+<p>但未能如愿。</p>
+<p><button class="play-button sentence" id="s-00-05-56-298" data-start="00:05:56,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But simultaneously, pressure continues to mount.</p>
+<p>但舆论压力持续增加。</p>
+<p><button class="play-button sentence" id="s-00-05-59-139" data-start="00:05:59,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just again, another development was that Wall Street Journal article that came out, which said that Attorney General Pam Bondi had told Donald Trump that his name does figure in those files sometime in May.</p>
+<p>《华尔街日报》最新报道称司法部长帕姆·邦迪五月曾告知特朗普其名字出现在相关文件中。</p>
+<p><button class="play-button sentence" id="s-00-06-11-139" data-start="00:06:11,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the BBC has no way of verifying the details of the article.</p>
+<p>BBC无法核实报道细节。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959624" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-15-420" data-start="00:06:15,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And also just the mention of his name does not certainly implicate him or is a suggestion on any kind of wrongdoing, but it certainly will raise questions.</p>
+<p>仅提及名字不意味着指控，但会引发质疑。</p>
+<p><button class="play-button sentence" id="s-00-06-23-620" data-start="00:06:23,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, to that report, the White House just issuing a statement earlier on saying that this was fake news once again, rubbish that report.</p>
+<p>白宫发声明称该报道是"假新闻"。</p>
+<p><button class="play-button sentence" id="s-00-06-31-699" data-start="00:06:31,699" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we've also got reactions coming in from the Attorney General Pam Bondi as well as the FBI Director Kash Patel just a short while back speaking to the BBC's US news partner CBS, where again, they said that the DOJ and the FBI reviewed the Epstein files and reached the conclusion set out in the July 6th memo.</p>
+<p>司法部长邦迪和FBI局长帕特尔向CBS表示，司法部和FBI审查爱泼斯坦文件后得出7月6日备忘录中的结论。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959589" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-50-538" data-start="00:06:50,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nothing in these files warranted further investigation or prosecution.</p>
+<p>文件内容无需进一步调查或起诉。</p>
+<p><button class="play-button sentence" id="s-00-06-54-218" data-start="00:06:54,218" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have filed a motion in court to unseal the underlying grand jury transcripts.</p>
+<p>已向法院申请公开大陪审团笔录。</p>
+<p><button class="play-button sentence" id="s-00-06-58-019" data-start="00:06:58,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As part of our routine briefing, we made the precedent aware of the findings.</p>
+<p>作为例行简报，我们向总统汇报了结果。</p>
+<p><button class="play-button sentence" id="s-00-07-02-180" data-start="00:07:02,180" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So responding to the fact that Attorney General had spoken to Donald Trump about his name, the FBI Director also saying the memo released on the 6th is consistent with the thorough review conducted by the FBI and Department of Justice.</p>
+<p>针对司法部长告知总统一事，FBI局长称6日备忘录与FBI及司法部的全面审查一致。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959565" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-14-420" data-start="00:07:14,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He then goes on to say the criminal leakers and fake news media tries tirelessly to undermine precedent Trump with smears and lies.</p>
+<p>他指责泄密者和假新闻媒体不懈用谎言诋毁特朗普。</p>
+<p><button class="play-button sentence" id="s-00-07-22-060" data-start="00:07:22,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this story is no different.</p>
+<p>本次报道亦如此。</p>
+<p><button class="play-button sentence" id="s-00-07-23-339" data-start="00:07:23,339" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I just wanted to read out some of those statements that came in just a short while back to our news partners CBS here in the US.</p>
+<p>我仅向美国合作伙伴CBS转述部分声明。</p>
+<p><button class="play-button sentence" id="s-00-07-30-220" data-start="00:07:30,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the more Donald Trump has urged people to move on from Jeffrey Epstein and the conversations, the focus still remains very much on that.</p>
+<p>尽管特朗普呼吁公众停止讨论爱泼斯坦，舆论焦点仍集中于此。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959541" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-38-060" data-start="00:07:38,060" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A doctor in Los Angeles has pleaded guilty to four kinds of illegally distributing ketamine to actor Matthew Perry, who was founded at his home in October 2023 after accidentally overdosing on the drug.</p>
+<p>洛杉矶医生萨尔瓦多·普拉森西亚对非法向演员马修·派瑞提供氯胺酮认罪，派瑞2023年10月因用药过量去世。</p>
+<p><button class="play-button sentence" id="s-00-07-52-540" data-start="00:07:52,540" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dr. Salvador Placencia is the fourth of five people charged in connection to the friend's star's death to plead guilty.</p>
+<p>普拉森西亚是涉案五人中第四位认罪者。</p>
+<p><button class="play-button sentence" id="s-00-08-00-819" data-start="00:08:00,819" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The doctor who will be sentenced in December, admitted selling Matthew Perry the drug for thousands of dollars and that it was not for legitimate medical purposes.</p>
+<p>该医生承认以数千美元向派瑞出售药物且非医疗用途，将于12月判刑。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959506" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-13-100" data-start="00:08:13,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A judge in the US state of Idaho sentenced the man who murdered four University of Idaho students to four consecutive life sentences.</p>
+<p>爱达荷州法官判处杀害四名大学生的凶手科伯格四次连续终身监禁。</p>
+<p><button class="play-button sentence" id="s-00-08-21-899" data-start="00:08:21,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Byron Coolberger pled guilty to killing Kaley Gonzalez, Ethan Shapin, Zena Kernody and Madison Morgan in their home in November 2022.</p>
+<p>科伯格对2022年11月在受害者家中行凶认罪。</p>
+<p><button class="play-button sentence" id="s-00-08-34-778" data-start="00:08:34,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As part of his plea deal, he avoided the death penalty.</p>
+<p>认罪协议使其免于死刑。</p>
+<p><button class="play-button sentence" id="s-00-08-38-538" data-start="00:08:38,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a sentencing hearing, families of the victims spoke for over two hours about their loved ones and the trauma Coolberger inflicted.</p>
+<p>量刑听证会上，遇害者家属讲述两小时受害细节。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959473" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-46-980" data-start="00:08:46,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The court also heard from the two surviving roommates who were sleeping in the home when the murders happened.</p>
+<p>两名案发时在屋内的幸存室友作证。</p>
+<p><button class="play-button sentence" id="s-00-08-52-340" data-start="00:08:52,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of them, Dylan Mortensen, called her roommates beautiful, passionate people.</p>
+<p>迪伦·莫滕森称室友们美丽热情。</p>
+<p><button class="play-button sentence" id="s-00-08-56-700" data-start="00:08:56,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She says she now suffers from panic attacks and has not been able to sleep since the murders.</p>
+<p>她表示案发后长期失眠并患恐慌症。</p>
+<p><button class="play-button sentence" id="s-00-09-01-899" data-start="00:09:01,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is a hollow vessel, something less than human.</p>
+<p>他是具空壳，丧失人性。</p>
+<p><button class="play-button sentence" id="s-00-09-07-460" data-start="00:09:07,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A body without empathy, without remorse.</p>
+<p>没有共情与悔意。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959448" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-11-500" data-start="00:09:11,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He chose destruction.</p>
+<p>他选择毁灭。</p>
+<p><button class="play-button sentence" id="s-00-09-13-500" data-start="00:09:13,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He chose evil.</p>
+<p>他选择邪恶。</p>
+<p><button class="play-button sentence" id="s-00-09-15-620" data-start="00:09:15,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He feels nothing.</p>
+<p>他毫无感觉。</p>
+<p><button class="play-button sentence" id="s-00-09-18-860" data-start="00:09:18,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He tried to take everything from me.</p>
+<p>他试图夺走我的一切。</p>
+<p><button class="play-button sentence" id="s-00-09-21-340" data-start="00:09:21,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My friends, my safety, my identity, my future.</p>
+<p>我的朋友、安全、身份和未来。</p>
+<p><button class="play-button sentence" id="s-00-09-27-179" data-start="00:09:27,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He took their lives, but I will continue trying to be like them to make them proud.</p>
+<p>他夺走他们的生命，但我会努力活成让他们骄傲的样子。</p>
+<p><button class="play-button sentence" id="s-00-09-33-899" data-start="00:09:33,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Columbia University says it's reached a deal with the Trump administration, saying it will pay a $200 million fine over three years to settle allegations that it failed to do enough to stop the harassment of Jewish students on campus.</p>
+<p>哥伦比亚大学将支付2亿美元罚款，和解未阻止校园内犹太学生遭骚扰的指控。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959411" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-48-220" data-start="00:09:48,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The White House characterised their agreement as a historic settlement to address violations of federal civil rights laws and to restore fairness, merit and safety in higher education.</p>
+<p>白宫称该协议是恢复高等教育公平与安全的历史性和解。</p>
+<p><button class="play-button sentence" id="s-00-09-59-980" data-start="00:09:59,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In March, the Trump administration scrapped grants and contracts worth about $400 million for the Ivy League institution.</p>
+<p>三月特朗普政府取消了向该校提供的4亿美元资助。</p>
+<p><button class="play-button sentence" id="s-00-10-09-580" data-start="00:10:09,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Around the world and across the UK, this is BBC News.</p>
+<p>这里是BBC新闻，覆盖全球与英国各地。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959321" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-18-299" data-start="00:11:18,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Your Live with BBC News The latest round of talks between Russia and Ukraine and Istanbul have ended after less than an hour without any major announcements.</p>
+<p>BBC新闻直播：俄乌在伊斯坦布尔的谈判不足一小时即结束，未达成重大声明。</p>
+<p><button class="play-button sentence" id="s-00-11-32-059" data-start="00:11:32,059" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both sides say they agreed to work towards the exchange of more military and civilian prisoners, though.</p>
+<p>但双方同意推进更多军事和平民囚犯交换。</p>
+<p><button class="play-button sentence" id="s-00-11-38-259" data-start="00:11:38,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Back in Ukraine, President Vladimir Zelensky's decision to sign sweeping legislation that critics weaken the independence of Ukraine's anti-corruption watchdogs has sparked the biggest protests since the country, since Russia's full-scale invasion of Ukraine began more than three years ago.</p>
+<p>乌克兰总统泽连斯基签署削弱反腐机构独立性的法案，引发三年来最大规模抗议。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959282" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-57-740" data-start="00:11:57,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our correspondent, Charlotte Gallagher, has more from Keith.</p>
+<p>本台记者夏洛特·加拉格尔从基辅发回报道。</p>
+<p><button class="play-button sentence" id="s-00-12-02-460" data-start="00:12:02,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It certainly didn't seem like what he said had made much difference on the streets of Kiev tonight at that protest.</p>
+<p>今晚基辅街头的抗议显示总统表态未能平息众怒。</p>
+<p><button class="play-button sentence" id="s-00-12-08-620" data-start="00:12:08,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, Ukrainians are usually focused on their common enemy, Russia, but their faith in their government, and Vladimir Zelensky's promise of a transparent democracy, has really been shaken.</p>
+<p>乌克兰人通常共同对抗俄罗斯，但对政府及泽连斯基民主承诺的信任已动摇。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959259" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-20-778" data-start="00:12:20,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These two anti-corruption agencies were set up 10 years ago after the pro-Russian president was ousted, and they were supposed to investigate corruption at the highest level.</p>
+<p>这两个反腐机构十年前亲俄总统下台后成立，旨在调查高层腐败。</p>
+<p><button class="play-button sentence" id="s-00-12-31-259" data-start="00:12:31,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And critics of these changes say, well, how are they supposed to do that? If they're under the president's control at the protest tonight, it was really interesting.</p>
+<p>批评者质疑机构被总统控制后如何履职。</p>
+<p><button class="play-button sentence" id="s-00-12-38-778" data-start="00:12:38,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The number of young people that were there, this is their future, they're talking about, they don't want the future to be affected by these changes, they want to be part of the European Union.</p>
+<p>众多年轻抗议者担忧改革影响其加入欧盟的未来。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959231" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-48-379" data-start="00:12:48,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're also disabled veterans holding up signs saying we didn't fight for this.</p>
+<p>残疾老兵举牌"我们不为这个而战"。</p>
+<p><button class="play-button sentence" id="s-00-12-53-259" data-start="00:12:53,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Vladimir Zelensky, he says these agencies have essentially been infiltrated by Russian collaborative writers.</p>
+<p>泽连斯基称这些机构已被亲俄分子渗透。</p>
+<p><button class="play-button sentence" id="s-00-12-59-678" data-start="00:12:59,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He had no choice, he says, to make these changes, but he says he is listening, and it'll put forward a draft bill to strengthen law enforcement.</p>
+<p>他称改革是不得已，将提出加强执法的草案。</p>
+<p><button class="play-button sentence" id="s-00-13-07-899" data-start="00:13:07,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It didn't appear tonight that people protesting were happy with that.</p>
+<p>抗议者对此并不买账。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959209" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-10-886" data-start="00:13:10,886" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They said they'll be out tomorrow night as well, some of them.</p>
+<p>部分人表示明晚将继续抗议。</p>
+<p><button class="play-button sentence" id="s-00-13-13-943" data-start="00:13:13,943" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the European Union has also fired a warning shot over these changes.</p>
+<p>欧盟也对这些改革发出警告。</p>
+<p><button class="play-button sentence" id="s-00-13-18-094" data-start="00:13:18,094" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It says future financial assistance to Ukraine depends on transparency and democracy.</p>
+<p>称未来对乌财政援助取决于透明度和民主。</p>
+<p><button class="play-button sentence" id="s-00-13-25-259" data-start="00:13:25,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Chinese and European Union leaders are meeting for talks in Beijing on Thursday in the first in-person summit since 2023.</p>
+<p>中欧领导人周四在北京举行2023年以来首次线下峰会。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959187" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-32-379" data-start="00:13:32,379" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Beijing has sought to draw the block closer as it positions itself as a more reliable partner than the United States, but the EU has made it clear it will not shy away from their deep divisions over China's exports and Beijing's support for Russia's war against Ukraine.</p>
+<p>中方试图拉近与欧盟关系，但欧盟明确将直面中国出口及对俄立场分歧。</p>
+<p><button class="play-button sentence" id="s-00-13-49-580" data-start="00:13:49,580" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The summit marks 50 years of bilateral relations between China and the 27 nation block.</p>
+<p>峰会纪念中欧建交50周年。</p>
+<p><button class="play-button sentence" id="s-00-13-57-179" data-start="00:13:57,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United Nations says more than 1.3 million people were displaced in Haiti in the first half of this year, and 4,000 people were killed.</p>
+<p>联合国称海地上半年130万人流离失所，4000人丧生。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959154" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-05-746" data-start="00:14:05,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It also reports a sharp rise in sexual violence, including rape, gang rape, and sexual enslavement.</p>
+<p>报告还指出性暴力急剧增加，包括强奸、轮奸和性奴役。</p>
+<p><button class="play-button sentence" id="s-00-14-12-290" data-start="00:14:12,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the country's capital, Porto-Prince, gangs now control 90 percent of the city.</p>
+<p>在该国首都太子港，帮派现已控制了90%的城市区域。</p>
+<p><button class="play-button sentence" id="s-00-14-18-011" data-start="00:14:18,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The police are outnumbered and outgunned.</p>
+<p>警察在人数和武器上均处于劣势。</p>
+<p><button class="play-button sentence" id="s-00-14-21-179" data-start="00:14:21,179" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Government authority has all but collapse and ordinary Haitians are trapped in a daily struggle for survival.</p>
+<p>政府权威几乎崩溃，普通海地人陷入每日为生存挣扎的困境。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959130" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-29-653" data-start="00:14:29,653" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With rare access to the streets of Porto-Prince, this report from Nauwa Al-Magafi, producer Jasmine Dyer and cameraman Phil Pendelbury, includes scenes some may find upsetting.</p>
+<p>在罕见地进入太子港街头后，记者Nauwa Al-Magafi、制片人Jasmine Dyer和摄影师Phil Pendelbury的报道包含了一些可能令人不安的画面。</p>
+<p><button class="play-button sentence" id="s-00-14-42-243" data-start="00:14:42,243" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're in a safe house in the suburbs of Porto-Prince, home to dozens of young women and girls, exposed far too early to the cruelty of mankind.</p>
+<p>我们身处太子港郊区的一处安全屋，这里收容了几十名过早经历人性残酷的年轻女性和女孩。</p>
+<p><button class="play-button sentence" id="s-00-14-53-740" data-start="00:14:53,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This girl is a survivor of rape.</p>
+<p>这名女孩是强奸的幸存者。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959103" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-56-586" data-start="00:14:56,586" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've come here to interview women who are victims of sexual violence, but I'm blown away by how young they are.</p>
+<p>我们来此采访遭受性暴力的女性，但她们的年轻程度令我震惊。</p>
+<p><button class="play-button sentence" id="s-00-15-05-756" data-start="00:15:05,756" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Young girls holding on to babies.</p>
+<p>年轻女孩们怀里抱着婴儿。</p>
+<p><button class="play-button sentence" id="s-00-15-08-220" data-start="00:15:08,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The youngest victim of rape is 12 years old, and the eldest is only 19.</p>
+<p>最年轻的强奸受害者年仅12岁，最年长的也只有19岁。</p>
+<p><button class="play-button sentence" id="s-00-15-14-220" data-start="00:15:14,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Helen was 17 when she was captured.</p>
+<p>海伦被绑架时年仅17岁。</p>
+<p><button class="play-button sentence" id="s-00-15-16-648" data-start="00:15:16,648" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> She's now 19 years old and a single mother.</p>
+<p>她现在19岁，是一名单身母亲。</p>
+<p><button class="play-button sentence" id="s-00-15-20-220" data-start="00:15:20,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They raped and beat me.</p>
+<p>他们强奸并殴打我。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959077" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-22-569" data-start="00:15:22,569" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes I think about ending it all.</p>
+<p>有时我想结束这一切。</p>
+<p><button class="play-button sentence" id="s-00-15-26-525" data-start="00:15:26,525" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They made me do things and said, did kill me if I didn't agree.</p>
+<p>他们强迫我做某些事，并威胁说如果不同意就杀了我。</p>
+<p><button class="play-button sentence" id="s-00-15-31-634" data-start="00:15:31,634" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But then I felt pregnant and it told me to abort the pregnancy, but I said no.</p>
+<p>但后来我怀孕了，他们让我堕胎，我拒绝了。</p>
+<p><button class="play-button sentence" id="s-00-15-36-616" data-start="00:15:36,616" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This baby could be the only one I ever have.</p>
+<p>这个孩子可能是我唯一的孩子。</p>
+<p><button class="play-button sentence" id="s-00-15-41-659" data-start="00:15:41,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Porto-Prince is almost entirely controlled by the gangs, and rape has been a crucial weapon, used to terrorize and subjugate entire communities.</p>
+<p>太子港几乎完全被帮派控制，强奸已成为恐吓和奴役整个社区的关键武器。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959047" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-52-021" data-start="00:15:52,021" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Porto-Prince is the worst place in the world to be a woman.</p>
+<p>太子港是世界上最不适合女性生存的地方。</p>
+<p><button class="play-button sentence" id="s-00-15-56-620" data-start="00:15:56,620" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why? Because the violence is around you.</p>
+<p>为什么？因为暴力无处不在。</p>
+<p><button class="play-button sentence" id="s-00-15-59-000" data-start="00:15:59,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The women have to flee their houses.</p>
+<p>女性不得不逃离家园。</p>
+<p><button class="play-button sentence" id="s-00-16-01-100" data-start="00:16:01,100" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They flee without nothing.</p>
+<p>她们一无所有地逃离。</p>
+<p><button class="play-button sentence" id="s-00-16-02-888" data-start="00:16:02,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are in centers where there is no water, no sanitation, they are overcrowded, and they suffer from direct violence because they expose both in the centers, as well as in the streets to the men that are attacking them because they are powerless to defend themselves.</p>
+<p>她们栖身的中心缺乏水和卫生设施，人满为患，并遭受直接暴力，因为她们在中心和街头都暴露在施暴者面前，无力自卫。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208959020" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-19-875" data-start="00:16:19,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At another women's shelter across town, we hear more distressing testimony.</p>
+<p>在城镇另一端的妇女庇护所，我们听到更多令人痛心的证词。</p>
+<p><button class="play-button sentence" id="s-00-16-25-339" data-start="00:16:25,339" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A pattern emerges of rape, murder, and arson.</p>
+<p>强奸、谋杀和纵火的模式反复出现。</p>
+<p><button class="play-button sentence" id="s-00-16-33-019" data-start="00:16:33,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They raped me.</p>
+<p>他们强奸了我。</p>
+<p><button class="play-button sentence" id="s-00-16-34-051" data-start="00:16:34,051" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I had my six-year-old with me.</p>
+<p>我当时带着我六岁的孩子。</p>
+<p><button class="play-button sentence" id="s-00-16-36-201" data-start="00:16:36,201" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They raped her too.</p>
+<p>他们也强奸了她。</p>
+<p><button class="play-button sentence" id="s-00-16-37-577" data-start="00:16:37,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our neighborhood was ambushed.</p>
+<p>我们的社区遭到袭击。</p>
+<p><button class="play-button sentence" id="s-00-16-40-698" data-start="00:16:40,698" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I went back home only to find my mom, my dad, my sister, or were murdered.</p>
+<p>我回到家却发现我的母亲、父亲和姐妹都被杀害了。</p>
+<p><button class="play-button sentence" id="s-00-16-49-899" data-start="00:16:49,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is Delmas 30, the scene of a recent gang attack.</p>
+<p>这里是Delmas 30，最近发生帮派袭击的地点。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958985" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-54-165" data-start="00:16:54,165" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Women were raped, families murdered, and entire neighborhood is now in ruins.</p>
+<p>妇女遭强奸，家庭被屠杀，整个社区沦为废墟。</p>
+<p><button class="play-button sentence" id="s-00-17-01-578" data-start="00:17:01,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Rodriguez going back for the first time and taking us with him.</p>
+<p>罗德里格斯首次返回该地，并带我们同行。</p>
+<p><button class="play-button sentence" id="s-00-17-05-500" data-start="00:17:05,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the gangs are stationed about two blocks away and we're going into Rodriguez neighborhood, which is still contested territory.</p>
+<p>帮派驻扎在约两个街区外，我们正进入罗德里格斯的社区，这里仍是争夺中的地盘。</p>
+<p><button class="play-button sentence" id="s-00-17-13-049" data-start="00:17:13,049" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're being escorted by vigilantes.</p>
+<p>我们由民间自卫队护送。</p>
+<p><button class="play-button sentence" id="s-00-17-15-158" data-start="00:17:15,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are basically civilians who are trying to keep the neighborhood safe.</p>
+<p>他们本质上是试图保护社区安全的平民。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958961" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-18-674" data-start="00:17:18,674" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're filling in the security vacuum.</p>
+<p>他们填补了安全真空。</p>
+<p><button class="play-button sentence" id="s-00-17-20-940" data-start="00:17:20,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All right, they're ready for us to go in.</p>
+<p>好的，他们准备好让我们进入了。</p>
+<p><button class="play-button sentence" id="s-00-17-22-484" data-start="00:17:22,484" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Let's go.</p>
+<p>我们走吧。</p>
+<p><button class="play-button sentence" id="s-00-17-24-618" data-start="00:17:24,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The vigilantes signaled the snipers on the roof of the nearby bank.</p>
+<p>自卫队向附近银行屋顶的狙击手发出信号。</p>
+<p><button class="play-button sentence" id="s-00-17-28-858" data-start="00:17:28,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're protecting the area to keep the gangs from returning, and they are close.</p>
+<p>他们保护该区域防止帮派返回，而且帮派离得很近。</p>
+<p><button class="play-button sentence" id="s-00-17-35-420" data-start="00:17:35,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's amazing alleyways.</p>
+<p>巷战令人心惊。</p>
+<p><button class="play-button sentence" id="s-00-17-37-616" data-start="00:17:37,616" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At every open space we have to run to avoid being spotted by the gangs.</p>
+<p>在每个开阔地带我们都必须奔跑以避免被帮派发现。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958934" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-45-980" data-start="00:17:45,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally, we reached the ruins of Rodriguez home.</p>
+<p>最终，我们抵达了罗德里格斯家的废墟。</p>
+<p><button class="play-button sentence" id="s-00-17-53-740" data-start="00:17:53,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is my bedroom.</p>
+<p>这是我的卧室。</p>
+<p><button class="play-button sentence" id="s-00-17-54-972" data-start="00:17:54,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the kid's room.</p>
+<p>这是孩子的房间。</p>
+<p><button class="play-button sentence" id="s-00-17-56-436" data-start="00:17:56,436" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had a good life here.</p>
+<p>我们曾在这里拥有美好生活。</p>
+<p><button class="play-button sentence" id="s-00-17-59-578" data-start="00:17:59,578" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There were so many victims.</p>
+<p>有太多受害者。</p>
+<p><button class="play-button sentence" id="s-00-18-01-152" data-start="00:18:01,152" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People killed.</p>
+<p>人们被杀害。</p>
+<p><button class="play-button sentence" id="s-00-18-02-041" data-start="00:18:02,041" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They carried them out in wheelbarrows.</p>
+<p>尸体被用手推车运走。</p>
+<p><button class="play-button sentence" id="s-00-18-05-259" data-start="00:18:05,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> People were hacked to death.</p>
+<p>有人被砍死。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-07-129" data-start="00:18:07,129" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So many victims.</p>
+<p>如此多的受害者。</p>
+<p><button class="play-button sentence" id="s-00-18-10-298" data-start="00:18:10,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The atmosphere is tense and suddenly our visitors caught short.</p>
+<p>气氛紧张，突然我们的访问被迫中断。</p>
+<p><button class="play-button sentence" id="s-00-18-15-980" data-start="00:18:15,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've just heard some shooting and we've been told that it's probably the snipers from the bank, but we're worried that the gangs may retaliate at any moment, so we're going to leave.</p>
+<p>我们刚听到枪声，被告知可能是银行狙击手开的枪，但担心帮派随时报复，因此决定撤离。</p>
+<p><button class="play-button sentence" id="s-00-18-28-460" data-start="00:18:28,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going deep into gang territory to meet Vag.</p>
+<p>我们深入帮派领地会见Vag。</p>
+<p><button class="play-button sentence" id="s-00-18-32-372" data-start="00:18:32,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A leader within the Vibensam coalition.</p>
+<p>他是Vibensam联盟的首领之一。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958884" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-35-516" data-start="00:18:35,516" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They control most of the capital now.</p>
+<p>该联盟现在控制了首都大部分地区。</p>
+<p><button class="play-button sentence" id="s-00-18-39-019" data-start="00:18:39,019" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When you look around you, people have been operated from their homes.</p>
+<p>环顾四周，人们被逐出家园。</p>
+<p><button class="play-button sentence" id="s-00-18-42-380" data-start="00:18:42,380" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> civilians have been killed.</p>
+<p>平民遭杀害。</p>
+<p><button class="play-button sentence" id="s-00-18-44-045" data-start="00:18:44,045" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Women have been raped.</p>
+<p>妇女被强奸。</p>
+<p><button class="play-button sentence" id="s-00-18-45-364" data-start="00:18:45,364" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Children have been murdered.</p>
+<p>儿童遭谋杀。</p>
+<p><button class="play-button sentence" id="s-00-18-47-660" data-start="00:18:47,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you have any remorse?</p>
+<p>你有任何悔意吗？</p>
+<p><button class="play-button sentence" id="s-00-18-52-539" data-start="00:18:52,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When we're fighting, we are possessed.</p>
+<p>战斗时我们被恶魔附体。</p>
+<p><button class="play-button sentence" id="s-00-18-54-529" data-start="00:18:54,529" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We are no longer human.</p>
+<p>我们不再是人。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958864" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-55-675" data-start="00:18:55,675" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We become the devil.</p>
+<p>我们变成魔鬼。</p>
+<p><button class="play-button sentence" id="s-00-18-57-660" data-start="00:18:57,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How many people have you killed?</p>
+<p>你杀了多少人？</p>
+<p><button class="play-button sentence" id="s-00-18-59-740" data-start="00:18:59,740" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll tell you what I'm saying.</p>
+<p>我实话告诉你。</p>
+<p><button class="play-button sentence" id="s-00-19-01-339" data-start="00:19:01,339" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sometimes I kill people without even seeing them.</p>
+<p>有时我甚至没看见人就杀了他们。</p>
+<p><button class="play-button sentence" id="s-00-19-04-175" data-start="00:19:04,175" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They get shot and they die.</p>
+<p>他们中弹身亡。</p>
+<p><button class="play-button sentence" id="s-00-19-05-660" data-start="00:19:05,660" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then we take their bodies and burn them.</p>
+<p>然后我们带走尸体焚烧。</p>
+<p><button class="play-button sentence" id="s-00-19-08-940" data-start="00:19:08,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These chains I'm wearing belong to the people I've killed.</p>
+<p>我戴的这些链子属于我杀死的人。</p>
+<p><button class="play-button sentence" id="s-00-19-11-980" data-start="00:19:11,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Chains, rings, I take them and wear them to command the spirit of the dead.</p>
+<p>链子、戒指，我拿走戴上以操控亡魂。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958842" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-17-900" data-start="00:19:17,900" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This area is right on the front line.</p>
+<p>该区域正处于前线。</p>
+<p><button class="play-button sentence" id="s-00-19-21-259" data-start="00:19:21,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The gangs are just a few hundred meters down the street.</p>
+<p>帮派就在几百米外的街上。</p>
+<p><button class="play-button sentence" id="s-00-19-25-044" data-start="00:19:25,044" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Jilanthees stand guard, protecting their territory.</p>
+<p>Jilanthees组织守卫着他们的地盘。</p>
+<p><button class="play-button sentence" id="s-00-19-50-460" data-start="00:19:50,460" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As Haiti continues to battle itself, its people are desperate for some relief, longing for a life of peace and not just survival.</p>
+<p>海地持续内斗之际，人民渴望喘息，向往和平生活而非仅求生存。</p>
+<p><button class="play-button sentence" id="s-00-20-07-420" data-start="00:20:07,420" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's time to turn our focus to business and market news now in business today.</p>
+<p>现在将焦点转向商业和市场新闻。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958783" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-16-058" data-start="00:20:16,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Indian Prime Minister Narendra Modi has arrived in the UK where he's expected to formally sign a wide-ranging free trade agreement between the two countries.</p>
+<p>印度总理纳伦德拉·莫迪已抵达英国，预计将正式签署两国全面自由贸易协定。</p>
+<p><button class="play-button sentence" id="s-00-20-25-259" data-start="00:20:25,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The British government says it will contribute more than £6 billion to the UK economy.</p>
+<p>英国政府称该协定将为英国经济贡献超60亿英镑。</p>
+<p><button class="play-button sentence" id="s-00-20-30-700" data-start="00:20:30,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prime Minister Kierstarmher said the average tyrophon British producers will fall from 15% to 3%.</p>
+<p>首相Kierstarmher表示英国生产商的平均关税将从15%降至3%。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-37-579" data-start="00:20:37,579" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The deal still needs to be ratified by the UK parliament.</p>
+<p>该协议仍需英国议会批准。</p>
+<p><button class="play-button sentence" id="s-00-20-41-500" data-start="00:20:41,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, joining me now from Delhi is our India business correspondent, the Vina Gupta.</p>
+<p>现在德里连线的是我们的印度商业记者Vina Gupta。</p>
+<p><button class="play-button sentence" id="s-00-20-46-048" data-start="00:20:46,048" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Vina Gupta to see you.</p>
+<p>Vina Gupta，欢迎你。</p>
+<p><button class="play-button sentence" id="s-00-20-48-538" data-start="00:20:48,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This deal has been a long time in the making, but they finally got it over the line.</p>
+<p>该协议历经漫长谈判终于达成。</p>
+<p><button class="play-button sentence" id="s-00-20-54-220" data-start="00:20:54,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us about what's in it and what the reaction in India has been.</p>
+<p>请介绍协议内容及印度国内反应。</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958738" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-01-098" data-start="00:21:01,098" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we've been following it for three years here, Surajana, and this deal comes during a time where there are also protectionist measures coming from the US about tariff threats.</p>
+<p>Surajana，我们已跟踪此事三年，该协议达成时美国正实施关税威胁等保护主义措施。</p>
+<p><button class="play-button sentence" id="s-00-21-13-132" data-start="00:21:13,132" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So this is a big move in the right direction for two economies, the UK, and India.</p>
+<p>因此这对英印两国经济是迈向正确方向的重要一步。</p>
+<p><button class="play-button sentence" id="s-00-21-17-818" data-start="00:21:17,818" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're expecting this deal to be signed at the British Prime Minister's country side home in just a few hours from now.</p>
+<p>预计数小时后协议将在英国首相的乡村官邸签署。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958714" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-25-262" data-start="00:21:25,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So essentially, it boils down to two things.</p>
+<p>核心内容可归结为两点。</p>
+<p><button class="play-button sentence" id="s-00-21-28-484" data-start="00:21:28,484" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One is selling cheaper goods to each other's economies and the second is people to people's movements.</p>
+<p>一是向对方经济体销售更便宜的商品，二是人员流动。</p>
+<p><button class="play-button sentence" id="s-00-21-34-940" data-start="00:21:34,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So for the UK, for example, we do know from the announcement that was made earlier in May, where both sides had formally agreed on different points that tariffs on whiskey and gin, for example, will be slashed to almost half from what they are currently and then they will see a face reduction in 10 years.</p>
+<p>以英国为例，根据五月早先公告，双方已正式同意将威士忌和金酒等产品的关税从现有水平削减近半，并在十年内逐步降低。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958684" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-55-318" data-start="00:21:55,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then there are automobiles where British automobiles will be able to get lower tariffs and entry into India's big market.</p>
+<p>汽车方面，英国汽车将以更低关税进入印度广阔市场。</p>
+<p><button class="play-button sentence" id="s-00-22-02-878" data-start="00:22:02,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The second bit of it is from the Indian side where in 99 percent of Indian goods as per the government will see lower tariffs to enter the UK market and these goods are from heavily labour intensive sectors like leather, textile, gems and jewelry.</p>
+<p>对印度而言，据政府称99%的印度商品将以更低关税进入英国市场，这些商品来自皮革、纺织、珠宝等劳动密集型行业。</p>
+<p><button class="play-button sentence" id="s-00-22-19-739" data-start="00:22:19,739" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So both the countries are getting a boost for their exporters.</p>
+<p>因此两国出口商都将受益。</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958656" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-23-899" data-start="00:22:23,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The second point that I was talking about was about people to people movement and you mentioned that this deal needs to be ratified by the UK parliament and that's where the Prime Minister could face a little bit of hurdle because there's a clause in this deal which talks about exemption on national insurance for Indian employees heading to the UK for at least three years and that's been opposed by those political hardliners who've been pushing for strict immigration reform.</p>
+<p>关于人员流动，该协议需英国议会批准，首相可能在此遇阻，因协议中含印度员工赴英工作至少三年可免国民保险的条款，这遭到主张严格移民改革的政治强硬派反对。</p>
+<p><button class="play-button sentence" id="s-00-22-51-259" data-start="00:22:51,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it will be interesting to see what kind of argument the government would be presenting in the parliament in the UK.</p>
+<p>观察英国政府如何在议会论证将很有趣。</p>
+<p><button class="play-button sentence" id="s-00-22-57-259" data-start="00:22:57,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Outside of the parliament, the UK government has said this is a reciprocal policy.</p>
+<p>议会外，英国政府称这是对等政策。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958617" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-02-779" data-start="00:23:02,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have similar guidelines for workers coming from Norway and Canada and this is just another way in which even the British workers who are working in India will also see some sort of benefits.</p>
+<p>对挪威和加拿大工人有类似规定，这也将使在印工作的英国工人获益。</p>
+<p><button class="play-button sentence" id="s-00-23-16-685" data-start="00:23:16,685" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Total bilateral trade between the two countries at the moment, so Ranginay is $55 billion and there are expectations as you mentioned earlier that this will be increased by a couple of billion dollars in the coming years.</p>
+<p>目前两国双边贸易额为550亿美元，预计未来几年将增加数十亿。</p>
+<p><button class="play-button sentence" id="s-00-23-31-746" data-start="00:23:31,746" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Divina Gupta and Delhi, really good to get that update on the UK India trade deal.</p>
+<p>Divina Gupta在德里的报道，感谢提供英印贸易协议最新进展。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958581" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-38-809" data-start="00:23:38,809" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tesla shares have fallen as much as 5% in extended trading after the electric vehicle maker posted its worst quarterly sales decline in more than a decade.</p>
+<p>特斯拉公布十余年来最差季度销售跌幅后，盘后交易中股价下跌达5%。</p>
+<p><button class="play-button sentence" id="s-00-23-51-099" data-start="00:23:51,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> CEO Elon Musk warned that the automaker faced a few rough quarters in the year ahead.</p>
+<p>CEO埃隆·马斯克警告公司未来一年将面临数个艰难季度。</p>
+<p><button class="play-button sentence" id="s-00-23-56-538" data-start="00:23:56,538" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The company is facing a cut in government support and fierce competition from cheaper Chinese models.</p>
+<p>公司正面临政府补贴削减和中国低价车型的激烈竞争。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958557" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-02-040" data-start="00:24:02,040" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Musk's political activities haven't helped the brand image either according to experts.</p>
+<p>专家称马斯克的政治活动也无助于品牌形象。</p>
+<p><button class="play-button sentence" id="s-00-24-08-138" data-start="00:24:08,138" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tesla says it will build more affordable cars to try and turn its fortunes around.</p>
+<p>特斯拉表示将生产更实惠车型以扭转颓势。</p>
+<p><button class="play-button sentence" id="s-00-24-14-700" data-start="00:24:14,700" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Higher tires for the majority of America's trading partners are set to come into effect in just over a week.</p>
+<p>美国对多数贸易伙伴加征关税的措施将在一周多后生效。</p>
+<p><button class="play-button sentence" id="s-00-24-20-753" data-start="00:24:20,753" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At the port of Los Angeles, one of the US's busiest gateways for foreign goods, its executive director has told the BBC they're seeing a record surge in imports as companies rush to beat the deadline.</p>
+<p>洛杉矶港是美国最繁忙的进口门户之一，其执行董事向BBC表示，企业赶期限导致进口量激增创纪录。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958525" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-34-779" data-start="00:24:34,779" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When hard tear of policy is put in place, shipping volume plummets.</p>
+<p>严厉政策实施时货运量骤降。</p>
+<p><button class="play-button sentence" id="s-00-24-40-500" data-start="00:24:40,500" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> When those gold posts are changed or the policy eases, shipments pick up again.</p>
+<p>政策调整或放宽时货运量又回升。</p>
+<p><button class="play-button sentence" id="s-00-24-46-615" data-start="00:24:46,615" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now as we see it here in Los Angeles, cargo was attempting to get into the wire of yet another deadline that's been set on trade negotiations.</p>
+<p>目前在洛杉矶，货物正试图赶上下一个贸易谈判截止期限。</p>
+<p><button class="play-button sentence" id="s-00-24-56-508" data-start="00:24:56,508" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What we see right now are that we've got a handful of trade deal frameworks in process.</p>
+<p>当前我们看到有几个贸易协议框架正在推进。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958494" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-05-149" data-start="00:25:05,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Announced early on was the UK and United States framework.</p>
+<p>较早宣布的是英美框架。</p>
+<p><button class="play-button sentence" id="s-00-25-09-706" data-start="00:25:09,706" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then some discussion and announcement around Vietnam, Indonesia last night, Japan.</p>
+<p>随后是关于越南、印尼和日本的讨论与公告。</p>
+<p><button class="play-button sentence" id="s-00-25-15-441" data-start="00:25:15,441" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Not a lot of details yet, but there are four agreements right there with important trading partners.</p>
+<p>细节尚不多，但已与重要贸易伙伴达成四项协议。</p>
+<p><button class="play-button sentence" id="s-00-25-21-878" data-start="00:25:21,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> For us here at the port of Los Angeles, most of our trade happens with Pacific Rim nations dating back to the first trade policies of 2018 that instituted tariffs.</p>
+<p>对洛杉矶港而言，我们大部分贸易与环太平洋国家进行，可追溯至2018年首次实施关税的贸易政策。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958466" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-33-064" data-start="00:25:33,064" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 60% of our business portfolio in Los Angeles was with China.</p>
+<p>洛杉矶港60%的业务曾与中国相关。</p>
+<p><button class="play-button sentence" id="s-00-25-37-167" data-start="00:25:37,167" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, it's 45% and dropping, yet we've still grown.</p>
+<p>如今降至45%且持续下降，但我们仍在增长。</p>
+<p><button class="play-button sentence" id="s-00-25-41-367" data-start="00:25:41,367" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Just completing our fiscal year June 30th, we move 10 and a half million container units, the only port in the Western hemisphere to do so, and we've done that three times.</p>
+<p>刚结束的6月30日财年，我们处理了1050万标准箱，是西半球唯一达成此成就的港口，且已三次实现。</p>
+<p><button class="play-button sentence" id="s-00-25-52-650" data-start="00:25:52,650" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're eagerly awaiting information on those other countries, so we too can begin planning what the next steps are going to be with our trading partner countries, customers, and our own plans here for infrastructure.</p>
+<p>我们迫切等待与其他国家的信息，以便规划与贸易伙伴国、客户及本地基础设施的下一步。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1wq8Kz7E36/?t=-2208958432" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-07-310" data-start="00:26:07,310" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll be back with more news at the top of the hour.</p>
+<p>整点将有更多新闻。</p>
+<p><button class="play-button sentence" id="s-00-26-10-743" data-start="00:26:10,743" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's all for now.</p>
+<p>目前就这些。</p>
+<p><button class="play-button sentence" id="s-00-26-12-259" data-start="00:26:12,259" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do stay with BBC News.</p>
+<p>请继续关注BBC新闻。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

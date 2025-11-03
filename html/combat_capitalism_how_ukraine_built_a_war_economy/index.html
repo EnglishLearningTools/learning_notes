@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Combat capitalism: how Ukraine built a war economy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ukraine transformed its economy from agriculture and services to a wartime powerhouse, increasing weapons production from $1 billion in 2022 to $35 billion in 2024, despite initial disadvantages against Russia.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>Combat capitalism: how Ukraine built a war economy</h1>
+<p>【经济学人播客 Money Talks｜对抗资本主义：乌克兰如何建立战时经济｜20250718】</p>
+<p>Summary:
+Ukraine transformed its economy from agriculture and services to a wartime powerhouse, increasing weapons production from $1 billion in 2022 to $35 billion in 2024, despite initial disadvantages against Russia.</p>
+<p>摘要：
+乌克兰将其经济从农业和服务业转变为战时强国，尽管最初对俄罗斯处于劣势，但武器生产从2022年的10亿美元增加到2024年的350亿美元。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 54 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它生词.html" target="_blank">其它生词生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208960000" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-00-000" data-start="00:00:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Money talks from the economist is sponsored by Wharton Executive Education.</p>
+<p>《经济学人》的“Money Talks”由沃顿高管教育学院赞助。</p>
+<p><button class="play-button sentence" id="s-00-00-04-778" data-start="00:00:04,778" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Wharton's advanced finance program blends rigorous coursework, coaching and a global network.</p>
+<p>沃顿的高级金融课程结合了严格的课程、指导和全球网络。</p>
+<p><button class="play-button sentence" id="s-00-00-10-080" data-start="00:00:10,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Advance your career and earn alumni status.</p>
+<p>提升您的职业生涯并获得校友身份。</p>
+<p><button class="play-button sentence" id="s-00-00-15-661" data-start="00:00:15,661" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Visit WhartonAFP.com.</p>
+<p>访问WhartonAFP.com。</p>
+<p><button class="play-button sentence" id="s-00-00-18-678" data-start="00:00:18,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Economist In 2022, when Russia launched its full-scale invasion, Ukraine was making just 50,000 artillery shells a year.</p>
+<p>2022年，当俄罗斯发动全面入侵时，乌克兰每年仅生产5万枚炮弹。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959969" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-30-793" data-start="00:00:30,793" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was not enough.</p>
+<p>这远远不够。</p>
+<p><button class="play-button sentence" id="s-00-00-32-439" data-start="00:00:32,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both sides were lying on artillery.</p>
+<p>双方都依赖火炮。</p>
+<p><button class="play-button sentence" id="s-00-00-34-655" data-start="00:00:34,655" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The problem for Ukraine is that at this point with shells, Russian artillery outnumbered Ukraine by about 10 to 1.</p>
+<p>乌克兰的问题是，在炮弹方面，俄罗斯的火炮数量大约是乌克兰的10倍。</p>
+<p><button class="play-button sentence" id="s-00-00-41-533" data-start="00:00:41,533" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukrainian officials say they are losing up to 200 soldiers every day.</p>
+<p>乌克兰官员表示，他们每天损失多达200名士兵。</p>
+<p><button class="play-button sentence" id="s-00-00-47-359" data-start="00:00:47,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In the early days of the war, the country's soldiers were getting through 6 to 7,000 rounds a day.</p>
+<p>战争初期，乌克兰士兵每天消耗6至7千发炮弹。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959947" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-52-639" data-start="00:00:52,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Russians were firing up to 50,000.</p>
+<p>俄罗斯人每天发射多达5万发。</p>
+<p><button class="play-button sentence" id="s-00-00-55-199" data-start="00:00:55,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there was a rush to stock Ukraine's dwindling arsenals.</p>
+<p>因此，乌克兰急于补充其日益减少的军火库。</p>
+<p><button class="play-button sentence" id="s-00-00-58-679" data-start="00:00:58,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> More American weapons will soon be on the way to Ukraine.</p>
+<p>更多美国武器即将运往乌克兰。</p>
+<p><button class="play-button sentence" id="s-00-01-01-974" data-start="00:01:01,974" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> President Biden made that announcement today as Ukrainian forces brace for a tough fight with Russia's military across eastern Ukraine.</p>
+<p>拜登总统今天宣布了这一消息，乌克兰军队准备在乌克兰东部与俄罗斯军队展开激烈战斗。</p>
+<p><button class="play-button sentence" id="s-00-01-11-319" data-start="00:01:11,319" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But even America, the world's largest arms exported by far, only produced 15,000 rounds a month.</p>
+<p>但即使是世界上最大的武器出口国美国，每月也只能生产1.5万发炮弹。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-18-139" data-start="00:01:18,139" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What followed was a miracle of industrial growth.</p>
+<p>随后出现了工业增长的奇迹。</p>
+<p><button class="play-button sentence" id="s-00-01-21-860" data-start="00:01:21,860" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Last year, Ukraine made 2.4 million artillery shells.</p>
+<p>去年，乌克兰生产了240万枚炮弹。</p>
+<p><button class="play-button sentence" id="s-00-01-25-730" data-start="00:01:25,730" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The value of the weapons it produces has climbed from 1 billion dollars in 2022 to 35 billion dollars last year.</p>
+<p>其生产的武器价值从2022年的10亿美元攀升至去年的350亿美元。</p>
+<p><button class="play-button sentence" id="s-00-01-39-558" data-start="00:01:39,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So how has Ukraine done it?</p>
+<p>乌克兰是如何做到的？</p>
+<p><button class="play-button sentence" id="s-00-01-45-799" data-start="00:01:45,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're listening to Money Talks from the Economist.</p>
+<p>您正在收听《经济学人》的“Money Talks”。</p>
+<p><button class="play-button sentence" id="s-00-01-48-523" data-start="00:01:48,523" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our weekly podcast on the markets, the economy and the world of business.</p>
+<p>我们每周关于市场、经济和商业世界的播客。</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959886" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-53-010" data-start="00:01:53,010" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In Singapore, I'm Ethan Wu.</p>
+<p>在新加坡，我是Ethan Wu。</p>
+<p><button class="play-button sentence" id="s-00-01-54-945" data-start="00:01:54,945" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In New York, I'm Mike Bird.</p>
+<p>在纽约，我是Mike Bird。</p>
+<p><button class="play-button sentence" id="s-00-01-56-901" data-start="00:01:56,901" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And in today's show, how Ukraine built a war economy.</p>
+<p>在今天的节目中，乌克兰如何建立战时经济。</p>
+<p><button class="play-button sentence" id="s-00-02-01-118" data-start="00:02:01,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> First, what Ukraine's economy looked like before the war.</p>
+<p>首先，战前乌克兰的经济状况。</p>
+<p><button class="play-button sentence" id="s-00-02-05-184" data-start="00:02:05,184" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine was basically a completely sleepy economy.</p>
+<p>乌克兰基本上是一个完全沉睡的经济体。</p>
+<p><button class="play-button sentence" id="s-00-02-08-479" data-start="00:02:08,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It focused on agriculture and services.</p>
+<p>它专注于农业和服务业。</p>
+<p><button class="play-button sentence" id="s-00-02-11-919" data-start="00:02:11,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Then we hear how Ukraine pivoted to make the weapons that changed the conflict.</p>
+<p>然后我们听到乌克兰如何转向制造改变冲突的武器。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959863" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-16-840" data-start="00:02:16,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We achieved substantial success in manufacturing of all types of unmanned systems.</p>
+<p>我们在制造各类无人系统方面取得了重大成功。</p>
+<p><button class="play-button sentence" id="s-00-02-23-120" data-start="00:02:23,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aerial, ground and naval drones.</p>
+<p>空中、地面和海上无人机。</p>
+<p><button class="play-button sentence" id="s-00-02-26-960" data-start="00:02:26,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Finally, we learned the secret to that pivot.</p>
+<p>最后，我们了解到这一转变的秘诀。</p>
+<p><button class="play-button sentence" id="s-00-02-32-758" data-start="00:02:32,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Based on market economics, we created certain incentives for entrepreneurs.</p>
+<p>基于市场经济，我们为企业家创造了一定的激励措施。</p>
+<p><button class="play-button sentence" id="s-00-02-45-960" data-start="00:02:45,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like, hello, Ethan, how you doing?</p>
+<p>比如，你好，Ethan，你怎么样？</p>
+<p><button class="play-button sentence" id="s-00-02-47-854" data-start="00:02:47,854" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, not so good because I heard some unfortunate news about you, Mike.</p>
+<p>嗯，不太好，因为我听到了一些关于你的不幸消息，Mike。</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959828" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-51-786" data-start="00:02:51,786" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You're cheating on this very podcast by going on our rival podcast, checks and balance.</p>
+<p>你背叛了这个播客，去了我们的竞争对手播客“Checks and Balance”。</p>
+<p><button class="play-button sentence" id="s-00-02-56-265" data-start="00:02:56,265" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Which everyone should listen to.</p>
+<p>每个人都应该听听。</p>
+<p><button class="play-button sentence" id="s-00-02-57-560" data-start="00:02:57,560" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'll be recording very shortly.</p>
+<p>我很快就会录制。</p>
+<p><button class="play-button sentence" id="s-00-02-59-152" data-start="00:02:59,152" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, I don't think of us as rivals.</p>
+<p>事实上，我不认为我们是竞争对手。</p>
+<p><button class="play-button sentence" id="s-00-03-00-981" data-start="00:03:00,981" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're very complimentary right.</p>
+<p>我们非常互补，对吧？</p>
+<p><button class="play-button sentence" id="s-00-03-02-718" data-start="00:03:02,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's my dream, I think, to do Babbage and Drum Tower as well.</p>
+<p>我的梦想是同时主持“Babbage”和“Drum Tower”。</p>
+<p><button class="play-button sentence" id="s-00-03-06-302" data-start="00:03:06,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Perhaps all in the same day, we could eat back to back for our recording.</p>
+<p>也许我们可以在同一天连续录制。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959810" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-09-938" data-start="00:03:09,938" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I'll be the only person on anything.</p>
+<p>是的，我将是唯一一个出现在所有节目上的人。</p>
+<p><button class="play-button sentence" id="s-00-03-11-972" data-start="00:03:11,972" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That would be ideal.</p>
+<p>那将是理想的。</p>
+<p><button class="play-button sentence" id="s-00-03-12-981" data-start="00:03:12,981" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I mean, talk about range, right?</p>
+<p>是的，我是说，这范围很广，对吧？</p>
+<p><button class="play-button sentence" id="s-00-03-14-878" data-start="00:03:14,878" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are you on checks and balance for?</p>
+<p>你为什么上“Checks and Balance”？</p>
+<p><button class="play-button sentence" id="s-00-03-16-372" data-start="00:03:16,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I imagine it's not your kind of usual bail awake to be on the US politics show.</p>
+<p>我想这不是你通常会上美国政治节目的原因。</p>
+<p><button class="play-button sentence" id="s-00-03-19-892" data-start="00:03:19,892" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I guess there's more overlap in this job.</p>
+<p>我想这份工作有更多的重叠。</p>
+<p><button class="play-button sentence" id="s-00-03-22-158" data-start="00:03:22,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the subject matter this week is the Teflon economy, Teflon capitalism, which myself and my colleague, Kalim Williams wrote about this week.</p>
+<p>但本周的主题是“特氟龙经济”，即“特氟龙资本主义”，我和我的同事Kalim Williams本周写了相关文章。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959788" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-31-415" data-start="00:03:31,415" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's basically the thesis that actually we talk about huge shocks to and risks to the global economy and the US economy pretty relentlessly and this huge amount of geopolitical uncertainty.</p>
+<p>基本上，我们的论点是，我们不断谈论全球经济和美国经济面临的巨大冲击和风险，以及大量的地缘政治不确定性。</p>
+<p><button class="play-button sentence" id="s-00-03-44-913" data-start="00:03:44,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This doesn't actually seems to be reflected in economic output or in raw economic data, anything like as much as you might expect it to be.</p>
+<p>这似乎并没有像预期那样反映在经济产出或原始经济数据中。</p>
+<p><button class="play-button sentence" id="s-00-03-53-234" data-start="00:03:53,234" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was the sort of puzzle we were looking at.</p>
+<p>这就是我们研究的谜题。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959764" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-55-803" data-start="00:03:55,803" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It all comes down to supply chains are actually a lot more flexible and resilient than people believe.</p>
+<p>归根结底，供应链实际上比人们认为的更加灵活和有弹性。</p>
+<p><button class="play-button sentence" id="s-00-04-01-520" data-start="00:04:01,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Potentially services consumption is changing the game.</p>
+<p>服务消费可能正在改变游戏规则。</p>
+<p><button class="play-button sentence" id="s-00-04-04-804" data-start="00:04:04,804" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Economies less oil intensive than it used to be and also that demand management is better in various parts of the world.</p>
+<p>经济对石油的依赖程度比以前低，而且世界各地的需求管理也更好。</p>
+<p><button class="play-button sentence" id="s-00-04-11-758" data-start="00:04:11,758" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that's the good news.</p>
+<p>是的，这是个好消息。</p>
+<p><button class="play-button sentence" id="s-00-04-13-056" data-start="00:04:13,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been quite striking that the global economy, the US economy, have managed through the shocks of the past five years relatively well, things considered.</p>
+<p>值得注意的是，考虑到过去五年的冲击，全球经济和美国经济表现得相对较好。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959739" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-20-079" data-start="00:04:20,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think your point about supply chains is exactly right that there was a lot of talk about just in case versus just in time manufacturing.</p>
+<p>我认为你关于供应链的观点完全正确，人们讨论了很多“以防万一”与“准时制”制造。</p>
+<p><button class="play-button sentence" id="s-00-04-26-432" data-start="00:04:26,432" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But largely speaking, we metabolized a massive global shock in relatively short order.</p>
+<p>但总的来说，我们在相对较短的时间内消化了巨大的全球冲击。</p>
+<p><button class="play-button sentence" id="s-00-04-30-923" data-start="00:04:30,923" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's really quite impressive.</p>
+<p>这确实令人印象深刻。</p>
+<p><button class="play-button sentence" id="s-00-04-32-301" data-start="00:04:32,301" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we're not here today to talk about the world economy.</p>
+<p>但我们今天不是来讨论世界经济的。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959725" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-34-853" data-start="00:04:34,853" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're here to talk about one very specific market that has been similarly flexible.</p>
+<p>我们来讨论一个同样灵活的特定市场。</p>
+<p><button class="play-button sentence" id="s-00-04-39-124" data-start="00:04:39,124" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's the defense industrial base of Ukraine.</p>
+<p>那就是乌克兰的国防工业基础。</p>
+<p><button class="play-button sentence" id="s-00-04-42-160" data-start="00:04:42,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, I'm actually fascinated to talk about this because we hear a lot about the discussions of arms, sales and transfers from Western countries from the US in particular to Ukraine.</p>
+<p>是的，我对此非常感兴趣，因为我们听到了很多关于西方国家，特别是美国向乌克兰出售和转让武器的讨论。</p>
+<p><button class="play-button sentence" id="s-00-04-54-399" data-start="00:04:54,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But far, far less, I think, about the arms and production that Ukraine actually does for itself.</p>
+<p>但关于乌克兰自己生产的武器，我认为讨论要少得多。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959698" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-01-519" data-start="00:05:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that is something that our colleague, Karin Richman-Jones, has been looking into.</p>
+<p>因此，我们的同事Karin Richman-Jones一直在研究这个问题。</p>
+<p><button class="play-button sentence" id="s-00-05-06-332" data-start="00:05:06,332" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The good news is that Karin is with us now.</p>
+<p>好消息是Karin现在和我们在一起。</p>
+<p><button class="play-button sentence" id="s-00-05-08-447" data-start="00:05:08,447" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Karin, thank you for joining us.</p>
+<p>Karin，感谢你加入我们。</p>
+<p><button class="play-button sentence" id="s-00-05-10-093" data-start="00:05:10,093" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for having me.</p>
+<p>非常感谢邀请我。</p>
+<p><button class="play-button sentence" id="s-00-05-11-680" data-start="00:05:11,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Karin, just to start us off, why did you want to look into this?</p>
+<p>Karin，首先，你为什么想研究这个问题？</p>
+<p><button class="play-button sentence" id="s-00-05-15-199" data-start="00:05:15,199" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in 2022, Ukraine was basically a completely sleepy economy.</p>
+<p>2022年，乌克兰基本上是一个完全沉睡的经济体。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959680" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:19</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-19-928" data-start="00:05:19,928" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It focused on agriculture and services.</p>
+<p>它专注于农业和服务业。</p>
+<p><button class="play-button sentence" id="s-00-05-22-905" data-start="00:05:22,905" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It produced less than a billion dollars of weapons a year.</p>
+<p>它每年生产的武器不到10亿美元。</p>
+<p><button class="play-button sentence" id="s-00-05-26-885" data-start="00:05:26,885" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Fast forward to the end of 2024 and it has shed loads of military production, about 35 billion dollars.</p>
+<p>快进到2024年底，它的军事生产大幅增加，达到约350亿美元。</p>
+<p><button class="play-button sentence" id="s-00-05-33-389" data-start="00:05:33,389" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a lot of stuff that it can make itself.</p>
+<p>它可以自己制造很多东西。</p>
+<p><button class="play-button sentence" id="s-00-05-35-875" data-start="00:05:35,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's also a lot of things that it can't make itself.</p>
+<p>也有很多东西它无法自己制造。</p>
+<p><button class="play-button sentence" id="s-00-05-38-478" data-start="00:05:38,478" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Air defense systems, long-range missiles are a huge problem still.</p>
+<p>防空系统、远程导弹仍然是一个大问题。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959657" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-42-852" data-start="00:05:42,852" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what I was interested in is what that pattern of production could tell you about military manufacturing in general today, which as we know, it's a huge issue.</p>
+<p>我感兴趣的是，这种生产模式能告诉我们当今军事制造业的总体情况，众所周知，这是一个重大问题。</p>
+<p><button class="play-button sentence" id="s-00-05-52-757" data-start="00:05:52,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Policy makers in the West are becoming increasingly obsessed with war, with military spending, but also with tending to a nurturing civilian economies in Europe, in America, to prepare them for what they might become during war.</p>
+<p>西方的政策制定者越来越痴迷于战争、军费开支，同时也致力于培育欧洲和美国的民用经济，为战时可能发生的情况做准备。</p>
+<p><button class="play-button sentence" id="s-00-06-07-156" data-start="00:06:07,156" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we've seen Donald Trump section 232 tariffs, the sectoral tariffs, which have justified according to national security really, and also billions of dollars of subsidies in Europe to protect so-called strategic industries.</p>
+<p>因此，我们看到了特朗普的第232条关税，即行业关税，这些关税实际上是根据国家安全理由实施的，欧洲还提供了数十亿美元的补贴来保护所谓的战略产业。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-20-870" data-start="00:06:20,870" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what I really want to do was to use Ukraine to try and get a bit of an idea about what a modern strategic industry in wartime really is.</p>
+<p>我真正想做的是利用乌克兰来了解战时现代战略产业的真实情况。</p>
+<p><button class="play-button sentence" id="s-00-06-30-224" data-start="00:06:30,224" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, there's this idea that floats around that countries need this strong, large manufacturing base, a lot of embedded production capacity and expertise, or they won't be able to do the sort of war production when the event comes.</p>
+<p>是的，有一种观点认为，国家需要强大、庞大的制造业基础、大量的嵌入式生产能力和专业知识，否则在战争来临时就无法进行战时生产。</p>
+<p><button class="play-button sentence" id="s-00-06-45-887" data-start="00:06:45,887" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You mentioned that Ukraine's economy really didn't have a lot of that before the war began.</p>
+<p>你提到乌克兰的经济在战争开始前并没有太多这些。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959588" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-51-011" data-start="00:06:51,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tell us a bit more about that.</p>
+<p>请详细说明一下。</p>
+<p><button class="play-button sentence" id="s-00-06-53-120" data-start="00:06:53,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, so there are two things to differentiate here.</p>
+<p>是的，这里有两件事需要区分。</p>
+<p><button class="play-button sentence" id="s-00-06-56-595" data-start="00:06:56,595" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first is how war transforms an economy.</p>
+<p>第一是战争如何改变经济。</p>
+<p><button class="play-button sentence" id="s-00-07-00-079" data-start="00:07:00,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The sudden urgent need to produce more better weapons overnight to meet what Russia in this case is doing on its side, conjures up new industries.</p>
+<p>突然迫切需要在一夜之间生产更多更好的武器，以应对俄罗斯的行动，这催生了新的产业。</p>
+<p><button class="play-button sentence" id="s-00-07-10-559" data-start="00:07:10,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That diverts a lot of the country's labor and capital you get to the point where on the streets of Kiev where I was not too long ago, seeing men aged between 18 and 40 on the street alone is quite a rare occurrence really because most of them are either fighting in some capacity or involved in military production on a weekday.</p>
+<p>这转移了大量的劳动力和资本，以至于在基辅的街道上，看到18至40岁的男性独自在街上已经相当罕见，因为他们中的大多数人要么以某种方式参战，要么在工作日参与军事生产。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959549" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:30</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-30-430" data-start="00:07:30,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then eventually industrial innovation always reconfigures the battlefield, advances in weapons, shortages of weapons, new weapons, mean that soldiers can fight in different ways and eventually fight better or worse than their adversary.</p>
+<p>最终，工业创新总是会重新配置战场，武器的进步、短缺和新武器意味着士兵可以以不同的方式战斗，最终比对手打得更好或更差。</p>
+<p><button class="play-button sentence" id="s-00-07-45-652" data-start="00:07:45,652" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That happens in every single war, but it's slightly different to the idea that underpins a lot of thinking in the West at the moment, which is that industrial war is won by the biggest industrial power.</p>
+<p>这在每一场战争中都会发生，但与目前西方很多想法的基础略有不同，他们认为工业战争是由最大的工业强国赢得的。</p>
+<p><button class="play-button sentence" id="s-00-07-58-305" data-start="00:07:58,305" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the worry in the West is that the world's biggest industrial power at the moment, the country that say if you needed to convert car factories and they could easily be converted into ammunition factories, the country that has the most car factories in the world is China.</p>
+<p>西方的担忧是，目前世界上最大的工业强国是中国，如果你需要将汽车工厂改造成弹药工厂，中国是世界上拥有最多汽车工厂的国家。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959506" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-13-861" data-start="00:08:13,861" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, that's all really fascinating, Kerian.</p>
+<p>是的，这一切都非常有趣，Kerian。</p>
+<p><button class="play-button sentence" id="s-00-08-16-320" data-start="00:08:16,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll pick up on some of these themes in just a minute, but first you've been Ukraine recently as you mentioned and we wanted to hear some of your reporting from the ground.</p>
+<p>我们稍后会讨论其中一些主题，但首先，你最近去过乌克兰，我们想听听你的一些实地报道。</p>
+<p><button class="play-button sentence" id="s-00-08-25-212" data-start="00:08:25,212" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So please stick around, we'll have you back right after this.</p>
+<p>请稍等，我们稍后会请你回来。</p>
+<p><button class="play-button sentence" id="s-00-08-28-679" data-start="00:08:28,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Happy to.</p>
+<p>很高兴。</p>
+<p><button class="play-button sentence" id="s-00-08-29-639" data-start="00:08:29,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Visiting Kiev is a jarring experience.</p>
+<p>访问基辅是一种令人不安的经历。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959486" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:33</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-33-599" data-start="00:08:33,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In many ways it's still the same achingly cool cultural capital it was before Russia invaded.</p>
+<p>在许多方面，它仍然是俄罗斯入侵前那个酷炫的文化之都。</p>
+<p><button class="play-button sentence" id="s-00-08-40-899" data-start="00:08:40,899" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only now, that corners can be seen in people's reactions to the signs of war, which are everywhere.</p>
+<p>只是现在，人们随处可见战争迹象的反应中可以看到这种转变。</p>
+<p><button class="play-button sentence" id="s-00-08-47-333" data-start="00:08:47,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In some, the city's big department store, shoppers barely blink when the air raid sirens blare at lunchtime when a normal Tuesday.</p>
+<p>在某些地方，比如城市的大百货商店，购物者在午餐时间听到空袭警报时几乎不会眨眼，就像平常的周二一样。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959464" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-55-519" data-start="00:08:55,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And no one seems too surprised to round a corner onto one of the city's cobbled side streets to find their path blocked by a tank.</p>
+<p>似乎没有人对在城市的鹅卵石小巷转角处遇到坦克挡住去路感到太惊讶。</p>
+<p><button class="play-button sentence" id="s-00-09-03-697" data-start="00:09:03,697" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But that perceived corner could also be fatigue.</p>
+<p>但这种感知到的转变也可能是疲劳。</p>
+<p><button class="play-button sentence" id="s-00-09-07-767" data-start="00:09:07,767" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Nobody around here is getting much sleep.</p>
+<p>这里没有人能睡好觉。</p>
+<p><button class="play-button sentence" id="s-00-09-11-361" data-start="00:09:11,361" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Most nights the city is pounded by air strikes and the sound is terrifying.</p>
+<p>大多数夜晚，城市都会遭到空袭，声音令人恐惧。</p>
+<p><button class="play-button sentence" id="s-00-09-18-159" data-start="00:09:18,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But by day, Kiev and Ukraine's other cities power the country's war effort.</p>
+<p>但在白天，基辅和乌克兰的其他城市为国家的战争努力提供动力。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959433" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-26-407" data-start="00:09:26,407" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now a huge part of its economy.</p>
+<p>现在这是其经济的重要组成部分。</p>
+<p><button class="play-button sentence" id="s-00-09-29-471" data-start="00:09:29,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The defence industry made up a third of Ukraine's growth in 2024.</p>
+<p>国防工业占乌克兰2024年增长的三分之一。</p>
+<p><button class="play-button sentence" id="s-00-09-35-519" data-start="00:09:35,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's because in just three years, Ukraine has pivoted its economy, which was previously dependent on agriculture and services to become a wartime economy.</p>
+<p>这是因为在短短三年内，乌克兰将其经济从依赖农业和服务业转变为战时经济。</p>
+<p><button class="play-button sentence" id="s-00-09-46-381" data-start="00:09:46,381" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Before the war, Ukraine produced about a billion dollars of weapons a year.</p>
+<p>战前，乌克兰每年生产约10亿美元的武器。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959407" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-52-340" data-start="00:09:52,340" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's almost nothing.</p>
+<p>这几乎微不足道。</p>
+<p><button class="play-button sentence" id="s-00-09-53-959" data-start="00:09:53,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2024, defence firms in Ukraine were producing 35 billion dollars worth of weapons.</p>
+<p>2024年，乌克兰的国防公司生产了价值350亿美元的武器。</p>
+<p><button class="play-button sentence" id="s-00-10-00-103" data-start="00:10:00,103" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's 40% of the weapons used by Ukraine's army.</p>
+<p>这占乌克兰军队使用武器的40%。</p>
+<p><button class="play-button sentence" id="s-00-10-05-120" data-start="00:10:05,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To achieve that, the country's fledgling arms makers have had to be scrappy.</p>
+<p>为了实现这一目标，该国新兴的武器制造商不得不拼命努力。</p>
+<p><button class="play-button sentence" id="s-00-10-09-840" data-start="00:10:09,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Abandoned suburban houses have now become drone factories.</p>
+<p>废弃的郊区房屋现在变成了无人机工厂。</p>
+<p><button class="play-button sentence" id="s-00-10-13-516" data-start="00:10:13,516" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One I visited still have mattresses in each of the bedrooms.</p>
+<p>我参观的一个工厂，每个卧室里仍然有床垫。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959382" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:17</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-17-009" data-start="00:10:17,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Only now they were covered with propellers and motors rather than bedding.</p>
+<p>只是现在它们被螺旋桨和电机覆盖，而不是床上用品。</p>
+<p><button class="play-button sentence" id="s-00-10-31-519" data-start="00:10:31,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Alexander Kamishin, the man responsible for building Ukraine's weapons industry.</p>
+<p>这就是Alexander Kamishin，负责建设乌克兰武器工业的人。</p>
+<p><button class="play-button sentence" id="s-00-10-39-120" data-start="00:10:39,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I met Mr. Kamishin, now a presidential adviser, in a plush restaurant for breakfast in Kiev.</p>
+<p>我在基辅一家豪华餐厅与Kamishin先生共进早餐，他现在是总统顾问。</p>
+<p><button class="play-button sentence" id="s-00-10-46-080" data-start="00:10:46,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now he didn't want me to record our conversation, but he has made similar remarks elsewhere, and that's what you're hearing here.</p>
+<p>他不想让我记录我们的谈话，但他在其他地方也发表过类似的言论，这就是你在这里听到的。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959346" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-53-577" data-start="00:10:53,577" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Over eggs Benedict, Mr. Kamishin spoke about production with scientific precision and a hint of humour.</p>
+<p>在享用班尼迪克蛋时，Kamishin先生以科学的精确性和一丝幽默谈论生产。</p>
+<p><button class="play-button sentence" id="s-00-10-59-760" data-start="00:10:59,760" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He showed me pictures of the latest Ukrainian bog substance.</p>
+<p>他向我展示了乌克兰最新沼泽物质的照片。</p>
+<p><button class="play-button sentence" id="s-00-11-04-502" data-start="00:11:04,502" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Substitutes for American howitzer artillery before swapping to a portrait of an old lady working a production line.</p>
+<p>美国榴弹炮的替代品，然后切换到一位老妇人在生产线上工作的肖像。</p>
+<p><button class="play-button sentence" id="s-00-11-10-913" data-start="00:11:10,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Never, I am told, underestimate Ukrainian grandmothers.</p>
+<p>有人告诉我，永远不要低估乌克兰的祖母们。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959323" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-16-159" data-start="00:11:16,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By now we achieved substantial success in manufacturing of all types of unmanned systems.</p>
+<p>到目前为止，我们在制造各类无人系统方面取得了重大成功。</p>
+<p><button class="play-button sentence" id="s-00-11-23-200" data-start="00:11:23,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Aerial, ground and never drones.</p>
+<p>空中、地面和海上无人机。</p>
+<p><button class="play-button sentence" id="s-00-11-25-846" data-start="00:11:25,846" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In my conversation with him too, Mr. Kamishin listed off the astounding array of Ukrainian homegrown weapons.</p>
+<p>在与他的谈话中，Kamishin先生还列举了一系列令人惊叹的乌克兰本土武器。</p>
+<p><button class="play-button sentence" id="s-00-11-34-301" data-start="00:11:34,301" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Missiles, ammunition, artillery and millions and millions of drones.</p>
+<p>导弹、弹药、火炮和数百万架无人机。</p>
+<p><button class="play-button sentence" id="s-00-11-40-399" data-start="00:11:40,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he didn't shy away from the challenges.</p>
+<p>他并未回避挑战。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959297" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-42-576" data-start="00:11:42,576" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Production of powerful artillery is slower than he'd like.</p>
+<p>强大火炮的生产速度比他预期的要慢。</p>
+<p><button class="play-button sentence" id="s-00-11-45-600" data-start="00:11:45,600" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Compounding that is the country's lack of reliable home produced air defence systems.</p>
+<p>雪上加霜的是，该国缺乏可靠的本土防空系统。</p>
+<p><button class="play-button sentence" id="s-00-11-51-918" data-start="00:11:51,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine is also dealing with a crippling shortage of gunpowder, but nevertheless Mr. Kamishin seems almost relentlessly optimistic.</p>
+<p>乌克兰还面临火药严重短缺的问题，尽管如此，卡米申先生似乎依然无比乐观。</p>
+<p><button class="play-button sentence" id="s-00-12-01-227" data-start="00:12:01,227" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even more, we actually reinvent conventional warfare, where we had mortar mines, we have now mortar drones or FPV drones, where we have artillery systems we've got artillery drones.</p>
+<p>更重要的是，我们实际上重新发明了传统战争方式，过去使用迫击炮地雷，现在有了迫击炮无人机或FPV无人机；过去使用火炮系统，现在有了火炮无人机。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959264" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-15-136" data-start="00:12:15,136" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With missiles we also got rocket drones.</p>
+<p>导弹方面，我们也有了火箭无人机。</p>
+<p><button class="play-button sentence" id="s-00-12-18-107" data-start="00:12:18,107" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And even air defence, we are reinventing the conventional approach and having air defence drones now.</p>
+<p>就连防空领域，我们也在革新传统方法，现在有了防空无人机。</p>
+<p><button class="play-button sentence" id="s-00-12-26-158" data-start="00:12:26,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Given what Ukraine has achieved so far, Mr. Kamishin's optimism isn't entirely misplaced.</p>
+<p>鉴于乌克兰迄今取得的成就，卡米申的乐观并非全无道理。</p>
+<p><button class="play-button sentence" id="s-00-12-34-479" data-start="00:12:34,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The country has broken with historical norms and done the seemingly impossible.</p>
+<p>该国打破了历史常规，完成了看似不可能的任务。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959239" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:40</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-40-078" data-start="00:12:40,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine had very little industrial capacity before the war began.</p>
+<p>战前乌克兰的工业能力非常有限。</p>
+<p><button class="play-button sentence" id="s-00-12-44-445" data-start="00:12:44,445" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It has much less cash and far fewer factories than Russia.</p>
+<p>它的资金和工厂数量远少于俄罗斯。</p>
+<p><button class="play-button sentence" id="s-00-12-48-239" data-start="00:12:48,239" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine and its allies together spend about $100 billion a year on its defence.</p>
+<p>乌克兰及其盟友每年共同花费约1000亿美元用于国防。</p>
+<p><button class="play-button sentence" id="s-00-12-53-783" data-start="00:12:53,783" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia spends triple that.</p>
+<p>俄罗斯的支出是其三倍。</p>
+<p><button class="play-button sentence" id="s-00-12-56-089" data-start="00:12:56,089" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That should have given Putin a huge advantage, and that's because many policymakers have come to see peacetime capacity as a key indicator of wartime success.</p>
+<p>这本应给普京带来巨大优势，因为许多政策制定者已开始将和平时期的工业能力视为战时成功的关键指标。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959213" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:06</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-06-875" data-start="00:13:06,875" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> To put it bluntly, in previous conflicts, the country with more factories typically won the war.</p>
+<p>直白地说，在过去的冲突中，工厂更多的国家通常能赢得战争。</p>
+<p><button class="play-button sentence" id="s-00-13-14-859" data-start="00:13:14,859" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In World War II for instance, it was relatively easy for Rolls Royce, a car company, to turn its hand to Spitfire engines because much of what went into both machines was similar.</p>
+<p>例如，二战时期，汽车公司劳斯莱斯转产喷火战斗机发动机相对容易，因为两种机器的许多部件相似。</p>
+<p><button class="play-button sentence" id="s-00-13-25-742" data-start="00:13:25,742" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Under the tilt-lidge of skilled Rolls Royce craftsmen, both men and women were given intensive training in the operation of highly specialized machine tools in a section of the factory especially equipped for this purpose.</p>
+<p>在熟练的劳斯莱斯工匠指导下，男女工人在工厂专门配备的区域接受了高精度机床操作的强化培训。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959181" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-38-111" data-start="00:13:38,111" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Make no mistake, Ukraine still can't produce some weapons because they are too big, too complex, and building the factories alone would take years even the richest countries.</p>
+<p>别搞错，乌克兰仍无法生产某些武器，因为它们太大、太复杂，仅建造工厂就需要数年时间，即使对最富裕的国家也是如此。</p>
+<p><button class="play-button sentence" id="s-00-13-48-940" data-start="00:13:48,940" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tanks are one such weapon.</p>
+<p>坦克就是其中之一。</p>
+<p><button class="play-button sentence" id="s-00-13-50-678" data-start="00:13:50,678" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The United States announced it will reverse its long-standing resistance and now supply tanks to Ukraine, 31 American-made M1 Abrams tanks.</p>
+<p>美国宣布将改变长期以来的抵制态度，向乌克兰提供31辆美制M1艾布拉姆斯坦克。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959159" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-00-720" data-start="00:14:00,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They are the most sophisticated tanks in the world.</p>
+<p>它们是世界上最先进的坦克。</p>
+<p><button class="play-button sentence" id="s-00-14-03-839" data-start="00:14:03,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But tanks are no longer Ukraine's weapon of choice.</p>
+<p>但坦克不再是乌克兰的首选武器。</p>
+<p><button class="play-button sentence" id="s-00-14-07-039" data-start="00:14:07,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2022, about months after the invasion, we realized that drones as a future of warfare and oil that we can only stop the Russians through technological means.</p>
+<p>2022年，入侵后数月，我们意识到无人机是战争的未来，只有通过技术手段才能阻止俄罗斯人。</p>
+<p><button class="play-button sentence" id="s-00-14-24-657" data-start="00:14:24,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we started making radical changes.</p>
+<p>于是我们开始彻底改革。</p>
+<p><button class="play-button sentence" id="s-00-14-27-290" data-start="00:14:27,290" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Mikhailo Fedorov.</p>
+<p>这是米哈伊洛·费多罗夫。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959131" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-28-859" data-start="00:14:28,859" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine's 34-year-old minister for digital transformation.</p>
+<p>乌克兰34岁的数字化转型部长。</p>
+<p><button class="play-button sentence" id="s-00-14-33-360" data-start="00:14:33,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's the government's point man for the drone industry.</p>
+<p>他是政府无人机产业的负责人。</p>
+<p><button class="play-button sentence" id="s-00-14-36-624" data-start="00:14:36,624" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We meet in Mr. Fedorov's ministry, a cavernous Soviet-style building.</p>
+<p>我们在费多罗夫先生的部门会面，那是一座巨大的苏联风格建筑。</p>
+<p><button class="play-button sentence" id="s-00-14-41-284" data-start="00:14:41,284" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A lone table tennis table sits in one of the hallways.</p>
+<p>走廊里孤零零地放着一张乒乓球桌。</p>
+<p><button class="play-button sentence" id="s-00-14-45-840" data-start="00:14:45,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a bid to emulate Silicon Valley's casual offices.</p>
+<p>这是为了模仿硅谷随意的办公环境。</p>
+<p><button class="play-button sentence" id="s-00-14-49-841" data-start="00:14:49,841" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But what goes on here is much more deadly.</p>
+<p>但这里进行的事情要致命得多。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959105" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:54</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-54-720" data-start="00:14:54,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine has led the world into a new age of drone warfare.</p>
+<p>乌克兰引领世界进入了无人机战争的新时代。</p>
+<p><button class="play-button sentence" id="s-00-14-58-154" data-start="00:14:58,154" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's an attempt to outmaneuver Russia's fleets of warships and thousands of tanks.</p>
+<p>这是为了智胜俄罗斯的舰队和数千辆坦克。</p>
+<p><button class="play-button sentence" id="s-00-15-03-874" data-start="00:15:03,874" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But unlike those weapons, drones are cheap, easy to make and easy to replace.</p>
+<p>但与这些武器不同，无人机便宜、易制造且易替换。</p>
+<p><button class="play-button sentence" id="s-00-15-10-656" data-start="00:15:10,656" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Ukraine is very good at making them.</p>
+<p>而乌克兰非常擅长制造它们。</p>
+<p><button class="play-button sentence" id="s-00-15-14-002" data-start="00:15:14,002" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In fact, it now makes millions.</p>
+<p>事实上，它现在能制造数百万架。</p>
+<p><button class="play-button sentence" id="s-00-15-19-038" data-start="00:15:19,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2022, the state purchased about 2,000 drones, but our goal was hundreds of thousands.</p>
+<p>2022年，国家购买了约2000架无人机，但我们的目标是数十万架。</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959073" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-26-798" data-start="00:15:26,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In 2023, it was over 300,000 drones.</p>
+<p>2023年，超过了30万架。</p>
+<p><button class="play-button sentence" id="s-00-15-31-564" data-start="00:15:31,564" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> By 2024, one and half million were purchased, and this year it will be more than 3 million.</p>
+<p>到2024年，购买了150万架，今年将超过300万架。</p>
+<p><button class="play-button sentence" id="s-00-15-40-513" data-start="00:15:40,513" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's estimated that last year, roughly 95% of all the drones deployed by Ukrainian forces were made domestically.</p>
+<p>据估计，去年乌克兰军队部署的无人机中约95%是国内制造的。</p>
+<p><button class="play-button sentence" id="s-00-15-47-950" data-start="00:15:47,950" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Fedorov has built the industry from the ground.</p>
+<p>费多罗夫先生从零开始建立了这个产业。</p>
+<p><button class="play-button sentence" id="s-00-15-51-840" data-start="00:15:51,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It started shortly after Russia's full-scale invasion, when he ceded firms with venture capital.</p>
+<p>它始于俄罗斯全面入侵后不久，当时他用风险投资扶持企业。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959042" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-57-918" data-start="00:15:57,918" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ministry gave out hundreds of grants.</p>
+<p>该部门发放了数百笔补助金。</p>
+<p><button class="play-button sentence" id="s-00-16-00-651" data-start="00:16:00,651" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And, like in any rich country, Ukraine had lots of red tape that meant that you couldn't just test weapons anyway you wanted.</p>
+<p>而且，像任何富裕国家一样，乌克兰有很多繁文缛节，意味着你不能随意测试武器。</p>
+<p><button class="play-button sentence" id="s-00-16-08-009" data-start="00:16:08,009" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr. Fedorov got rid of that.</p>
+<p>费多罗夫先生废除了这些规定。</p>
+<p><button class="play-button sentence" id="s-00-16-11-840" data-start="00:16:11,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the first step was policy, the second step was money.</p>
+<p>所以第一步是政策，第二步是资金。</p>
+<p><button class="play-button sentence" id="s-00-16-17-278" data-start="00:16:17,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 30 laws and regulations were passed that included tax breaks for tech companies, and special mini grants for drone firms to produce prototypes.</p>
+<p>通过了30项法律法规，包括对科技公司的税收减免，以及为无人机公司生产原型提供特别小额补助。</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208959011" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-28-958" data-start="00:16:28,958" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Based on market economics, we created certain incentives for interpreters.</p>
+<p>基于市场经济，我们为翻译人员创造了一定的激励措施。</p>
+<p><button class="play-button sentence" id="s-00-16-34-639" data-start="00:16:34,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We studied the experience of World War I and what Lloyd George did in Britain.</p>
+<p>我们研究了一战的经验和劳合·乔治在英国的举措。</p>
+<p><button class="play-button sentence" id="s-00-16-39-287" data-start="00:16:39,287" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We looked into what Albert Speer did during World War II in Germany, because Germany produced a lot.</p>
+<p>我们研究了阿尔伯特·施佩尔在二战期间在德国的做法，因为德国生产了大量物资。</p>
+<p><button class="play-button sentence" id="s-00-16-46-000" data-start="00:16:46,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And essentially, we implemented similar measures in Ukraine, creating the best conditions for interpreters.</p>
+<p>本质上，我们在乌克兰实施了类似措施，为翻译人员创造了最佳条件。</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958986" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-53-337" data-start="00:16:53,337" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, even the most sophisticated drones are made in a matter of days.</p>
+<p>如今，即使是最复杂的无人机也能在几天内制造出来。</p>
+<p><button class="play-button sentence" id="s-00-16-59-440" data-start="00:16:59,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I visited the offices of two manufacturers while I was in Ukraine.</p>
+<p>我在乌克兰期间参观了两家制造商的办公室。</p>
+<p><button class="play-button sentence" id="s-00-17-03-241" data-start="00:17:03,241" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Neither made drones before the war broke out.</p>
+<p>两家公司在战前都不生产无人机。</p>
+<p><button class="play-button sentence" id="s-00-17-05-975" data-start="00:17:05,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One of the manufacturers I spoke with, likens the production race between Russia and Ukraine to the plot of Home Alone, where a child, Kevin McAllister, is left behind by his family, and as such is tasked with protecting their home against the pair of wily burglars.</p>
+<p>与我交谈的一家制造商将俄罗斯和乌克兰之间的生产竞赛比作《小鬼当家》的情节，孩子凯文·麦卡利斯特被家人留下，负责保护家园免受一对狡猾窃贼的侵害。</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958955" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-24-318" data-start="00:17:24,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The drone makers I met varied from an ex-politician to a filmmaker.</p>
+<p>我遇到的无人机制造商从前政客到电影制片人都有。</p>
+<p><button class="play-button sentence" id="s-00-17-37-634" data-start="00:17:37,634" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, there are roughly 20 big manufacturers in Ukraine, but thousands of Ukrainians have become drone makers.</p>
+<p>如今，乌克兰大约有20家大型制造商，但成千上万的乌克兰人成为了无人机制造者。</p>
+<p><button class="play-button sentence" id="s-00-17-54-000" data-start="00:17:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Natalia is a 30-something woman who has recently joined one manufacturer.</p>
+<p>娜塔莉亚是一位30多岁的女性，最近加入了一家制造商。</p>
+<p><button class="play-button sentence" id="s-00-17-58-959" data-start="00:17:58,959" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I used to work with oil and gas, with home security, with banking, with retail, with digital transformation.</p>
+<p>我过去从事石油和天然气、家庭安防、银行、零售和数字化转型工作。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958912" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-07-104" data-start="00:18:07,104" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So my purpose is to launch the products.</p>
+<p>所以我的目标是推出产品。</p>
+<p><button class="play-button sentence" id="s-00-18-11-038" data-start="00:18:11,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Part of the reason these companies have to be so nimble, Natalia explained, is because anything they invent can be matched by Russian rivals in as little as three weeks.</p>
+<p>娜塔莉亚解释说，这些公司必须如此灵活的部分原因是，他们的任何发明都可能在三周内被俄罗斯对手复制。</p>
+<p><button class="play-button sentence" id="s-00-18-21-557" data-start="00:18:21,557" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Much of their research and development is done in days, by soldiers on the battlefield.</p>
+<p>他们的许多研发工作是由战场上的士兵在几天内完成的。</p>
+<p><button class="play-button sentence" id="s-00-18-28-480" data-start="00:18:28,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The innovation race in this war is moving so fast that firms that produce tanks, ships, and other conventional weapons just can't keep up.</p>
+<p>这场战争中的创新竞赛发展如此之快，生产坦克、舰船和其他传统武器的公司根本无法跟上。</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958881" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-38-374" data-start="00:18:38,374" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a new drone every few weeks compared to a new tank design every few years.</p>
+<p>每几周就有一种新无人机，而新坦克设计则需要几年时间。</p>
+<p><button class="play-button sentence" id="s-00-18-43-800" data-start="00:18:43,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And on top of that, as manufacturing has become more specialised and the tools of war more complex, peacetime industrial capacity is just no longer the advantage it once was in wartime.</p>
+<p>最重要的是，随着制造业变得更加专业化，战争工具更加复杂，和平时期的工业能力已不再像过去那样是战时的优势。</p>
+<p><button class="play-button sentence" id="s-00-18-56-511" data-start="00:18:56,511" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can hardly build tomahawks in a Tesla factory.</p>
+<p>你很难在特斯拉工厂生产战斧导弹。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958858" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-01-519" data-start="00:19:01,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's something that Russia, with its vast industrial capacity and networks of military production, overlooked in 2022.</p>
+<p>这是拥有庞大工业能力和军事生产网络的俄罗斯在2022年忽视的一点。</p>
+<p><button class="play-button sentence" id="s-00-19-09-002" data-start="00:19:09,002" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it tells you something about how Ukraine has held out for so long.</p>
+<p>但它也说明了乌克兰为何能坚持这么久。</p>
+<p><button class="play-button sentence" id="s-00-19-17-838" data-start="00:19:17,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm curious for you to talk just a bit more about some of your takeaways.</p>
+<p>我很好奇你能不能再多谈谈你的一些收获。</p>
+<p><button class="play-button sentence" id="s-00-19-34-209" data-start="00:19:34,209" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, is the claim that there is no connection between peacetime industrial might and battlefield success?</p>
+<p>意思是说，和平时期的工业实力与战场成功之间没有联系吗？</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958815" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:44</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-44-517" data-start="00:19:44,517" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And how much connection is there?</p>
+<p>它们之间有多少联系？</p>
+<p><button class="play-button sentence" id="s-00-19-46-980" data-start="00:19:46,980" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's definitely not that there's no connection at all.</p>
+<p>所以绝对不是完全没有联系。</p>
+<p><button class="play-button sentence" id="s-00-19-49-506" data-start="00:19:49,506" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think the point is that the connection is changing.</p>
+<p>我认为关键在于这种联系正在变化。</p>
+<p><button class="play-button sentence" id="s-00-19-52-071" data-start="00:19:52,071" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And you can look at this through what Ukraine can produce and what it can't produce right.</p>
+<p>你可以通过乌克兰能生产和不能生产的东西来看待这一点。</p>
+<p><button class="play-button sentence" id="s-00-19-56-937" data-start="00:19:56,937" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Europe and America at the moment have this big industrial subsidies program.</p>
+<p>所以欧洲和美国目前有这项大型工业补贴计划。</p>
+<p><button class="play-button sentence" id="s-00-20-02-480" data-start="00:20:02,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And their idea is not that they're going to build big defence industries.</p>
+<p>他们的想法不是要建立庞大的国防工业。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958794" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-05-913" data-start="00:20:05,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's that they want this big broad-based industry, reindustrialisation right, America should be producing cars, electric batteries, solar panels, with the idea that that is going to reinforce national security and eventually, if there was to be a conflict, you could then convert and use all of that capacity in wartime.</p>
+<p>而是他们想要这种广泛基础的产业，再工业化，美国应该生产汽车、电动汽车电池、太阳能电池板，认为这将增强国家安全，最终如果发生冲突，你可以在战时转换并利用所有这些能力。</p>
+<p><button class="play-button sentence" id="s-00-20-25-625" data-start="00:20:25,625" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what Ukraine really does is cast doubt on this because Ukraine has built up its weapons industry using basically no pre-existing capacity.</p>
+<p>而乌克兰的做法实际上对此提出了质疑，因为乌克兰基本上是在没有预先存在能力的情况下建立了武器工业。</p>
+<p><button class="play-button sentence" id="s-00-20-36-402" data-start="00:20:36,402" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So absolutely, if Ukraine had loads of missile factories, loads of drone production facilities, loads of tank factories, before the war would that have helped it? Yes.</p>
+<p>所以绝对是的，如果乌克兰战前有大量导弹工厂、大量无人机生产设施、大量坦克工厂，那会有帮助吗？是的。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958753" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-46-785" data-start="00:20:46,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So that connection is really strong and it can't build things like tanks, it can't build ships.</p>
+<p>所以这种联系确实很强，它无法建造坦克之类的东西，无法建造舰船。</p>
+<p><button class="play-button sentence" id="s-00-20-51-618" data-start="00:20:51,618" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's had to make drones to adapt to Russia's might in those areas, precisely because these production processes take so long.</p>
+<p>它不得不制造无人机来适应俄罗斯在这些领域的实力，正是因为这些生产过程耗时太长。</p>
+<p><button class="play-button sentence" id="s-00-20-59-646" data-start="00:20:59,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But if Ukraine had solar panel factories, if Ukraine had Tesla factories, would that help?</p>
+<p>但如果乌克兰有太阳能电池板工厂，如果乌克兰有特斯拉工厂，会有帮助吗？</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958734" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-05-637" data-start="00:21:05,637" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the answer appears to be no.</p>
+<p>答案似乎是否定的。</p>
+<p><button class="play-button sentence" id="s-00-21-07-640" data-start="00:21:07,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is a real change that hasn't quite been internalised in the rich world.</p>
+<p>这是一个真正的变化，富裕国家尚未完全理解。</p>
+<p><button class="play-button sentence" id="s-00-21-13-121" data-start="00:21:13,121" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it sounds from your reporting as well, like if we were to take this from another argument that people make, even if the actual industrial capacity isn't important, it's important to have the expertise.</p>
+<p>所以从你的报道来看，如果我们从另一个人们提出的论点来看，即使实际的工业能力不重要，拥有专业知识也很重要。</p>
+<p><button class="play-button sentence" id="s-00-21-24-865" data-start="00:21:24,865" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe you can't turn the Tesla plant into a drone factory, but the guy who makes the Tesla is better than an accountant at making the drones in the future would have to sort of form out of one argument.</p>
+<p>也许你不能把特斯拉工厂变成无人机工厂，但制造特斯拉的人比会计师更擅长制造无人机，未来必须从某种论点中形成。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958703" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-36-539" data-start="00:21:36,539" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It sounds like you met a lot of people who were doing something quite different before they were tasked with this reindustrialisation programme.</p>
+<p>听起来你遇到了很多在被委以这项再工业化计划之前从事完全不同工作的人。</p>
+<p><button class="play-button sentence" id="s-00-21-43-716" data-start="00:21:43,716" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I wonder what you thought of that argument, the expertise side of things.</p>
+<p>我想知道你对这个论点，即专业知识方面的看法。</p>
+<p><button class="play-button sentence" id="s-00-21-47-361" data-start="00:21:47,361" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The first thing to say is that technically manufacturing has got much more specialised over the last 70 years.</p>
+<p>首先要说的是，从技术上讲，制造业在过去70年里变得更加专业化。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958687" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-52-941" data-start="00:21:52,941" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's not just the machines that have got more specialised, it's also the workers.</p>
+<p>不仅是机器变得更加专业化，工人也是。</p>
+<p><button class="play-button sentence" id="s-00-21-57-471" data-start="00:21:57,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So a lot of the workers in America's defence industry, for instance, are not only quite old, but they are super, super high-skilled welders, for instance, who basically can only weld their bit onto one specific tank.</p>
+<p>例如，美国国防工业的许多工人不仅年纪较大，而且是技术非常高超的焊工，基本上只能焊接特定坦克的部件。</p>
+<p><button class="play-button sentence" id="s-00-22-11-845" data-start="00:22:11,845" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So how much would that worker really be of use above a general engineer in a war?</p>
+<p>那么在战争中，这样的工人比普通工程师有多大用处？</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958661" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-18-871" data-start="00:22:18,871" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And actually it turns out that some of the drone manufacturers that I met, and I've been really making the cutting edge drones, they were ex-politicians, ex-people used to work in think tanks in DC who came back out of national interest in 2022 filmmakers every drone needs a camera.</p>
+<p>实际上，我发现我遇到的一些无人机制造商，他们确实在制造尖端无人机，他们是前政治家、前华盛顿智库工作人员，出于国家利益在2022年回归，电影制片人每架无人机都需要摄像头。</p>
+<p><button class="play-button sentence" id="s-00-22-36-879" data-start="00:22:36,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there have been all these unexpected synergies.</p>
+<p>所有这些都产生了意想不到的协同效应。</p>
+<p><button class="play-button sentence" id="s-00-22-40-399" data-start="00:22:40,399" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But having said that, there's this constant thread running through Ukraine that it's an engineering nation.</p>
+<p>但话虽如此，贯穿乌克兰的一个不变主题是它是一个工程国家。</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958633" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-46-120" data-start="00:22:46,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what Ukraine really had a lot of, even if it didn't have people who worked in manufacturing, was it had a lot of engineers who thought about problems.</p>
+<p>乌克兰真正拥有的是大量工程师，即使没有制造业工人，他们善于思考问题。</p>
+<p><button class="play-button sentence" id="s-00-22-55-552" data-start="00:22:55,552" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You certainly the point that it's hard to predict what's needed on the battlefield ahead of time.</p>
+<p>你当然指出了很难提前预测战场上的需求。</p>
+<p><button class="play-button sentence" id="s-00-23-00-773" data-start="00:23:00,773" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I was wondering if you could talk through one of the most striking examples of this within the context of drone warfare, which is the kind of rise of these cable drones.</p>
+<p>我想知道你是否能通过无人机战争中最引人注目的例子之一来谈谈这一点，那就是这些有线无人机的兴起。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958610" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-09-624" data-start="00:23:09,624" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As I understand it, and you'll have to correct me, is because standard drones are highly vulnerable to signal jamming.</p>
+<p>据我理解，标准无人机极易受到信号干扰的影响，如有错误请指正。</p>
+<p><button class="play-button sentence" id="s-00-23-16-561" data-start="00:23:16,561" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this has become kind of a central point of contention between the Russians and the Ukrainians is whose signal jamming is more effective than the other side.</p>
+<p>这已成为俄罗斯和乌克兰之间的一个核心争议点，即哪一方的信号干扰比另一方更有效。</p>
+<p><button class="play-button sentence" id="s-00-23-25-358" data-start="00:23:25,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so then these cable drones have emerged as a way of getting around that.</p>
+<p>因此，这些有线无人机应运而生，作为一种绕过干扰的方法。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958590" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:29</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-29-061" data-start="00:23:29,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I mean, that's not something you could have seen in 2022, is it?</p>
+<p>我的意思是，这在2022年是看不到的，对吧？</p>
+<p><button class="play-button sentence" id="s-00-23-33-738" data-start="00:23:33,738" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, absolutely.</p>
+<p>是的，绝对如此。</p>
+<p><button class="play-button sentence" id="s-00-23-35-178" data-start="00:23:35,178" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So war turbocharges, production, it turbocharges innovation races.</p>
+<p>所以战争加速了生产，加速了创新竞赛。</p>
+<p><button class="play-button sentence" id="s-00-23-39-750" data-start="00:23:39,750" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it also often goes in very, very unforeseen directions.</p>
+<p>而且它也经常朝着非常、非常不可预见的方向发展。</p>
+<p><button class="play-button sentence" id="s-00-23-43-142" data-start="00:23:43,142" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think few people would have predicted that drones were going to be so important between Russia and Ukraine.</p>
+<p>所以我认为很少有人会预测到无人机在俄罗斯和乌克兰之间会如此重要。</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958571" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:48</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-48-117" data-start="00:23:48,117" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But then even fewer probably would have predicted that the big problem at the moment, as you say, is kamikaze drones, which are what the vast majority of drones on the Ukrainian frontlines are.</p>
+<p>但当时可能更少人会预料到，正如你所说，当前的主要问题是自杀式无人机，它们在乌克兰前线占据了绝大多数。</p>
+<p><button class="play-button sentence" id="s-00-23-57-572" data-start="00:23:57,572" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Which means single use drones are really, really, really vulnerable to signal jamming to malfunctions that mean that very few of them actually end up at their targets.</p>
+<p>这意味着一次性无人机非常、非常容易受到信号干扰和故障的影响，导致极少数能真正抵达目标。</p>
+<p><button class="play-button sentence" id="s-00-24-08-078" data-start="00:24:08,078" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so cable drones are one solution to this problem.</p>
+<p>因此，有线无人机是解决这一问题的一种方案。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958549" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:10</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-10-623" data-start="00:24:10,623" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the way that it was described to me when I was there was sometimes with drones, the innovation that takes you above what your counterpart in Russia is doing can be literally as simple as a mirror that you can order off Amazon.</p>
+<p>我在当地时了解到，有时无人机的创新能让你超越俄罗斯对手，而这种创新可能简单到只是一面能从亚马逊订购的镜子。</p>
+<p><button class="play-button sentence" id="s-00-24-26-735" data-start="00:24:26,735" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the skill isn't in making the mirror.</p>
+<p>但技术不在于制造镜子。</p>
+<p><button class="play-button sentence" id="s-00-24-30-148" data-start="00:24:30,148" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's not even in sourcing the mirror.</p>
+<p>甚至也不在于采购镜子。</p>
+<p><button class="play-button sentence" id="s-00-24-32-719" data-start="00:24:32,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's in the system that goes from the soldier on the battlefield saying, this isn't working.</p>
+<p>关键在于从战场士兵反馈“这不管用”的系统。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958522" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-37-789" data-start="00:24:37,789" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're getting all our drones shot down because signal jamming is because of this very specific problem because we don't have a missile mounted here.</p>
+<p>我们的无人机全被击落是因为信号干扰，而这又是因为这个非常具体的问题——我们这里没有安装导弹。</p>
+<p><button class="play-button sentence" id="s-00-24-44-794" data-start="00:24:44,794" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then the feedback process to the manufacturer, which normally might take years in a conventional military procurement process, but Ukraine really only takes days to weeks.</p>
+<p>然后反馈给制造商的流程，在传统军事采购中可能需要数年，但在乌克兰只需几天到几周。</p>
+<p><button class="play-button sentence" id="s-00-24-55-358" data-start="00:24:55,358" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You then spend one or two weeks figuring out how to fix it and then three or four weeks producing it.</p>
+<p>接着花一两周找出解决方案，再用三四周生产出来。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958499" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-00-638" data-start="00:25:00,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is such a short amount of time and actually quite a low production cost to cycle through innovations that it really is a thousand miles away from any way the America, for instance, thinks about its defense industry.</p>
+<p>如此短的时间和较低的生产成本就能完成创新循环，与美国等国家对国防工业的思维方式截然不同。</p>
+<p><button class="play-button sentence" id="s-00-25-17-306" data-start="00:25:17,306" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a bigger question to and Mike, I'm interested in what you think about this as more and more countries, particularly in Europe, start to see military Keynesianism as the path forward for economies that are stalling.</p>
+<p>还有一个更大的问题，迈克，我感兴趣的是，随着越来越多国家（尤其是欧洲）将军事凯恩斯主义视为经济停滞的出路，你对此怎么看？</p>
+<p><button class="play-button sentence" id="s-00-25-29-391" data-start="00:25:29,391" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is it right to consider growth produced by the defense industry as a creative to the national economy?</p>
+<p>将国防工业带来的增长视为国家经济的创造力是否正确？</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958465" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:34</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-34-456" data-start="00:25:34,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think one could argue the function of defense spending is for defense, not necessarily for industrializing your country.</p>
+<p>我认为可以辩称，国防开支的功能在于防御，而不一定是为了国家工业化。</p>
+<p><button class="play-button sentence" id="s-00-25-40-798" data-start="00:25:40,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's interesting.</p>
+<p>这很有趣。</p>
+<p><button class="play-button sentence" id="s-00-25-42-266" data-start="00:25:42,266" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's a guns and butter thing going on in that Eisenhower quote about every battleship we launch is X number of schools that you can't build.</p>
+<p>艾森豪威尔那句关于“每艘战舰都意味着无法建造X所学校”的名言体现了“大炮与黄油”的权衡。</p>
+<p><button class="play-button sentence" id="s-00-25-51-015" data-start="00:25:51,015" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's an element that I think is true.</p>
+<p>我认为其中有一定道理。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958446" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:53</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-53-361" data-start="00:25:53,361" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That doesn't mean that defense spending is all wasted, obviously, a huge proportion of its necessary.</p>
+<p>这并不意味着国防开支全是浪费，显然其中大部分是必要的。</p>
+<p><button class="play-button sentence" id="s-00-25-58-369" data-start="00:25:58,369" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But I do think there's a trade off there.</p>
+<p>但我确实认为这里存在权衡。</p>
+<p><button class="play-button sentence" id="s-00-26-00-976" data-start="00:26:00,976" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe some European countries would have been better off doing regular garden variety Keynesianism, rather than defense oriented Keynesianism in a sort of related sense when you see countries saying they're going to spend 3% 3 and a half percent 4% with GDP on defense.</p>
+<p>或许一些欧洲国家本应选择常规的凯恩斯主义，而非国防导向的凯恩斯主义——尤其是当这些国家宣称要将GDP的3%、3.5%甚至4%用于国防时。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958421" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-18-543" data-start="00:26:18,543" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> All I can think is how many social programs are going to get crammed into that 4%.</p>
+<p>我唯一想到的是，有多少社会福利项目会被塞进这4%中。</p>
+<p><button class="play-button sentence" id="s-00-26-23-593" data-start="00:26:23,593" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How many times are we going to see like our road improvement programs?</p>
+<p>我们会多少次看到道路改善项目被归类为国防项目？</p>
+<p><button class="play-button sentence" id="s-00-26-27-296" data-start="00:26:27,296" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're now defense programs because we need to drive the tank down a road.</p>
+<p>仅仅因为坦克需要通过，它们就成了国防项目。</p>
+<p><button class="play-button sentence" id="s-00-26-31-507" data-start="00:26:31,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Stuff like that.</p>
+<p>诸如此类。</p>
+<p><button class="play-button sentence" id="s-00-26-32-499" data-start="00:26:32,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's going to be so much port barrel stuff and people passing anything they can up as defense in this world.</p>
+<p>这将导致大量政治分肥项目，人们会想方设法把任何东西包装成国防需求。</p>
+<p><a name="block-60"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958400" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:26:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-26-39-220" data-start="00:26:39,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I was at an event a couple of days ago with one of the government's advisors who made a very impassioned argument in the UK that we should count social care as part of our new 5% spending.</p>
+<p>几天前我参加了一场活动，一位政府顾问在英国激烈主张应将社会护理纳入新的5%国防开支。</p>
+<p><button class="play-button sentence" id="s-00-26-51-858" data-start="00:26:51,858" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why not just put the winter fuel payments into the 5% of GDP that goes on defense because it's all about building a strong society and you want your pensioners to be strong.</p>
+<p>何不把冬季燃料补贴也算进国防GDP的5%？毕竟这是为了建设强大社会，而你需要养老金领取者保持强壮。</p>
+<p><button class="play-button sentence" id="s-00-27-02-387" data-start="00:27:02,387" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know.</p>
+<p>我不知道。</p>
+<p><a name="block-61"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958376" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-03-172" data-start="00:27:03,172" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Join Dad's army or something.</p>
+<p>加入“老爹军”之类的吧。</p>
+<p><button class="play-button sentence" id="s-00-27-04-955" data-start="00:27:04,955" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's amazing how much that thinking is spreading already.</p>
+<p>这种思维的传播速度令人惊讶。</p>
+<p><button class="play-button sentence" id="s-00-27-08-158" data-start="00:27:08,158" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Absolutely.</p>
+<p>确实如此。</p>
+<p><button class="play-button sentence" id="s-00-27-08-839" data-start="00:27:08,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what are nurseries if not nurturing the future generation of warriors?</p>
+<p>幼儿园若非培养未来的战士，又是什么？</p>
+<p><button class="play-button sentence" id="s-00-27-13-645" data-start="00:27:13,645" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 100% Mike.</p>
+<p>百分之百同意，迈克。</p>
+<p><button class="play-button sentence" id="s-00-27-14-590" data-start="00:27:14,590" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Ukraine obviously has its own Titanic struggle on its hands, but it's also become something of a laboratory for people thinking about defense in the rest of the world.</p>
+<p>乌克兰显然面临自身的巨大斗争，但也成为全球国防思考者的实验室。</p>
+<p><a name="block-62"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958352" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-27-504" data-start="00:27:27,504" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Having just come back, Kerry, and is there an impression on the ground?</p>
+<p>刚回来的凯里，当地有什么印象吗？</p>
+<p><button class="play-button sentence" id="s-00-27-32-857" data-start="00:27:32,857" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do people talk about the sort of lessons and how they translate to the rest of the world?</p>
+<p>人们是否讨论这些经验如何应用于世界其他地区？</p>
+<p><button class="play-button sentence" id="s-00-27-37-589" data-start="00:27:37,589" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because especially in the US, I think that the main translation of what we're talking about here is if there's a war between US and China, how does it proceed?</p>
+<p>尤其在美国，我认为我们讨论的核心是：若美中开战，会如何发展？</p>
+<p><button class="play-button sentence" id="s-00-27-45-719" data-start="00:27:45,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is the sort of ultimate application of everything we're talking about.</p>
+<p>这是我们讨论的终极应用场景。</p>
+<p><a name="block-63"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958330" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:27:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-27-49-260" data-start="00:27:49,260" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there a discussion of this on the ground?</p>
+<p>当地有这类讨论吗？</p>
+<p><button class="play-button sentence" id="s-00-27-51-203" data-start="00:27:51,203" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Obviously, there's an element of sort of they've got bigger fish to fry at the moment, but I'm interested to how people there might think this translates to other future conflicts.</p>
+<p>显然他们眼下有更重要的事，但我好奇当地人如何看待这些经验应用于未来冲突。</p>
+<p><button class="play-button sentence" id="s-00-27-59-441" data-start="00:27:59,441" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, there's absolutely an element of people in Ukraine being completely self-aware.</p>
+<p>是的，乌克兰人对此有清醒认知。</p>
+<p><button class="play-button sentence" id="s-00-28-03-751" data-start="00:28:03,751" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's partly down to just how many Western companies there are operating in Ukraine, Palantir, a lot of the cutting edge Silicon Valley defense tech startups offer work often at discounted rates to the Ukrainian governments in the kind of bid that if they're operating there and can do good things there, they'll get paying customers.</p>
+<p>部分原因是许多西方公司（如Palantir和硅谷尖端防务初创企业）以折扣价与乌政府合作，希望通过在此运营获得付费客户。</p>
+<p><a name="block-64"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958297" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-22-322" data-start="00:28:22,322" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I would perhaps just say this as well.</p>
+<p>我还想补充一点。</p>
+<p><button class="play-button sentence" id="s-00-28-25-058" data-start="00:28:25,058" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A war between China and America or a confrontation in the Taiwan straight would be almost entirely different from Ukraine, it wouldn't be focused on land, it would be two technological frontiers powers confronting each other.</p>
+<p>美中战争或台海对峙将与乌克兰完全不同，这不是陆地战，而是两个技术前沿大国的对抗。</p>
+<p><button class="play-button sentence" id="s-00-28-39-069" data-start="00:28:39,069" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But there's this sense in Ukraine that nevertheless, despite the fact actually that America still supplies a good portion of Ukraine's most complex weapons.</p>
+<p>但乌克兰人认为，尽管美国仍提供其大部分复杂武器，</p>
+<p><a name="block-65"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958269" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:28:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-28-50-333" data-start="00:28:50,333" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> America is missing something about the way in which confrontations in the future will be fought.</p>
+<p>美国对未来战斗方式存在认知盲区。</p>
+<p><button class="play-button sentence" id="s-00-28-56-673" data-start="00:28:56,673" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's evidence of that across the board and one of them is that these drone companies that we saw literally set up in 2022 from garages, some of them now are so big, so sophisticated and so convinced at this point that they're actually listing in London a New York as firms with the idea to become billion dollar defense startups whenever the war in Ukraine ends.</p>
+<p>证据包括2022年从车库起家的无人机公司，如今已发展成熟并计划在伦敦和纽约上市，立志成为十亿美元级防务初创企业。</p>
+<p><button class="play-button sentence" id="s-00-29-20-302" data-start="00:29:20,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And basically betting on this idea that there's something that the American defense industry is just not quite internalizing.</p>
+<p>它们押注美国防务产业尚未完全理解的趋势。</p>
+<p><a name="block-66"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958231" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:28</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-28-119" data-start="00:29:28,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there's some dissonance there, right?</p>
+<p>这存在矛盾，对吧？</p>
+<p><button class="play-button sentence" id="s-00-29-30-095" data-start="00:29:30,095" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because how can it be that a Ukrainian firm can acknowledge that it's only doing what it's doing?</p>
+<p>乌克兰公司承认其成就有限，</p>
+<p><button class="play-button sentence" id="s-00-29-35-371" data-start="00:29:35,371" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because it doesn't have the technology that America does, and yet still be so convinced that there's something that their partners in Silicon Valley, in the Army training colleges, in the Pentagon, are missing that there's certain that Ukraine has a future as effectively a defense economy.</p>
+<p>却仍坚信硅谷、军校和五角大楼的合作伙伴忽视了某些关键，而乌克兰必将成为防务经济体。</p>
+<p><a name="block-67"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958207" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:29:52</span></a></h3>
+<p><button class="play-button sentence" id="s-00-29-52-558" data-start="00:29:52,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd love to know how the investment bankers listing those companies doing the valuations.</p>
+<p>我想知道投行如何对这些上市企业估值。</p>
+<p><button class="play-button sentence" id="s-00-29-55-861" data-start="00:29:55,861" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Like, do you put Ukraine's polymarket odds winning the war in your DCF to value that?</p>
+<p>比如估值贴现现金流时是否考虑乌克兰的战争胜率？</p>
+<p><button class="play-button sentence" id="s-00-30-00-823" data-start="00:30:00,823" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, that seems like a pretty tough question.</p>
+<p>这似乎是个难题。</p>
+<p><button class="play-button sentence" id="s-00-30-03-430" data-start="00:30:03,430" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But this is the thing as well.</p>
+<p>但还有一点：</p>
+<p><button class="play-button sentence" id="s-00-30-04-727" data-start="00:30:04,727" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Production in Ukraine has been so successful that a lot of the defense industries now are actually producing above the capacity of what the government can buy.</p>
+<p>乌克兰军工生产如此成功，许多企业产能已超过政府采购能力。</p>
+<p><a name="block-68"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958186" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:13</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-13-624" data-start="00:30:13,624" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So the defense industry's capacity in 2024 was $35 billion.</p>
+<p>2024年军工产能达350亿美元，</p>
+<p><button class="play-button sentence" id="s-00-30-17-676" data-start="00:30:17,676" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The government could only buy $15 billion for that because it doesn't have any tax revenues aid from the West is tapering off.</p>
+<p>但政府仅能购买150亿美元，因西方援助减少且税收匮乏。</p>
+<p><button class="play-button sentence" id="s-00-30-24-164" data-start="00:30:24,164" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And there are also critical shortages, so it doesn't matter how many ammunition shells you can produce if you don't have enough gunpowder to put in them.</p>
+<p>关键物资短缺意味着若无足够火药，炮弹产量再高也无用。</p>
+<p><a name="block-69"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958168" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-31-598" data-start="00:30:31,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the industry has been successful.</p>
+<p>但这个产业是成功的。</p>
+<p><button class="play-button sentence" id="s-00-30-33-544" data-start="00:30:33,544" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no doubt.</p>
+<p>毫无疑问。</p>
+<p><button class="play-button sentence" id="s-00-30-34-456" data-start="00:30:34,456" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, that's a great answer and on Karein.</p>
+<p>很好的回答，接着问凯琳。</p>
+<p><button class="play-button sentence" id="s-00-30-36-634" data-start="00:30:36,634" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> With that, let's do our stats the week.</p>
+<p>现在进入本周数据环节。</p>
+<p><button class="play-button sentence" id="s-00-30-38-808" data-start="00:30:38,808" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Karein, have you come prepared with one?</p>
+<p>凯琳准备好数据了吗？</p>
+<p><button class="play-button sentence" id="s-00-30-41-118" data-start="00:30:41,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I do have a set of the week.</p>
+<p>我有个本周数据：</p>
+<p><button class="play-button sentence" id="s-00-30-43-225" data-start="00:30:43,225" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And my set of the week is that in 2024, for the first time, less than half of US births were to women under 30.</p>
+<p>2024年美国首次出现30岁以下女性生育占比不足半数。</p>
+<p><button class="play-button sentence" id="s-00-30-52-493" data-start="00:30:52,493" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So in 1990, 70% of births in the US were to women under 30.</p>
+<p>1990年该比例是70%，</p>
+<p><a name="block-70"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958142" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:30:57</span></a></h3>
+<p><button class="play-button sentence" id="s-00-30-57-055" data-start="00:30:57,055" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that was because most women started their families when they were 25, sometimes less.</p>
+<p>当时女性多在25岁或更早生育。</p>
+<p><button class="play-button sentence" id="s-00-31-01-861" data-start="00:31:01,861" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This year, for the first time, less than half of live births are to women under 30.</p>
+<p>今年首次跌破50%，</p>
+<p><button class="play-button sentence" id="s-00-31-06-558" data-start="00:31:06,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And most of that is made up of a drop of women under 25 who used to be responsible for 39% of births and are now responsible for 21% of births.</p>
+<p>其中25岁以下女性生育占比从39%降至21%。</p>
+<p><button class="play-button sentence" id="s-00-31-15-308" data-start="00:31:15,308" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it's all just reinforcing this question of as US birth rates are falling, what comes next?</p>
+<p>这加剧了人们对生育率下降后果的疑问。</p>
+<p><a name="block-71"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958119" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:20</span></a></h3>
+<p><button class="play-button sentence" id="s-00-31-20-736" data-start="00:31:20,736" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm fascinated by that.</p>
+<p>我对此很着迷。</p>
+<p><button class="play-button sentence" id="s-00-31-22-099" data-start="00:31:22,099" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The whole like flattening of the sort of curve of births by the age of a mother and also relatedly by income as well.</p>
+<p>母亲年龄与收入相关的生育曲线趋于平缓。</p>
+<p><button class="play-button sentence" id="s-00-31-30-719" data-start="00:31:30,719" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because I've got you know, it used to be certainly in the past that the income thing was related to the the age of life thing.</p>
+<p>因为过去收入确实与生育年龄相关，</p>
+<p><button class="play-button sentence" id="s-00-31-36-128" data-start="00:31:36,128" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You don't get many teen moms who are earning six figures.</p>
+<p>少有青少年母亲能赚六位数。</p>
+<p><button class="play-button sentence" id="s-00-31-39-498" data-start="00:31:39,498" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, really, really interesting.</p>
+<p>所以非常有趣。</p>
+<p><a name="block-72"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958097" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:31:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-31-42-197" data-start="00:31:42,197" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> My statistic of the week is a slight change of pace.</p>
+<p>我的本周数据换个话题：</p>
+<p><button class="play-button sentence" id="s-00-31-45-888" data-start="00:31:45,888" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is 27.2 billion dollars, which is the amount of tariff revenue raised by US customs in June.</p>
+<p>6月美国关税收入达272亿美元，</p>
+<p><button class="play-button sentence" id="s-00-31-58-318" data-start="00:31:58,318" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is up from 7.2 billion as the 2024 monthly average.</p>
+<p>远高于2024年月均72亿美元。</p>
+<p><button class="play-button sentence" id="s-00-32-04-169" data-start="00:32:04,169" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's already over 100 billion dollars this year.</p>
+<p>今年上半年已达1130亿美元，</p>
+<p><button class="play-button sentence" id="s-00-32-08-913" data-start="00:32:08,913" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> US tariff revenue, 113 billion for the first half of the year, which is quite a lot of money.</p>
+<p>数额巨大。</p>
+<p><a name="block-73"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958065" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:14</span></a></h3>
+<p><button class="play-button sentence" id="s-00-32-14-522" data-start="00:32:14,522" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it's reinforcing my sense that we're never going to get rid of most of these tariffs.</p>
+<p>这让我确信大部分关税不会取消。</p>
+<p><button class="play-button sentence" id="s-00-32-19-919" data-start="00:32:19,919" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And obviously this figure is before a large portion of what the administration says it wants to implement has come in.</p>
+<p>而且政府计划新增关税尚未计入。</p>
+<p><button class="play-button sentence" id="s-00-32-26-688" data-start="00:32:26,688" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think it's going to be very, very hard for a future administration now to say I actually don't want several hundred billion dollars a year in tariff revenue on top of the sort of rewiring of supply chains, meaning that there'll be lots of incumbents defending their new position.</p>
+<p>未来政府很难放弃每年数千亿关税收入，且供应链重组催生的既得利益者会捍卫现状。</p>
+<p><a name="block-74"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958037" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-32-42-279" data-start="00:32:42,279" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I think in a cash strap government, this is going to be impossible to give up, which is a shame, but there you go.</p>
+<p>对资金紧张的政府而言，放弃这些是不可能的。</p>
+<p><button class="play-button sentence" id="s-00-32-47-643" data-start="00:32:47,643" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There was an article on a rival publication making the point that people are talking about taco, right?</p>
+<p>有媒体提到"TACO"（特朗普总是退缩）梗，</p>
+<p><button class="play-button sentence" id="s-00-32-52-391" data-start="00:32:52,391" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Trump always chickens out, but no, it's everyone else that's taco-ing as manifested in this tariff revenue.</p>
+<p>但实则是其他国家在退缩——关税收入就是证明。</p>
+<p><button class="play-button sentence" id="s-00-32-56-852" data-start="00:32:56,852" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They're just paying the damn thing.</p>
+<p>他们只是乖乖付钱。</p>
+<p><a name="block-75"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208958021" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:32:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-32-58-400" data-start="00:32:58,400" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So today, not retaliating.</p>
+<p>如今没有报复。</p>
+<p><button class="play-button sentence" id="s-00-32-59-774" data-start="00:32:59,774" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, and it's funny, isn't it, right?</p>
+<p>很有趣对吧？</p>
+<p><button class="play-button sentence" id="s-00-33-01-686" data-start="00:33:01,686" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because the lack of retaliation, it may be the right strategy for an individual country, but it juices up the American results of doing this.</p>
+<p>不报复对单个国家或是正确策略，却助长了美国的行为。</p>
+<p><button class="play-button sentence" id="s-00-33-09-490" data-start="00:33:09,490" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It makes it better.</p>
+<p>这让美国更肆无忌惮。</p>
+<p><button class="play-button sentence" id="s-00-33-10-722" data-start="00:33:10,722" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It encourages the US government to do it.</p>
+<p>鼓励美国政府继续加税。</p>
+<p><button class="play-button sentence" id="s-00-33-13-342" data-start="00:33:13,342" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So yeah, it's a difficult web of incentives to thread.</p>
+<p>这是复杂的激励困局。</p>
+<p><button class="play-button sentence" id="s-00-33-16-472" data-start="00:33:16,472" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, speaking of people who are not chickening out, my start of the week is $124 billion Hong Kong dollars.</p>
+<p>说到不退缩者，我的本周数据是1240亿港元——</p>
+<p><a name="block-76"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208957996" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-33-23-107" data-start="00:33:23,107" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that is the amount of capital raised in the Hong Kong IPO market so far in 2025.</p>
+<p>2025年迄今香港IPO募资额。</p>
+<p><button class="play-button sentence" id="s-00-33-29-298" data-start="00:33:29,298" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hong Kong's back.</p>
+<p>香港回来了。</p>
+<p><button class="play-button sentence" id="s-00-33-30-626" data-start="00:33:30,626" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's more Chinese than ever, but large IPOs are happening on a regular basis.</p>
+<p>比以往更中国化，但大型IPO常态化。</p>
+<p><button class="play-button sentence" id="s-00-33-35-659" data-start="00:33:35,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We had CATL, the big battery company earlier this year.</p>
+<p>今年初有宁德时代，</p>
+<p><button class="play-button sentence" id="s-00-33-38-566" data-start="00:33:38,566" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're going to reportedly have Xi'en, the fast fashion company coming on later this year.</p>
+<p>传希音也将在下半年上市。</p>
+<p><button class="play-button sentence" id="s-00-33-43-098" data-start="00:33:43,098" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And then just general activity is very high.</p>
+<p>市场整体活跃，</p>
+<p><a name="block-77"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208957974" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:33:45</span></a></h3>
+<p><button class="play-button sentence" id="s-00-33-45-839" data-start="00:33:45,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The stock market's a 25% this year.</p>
+<p>股市今年涨25%。</p>
+<p><button class="play-button sentence" id="s-00-33-48-159" data-start="00:33:48,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, again, it's a changed Hong Kong, but Hong Kong hasn't quite gone away.</p>
+<p>香港变了，但并未消失。</p>
+<p><button class="play-button sentence" id="s-00-33-52-799" data-start="00:33:52,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There is actually a thesis.</p>
+<p>有种观点认为：</p>
+<p><button class="play-button sentence" id="s-00-33-54-271" data-start="00:33:54,271" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I sort of buy into this, which is that the political squeeze on Hong Kong has actually been to its benefit in the long term as a financial center as a source of Chinese money because the political control that the Chinese government in Beijing now exercises over Hong Kong means that they don't need to encourage Shanghai to be a secondary international financial center.</p>
+<p>北京的政治控制反令香港长期受益——无需扶持上海作为第二国际金融中心，</p>
+<p><a name="block-78"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208957941" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-34-18-555" data-start="00:34:18,555" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It can be a big Chinese financial center, but you don't need to let it rival Hong Kong in terms of dollar fundraising and things like that, which is quite sad, but I think is definitely a side benefit.</p>
+<p>上海可专注人民币业务，这对香港是意外之利。</p>
+<p><button class="play-button sentence" id="s-00-34-29-471" data-start="00:34:29,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Maybe Hong Kong's back and more Chinese than ever, your phrase there, you think, can replace Asia's world city as the sort of Hong Kong tagline.</p>
+<p>"香港归来，比以往更中国"或许能取代"亚洲国际都会"的标语。</p>
+<p><button class="play-button sentence" id="s-00-34-37-061" data-start="00:34:37,061" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They could consider using that one.</p>
+<p>可以考虑。</p>
+<p><a name="block-79"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208957921" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:34:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-34-38-944" data-start="00:34:38,944" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yeah, the greatest number of Mishuers per capita in Hong Kong.</p>
+<p>比如"香港人均秘书数全球第一"——</p>
+<p><button class="play-button sentence" id="s-00-34-42-202" data-start="00:34:42,202" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't know if that's true.</p>
+<p>不知真假。</p>
+<p><button class="play-button sentence" id="s-00-34-43-631" data-start="00:34:43,631" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But with that, I think all this love to do is to thank Karian so very much for joining us today.</p>
+<p>最后感谢凯琳参与。</p>
+<p><button class="play-button sentence" id="s-00-34-48-739" data-start="00:34:48,739" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you so much for having me.</p>
+<p>非常感谢邀请。</p>
+<p><button class="play-button sentence" id="s-00-34-50-650" data-start="00:34:50,650" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And thank you for listening to Money Talks.</p>
+<p>感谢收听《金钱谈》。</p>
+<p><button class="play-button sentence" id="s-00-34-53-236" data-start="00:34:53,236" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can hear me on checks and balance on Friday too.</p>
+<p>每周五还可收听《制衡》栏目。</p>
+<p><button class="play-button sentence" id="s-00-34-56-209" data-start="00:34:56,209" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I'd strongly encourage you to listen on our new and improved app where you can also read or listen to articles mentioned in the episode.</p>
+<p>推荐使用我们升级版APP收听并阅读节目提及的文章。</p>
+<p><a name="block-80"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208957895" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-35-04-299" data-start="00:35:04,299" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've got to reiterate that the app's really great.</p>
+<p>必须强调这个APP非常棒。</p>
+<p><button class="play-button sentence" id="s-00-35-06-552" data-start="00:35:06,552" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's well worth checking out.</p>
+<p>值得一试。</p>
+<p><button class="play-button sentence" id="s-00-35-08-033" data-start="00:35:08,033" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You can always read to us at podcastsataconimiz.com.</p>
+<p>来信请寄podcastsataconimiz.com。</p>
+<p><button class="play-button sentence" id="s-00-35-12-024" data-start="00:35:12,024" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today's show was produced by Sarah Lanya with voiceover help from Body Aconicov.</p>
+<p>本期节目由莎拉·兰亚制作，博迪·阿科尼科夫协助配音。</p>
+<p><button class="play-button sentence" id="s-00-35-18-012" data-start="00:35:18,012" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our sound engineer is Tingli Lim.</p>
+<p>音响工程师林婷丽。</p>
+<p><button class="play-button sentence" id="s-00-35-20-461" data-start="00:35:20,461" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Dan Asher is our editor and the executive producer is Hannah Marinho.</p>
+<p>编辑丹·阿舍，执行制片人汉娜·马里尼奥。</p>
+<p><a name="block-81"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1yogMzkE6Y/?t=-2208957874" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:35:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-35-25-648" data-start="00:35:25,648" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Ethan Wu.</p>
+<p>我是伊桑·吴。</p>
+<p><button class="play-button sentence" id="s-00-35-26-638" data-start="00:35:26,638" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm Mike Bird.</p>
+<p>我是迈克·伯德。</p>
+<p><button class="play-button sentence" id="s-00-35-27-718" data-start="00:35:27,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this is the Economist.</p>
+<p>这里是《经济学人》。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Live: 2025-07-18 19:59 - 20:34</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Today's news covers a police shooting in North Queensland, Tasmania's state election, the Prime Minister condemning Israel over Gaza aid killings, and Donald Trump suing Rupert Murdoch over a Jeffrey Epstein-related report.">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.8;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .qr-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-container img {
+      width: 120px;
+    }
+    .qr-caption {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .back-to-top {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #999;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+<h1>YouTube Live: 2025-07-18 19:59 - 20:34</h1>
+<p>【澳洲新闻 ABC News 20250719 昆士兰北部一起警察枪击事件｜塔斯马尼亚州选举｜总理谴责以色列在加沙援助物资事件中的行为｜特朗普起诉默多克】</p>
+<p>Summary:
+Today's news covers a police shooting in North Queensland, Tasmania's state election, the Prime Minister condemning Israel over Gaza aid killings, and Donald Trump suing Rupert Murdoch over a Jeffrey Epstein-related report.</p>
+<p>摘要：
+今日新闻包括昆士兰北部一起警察枪击事件、塔斯马尼亚州选举、总理谴责以色列在加沙援助物资事件中的行为，以及特朗普因爱泼斯坦相关报道起诉默多克。</p>
+<hr />
+<p><img src="thumbnail.jpg" width="800"></p>
+<hr />
+<p>⏱️ Estimated Reading Time: 37 min. </p>
+<hr />
+<p>📚 <a href="vocab.四级.html" target="_blank">四级生词</a>
+📚 <a href="vocab.六级.html" target="_blank">六级生词</a>
+📚 <a href="vocab.雅思.html" target="_blank">雅思生词</a>
+📚 <a href="vocab.托福.html" target="_blank">托福生词</a>
+📚 <a href="vocab.专八.html" target="_blank">专八生词</a>
+📚 <a href="vocab.SAT.html" target="_blank">SAT生词</a>
+📚 <a href="vocab.考研.html" target="_blank">考研生词</a>
+📚 <a href="vocab.GRE.html" target="_blank">GRE生词</a>
+📚 <a href="vocab.高考.html" target="_blank">高考生词</a>
+📚 <a href="vocab.其它.html" target="_blank">其它生词</a></p>
+<hr />
+<p><audio id="player" src="audio.mp3" preload="auto"></audio></p>
+<p><button id="floating-stop" onclick="stopAll()" title="停止播放">⏹️</button>
+<button id="floating-play" onclick="playAll()" title="开始自动播放">▶️</button></p>
+<style>
+.play-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.play-button img {
+  width: 20px;
+  height: 20px;
+}
+.active {
+  background-color: #fff7c0;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+#floating-play {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-play:hover {
+  background-color: #388e3c;
+}
+#floating-stop {
+display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#floating-stop:hover {
+  background-color: #d32f2f;
+}
+</style>
+<script>
+function parseTimestamp(ts) {
+  const [hms, ms] = ts.split(',');
+  const [h, m, s] = hms.split(':').map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+let timeoutHandle = null;
+let scrolling = false;
+let lastScrolledId = null;
+
+function playAtTimestamp(startTs, endTs) {
+  const audio = document.getElementById('player');
+  if (timeoutHandle) clearTimeout(timeoutHandle);
+  const start = parseTimestamp(startTs);
+  const end = parseTimestamp(endTs);
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  timeoutHandle = setTimeout(() => {
+    audio.pause();
+  }, (end - start) * 1000);
+  scrolling = false;
+}
+
+function playAll() {
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  audio.currentTime = 0;
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block';
+  playBtn.style.display = 'none';
+}
+
+function stopAll() {
+  stopScrolling();
+  const audio = document.getElementById('player');
+  const stopBtn = document.getElementById('floating-stop');
+  const playBtn = document.getElementById('floating-play');
+  if (audio) audio.pause();
+  stopBtn.style.display = 'none';
+  playBtn.style.display = 'block';
+}
+
+function stopScrolling() {
+  scrolling = false;
+  lastScrolledId = null;
+  const prev = document.querySelector('.sentence.active');
+  if (prev) prev.classList.remove('active');
+  document.getElementById('floating-stop').style.display = 'none';
+  document.getElementById('floating-play').style.display = 'block';
+}
+
+function playFromHere(button) {
+  const start = parseTimestamp(button.getAttribute("data-start"));
+  const audio = document.getElementById("player");
+  const stopBtn = document.getElementById('floating-stop');
+  audio.currentTime = Math.max(0, start);
+  audio.play();
+  scrolling = true;
+  stopBtn.style.display = 'block'; // 🔹 Show stop button
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+document.getElementById('player').addEventListener('timeupdate', function () {
+  if (!scrolling) return;
+
+  const currentTime = this.currentTime;
+  const sentences = document.querySelectorAll('.sentence');
+  let candidate = null;
+
+  for (const el of sentences) {
+    const ts = el.getAttribute('data-start');
+    const sec = parseTimestamp(ts);
+    if (currentTime >= sec) {
+      candidate = el;
+    } else {
+      break;
+    }
+  }
+
+  if (candidate && candidate.id !== lastScrolledId) {
+    const prev = document.getElementById(lastScrolledId);
+    if (prev && prev.parentNode) prev.parentNode.classList.remove('active');
+
+    const sentenceBlock = candidate.parentNode;
+    sentenceBlock.classList.add('active');
+
+    if (!isInViewport(sentenceBlock)) {
+      sentenceBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    lastScrolledId = candidate.id;
+  }
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    stopScrolling();
+    document.getElementById('player').pause();
+  }
+});
+</script>
+<p><a name="block-1"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959997" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-03-000" data-start="00:00:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today, a man shot dead by police in North Queensland.</p>
+<p>今日，昆士兰北部一名男子被警察枪击身亡。</p>
+<p><button class="play-button sentence" id="s-00-00-18-000" data-start="00:00:18,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Tasmanians head to the polls to decide on their state's future for the fourth time in only seven years.</p>
+<p>塔斯马尼亚人前往投票站，这是七年来第四次决定该州未来。</p>
+<p><button class="play-button sentence" id="s-00-00-25-000" data-start="00:00:25,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been 11 years of a liberal, hopeful for a fresh started.</p>
+<p>自由党执政11年后，人们期待新的开始。</p>
+<p><button class="play-button sentence" id="s-00-00-29-000" data-start="00:00:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm confident that we have put our very best put forward.</p>
+<p>我相信我们已经尽了最大努力。</p>
+<p><button class="play-button sentence" id="s-00-00-34-000" data-start="00:00:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister condemns Israel over the killing of Palestinians waiting for aid in Gaza.</p>
+<p>总理谴责以色列杀害等待加沙援助的巴勒斯坦人。</p>
+<p><a name="block-2"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959959" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:00:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-00-41-000" data-start="00:00:41,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That is completely indefensible.</p>
+<p>这是完全不可辩驳的。</p>
+<p><button class="play-button sentence" id="s-00-00-43-000" data-start="00:00:43,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've called that out.</p>
+<p>我们已明确表态。</p>
+<p><button class="play-button sentence" id="s-00-00-45-000" data-start="00:00:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's never time that that has occurred.</p>
+<p>这种情况绝不应发生。</p>
+<p><button class="play-button sentence" id="s-00-00-49-000" data-start="00:00:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And Donald Trump sues media mogul Rupert Murdoch over a Wall Street Journal report into his relationship with Jeffrey Epstein.</p>
+<p>特朗普因《华尔街日报》关于他与杰弗里·爱泼斯坦关系的报道起诉媒体大亨默多克。</p>
+<p><button class="play-button sentence" id="s-00-01-06-000" data-start="00:01:06,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Hello, I'm Alex Thomas with your latest ABC News, a very warm welcome to you.</p>
+<p>大家好，我是亚历克斯·托马斯，为您带来最新ABC新闻，热烈欢迎您。</p>
+<p><button class="play-button sentence" id="s-00-01-11-000" data-start="00:01:11,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A man has died after being shot by police in Townsville in North Queensland.</p>
+<p>昆士兰北部汤斯维尔一名男子被警察枪击后死亡。</p>
+<p><a name="block-3"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959924" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-16-000" data-start="00:01:16,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ABC understands the man sustained multiple life-threatening injuries to his chest and legs.</p>
+<p>ABC获悉，该男子胸部和腿部多处受伤，危及生命。</p>
+<p><button class="play-button sentence" id="s-00-01-22-000" data-start="00:01:22,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> During the incident on Mitchell Road in the coastal suburb of North Ward this morning.</p>
+<p>事件发生在今早北沃德海滨郊区米切尔路。</p>
+<p><button class="play-button sentence" id="s-00-01-27-000" data-start="00:01:27,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A crime scene has been declared.</p>
+<p>警方已封锁犯罪现场。</p>
+<p><button class="play-button sentence" id="s-00-01-29-000" data-start="00:01:29,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Police say there's no ongoing threat but have urged people to avoid the area.</p>
+<p>警方称无持续威胁，但呼吁民众避开该区域。</p>
+<p><button class="play-button sentence" id="s-00-01-34-000" data-start="00:01:34,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we're expecting to hear more from Queensland police about this very shortly.</p>
+<p>预计很快将听到昆士兰警方进一步说明。</p>
+<p><a name="block-4"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959902" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:01:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-01-38-000" data-start="00:01:38,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We'll try to bring that to you when we get it.</p>
+<p>我们将尽快为您带来最新消息。</p>
+<p><button class="play-button sentence" id="s-00-01-42-000" data-start="00:01:42,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Moving south because Tasmanian voters are casting their ballots in the state's second election in 16 months.</p>
+<p>转向南方，塔斯马尼亚选民正进行16个月内第二次州选举投票。</p>
+<p><button class="play-button sentence" id="s-00-01-48-000" data-start="00:01:48,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Reporter Sophie Jaggers is at a polling place.</p>
+<p>记者苏菲·贾格斯在投票站现场。</p>
+<p><button class="play-button sentence" id="s-00-01-51-000" data-start="00:01:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> South of Hobart.</p>
+<p>位于霍巴特以南。</p>
+<p><button class="play-button sentence" id="s-00-01-53-000" data-start="00:01:53,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sophie, I can imagine some of the voters are suffering a bit of election fatigue.</p>
+<p>苏菲，部分选民可能对频繁选举感到疲惫。</p>
+<p><button class="play-button sentence" id="s-00-01-57-000" data-start="00:01:57,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What are you hearing from the people where you are?</p>
+<p>您听到当地民众有何反馈？</p>
+<p><a name="block-5"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959878" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:02</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-02-000" data-start="00:02:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Good afternoon, Alex.</p>
+<p>下午好，亚历克斯。</p>
+<p><button class="play-button sentence" id="s-00-02-03-000" data-start="00:02:03,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, I'm in the electorate of Franklin in Hobart on a very windy winter state election day.</p>
+<p>我在霍巴特富兰克林选区，今天州选举日寒风凛冽。</p>
+<p><button class="play-button sentence" id="s-00-02-09-000" data-start="00:02:09,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The voters I've been speaking to are certainly early election weary.</p>
+<p>受访选民确实对提前选举感到厌倦。</p>
+<p><button class="play-button sentence" id="s-00-02-14-000" data-start="00:02:14,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I've spoken to some people who said they hope this doesn't become the new norm for Tasmania.</p>
+<p>有人表示希望这不会成为塔州新常态。</p>
+<p><button class="play-button sentence" id="s-00-02-21-000" data-start="00:02:21,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I spoke to one man who said in the first, for the first time, since he's been voting 40 years also, this is the first time he's been unsure who to vote for.</p>
+<p>一位投票40年的男性首次表示不确定支持谁。</p>
+<p><a name="block-6"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959848" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-32-000" data-start="00:02:32,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So certainly some Tasmanians quite weary of early elections.</p>
+<p>显然部分塔州人对提前选举相当疲惫。</p>
+<p><button class="play-button sentence" id="s-00-02-37-000" data-start="00:02:37,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> A group I've spoken to, however, that are not weary is arguably some of the most important volunteers on election day.</p>
+<p>但选举日最关键的志愿者群体仍充满热情。</p>
+<p><button class="play-button sentence" id="s-00-02-45-000" data-start="00:02:45,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The people manning the democracy sausage is all barbecue.</p>
+<p>负责"民主香肠"烧烤的志愿者们表示：</p>
+<p><button class="play-button sentence" id="s-00-02-49-000" data-start="00:02:49,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's what they have to say.</p>
+<p>以下是他们的心声：</p>
+<p><button class="play-button sentence" id="s-00-02-51-000" data-start="00:02:51,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's been great.</p>
+<p>今天非常棒。</p>
+<p><button class="play-button sentence" id="s-00-02-52-076" data-start="00:02:52,076" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> How have we found today folks?</p>
+<p>大家觉得今天如何？</p>
+<p><button class="play-button sentence" id="s-00-02-54-000" data-start="00:02:54,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Has it been positive?</p>
+<p>氛围积极吗？</p>
+<p><a name="block-7"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959824" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:02:56</span></a></h3>
+<p><button class="play-button sentence" id="s-00-02-56-000" data-start="00:02:56,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Everyone's really friendly and happy and smiley and met sort of candlelets and it's been really lovely.</p>
+<p>每个人都友善快乐，相遇交谈，非常美好。</p>
+<p><button class="play-button sentence" id="s-00-03-00-000" data-start="00:03:00,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you have here we go?</p>
+<p>你们准备怎么操作？</p>
+<p><button class="play-button sentence" id="s-00-03-02-000" data-start="00:03:02,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've got the, yeah, Bunnings trained officially.</p>
+<p>我们接受过Bunnings官方培训。</p>
+<p><button class="play-button sentence" id="s-00-03-04-000" data-start="00:03:04,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So you've got to go the piece of paper, then the bread, then the onion, I think it's the only way to do it.</p>
+<p>先放纸，再放面包，最后洋葱，这是标准流程。</p>
+<p><button class="play-button sentence" id="s-00-03-12-000" data-start="00:03:12,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So...</p>
+<p>所以...</p>
+<p><button class="play-button sentence" id="s-00-03-12-105" data-start="00:03:12,105" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So I think it's been a lot of effort to get into the sausage, sysla workers.</p>
+<p>香肠摊志愿者们付出很多努力。</p>
+<p><a name="block-8"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959804" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-15-104" data-start="00:03:15,104" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Certainly the heartbeat of Australian democracy.</p>
+<p>他们堪称澳大利亚民主的心跳。</p>
+<p><button class="play-button sentence" id="s-00-03-17-120" data-start="00:03:17,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And of course, we're all here, aren't we Sophie?</p>
+<p>苏菲，我们齐聚于此不是吗？</p>
+<p><button class="play-button sentence" id="s-00-03-19-080" data-start="00:03:19,080" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because of that last state election in Tasmania March last year and the events that have transpired since then just run us through what's changed.</p>
+<p>请回顾去年三月州选举后的政局变化。</p>
+<p><button class="play-button sentence" id="s-00-03-28-000" data-start="00:03:28,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, sorry.</p>
+<p>好的。</p>
+<p><button class="play-button sentence" id="s-00-03-28-757" data-start="00:03:28,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Even though it's just been 16 months since the last state election, there have been some noticeable, noticeable changes in Tasmania's political landscape, Labour has a new leader in Dean Winter and has lost some of its biggest votes draw cards.</p>
+<p>虽然距上次选举仅16个月，但政坛显著变化：工党新领袖迪恩·温特上任，失去部分票仓。</p>
+<p><a name="block-9"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959776" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:03:43</span></a></h3>
+<p><button class="play-button sentence" id="s-00-03-43-691" data-start="00:03:43,691" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Former leader Rebecca White was successfully elected to federal parliament in May and Speaker Michelle O'Burn announced her retirement in BAS.</p>
+<p>前领袖丽贝卡·怀特五月当选联邦议员，议长米歇尔·奥伯恩宣布退休。</p>
+<p><button class="play-button sentence" id="s-00-03-53-120" data-start="00:03:53,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have gained, however, former federal Lions MP Brian Mitchell during this election campaign.</p>
+<p>但竞选期间获得前联邦议员布莱恩·米切尔加入。</p>
+<p><button class="play-button sentence" id="s-00-04-00-038" data-start="00:04:00,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The losses suffered by the federal Liberal Party in Tasmania in May could be to the advantage of the Tasmanian Liberals.</p>
+<p>五月联邦自由党在塔州失利可能反助州自由党。</p>
+<p><a name="block-10"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959752" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:07</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-07-520" data-start="00:04:07,520" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've picked up two former federal MPs, Bridget Archie in BAS and Gavin Pierce in Bradden.</p>
+<p>他们吸纳两位前联邦议员：巴斯区的布里奇特·阿奇和布拉登的加文·皮尔斯。</p>
+<p><button class="play-button sentence" id="s-00-04-14-773" data-start="00:04:14,773" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As for key issues, the state's worsening debt and the bungled spirit of Tasmania fairy rollout have come to the fore since the last state election.</p>
+<p>关键议题包括：州债务恶化，"塔斯马尼亚精神"号渡轮部署失误。</p>
+<p><button class="play-button sentence" id="s-00-04-25-646" data-start="00:04:25,646" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> However, issues such as cost of living, housing supply, health and of course the proposed McCoyy Point Stadium continue to be as relevant as ever during this election campaign.</p>
+<p>生活成本、住房、医疗及拟建麦考伊角体育馆仍是竞选焦点。</p>
+<p><a name="block-11"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959723" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:04:36</span></a></h3>
+<p><button class="play-button sentence" id="s-00-04-36-659" data-start="00:04:36,659" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Both leaders have cast their vote in this election today.</p>
+<p>两位领导人今日已完成投票。</p>
+<p><button class="play-button sentence" id="s-00-04-40-824" data-start="00:04:40,824" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's what they had to say about how they think their campaign went.</p>
+<p>以下是他们对选情的评价：</p>
+<p><button class="play-button sentence" id="s-00-04-45-598" data-start="00:04:45,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm confident that we have put our very best foot forward.</p>
+<p>我相信我们已全力以赴。</p>
+<p><button class="play-button sentence" id="s-00-04-49-759" data-start="00:04:49,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I don't believe we could have done much more.</p>
+<p>我们已竭尽所能。</p>
+<p><button class="play-button sentence" id="s-00-04-53-074" data-start="00:04:53,074" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've been, say, very disciplined.</p>
+<p>我们保持了高度纪律性。</p>
+<p><button class="play-button sentence" id="s-00-04-55-926" data-start="00:04:55,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've had a campaign just 15 months after the previous campaign.</p>
+<p>距上次竞选仅15个月再次参选。</p>
+<p><button class="play-button sentence" id="s-00-05-01-149" data-start="00:05:01,149" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> An election we did not want, Tasmanians did not want, but one that given the circumstances we embraced.</p>
+<p>虽非我们和塔州民众所愿，但面对现实我们积极应对。</p>
+<p><a name="block-12"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959690" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:09</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-09-168" data-start="00:05:09,168" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've given Tasmanians a choice and a choice for a fresh start.</p>
+<p>我们给塔州人提供新起点的选择。</p>
+<p><button class="play-button sentence" id="s-00-05-13-171" data-start="00:05:13,171" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's what we can do.</p>
+<p>这就是我们能做的。</p>
+<p><button class="play-button sentence" id="s-00-05-14-380" data-start="00:05:14,380" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As a Labor Party, it's been 11 years in opposition.</p>
+<p>工党在野已11年。</p>
+<p><button class="play-button sentence" id="s-00-05-16-800" data-start="00:05:16,800" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're giving Tasmanians the choice to move on for a government that's focused on fixing our budget, who won't privatise our assets.</p>
+<p>我们让民众选择专注修复预算、不出售资产的政府。</p>
+<p><button class="play-button sentence" id="s-00-05-23-286" data-start="00:05:23,286" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the Wharf of Fresh Start when it comes to health care.</p>
+<p>在医疗领域提供新开端。</p>
+<p><button class="play-button sentence" id="s-00-05-30-720" data-start="00:05:30,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Polling will continue until six o'clock tonight, Alex, and until then I'm sure Tasmanians will be trying to make the most of what is a rare winter election day here in Tasmania.</p>
+<p>投票持续至晚六点，亚历克斯，塔州人正把握这罕见的冬季选举日。</p>
+<p><a name="block-13"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959657" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:05:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-05-42-480" data-start="00:05:42,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Sophie Jaggers with her finger on the pulse on Polling Day in Tati.</p>
+<p>苏菲·贾格斯在塔蒂选区现场报道。</p>
+<p><button class="play-button sentence" id="s-00-05-46-632" data-start="00:05:46,632" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Thank you, Sophie.</p>
+<p>谢谢苏菲。</p>
+<p><button class="play-button sentence" id="s-00-05-47-839" data-start="00:05:47,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prime Minister Anthony Albanese has described the reported killings of Palestinians seeking aid in Gaza as, quote, completely indefensible in a wide-ranging interview conducted ahead of his departure from China.</p>
+<p>总理阿尔巴尼斯在离华前的专访中称加沙寻求援助的巴勒斯坦人遭杀害"完全不可辩驳"。</p>
+<p><button class="play-button sentence" id="s-00-06-00-592" data-start="00:06:00,592" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Political reporter Olivia Kaisley has more from Canberra.</p>
+<p>政治记者奥利维亚·凯斯利从堪培拉报道。</p>
+<p><a name="block-14"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959635" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-04-519" data-start="00:06:04,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The Prime Minister has directly condemned Israel's actions and the killing of Palestinians seeking aid in Gaza.</p>
+<p>总理直接谴责以色列在加沙杀害求援巴勒斯坦人的行为。</p>
+<p><button class="play-button sentence" id="s-00-06-12-801" data-start="00:06:12,801" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this was a during aid in an interview with our global affairs editor, Laura Tingle, just before they returned to Australia after a week long trip to China.</p>
+<p>这是在结束一周访华行程返澳前，接受全球事务编辑劳拉·廷格尔专访时所言。</p>
+<p><button class="play-button sentence" id="s-00-06-22-609" data-start="00:06:22,609" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, Mr Albanese, speaking more broadly about the conflict, says that Israel is losing international support over its own actions in Gaza.</p>
+<p>阿尔巴尼斯先生表示，以色列因在加沙的行动正失去国际支持。</p>
+<p><a name="block-15"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959608" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:31</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-31-975" data-start="00:06:31,975" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he says that this is a message that he has shared directly with Israeli President Isaac Herzog.</p>
+<p>他称已直接向以色列总统赫尔佐格传达此信息。</p>
+<p><button class="play-button sentence" id="s-00-06-38-965" data-start="00:06:38,965" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is a notable shift in tone from earlier government messaging where they've said that Israel has a right to defend itself.</p>
+<p>相较政府早前"以色列有权自卫"的立场，此番表态显著转变。</p>
+<p><button class="play-button sentence" id="s-00-06-46-499" data-start="00:06:46,499" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And it does really speak to broader international pressure we are as seeing in Israel and broader despair over the breadth of the humanitarian crisis in Gaza.</p>
+<p>这反映以色列面临的国际压力及对加沙人道危机的普遍绝望。</p>
+<p><a name="block-16"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959581" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:06:58</span></a></h3>
+<p><button class="play-button sentence" id="s-00-06-58-810" data-start="00:06:58,810" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Mr Albanese pointed out that the government has also sought to seek sanctions on various ministers in the Netanyahu government, I should say, and really he said too that this would have been unthinkable when he first came to office in 2022.</p>
+<p>总理指出政府还寻求制裁内塔尼亚胡政府部长，称这在2022年上任初期不可想象。</p>
+<p><button class="play-button sentence" id="s-00-07-16-568" data-start="00:07:16,568" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He also reaffirmed his support for a two-state solution and he was earlier.</p>
+<p>他重申支持两国方案。</p>
+<p><button class="play-button sentence" id="s-00-07-23-720" data-start="00:07:23,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ladies, completely indefensible.</p>
+<p>女士们，这完全不可辩驳。</p>
+<p><a name="block-17"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959553" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:07:26</span></a></h3>
+<p><button class="play-button sentence" id="s-00-07-26-056" data-start="00:07:26,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we've called that out each and every time that that has occurred.</p>
+<p>我们每次都会明确谴责。</p>
+<p><button class="play-button sentence" id="s-00-07-30-893" data-start="00:07:30,893" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And we have, I've issued a number of joint statements, for example, with the Canadian and New Zealand Prime Minister's, we've joined the international community, which overwhelmingly has condemned actions such as that.</p>
+<p>我们已与加拿大、新西兰总理发表联合声明，加入国际社会的广泛谴责。</p>
+<p><button class="play-button sentence" id="s-00-07-47-229" data-start="00:07:47,229" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the other thing that we've done is to say in private what we say publicly as well, which is that Israel, and we say this as a friend, sometimes you've got to be straight and up front.</p>
+<p>我们也在私下直言相告：作为朋友，以色列需直面问题。</p>
+<p><a name="block-18"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959516" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-03-893" data-start="00:08:03,893" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And I certainly have said to, for example, President Herzog, who I've known for a long period of time, that Israel is losing support by its own actions and that some of its actions are completely indefensible.</p>
+<p>我告诉相识已久的赫尔佐格总统，以色列正因自身行为失去支持，某些行动完全不可辩驳。</p>
+<p><button class="play-button sentence" id="s-00-08-21-360" data-start="00:08:21,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Australia has been leading the charge really on a global initiative to try and improve safety conditions for aid workers.</p>
+<p>澳大利亚正领导改善援助工作者安全条件的全球倡议。</p>
+<p><button class="play-button sentence" id="s-00-08-28-633" data-start="00:08:28,633" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And this was largely sparked by the death of Zomi Frankum, she's an Australian aid worker who died during Israeli strikes in Gaza.</p>
+<p>这主要源于澳援助工作者佐米·弗兰科姆在加沙遇难。</p>
+<p><a name="block-19"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959482" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:08:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-08-37-360" data-start="00:08:37,360" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Olivia, thank you very much.</p>
+<p>非常感谢奥利维亚。</p>
+<p><button class="play-button sentence" id="s-00-08-38-915" data-start="00:08:38,915" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Olivia Kays, the political reporter in Canberra.</p>
+<p>堪培拉政治记者奥利维亚·凯斯。</p>
+<p><button class="play-button sentence" id="s-00-08-41-639" data-start="00:08:41,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The US Justice Department has filed a motion to unseal grand jury transcripts related to the Jeffrey Epstein case.</p>
+<p>美国司法部申请公开爱泼斯坦案大陪审团笔录。</p>
+<p><button class="play-button sentence" id="s-00-08-49-657" data-start="00:08:49,657" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It comes as US President Donald Trump launched legal action against Rupert Murdoch, newscorp and two reporters over an article that details his connection to the former sex offender.</p>
+<p>同时特朗普总统因报道其与爱泼斯坦的关系起诉默多克、新闻集团及两名记者。</p>
+<p><a name="block-20"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959459" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-00-708" data-start="00:09:00,708" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Here's North America correspondent Lauren Day from Washington.</p>
+<p>北美记者劳伦·戴从华盛顿报道。</p>
+<p><button class="play-button sentence" id="s-00-09-03-839" data-start="00:09:03,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, the Justice Department has now finally asked a federal court to release this grand jury testimony about Jeffrey Epstein.</p>
+<p>司法部终向联邦法院申请公开爱泼斯坦案大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-09-11-680" data-start="00:09:11,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have cited extensive public interest since they released a memo early this month, which basically said that there was no incriminating client list and no information to warrant any further investigation of third parties.</p>
+<p>因本月早前备忘录称无涉案客户名单及第三方调查依据，引发公众强烈关注。</p>
+<p><a name="block-21"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959434" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:25</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-25-814" data-start="00:09:25,814" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That has clearly angered many of Donald Trump's magu supporters who wanted to see more transparency around the so-called Epstein files.</p>
+<p>这激怒特朗普支持者，他们要求提高"爱泼斯坦文件"透明度。</p>
+<p><button class="play-button sentence" id="s-00-09-34-469" data-start="00:09:34,469" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the Justice Department says they'll work with the court to make appropriate reductions of victim-related information and other personal identifying information.</p>
+<p>司法部称将与法院合作删减受害者身份信息。</p>
+<p><button class="play-button sentence" id="s-00-09-43-432" data-start="00:09:43,432" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's just one of the reasons why this is likely to end up tied up in a legal process for some time.</p>
+<p>因此法律程序可能耗时良久。</p>
+<p><a name="block-22"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959409" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:09:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-09-50-320" data-start="00:09:50,320" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The very nature of grand jury testimony is that it's incredibly secret and it's supposed to be protected because it does contain information relating to victims of crime, witnesses, but also sensitive information and unproven allegations.</p>
+<p>大陪审团证词具高度保密性，含受害者、证人信息及未证实的指控。</p>
+<p><button class="play-button sentence" id="s-00-10-05-917" data-start="00:10:05,917" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But even if the court grants this request with all of these reductions, this is likely to fall far short of what many of these people had been demanding.</p>
+<p>即便法院批准删减版，仍难满足公众期待。</p>
+<p><button class="play-button sentence" id="s-00-10-16-213" data-start="00:10:16,213" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They wanted a full release of all information collected by the FBI and by federal authorities into Jeffrey Epstein.</p>
+<p>他们要求全面公开FBI及联邦当局收集的所有爱泼斯坦信息。</p>
+<p><a name="block-23"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959376" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-23-963" data-start="00:10:23,963" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I spoke with political scientist Matt Dalek from George Washington University earlier today.</p>
+<p>今日早前我采访乔治华盛顿大学政治学家马特·达莱克。</p>
+<p><button class="play-button sentence" id="s-00-10-29-527" data-start="00:10:29,527" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's what he told me.</p>
+<p>他表示：</p>
+<p><button class="play-button sentence" id="s-00-10-30-611" data-start="00:10:30,611" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's pretty unusual for the American judicial system to release grand jury testimony, which is the traditionally secret.</p>
+<p>美国司法系统传统上极少公开大陪审团证词。</p>
+<p><button class="play-button sentence" id="s-00-10-40-639" data-start="00:10:40,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so this can play out over some period of time.</p>
+<p>因此可能需要较长时间。</p>
+<p><button class="play-button sentence" id="s-00-10-44-372" data-start="00:10:44,372" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And so I think it's possible that it could lead to greater frustration on the part of some of his supporters.</p>
+<p>这可能加剧部分支持者的不满。</p>
+<p><a name="block-24"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959348" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:10:51</span></a></h3>
+<p><button class="play-button sentence" id="s-00-10-51-302" data-start="00:10:51,302" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Donald Trump has now also launched legal action against Rupert Murdoch, newscorp, and two reporters who wrote this article in the Wall Street Journal that alleges that he wrote a sexually suggestive letter to Jeffrey Epstein back in 2003 for his 50th birthday.</p>
+<p>特朗普还起诉《华尔街日报》报道其2003年致爱泼斯坦50岁生日含性暗示信件的默多克、新闻集团及两名记者。</p>
+<p><button class="play-button sentence" id="s-00-11-08-220" data-start="00:11:08,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The article says that it included this hand-drawn outline of a naked woman and several lines of text which ended with, may every day be another wonderful secret.</p>
+<p>报道称信件含手绘裸女轮廓及文字"愿每天都是美妙秘密"。</p>
+<p><button class="play-button sentence" id="s-00-11-19-903" data-start="00:11:19,903" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, Donald Trump himself hasn't spoken publicly about this.</p>
+<p>特朗普本人未公开回应。</p>
+<p><a name="block-25"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959315" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-24-011" data-start="00:11:24,011" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He's other than several posts on truth social.</p>
+<p>仅在Truth Social发帖。</p>
+<p><button class="play-button sentence" id="s-00-11-27-015" data-start="00:11:27,015" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He held an event earlier today at the White House for the signing of a cryptocurrency bill and he ignored repeated questions about Jeffrey Epstein.</p>
+<p>今早在白宫签署加密货币法案时，他回避所有爱泼斯坦相关问题。</p>
+<p><button class="play-button sentence" id="s-00-11-36-743" data-start="00:11:36,743" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But several of his allies have come out to defend him, including his vice president, JD Vance, who has called this story BS.</p>
+<p>但盟友包括副总统JD·万斯出面辩护，称报道"胡说八道"。</p>
+<p><button class="play-button sentence" id="s-00-11-44-614" data-start="00:11:44,614" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He says it's fake and that Donald Trump never wrote this letter.</p>
+<p>他指信件系伪造。</p>
+<p><a name="block-26"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959290" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:11:49</span></a></h3>
+<p><button class="play-button sentence" id="s-00-11-49-220" data-start="00:11:49,220" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's unclear whether or not these supporters will accept that explanation.</p>
+<p>尚不清楚支持者是否接受此解释。</p>
+<p><button class="play-button sentence" id="s-00-11-54-262" data-start="00:11:54,262" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But it is clear that this story that the Trump administration so desperately wants to go away isn't going to any time soon.</p>
+<p>但显然特朗普团队希望平息的事件不会很快消失。</p>
+<p><button class="play-button sentence" id="s-00-12-03-039" data-start="00:12:03,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That's Lauren Day, our North America correspondent reporting from Washington, DC.</p>
+<p>北美记者劳伦·戴华盛顿报道。</p>
+<p><button class="play-button sentence" id="s-00-12-07-519" data-start="00:12:07,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, the first of Australia's retired Abrams tanks have arrived in Ukraine nine months after they were gifted to help the country's war effort against Russia.</p>
+<p>澳大利亚退役的艾布拉姆斯坦克首批已运抵乌克兰，距承诺援助抗俄已过九个月。</p>
+<p><a name="block-27"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959264" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-15-397" data-start="00:12:15,397" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine's ambassador to Australia has welcomed their arrival.</p>
+<p>乌克兰驻澳大使对此表示欢迎。</p>
+<p><button class="play-button sentence" id="s-00-12-18-826" data-start="00:12:18,826" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But as told the ABC, the country needs more equipment to defend its territory.</p>
+<p>但大使告诉ABC，乌方需要更多装备保卫领土。</p>
+<p><button class="play-button sentence" id="s-00-12-23-120" data-start="00:12:23,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Our Europe correspondent, Bridget Rollison, has more.</p>
+<p>欧洲记者布里奇特·罗利森带来详情。</p>
+<p><button class="play-button sentence" id="s-00-12-26-960" data-start="00:12:26,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> 49 of these Abrams tanks were promised by the Australian government back in October last year.</p>
+<p>澳政府去年10月承诺提供49辆该型坦克。</p>
+<p><button class="play-button sentence" id="s-00-12-33-039" data-start="00:12:33,039" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And now more than half have finally arrived in Ukraine to help the country in its fight against Russia.</p>
+<p>现过半已运抵助乌抗俄。</p>
+<p><a name="block-28"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959241" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:12:38</span></a></h3>
+<p><button class="play-button sentence" id="s-00-12-38-853" data-start="00:12:38,853" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These second-hand tanks are worth around $245 million and they were requested by Ukraine to help bolster its front line.</p>
+<p>这批二手坦克价值约2.45亿美元，是乌克兰为加强前线而请求的。</p>
+<p><button class="play-button sentence" id="s-00-12-47-375" data-start="00:12:47,375" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The tanks would due to be retired in Australia this year and replace by newer models.</p>
+<p>这些坦克原定今年在澳大利亚退役并被新车型取代。</p>
+<p><button class="play-button sentence" id="s-00-12-52-482" data-start="00:12:52,482" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But the government says that they're still in good condition.</p>
+<p>但政府表示它们仍状态良好。</p>
+<p><button class="play-button sentence" id="s-00-12-56-063" data-start="00:12:56,063" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Prime Minister Anthony Albanese pledged these tanks nine months ago and said the lengthy delays were due to logistical challenges.</p>
+<p>安东尼·阿尔巴尼斯总理九个月前承诺提供这些坦克，并表示延迟是因物流挑战。</p>
+<p><a name="block-29"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959216" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-03-960" data-start="00:13:03,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And that's because these tanks are American-made.</p>
+<p>这是因为这些坦克是美国制造的。</p>
+<p><button class="play-button sentence" id="s-00-13-06-622" data-start="00:13:06,622" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So Australia needed to get approval from Washington to send them on to a third country.</p>
+<p>因此澳大利亚需获得华盛顿批准才能将其转交第三国。</p>
+<p><button class="play-button sentence" id="s-00-13-11-718" data-start="00:13:11,718" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Ukraine's ambassador to Australia has welcomed the arrival of these tanks, but says the country needs more equipment.</p>
+<p>乌克兰驻澳大利亚大使对这些坦克的到来表示欢迎，但称该国需要更多装备。</p>
+<p><button class="play-button sentence" id="s-00-13-18-798" data-start="00:13:18,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I mean, at this stage, what's important is that they're being delivered.</p>
+<p>我的意思是，现阶段重要的是它们正在交付。</p>
+<p><a name="block-30"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959197" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:22</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-22-267" data-start="00:13:22,267" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What's important is that they will be out there supporting Ukraine.</p>
+<p>重要的是它们将支援乌克兰。</p>
+<p><button class="play-button sentence" id="s-00-13-26-165" data-start="00:13:26,165" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But we are asking for, look, we need more equipment.</p>
+<p>但我们还在请求，我们需要更多装备。</p>
+<p><button class="play-button sentence" id="s-00-13-29-287" data-start="00:13:29,287" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We need more bushmasters.</p>
+<p>我们需要更多"丛林之王"装甲车。</p>
+<p><button class="play-button sentence" id="s-00-13-30-889" data-start="00:13:30,889" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Why don't you send those hawkies, right?</p>
+<p>为什么不送那些"鹰"式装备呢？</p>
+<p><button class="play-button sentence" id="s-00-13-33-365" data-start="00:13:33,365" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> One thousand, one hundred hawkies are out there.</p>
+<p>现有一千一百辆"鹰"式装备可用。</p>
+<p><button class="play-button sentence" id="s-00-13-36-173" data-start="00:13:36,173" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, these are very mobile vehicles, which, you know, as you know, I've been requesting for three years now.</p>
+<p>这些是高机动车辆，如你所知，我已请求了三年。</p>
+<p><a name="block-31"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959178" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:13:41</span></a></h3>
+<p><button class="play-button sentence" id="s-00-13-41-759" data-start="00:13:41,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This delivery comes as Russia's full-scale invasion of Ukraine enters its 41st month.</p>
+<p>此次交付正值俄罗斯全面入侵乌克兰第41个月。</p>
+<p><button class="play-button sentence" id="s-00-13-47-278" data-start="00:13:47,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Russia's President Vladimir Putin has ramped up the drone and missile attacks against Russia as ceasefire negotiations between the two countries have stalled.</p>
+<p>俄罗斯总统普京加大了对乌克兰的无人机和导弹攻击，此时两国停火谈判陷入僵局。</p>
+<p><button class="play-button sentence" id="s-00-13-56-859" data-start="00:13:56,859" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Meanwhile, the European Union has just announced that it's approved a raft of fresh sanctions against Russia.</p>
+<p>与此同时，欧盟刚宣布批准一系列对俄新制裁。</p>
+<p><a name="block-32"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959155" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-04-879" data-start="00:14:04,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Bridgett Rolerson reporting from London.</p>
+<p>布里吉特·罗勒森从伦敦报道。</p>
+<p><button class="play-button sentence" id="s-00-14-06-824" data-start="00:14:06,824" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Australia's defence chief has acknowledged the ADF needs to do better on spending taxpayers money.</p>
+<p>澳大利亚国防负责人承认国防军需更合理使用纳税人资金。</p>
+<p><button class="play-button sentence" id="s-00-14-12-056" data-start="00:14:12,056" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The federal government is facing pressure from allies like the United States to increase defence spending substantially in the years ahead.</p>
+<p>联邦政府正面临美国等盟友要求未来大幅增加国防开支的压力。</p>
+<p><button class="play-button sentence" id="s-00-14-19-759" data-start="00:14:19,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But on the sidelines of the talisman-saber war games, Admiral David Johnston admitted the ABC that defence needs to better manage the costs of some multi-billion dollar projects.</p>
+<p>但在"护身军刀"演习间隙，大卫·约翰斯顿上将向ABC承认国防部需更好管理数十亿澳元项目的成本。</p>
+<p><a name="block-33"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959127" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:14:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-14-32-558" data-start="00:14:32,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> In a dusty paddock north of Rockhampton, the combined military might of Australia, the United States, Singapore and Korea is on show.</p>
+<p>在罗克汉普顿北部尘土飞扬的训练场，澳美新韩联合军力正在展示。</p>
+<p><button class="play-button sentence" id="s-00-14-40-926" data-start="00:14:40,926" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is an uncertain environment in which we all find ourselves and the best way we respond for countries who observe the rule of law, who share interest in stability and pieces by being strong together.</p>
+<p>我们身处不确定环境，遵守法治、共求稳定的国家最佳应对方式是携手强大。</p>
+<p><button class="play-button sentence" id="s-00-14-55-840" data-start="00:14:55,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's a tightly scripted display of defence's newest firepower.</p>
+<p>这是国防最新火力的严密演练展示。</p>
+<p><a name="block-34"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959098" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:01</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-01-679" data-start="00:15:01,679" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But for defence, acquiring expensive new weapons like this isn't always a smooth process.</p>
+<p>但对国防而言，采购此类昂贵新武器并非总是一帆风顺。</p>
+<p><button class="play-button sentence" id="s-00-15-08-799" data-start="00:15:08,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Australia's hunter-class frigates have attracted plenty of attention.</p>
+<p>澳大利亚"猎人级"护卫舰备受关注。</p>
+<p><button class="play-button sentence" id="s-00-15-13-120" data-start="00:15:13,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The fleet of six ships estimated to cost 45 billion dollars, and the first not delivered until 2032.</p>
+<p>这支六艘舰队预计耗资450亿澳元，首艘2032年才交付。</p>
+<p><button class="play-button sentence" id="s-00-15-20-238" data-start="00:15:20,238" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do your man convince the hunter-class frigates of worth a tender good?</p>
+<p>你们的人是否确信"猎人级"护卫舰物有所值？</p>
+<p><a name="block-35"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959076" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:24</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-24-000" data-start="00:15:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's going to interrupt that report to take you live to North Queensland, authorities speaking after a man was shot dead by police in town.</p>
+<p>现在插播北昆士兰现场报道，当地警方就一名男子被击毙事件发表声明。</p>
+<p><button class="play-button sentence" id="s-00-15-30-639" data-start="00:15:30,639" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That male person was shot.</p>
+<p>该男性遭枪击。</p>
+<p><button class="play-button sentence" id="s-00-15-32-866" data-start="00:15:32,866" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He is now deceased, and Queensland police service are conducting investigations to establish exactly what has occurred.</p>
+<p>他已死亡，昆士兰警方正调查事件经过。</p>
+<p><button class="play-button sentence" id="s-00-15-41-519" data-start="00:15:41,519" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is truly a devastating event for the police involved and also for the family and friends of the victim.</p>
+<p>这对涉事警察和受害者亲友都是毁灭性事件。</p>
+<p><a name="block-36"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959053" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:15:46</span></a></h3>
+<p><button class="play-button sentence" id="s-00-15-46-682" data-start="00:15:46,682" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We will continue to provide assistance to our police that have been here today, and we will make sure that this event is investigated to the full extent of what the crime requires.</p>
+<p>我们将持续为今日执勤警员提供协助，并确保事件得到彻底调查。</p>
+<p><button class="play-button sentence" id="s-00-15-56-183" data-start="00:15:56,183" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This matter today will obviously serve as a stark reminder that the job that the police do every day across our state is dangerous, and on occasions we are called to use lethal force.</p>
+<p>此事鲜明提醒我们全州警察日常工作的危险性，有时需使用致命武力。</p>
+<p><button class="play-button sentence" id="s-00-16-09-120" data-start="00:16:09,120" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can I go into any of the particulars around what's occurred today?</p>
+<p>我能透露今日事件细节吗？</p>
+<p><a name="block-37"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959028" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:11</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-11-633" data-start="00:16:11,633" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Because obviously there's still a very raw and very, it hasn't been long since it's occurred, so we're still piecing through the evidence, and we'll be providing that to our ethical standards command who will have oversight by the triple C as well.</p>
+<p>因事件刚发生不久，我们仍在梳理证据，将提交给道德标准指挥部，并接受反腐机构监督。</p>
+<p><button class="play-button sentence" id="s-00-16-26-335" data-start="00:16:26,335" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> These events today will undergo a significant amount of investigation and will be reported onto the coroner.</p>
+<p>今日事件将经历大量调查并呈交验尸官。</p>
+<p><button class="play-button sentence" id="s-00-16-33-802" data-start="00:16:33,802" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Vail for questions?</p>
+<p>可以提问了吗？</p>
+<p><a name="block-38"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208959004" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:35</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-35-057" data-start="00:16:35,057" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you tell us about the two crimes that you've got to set up?</p>
+<p>能说明警方接到的两项报警吗？</p>
+<p><button class="play-button sentence" id="s-00-16-38-702" data-start="00:16:38,702" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Yes, so on our police arrival, when the job was called in for police to attend, it was commenced on McKinlay Street, upon arrival with the police and the ongoing interactions with the male person that moved around in Mitchell Street where the events occurred.</p>
+<p>警方接警抵达麦金利街，在与该男子持续互动中转移到米切尔街事发地点。</p>
+<p><button class="play-button sentence" id="s-00-16-51-840" data-start="00:16:51,840" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So was that the suggestion where the shooting happened?</p>
+<p>这是否暗示枪击发生地？</p>
+<p><a name="block-39"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958984" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:16:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-16-55-785" data-start="00:16:55,785" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The whole area is part of the crime scene, so we're still establishing exactly what's occurred, and part of our investigation will require us to establish where people were when events occurred, so yeah.</p>
+<p>整个区域都是犯罪现场，我们仍在确认经过，调查需确定事发时人员位置。</p>
+<p><button class="play-button sentence" id="s-00-17-07-203" data-start="00:17:07,203" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You mentioned that the incident was quite a traumatic, you obviously involved, how many officers were involved in the shooting, and I thought how they were receiving cancer?</p>
+<p>您提到事件极具创伤性，多少警员涉枪击？他们如何接受关怀？</p>
+<p><button class="play-button sentence" id="s-00-17-15-640" data-start="00:17:15,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So our police always turn up to these events, and we are aware that these events may occur when we get call to work.</p>
+<p>我们警员总是直面此类事件，明白出警可能遭遇这些情况。</p>
+<p><a name="block-40"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958956" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:23</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-23-042" data-start="00:17:23,042" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Today we've had a number of our police involved in the shooting this morning.</p>
+<p>今早有多名警员涉枪击事件。</p>
+<p><button class="play-button sentence" id="s-00-17-26-912" data-start="00:17:26,912" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I won't go into the specifics of the number, but all of them are currently receiving support from their peer support officers, our local police chaplain, and also other support within the Queensland Police Service.</p>
+<p>不便透露具体人数，但所有人正接受同僚支持官、警察牧师及警局内部支持。</p>
+<p><button class="play-button sentence" id="s-00-17-37-481" data-start="00:17:37,481" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're just to be clear the police report because...</p>
+<p>请明确警方报告因为...</p>
+<p><a name="block-41"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958932" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:17:47</span></a></h3>
+<p><button class="play-button sentence" id="s-00-17-47-359" data-start="00:17:47,359" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And do we know if the person the man was shot at a property or was he on the street?</p>
+<p>可知该男子是在物业内还是街上中枪？</p>
+<p><button class="play-button sentence" id="s-00-17-53-200" data-start="00:17:53,200" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They'll form part of the investigation going forward, so this is a very early report for us, so we've only just commenced the investigations, and we'll work to provide all that information to the coroner, so that a decision can be made by the coroner.</p>
+<p>这将纳入后续调查，目前调查刚启动，我们将向验尸官提供全部信息供裁决。</p>
+<p><button class="play-button sentence" id="s-00-18-11-599" data-start="00:18:11,599" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> His any seatings aren't fully known to us at this stage, so we're currently working through that as well.</p>
+<p>其具体位置尚不完全清楚，我们正在核查。</p>
+<p><a name="block-42"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958903" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-16-203" data-start="00:18:16,203" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there's a lot of unknowns, and at this point we can't talk about exactly who people are or what's exactly occurred.</p>
+<p>存在许多未知，此刻无法透露具体人员或事件细节。</p>
+<p><button class="play-button sentence" id="s-00-18-22-240" data-start="00:18:22,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This is the third person that's been shot by police in town this year, sadly, the episode is just phasing it.</p>
+<p>这是今年镇上第三起警察枪击事件，令人遗憾。</p>
+<p><button class="play-button sentence" id="s-00-18-29-507" data-start="00:18:29,507" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They have a two-one non-phasing.</p>
+<p>存在21起非致命事件。</p>
+<p><button class="play-button sentence" id="s-00-18-31-441" data-start="00:18:31,441" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are you concerned for your office's health?</p>
+<p>是否担忧警员心理健康？</p>
+<p><button class="play-button sentence" id="s-00-18-34-077" data-start="00:18:34,077" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> What was the number of police involved during the happening in the district this year?</p>
+<p>今年本辖区涉事警员数量？</p>
+<p><a name="block-43"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958880" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:18:39</span></a></h3>
+<p><button class="play-button sentence" id="s-00-18-39-440" data-start="00:18:39,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We have police that are very well trained in how to handle instances where there is danger, the community, and dangers themselves, and unfortunately some of those instances require the use of lethal force to make them come to an end.</p>
+<p>我们的警员受过专业训练应对危及社区和自身的危险情况，不幸的是某些情况需使用致命武力终止威胁。</p>
+<p><button class="play-button sentence" id="s-00-18-52-171" data-start="00:18:52,171" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It is very concerning because that's a lot of support that we have to provide through to all of our officers, and we also have to provide some resilience to our officers to expect that this may occur as well.</p>
+<p>这令人担忧，因需为所有警员提供大量支持，同时培养他们预见此类情况的心理韧性。</p>
+<p><button class="play-button sentence" id="s-00-19-03-451" data-start="00:19:03,451" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So it is a continuing and ongoing effort of this district to ensure that the people that work for us here in towns will are supported, and make sure that they have the support needed to do their jobs.</p>
+<p>因此本辖区持续努力确保镇上的警员获得必要支持履行职责。</p>
+<p><a name="block-44"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958843" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:16</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-16-720" data-start="00:19:16,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The actual how it all unfolded will come out in due course, but at this stage it's too early to speculate on exactly what's occurred.</p>
+<p>事件具体经过将适时公布，现阶段推测为时过早。</p>
+<p><button class="play-button sentence" id="s-00-19-23-933" data-start="00:19:23,933" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are there any witnesses in the parking place?</p>
+<p>停车场有目击者吗？</p>
+<p><button class="play-button sentence" id="s-00-19-27-278" data-start="00:19:27,278" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That will form part of the investigations, but the ongoing investigation will obviously require a number of people in this area to be spoken to, and also a review of not only the body-worn camera of the police, but a review of any CCTV footage that may be available in the local area.</p>
+<p>这将纳入调查，需询问该区域多人，并审查警员随身摄像头及当地监控录像。</p>
+<p><a name="block-45"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958817" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:19:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-19-42-720" data-start="00:19:42,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've also heard people put some people saying this man on the strand where there's lots of people you can buy, and we've heard that yourself.</p>
+<p>我们听闻有人称该男子曾出现在海滨人群密集处。</p>
+<p><button class="play-button sentence" id="s-00-19-50-012" data-start="00:19:50,012" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Well, we were called to an incident that person was armed in McKinlay Street, so the closeness of McKinlay Street to the strand is it's an intersect, so there is a likelihood and we'll be seeking anybody that's got had any interactions with this male person prior to the events taking place this morning, that they contact police and provide that update, and we can that can form part of the investigation moving forward.</p>
+<p>我们接警称该男子在麦金利街持械，该街与海滨交界，可能有关联。呼吁今早事前与该男子有接触者联系警方提供信息。</p>
+<p><button class="play-button sentence" id="s-00-20-11-666" data-start="00:20:11,666" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The statement that this came out from the police media indicate that weapons involved, can you just see the irritative effect of weapons involved?</p>
+<p>警方声明提到涉事武器，能否说明武器影响？</p>
+<p><a name="block-46"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958781" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-18-762" data-start="00:20:18,762" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So there was a machete in a knife involved and they were the two weapons that have been seized by police since.</p>
+<p>涉案武器为砍刀和匕首，已被警方缴获。</p>
+<p><button class="play-button sentence" id="s-00-20-23-759" data-start="00:20:23,759" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Is there any ongoing threat to the community?</p>
+<p>社区是否仍受威胁？</p>
+<p><button class="play-button sentence" id="s-00-20-25-948" data-start="00:20:25,948" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There's no ongoing threat to the community.</p>
+<p>社区无持续威胁。</p>
+<p><button class="play-button sentence" id="s-00-20-28-079" data-start="00:20:28,079" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> This matter appears to have been a single person, and the matter has been resolved by police at this stage, and we did not believe there's any ongoing threat to the community.</p>
+<p>此事为单人作案，现阶段已解决，我们认为社区无持续威胁。</p>
+<p><a name="block-47"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958762" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:20:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-20-37-839" data-start="00:20:37,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And what's it that's called police?</p>
+<p>报警人是谁？</p>
+<p><button class="play-button sentence" id="s-00-20-39-691" data-start="00:20:39,691" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> You know, is it an onlooker member of the public?</p>
+<p>是公众旁观者吗？</p>
+<p><button class="play-button sentence" id="s-00-20-42-160" data-start="00:20:42,160" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It was a member of the public, so that will also form part of the investigation, and that person will be contacted and providing evidence to the for the coroner as well.</p>
+<p>报警人是公众成员，将作为调查部分，其需向验尸官提供证词。</p>
+<p><button class="play-button sentence" id="s-00-20-50-559" data-start="00:20:50,559" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The number of the men had been threatening people before this happened?</p>
+<p>该男子此前是否有威胁他人记录？</p>
+<p><button class="play-button sentence" id="s-00-20-54-799" data-start="00:20:54,799" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'm not aware of the exact details around the job coming to police attention, to police attention, but that will form part of the ongoing investigation and part of the brief that's provided through to the coroner.</p>
+<p>我不清楚报警具体细节，这将纳入调查并写入验尸官简报。</p>
+<p><a name="block-48"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958734" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:05</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-05-616" data-start="00:21:05,616" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've heard the fire incidents of knife crime and knives in the community of recent times what we do just like to speak to that about people's walking in public with them.</p>
+<p>近期社区持刀犯罪频发，我们想就此谈谈公共场所持刀问题。</p>
+<p><button class="play-button sentence" id="s-00-21-14-023" data-start="00:21:14,023" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ongoing knife crime across the state has been rising a lot of late.</p>
+<p>全州持刀犯罪近期显著增加。</p>
+<p><button class="play-button sentence" id="s-00-21-18-950" data-start="00:21:18,950" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We've seen yesterday the legislative changes to Jack's law came in, and we've had a number of police across towns when the last 24, since yesterday, 24 hours attending the relevant places to conduct that wounding, and I'm aware that we've found at least one weapon last night doing that wounding.</p>
+<p>昨日"杰克法案"修订生效，过去24小时多地警力在相关场所搜查出至少一件武器。</p>
+<p><a name="block-49"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958702" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:21:37</span></a></h3>
+<p><button class="play-button sentence" id="s-00-21-37-038" data-start="00:21:37,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The prevalence of knife crime across our community is very concerning, and we're taking active role in ensuring that it doesn't continue to form an issue for community safety.</p>
+<p>持刀犯罪泛滥令人担忧，我们正积极行动保障社区安全。</p>
+<p><button class="play-button sentence" id="s-00-21-53-838" data-start="00:21:53,838" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this stage, we're not going to speculate on how many shots were fired.</p>
+<p>现阶段不推测开枪次数。</p>
+<p><button class="play-button sentence" id="s-00-21-58-023" data-start="00:21:58,023" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That will form part of the ongoing investigation, and ESC will look after that.</p>
+<p>这将由道德标准指挥部调查。</p>
+<p><button class="play-button sentence" id="s-00-22-02-463" data-start="00:22:02,463" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I'd be very, very involved officers now.</p>
+<p>涉事警员目前...</p>
+<p><a name="block-50"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958675" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:04</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-04-798" data-start="00:22:04,798" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have they been stood down for the day?</p>
+<p>他们是否已被暂时停职？</p>
+<p><button class="play-button sentence" id="s-00-22-06-452" data-start="00:22:06,452" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Have they been allowed to go up in the second half?</p>
+<p>他们下半场能归队吗？</p>
+<p><button class="play-button sentence" id="s-00-22-09-680" data-start="00:22:09,680" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So we're not a critical incident where some of those are their lives involved with police.</p>
+<p>这非涉警员生命的重大事件。</p>
+<p><button class="play-button sentence" id="s-00-22-12-932" data-start="00:22:12,932" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There are a number of things that we have to do to finalise it, so they have to provide evidence through to the ESC.</p>
+<p>他们需向道德标准指挥部提供证据。</p>
+<p><button class="play-button sentence" id="s-00-22-21-089" data-start="00:22:21,089" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> They've also got to provide a number of reports, and we provide support to those officers immediately, and they get that support whilst all these processes are taking place.</p>
+<p>还需提交多份报告，整个过程他们将获得即时支持。</p>
+<p><a name="block-51"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958647" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:22:32</span></a></h3>
+<p><button class="play-button sentence" id="s-00-22-32-960" data-start="00:22:32,960" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We're to and out for the crime scene, how long did expected to be held, and just to obviously maybe seem to crime coming through an ethical scene, coming up and breathing?</p>
+<p>犯罪现场预计封锁多久？道德标准指挥部何时抵达？</p>
+<p><button class="play-button sentence" id="s-00-22-41-118" data-start="00:22:41,118" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, ethical standards can marshal arrive in towns all this afternoon and commence their investigations.</p>
+<p>道德标准指挥部今天下午抵达并开始调查。</p>
+<p><button class="play-button sentence" id="s-00-22-46-057" data-start="00:22:46,057" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Once they arrive and have an opportunity to go through the crime scene's decisions will be then made as to whether the crime scenes need to be held, but at this stage, I envisaged the crime scene to be held for the foreseeable future, and post ESC arriving and making a termination on its need.</p>
+<p>他们勘察现场后将决定是否解封，但现阶段预计封锁将持续，直至道德标准指挥部认定无需保留。</p>
+<p><a name="block-52"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958619" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:00</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-00-912" data-start="00:23:00,912" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It'll be dispensed after that.</p>
+<p>之后将解除封锁。</p>
+<p><button class="play-button sentence" id="s-00-23-02-558" data-start="00:23:02,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Now, what are the crime scenes effect or like the residents here?</p>
+<p>犯罪现场对居民有何影响？</p>
+<p><button class="play-button sentence" id="s-00-23-05-109" data-start="00:23:05,109" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can they access their properties?</p>
+<p>他们能进入住所吗？</p>
+<p><button class="play-button sentence" id="s-00-23-06-479" data-start="00:23:06,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> There will be access issues for some residents, but we'll be working closely with them to ensure that they can get in and out as needed or other alternative arrangements can be made.</p>
+<p>部分居民将面临出入限制，但我们会协调确保必要出入或做出其他安排。</p>
+<p><button class="play-button sentence" id="s-00-23-14-479" data-start="00:23:14,479" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> As far as the public avoiding streets, where should they avoid it, and what is active stand?</p>
+<p>公众应避开哪些街道？</p>
+<p><a name="block-53"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958601" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:18</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-18-398" data-start="00:23:18,398" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> It's obviously one of the main thoroughfes in behind the strand that people use, so we just ask that people steer clear of the McKinley Mitchell Street intersection, and there's not a lot to see at the crime scene, so there's no point coming down to have a look.</p>
+<p>请避开麦金利街与米切尔街交叉口，现场无可观看内容。</p>
+<p><button class="play-button sentence" id="s-00-23-34-240" data-start="00:23:34,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> I used to police believe that this man tried to stab or stride the officers involved.</p>
+<p>警方是否认为该男子试图刺伤警员？</p>
+<p><button class="play-button sentence" id="s-00-23-40-558" data-start="00:23:40,558" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Whether the male tried to stab or use the knife on the officers involved will form part of the investigation going forward, and we won't know that until we've reviewed the body, won't camera spoken to the officers involved, and the ethical standards command has that information.</p>
+<p>是否持刀袭警需通过审查随身摄像头、询问涉事警员等调查确认。</p>
+<p><a name="block-54"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958564" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:23:55</span></a></h3>
+<p><button class="play-button sentence" id="s-00-23-55-167" data-start="00:23:55,167" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> But then, must have been opposite the officers involved, must have been concerned for their own safety or for the safety of someone else for them to have to use lethal force.</p>
+<p>但警员使用致命武力必定是因自身或他人安全受威胁。</p>
+<p><button class="play-button sentence" id="s-00-24-04-862" data-start="00:24:04,862" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Can you tell us about that?</p>
+<p>能说明这点吗？</p>
+<p><button class="play-button sentence" id="s-00-24-06-480" data-start="00:24:06,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, training stipulates that if you're at fear of death or GBH, you do, or someone else is at threat of GBH or death, that you have the ability to use lethal force.</p>
+<p>因此，训练规定，如果你面临死亡或严重身体伤害的恐惧，或者他人面临严重身体伤害或死亡的威胁，你有权使用致命武力。</p>
+<p><a name="block-55"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958544" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:15</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-15-879" data-start="00:24:15,879" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> So, part of the ongoing investigation by the ethical standards command will be to establish and ensure that that has occurred.</p>
+<p>因此，道德标准指挥部的持续调查部分将是为了确认并确保这一情况的发生。</p>
+<p><button class="play-button sentence" id="s-00-24-24-000" data-start="00:24:24,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Do you know how many firearms were discharged?</p>
+<p>你知道有多少枪支被击发了吗？</p>
+<p><button class="play-button sentence" id="s-00-24-27-439" data-start="00:24:27,439" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That will form part of the ongoing investigation.</p>
+<p>这将构成持续调查的一部分。</p>
+<p><button class="play-button sentence" id="s-00-24-29-894" data-start="00:24:29,894" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this stage, it's too early to speculate, and obviously there are a number of ballistic tests and even investigations that will have to occur around the scene to establish that.</p>
+<p>现阶段推测为时过早，显然还需要进行一系列弹道测试甚至现场调查来确认这一点。</p>
+<p><a name="block-56"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958517" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:24:42</span></a></h3>
+<p><button class="play-button sentence" id="s-00-24-42-240" data-start="00:24:42,240" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We don't know anything about the age of the male, but we know he's an adult.</p>
+<p>我们不知道这名男性的年龄，但知道他是一名成年人。</p>
+<p><button class="play-button sentence" id="s-00-24-45-839" data-start="00:24:45,839" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can confirm he's an adult male.</p>
+<p>我们可以确认他是一名成年男性。</p>
+<p><button class="play-button sentence" id="s-00-24-47-159" data-start="00:24:47,159" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We can confirm he's an adult male.</p>
+<p>我们可以确认他是一名成年男性。</p>
+<p><button class="play-button sentence" id="s-00-24-48-480" data-start="00:24:48,480" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this stage, we haven't got any of the antiseavants.</p>
+<p>现阶段，我们尚未获得任何抗凝血剂。</p>
+<p><button class="play-button sentence" id="s-00-24-52-720" data-start="00:24:52,720" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this stage, it's still an ongoing investigation.</p>
+<p>现阶段，调查仍在进行中。</p>
+<p><button class="play-button sentence" id="s-00-24-54-757" data-start="00:24:54,757" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> We haven't been able to get to that yet.</p>
+<p>我们尚未能达成这一点。</p>
+<p><button class="play-button sentence" id="s-00-24-58-000" data-start="00:24:58,000" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> Are you able to outline where you subbed those gunshot or gunshot wounds?</p>
+<p>你能概述一下枪伤或枪伤的位置吗？</p>
+<p><a name="block-57"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958496" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:03</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-03-119" data-start="00:25:03,119" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> At this stage, that's going to be part of the investigation going through to the corner.</p>
+<p>现阶段，这将成为调查的一部分，直至提交给验尸官。</p>
+<p><button class="play-button sentence" id="s-00-25-06-640" data-start="00:25:06,640" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> That was Superintendent Chris Lawson from Queensland Police talking after the death of a man in Townsville in North Queensland.</p>
+<p>这是昆士兰警察局的克里斯·劳森警司在昆士兰北部汤斯维尔一名男子死亡后的讲话。</p>
+<p><button class="play-button sentence" id="s-00-25-21-440" data-start="00:25:21,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He would confirm that it was an adult male who was the victim, wouldn't say how old he was, whether he was local or not.</p>
+<p>他确认受害者是一名成年男性，但未透露其年龄或是否为当地人。</p>
+<p><a name="block-58"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958472" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:27</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-27-440" data-start="00:25:27,440" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And wouldn't confirm reports that he was approaching officers, although he did say the man did have a machete, and a knife as we were reporting.</p>
+<p>他未确认有关该男子接近警员的报道，但确实表示该男子携带了一把砍刀和一把刀具，正如我们所报道的。</p>
+<p><button class="play-button sentence" id="s-00-25-36-426" data-start="00:25:36,426" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He said it was a reminder that the job that police do is dangerous, and on occasion are called to use lethal force.</p>
+<p>他表示，这提醒人们警察的工作是危险的，有时需要使用致命武力。</p>
+<p><button class="play-button sentence" id="s-00-25-43-303" data-start="00:25:43,303" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He mentioned how Jack's law coming in in Queensland has led to the legislative changes we've seen this week.</p>
+<p>他提到昆士兰实施的杰克法如何导致了本周我们所看到的立法变化。</p>
+<p><a name="block-59"></a></p>
+<h3><a href="https://www.bilibili.com/video/BV1rRuXzZECe/?t=-2208958449" target="_blank"><img src="icon_bilibili.png" style="height:18px; vertical-align:middle; margin-right:6px;" /><span>00:25:50</span></a></h3>
+<p><button class="play-button sentence" id="s-00-25-50-471" data-start="00:25:50,471" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And the police using those ones to search people, checking for knives.</p>
+<p>警方利用这些法律搜查人员，检查刀具。</p>
+<p><button class="play-button sentence" id="s-00-25-54-807" data-start="00:25:54,807" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> He did admit it's a huge problem up in the state.</p>
+<p>他承认这是该州的一个重大问题。</p>
+<p><button class="play-button sentence" id="s-00-25-57-598" data-start="00:25:57,598" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> And he also confirmed that while he couldn't go into details, that's because there's an investigation by the ethical standards command with oversight by the Crime and Corruption Commission.</p>
+<p>他还确认，虽然无法透露细节，但这是因为道德标准指挥部正在调查，并由犯罪与腐败委员会监督。</p>
+<p><button class="play-button sentence" id="s-00-26-07-038" data-start="00:26:07,038" onclick="playFromHere(this)"><img src="play.png" alt="Play"></button> The ethical standards command will be on site later this afternoon, and then they will conduct the investigation from then on.</p>
+<p>道德标准指挥部将于今天下午晚些时候抵达现场，随后他们将展开调查。</p>
+
+    <div class="qr-container">
+        <a href="https://space.bilibili.com/3546601721170225" target="_blank">
+            <img src="bilibili.QR.code.jpg" alt="Bilibili QR Code">
+        </a>
+    </div>
+    
+
+</body>
+</html>
